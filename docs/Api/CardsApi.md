@@ -4,16 +4,14 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cardsGet**](CardsApi.md#cardsGet) | **GET** /v2.01/Cards/{CardId} | View a Card
-[**cardsPut**](CardsApi.md#cardsPut) | **PUT** /v2.01/Cards/{CardId} | Deactivate a Card
+[**cardsGet**](CardsApi.md#cardsGet) | **GET** /v2.01/Cards/{CardId} | 
+[**cardsPut**](CardsApi.md#cardsPut) | **PUT** /v2.01/Cards/{CardId} | 
 
 
 # **cardsGet**
 > \Swagger\Client\Model\CardResponse cardsGet($card_id)
 
-View a Card
 
-In order to save cards, the next methods are currently available:              - Redsys Payment: Set the value of the SaveCard to true.              - Redsys Preauthorization: Set the value of the SaveCard to true.              In order to use previously saved cards, the next methods are currently available:              - Redsys Payment: Set the value of CardId. The card must belong to the user that owns the wallet where the payment will be credited.              - Redsys Preauthorization: Set the value of CardId. The card must belong to the user that owns the wallet where the payment will be credited once the preauthorization is confirmed.
 
 ### Example
 ```php
@@ -24,7 +22,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\CardsApi();
-$card_id = 789; // int | The Id of a card
+$card_id = 789; // int | 
 
 try {
     $result = $api_instance->cardsGet($card_id);
@@ -39,7 +37,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **card_id** | **int**| The Id of a card |
+ **card_id** | **int**|  |
 
 ### Return type
 
@@ -59,9 +57,7 @@ Name | Type | Description  | Notes
 # **cardsPut**
 > \Swagger\Client\Model\CardResponse cardsPut($card_id, $card)
 
-Deactivate a Card
 
-Note that once deactivated, a card can't be reactivated afterwards
 
 ### Example
 ```php
@@ -72,8 +68,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\CardsApi();
-$card_id = 789; // int | The Id of a card
-$card = new \Swagger\Client\Model\CardPut(); // \Swagger\Client\Model\CardPut | Card Object params
+$card_id = 789; // int | 
+$card = new \Swagger\Client\Model\CardPut(); // \Swagger\Client\Model\CardPut | 
 
 try {
     $result = $api_instance->cardsPut($card_id, $card);
@@ -88,8 +84,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **card_id** | **int**| The Id of a card |
- **card** | [**\Swagger\Client\Model\CardPut**](../Model/\Swagger\Client\Model\CardPut.md)| Card Object params | [optional]
+ **card_id** | **int**|  |
+ **card** | [**\Swagger\Client\Model\CardPut**](../Model/\Swagger\Client\Model\CardPut.md)|  | [optional]
 
 ### Return type
 

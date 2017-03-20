@@ -59,7 +59,6 @@ class RefundsApi
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
         }
 
         $this->apiClient = $apiClient;
@@ -91,11 +90,11 @@ class RefundsApi
     /**
      * Operation refundsRefundGet
      *
-     * View a Refund
+     * 
      *
-     * @param int $refund_id The ID of a refund (required)
+     * @param int $refund_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\RefundResponse
+     * @return \Swagger\Client\Model\RedsysRefundResponse
      */
     public function refundsRefundGet($refund_id)
     {
@@ -106,11 +105,11 @@ class RefundsApi
     /**
      * Operation refundsRefundGetWithHttpInfo
      *
-     * View a Refund
+     * 
      *
-     * @param int $refund_id The ID of a refund (required)
+     * @param int $refund_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\RefundResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\RedsysRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function refundsRefundGetWithHttpInfo($refund_id)
     {
@@ -160,15 +159,15 @@ class RefundsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\RefundResponse',
+                '\Swagger\Client\Model\RedsysRefundResponse',
                 '/v2.01/Refunds/{RefundId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RefundResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RedsysRefundResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RefundResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RedsysRefundResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

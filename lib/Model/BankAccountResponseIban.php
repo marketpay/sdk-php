@@ -231,7 +231,7 @@ class BankAccountResponseIban implements ArrayAccess
 
     /**
      * Sets iban
-     * @param string $iban The IBAN of the bank account
+     * @param string $iban
      * @return $this
      */
     public function setIban($iban)
@@ -252,7 +252,7 @@ class BankAccountResponseIban implements ArrayAccess
 
     /**
      * Sets bic
-     * @param string $bic The BIC of the bank account
+     * @param string $bic
      * @return $this
      */
     public function setBic($bic)
@@ -273,7 +273,7 @@ class BankAccountResponseIban implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type The type of bank account
+     * @param string $type
      * @return $this
      */
     public function setType($type)
@@ -298,7 +298,7 @@ class BankAccountResponseIban implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address The address of the owner of the bank account
+     * @param \Swagger\Client\Model\Address $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -319,7 +319,7 @@ class BankAccountResponseIban implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name The name of the owner of the bank account
+     * @param string $owner_name
      * @return $this
      */
     public function setOwnerName($owner_name)
@@ -340,7 +340,7 @@ class BankAccountResponseIban implements ArrayAccess
 
     /**
      * Sets user_id
-     * @param string $user_id The object owner's UserId
+     * @param string $user_id
      * @return $this
      */
     public function setUserId($user_id)
@@ -361,7 +361,7 @@ class BankAccountResponseIban implements ArrayAccess
 
     /**
      * Sets active
-     * @param bool $active Whether the bank account is active or not
+     * @param bool $active
      * @return $this
      */
     public function setActive($active)

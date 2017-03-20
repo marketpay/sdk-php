@@ -55,6 +55,7 @@ class UserNaturalResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'email' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
         'address' => '\Swagger\Client\Model\Address',
@@ -66,7 +67,6 @@ class UserNaturalResponse implements ArrayAccess
         'proof_of_identity' => 'string',
         'proof_of_address' => 'string',
         'person_type' => 'string',
-        'email' => 'string',
         'kyc_level' => 'string',
         'id' => 'string',
         'creation_date' => 'int',
@@ -83,6 +83,7 @@ class UserNaturalResponse implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'email' => 'Email',
         'first_name' => 'FirstName',
         'last_name' => 'LastName',
         'address' => 'Address',
@@ -94,7 +95,6 @@ class UserNaturalResponse implements ArrayAccess
         'proof_of_identity' => 'ProofOfIdentity',
         'proof_of_address' => 'ProofOfAddress',
         'person_type' => 'PersonType',
-        'email' => 'Email',
         'kyc_level' => 'KYCLevel',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
@@ -107,6 +107,7 @@ class UserNaturalResponse implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'email' => 'setEmail',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'address' => 'setAddress',
@@ -118,7 +119,6 @@ class UserNaturalResponse implements ArrayAccess
         'proof_of_identity' => 'setProofOfIdentity',
         'proof_of_address' => 'setProofOfAddress',
         'person_type' => 'setPersonType',
-        'email' => 'setEmail',
         'kyc_level' => 'setKycLevel',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
@@ -131,6 +131,7 @@ class UserNaturalResponse implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'email' => 'getEmail',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'address' => 'getAddress',
@@ -142,7 +143,6 @@ class UserNaturalResponse implements ArrayAccess
         'proof_of_identity' => 'getProofOfIdentity',
         'proof_of_address' => 'getProofOfAddress',
         'person_type' => 'getPersonType',
-        'email' => 'getEmail',
         'kyc_level' => 'getKycLevel',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
@@ -1230,6 +1230,7 @@ class UserNaturalResponse implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
@@ -1241,7 +1242,6 @@ class UserNaturalResponse implements ArrayAccess
         $this->container['proof_of_identity'] = isset($data['proof_of_identity']) ? $data['proof_of_identity'] : null;
         $this->container['proof_of_address'] = isset($data['proof_of_address']) ? $data['proof_of_address'] : null;
         $this->container['person_type'] = isset($data['person_type']) ? $data['person_type'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['kyc_level'] = isset($data['kyc_level']) ? $data['kyc_level'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
@@ -1308,6 +1308,27 @@ class UserNaturalResponse implements ArrayAccess
 
 
     /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
      * Gets first_name
      * @return string
      */
@@ -1318,7 +1339,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name The name of the user
+     * @param string $first_name
      * @return $this
      */
     public function setFirstName($first_name)
@@ -1339,7 +1360,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets last_name
-     * @param string $last_name The last name of the user
+     * @param string $last_name
      * @return $this
      */
     public function setLastName($last_name)
@@ -1360,7 +1381,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\Address $address The address
+     * @param \Swagger\Client\Model\Address $address
      * @return $this
      */
     public function setAddress($address)
@@ -1381,7 +1402,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets birthday
-     * @param int $birthday The date of birth of the user - be careful to set the right timezone (should be UTC) to avoid 00h becoming 23h (and hence interpreted as the day before)
+     * @param int $birthday
      * @return $this
      */
     public function setBirthday($birthday)
@@ -1402,7 +1423,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets nationality
-     * @param string $nationality The user’s nationality. ISO 3166-1 alpha-2 format is expected
+     * @param string $nationality
      * @return $this
      */
     public function setNationality($nationality)
@@ -1427,7 +1448,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets country_of_residence
-     * @param string $country_of_residence The user’s country of residence. ISO 3166-1 alpha-2 format is expected
+     * @param string $country_of_residence
      * @return $this
      */
     public function setCountryOfResidence($country_of_residence)
@@ -1452,7 +1473,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets occupation
-     * @param string $occupation User’s occupation, ie. Work
+     * @param string $occupation
      * @return $this
      */
     public function setOccupation($occupation)
@@ -1473,7 +1494,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets income_range
-     * @param int $income_range Could be only one of these values: 1 - for incomes &lt;18K€),2 - for incomes between 18 and 30K€, 3 - for incomes between 30 and 50K€, 4 - for incomes between 50 and 80K€, 5 - for incomes between 80 and 120K€, 6 - for incomes &gt;120K€
+     * @param int $income_range
      * @return $this
      */
     public function setIncomeRange($income_range)
@@ -1494,7 +1515,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets proof_of_identity
-     * @param string $proof_of_identity Proof of identity.
+     * @param string $proof_of_identity
      * @return $this
      */
     public function setProofOfIdentity($proof_of_identity)
@@ -1515,7 +1536,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets proof_of_address
-     * @param string $proof_of_address Proof of address.
+     * @param string $proof_of_address
      * @return $this
      */
     public function setProofOfAddress($proof_of_address)
@@ -1536,7 +1557,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets person_type
-     * @param string $person_type Type of user
+     * @param string $person_type
      * @return $this
      */
     public function setPersonType($person_type)
@@ -1546,27 +1567,6 @@ class UserNaturalResponse implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'person_type', must be one of 'Natural', 'Legal'");
         }
         $this->container['person_type'] = $person_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     * @param string $email The user's email address - must be a valid email
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
 
         return $this;
     }
@@ -1582,7 +1582,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets kyc_level
-     * @param string $kyc_level 
+     * @param string $kyc_level
      * @return $this
      */
     public function setKycLevel($kyc_level)

@@ -3,8 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**person_type** | **string** | Type of user | [optional] 
-**email** | **string** | The user&#39;s email address - must be a valid email | [optional] 
+**person_type** | **string** |  | [optional] 
 **kyc_level** | **string** |  | [optional] 
 **id** | **string** | The item&#39;s ID | [optional] 
 **creation_date** | **int** | When the item was created | [optional] 

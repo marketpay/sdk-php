@@ -187,7 +187,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets branch_code
-     * @param string $branch_code The branch code of the bank where the bank account. Must be numbers only, and 5 digits long
+     * @param string $branch_code
      * @return $this
      */
     public function setBranchCode($branch_code)
@@ -208,7 +208,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets institution_number
-     * @param string $institution_number The institution number of the bank account. Must be numbers only, and 3 or 4 digits long
+     * @param string $institution_number
      * @return $this
      */
     public function setInstitutionNumber($institution_number)
@@ -229,7 +229,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets account_number
-     * @param string $account_number The account number of the bank account. Must be numbers only. Canadian account numbers must be a maximum of 20 digits
+     * @param string $account_number
      * @return $this
      */
     public function setAccountNumber($account_number)
@@ -250,7 +250,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets bank_name
-     * @param string $bank_name The name of the bank where the account is held. Must be letters or numbers only and maximum 50 characters long
+     * @param string $bank_name
      * @return $this
      */
     public function setBankName($bank_name)
@@ -271,7 +271,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -292,7 +292,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address The address of the owner of the bank account
+     * @param \Swagger\Client\Model\Address $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -313,7 +313,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name The name of the owner of the bank account
+     * @param string $owner_name
      * @return $this
      */
     public function setOwnerName($owner_name)

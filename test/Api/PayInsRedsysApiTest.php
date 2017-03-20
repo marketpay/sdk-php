@@ -77,78 +77,78 @@ class PayInsRedsysApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for payInsRedsysGetPayment
+     * Test case for payInsRedsysRedsysGetPayment
      *
-     * View a Redsys payment.
+     * .
      *
      */
-    public function testPayInsRedsysGetPayment()
+    public function testPayInsRedsysRedsysGetPayment()
     {
 
     }
 
     /**
-     * Test case for payInsRedsysGetPreauthorization
+     * Test case for payInsRedsysRedsysGetPreauthorization
      *
-     * View a Redsys Preauthorization.
+     * .
      *
      */
-    public function testPayInsRedsysGetPreauthorization()
+    public function testPayInsRedsysRedsysGetPreauthorization()
     {
 
     }
 
     /**
-     * Test case for payInsRedsysPostPayByWeb
+     * Test case for payInsRedsysRedsysPostPaymentByWeb
      *
-     * Create a Redsys PayIn Request.
+     * .
      *
      */
-    public function testPayInsRedsysPostPayByWeb()
+    public function testPayInsRedsysRedsysPostPaymentByWeb()
     {
 
     }
 
     /**
-     * Test case for payInsRedsysPostPreauthorizationCancellation
+     * Test case for payInsRedsysRedsysPostPreauthorizationByWeb
      *
-     * Cancels a Preauthorization.
+     * .
      *
      */
-    public function testPayInsRedsysPostPreauthorizationCancellation()
+    public function testPayInsRedsysRedsysPostPreauthorizationByWeb()
     {
 
     }
 
     /**
-     * Test case for payInsRedsysPostPreauthorizationConfirmation
+     * Test case for payInsRedsysRedsysPostPreauthorizationCancellation
      *
-     * Confirms a Preauthorization.
+     * .
      *
      */
-    public function testPayInsRedsysPostPreauthorizationConfirmation()
+    public function testPayInsRedsysRedsysPostPreauthorizationCancellation()
     {
 
     }
 
     /**
-     * Test case for payInsRedsysPostPreauthorizeByWeb
+     * Test case for payInsRedsysRedsysPostPreauthorizationConfirmation
      *
-     * Create a Redsys Preauthorization Request.
+     * .
      *
      */
-    public function testPayInsRedsysPostPreauthorizeByWeb()
+    public function testPayInsRedsysRedsysPostPreauthorizationConfirmation()
     {
 
     }
 
     /**
-     * Test case for payInsRedsysPostRefund
+     * Test case for payInsRedsysRedsysPostRefund
      *
-     * Create a Redsys Payment Refund.
+     * .
      *
      */
-    public function testPayInsRedsysPostRefund()
+    public function testPayInsRedsysRedsysPostRefund()
     {
 
     }

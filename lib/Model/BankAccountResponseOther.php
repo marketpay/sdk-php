@@ -755,7 +755,7 @@ class BankAccountResponseOther implements ArrayAccess
 
     /**
      * Sets country
-     * @param string $country The Country where the bank account is held
+     * @param string $country
      * @return $this
      */
     public function setCountry($country)
@@ -780,7 +780,7 @@ class BankAccountResponseOther implements ArrayAccess
 
     /**
      * Sets bic
-     * @param string $bic The BIC of the bank account
+     * @param string $bic
      * @return $this
      */
     public function setBic($bic)
@@ -801,7 +801,7 @@ class BankAccountResponseOther implements ArrayAccess
 
     /**
      * Sets account_number
-     * @param string $account_number The account number of the bank account. Must be numbers only. Canadian account numbers must be a maximum of 20 digits
+     * @param string $account_number
      * @return $this
      */
     public function setAccountNumber($account_number)
@@ -822,7 +822,7 @@ class BankAccountResponseOther implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type The type of bank account
+     * @param string $type
      * @return $this
      */
     public function setType($type)
@@ -847,7 +847,7 @@ class BankAccountResponseOther implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address The address of the owner of the bank account
+     * @param \Swagger\Client\Model\Address $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -868,7 +868,7 @@ class BankAccountResponseOther implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name The name of the owner of the bank account
+     * @param string $owner_name
      * @return $this
      */
     public function setOwnerName($owner_name)
@@ -889,7 +889,7 @@ class BankAccountResponseOther implements ArrayAccess
 
     /**
      * Sets user_id
-     * @param string $user_id The object owner's UserId
+     * @param string $user_id
      * @return $this
      */
     public function setUserId($user_id)
@@ -910,7 +910,7 @@ class BankAccountResponseOther implements ArrayAccess
 
     /**
      * Sets active
-     * @param bool $active Whether the bank account is active or not
+     * @param bool $active
      * @return $this
      */
     public function setActive($active)

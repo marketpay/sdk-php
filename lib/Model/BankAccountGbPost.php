@@ -177,7 +177,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Sets sort_code
-     * @param string $sort_code The sort code of the bank account. Must be numbers only, and 6 digits long
+     * @param string $sort_code
      * @return $this
      */
     public function setSortCode($sort_code)
@@ -198,7 +198,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Sets account_number
-     * @param string $account_number The account number of the bank account. Must be numbers only. GB account numbers must be 8 digits long
+     * @param string $account_number
      * @return $this
      */
     public function setAccountNumber($account_number)
@@ -219,7 +219,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -240,7 +240,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address The address of the owner of the bank account
+     * @param \Swagger\Client\Model\Address $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -261,7 +261,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name The name of the owner of the bank account
+     * @param string $owner_name
      * @return $this
      */
     public function setOwnerName($owner_name)

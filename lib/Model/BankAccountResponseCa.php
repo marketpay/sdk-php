@@ -241,7 +241,7 @@ class BankAccountResponseCa implements ArrayAccess
 
     /**
      * Sets branch_code
-     * @param string $branch_code The branch code of the bank where the bank account. Must be numbers only, and 5 digits long
+     * @param string $branch_code
      * @return $this
      */
     public function setBranchCode($branch_code)
@@ -262,7 +262,7 @@ class BankAccountResponseCa implements ArrayAccess
 
     /**
      * Sets institution_number
-     * @param string $institution_number The institution number of the bank account. Must be numbers only, and 3 or 4 digits long
+     * @param string $institution_number
      * @return $this
      */
     public function setInstitutionNumber($institution_number)
@@ -283,7 +283,7 @@ class BankAccountResponseCa implements ArrayAccess
 
     /**
      * Sets account_number
-     * @param string $account_number The account number of the bank account. Must be numbers only. Canadian account numbers must be a maximum of 20 digits
+     * @param string $account_number
      * @return $this
      */
     public function setAccountNumber($account_number)
@@ -304,7 +304,7 @@ class BankAccountResponseCa implements ArrayAccess
 
     /**
      * Sets bank_name
-     * @param string $bank_name The name of the bank where the account is held. Must be letters or numbers only and maximum 50 characters long
+     * @param string $bank_name
      * @return $this
      */
     public function setBankName($bank_name)
@@ -325,7 +325,7 @@ class BankAccountResponseCa implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type The type of bank account
+     * @param string $type
      * @return $this
      */
     public function setType($type)
@@ -350,7 +350,7 @@ class BankAccountResponseCa implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address The address of the owner of the bank account
+     * @param \Swagger\Client\Model\Address $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -371,7 +371,7 @@ class BankAccountResponseCa implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name The name of the owner of the bank account
+     * @param string $owner_name
      * @return $this
      */
     public function setOwnerName($owner_name)
@@ -392,7 +392,7 @@ class BankAccountResponseCa implements ArrayAccess
 
     /**
      * Sets user_id
-     * @param string $user_id The object owner's UserId
+     * @param string $user_id
      * @return $this
      */
     public function setUserId($user_id)
@@ -413,7 +413,7 @@ class BankAccountResponseCa implements ArrayAccess
 
     /**
      * Sets active
-     * @param bool $active Whether the bank account is active or not
+     * @param bool $active
      * @return $this
      */
     public function setActive($active)

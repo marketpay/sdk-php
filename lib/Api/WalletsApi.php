@@ -59,7 +59,6 @@ class WalletsApi
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
         }
 
         $this->apiClient = $apiClient;
@@ -91,9 +90,9 @@ class WalletsApi
     /**
      * Operation walletsGet
      *
-     * View a Wallet
+     * 
      *
-     * @param int $wallet_id The Id of a wallet (required)
+     * @param int $wallet_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\WalletResponse
      */
@@ -106,9 +105,9 @@ class WalletsApi
     /**
      * Operation walletsGetWithHttpInfo
      *
-     * View a Wallet
+     * 
      *
-     * @param int $wallet_id The Id of a wallet (required)
+     * @param int $wallet_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -184,11 +183,11 @@ class WalletsApi
     /**
      * Operation walletsGetTransactionList
      *
-     * List a Wallet's Transactions
+     * 
      *
-     * @param int $wallet_id The Id of a wallet (required)
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $wallet_id  (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\TransactionResponse[]
      */
@@ -201,11 +200,11 @@ class WalletsApi
     /**
      * Operation walletsGetTransactionListWithHttpInfo
      *
-     * List a Wallet's Transactions
+     * 
      *
-     * @param int $wallet_id The Id of a wallet (required)
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $wallet_id  (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\TransactionResponse[], HTTP status code, HTTP response headers (array of strings)
      */
@@ -289,9 +288,9 @@ class WalletsApi
     /**
      * Operation walletsPost
      *
-     * Create a Wallet
+     * 
      *
-     * @param \Swagger\Client\Model\WalletPost $wallet Wallet Object params (optional)
+     * @param \Swagger\Client\Model\WalletPost $wallet  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\WalletResponse
      */
@@ -304,9 +303,9 @@ class WalletsApi
     /**
      * Operation walletsPostWithHttpInfo
      *
-     * Create a Wallet
+     * 
      *
-     * @param \Swagger\Client\Model\WalletPost $wallet Wallet Object params (optional)
+     * @param \Swagger\Client\Model\WalletPost $wallet  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -375,10 +374,10 @@ class WalletsApi
     /**
      * Operation walletsPut
      *
-     * Update a Wallet
+     * 
      *
-     * @param int $wallet_id The Id of a wallet (required)
-     * @param \Swagger\Client\Model\WalletPut $wallet Wallet Object params (optional)
+     * @param int $wallet_id  (required)
+     * @param \Swagger\Client\Model\WalletPut $wallet  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\WalletResponse
      */
@@ -391,10 +390,10 @@ class WalletsApi
     /**
      * Operation walletsPutWithHttpInfo
      *
-     * Update a Wallet
+     * 
      *
-     * @param int $wallet_id The Id of a wallet (required)
-     * @param \Swagger\Client\Model\WalletPut $wallet Wallet Object params (optional)
+     * @param int $wallet_id  (required)
+     * @param \Swagger\Client\Model\WalletPut $wallet  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
      */

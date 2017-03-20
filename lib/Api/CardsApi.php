@@ -59,7 +59,6 @@ class CardsApi
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
         }
 
         $this->apiClient = $apiClient;
@@ -91,9 +90,9 @@ class CardsApi
     /**
      * Operation cardsGet
      *
-     * View a Card
+     * 
      *
-     * @param int $card_id The Id of a card (required)
+     * @param int $card_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\CardResponse
      */
@@ -106,9 +105,9 @@ class CardsApi
     /**
      * Operation cardsGetWithHttpInfo
      *
-     * View a Card
+     * 
      *
-     * @param int $card_id The Id of a card (required)
+     * @param int $card_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\CardResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -184,10 +183,10 @@ class CardsApi
     /**
      * Operation cardsPut
      *
-     * Deactivate a Card
+     * 
      *
-     * @param int $card_id The Id of a card (required)
-     * @param \Swagger\Client\Model\CardPut $card Card Object params (optional)
+     * @param int $card_id  (required)
+     * @param \Swagger\Client\Model\CardPut $card  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\CardResponse
      */
@@ -200,10 +199,10 @@ class CardsApi
     /**
      * Operation cardsPutWithHttpInfo
      *
-     * Deactivate a Card
+     * 
      *
-     * @param int $card_id The Id of a card (required)
-     * @param \Swagger\Client\Model\CardPut $card Card Object params (optional)
+     * @param int $card_id  (required)
+     * @param \Swagger\Client\Model\CardPut $card  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\CardResponse, HTTP status code, HTTP response headers (array of strings)
      */
