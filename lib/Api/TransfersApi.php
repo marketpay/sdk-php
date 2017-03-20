@@ -59,7 +59,6 @@ class TransfersApi
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
         }
 
         $this->apiClient = $apiClient;
@@ -91,9 +90,9 @@ class TransfersApi
     /**
      * Operation transfersGet
      *
-     * View a Transfer
+     * 
      *
-     * @param int $transfer_id The Id of a transfer (required)
+     * @param int $transfer_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\TransferResponse
      */
@@ -106,9 +105,9 @@ class TransfersApi
     /**
      * Operation transfersGetWithHttpInfo
      *
-     * View a Transfer
+     * 
      *
-     * @param int $transfer_id The Id of a transfer (required)
+     * @param int $transfer_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\TransferResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -184,9 +183,9 @@ class TransfersApi
     /**
      * Operation transfersPost
      *
-     * Create a Transfer
+     * 
      *
-     * @param \Swagger\Client\Model\TransferPost $transfer Transfer Object params (optional)
+     * @param \Swagger\Client\Model\TransferPost $transfer  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\TransferResponse
      */
@@ -199,9 +198,9 @@ class TransfersApi
     /**
      * Operation transfersPostWithHttpInfo
      *
-     * Create a Transfer
+     * 
      *
-     * @param \Swagger\Client\Model\TransferPost $transfer Transfer Object params (optional)
+     * @param \Swagger\Client\Model\TransferPost $transfer  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\TransferResponse, HTTP status code, HTTP response headers (array of strings)
      */

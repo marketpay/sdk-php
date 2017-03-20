@@ -56,7 +56,6 @@ class UserResponse implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'person_type' => 'string',
-        'email' => 'string',
         'kyc_level' => 'string',
         'id' => 'string',
         'creation_date' => 'int',
@@ -74,7 +73,6 @@ class UserResponse implements ArrayAccess
      */
     protected static $attributeMap = [
         'person_type' => 'PersonType',
-        'email' => 'Email',
         'kyc_level' => 'KYCLevel',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
@@ -88,7 +86,6 @@ class UserResponse implements ArrayAccess
      */
     protected static $setters = [
         'person_type' => 'setPersonType',
-        'email' => 'setEmail',
         'kyc_level' => 'setKycLevel',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
@@ -102,7 +99,6 @@ class UserResponse implements ArrayAccess
      */
     protected static $getters = [
         'person_type' => 'getPersonType',
-        'email' => 'getEmail',
         'kyc_level' => 'getKycLevel',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
@@ -171,7 +167,6 @@ class UserResponse implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['person_type'] = isset($data['person_type']) ? $data['person_type'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['kyc_level'] = isset($data['kyc_level']) ? $data['kyc_level'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
@@ -230,7 +225,7 @@ class UserResponse implements ArrayAccess
 
     /**
      * Sets person_type
-     * @param string $person_type Type of user
+     * @param string $person_type
      * @return $this
      */
     public function setPersonType($person_type)
@@ -240,27 +235,6 @@ class UserResponse implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'person_type', must be one of 'Natural', 'Legal'");
         }
         $this->container['person_type'] = $person_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     * @param string $email The user's email address - must be a valid email
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
 
         return $this;
     }
@@ -276,7 +250,7 @@ class UserResponse implements ArrayAccess
 
     /**
      * Sets kyc_level
-     * @param string $kyc_level 
+     * @param string $kyc_level
      * @return $this
      */
     public function setKycLevel($kyc_level)

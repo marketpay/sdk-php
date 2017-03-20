@@ -83,6 +83,14 @@ class UserNaturalPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+
+    }
+
+    /**
      * Test attribute "first_name"
      */
     public function testPropertyFirstName()
@@ -150,14 +158,6 @@ class UserNaturalPostTest extends \PHPUnit_Framework_TestCase
      * Test attribute "tag"
      */
     public function testPropertyTag()
-    {
-
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
     {
 
     }

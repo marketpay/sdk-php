@@ -70,7 +70,6 @@ class UserLegalResponse implements ArrayAccess
         'shareholder_declaration' => 'string',
         'proof_of_registration' => 'string',
         'person_type' => 'string',
-        'email' => 'string',
         'kyc_level' => 'string',
         'id' => 'string',
         'creation_date' => 'int',
@@ -102,7 +101,6 @@ class UserLegalResponse implements ArrayAccess
         'shareholder_declaration' => 'ShareholderDeclaration',
         'proof_of_registration' => 'ProofOfRegistration',
         'person_type' => 'PersonType',
-        'email' => 'Email',
         'kyc_level' => 'KYCLevel',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
@@ -130,7 +128,6 @@ class UserLegalResponse implements ArrayAccess
         'shareholder_declaration' => 'setShareholderDeclaration',
         'proof_of_registration' => 'setProofOfRegistration',
         'person_type' => 'setPersonType',
-        'email' => 'setEmail',
         'kyc_level' => 'setKycLevel',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
@@ -158,7 +155,6 @@ class UserLegalResponse implements ArrayAccess
         'shareholder_declaration' => 'getShareholderDeclaration',
         'proof_of_registration' => 'getProofOfRegistration',
         'person_type' => 'getPersonType',
-        'email' => 'getEmail',
         'kyc_level' => 'getKycLevel',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
@@ -1277,7 +1273,6 @@ class UserLegalResponse implements ArrayAccess
         $this->container['shareholder_declaration'] = isset($data['shareholder_declaration']) ? $data['shareholder_declaration'] : null;
         $this->container['proof_of_registration'] = isset($data['proof_of_registration']) ? $data['proof_of_registration'] : null;
         $this->container['person_type'] = isset($data['person_type']) ? $data['person_type'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['kyc_level'] = isset($data['kyc_level']) ? $data['kyc_level'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
@@ -1363,7 +1358,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets headquarters_address
-     * @param \Swagger\Client\Model\Address $headquarters_address The address of the company’s headquarters
+     * @param \Swagger\Client\Model\Address $headquarters_address
      * @return $this
      */
     public function setHeadquartersAddress($headquarters_address)
@@ -1384,7 +1379,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_person_type
-     * @param string $legal_person_type The type of legal user
+     * @param string $legal_person_type
      * @return $this
      */
     public function setLegalPersonType($legal_person_type)
@@ -1409,7 +1404,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name The name of the legal user
+     * @param string $name
      * @return $this
      */
     public function setName($name)
@@ -1430,7 +1425,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_address
-     * @param \Swagger\Client\Model\Address $legal_representative_address The address of the company’s Legal representative person
+     * @param \Swagger\Client\Model\Address $legal_representative_address
      * @return $this
      */
     public function setLegalRepresentativeAddress($legal_representative_address)
@@ -1451,7 +1446,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_birthday
-     * @param int $legal_representative_birthday The date of birth of the company’s Legal representative person - be careful to set the right timezone (should be UTC) to avoid 00h becoming 23h (and hence interpreted as the day before)
+     * @param int $legal_representative_birthday
      * @return $this
      */
     public function setLegalRepresentativeBirthday($legal_representative_birthday)
@@ -1472,7 +1467,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_country_of_residence
-     * @param string $legal_representative_country_of_residence The country of residence of the company’s Legal representative person
+     * @param string $legal_representative_country_of_residence
      * @return $this
      */
     public function setLegalRepresentativeCountryOfResidence($legal_representative_country_of_residence)
@@ -1497,7 +1492,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_nationality
-     * @param string $legal_representative_nationality The nationality of the company’s Legal representative person
+     * @param string $legal_representative_nationality
      * @return $this
      */
     public function setLegalRepresentativeNationality($legal_representative_nationality)
@@ -1522,7 +1517,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_email
-     * @param string $legal_representative_email The email of the company’s Legal representative person - must be a valid
+     * @param string $legal_representative_email
      * @return $this
      */
     public function setLegalRepresentativeEmail($legal_representative_email)
@@ -1543,7 +1538,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_first_name
-     * @param string $legal_representative_first_name The firstname of the company’s Legal representative person
+     * @param string $legal_representative_first_name
      * @return $this
      */
     public function setLegalRepresentativeFirstName($legal_representative_first_name)
@@ -1564,7 +1559,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_last_name
-     * @param string $legal_representative_last_name The lastname of the company’s Legal representative person
+     * @param string $legal_representative_last_name
      * @return $this
      */
     public function setLegalRepresentativeLastName($legal_representative_last_name)
@@ -1585,7 +1580,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_proof_of_identity
-     * @param string $legal_representative_proof_of_identity Legal Representative Proof Of Identity
+     * @param string $legal_representative_proof_of_identity
      * @return $this
      */
     public function setLegalRepresentativeProofOfIdentity($legal_representative_proof_of_identity)
@@ -1606,7 +1601,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets statute
-     * @param string $statute Statute
+     * @param string $statute
      * @return $this
      */
     public function setStatute($statute)
@@ -1627,7 +1622,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets shareholder_declaration
-     * @param string $shareholder_declaration Shareholder declaration
+     * @param string $shareholder_declaration
      * @return $this
      */
     public function setShareholderDeclaration($shareholder_declaration)
@@ -1648,7 +1643,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets proof_of_registration
-     * @param string $proof_of_registration Proof of registration
+     * @param string $proof_of_registration
      * @return $this
      */
     public function setProofOfRegistration($proof_of_registration)
@@ -1669,7 +1664,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets person_type
-     * @param string $person_type Type of user
+     * @param string $person_type
      * @return $this
      */
     public function setPersonType($person_type)
@@ -1679,27 +1674,6 @@ class UserLegalResponse implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'person_type', must be one of 'Natural', 'Legal'");
         }
         $this->container['person_type'] = $person_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     * @param string $email The user's email address - must be a valid email
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
 
         return $this;
     }
@@ -1715,7 +1689,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets kyc_level
-     * @param string $kyc_level 
+     * @param string $kyc_level
      * @return $this
      */
     public function setKycLevel($kyc_level)

@@ -177,7 +177,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Sets iban
-     * @param string $iban The IBAN of the bank account
+     * @param string $iban
      * @return $this
      */
     public function setIban($iban)
@@ -198,7 +198,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Sets bic
-     * @param string $bic The BIC of the bank account
+     * @param string $bic
      * @return $this
      */
     public function setBic($bic)
@@ -219,7 +219,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -240,7 +240,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address The address of the owner of the bank account
+     * @param \Swagger\Client\Model\Address $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -261,7 +261,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name The name of the owner of the bank account
+     * @param string $owner_name
      * @return $this
      */
     public function setOwnerName($owner_name)

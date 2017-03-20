@@ -4,16 +4,14 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**transfersGet**](TransfersApi.md#transfersGet) | **GET** /v2.01/Transfers/{TransferId} | View a Transfer
-[**transfersPost**](TransfersApi.md#transfersPost) | **POST** /v2.01/Transfers | Create a Transfer
+[**transfersGet**](TransfersApi.md#transfersGet) | **GET** /v2.01/Transfers/{TransferId} | 
+[**transfersPost**](TransfersApi.md#transfersPost) | **POST** /v2.01/Transfers | 
 
 
 # **transfersGet**
 > \Swagger\Client\Model\TransferResponse transfersGet($transfer_id)
 
-View a Transfer
 
-A Transfer is a request to relocate e-money from one wallet to another wallet.
 
 ### Example
 ```php
@@ -24,7 +22,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\TransfersApi();
-$transfer_id = 789; // int | The Id of a transfer
+$transfer_id = 789; // int | 
 
 try {
     $result = $api_instance->transfersGet($transfer_id);
@@ -39,7 +37,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transfer_id** | **int**| The Id of a transfer |
+ **transfer_id** | **int**|  |
 
 ### Return type
 
@@ -59,8 +57,6 @@ Name | Type | Description  | Notes
 # **transfersPost**
 > \Swagger\Client\Model\TransferResponse transfersPost($transfer)
 
-Create a Transfer
-
 
 
 ### Example
@@ -72,7 +68,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\TransfersApi();
-$transfer = new \Swagger\Client\Model\TransferPost(); // \Swagger\Client\Model\TransferPost | Transfer Object params
+$transfer = new \Swagger\Client\Model\TransferPost(); // \Swagger\Client\Model\TransferPost | 
 
 try {
     $result = $api_instance->transfersPost($transfer);
@@ -87,7 +83,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transfer** | [**\Swagger\Client\Model\TransferPost**](../Model/\Swagger\Client\Model\TransferPost.md)| Transfer Object params | [optional]
+ **transfer** | [**\Swagger\Client\Model\TransferPost**](../Model/\Swagger\Client\Model\TransferPost.md)|  | [optional]
 
 ### Return type
 

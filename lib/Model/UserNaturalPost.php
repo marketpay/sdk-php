@@ -55,6 +55,7 @@ class UserNaturalPost implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'email' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
         'address' => '\Swagger\Client\Model\Address',
@@ -63,8 +64,7 @@ class UserNaturalPost implements ArrayAccess
         'country_of_residence' => 'string',
         'occupation' => 'string',
         'income_range' => 'int',
-        'tag' => 'string',
-        'email' => 'string'
+        'tag' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -77,6 +77,7 @@ class UserNaturalPost implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'email' => 'Email',
         'first_name' => 'FirstName',
         'last_name' => 'LastName',
         'address' => 'Address',
@@ -85,8 +86,7 @@ class UserNaturalPost implements ArrayAccess
         'country_of_residence' => 'CountryOfResidence',
         'occupation' => 'Occupation',
         'income_range' => 'IncomeRange',
-        'tag' => 'Tag',
-        'email' => 'Email'
+        'tag' => 'Tag'
     ];
 
 
@@ -95,6 +95,7 @@ class UserNaturalPost implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'email' => 'setEmail',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'address' => 'setAddress',
@@ -103,8 +104,7 @@ class UserNaturalPost implements ArrayAccess
         'country_of_residence' => 'setCountryOfResidence',
         'occupation' => 'setOccupation',
         'income_range' => 'setIncomeRange',
-        'tag' => 'setTag',
-        'email' => 'setEmail'
+        'tag' => 'setTag'
     ];
 
 
@@ -113,6 +113,7 @@ class UserNaturalPost implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'email' => 'getEmail',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'address' => 'getAddress',
@@ -121,8 +122,7 @@ class UserNaturalPost implements ArrayAccess
         'country_of_residence' => 'getCountryOfResidence',
         'occupation' => 'getOccupation',
         'income_range' => 'getIncomeRange',
-        'tag' => 'getTag',
-        'email' => 'getEmail'
+        'tag' => 'getTag'
     ];
 
     public static function attributeMap()
@@ -1176,6 +1176,7 @@ class UserNaturalPost implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
@@ -1185,7 +1186,6 @@ class UserNaturalPost implements ArrayAccess
         $this->container['occupation'] = isset($data['occupation']) ? $data['occupation'] : null;
         $this->container['income_range'] = isset($data['income_range']) ? $data['income_range'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
     }
 
     /**
@@ -1230,6 +1230,27 @@ class UserNaturalPost implements ArrayAccess
 
 
     /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
      * Gets first_name
      * @return string
      */
@@ -1240,7 +1261,7 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name The name of the user
+     * @param string $first_name
      * @return $this
      */
     public function setFirstName($first_name)
@@ -1261,7 +1282,7 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Sets last_name
-     * @param string $last_name The last name of the user
+     * @param string $last_name
      * @return $this
      */
     public function setLastName($last_name)
@@ -1282,7 +1303,7 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\Address $address The address
+     * @param \Swagger\Client\Model\Address $address
      * @return $this
      */
     public function setAddress($address)
@@ -1303,7 +1324,7 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Sets birthday
-     * @param int $birthday The date of birth of the user - be careful to set the right timezone (should be UTC) to avoid 00h becoming 23h (and hence interpreted as the day before)
+     * @param int $birthday
      * @return $this
      */
     public function setBirthday($birthday)
@@ -1324,7 +1345,7 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Sets nationality
-     * @param string $nationality The user’s nationality. ISO 3166-1 alpha-2 format is expected
+     * @param string $nationality
      * @return $this
      */
     public function setNationality($nationality)
@@ -1349,7 +1370,7 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Sets country_of_residence
-     * @param string $country_of_residence The user’s country of residence. ISO 3166-1 alpha-2 format is expected
+     * @param string $country_of_residence
      * @return $this
      */
     public function setCountryOfResidence($country_of_residence)
@@ -1374,7 +1395,7 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Sets occupation
-     * @param string $occupation User’s occupation, ie. Work
+     * @param string $occupation
      * @return $this
      */
     public function setOccupation($occupation)
@@ -1395,7 +1416,7 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Sets income_range
-     * @param int $income_range Could be only one of these values: 1 - for incomes &lt;18K€),2 - for incomes between 18 and 30K€, 3 - for incomes between 30 and 50K€, 4 - for incomes between 50 and 80K€, 5 - for incomes between 80 and 120K€, 6 - for incomes &gt;120K€
+     * @param int $income_range
      * @return $this
      */
     public function setIncomeRange($income_range)
@@ -1416,33 +1437,12 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
     {
         $this->container['tag'] = $tag;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     * @param string $email The user's email address - must be a valid email
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
 
         return $this;
     }

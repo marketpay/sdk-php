@@ -170,12 +170,4 @@ class UserLegalPostTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-
-    }
-
 }

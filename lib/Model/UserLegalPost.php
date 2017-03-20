@@ -65,8 +65,7 @@ class UserLegalPost implements ArrayAccess
         'legal_representative_email' => 'string',
         'legal_representative_first_name' => 'string',
         'legal_representative_last_name' => 'string',
-        'tag' => 'string',
-        'email' => 'string'
+        'tag' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -89,8 +88,7 @@ class UserLegalPost implements ArrayAccess
         'legal_representative_email' => 'LegalRepresentativeEmail',
         'legal_representative_first_name' => 'LegalRepresentativeFirstName',
         'legal_representative_last_name' => 'LegalRepresentativeLastName',
-        'tag' => 'Tag',
-        'email' => 'Email'
+        'tag' => 'Tag'
     ];
 
 
@@ -109,8 +107,7 @@ class UserLegalPost implements ArrayAccess
         'legal_representative_email' => 'setLegalRepresentativeEmail',
         'legal_representative_first_name' => 'setLegalRepresentativeFirstName',
         'legal_representative_last_name' => 'setLegalRepresentativeLastName',
-        'tag' => 'setTag',
-        'email' => 'setEmail'
+        'tag' => 'setTag'
     ];
 
 
@@ -129,8 +126,7 @@ class UserLegalPost implements ArrayAccess
         'legal_representative_email' => 'getLegalRepresentativeEmail',
         'legal_representative_first_name' => 'getLegalRepresentativeFirstName',
         'legal_representative_last_name' => 'getLegalRepresentativeLastName',
-        'tag' => 'getTag',
-        'email' => 'getEmail'
+        'tag' => 'getTag'
     ];
 
     public static function attributeMap()
@@ -1211,7 +1207,6 @@ class UserLegalPost implements ArrayAccess
         $this->container['legal_representative_first_name'] = isset($data['legal_representative_first_name']) ? $data['legal_representative_first_name'] : null;
         $this->container['legal_representative_last_name'] = isset($data['legal_representative_last_name']) ? $data['legal_representative_last_name'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
     }
 
     /**
@@ -1275,7 +1270,7 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets headquarters_address
-     * @param \Swagger\Client\Model\Address $headquarters_address he address of the company’s headquarters
+     * @param \Swagger\Client\Model\Address $headquarters_address
      * @return $this
      */
     public function setHeadquartersAddress($headquarters_address)
@@ -1296,7 +1291,7 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets legal_person_type
-     * @param string $legal_person_type The type of legal user
+     * @param string $legal_person_type
      * @return $this
      */
     public function setLegalPersonType($legal_person_type)
@@ -1321,7 +1316,7 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name The name of the legal user
+     * @param string $name
      * @return $this
      */
     public function setName($name)
@@ -1342,7 +1337,7 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets legal_representative_address
-     * @param \Swagger\Client\Model\Address $legal_representative_address The address of the company’s Legal representative person
+     * @param \Swagger\Client\Model\Address $legal_representative_address
      * @return $this
      */
     public function setLegalRepresentativeAddress($legal_representative_address)
@@ -1363,7 +1358,7 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets legal_representative_birthday
-     * @param int $legal_representative_birthday The date of birth of the company’s Legal representative person - be careful to set the right timezone (should be UTC) to avoid 00h becoming 23h (and hence interpreted as the day before)
+     * @param int $legal_representative_birthday
      * @return $this
      */
     public function setLegalRepresentativeBirthday($legal_representative_birthday)
@@ -1384,7 +1379,7 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets legal_representative_country_of_residence
-     * @param string $legal_representative_country_of_residence The country of residence of the company’s Legal representative person
+     * @param string $legal_representative_country_of_residence
      * @return $this
      */
     public function setLegalRepresentativeCountryOfResidence($legal_representative_country_of_residence)
@@ -1409,7 +1404,7 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets legal_representative_nationality
-     * @param string $legal_representative_nationality The nationality of the company’s Legal representative person
+     * @param string $legal_representative_nationality
      * @return $this
      */
     public function setLegalRepresentativeNationality($legal_representative_nationality)
@@ -1434,7 +1429,7 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets legal_representative_email
-     * @param string $legal_representative_email The email of the company’s Legal representative person - must be a valid
+     * @param string $legal_representative_email
      * @return $this
      */
     public function setLegalRepresentativeEmail($legal_representative_email)
@@ -1455,7 +1450,7 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets legal_representative_first_name
-     * @param string $legal_representative_first_name The firstname of the company’s Legal representative person
+     * @param string $legal_representative_first_name
      * @return $this
      */
     public function setLegalRepresentativeFirstName($legal_representative_first_name)
@@ -1476,7 +1471,7 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets legal_representative_last_name
-     * @param string $legal_representative_last_name The lastname of the company’s Legal representative person
+     * @param string $legal_representative_last_name
      * @return $this
      */
     public function setLegalRepresentativeLastName($legal_representative_last_name)
@@ -1497,33 +1492,12 @@ class UserLegalPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
     {
         $this->container['tag'] = $tag;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     * @param string $email The user's email address - must be a valid email
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
 
         return $this;
     }

@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/marketpay/sdk-php.git"
+      "url": "https://github.com//.git"
     }
   ],
   "require": {
-    "marketpay/sdk-php": "*@dev"
+    "/": "*@dev"
   }
 }
 ```
@@ -60,7 +60,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\CardsApi();
-$card_id = 789; // int | The Id of a card
+$card_id = 789; // int | 
 
 try {
     $result = $api_instance->cardsGet($card_id);
@@ -78,38 +78,45 @@ All URIs are relative to *https://localhost/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CardsApi* | [**cardsGet**](docs/Api/CardsApi.md#cardsget) | **GET** /v2.01/Cards/{CardId} | View a Card
-*CardsApi* | [**cardsPut**](docs/Api/CardsApi.md#cardsput) | **PUT** /v2.01/Cards/{CardId} | Deactivate a Card
-*PayInsRedsysApi* | [**payInsRedsysGetPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysgetpayment) | **GET** /v2.01/PayInsRedsys/payments/{PayInId} | View a Redsys payment
-*PayInsRedsysApi* | [**payInsRedsysGetPreauthorization**](docs/Api/PayInsRedsysApi.md#payinsredsysgetpreauthorization) | **GET** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId} | View a Redsys Preauthorization
-*PayInsRedsysApi* | [**payInsRedsysPostPayByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsyspostpaybyweb) | **POST** /v2.01/PayInsRedsys/payments/web | Create a Redsys PayIn Request
-*PayInsRedsysApi* | [**payInsRedsysPostPreauthorizationCancellation**](docs/Api/PayInsRedsysApi.md#payinsredsyspostpreauthorizationcancellation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | Cancels a Preauthorization
-*PayInsRedsysApi* | [**payInsRedsysPostPreauthorizationConfirmation**](docs/Api/PayInsRedsysApi.md#payinsredsyspostpreauthorizationconfirmation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | Confirms a Preauthorization
-*PayInsRedsysApi* | [**payInsRedsysPostPreauthorizeByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsyspostpreauthorizebyweb) | **POST** /v2.01/PayInsRedsys/preauthorizations/web | Create a Redsys Preauthorization Request
-*PayInsRedsysApi* | [**payInsRedsysPostRefund**](docs/Api/PayInsRedsysApi.md#payinsredsyspostrefund) | **POST** /v2.01/PayInsRedsys/payments/{PayInId}/refunds | Create a Redsys Payment Refund
-*RefundsApi* | [**refundsRefundGet**](docs/Api/RefundsApi.md#refundsrefundget) | **GET** /v2.01/Refunds/{RefundId} | View a Refund
-*TransfersApi* | [**transfersGet**](docs/Api/TransfersApi.md#transfersget) | **GET** /v2.01/Transfers/{TransferId} | View a Transfer
-*TransfersApi* | [**transfersPost**](docs/Api/TransfersApi.md#transferspost) | **POST** /v2.01/Transfers | Create a Transfer
-*UsersApi* | [**usersGet**](docs/Api/UsersApi.md#usersget) | **GET** /v2.01/Users/{UserId} | View a User
-*UsersApi* | [**usersGetBankAccount**](docs/Api/UsersApi.md#usersgetbankaccount) | **GET** /v2.01/Users/{UserId}/bankaccounts/{BankAccountId} | View a Bank Account
-*UsersApi* | [**usersGetBankAccountList**](docs/Api/UsersApi.md#usersgetbankaccountlist) | **GET** /v2.01/Users/{UserId}/bankaccounts | List Bank Accounts for a User
-*UsersApi* | [**usersGetCardList**](docs/Api/UsersApi.md#usersgetcardlist) | **GET** /v2.01/Users/{UserId}/cards | List Cards for a User
-*UsersApi* | [**usersGetLegal**](docs/Api/UsersApi.md#usersgetlegal) | **GET** /v2.01/Users/legal/{UserId} | View a Legal User
-*UsersApi* | [**usersGetList**](docs/Api/UsersApi.md#usersgetlist) | **GET** /v2.01/Users | List all Users
-*UsersApi* | [**usersGetNatural**](docs/Api/UsersApi.md#usersgetnatural) | **GET** /v2.01/Users/natural/{UserId} | View a Natural User
-*UsersApi* | [**usersGetTransactionList**](docs/Api/UsersApi.md#usersgettransactionlist) | **GET** /v2.01/Users/{UserId}/transactions | List Transactions for a User
-*UsersApi* | [**usersGetWalletList**](docs/Api/UsersApi.md#usersgetwalletlist) | **GET** /v2.01/Users/{UserId}/wallets | List Wallets for a User
-*UsersApi* | [**usersPostBankAccountCa**](docs/Api/UsersApi.md#userspostbankaccountca) | **POST** /v2.01/Users/{UserId}/bankaccounts/CA | Create a CA BankAccount
-*UsersApi* | [**usersPostBankAccountGb**](docs/Api/UsersApi.md#userspostbankaccountgb) | **POST** /v2.01/Users/{UserId}/bankaccounts/GB | Create a GB BankAccount
-*UsersApi* | [**usersPostBankAccountIban**](docs/Api/UsersApi.md#userspostbankaccountiban) | **POST** /v2.01/Users/{UserId}/bankaccounts/IBAN | Create an IBAN BankAccount
-*UsersApi* | [**usersPostBankAccountOther**](docs/Api/UsersApi.md#userspostbankaccountother) | **POST** /v2.01/Users/{UserId}/bankaccounts/OTHER | Create an OTHER BankAccount
-*UsersApi* | [**usersPostBankAccountUs**](docs/Api/UsersApi.md#userspostbankaccountus) | **POST** /v2.01/Users/{UserId}/bankaccounts/US | Create an US BankAccount
-*UsersApi* | [**usersPostLegal**](docs/Api/UsersApi.md#userspostlegal) | **POST** /v2.01/Users/legal | Create a Legal User
-*UsersApi* | [**usersPostNatural**](docs/Api/UsersApi.md#userspostnatural) | **POST** /v2.01/Users/natural | Create a Natural User
-*WalletsApi* | [**walletsGet**](docs/Api/WalletsApi.md#walletsget) | **GET** /v2.01/Wallets/{WalletId} | View a Wallet
-*WalletsApi* | [**walletsGetTransactionList**](docs/Api/WalletsApi.md#walletsgettransactionlist) | **GET** /v2.01/Wallets/{WalletId}/transactions | List a Wallet&#39;s Transactions
-*WalletsApi* | [**walletsPost**](docs/Api/WalletsApi.md#walletspost) | **POST** /v2.01/Wallets | Create a Wallet
-*WalletsApi* | [**walletsPut**](docs/Api/WalletsApi.md#walletsput) | **PUT** /v2.01/Wallets/{WalletId} | Update a Wallet
+*CardsApi* | [**cardsGet**](docs/Api/CardsApi.md#cardsget) | **GET** /v2.01/Cards/{CardId} | 
+*CardsApi* | [**cardsPut**](docs/Api/CardsApi.md#cardsput) | **PUT** /v2.01/Cards/{CardId} | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysGetPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpayment) | **GET** /v2.01/PayInsRedsys/payments/{PayInId} | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysGetPreauthorization**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpreauthorization) | **GET** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId} | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysPostPaymentByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpaymentbyweb) | **POST** /v2.01/PayInsRedsys/payments/web | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationbyweb) | **POST** /v2.01/PayInsRedsys/preauthorizations/web | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationCancellation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationcancellation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationConfirmation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationconfirmation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysPostRefund**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostrefund) | **POST** /v2.01/PayInsRedsys/payments/{PayInId}/refunds | 
+*PayOutsApi* | [**payOutsGet**](docs/Api/PayOutsApi.md#payoutsget) | **GET** /v2.01/PayOuts/bankwire/{id} | 
+*PayOutsApi* | [**payOutsPost**](docs/Api/PayOutsApi.md#payoutspost) | **POST** /v2.01/PayOuts/bankwire | 
+*RefundsApi* | [**refundsRefundGet**](docs/Api/RefundsApi.md#refundsrefundget) | **GET** /v2.01/Refunds/{RefundId} | 
+*ShipmentSeurApi* | [**shipmentSeurSeurCancelShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcancelshipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | 
+*ShipmentSeurApi* | [**shipmentSeurSeurCreateShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcreateshipment) | **POST** /v2.01/ShipmentSeur/shipments | 
+*ShipmentSeurApi* | [**shipmentSeurSeurGetShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurgetshipment) | **GET** /v2.01/ShipmentSeur/shipments/{ShipmentId} | 
+*TransfersApi* | [**transfersGet**](docs/Api/TransfersApi.md#transfersget) | **GET** /v2.01/Transfers/{TransferId} | 
+*TransfersApi* | [**transfersPost**](docs/Api/TransfersApi.md#transferspost) | **POST** /v2.01/Transfers | 
+*UsersApi* | [**usersGet**](docs/Api/UsersApi.md#usersget) | **GET** /v2.01/Users/{UserId} | 
+*UsersApi* | [**usersGetBankAccount**](docs/Api/UsersApi.md#usersgetbankaccount) | **GET** /v2.01/Users/{UserId}/bankaccounts/{BankAccountId} | 
+*UsersApi* | [**usersGetBankAccountList**](docs/Api/UsersApi.md#usersgetbankaccountlist) | **GET** /v2.01/Users/{UserId}/bankaccounts | 
+*UsersApi* | [**usersGetCardList**](docs/Api/UsersApi.md#usersgetcardlist) | **GET** /v2.01/Users/{UserId}/cards | 
+*UsersApi* | [**usersGetLegal**](docs/Api/UsersApi.md#usersgetlegal) | **GET** /v2.01/Users/legal/{UserId} | 
+*UsersApi* | [**usersGetList**](docs/Api/UsersApi.md#usersgetlist) | **GET** /v2.01/Users | 
+*UsersApi* | [**usersGetNatural**](docs/Api/UsersApi.md#usersgetnatural) | **GET** /v2.01/Users/natural/{UserId} | 
+*UsersApi* | [**usersGetTransactionList**](docs/Api/UsersApi.md#usersgettransactionlist) | **GET** /v2.01/Users/{UserId}/transactions | 
+*UsersApi* | [**usersGetWalletList**](docs/Api/UsersApi.md#usersgetwalletlist) | **GET** /v2.01/Users/{UserId}/wallets | 
+*UsersApi* | [**usersPostBankAccountCa**](docs/Api/UsersApi.md#userspostbankaccountca) | **POST** /v2.01/Users/{UserId}/bankaccounts/CA | 
+*UsersApi* | [**usersPostBankAccountGb**](docs/Api/UsersApi.md#userspostbankaccountgb) | **POST** /v2.01/Users/{UserId}/bankaccounts/GB | 
+*UsersApi* | [**usersPostBankAccountIban**](docs/Api/UsersApi.md#userspostbankaccountiban) | **POST** /v2.01/Users/{UserId}/bankaccounts/IBAN | 
+*UsersApi* | [**usersPostBankAccountOther**](docs/Api/UsersApi.md#userspostbankaccountother) | **POST** /v2.01/Users/{UserId}/bankaccounts/OTHER | 
+*UsersApi* | [**usersPostBankAccountUs**](docs/Api/UsersApi.md#userspostbankaccountus) | **POST** /v2.01/Users/{UserId}/bankaccounts/US | 
+*UsersApi* | [**usersPostLegal**](docs/Api/UsersApi.md#userspostlegal) | **POST** /v2.01/Users/legal | 
+*UsersApi* | [**usersPostNatural**](docs/Api/UsersApi.md#userspostnatural) | **POST** /v2.01/Users/natural | 
+*UsersApi* | [**usersPutLegal**](docs/Api/UsersApi.md#usersputlegal) | **PUT** /v2.01/Users/legal/{UserId} | 
+*UsersApi* | [**usersPutNatural**](docs/Api/UsersApi.md#usersputnatural) | **PUT** /v2.01/Users/natural/{UserId} | 
+*WalletsApi* | [**walletsGet**](docs/Api/WalletsApi.md#walletsget) | **GET** /v2.01/Wallets/{WalletId} | 
+*WalletsApi* | [**walletsGetTransactionList**](docs/Api/WalletsApi.md#walletsgettransactionlist) | **GET** /v2.01/Wallets/{WalletId}/transactions | 
+*WalletsApi* | [**walletsPost**](docs/Api/WalletsApi.md#walletspost) | **POST** /v2.01/Wallets | 
+*WalletsApi* | [**walletsPut**](docs/Api/WalletsApi.md#walletsput) | **PUT** /v2.01/Wallets/{WalletId} | 
 
 
 ## Documentation For Models
@@ -131,25 +138,35 @@ Class | Method | HTTP request | Description
  - [CustomApiErrorResponse](docs/Model/CustomApiErrorResponse.md)
  - [ExampleUserNaturalPost](docs/Model/ExampleUserNaturalPost.md)
  - [Money](docs/Model/Money.md)
- - [PayByWebPost](docs/Model/PayByWebPost.md)
- - [PayByWebResponse](docs/Model/PayByWebResponse.md)
- - [PayInsResponse](docs/Model/PayInsResponse.md)
- - [PreauthorizationCancellationPost](docs/Model/PreauthorizationCancellationPost.md)
- - [PreauthorizationCancellationResponse](docs/Model/PreauthorizationCancellationResponse.md)
- - [PreauthorizationConfirmationPost](docs/Model/PreauthorizationConfirmationPost.md)
- - [PreauthorizationConfirmationResponse](docs/Model/PreauthorizationConfirmationResponse.md)
- - [PreauthorizeByWebPost](docs/Model/PreauthorizeByWebPost.md)
- - [PreauthorizeByWebResponse](docs/Model/PreauthorizeByWebResponse.md)
- - [PreauthorizeResponse](docs/Model/PreauthorizeResponse.md)
- - [RefundPost](docs/Model/RefundPost.md)
+ - [PayOutBankWirePost](docs/Model/PayOutBankWirePost.md)
+ - [PayOutBankWireResponse](docs/Model/PayOutBankWireResponse.md)
+ - [Product](docs/Model/Product.md)
+ - [RedsysPayByWebPost](docs/Model/RedsysPayByWebPost.md)
+ - [RedsysPayByWebResponse](docs/Model/RedsysPayByWebResponse.md)
+ - [RedsysPayInsResponse](docs/Model/RedsysPayInsResponse.md)
+ - [RedsysPreauthorizationCancellationPost](docs/Model/RedsysPreauthorizationCancellationPost.md)
+ - [RedsysPreauthorizationCancellationResponse](docs/Model/RedsysPreauthorizationCancellationResponse.md)
+ - [RedsysPreauthorizationConfirmationPost](docs/Model/RedsysPreauthorizationConfirmationPost.md)
+ - [RedsysPreauthorizationConfirmationResponse](docs/Model/RedsysPreauthorizationConfirmationResponse.md)
+ - [RedsysPreauthorizeByWebPost](docs/Model/RedsysPreauthorizeByWebPost.md)
+ - [RedsysPreauthorizeByWebResponse](docs/Model/RedsysPreauthorizeByWebResponse.md)
+ - [RedsysPreauthorizeResponse](docs/Model/RedsysPreauthorizeResponse.md)
+ - [RedsysRefundPost](docs/Model/RedsysRefundPost.md)
+ - [RedsysRefundResponse](docs/Model/RedsysRefundResponse.md)
  - [RefundReason](docs/Model/RefundReason.md)
- - [RefundResponse](docs/Model/RefundResponse.md)
+ - [ShipmentActor](docs/Model/ShipmentActor.md)
+ - [ShipmentCancellationResponse](docs/Model/ShipmentCancellationResponse.md)
+ - [ShipmentPost](docs/Model/ShipmentPost.md)
+ - [ShipmentResponse](docs/Model/ShipmentResponse.md)
+ - [Telephone](docs/Model/Telephone.md)
  - [TransactionResponse](docs/Model/TransactionResponse.md)
  - [TransferPost](docs/Model/TransferPost.md)
  - [TransferResponse](docs/Model/TransferResponse.md)
  - [UserLegalPost](docs/Model/UserLegalPost.md)
+ - [UserLegalPut](docs/Model/UserLegalPut.md)
  - [UserLegalResponse](docs/Model/UserLegalResponse.md)
  - [UserNaturalPost](docs/Model/UserNaturalPost.md)
+ - [UserNaturalPut](docs/Model/UserNaturalPut.md)
  - [UserNaturalResponse](docs/Model/UserNaturalResponse.md)
  - [UserResponse](docs/Model/UserResponse.md)
  - [WalletPost](docs/Model/WalletPost.md)
@@ -164,7 +181,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: https://identity-development.marketpay.io:443/connect/authorize
+- **Authorization URL**: https://identity-sandbox.marketpay.io:443/connect/authorize
 - **Scopes**: 
  - **dashboard**: dashboard scope
 

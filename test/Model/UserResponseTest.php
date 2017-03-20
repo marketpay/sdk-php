@@ -91,14 +91,6 @@ class UserResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-
-    }
-
-    /**
      * Test attribute "kyc_level"
      */
     public function testPropertyKycLevel()

@@ -79,7 +79,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersGet
      *
-     * View a User.
+     * .
      *
      */
     public function testUsersGet()
@@ -90,7 +90,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersGetBankAccount
      *
-     * View a Bank Account.
+     * .
      *
      */
     public function testUsersGetBankAccount()
@@ -101,7 +101,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersGetBankAccountList
      *
-     * List Bank Accounts for a User.
+     * .
      *
      */
     public function testUsersGetBankAccountList()
@@ -112,7 +112,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersGetCardList
      *
-     * List Cards for a User.
+     * .
      *
      */
     public function testUsersGetCardList()
@@ -123,7 +123,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersGetLegal
      *
-     * View a Legal User.
+     * .
      *
      */
     public function testUsersGetLegal()
@@ -134,7 +134,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersGetList
      *
-     * List all Users.
+     * .
      *
      */
     public function testUsersGetList()
@@ -145,7 +145,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersGetNatural
      *
-     * View a Natural User.
+     * .
      *
      */
     public function testUsersGetNatural()
@@ -156,7 +156,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersGetTransactionList
      *
-     * List Transactions for a User.
+     * .
      *
      */
     public function testUsersGetTransactionList()
@@ -167,7 +167,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersGetWalletList
      *
-     * List Wallets for a User.
+     * .
      *
      */
     public function testUsersGetWalletList()
@@ -178,7 +178,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersPostBankAccountCa
      *
-     * Create a CA BankAccount.
+     * .
      *
      */
     public function testUsersPostBankAccountCa()
@@ -189,7 +189,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersPostBankAccountGb
      *
-     * Create a GB BankAccount.
+     * .
      *
      */
     public function testUsersPostBankAccountGb()
@@ -200,7 +200,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersPostBankAccountIban
      *
-     * Create an IBAN BankAccount.
+     * .
      *
      */
     public function testUsersPostBankAccountIban()
@@ -211,7 +211,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersPostBankAccountOther
      *
-     * Create an OTHER BankAccount.
+     * .
      *
      */
     public function testUsersPostBankAccountOther()
@@ -222,7 +222,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersPostBankAccountUs
      *
-     * Create an US BankAccount.
+     * .
      *
      */
     public function testUsersPostBankAccountUs()
@@ -233,7 +233,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersPostLegal
      *
-     * Create a Legal User.
+     * .
      *
      */
     public function testUsersPostLegal()
@@ -244,10 +244,32 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for usersPostNatural
      *
-     * Create a Natural User.
+     * .
      *
      */
     public function testUsersPostNatural()
+    {
+
+    }
+
+    /**
+     * Test case for usersPutLegal
+     *
+     * .
+     *
+     */
+    public function testUsersPutLegal()
+    {
+
+    }
+
+    /**
+     * Test case for usersPutNatural
+     *
+     * .
+     *
+     */
+    public function testUsersPutNatural()
     {
 
     }

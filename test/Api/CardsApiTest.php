@@ -79,7 +79,7 @@ class CardsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cardsGet
      *
-     * View a Card.
+     * .
      *
      */
     public function testCardsGet()
@@ -90,7 +90,7 @@ class CardsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cardsPut
      *
-     * Deactivate a Card.
+     * .
      *
      */
     public function testCardsPut()

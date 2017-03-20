@@ -59,7 +59,6 @@ class UsersApi
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/');
         }
 
         $this->apiClient = $apiClient;
@@ -91,9 +90,9 @@ class UsersApi
     /**
      * Operation usersGet
      *
-     * View a User
+     * 
      *
-     * @param int $user_id The Id of a user (required)
+     * @param int $user_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\UserResponse
      */
@@ -106,9 +105,9 @@ class UsersApi
     /**
      * Operation usersGetWithHttpInfo
      *
-     * View a User
+     * 
      *
-     * @param int $user_id The Id of a user (required)
+     * @param int $user_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\UserResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -184,10 +183,10 @@ class UsersApi
     /**
      * Operation usersGetBankAccount
      *
-     * View a Bank Account
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param int $bank_account_id The Id of a bank account (required)
+     * @param int $user_id  (required)
+     * @param int $bank_account_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\BankAccountResponse
      */
@@ -200,10 +199,10 @@ class UsersApi
     /**
      * Operation usersGetBankAccountWithHttpInfo
      *
-     * View a Bank Account
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param int $bank_account_id The Id of a bank account (required)
+     * @param int $user_id  (required)
+     * @param int $bank_account_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\BankAccountResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -291,11 +290,11 @@ class UsersApi
     /**
      * Operation usersGetBankAccountList
      *
-     * List Bank Accounts for a User
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $user_id  (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\BankAccountResponse[]
      */
@@ -308,11 +307,11 @@ class UsersApi
     /**
      * Operation usersGetBankAccountListWithHttpInfo
      *
-     * List Bank Accounts for a User
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $user_id  (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\BankAccountResponse[], HTTP status code, HTTP response headers (array of strings)
      */
@@ -396,11 +395,11 @@ class UsersApi
     /**
      * Operation usersGetCardList
      *
-     * List Cards for a User
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $user_id  (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\CardResponse[]
      */
@@ -413,11 +412,11 @@ class UsersApi
     /**
      * Operation usersGetCardListWithHttpInfo
      *
-     * List Cards for a User
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $user_id  (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\CardResponse[], HTTP status code, HTTP response headers (array of strings)
      */
@@ -501,9 +500,9 @@ class UsersApi
     /**
      * Operation usersGetLegal
      *
-     * View a Legal User
+     * 
      *
-     * @param int $user_id The Id of a legal user (required)
+     * @param int $user_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\UserLegalResponse
      */
@@ -516,9 +515,9 @@ class UsersApi
     /**
      * Operation usersGetLegalWithHttpInfo
      *
-     * View a Legal User
+     * 
      *
-     * @param int $user_id The Id of a legal user (required)
+     * @param int $user_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -594,10 +593,10 @@ class UsersApi
     /**
      * Operation usersGetList
      *
-     * List all Users
+     * 
      *
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\UserResponse[]
      */
@@ -610,10 +609,10 @@ class UsersApi
     /**
      * Operation usersGetListWithHttpInfo
      *
-     * List all Users
+     * 
      *
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\UserResponse[], HTTP status code, HTTP response headers (array of strings)
      */
@@ -685,9 +684,9 @@ class UsersApi
     /**
      * Operation usersGetNatural
      *
-     * View a Natural User
+     * 
      *
-     * @param int $user_id The Id of a natural user (required)
+     * @param int $user_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\UserNaturalResponse
      */
@@ -700,9 +699,9 @@ class UsersApi
     /**
      * Operation usersGetNaturalWithHttpInfo
      *
-     * View a Natural User
+     * 
      *
-     * @param int $user_id The Id of a natural user (required)
+     * @param int $user_id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -778,11 +777,11 @@ class UsersApi
     /**
      * Operation usersGetTransactionList
      *
-     * List Transactions for a User
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $user_id  (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\TransactionResponse[]
      */
@@ -795,11 +794,11 @@ class UsersApi
     /**
      * Operation usersGetTransactionListWithHttpInfo
      *
-     * List Transactions for a User
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $user_id  (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\TransactionResponse[], HTTP status code, HTTP response headers (array of strings)
      */
@@ -883,11 +882,11 @@ class UsersApi
     /**
      * Operation usersGetWalletList
      *
-     * List Wallets for a User
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $user_id  (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\WalletResponse[]
      */
@@ -900,11 +899,11 @@ class UsersApi
     /**
      * Operation usersGetWalletListWithHttpInfo
      *
-     * List Wallets for a User
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param int $page The page number of results you wish to return (optional)
-     * @param int $per_page The number of results to return per page (optional)
+     * @param int $user_id  (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\WalletResponse[], HTTP status code, HTTP response headers (array of strings)
      */
@@ -988,10 +987,10 @@ class UsersApi
     /**
      * Operation usersPostBankAccountCa
      *
-     * Create a CA BankAccount
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountCaPost $bank_account_ca BankAccountCA Object params (optional)
+     * @param int $user_id  (required)
+     * @param \Swagger\Client\Model\BankAccountCaPost $bank_account_ca  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\BankAccountResponseCa
      */
@@ -1004,10 +1003,10 @@ class UsersApi
     /**
      * Operation usersPostBankAccountCaWithHttpInfo
      *
-     * Create a CA BankAccount
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountCaPost $bank_account_ca BankAccountCA Object params (optional)
+     * @param int $user_id  (required)
+     * @param \Swagger\Client\Model\BankAccountCaPost $bank_account_ca  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\BankAccountResponseCa, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1088,9 +1087,9 @@ class UsersApi
     /**
      * Operation usersPostBankAccountGb
      *
-     * Create a GB BankAccount
+     * 
      *
-     * @param int $user_id The Id of a user (required)
+     * @param int $user_id  (required)
      * @param \Swagger\Client\Model\BankAccountGbPost $bank_account_gb  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\BankAccountResponseGb
@@ -1104,9 +1103,9 @@ class UsersApi
     /**
      * Operation usersPostBankAccountGbWithHttpInfo
      *
-     * Create a GB BankAccount
+     * 
      *
-     * @param int $user_id The Id of a user (required)
+     * @param int $user_id  (required)
      * @param \Swagger\Client\Model\BankAccountGbPost $bank_account_gb  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\BankAccountResponseGb, HTTP status code, HTTP response headers (array of strings)
@@ -1188,10 +1187,10 @@ class UsersApi
     /**
      * Operation usersPostBankAccountIban
      *
-     * Create an IBAN BankAccount
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountIbanPost $bank_account_iban BankAccountIBAN Object params (optional)
+     * @param int $user_id  (required)
+     * @param \Swagger\Client\Model\BankAccountIbanPost $bank_account_iban  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\BankAccountResponseIban
      */
@@ -1204,10 +1203,10 @@ class UsersApi
     /**
      * Operation usersPostBankAccountIbanWithHttpInfo
      *
-     * Create an IBAN BankAccount
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountIbanPost $bank_account_iban BankAccountIBAN Object params (optional)
+     * @param int $user_id  (required)
+     * @param \Swagger\Client\Model\BankAccountIbanPost $bank_account_iban  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\BankAccountResponseIban, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1288,9 +1287,9 @@ class UsersApi
     /**
      * Operation usersPostBankAccountOther
      *
-     * Create an OTHER BankAccount
+     * 
      *
-     * @param int $user_id The Id of a user (required)
+     * @param int $user_id  (required)
      * @param \Swagger\Client\Model\BankAccountOtherPost $bank_account_other  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\BankAccountResponseOther
@@ -1304,9 +1303,9 @@ class UsersApi
     /**
      * Operation usersPostBankAccountOtherWithHttpInfo
      *
-     * Create an OTHER BankAccount
+     * 
      *
-     * @param int $user_id The Id of a user (required)
+     * @param int $user_id  (required)
      * @param \Swagger\Client\Model\BankAccountOtherPost $bank_account_other  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\BankAccountResponseOther, HTTP status code, HTTP response headers (array of strings)
@@ -1388,10 +1387,10 @@ class UsersApi
     /**
      * Operation usersPostBankAccountUs
      *
-     * Create an US BankAccount
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountUsPost $bank_account_us BankAccountUS Object params (optional)
+     * @param int $user_id  (required)
+     * @param \Swagger\Client\Model\BankAccountUsPost $bank_account_us  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\BankAccountResponseUs
      */
@@ -1404,10 +1403,10 @@ class UsersApi
     /**
      * Operation usersPostBankAccountUsWithHttpInfo
      *
-     * Create an US BankAccount
+     * 
      *
-     * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountUsPost $bank_account_us BankAccountUS Object params (optional)
+     * @param int $user_id  (required)
+     * @param \Swagger\Client\Model\BankAccountUsPost $bank_account_us  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\BankAccountResponseUs, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1488,9 +1487,9 @@ class UsersApi
     /**
      * Operation usersPostLegal
      *
-     * Create a Legal User
+     * 
      *
-     * @param \Swagger\Client\Model\UserLegalPost $user_legal UserLegal Object params (optional)
+     * @param \Swagger\Client\Model\UserLegalPost $user_legal  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\UserLegalResponse
      */
@@ -1503,9 +1502,9 @@ class UsersApi
     /**
      * Operation usersPostLegalWithHttpInfo
      *
-     * Create a Legal User
+     * 
      *
-     * @param \Swagger\Client\Model\UserLegalPost $user_legal UserLegal Object params (optional)
+     * @param \Swagger\Client\Model\UserLegalPost $user_legal  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1574,9 +1573,9 @@ class UsersApi
     /**
      * Operation usersPostNatural
      *
-     * Create a Natural User
+     * 
      *
-     * @param \Swagger\Client\Model\UserNaturalPost $user_natural UserNatural Object params (optional)
+     * @param \Swagger\Client\Model\UserNaturalPost $user_natural  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\UserNaturalResponse
      */
@@ -1589,9 +1588,9 @@ class UsersApi
     /**
      * Operation usersPostNaturalWithHttpInfo
      *
-     * Create a Natural User
+     * 
      *
-     * @param \Swagger\Client\Model\UserNaturalPost $user_natural UserNatural Object params (optional)
+     * @param \Swagger\Client\Model\UserNaturalPost $user_natural  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1638,6 +1637,206 @@ class UsersApi
                 $headerParams,
                 '\Swagger\Client\Model\UserNaturalResponse',
                 '/v2.01/Users/natural'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserNaturalResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation usersPutLegal
+     *
+     * 
+     *
+     * @param int $user_id  (required)
+     * @param \Swagger\Client\Model\UserLegalPut $user_legal  (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\UserLegalResponse
+     */
+    public function usersPutLegal($user_id, $user_legal = null)
+    {
+        list($response) = $this->usersPutLegalWithHttpInfo($user_id, $user_legal);
+        return $response;
+    }
+
+    /**
+     * Operation usersPutLegalWithHttpInfo
+     *
+     * 
+     *
+     * @param int $user_id  (required)
+     * @param \Swagger\Client\Model\UserLegalPut $user_legal  (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function usersPutLegalWithHttpInfo($user_id, $user_legal = null)
+    {
+        // verify the required parameter 'user_id' is set
+        if ($user_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $user_id when calling usersPutLegal');
+        }
+        // parse inputs
+        $resourcePath = "/v2.01/Users/legal/{UserId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'text/json', 'application/json-patch+json']);
+
+        // path params
+        if ($user_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "UserId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($user_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($user_legal)) {
+            $_tempBody = $user_legal;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\UserLegalResponse',
+                '/v2.01/Users/legal/{UserId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserLegalResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserLegalResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation usersPutNatural
+     *
+     * 
+     *
+     * @param int $user_id  (required)
+     * @param \Swagger\Client\Model\UserNaturalPut $user_natural  (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\UserNaturalResponse
+     */
+    public function usersPutNatural($user_id, $user_natural = null)
+    {
+        list($response) = $this->usersPutNaturalWithHttpInfo($user_id, $user_natural);
+        return $response;
+    }
+
+    /**
+     * Operation usersPutNaturalWithHttpInfo
+     *
+     * 
+     *
+     * @param int $user_id  (required)
+     * @param \Swagger\Client\Model\UserNaturalPut $user_natural  (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function usersPutNaturalWithHttpInfo($user_id, $user_natural = null)
+    {
+        // verify the required parameter 'user_id' is set
+        if ($user_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $user_id when calling usersPutNatural');
+        }
+        // parse inputs
+        $resourcePath = "/v2.01/Users/natural/{UserId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'text/json', 'application/json-patch+json']);
+
+        // path params
+        if ($user_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "UserId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($user_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($user_natural)) {
+            $_tempBody = $user_natural;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\UserNaturalResponse',
+                '/v2.01/Users/natural/{UserId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];

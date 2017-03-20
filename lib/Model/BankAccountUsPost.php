@@ -207,7 +207,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets account_number
-     * @param string $account_number The account number of the bank account. US account numbers must be digits only
+     * @param string $account_number
      * @return $this
      */
     public function setAccountNumber($account_number)
@@ -228,7 +228,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets aba
-     * @param string $aba The ABA of the bank account. Must be numbers only, and 9 digits long
+     * @param string $aba
      * @return $this
      */
     public function setAba($aba)
@@ -249,7 +249,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets deposit_account_type
-     * @param string $deposit_account_type The type of account
+     * @param string $deposit_account_type
      * @return $this
      */
     public function setDepositAccountType($deposit_account_type)
@@ -274,7 +274,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -295,7 +295,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address The address of the owner of the bank account
+     * @param \Swagger\Client\Model\Address $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -316,7 +316,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name The name of the owner of the bank account
+     * @param string $owner_name
      * @return $this
      */
     public function setOwnerName($owner_name)
