@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * RedsysPayInsResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -55,9 +54,9 @@ class RedsysPayInsResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'credited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'credited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
         'credited_wallet_id' => 'string',
         'nature' => 'string',
         'status' => 'string',
@@ -71,6 +70,7 @@ class RedsysPayInsResponse implements ArrayAccess
         'statement_descriptor' => 'string',
         'author_id' => 'string',
         'credited_user_id' => 'string',
+        'provider' => '\Swagger\Client\Model\InlineResponse2003Provider',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -102,6 +102,7 @@ class RedsysPayInsResponse implements ArrayAccess
         'statement_descriptor' => 'StatementDescriptor',
         'author_id' => 'AuthorId',
         'credited_user_id' => 'CreditedUserId',
+        'provider' => 'Provider',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -129,6 +130,7 @@ class RedsysPayInsResponse implements ArrayAccess
         'statement_descriptor' => 'setStatementDescriptor',
         'author_id' => 'setAuthorId',
         'credited_user_id' => 'setCreditedUserId',
+        'provider' => 'setProvider',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -156,6 +158,7 @@ class RedsysPayInsResponse implements ArrayAccess
         'statement_descriptor' => 'getStatementDescriptor',
         'author_id' => 'getAuthorId',
         'credited_user_id' => 'getCreditedUserId',
+        'provider' => 'getProvider',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -294,6 +297,7 @@ class RedsysPayInsResponse implements ArrayAccess
         $this->container['statement_descriptor'] = isset($data['statement_descriptor']) ? $data['statement_descriptor'] : null;
         $this->container['author_id'] = isset($data['author_id']) ? $data['author_id'] : null;
         $this->container['credited_user_id'] = isset($data['credited_user_id']) ? $data['credited_user_id'] : null;
+        $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -307,29 +311,30 @@ class RedsysPayInsResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["REGULAR", "REFUND", "REPUDIATION", "SETTLEMENT"];
         if (!in_array($this->container['nature'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'nature', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'nature', must be one of 'REGULAR', 'REFUND', 'REPUDIATION', 'SETTLEMENT'.";
         }
 
         $allowed_values = ["CREATED", "SUCCEEDED", "FAILED"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'CREATED', 'SUCCEEDED', 'FAILED'.";
         }
 
         $allowed_values = ["PAYIN", "PAYOUT", "TRANSFER"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'PAYIN', 'PAYOUT', 'TRANSFER'.";
         }
 
         $allowed_values = ["NotSpecified", "CARD", "BANK_WIRE", "DIRECT_DEBIT", "PREAUTHORIZED"];
         if (!in_array($this->container['payment_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'payment_type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'payment_type', must be one of 'NotSpecified', 'CARD', 'BANK_WIRE', 'DIRECT_DEBIT', 'PREAUTHORIZED'.";
         }
 
         $allowed_values = ["NotSpecified", "WEB", "DIRECT"];
         if (!in_array($this->container['execution_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'execution_type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'execution_type', must be one of 'NotSpecified', 'WEB', 'DIRECT'.";
         }
 
         return $invalid_properties;
@@ -339,10 +344,11 @@ class RedsysPayInsResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["REGULAR", "REFUND", "REPUDIATION", "SETTLEMENT"];
         if (!in_array($this->container['nature'], $allowed_values)) {
             return false;
@@ -369,7 +375,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getDebitedFunds()
     {
@@ -378,7 +384,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -390,7 +396,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getCreditedFunds()
     {
@@ -399,7 +405,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\Money $credited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $credited_funds
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -411,7 +417,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getFees()
     {
@@ -420,7 +426,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
      * @return $this
      */
     public function setFees($fees)
@@ -441,7 +447,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id
+     * @param string $credited_wallet_id The ID of the wallet where money will be credited
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -462,7 +468,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets nature
-     * @param string $nature
+     * @param string $nature The nature of the transaction
      * @return $this
      */
     public function setNature($nature)
@@ -487,7 +493,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status
+     * @param string $status The status of the transaction
      * @return $this
      */
     public function setStatus($status)
@@ -512,7 +518,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets execution_date
-     * @param int $execution_date
+     * @param int $execution_date When the transaction happened
      * @return $this
      */
     public function setExecutionDate($execution_date)
@@ -533,7 +539,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets result_code
-     * @param string $result_code
+     * @param string $result_code The result code
      * @return $this
      */
     public function setResultCode($result_code)
@@ -554,7 +560,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets result_message
-     * @param string $result_message
+     * @param string $result_message A verbal explanation of the ResultCode
      * @return $this
      */
     public function setResultMessage($result_message)
@@ -575,7 +581,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type
+     * @param string $type The type of the transaction
      * @return $this
      */
     public function setType($type)
@@ -600,7 +606,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets payment_type
-     * @param string $payment_type
+     * @param string $payment_type The type of payin
      * @return $this
      */
     public function setPaymentType($payment_type)
@@ -625,7 +631,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets execution_type
-     * @param string $execution_type
+     * @param string $execution_type The type of execution for the payin
      * @return $this
      */
     public function setExecutionType($execution_type)
@@ -650,7 +656,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets card_id
-     * @param string $card_id
+     * @param string $card_id The Id of the card saved, if any.
      * @return $this
      */
     public function setCardId($card_id)
@@ -671,7 +677,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets statement_descriptor
-     * @param string $statement_descriptor
+     * @param string $statement_descriptor A custom description to appear on the user's bank statement. It can be up to 10 characters long, and can only include alphanumeric characters or spaces
      * @return $this
      */
     public function setStatementDescriptor($statement_descriptor)
@@ -692,7 +698,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id
+     * @param string $author_id A user's ID
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -713,12 +719,33 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_user_id
-     * @param string $credited_user_id
+     * @param string $credited_user_id The user ID who was credited
      * @return $this
      */
     public function setCreditedUserId($credited_user_id)
     {
         $this->container['credited_user_id'] = $credited_user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets provider
+     * @return \Swagger\Client\Model\InlineResponse2003Provider
+     */
+    public function getProvider()
+    {
+        return $this->container['provider'];
+    }
+
+    /**
+     * Sets provider
+     * @param \Swagger\Client\Model\InlineResponse2003Provider $provider
+     * @return $this
+     */
+    public function setProvider($provider)
+    {
+        $this->container['provider'] = $provider;
 
         return $this;
     }

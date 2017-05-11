@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * BankAccountResponseGb Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -58,7 +57,7 @@ class BankAccountResponseGb implements ArrayAccess
         'sort_code' => 'string',
         'account_number' => 'string',
         'type' => 'string',
-        'owner_address' => '\Swagger\Client\Model\Address',
+        'owner_address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
         'owner_name' => 'string',
         'user_id' => 'string',
         'active' => 'bool',
@@ -196,9 +195,10 @@ class BankAccountResponseGb implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["IBAN", "GB", "US", "CA", "OTHER"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'IBAN', 'GB', 'US', 'CA', 'OTHER'.";
         }
 
         return $invalid_properties;
@@ -208,10 +208,11 @@ class BankAccountResponseGb implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["IBAN", "GB", "US", "CA", "OTHER"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
@@ -231,7 +232,7 @@ class BankAccountResponseGb implements ArrayAccess
 
     /**
      * Sets sort_code
-     * @param string $sort_code
+     * @param string $sort_code The sort code of the bank account. Must be numbers only, and 6 digits long
      * @return $this
      */
     public function setSortCode($sort_code)
@@ -252,7 +253,7 @@ class BankAccountResponseGb implements ArrayAccess
 
     /**
      * Sets account_number
-     * @param string $account_number
+     * @param string $account_number The account number of the bank account. Must be numbers only. GB account numbers must be 8 digits long
      * @return $this
      */
     public function setAccountNumber($account_number)
@@ -273,7 +274,7 @@ class BankAccountResponseGb implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type
+     * @param string $type The type of bank account
      * @return $this
      */
     public function setType($type)
@@ -289,7 +290,7 @@ class BankAccountResponseGb implements ArrayAccess
 
     /**
      * Gets owner_address
-     * @return \Swagger\Client\Model\Address
+     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
      */
     public function getOwnerAddress()
     {
@@ -298,7 +299,7 @@ class BankAccountResponseGb implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address
+     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -319,7 +320,7 @@ class BankAccountResponseGb implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name
+     * @param string $owner_name The name of the owner of the bank account
      * @return $this
      */
     public function setOwnerName($owner_name)
@@ -340,7 +341,7 @@ class BankAccountResponseGb implements ArrayAccess
 
     /**
      * Sets user_id
-     * @param string $user_id
+     * @param string $user_id The object owner's UserId
      * @return $this
      */
     public function setUserId($user_id)
@@ -361,7 +362,7 @@ class BankAccountResponseGb implements ArrayAccess
 
     /**
      * Sets active
-     * @param bool $active
+     * @param bool $active Whether the bank account is active or not
      * @return $this
      */
     public function setActive($active)

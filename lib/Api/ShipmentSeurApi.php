@@ -90,11 +90,11 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurCancelShipment
      *
-     * 
+     * Cancels a shipment
      *
-     * @param int $shipment_id  (required)
+     * @param int $shipment_id The Id of a Shipment (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ShipmentCancellationResponse
+     * @return \Swagger\Client\Model\InlineResponse20013
      */
     public function shipmentSeurSeurCancelShipment($shipment_id)
     {
@@ -105,11 +105,11 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurCancelShipmentWithHttpInfo
      *
-     * 
+     * Cancels a shipment
      *
-     * @param int $shipment_id  (required)
+     * @param int $shipment_id The Id of a Shipment (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ShipmentCancellationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentSeurSeurCancelShipmentWithHttpInfo($shipment_id)
     {
@@ -159,19 +159,19 @@ class ShipmentSeurApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ShipmentCancellationResponse',
+                '\Swagger\Client\Model\InlineResponse20013',
                 '/v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ShipmentCancellationResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20013', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ShipmentCancellationResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20013', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -183,11 +183,11 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurCreateShipment
      *
-     * 
+     * Creates a shipment
      *
-     * @param \Swagger\Client\Model\ShipmentPost $shipment  (optional)
+     * @param \Swagger\Client\Model\Shipment $shipment Seur Shipment Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ShipmentResponse
+     * @return \Swagger\Client\Model\InlineResponse20012
      */
     public function shipmentSeurSeurCreateShipment($shipment = null)
     {
@@ -198,11 +198,11 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurCreateShipmentWithHttpInfo
      *
-     * 
+     * Creates a shipment
      *
-     * @param \Swagger\Client\Model\ShipmentPost $shipment  (optional)
+     * @param \Swagger\Client\Model\Shipment $shipment Seur Shipment Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentSeurSeurCreateShipmentWithHttpInfo($shipment = null)
     {
@@ -245,19 +245,19 @@ class ShipmentSeurApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ShipmentResponse',
+                '\Swagger\Client\Model\InlineResponse20012',
                 '/v2.01/ShipmentSeur/shipments'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ShipmentResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20012', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ShipmentResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20012', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -269,11 +269,11 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurGetShipment
      *
-     * 
+     * Cancels a shipment
      *
-     * @param int $shipment_id  (required)
+     * @param int $shipment_id The Id of a Shipment (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ShipmentResponse
+     * @return \Swagger\Client\Model\InlineResponse20012
      */
     public function shipmentSeurSeurGetShipment($shipment_id)
     {
@@ -284,11 +284,11 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurGetShipmentWithHttpInfo
      *
-     * 
+     * Cancels a shipment
      *
-     * @param int $shipment_id  (required)
+     * @param int $shipment_id The Id of a Shipment (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentSeurSeurGetShipmentWithHttpInfo($shipment_id)
     {
@@ -338,19 +338,19 @@ class ShipmentSeurApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ShipmentResponse',
+                '\Swagger\Client\Model\InlineResponse20012',
                 '/v2.01/ShipmentSeur/shipments/{ShipmentId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ShipmentResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20012', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ShipmentResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20012', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

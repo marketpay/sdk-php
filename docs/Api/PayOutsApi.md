@@ -4,14 +4,16 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payOutsGet**](PayOutsApi.md#payOutsGet) | **GET** /v2.01/PayOuts/bankwire/{id} | 
-[**payOutsPost**](PayOutsApi.md#payOutsPost) | **POST** /v2.01/PayOuts/bankwire | 
+[**payOutsGet**](PayOutsApi.md#payOutsGet) | **GET** /v2.01/PayOuts/bankwire/{id} | SwaggerDocSummary
+[**payOutsPost**](PayOutsApi.md#payOutsPost) | **POST** /v2.01/PayOuts/bankwire | SwaggerDocSummary
 
 
 # **payOutsGet**
-> \Swagger\Client\Model\PayOutBankWireResponse payOutsGet($id)
+> \Swagger\Client\Model\InlineResponse20011 payOutsGet($id)
 
+SwaggerDocSummary
 
+SwaggerDocDescription
 
 ### Example
 ```php
@@ -22,7 +24,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\PayOutsApi();
-$id = 789; // int | 
+$id = 789; // int | SwaggerDocParameter
 
 try {
     $result = $api_instance->payOutsGet($id);
@@ -37,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**|  |
+ **id** | **int**| SwaggerDocParameter |
 
 ### Return type
 
-[**\Swagger\Client\Model\PayOutBankWireResponse**](../Model/PayOutBankWireResponse.md)
+[**\Swagger\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 
@@ -55,9 +57,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payOutsPost**
-> \Swagger\Client\Model\PayOutBankWireResponse payOutsPost($request)
+> \Swagger\Client\Model\InlineResponse20011 payOutsPost($request)
 
+SwaggerDocSummary
 
+SwaggerDocDescription
 
 ### Example
 ```php
@@ -68,7 +72,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\PayOutsApi();
-$request = new \Swagger\Client\Model\PayOutBankWirePost(); // \Swagger\Client\Model\PayOutBankWirePost | 
+$request = new \Swagger\Client\Model\Request(); // \Swagger\Client\Model\Request | SwaggerDocParameter
 
 try {
     $result = $api_instance->payOutsPost($request);
@@ -83,11 +87,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**\Swagger\Client\Model\PayOutBankWirePost**](../Model/\Swagger\Client\Model\PayOutBankWirePost.md)|  | [optional]
+ **request** | [**\Swagger\Client\Model\Request**](../Model/\Swagger\Client\Model\Request.md)| SwaggerDocParameter | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\PayOutBankWireResponse**](../Model/PayOutBankWireResponse.md)
+[**\Swagger\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 

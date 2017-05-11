@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * BankAccountGbPost Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -58,7 +57,7 @@ class BankAccountGbPost implements ArrayAccess
         'sort_code' => 'string',
         'account_number' => 'string',
         'tag' => 'string',
-        'owner_address' => '\Swagger\Client\Model\Address',
+        'owner_address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
         'owner_name' => 'string'
     ];
 
@@ -151,6 +150,7 @@ class BankAccountGbPost implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -158,10 +158,11 @@ class BankAccountGbPost implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
@@ -177,7 +178,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Sets sort_code
-     * @param string $sort_code
+     * @param string $sort_code The sort code of the bank account. Must be numbers only, and 6 digits long
      * @return $this
      */
     public function setSortCode($sort_code)
@@ -198,7 +199,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Sets account_number
-     * @param string $account_number
+     * @param string $account_number The account number of the bank account. Must be numbers only. GB account numbers must be 8 digits long
      * @return $this
      */
     public function setAccountNumber($account_number)
@@ -219,7 +220,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag
+     * @param string $tag Custom data that you can add to this item
      * @return $this
      */
     public function setTag($tag)
@@ -231,7 +232,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Gets owner_address
-     * @return \Swagger\Client\Model\Address
+     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
      */
     public function getOwnerAddress()
     {
@@ -240,7 +241,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address
+     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -261,7 +262,7 @@ class BankAccountGbPost implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name
+     * @param string $owner_name The name of the owner of the bank account
      * @return $this
      */
     public function setOwnerName($owner_name)

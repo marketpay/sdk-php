@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * Telephone Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -55,7 +54,7 @@ class Telephone implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'prefix' => 'string',
+        'country_code' => 'string',
         'number' => 'string'
     ];
 
@@ -69,7 +68,7 @@ class Telephone implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'prefix' => 'Prefix',
+        'country_code' => 'CountryCode',
         'number' => 'Number'
     ];
 
@@ -79,7 +78,7 @@ class Telephone implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'prefix' => 'setPrefix',
+        'country_code' => 'setCountryCode',
         'number' => 'setNumber'
     ];
 
@@ -89,7 +88,7 @@ class Telephone implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'prefix' => 'getPrefix',
+        'country_code' => 'getCountryCode',
         'number' => 'getNumber'
     ];
 
@@ -124,7 +123,7 @@ class Telephone implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['prefix'] = isset($data['prefix']) ? $data['prefix'] : null;
+        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
         $this->container['number'] = isset($data['number']) ? $data['number'] : null;
     }
 
@@ -136,6 +135,7 @@ class Telephone implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -143,31 +143,32 @@ class Telephone implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
 
     /**
-     * Gets prefix
+     * Gets country_code
      * @return string
      */
-    public function getPrefix()
+    public function getCountryCode()
     {
-        return $this->container['prefix'];
+        return $this->container['country_code'];
     }
 
     /**
-     * Sets prefix
-     * @param string $prefix
+     * Sets country_code
+     * @param string $country_code
      * @return $this
      */
-    public function setPrefix($prefix)
+    public function setCountryCode($country_code)
     {
-        $this->container['prefix'] = $prefix;
+        $this->container['country_code'] = $country_code;
 
         return $this;
     }

@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * UserLegalResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -55,10 +54,10 @@ class UserLegalResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'headquarters_address' => '\Swagger\Client\Model\Address',
+        'headquarters_address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
         'legal_person_type' => 'string',
         'name' => 'string',
-        'legal_representative_address' => '\Swagger\Client\Model\Address',
+        'legal_representative_address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
         'legal_representative_birthday' => 'int',
         'legal_representative_country_of_residence' => 'string',
         'legal_representative_nationality' => 'string',
@@ -681,6 +680,7 @@ class UserLegalResponse implements ArrayAccess
     const LEGAL_REPRESENTATIVE_NATIONALITY_ZW = 'ZW';
     const PERSON_TYPE_NATURAL = 'Natural';
     const PERSON_TYPE_LEGAL = 'Legal';
+    const PERSON_TYPE_FEES = 'Fees';
     const KYC_LEVEL_NOT_SPECIFIED = 'NotSpecified';
     const KYC_LEVEL_LIGHT = 'LIGHT';
     const KYC_LEVEL_REGULAR = 'REGULAR';
@@ -1229,6 +1229,7 @@ class UserLegalResponse implements ArrayAccess
         return [
             self::PERSON_TYPE_NATURAL,
             self::PERSON_TYPE_LEGAL,
+            self::PERSON_TYPE_FEES,
         ];
     }
     
@@ -1287,29 +1288,30 @@ class UserLegalResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["BUSINESS", "ORGANIZATION", "SOLETRADER"];
         if (!in_array($this->container['legal_person_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'legal_person_type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'legal_person_type', must be one of 'BUSINESS', 'ORGANIZATION', 'SOLETRADER'.";
         }
 
         $allowed_values = ["NotSpecified", "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"];
         if (!in_array($this->container['legal_representative_country_of_residence'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'legal_representative_country_of_residence', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'legal_representative_country_of_residence', must be one of 'NotSpecified', 'AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AW', 'AX', 'AZ', 'BA', 'BB', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BL', 'BM', 'BN', 'BO', 'BQ', 'BR', 'BS', 'BT', 'BV', 'BW', 'BY', 'BZ', 'CA', 'CC', 'CD', 'CF', 'CG', 'CH', 'CI', 'CK', 'CL', 'CM', 'CN', 'CO', 'CR', 'CU', 'CV', 'CW', 'CX', 'CY', 'CZ', 'DE', 'DJ', 'DK', 'DM', 'DO', 'DZ', 'EC', 'EE', 'EG', 'EH', 'ER', 'ES', 'ET', 'FI', 'FJ', 'FK', 'FM', 'FO', 'FR', 'GA', 'GB', 'GD', 'GE', 'GF', 'GG', 'GH', 'GI', 'GL', 'GM', 'GN', 'GP', 'GQ', 'GR', 'GS', 'GT', 'GU', 'GW', 'GY', 'HK', 'HM', 'HN', 'HR', 'HT', 'HU', 'ID', 'IE', 'IL', 'IM', 'IN', 'IO', 'IQ', 'IR', 'IS', 'IT', 'JE', 'JM', 'JO', 'JP', 'KE', 'KG', 'KH', 'KI', 'KM', 'KN', 'KP', 'KR', 'KW', 'KY', 'KZ', 'LA', 'LB', 'LC', 'LI', 'LK', 'LR', 'LS', 'LT', 'LU', 'LV', 'LY', 'MA', 'MC', 'MD', 'ME', 'MF', 'MG', 'MH', 'MK', 'ML', 'MM', 'MN', 'MO', 'MP', 'MQ', 'MR', 'MS', 'MT', 'MU', 'MV', 'MW', 'MX', 'MY', 'MZ', 'NA', 'NC', 'NE', 'NF', 'NG', 'NI', 'NL', 'NO', 'NP', 'NR', 'NU', 'NZ', 'OM', 'PA', 'PE', 'PF', 'PG', 'PH', 'PK', 'PL', 'PM', 'PN', 'PR', 'PS', 'PT', 'PW', 'PY', 'QA', 'RE', 'RO', 'RS', 'RU', 'RW', 'SA', 'SB', 'SC', 'SD', 'SE', 'SG', 'SH', 'SI', 'SJ', 'SK', 'SL', 'SM', 'SN', 'SO', 'SR', 'SS', 'ST', 'SV', 'SX', 'SY', 'SZ', 'TC', 'TD', 'TF', 'TG', 'TH', 'TJ', 'TK', 'TL', 'TM', 'TN', 'TO', 'TR', 'TT', 'TV', 'TW', 'TZ', 'UA', 'UG', 'UM', 'US', 'UY', 'UZ', 'VA', 'VC', 'VE', 'VG', 'VI', 'VN', 'VU', 'WF', 'WS', 'YE', 'YT', 'ZA', 'ZM', 'ZW'.";
         }
 
         $allowed_values = ["NotSpecified", "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"];
         if (!in_array($this->container['legal_representative_nationality'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'legal_representative_nationality', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'legal_representative_nationality', must be one of 'NotSpecified', 'AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AW', 'AX', 'AZ', 'BA', 'BB', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BL', 'BM', 'BN', 'BO', 'BQ', 'BR', 'BS', 'BT', 'BV', 'BW', 'BY', 'BZ', 'CA', 'CC', 'CD', 'CF', 'CG', 'CH', 'CI', 'CK', 'CL', 'CM', 'CN', 'CO', 'CR', 'CU', 'CV', 'CW', 'CX', 'CY', 'CZ', 'DE', 'DJ', 'DK', 'DM', 'DO', 'DZ', 'EC', 'EE', 'EG', 'EH', 'ER', 'ES', 'ET', 'FI', 'FJ', 'FK', 'FM', 'FO', 'FR', 'GA', 'GB', 'GD', 'GE', 'GF', 'GG', 'GH', 'GI', 'GL', 'GM', 'GN', 'GP', 'GQ', 'GR', 'GS', 'GT', 'GU', 'GW', 'GY', 'HK', 'HM', 'HN', 'HR', 'HT', 'HU', 'ID', 'IE', 'IL', 'IM', 'IN', 'IO', 'IQ', 'IR', 'IS', 'IT', 'JE', 'JM', 'JO', 'JP', 'KE', 'KG', 'KH', 'KI', 'KM', 'KN', 'KP', 'KR', 'KW', 'KY', 'KZ', 'LA', 'LB', 'LC', 'LI', 'LK', 'LR', 'LS', 'LT', 'LU', 'LV', 'LY', 'MA', 'MC', 'MD', 'ME', 'MF', 'MG', 'MH', 'MK', 'ML', 'MM', 'MN', 'MO', 'MP', 'MQ', 'MR', 'MS', 'MT', 'MU', 'MV', 'MW', 'MX', 'MY', 'MZ', 'NA', 'NC', 'NE', 'NF', 'NG', 'NI', 'NL', 'NO', 'NP', 'NR', 'NU', 'NZ', 'OM', 'PA', 'PE', 'PF', 'PG', 'PH', 'PK', 'PL', 'PM', 'PN', 'PR', 'PS', 'PT', 'PW', 'PY', 'QA', 'RE', 'RO', 'RS', 'RU', 'RW', 'SA', 'SB', 'SC', 'SD', 'SE', 'SG', 'SH', 'SI', 'SJ', 'SK', 'SL', 'SM', 'SN', 'SO', 'SR', 'SS', 'ST', 'SV', 'SX', 'SY', 'SZ', 'TC', 'TD', 'TF', 'TG', 'TH', 'TJ', 'TK', 'TL', 'TM', 'TN', 'TO', 'TR', 'TT', 'TV', 'TW', 'TZ', 'UA', 'UG', 'UM', 'US', 'UY', 'UZ', 'VA', 'VC', 'VE', 'VG', 'VI', 'VN', 'VU', 'WF', 'WS', 'YE', 'YT', 'ZA', 'ZM', 'ZW'.";
         }
 
-        $allowed_values = ["Natural", "Legal"];
+        $allowed_values = ["Natural", "Legal", "Fees"];
         if (!in_array($this->container['person_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'person_type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'person_type', must be one of 'Natural', 'Legal', 'Fees'.";
         }
 
         $allowed_values = ["NotSpecified", "LIGHT", "REGULAR"];
         if (!in_array($this->container['kyc_level'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'kyc_level', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'kyc_level', must be one of 'NotSpecified', 'LIGHT', 'REGULAR'.";
         }
 
         return $invalid_properties;
@@ -1319,10 +1321,11 @@ class UserLegalResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["BUSINESS", "ORGANIZATION", "SOLETRADER"];
         if (!in_array($this->container['legal_person_type'], $allowed_values)) {
             return false;
@@ -1335,7 +1338,7 @@ class UserLegalResponse implements ArrayAccess
         if (!in_array($this->container['legal_representative_nationality'], $allowed_values)) {
             return false;
         }
-        $allowed_values = ["Natural", "Legal"];
+        $allowed_values = ["Natural", "Legal", "Fees"];
         if (!in_array($this->container['person_type'], $allowed_values)) {
             return false;
         }
@@ -1349,7 +1352,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Gets headquarters_address
-     * @return \Swagger\Client\Model\Address
+     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
      */
     public function getHeadquartersAddress()
     {
@@ -1358,7 +1361,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets headquarters_address
-     * @param \Swagger\Client\Model\Address $headquarters_address
+     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $headquarters_address
      * @return $this
      */
     public function setHeadquartersAddress($headquarters_address)
@@ -1379,7 +1382,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_person_type
-     * @param string $legal_person_type
+     * @param string $legal_person_type The type of legal user
      * @return $this
      */
     public function setLegalPersonType($legal_person_type)
@@ -1404,7 +1407,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name
+     * @param string $name The name of the legal user
      * @return $this
      */
     public function setName($name)
@@ -1416,7 +1419,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Gets legal_representative_address
-     * @return \Swagger\Client\Model\Address
+     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
      */
     public function getLegalRepresentativeAddress()
     {
@@ -1425,7 +1428,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_address
-     * @param \Swagger\Client\Model\Address $legal_representative_address
+     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $legal_representative_address
      * @return $this
      */
     public function setLegalRepresentativeAddress($legal_representative_address)
@@ -1446,7 +1449,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_birthday
-     * @param int $legal_representative_birthday
+     * @param int $legal_representative_birthday The date of birth of the company’s Legal representative person - be careful to set the right timezone (should be UTC) to avoid 00h becoming 23h (and hence interpreted as the day before)
      * @return $this
      */
     public function setLegalRepresentativeBirthday($legal_representative_birthday)
@@ -1467,7 +1470,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_country_of_residence
-     * @param string $legal_representative_country_of_residence
+     * @param string $legal_representative_country_of_residence The country of residence of the company’s Legal representative person
      * @return $this
      */
     public function setLegalRepresentativeCountryOfResidence($legal_representative_country_of_residence)
@@ -1492,7 +1495,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_nationality
-     * @param string $legal_representative_nationality
+     * @param string $legal_representative_nationality The nationality of the company’s Legal representative person
      * @return $this
      */
     public function setLegalRepresentativeNationality($legal_representative_nationality)
@@ -1517,7 +1520,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_email
-     * @param string $legal_representative_email
+     * @param string $legal_representative_email The email of the company’s Legal representative person - must be a valid
      * @return $this
      */
     public function setLegalRepresentativeEmail($legal_representative_email)
@@ -1538,7 +1541,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_first_name
-     * @param string $legal_representative_first_name
+     * @param string $legal_representative_first_name The firstname of the company’s Legal representative person
      * @return $this
      */
     public function setLegalRepresentativeFirstName($legal_representative_first_name)
@@ -1559,7 +1562,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_last_name
-     * @param string $legal_representative_last_name
+     * @param string $legal_representative_last_name The lastname of the company’s Legal representative person
      * @return $this
      */
     public function setLegalRepresentativeLastName($legal_representative_last_name)
@@ -1580,7 +1583,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_proof_of_identity
-     * @param string $legal_representative_proof_of_identity
+     * @param string $legal_representative_proof_of_identity Legal Representative Proof Of Identity
      * @return $this
      */
     public function setLegalRepresentativeProofOfIdentity($legal_representative_proof_of_identity)
@@ -1601,7 +1604,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets statute
-     * @param string $statute
+     * @param string $statute Statute
      * @return $this
      */
     public function setStatute($statute)
@@ -1622,7 +1625,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets shareholder_declaration
-     * @param string $shareholder_declaration
+     * @param string $shareholder_declaration Shareholder declaration
      * @return $this
      */
     public function setShareholderDeclaration($shareholder_declaration)
@@ -1643,7 +1646,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets proof_of_registration
-     * @param string $proof_of_registration
+     * @param string $proof_of_registration Proof of registration
      * @return $this
      */
     public function setProofOfRegistration($proof_of_registration)
@@ -1664,14 +1667,14 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets person_type
-     * @param string $person_type
+     * @param string $person_type Type of user
      * @return $this
      */
     public function setPersonType($person_type)
     {
-        $allowed_values = array('Natural', 'Legal');
+        $allowed_values = array('Natural', 'Legal', 'Fees');
         if (!is_null($person_type) && (!in_array($person_type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'person_type', must be one of 'Natural', 'Legal'");
+            throw new \InvalidArgumentException("Invalid value for 'person_type', must be one of 'Natural', 'Legal', 'Fees'");
         }
         $this->container['person_type'] = $person_type;
 
@@ -1689,7 +1692,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets kyc_level
-     * @param string $kyc_level
+     * @param string $kyc_level 
      * @return $this
      */
     public function setKycLevel($kyc_level)

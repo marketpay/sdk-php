@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * TransferPost Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -58,8 +57,8 @@ class TransferPost implements ArrayAccess
         'tag' => 'string',
         'author_id' => 'string',
         'credited_user_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
         'debited_wallet_id' => 'string',
         'credited_wallet_id' => 'string'
     ];
@@ -161,6 +160,7 @@ class TransferPost implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -168,10 +168,11 @@ class TransferPost implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
@@ -187,7 +188,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag
+     * @param string $tag Custom data that you can add to this item
      * @return $this
      */
     public function setTag($tag)
@@ -208,7 +209,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id
+     * @param string $author_id A user's ID
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -229,7 +230,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets credited_user_id
-     * @param string $credited_user_id
+     * @param string $credited_user_id The user ID who was credited
      * @return $this
      */
     public function setCreditedUserId($credited_user_id)
@@ -241,7 +242,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getDebitedFunds()
     {
@@ -250,7 +251,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -262,7 +263,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getFees()
     {
@@ -271,7 +272,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
      * @return $this
      */
     public function setFees($fees)
@@ -292,7 +293,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets debited_wallet_id
-     * @param string $debited_wallet_id
+     * @param string $debited_wallet_id The ID of the wallet that was debited
      * @return $this
      */
     public function setDebitedWalletId($debited_wallet_id)
@@ -313,7 +314,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id
+     * @param string $credited_wallet_id The ID of the wallet where money will be credited
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)

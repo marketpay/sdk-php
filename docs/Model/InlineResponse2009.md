@@ -1,0 +1,29 @@
+# InlineResponse2009
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**debited_funds** | [**\Swagger\Client\Model\InlineResponse2001DebitedFunds**](InlineResponse2001DebitedFunds.md) |  | [optional] 
+**credited_funds** | [**\Swagger\Client\Model\InlineResponse2001DebitedFunds**](InlineResponse2001DebitedFunds.md) |  | [optional] 
+**fees** | [**\Swagger\Client\Model\InlineResponse2001DebitedFunds**](InlineResponse2001DebitedFunds.md) |  | [optional] 
+**credited_wallet_id** | **string** | The ID of the wallet where money will be credited | [optional] 
+**nature** | **string** | The nature of the transaction | [optional] 
+**status** | **string** | The status of the transaction | [optional] 
+**execution_date** | **int** | When the transaction happened | [optional] 
+**result_code** | **string** | The result code | [optional] 
+**result_message** | **string** | A verbal explanation of the ResultCode | [optional] 
+**type** | **string** | The type of the transaction | [optional] 
+**payment_type** | **string** | The type of payin | [optional] 
+**execution_type** | **string** | The type of execution for the payin | [optional] 
+**statement_descriptor** | **string** | A custom description to appear on the user&#39;s bank statement. It can be up to 10 characters long, and can only include alphanumeric characters or spaces | [optional] 
+**author_id** | **string** | A user&#39;s ID | [optional] 
+**credited_user_id** | **string** | The user ID who was credited | [optional] 
+**id** | **string** |  | [optional] 
+**tag** | **string** |  | [optional] 
+**creation_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**provider** | [**\Swagger\Client\Model\InlineResponse2009Provider**](InlineResponse2009Provider.md) |  | [optional] 
+**card_id** | **string** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

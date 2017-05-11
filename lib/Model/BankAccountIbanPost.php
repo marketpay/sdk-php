@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * BankAccountIbanPost Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -58,7 +57,7 @@ class BankAccountIbanPost implements ArrayAccess
         'iban' => 'string',
         'bic' => 'string',
         'tag' => 'string',
-        'owner_address' => '\Swagger\Client\Model\Address',
+        'owner_address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
         'owner_name' => 'string'
     ];
 
@@ -151,6 +150,7 @@ class BankAccountIbanPost implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -158,10 +158,11 @@ class BankAccountIbanPost implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
@@ -177,7 +178,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Sets iban
-     * @param string $iban
+     * @param string $iban The IBAN of the bank account
      * @return $this
      */
     public function setIban($iban)
@@ -198,7 +199,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Sets bic
-     * @param string $bic
+     * @param string $bic The BIC of the bank account
      * @return $this
      */
     public function setBic($bic)
@@ -219,7 +220,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag
+     * @param string $tag Custom data that you can add to this item
      * @return $this
      */
     public function setTag($tag)
@@ -231,7 +232,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Gets owner_address
-     * @return \Swagger\Client\Model\Address
+     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
      */
     public function getOwnerAddress()
     {
@@ -240,7 +241,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address
+     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -261,7 +262,7 @@ class BankAccountIbanPost implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name
+     * @param string $owner_name The name of the owner of the bank account
      * @return $this
      */
     public function setOwnerName($owner_name)

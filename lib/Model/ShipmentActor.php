@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * ShipmentActor Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -56,8 +55,8 @@ class ShipmentActor implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-        'telephone' => '\Swagger\Client\Model\Telephone',
-        'address' => '\Swagger\Client\Model\Address'
+        'telephone' => '\Swagger\Client\Model\V201ShipmentSeurshipmentsSenderTelephone',
+        'address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress'
     ];
 
     public static function swaggerTypes()
@@ -141,6 +140,7 @@ class ShipmentActor implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -148,10 +148,11 @@ class ShipmentActor implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
@@ -179,7 +180,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Gets telephone
-     * @return \Swagger\Client\Model\Telephone
+     * @return \Swagger\Client\Model\V201ShipmentSeurshipmentsSenderTelephone
      */
     public function getTelephone()
     {
@@ -188,7 +189,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Sets telephone
-     * @param \Swagger\Client\Model\Telephone $telephone
+     * @param \Swagger\Client\Model\V201ShipmentSeurshipmentsSenderTelephone $telephone
      * @return $this
      */
     public function setTelephone($telephone)
@@ -200,7 +201,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Gets address
-     * @return \Swagger\Client\Model\Address
+     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
      */
     public function getAddress()
     {
@@ -209,7 +210,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\Address $address
+     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $address
      * @return $this
      */
     public function setAddress($address)

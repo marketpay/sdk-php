@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * BankAccountUsPost Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -59,7 +58,7 @@ class BankAccountUsPost implements ArrayAccess
         'aba' => 'string',
         'deposit_account_type' => 'string',
         'tag' => 'string',
-        'owner_address' => '\Swagger\Client\Model\Address',
+        'owner_address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
         'owner_name' => 'string'
     ];
 
@@ -172,9 +171,10 @@ class BankAccountUsPost implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["NotSpecified", "CHECKING", "SAVINGS"];
         if (!in_array($this->container['deposit_account_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'deposit_account_type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'deposit_account_type', must be one of 'NotSpecified', 'CHECKING', 'SAVINGS'.";
         }
 
         return $invalid_properties;
@@ -184,10 +184,11 @@ class BankAccountUsPost implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["NotSpecified", "CHECKING", "SAVINGS"];
         if (!in_array($this->container['deposit_account_type'], $allowed_values)) {
             return false;
@@ -207,7 +208,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets account_number
-     * @param string $account_number
+     * @param string $account_number The account number of the bank account. US account numbers must be digits only
      * @return $this
      */
     public function setAccountNumber($account_number)
@@ -228,7 +229,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets aba
-     * @param string $aba
+     * @param string $aba The ABA of the bank account. Must be numbers only, and 9 digits long
      * @return $this
      */
     public function setAba($aba)
@@ -249,7 +250,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets deposit_account_type
-     * @param string $deposit_account_type
+     * @param string $deposit_account_type The type of account
      * @return $this
      */
     public function setDepositAccountType($deposit_account_type)
@@ -274,7 +275,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag
+     * @param string $tag Custom data that you can add to this item
      * @return $this
      */
     public function setTag($tag)
@@ -286,7 +287,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Gets owner_address
-     * @return \Swagger\Client\Model\Address
+     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
      */
     public function getOwnerAddress()
     {
@@ -295,7 +296,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address
+     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -316,7 +317,7 @@ class BankAccountUsPost implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name
+     * @param string $owner_name The name of the owner of the bank account
      * @return $this
      */
     public function setOwnerName($owner_name)

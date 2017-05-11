@@ -90,11 +90,11 @@ class WalletsApi
     /**
      * Operation walletsGet
      *
-     * 
+     * View a Wallet
      *
-     * @param int $wallet_id  (required)
+     * @param int $wallet_id The Id of a wallet (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\WalletResponse
+     * @return \Swagger\Client\Model\InlineResponse20016
      */
     public function walletsGet($wallet_id)
     {
@@ -105,11 +105,11 @@ class WalletsApi
     /**
      * Operation walletsGetWithHttpInfo
      *
-     * 
+     * View a Wallet
      *
-     * @param int $wallet_id  (required)
+     * @param int $wallet_id The Id of a wallet (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20016, HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsGetWithHttpInfo($wallet_id)
     {
@@ -159,19 +159,19 @@ class WalletsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\WalletResponse',
+                '\Swagger\Client\Model\InlineResponse20016',
                 '/v2.01/Wallets/{WalletId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\WalletResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20016', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\WalletResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20016', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -183,13 +183,13 @@ class WalletsApi
     /**
      * Operation walletsGetTransactionList
      *
-     * 
+     * List a Wallet's Transactions
      *
-     * @param int $wallet_id  (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $wallet_id The Id of a wallet (required)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TransactionResponse[]
+     * @return \Swagger\Client\Model\InlineResponse20014[]
      */
     public function walletsGetTransactionList($wallet_id, $page = null, $per_page = null)
     {
@@ -200,13 +200,13 @@ class WalletsApi
     /**
      * Operation walletsGetTransactionListWithHttpInfo
      *
-     * 
+     * List a Wallet's Transactions
      *
-     * @param int $wallet_id  (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $wallet_id The Id of a wallet (required)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TransactionResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20014[], HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsGetTransactionListWithHttpInfo($wallet_id, $page = null, $per_page = null)
     {
@@ -264,19 +264,19 @@ class WalletsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TransactionResponse[]',
+                '\Swagger\Client\Model\InlineResponse20014[]',
                 '/v2.01/Wallets/{WalletId}/transactions'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TransactionResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20014[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TransactionResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20014[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -288,11 +288,11 @@ class WalletsApi
     /**
      * Operation walletsPost
      *
-     * 
+     * Create a Wallet
      *
-     * @param \Swagger\Client\Model\WalletPost $wallet  (optional)
+     * @param \Swagger\Client\Model\Wallet $wallet Wallet Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\WalletResponse
+     * @return \Swagger\Client\Model\InlineResponse20016
      */
     public function walletsPost($wallet = null)
     {
@@ -303,11 +303,11 @@ class WalletsApi
     /**
      * Operation walletsPostWithHttpInfo
      *
-     * 
+     * Create a Wallet
      *
-     * @param \Swagger\Client\Model\WalletPost $wallet  (optional)
+     * @param \Swagger\Client\Model\Wallet $wallet Wallet Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20016, HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsPostWithHttpInfo($wallet = null)
     {
@@ -350,19 +350,19 @@ class WalletsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\WalletResponse',
+                '\Swagger\Client\Model\InlineResponse20016',
                 '/v2.01/Wallets'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\WalletResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20016', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\WalletResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20016', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -374,12 +374,12 @@ class WalletsApi
     /**
      * Operation walletsPut
      *
-     * 
+     * Update a Wallet
      *
-     * @param int $wallet_id  (required)
-     * @param \Swagger\Client\Model\WalletPut $wallet  (optional)
+     * @param int $wallet_id The Id of a wallet (required)
+     * @param \Swagger\Client\Model\Wallet1 $wallet Wallet Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\WalletResponse
+     * @return \Swagger\Client\Model\InlineResponse20016
      */
     public function walletsPut($wallet_id, $wallet = null)
     {
@@ -390,12 +390,12 @@ class WalletsApi
     /**
      * Operation walletsPutWithHttpInfo
      *
-     * 
+     * Update a Wallet
      *
-     * @param int $wallet_id  (required)
-     * @param \Swagger\Client\Model\WalletPut $wallet  (optional)
+     * @param int $wallet_id The Id of a wallet (required)
+     * @param \Swagger\Client\Model\Wallet1 $wallet Wallet Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20016, HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsPutWithHttpInfo($wallet_id, $wallet = null)
     {
@@ -450,19 +450,19 @@ class WalletsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\WalletResponse',
+                '\Swagger\Client\Model\InlineResponse20016',
                 '/v2.01/Wallets/{WalletId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\WalletResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20016', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\WalletResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20016', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

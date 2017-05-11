@@ -4,14 +4,16 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**transfersGet**](TransfersApi.md#transfersGet) | **GET** /v2.01/Transfers/{TransferId} | 
-[**transfersPost**](TransfersApi.md#transfersPost) | **POST** /v2.01/Transfers | 
+[**transfersGet**](TransfersApi.md#transfersGet) | **GET** /v2.01/Transfers/{TransferId} | View a Transfer
+[**transfersPost**](TransfersApi.md#transfersPost) | **POST** /v2.01/Transfers | Create a Transfer
 
 
 # **transfersGet**
-> \Swagger\Client\Model\TransferResponse transfersGet($transfer_id)
+> \Swagger\Client\Model\InlineResponse20014 transfersGet($transfer_id)
 
+View a Transfer
 
+A Transfer is a request to relocate e-money from one wallet to another wallet.
 
 ### Example
 ```php
@@ -22,7 +24,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\TransfersApi();
-$transfer_id = 789; // int | 
+$transfer_id = 789; // int | The Id of a transfer
 
 try {
     $result = $api_instance->transfersGet($transfer_id);
@@ -37,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transfer_id** | **int**|  |
+ **transfer_id** | **int**| The Id of a transfer |
 
 ### Return type
 
-[**\Swagger\Client\Model\TransferResponse**](../Model/TransferResponse.md)
+[**\Swagger\Client\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -55,7 +57,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **transfersPost**
-> \Swagger\Client\Model\TransferResponse transfersPost($transfer)
+> \Swagger\Client\Model\InlineResponse20014 transfersPost($transfer)
+
+Create a Transfer
 
 
 
@@ -68,7 +72,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\TransfersApi();
-$transfer = new \Swagger\Client\Model\TransferPost(); // \Swagger\Client\Model\TransferPost | 
+$transfer = new \Swagger\Client\Model\Transfer(); // \Swagger\Client\Model\Transfer | Transfer Object params
 
 try {
     $result = $api_instance->transfersPost($transfer);
@@ -83,11 +87,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transfer** | [**\Swagger\Client\Model\TransferPost**](../Model/\Swagger\Client\Model\TransferPost.md)|  | [optional]
+ **transfer** | [**\Swagger\Client\Model\Transfer**](../Model/\Swagger\Client\Model\Transfer.md)| Transfer Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransferResponse**](../Model/TransferResponse.md)
+[**\Swagger\Client\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 

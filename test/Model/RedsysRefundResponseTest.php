@@ -211,6 +211,14 @@ class RedsysRefundResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "provider"
+     */
+    public function testPropertyProvider()
+    {
+
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()

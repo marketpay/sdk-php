@@ -79,7 +79,7 @@ class WalletsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for walletsGet
      *
-     * .
+     * View a Wallet.
      *
      */
     public function testWalletsGet()
@@ -90,7 +90,7 @@ class WalletsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for walletsGetTransactionList
      *
-     * .
+     * List a Wallet's Transactions.
      *
      */
     public function testWalletsGetTransactionList()
@@ -101,7 +101,7 @@ class WalletsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for walletsPost
      *
-     * .
+     * Create a Wallet.
      *
      */
     public function testWalletsPost()
@@ -112,7 +112,7 @@ class WalletsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for walletsPut
      *
-     * .
+     * Update a Wallet.
      *
      */
     public function testWalletsPut()

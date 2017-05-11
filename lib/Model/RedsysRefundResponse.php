@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * RedsysRefundResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -55,9 +54,9 @@ class RedsysRefundResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'credited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'credited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
         'debited_wallet_id' => 'string',
         'credited_wallet_id' => 'string',
         'author_id' => 'string',
@@ -70,7 +69,8 @@ class RedsysRefundResponse implements ArrayAccess
         'type' => 'string',
         'initial_transaction_id' => 'string',
         'initial_transaction_type' => 'string',
-        'refund_reason' => '\Swagger\Client\Model\RefundReason',
+        'refund_reason' => '\Swagger\Client\Model\InlineResponse204RefundReason',
+        'provider' => '\Swagger\Client\Model\InlineResponse2003Provider',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -102,6 +102,7 @@ class RedsysRefundResponse implements ArrayAccess
         'initial_transaction_id' => 'InitialTransactionId',
         'initial_transaction_type' => 'InitialTransactionType',
         'refund_reason' => 'RefundReason',
+        'provider' => 'Provider',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -129,6 +130,7 @@ class RedsysRefundResponse implements ArrayAccess
         'initial_transaction_id' => 'setInitialTransactionId',
         'initial_transaction_type' => 'setInitialTransactionType',
         'refund_reason' => 'setRefundReason',
+        'provider' => 'setProvider',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -156,6 +158,7 @@ class RedsysRefundResponse implements ArrayAccess
         'initial_transaction_id' => 'getInitialTransactionId',
         'initial_transaction_type' => 'getInitialTransactionType',
         'refund_reason' => 'getRefundReason',
+        'provider' => 'getProvider',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -276,6 +279,7 @@ class RedsysRefundResponse implements ArrayAccess
         $this->container['initial_transaction_id'] = isset($data['initial_transaction_id']) ? $data['initial_transaction_id'] : null;
         $this->container['initial_transaction_type'] = isset($data['initial_transaction_type']) ? $data['initial_transaction_type'] : null;
         $this->container['refund_reason'] = isset($data['refund_reason']) ? $data['refund_reason'] : null;
+        $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -289,24 +293,25 @@ class RedsysRefundResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["REGULAR", "REFUND", "REPUDIATION", "SETTLEMENT"];
         if (!in_array($this->container['nature'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'nature', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'nature', must be one of 'REGULAR', 'REFUND', 'REPUDIATION', 'SETTLEMENT'.";
         }
 
         $allowed_values = ["CREATED", "SUCCEEDED", "FAILED"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'CREATED', 'SUCCEEDED', 'FAILED'.";
         }
 
         $allowed_values = ["PAYIN", "PAYOUT", "TRANSFER"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'PAYIN', 'PAYOUT', 'TRANSFER'.";
         }
 
         $allowed_values = ["NotSpecified", "PAYIN", "TRANSFER", "PAYOUT"];
         if (!in_array($this->container['initial_transaction_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'initial_transaction_type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'initial_transaction_type', must be one of 'NotSpecified', 'PAYIN', 'TRANSFER', 'PAYOUT'.";
         }
 
         return $invalid_properties;
@@ -316,10 +321,11 @@ class RedsysRefundResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["REGULAR", "REFUND", "REPUDIATION", "SETTLEMENT"];
         if (!in_array($this->container['nature'], $allowed_values)) {
             return false;
@@ -342,7 +348,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getDebitedFunds()
     {
@@ -351,7 +357,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -363,7 +369,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getCreditedFunds()
     {
@@ -372,7 +378,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\Money $credited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $credited_funds
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -384,7 +390,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getFees()
     {
@@ -393,7 +399,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
      * @return $this
      */
     public function setFees($fees)
@@ -414,7 +420,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets debited_wallet_id
-     * @param string $debited_wallet_id
+     * @param string $debited_wallet_id The ID of the wallet that was debited
      * @return $this
      */
     public function setDebitedWalletId($debited_wallet_id)
@@ -435,7 +441,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id
+     * @param string $credited_wallet_id The ID of the wallet where money will be credited
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -456,7 +462,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id
+     * @param string $author_id A user's ID
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -477,7 +483,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets credited_user_id
-     * @param string $credited_user_id
+     * @param string $credited_user_id The user ID who was credited
      * @return $this
      */
     public function setCreditedUserId($credited_user_id)
@@ -498,7 +504,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets nature
-     * @param string $nature
+     * @param string $nature The nature of the transaction
      * @return $this
      */
     public function setNature($nature)
@@ -523,7 +529,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status
+     * @param string $status The status of the transaction
      * @return $this
      */
     public function setStatus($status)
@@ -548,7 +554,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets execution_date
-     * @param int $execution_date
+     * @param int $execution_date When the transaction happened
      * @return $this
      */
     public function setExecutionDate($execution_date)
@@ -569,7 +575,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets result_code
-     * @param string $result_code
+     * @param string $result_code The result code
      * @return $this
      */
     public function setResultCode($result_code)
@@ -590,7 +596,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets result_message
-     * @param string $result_message
+     * @param string $result_message A verbal explanation of the ResultCode
      * @return $this
      */
     public function setResultMessage($result_message)
@@ -611,7 +617,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type
+     * @param string $type The type of the transaction
      * @return $this
      */
     public function setType($type)
@@ -636,7 +642,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets initial_transaction_id
-     * @param string $initial_transaction_id
+     * @param string $initial_transaction_id The initial transaction ID
      * @return $this
      */
     public function setInitialTransactionId($initial_transaction_id)
@@ -657,7 +663,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets initial_transaction_type
-     * @param string $initial_transaction_type
+     * @param string $initial_transaction_type The initial transaction type
      * @return $this
      */
     public function setInitialTransactionType($initial_transaction_type)
@@ -673,7 +679,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Gets refund_reason
-     * @return \Swagger\Client\Model\RefundReason
+     * @return \Swagger\Client\Model\InlineResponse204RefundReason
      */
     public function getRefundReason()
     {
@@ -682,12 +688,33 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets refund_reason
-     * @param \Swagger\Client\Model\RefundReason $refund_reason
+     * @param \Swagger\Client\Model\InlineResponse204RefundReason $refund_reason
      * @return $this
      */
     public function setRefundReason($refund_reason)
     {
         $this->container['refund_reason'] = $refund_reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets provider
+     * @return \Swagger\Client\Model\InlineResponse2003Provider
+     */
+    public function getProvider()
+    {
+        return $this->container['provider'];
+    }
+
+    /**
+     * Sets provider
+     * @param \Swagger\Client\Model\InlineResponse2003Provider $provider
+     * @return $this
+     */
+    public function setProvider($provider)
+    {
+        $this->container['provider'] = $provider;
 
         return $this;
     }

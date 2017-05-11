@@ -99,6 +99,14 @@ class RedsysPreauthorizeResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "payment_status"
+     */
+    public function testPropertyPaymentStatus()
+    {
+
+    }
+
+    /**
      * Test attribute "execution_date"
      */
     public function testPropertyExecutionDate()
@@ -150,6 +158,22 @@ class RedsysPreauthorizeResponseTest extends \PHPUnit_Framework_TestCase
      * Test attribute "author_id"
      */
     public function testPropertyAuthorId()
+    {
+
+    }
+
+    /**
+     * Test attribute "pay_in_id"
+     */
+    public function testPropertyPayInId()
+    {
+
+    }
+
+    /**
+     * Test attribute "provider"
+     */
+    public function testPropertyProvider()
     {
 
     }

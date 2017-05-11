@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * PayOutBankWirePost Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -57,8 +56,8 @@ class PayOutBankWirePost implements ArrayAccess
     protected static $swaggerTypes = [
         'tag' => 'string',
         'author_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
         'bank_account_id' => 'string',
         'debited_wallet_id' => 'string',
         'bank_wire_ref' => 'string'
@@ -161,6 +160,7 @@ class PayOutBankWirePost implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -168,10 +168,11 @@ class PayOutBankWirePost implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
@@ -220,7 +221,7 @@ class PayOutBankWirePost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getDebitedFunds()
     {
@@ -229,7 +230,7 @@ class PayOutBankWirePost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -241,7 +242,7 @@ class PayOutBankWirePost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getFees()
     {
@@ -250,7 +251,7 @@ class PayOutBankWirePost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
      * @return $this
      */
     public function setFees($fees)

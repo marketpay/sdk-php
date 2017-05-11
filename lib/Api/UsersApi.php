@@ -90,11 +90,11 @@ class UsersApi
     /**
      * Operation usersGet
      *
-     * 
+     * View a User
      *
-     * @param int $user_id  (required)
+     * @param int $user_id The Id of a user (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserResponse
+     * @return \Swagger\Client\Model\InlineResponse20015
      */
     public function usersGet($user_id)
     {
@@ -105,11 +105,11 @@ class UsersApi
     /**
      * Operation usersGetWithHttpInfo
      *
-     * 
+     * View a User
      *
-     * @param int $user_id  (required)
+     * @param int $user_id The Id of a user (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetWithHttpInfo($user_id)
     {
@@ -159,19 +159,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserResponse',
+                '\Swagger\Client\Model\InlineResponse20015',
                 '/v2.01/Users/{UserId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20015', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20015', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -183,12 +183,12 @@ class UsersApi
     /**
      * Operation usersGetBankAccount
      *
-     * 
+     * View a Bank Account
      *
-     * @param int $user_id  (required)
-     * @param int $bank_account_id  (required)
+     * @param int $user_id The Id of a user (required)
+     * @param int $bank_account_id The Id of a bank account (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponse
+     * @return \Swagger\Client\Model\InlineResponse20017
      */
     public function usersGetBankAccount($user_id, $bank_account_id)
     {
@@ -199,12 +199,12 @@ class UsersApi
     /**
      * Operation usersGetBankAccountWithHttpInfo
      *
-     * 
+     * View a Bank Account
      *
-     * @param int $user_id  (required)
-     * @param int $bank_account_id  (required)
+     * @param int $user_id The Id of a user (required)
+     * @param int $bank_account_id The Id of a bank account (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20017, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetBankAccountWithHttpInfo($user_id, $bank_account_id)
     {
@@ -266,19 +266,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponse',
+                '\Swagger\Client\Model\InlineResponse20017',
                 '/v2.01/Users/{UserId}/bankaccounts/{BankAccountId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20017', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20017', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -290,13 +290,13 @@ class UsersApi
     /**
      * Operation usersGetBankAccountList
      *
-     * 
+     * List Bank Accounts for a User
      *
-     * @param int $user_id  (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponse[]
+     * @return \Swagger\Client\Model\InlineResponse20017[]
      */
     public function usersGetBankAccountList($user_id, $page = null, $per_page = null)
     {
@@ -307,13 +307,13 @@ class UsersApi
     /**
      * Operation usersGetBankAccountListWithHttpInfo
      *
-     * 
+     * List Bank Accounts for a User
      *
-     * @param int $user_id  (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20017[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetBankAccountListWithHttpInfo($user_id, $page = null, $per_page = null)
     {
@@ -371,19 +371,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponse[]',
+                '\Swagger\Client\Model\InlineResponse20017[]',
                 '/v2.01/Users/{UserId}/bankaccounts'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20017[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20017[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -395,13 +395,13 @@ class UsersApi
     /**
      * Operation usersGetCardList
      *
-     * 
+     * List Cards for a User
      *
-     * @param int $user_id  (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CardResponse[]
+     * @return \Swagger\Client\Model\InlineResponse200[]
      */
     public function usersGetCardList($user_id, $page = null, $per_page = null)
     {
@@ -412,13 +412,13 @@ class UsersApi
     /**
      * Operation usersGetCardListWithHttpInfo
      *
-     * 
+     * List Cards for a User
      *
-     * @param int $user_id  (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CardResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse200[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetCardListWithHttpInfo($user_id, $page = null, $per_page = null)
     {
@@ -476,19 +476,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CardResponse[]',
+                '\Swagger\Client\Model\InlineResponse200[]',
                 '/v2.01/Users/{UserId}/cards'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CardResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CardResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -500,11 +500,11 @@ class UsersApi
     /**
      * Operation usersGetLegal
      *
-     * 
+     * View a Legal User
      *
-     * @param int $user_id  (required)
+     * @param int $user_id The Id of a legal user (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserLegalResponse
+     * @return \Swagger\Client\Model\InlineResponse20019
      */
     public function usersGetLegal($user_id)
     {
@@ -515,11 +515,11 @@ class UsersApi
     /**
      * Operation usersGetLegalWithHttpInfo
      *
-     * 
+     * View a Legal User
      *
-     * @param int $user_id  (required)
+     * @param int $user_id The Id of a legal user (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetLegalWithHttpInfo($user_id)
     {
@@ -569,19 +569,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserLegalResponse',
+                '\Swagger\Client\Model\InlineResponse20019',
                 '/v2.01/Users/legal/{UserId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserLegalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20019', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserLegalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20019', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -593,12 +593,12 @@ class UsersApi
     /**
      * Operation usersGetList
      *
-     * 
+     * List all Users
      *
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserResponse[]
+     * @return \Swagger\Client\Model\InlineResponse20015[]
      */
     public function usersGetList($page = null, $per_page = null)
     {
@@ -609,12 +609,12 @@ class UsersApi
     /**
      * Operation usersGetListWithHttpInfo
      *
-     * 
+     * List all Users
      *
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20015[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetListWithHttpInfo($page = null, $per_page = null)
     {
@@ -660,19 +660,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserResponse[]',
+                '\Swagger\Client\Model\InlineResponse20015[]',
                 '/v2.01/Users'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20015[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20015[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -684,11 +684,11 @@ class UsersApi
     /**
      * Operation usersGetNatural
      *
-     * 
+     * View a Natural User
      *
-     * @param int $user_id  (required)
+     * @param int $user_id The Id of a natural user (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserNaturalResponse
+     * @return \Swagger\Client\Model\InlineResponse20018
      */
     public function usersGetNatural($user_id)
     {
@@ -699,11 +699,11 @@ class UsersApi
     /**
      * Operation usersGetNaturalWithHttpInfo
      *
-     * 
+     * View a Natural User
      *
-     * @param int $user_id  (required)
+     * @param int $user_id The Id of a natural user (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20018, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetNaturalWithHttpInfo($user_id)
     {
@@ -753,19 +753,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserNaturalResponse',
+                '\Swagger\Client\Model\InlineResponse20018',
                 '/v2.01/Users/natural/{UserId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20018', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserNaturalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20018', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -777,13 +777,13 @@ class UsersApi
     /**
      * Operation usersGetTransactionList
      *
-     * 
+     * List Transactions for a User
      *
-     * @param int $user_id  (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TransactionResponse[]
+     * @return \Swagger\Client\Model\InlineResponse20014[]
      */
     public function usersGetTransactionList($user_id, $page = null, $per_page = null)
     {
@@ -794,13 +794,13 @@ class UsersApi
     /**
      * Operation usersGetTransactionListWithHttpInfo
      *
-     * 
+     * List Transactions for a User
      *
-     * @param int $user_id  (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TransactionResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20014[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetTransactionListWithHttpInfo($user_id, $page = null, $per_page = null)
     {
@@ -858,19 +858,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TransactionResponse[]',
+                '\Swagger\Client\Model\InlineResponse20014[]',
                 '/v2.01/Users/{UserId}/transactions'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TransactionResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20014[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TransactionResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20014[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -882,13 +882,13 @@ class UsersApi
     /**
      * Operation usersGetWalletList
      *
-     * 
+     * List Wallets for a User
      *
-     * @param int $user_id  (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\WalletResponse[]
+     * @return \Swagger\Client\Model\InlineResponse20016[]
      */
     public function usersGetWalletList($user_id, $page = null, $per_page = null)
     {
@@ -899,13 +899,13 @@ class UsersApi
     /**
      * Operation usersGetWalletListWithHttpInfo
      *
-     * 
+     * List Wallets for a User
      *
-     * @param int $user_id  (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\WalletResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20016[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetWalletListWithHttpInfo($user_id, $page = null, $per_page = null)
     {
@@ -963,19 +963,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\WalletResponse[]',
+                '\Swagger\Client\Model\InlineResponse20016[]',
                 '/v2.01/Users/{UserId}/wallets'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\WalletResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20016[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\WalletResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20016[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -987,12 +987,12 @@ class UsersApi
     /**
      * Operation usersPostBankAccountCa
      *
-     * 
+     * Create a CA BankAccount
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\BankAccountCaPost $bank_account_ca  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\BankAccountCA $bank_account_ca BankAccountCA Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponseCa
+     * @return \Swagger\Client\Model\InlineResponse20022
      */
     public function usersPostBankAccountCa($user_id, $bank_account_ca = null)
     {
@@ -1003,12 +1003,12 @@ class UsersApi
     /**
      * Operation usersPostBankAccountCaWithHttpInfo
      *
-     * 
+     * Create a CA BankAccount
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\BankAccountCaPost $bank_account_ca  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\BankAccountCA $bank_account_ca BankAccountCA Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponseCa, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20022, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountCaWithHttpInfo($user_id, $bank_account_ca = null)
     {
@@ -1063,19 +1063,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponseCa',
+                '\Swagger\Client\Model\InlineResponse20022',
                 '/v2.01/Users/{UserId}/bankaccounts/CA'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponseCa', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20022', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponseCa', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20022', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1087,12 +1087,12 @@ class UsersApi
     /**
      * Operation usersPostBankAccountGb
      *
-     * 
+     * Create a GB BankAccount
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\BankAccountGbPost $bank_account_gb  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\BankAccountGB $bank_account_gb  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponseGb
+     * @return \Swagger\Client\Model\InlineResponse20023
      */
     public function usersPostBankAccountGb($user_id, $bank_account_gb = null)
     {
@@ -1103,12 +1103,12 @@ class UsersApi
     /**
      * Operation usersPostBankAccountGbWithHttpInfo
      *
-     * 
+     * Create a GB BankAccount
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\BankAccountGbPost $bank_account_gb  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\BankAccountGB $bank_account_gb  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponseGb, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20023, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountGbWithHttpInfo($user_id, $bank_account_gb = null)
     {
@@ -1163,19 +1163,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponseGb',
+                '\Swagger\Client\Model\InlineResponse20023',
                 '/v2.01/Users/{UserId}/bankaccounts/GB'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponseGb', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20023', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponseGb', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20023', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1187,12 +1187,12 @@ class UsersApi
     /**
      * Operation usersPostBankAccountIban
      *
-     * 
+     * Create an IBAN BankAccount
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\BankAccountIbanPost $bank_account_iban  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\BankAccountIBAN $bank_account_iban BankAccountIBAN Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponseIban
+     * @return \Swagger\Client\Model\InlineResponse20020
      */
     public function usersPostBankAccountIban($user_id, $bank_account_iban = null)
     {
@@ -1203,12 +1203,12 @@ class UsersApi
     /**
      * Operation usersPostBankAccountIbanWithHttpInfo
      *
-     * 
+     * Create an IBAN BankAccount
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\BankAccountIbanPost $bank_account_iban  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\BankAccountIBAN $bank_account_iban BankAccountIBAN Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponseIban, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20020, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountIbanWithHttpInfo($user_id, $bank_account_iban = null)
     {
@@ -1263,19 +1263,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponseIban',
+                '\Swagger\Client\Model\InlineResponse20020',
                 '/v2.01/Users/{UserId}/bankaccounts/IBAN'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponseIban', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20020', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponseIban', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20020', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1287,12 +1287,12 @@ class UsersApi
     /**
      * Operation usersPostBankAccountOther
      *
-     * 
+     * Create an OTHER BankAccount
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\BankAccountOtherPost $bank_account_other  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\BankAccountOTHER $bank_account_other  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponseOther
+     * @return \Swagger\Client\Model\InlineResponse20024
      */
     public function usersPostBankAccountOther($user_id, $bank_account_other = null)
     {
@@ -1303,12 +1303,12 @@ class UsersApi
     /**
      * Operation usersPostBankAccountOtherWithHttpInfo
      *
-     * 
+     * Create an OTHER BankAccount
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\BankAccountOtherPost $bank_account_other  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\BankAccountOTHER $bank_account_other  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponseOther, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20024, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountOtherWithHttpInfo($user_id, $bank_account_other = null)
     {
@@ -1363,19 +1363,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponseOther',
+                '\Swagger\Client\Model\InlineResponse20024',
                 '/v2.01/Users/{UserId}/bankaccounts/OTHER'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponseOther', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20024', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponseOther', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20024', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1387,12 +1387,12 @@ class UsersApi
     /**
      * Operation usersPostBankAccountUs
      *
-     * 
+     * Create an US BankAccount
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\BankAccountUsPost $bank_account_us  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\BankAccountUS $bank_account_us BankAccountUS Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponseUs
+     * @return \Swagger\Client\Model\InlineResponse20021
      */
     public function usersPostBankAccountUs($user_id, $bank_account_us = null)
     {
@@ -1403,12 +1403,12 @@ class UsersApi
     /**
      * Operation usersPostBankAccountUsWithHttpInfo
      *
-     * 
+     * Create an US BankAccount
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\BankAccountUsPost $bank_account_us  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\BankAccountUS $bank_account_us BankAccountUS Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponseUs, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20021, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountUsWithHttpInfo($user_id, $bank_account_us = null)
     {
@@ -1463,19 +1463,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponseUs',
+                '\Swagger\Client\Model\InlineResponse20021',
                 '/v2.01/Users/{UserId}/bankaccounts/US'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponseUs', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20021', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponseUs', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20021', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1487,11 +1487,11 @@ class UsersApi
     /**
      * Operation usersPostLegal
      *
-     * 
+     * Create a Legal User
      *
-     * @param \Swagger\Client\Model\UserLegalPost $user_legal  (optional)
+     * @param \Swagger\Client\Model\UserLegal1 $user_legal UserLegal Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserLegalResponse
+     * @return \Swagger\Client\Model\InlineResponse20019
      */
     public function usersPostLegal($user_legal = null)
     {
@@ -1502,11 +1502,11 @@ class UsersApi
     /**
      * Operation usersPostLegalWithHttpInfo
      *
-     * 
+     * Create a Legal User
      *
-     * @param \Swagger\Client\Model\UserLegalPost $user_legal  (optional)
+     * @param \Swagger\Client\Model\UserLegal1 $user_legal UserLegal Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostLegalWithHttpInfo($user_legal = null)
     {
@@ -1549,19 +1549,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserLegalResponse',
+                '\Swagger\Client\Model\InlineResponse20019',
                 '/v2.01/Users/legal'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserLegalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20019', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserLegalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20019', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1573,11 +1573,11 @@ class UsersApi
     /**
      * Operation usersPostNatural
      *
-     * 
+     * Create a Natural User
      *
-     * @param \Swagger\Client\Model\UserNaturalPost $user_natural  (optional)
+     * @param \Swagger\Client\Model\UserNatural1 $user_natural UserNatural Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserNaturalResponse
+     * @return \Swagger\Client\Model\InlineResponse20018
      */
     public function usersPostNatural($user_natural = null)
     {
@@ -1588,11 +1588,11 @@ class UsersApi
     /**
      * Operation usersPostNaturalWithHttpInfo
      *
-     * 
+     * Create a Natural User
      *
-     * @param \Swagger\Client\Model\UserNaturalPost $user_natural  (optional)
+     * @param \Swagger\Client\Model\UserNatural1 $user_natural UserNatural Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20018, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostNaturalWithHttpInfo($user_natural = null)
     {
@@ -1635,19 +1635,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserNaturalResponse',
+                '\Swagger\Client\Model\InlineResponse20018',
                 '/v2.01/Users/natural'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20018', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserNaturalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20018', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1659,12 +1659,12 @@ class UsersApi
     /**
      * Operation usersPutLegal
      *
-     * 
+     * Update a Legal User
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\UserLegalPut $user_legal  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\UserLegal $user_legal UserLegal Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserLegalResponse
+     * @return \Swagger\Client\Model\InlineResponse20019
      */
     public function usersPutLegal($user_id, $user_legal = null)
     {
@@ -1675,12 +1675,12 @@ class UsersApi
     /**
      * Operation usersPutLegalWithHttpInfo
      *
-     * 
+     * Update a Legal User
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\UserLegalPut $user_legal  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\UserLegal $user_legal UserLegal Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPutLegalWithHttpInfo($user_id, $user_legal = null)
     {
@@ -1735,19 +1735,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserLegalResponse',
+                '\Swagger\Client\Model\InlineResponse20019',
                 '/v2.01/Users/legal/{UserId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserLegalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20019', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserLegalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20019', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1759,12 +1759,12 @@ class UsersApi
     /**
      * Operation usersPutNatural
      *
-     * 
+     * Update a Natural User
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\UserNaturalPut $user_natural  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\UserNatural $user_natural UserNatural Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserNaturalResponse
+     * @return \Swagger\Client\Model\InlineResponse20018
      */
     public function usersPutNatural($user_id, $user_natural = null)
     {
@@ -1775,12 +1775,12 @@ class UsersApi
     /**
      * Operation usersPutNaturalWithHttpInfo
      *
-     * 
+     * Update a Natural User
      *
-     * @param int $user_id  (required)
-     * @param \Swagger\Client\Model\UserNaturalPut $user_natural  (optional)
+     * @param int $user_id The Id of a user (required)
+     * @param \Swagger\Client\Model\UserNatural $user_natural UserNatural Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20018, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPutNaturalWithHttpInfo($user_id, $user_natural = null)
     {
@@ -1835,19 +1835,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserNaturalResponse',
+                '\Swagger\Client\Model\InlineResponse20018',
                 '/v2.01/Users/natural/{UserId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20018', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserNaturalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20018', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

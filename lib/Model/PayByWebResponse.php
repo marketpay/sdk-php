@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * PayByWebResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -56,10 +55,7 @@ class PayByWebResponse implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'pay_in_id' => 'string',
-        'url' => 'string',
-        'ds_signature_version' => 'string',
-        'ds_merchant_parameters' => 'string',
-        'ds_signature' => 'string'
+        'checkout_data' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -73,10 +69,7 @@ class PayByWebResponse implements ArrayAccess
      */
     protected static $attributeMap = [
         'pay_in_id' => 'PayInId',
-        'url' => 'Url',
-        'ds_signature_version' => 'Ds_SignatureVersion',
-        'ds_merchant_parameters' => 'Ds_MerchantParameters',
-        'ds_signature' => 'Ds_Signature'
+        'checkout_data' => 'CheckoutData'
     ];
 
 
@@ -86,10 +79,7 @@ class PayByWebResponse implements ArrayAccess
      */
     protected static $setters = [
         'pay_in_id' => 'setPayInId',
-        'url' => 'setUrl',
-        'ds_signature_version' => 'setDsSignatureVersion',
-        'ds_merchant_parameters' => 'setDsMerchantParameters',
-        'ds_signature' => 'setDsSignature'
+        'checkout_data' => 'setCheckoutData'
     ];
 
 
@@ -99,10 +89,7 @@ class PayByWebResponse implements ArrayAccess
      */
     protected static $getters = [
         'pay_in_id' => 'getPayInId',
-        'url' => 'getUrl',
-        'ds_signature_version' => 'getDsSignatureVersion',
-        'ds_merchant_parameters' => 'getDsMerchantParameters',
-        'ds_signature' => 'getDsSignature'
+        'checkout_data' => 'getCheckoutData'
     ];
 
     public static function attributeMap()
@@ -137,10 +124,7 @@ class PayByWebResponse implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['pay_in_id'] = isset($data['pay_in_id']) ? $data['pay_in_id'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
-        $this->container['ds_signature_version'] = isset($data['ds_signature_version']) ? $data['ds_signature_version'] : null;
-        $this->container['ds_merchant_parameters'] = isset($data['ds_merchant_parameters']) ? $data['ds_merchant_parameters'] : null;
-        $this->container['ds_signature'] = isset($data['ds_signature']) ? $data['ds_signature'] : null;
+        $this->container['checkout_data'] = isset($data['checkout_data']) ? $data['checkout_data'] : null;
     }
 
     /**
@@ -151,6 +135,7 @@ class PayByWebResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -158,10 +143,11 @@ class PayByWebResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
@@ -188,85 +174,22 @@ class PayByWebResponse implements ArrayAccess
     }
 
     /**
-     * Gets url
+     * Gets checkout_data
      * @return string
      */
-    public function getUrl()
+    public function getCheckoutData()
     {
-        return $this->container['url'];
+        return $this->container['checkout_data'];
     }
 
     /**
-     * Sets url
-     * @param string $url Url to post from the user's browser
+     * Sets checkout_data
+     * @param string $checkout_data
      * @return $this
      */
-    public function setUrl($url)
+    public function setCheckoutData($checkout_data)
     {
-        $this->container['url'] = $url;
-
-        return $this;
-    }
-
-    /**
-     * Gets ds_signature_version
-     * @return string
-     */
-    public function getDsSignatureVersion()
-    {
-        return $this->container['ds_signature_version'];
-    }
-
-    /**
-     * Sets ds_signature_version
-     * @param string $ds_signature_version This paramater must be include in the Post to the Url
-     * @return $this
-     */
-    public function setDsSignatureVersion($ds_signature_version)
-    {
-        $this->container['ds_signature_version'] = $ds_signature_version;
-
-        return $this;
-    }
-
-    /**
-     * Gets ds_merchant_parameters
-     * @return string
-     */
-    public function getDsMerchantParameters()
-    {
-        return $this->container['ds_merchant_parameters'];
-    }
-
-    /**
-     * Sets ds_merchant_parameters
-     * @param string $ds_merchant_parameters This paramater must be include in the Post to the Url
-     * @return $this
-     */
-    public function setDsMerchantParameters($ds_merchant_parameters)
-    {
-        $this->container['ds_merchant_parameters'] = $ds_merchant_parameters;
-
-        return $this;
-    }
-
-    /**
-     * Gets ds_signature
-     * @return string
-     */
-    public function getDsSignature()
-    {
-        return $this->container['ds_signature'];
-    }
-
-    /**
-     * Sets ds_signature
-     * @param string $ds_signature This paramater must be include in the Post to the Url
-     * @return $this
-     */
-    public function setDsSignature($ds_signature)
-    {
-        $this->container['ds_signature'] = $ds_signature;
+        $this->container['checkout_data'] = $checkout_data;
 
         return $this;
     }

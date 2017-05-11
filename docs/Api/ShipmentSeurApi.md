@@ -4,15 +4,17 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**shipmentSeurSeurCancelShipment**](ShipmentSeurApi.md#shipmentSeurSeurCancelShipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | 
-[**shipmentSeurSeurCreateShipment**](ShipmentSeurApi.md#shipmentSeurSeurCreateShipment) | **POST** /v2.01/ShipmentSeur/shipments | 
-[**shipmentSeurSeurGetShipment**](ShipmentSeurApi.md#shipmentSeurSeurGetShipment) | **GET** /v2.01/ShipmentSeur/shipments/{ShipmentId} | 
+[**shipmentSeurSeurCancelShipment**](ShipmentSeurApi.md#shipmentSeurSeurCancelShipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | Cancels a shipment
+[**shipmentSeurSeurCreateShipment**](ShipmentSeurApi.md#shipmentSeurSeurCreateShipment) | **POST** /v2.01/ShipmentSeur/shipments | Creates a shipment
+[**shipmentSeurSeurGetShipment**](ShipmentSeurApi.md#shipmentSeurSeurGetShipment) | **GET** /v2.01/ShipmentSeur/shipments/{ShipmentId} | Cancels a shipment
 
 
 # **shipmentSeurSeurCancelShipment**
-> \Swagger\Client\Model\ShipmentCancellationResponse shipmentSeurSeurCancelShipment($shipment_id)
+> \Swagger\Client\Model\InlineResponse20013 shipmentSeurSeurCancelShipment($shipment_id)
 
+Cancels a shipment
 
+Cancels a shipment
 
 ### Example
 ```php
@@ -23,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\ShipmentSeurApi();
-$shipment_id = 789; // int | 
+$shipment_id = 789; // int | The Id of a Shipment
 
 try {
     $result = $api_instance->shipmentSeurSeurCancelShipment($shipment_id);
@@ -38,11 +40,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shipment_id** | **int**|  |
+ **shipment_id** | **int**| The Id of a Shipment |
 
 ### Return type
 
-[**\Swagger\Client\Model\ShipmentCancellationResponse**](../Model/ShipmentCancellationResponse.md)
+[**\Swagger\Client\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
 
 ### Authorization
 
@@ -56,9 +58,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentSeurSeurCreateShipment**
-> \Swagger\Client\Model\ShipmentResponse shipmentSeurSeurCreateShipment($shipment)
+> \Swagger\Client\Model\InlineResponse20012 shipmentSeurSeurCreateShipment($shipment)
 
+Creates a shipment
 
+Creates a shipment
 
 ### Example
 ```php
@@ -69,7 +73,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\ShipmentSeurApi();
-$shipment = new \Swagger\Client\Model\ShipmentPost(); // \Swagger\Client\Model\ShipmentPost | 
+$shipment = new \Swagger\Client\Model\Shipment(); // \Swagger\Client\Model\Shipment | Seur Shipment Object params
 
 try {
     $result = $api_instance->shipmentSeurSeurCreateShipment($shipment);
@@ -84,11 +88,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shipment** | [**\Swagger\Client\Model\ShipmentPost**](../Model/\Swagger\Client\Model\ShipmentPost.md)|  | [optional]
+ **shipment** | [**\Swagger\Client\Model\Shipment**](../Model/\Swagger\Client\Model\Shipment.md)| Seur Shipment Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ShipmentResponse**](../Model/ShipmentResponse.md)
+[**\Swagger\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -102,9 +106,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentSeurSeurGetShipment**
-> \Swagger\Client\Model\ShipmentResponse shipmentSeurSeurGetShipment($shipment_id)
+> \Swagger\Client\Model\InlineResponse20012 shipmentSeurSeurGetShipment($shipment_id)
 
+Cancels a shipment
 
+Cancels a shipment
 
 ### Example
 ```php
@@ -115,7 +121,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\ShipmentSeurApi();
-$shipment_id = 789; // int | 
+$shipment_id = 789; // int | The Id of a Shipment
 
 try {
     $result = $api_instance->shipmentSeurSeurGetShipment($shipment_id);
@@ -130,11 +136,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shipment_id** | **int**|  |
+ **shipment_id** | **int**| The Id of a Shipment |
 
 ### Return type
 
-[**\Swagger\Client\Model\ShipmentResponse**](../Model/ShipmentResponse.md)
+[**\Swagger\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 

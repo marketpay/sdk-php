@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * RedsysPayByWebPost Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -60,10 +59,12 @@ class RedsysPayByWebPost implements ArrayAccess
         'card_id' => 'string',
         'credited_wallet_id' => 'string',
         'statement_descriptor' => 'string',
+        'success_url' => 'string',
         'url_ok' => 'string',
+        'cancel_url' => 'string',
         'url_ko' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money'
+        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds'
     ];
 
     public static function swaggerTypes()
@@ -81,7 +82,9 @@ class RedsysPayByWebPost implements ArrayAccess
         'card_id' => 'CardId',
         'credited_wallet_id' => 'CreditedWalletId',
         'statement_descriptor' => 'StatementDescriptor',
+        'success_url' => 'SuccessUrl',
         'url_ok' => 'UrlOk',
+        'cancel_url' => 'CancelUrl',
         'url_ko' => 'UrlKo',
         'debited_funds' => 'DebitedFunds',
         'fees' => 'Fees'
@@ -98,7 +101,9 @@ class RedsysPayByWebPost implements ArrayAccess
         'card_id' => 'setCardId',
         'credited_wallet_id' => 'setCreditedWalletId',
         'statement_descriptor' => 'setStatementDescriptor',
+        'success_url' => 'setSuccessUrl',
         'url_ok' => 'setUrlOk',
+        'cancel_url' => 'setCancelUrl',
         'url_ko' => 'setUrlKo',
         'debited_funds' => 'setDebitedFunds',
         'fees' => 'setFees'
@@ -115,7 +120,9 @@ class RedsysPayByWebPost implements ArrayAccess
         'card_id' => 'getCardId',
         'credited_wallet_id' => 'getCreditedWalletId',
         'statement_descriptor' => 'getStatementDescriptor',
+        'success_url' => 'getSuccessUrl',
         'url_ok' => 'getUrlOk',
+        'cancel_url' => 'getCancelUrl',
         'url_ko' => 'getUrlKo',
         'debited_funds' => 'getDebitedFunds',
         'fees' => 'getFees'
@@ -157,7 +164,9 @@ class RedsysPayByWebPost implements ArrayAccess
         $this->container['card_id'] = isset($data['card_id']) ? $data['card_id'] : null;
         $this->container['credited_wallet_id'] = isset($data['credited_wallet_id']) ? $data['credited_wallet_id'] : null;
         $this->container['statement_descriptor'] = isset($data['statement_descriptor']) ? $data['statement_descriptor'] : null;
+        $this->container['success_url'] = isset($data['success_url']) ? $data['success_url'] : null;
         $this->container['url_ok'] = isset($data['url_ok']) ? $data['url_ok'] : null;
+        $this->container['cancel_url'] = isset($data['cancel_url']) ? $data['cancel_url'] : null;
         $this->container['url_ko'] = isset($data['url_ko']) ? $data['url_ko'] : null;
         $this->container['debited_funds'] = isset($data['debited_funds']) ? $data['debited_funds'] : null;
         $this->container['fees'] = isset($data['fees']) ? $data['fees'] : null;
@@ -171,14 +180,15 @@ class RedsysPayByWebPost implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         if ($this->container['credited_wallet_id'] === null) {
             $invalid_properties[] = "'credited_wallet_id' can't be null";
         }
-        if ($this->container['debited_funds'] === null) {
-            $invalid_properties[] = "'debited_funds' can't be null";
+        if ($this->container['success_url'] === null) {
+            $invalid_properties[] = "'success_url' can't be null";
         }
-        if ($this->container['fees'] === null) {
-            $invalid_properties[] = "'fees' can't be null";
+        if ($this->container['cancel_url'] === null) {
+            $invalid_properties[] = "'cancel_url' can't be null";
         }
         return $invalid_properties;
     }
@@ -187,17 +197,18 @@ class RedsysPayByWebPost implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         if ($this->container['credited_wallet_id'] === null) {
             return false;
         }
-        if ($this->container['debited_funds'] === null) {
+        if ($this->container['success_url'] === null) {
             return false;
         }
-        if ($this->container['fees'] === null) {
+        if ($this->container['cancel_url'] === null) {
             return false;
         }
         return true;
@@ -215,7 +226,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag
+     * @param string $tag Custom data that you can add to this item
      * @return $this
      */
     public function setTag($tag)
@@ -236,7 +247,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets save_card
-     * @param bool $save_card
+     * @param bool $save_card Whether to save or not the card for future use. SaveCard and CardId are mutually exclusive
      * @return $this
      */
     public function setSaveCard($save_card)
@@ -257,7 +268,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets card_id
-     * @param string $card_id
+     * @param string $card_id The id of a previous saved card. SaveCard and CardId are mutually exclusive
      * @return $this
      */
     public function setCardId($card_id)
@@ -278,7 +289,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id
+     * @param string $credited_wallet_id The ID of the wallet where money will be credited
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -299,12 +310,33 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets statement_descriptor
-     * @param string $statement_descriptor
+     * @param string $statement_descriptor A custom description to appear on the user's bank statement. It can be up to 10 characters long, and can only include alphanumeric characters or spaces
      * @return $this
      */
     public function setStatementDescriptor($statement_descriptor)
     {
         $this->container['statement_descriptor'] = $statement_descriptor;
+
+        return $this;
+    }
+
+    /**
+     * Gets success_url
+     * @return string
+     */
+    public function getSuccessUrl()
+    {
+        return $this->container['success_url'];
+    }
+
+    /**
+     * Sets success_url
+     * @param string $success_url Dirección (relativa a la tienda) a la que redirigirá cuando se haya completado el pago.
+     * @return $this
+     */
+    public function setSuccessUrl($success_url)
+    {
+        $this->container['success_url'] = $success_url;
 
         return $this;
     }
@@ -320,12 +352,33 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets url_ok
-     * @param string $url_ok
+     * @param string $url_ok Url to redirect the browser in case the payment is completed successfully
      * @return $this
      */
     public function setUrlOk($url_ok)
     {
         $this->container['url_ok'] = $url_ok;
+
+        return $this;
+    }
+
+    /**
+     * Gets cancel_url
+     * @return string
+     */
+    public function getCancelUrl()
+    {
+        return $this->container['cancel_url'];
+    }
+
+    /**
+     * Sets cancel_url
+     * @param string $cancel_url Dirección (relativa a la tienda) a la que redirigirá en caso de error en el pago.
+     * @return $this
+     */
+    public function setCancelUrl($cancel_url)
+    {
+        $this->container['cancel_url'] = $cancel_url;
 
         return $this;
     }
@@ -341,7 +394,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets url_ko
-     * @param string $url_ko
+     * @param string $url_ko Url to redirect the browser in case the payment is not completed successfully
      * @return $this
      */
     public function setUrlKo($url_ko)
@@ -353,7 +406,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getDebitedFunds()
     {
@@ -362,7 +415,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -374,7 +427,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getFees()
     {
@@ -383,7 +436,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
      * @return $this
      */
     public function setFees($fees)
