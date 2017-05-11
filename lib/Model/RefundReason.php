@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * RefundReason Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -160,9 +159,10 @@ class RefundReason implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["NotSpecified", "BANKACCOUNT_INCORRECT", "BANKACCOUNT_HAS_BEEN_CLOSED", "OWNER_DOT_NOT_MATCH_BANKACCOUNT", "WITHDRAWAL_IMPOSSIBLE_ON_SAVINGS_ACCOUNTS", "INITIALIZED_BY_CLIENT", "OTHER"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'NotSpecified', 'BANKACCOUNT_INCORRECT', 'BANKACCOUNT_HAS_BEEN_CLOSED', 'OWNER_DOT_NOT_MATCH_BANKACCOUNT', 'WITHDRAWAL_IMPOSSIBLE_ON_SAVINGS_ACCOUNTS', 'INITIALIZED_BY_CLIENT', 'OTHER'.";
         }
 
         return $invalid_properties;
@@ -172,10 +172,11 @@ class RefundReason implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["NotSpecified", "BANKACCOUNT_INCORRECT", "BANKACCOUNT_HAS_BEEN_CLOSED", "OWNER_DOT_NOT_MATCH_BANKACCOUNT", "WITHDRAWAL_IMPOSSIBLE_ON_SAVINGS_ACCOUNTS", "INITIALIZED_BY_CLIENT", "OTHER"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;

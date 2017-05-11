@@ -4,14 +4,16 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cardsGet**](CardsApi.md#cardsGet) | **GET** /v2.01/Cards/{CardId} | 
-[**cardsPut**](CardsApi.md#cardsPut) | **PUT** /v2.01/Cards/{CardId} | 
+[**cardsGet**](CardsApi.md#cardsGet) | **GET** /v2.01/Cards/{CardId} | View a Card
+[**cardsPut**](CardsApi.md#cardsPut) | **PUT** /v2.01/Cards/{CardId} | Deactivate a Card
 
 
 # **cardsGet**
-> \Swagger\Client\Model\CardResponse cardsGet($card_id)
+> \Swagger\Client\Model\InlineResponse200 cardsGet($card_id)
 
+View a Card
 
+In order to save cards, the next methods are currently available:              - Redsys Payment: Set the value of the SaveCard to true.              - Redsys Preauthorization: Set the value of the SaveCard to true.              In order to use previously saved cards, the next methods are currently available:              - Redsys Payment: Set the value of CardId. The card must belong to the user that owns the wallet where the payment will be credited.              - Redsys Preauthorization: Set the value of CardId. The card must belong to the user that owns the wallet where the payment will be credited once the preauthorization is confirmed.
 
 ### Example
 ```php
@@ -22,7 +24,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\CardsApi();
-$card_id = 789; // int | 
+$card_id = 789; // int | The Id of a card
 
 try {
     $result = $api_instance->cardsGet($card_id);
@@ -37,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **card_id** | **int**|  |
+ **card_id** | **int**| The Id of a card |
 
 ### Return type
 
-[**\Swagger\Client\Model\CardResponse**](../Model/CardResponse.md)
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -55,9 +57,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cardsPut**
-> \Swagger\Client\Model\CardResponse cardsPut($card_id, $card)
+> \Swagger\Client\Model\InlineResponse200 cardsPut($card_id, $card)
 
+Deactivate a Card
 
+Note that once deactivated, a card can't be reactivated afterwards
 
 ### Example
 ```php
@@ -68,8 +72,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\CardsApi();
-$card_id = 789; // int | 
-$card = new \Swagger\Client\Model\CardPut(); // \Swagger\Client\Model\CardPut | 
+$card_id = 789; // int | The Id of a card
+$card = new \Swagger\Client\Model\Card(); // \Swagger\Client\Model\Card | Card Object params
 
 try {
     $result = $api_instance->cardsPut($card_id, $card);
@@ -84,12 +88,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **card_id** | **int**|  |
- **card** | [**\Swagger\Client\Model\CardPut**](../Model/\Swagger\Client\Model\CardPut.md)|  | [optional]
+ **card_id** | **int**| The Id of a card |
+ **card** | [**\Swagger\Client\Model\Card**](../Model/\Swagger\Client\Model\Card.md)| Card Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CardResponse**](../Model/CardResponse.md)
+[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

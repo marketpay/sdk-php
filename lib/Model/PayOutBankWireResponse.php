@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * PayOutBankWireResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -57,9 +56,9 @@ class PayOutBankWireResponse implements ArrayAccess
     protected static $swaggerTypes = [
         'author_id' => 'string',
         'credited_user_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'credited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'credited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
         'status' => 'string',
         'result_code' => 'string',
         'result_message' => 'string',
@@ -285,24 +284,25 @@ class PayOutBankWireResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["CREATED", "SUCCEEDED", "FAILED"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'CREATED', 'SUCCEEDED', 'FAILED'.";
         }
 
         $allowed_values = ["PAYIN", "PAYOUT", "TRANSFER"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'PAYIN', 'PAYOUT', 'TRANSFER'.";
         }
 
         $allowed_values = ["REGULAR", "REFUND", "REPUDIATION", "SETTLEMENT"];
         if (!in_array($this->container['nature'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'nature', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'nature', must be one of 'REGULAR', 'REFUND', 'REPUDIATION', 'SETTLEMENT'.";
         }
 
         $allowed_values = ["NotSpecified", "BANK_WIRE"];
         if (!in_array($this->container['payment_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'payment_type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'payment_type', must be one of 'NotSpecified', 'BANK_WIRE'.";
         }
 
         return $invalid_properties;
@@ -312,10 +312,11 @@ class PayOutBankWireResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["CREATED", "SUCCEEDED", "FAILED"];
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
@@ -380,7 +381,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getDebitedFunds()
     {
@@ -389,7 +390,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -401,7 +402,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getCreditedFunds()
     {
@@ -410,7 +411,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\Money $credited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $credited_funds
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -422,7 +423,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getFees()
     {
@@ -431,7 +432,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
      * @return $this
      */
     public function setFees($fees)

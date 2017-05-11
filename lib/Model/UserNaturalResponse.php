@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * UserNaturalResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -58,7 +57,7 @@ class UserNaturalResponse implements ArrayAccess
         'email' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
-        'address' => '\Swagger\Client\Model\Address',
+        'address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
         'birthday' => 'int',
         'nationality' => 'string',
         'country_of_residence' => 'string',
@@ -666,6 +665,7 @@ class UserNaturalResponse implements ArrayAccess
     const COUNTRY_OF_RESIDENCE_ZW = 'ZW';
     const PERSON_TYPE_NATURAL = 'Natural';
     const PERSON_TYPE_LEGAL = 'Legal';
+    const PERSON_TYPE_FEES = 'Fees';
     const KYC_LEVEL_NOT_SPECIFIED = 'NotSpecified';
     const KYC_LEVEL_LIGHT = 'LIGHT';
     const KYC_LEVEL_REGULAR = 'REGULAR';
@@ -1201,6 +1201,7 @@ class UserNaturalResponse implements ArrayAccess
         return [
             self::PERSON_TYPE_NATURAL,
             self::PERSON_TYPE_LEGAL,
+            self::PERSON_TYPE_FEES,
         ];
     }
     
@@ -1256,24 +1257,25 @@ class UserNaturalResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["NotSpecified", "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"];
         if (!in_array($this->container['nationality'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'nationality', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'nationality', must be one of 'NotSpecified', 'AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AW', 'AX', 'AZ', 'BA', 'BB', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BL', 'BM', 'BN', 'BO', 'BQ', 'BR', 'BS', 'BT', 'BV', 'BW', 'BY', 'BZ', 'CA', 'CC', 'CD', 'CF', 'CG', 'CH', 'CI', 'CK', 'CL', 'CM', 'CN', 'CO', 'CR', 'CU', 'CV', 'CW', 'CX', 'CY', 'CZ', 'DE', 'DJ', 'DK', 'DM', 'DO', 'DZ', 'EC', 'EE', 'EG', 'EH', 'ER', 'ES', 'ET', 'FI', 'FJ', 'FK', 'FM', 'FO', 'FR', 'GA', 'GB', 'GD', 'GE', 'GF', 'GG', 'GH', 'GI', 'GL', 'GM', 'GN', 'GP', 'GQ', 'GR', 'GS', 'GT', 'GU', 'GW', 'GY', 'HK', 'HM', 'HN', 'HR', 'HT', 'HU', 'ID', 'IE', 'IL', 'IM', 'IN', 'IO', 'IQ', 'IR', 'IS', 'IT', 'JE', 'JM', 'JO', 'JP', 'KE', 'KG', 'KH', 'KI', 'KM', 'KN', 'KP', 'KR', 'KW', 'KY', 'KZ', 'LA', 'LB', 'LC', 'LI', 'LK', 'LR', 'LS', 'LT', 'LU', 'LV', 'LY', 'MA', 'MC', 'MD', 'ME', 'MF', 'MG', 'MH', 'MK', 'ML', 'MM', 'MN', 'MO', 'MP', 'MQ', 'MR', 'MS', 'MT', 'MU', 'MV', 'MW', 'MX', 'MY', 'MZ', 'NA', 'NC', 'NE', 'NF', 'NG', 'NI', 'NL', 'NO', 'NP', 'NR', 'NU', 'NZ', 'OM', 'PA', 'PE', 'PF', 'PG', 'PH', 'PK', 'PL', 'PM', 'PN', 'PR', 'PS', 'PT', 'PW', 'PY', 'QA', 'RE', 'RO', 'RS', 'RU', 'RW', 'SA', 'SB', 'SC', 'SD', 'SE', 'SG', 'SH', 'SI', 'SJ', 'SK', 'SL', 'SM', 'SN', 'SO', 'SR', 'SS', 'ST', 'SV', 'SX', 'SY', 'SZ', 'TC', 'TD', 'TF', 'TG', 'TH', 'TJ', 'TK', 'TL', 'TM', 'TN', 'TO', 'TR', 'TT', 'TV', 'TW', 'TZ', 'UA', 'UG', 'UM', 'US', 'UY', 'UZ', 'VA', 'VC', 'VE', 'VG', 'VI', 'VN', 'VU', 'WF', 'WS', 'YE', 'YT', 'ZA', 'ZM', 'ZW'.";
         }
 
         $allowed_values = ["NotSpecified", "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"];
         if (!in_array($this->container['country_of_residence'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'country_of_residence', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'country_of_residence', must be one of 'NotSpecified', 'AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AW', 'AX', 'AZ', 'BA', 'BB', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BL', 'BM', 'BN', 'BO', 'BQ', 'BR', 'BS', 'BT', 'BV', 'BW', 'BY', 'BZ', 'CA', 'CC', 'CD', 'CF', 'CG', 'CH', 'CI', 'CK', 'CL', 'CM', 'CN', 'CO', 'CR', 'CU', 'CV', 'CW', 'CX', 'CY', 'CZ', 'DE', 'DJ', 'DK', 'DM', 'DO', 'DZ', 'EC', 'EE', 'EG', 'EH', 'ER', 'ES', 'ET', 'FI', 'FJ', 'FK', 'FM', 'FO', 'FR', 'GA', 'GB', 'GD', 'GE', 'GF', 'GG', 'GH', 'GI', 'GL', 'GM', 'GN', 'GP', 'GQ', 'GR', 'GS', 'GT', 'GU', 'GW', 'GY', 'HK', 'HM', 'HN', 'HR', 'HT', 'HU', 'ID', 'IE', 'IL', 'IM', 'IN', 'IO', 'IQ', 'IR', 'IS', 'IT', 'JE', 'JM', 'JO', 'JP', 'KE', 'KG', 'KH', 'KI', 'KM', 'KN', 'KP', 'KR', 'KW', 'KY', 'KZ', 'LA', 'LB', 'LC', 'LI', 'LK', 'LR', 'LS', 'LT', 'LU', 'LV', 'LY', 'MA', 'MC', 'MD', 'ME', 'MF', 'MG', 'MH', 'MK', 'ML', 'MM', 'MN', 'MO', 'MP', 'MQ', 'MR', 'MS', 'MT', 'MU', 'MV', 'MW', 'MX', 'MY', 'MZ', 'NA', 'NC', 'NE', 'NF', 'NG', 'NI', 'NL', 'NO', 'NP', 'NR', 'NU', 'NZ', 'OM', 'PA', 'PE', 'PF', 'PG', 'PH', 'PK', 'PL', 'PM', 'PN', 'PR', 'PS', 'PT', 'PW', 'PY', 'QA', 'RE', 'RO', 'RS', 'RU', 'RW', 'SA', 'SB', 'SC', 'SD', 'SE', 'SG', 'SH', 'SI', 'SJ', 'SK', 'SL', 'SM', 'SN', 'SO', 'SR', 'SS', 'ST', 'SV', 'SX', 'SY', 'SZ', 'TC', 'TD', 'TF', 'TG', 'TH', 'TJ', 'TK', 'TL', 'TM', 'TN', 'TO', 'TR', 'TT', 'TV', 'TW', 'TZ', 'UA', 'UG', 'UM', 'US', 'UY', 'UZ', 'VA', 'VC', 'VE', 'VG', 'VI', 'VN', 'VU', 'WF', 'WS', 'YE', 'YT', 'ZA', 'ZM', 'ZW'.";
         }
 
-        $allowed_values = ["Natural", "Legal"];
+        $allowed_values = ["Natural", "Legal", "Fees"];
         if (!in_array($this->container['person_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'person_type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'person_type', must be one of 'Natural', 'Legal', 'Fees'.";
         }
 
         $allowed_values = ["NotSpecified", "LIGHT", "REGULAR"];
         if (!in_array($this->container['kyc_level'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'kyc_level', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'kyc_level', must be one of 'NotSpecified', 'LIGHT', 'REGULAR'.";
         }
 
         return $invalid_properties;
@@ -1283,10 +1285,11 @@ class UserNaturalResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["NotSpecified", "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"];
         if (!in_array($this->container['nationality'], $allowed_values)) {
             return false;
@@ -1295,7 +1298,7 @@ class UserNaturalResponse implements ArrayAccess
         if (!in_array($this->container['country_of_residence'], $allowed_values)) {
             return false;
         }
-        $allowed_values = ["Natural", "Legal"];
+        $allowed_values = ["Natural", "Legal", "Fees"];
         if (!in_array($this->container['person_type'], $allowed_values)) {
             return false;
         }
@@ -1318,7 +1321,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets email
-     * @param string $email
+     * @param string $email The user's email address - must be a valid email
      * @return $this
      */
     public function setEmail($email)
@@ -1339,7 +1342,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets first_name
-     * @param string $first_name
+     * @param string $first_name The name of the user
      * @return $this
      */
     public function setFirstName($first_name)
@@ -1360,7 +1363,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets last_name
-     * @param string $last_name
+     * @param string $last_name The last name of the user
      * @return $this
      */
     public function setLastName($last_name)
@@ -1372,7 +1375,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Gets address
-     * @return \Swagger\Client\Model\Address
+     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
      */
     public function getAddress()
     {
@@ -1381,7 +1384,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\Address $address
+     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $address
      * @return $this
      */
     public function setAddress($address)
@@ -1402,7 +1405,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets birthday
-     * @param int $birthday
+     * @param int $birthday The date of birth of the user - be careful to set the right timezone (should be UTC) to avoid 00h becoming 23h (and hence interpreted as the day before)
      * @return $this
      */
     public function setBirthday($birthday)
@@ -1423,7 +1426,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets nationality
-     * @param string $nationality
+     * @param string $nationality The user’s nationality. ISO 3166-1 alpha-2 format is expected
      * @return $this
      */
     public function setNationality($nationality)
@@ -1448,7 +1451,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets country_of_residence
-     * @param string $country_of_residence
+     * @param string $country_of_residence The user’s country of residence. ISO 3166-1 alpha-2 format is expected
      * @return $this
      */
     public function setCountryOfResidence($country_of_residence)
@@ -1473,7 +1476,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets occupation
-     * @param string $occupation
+     * @param string $occupation User’s occupation, ie. Work
      * @return $this
      */
     public function setOccupation($occupation)
@@ -1494,7 +1497,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets income_range
-     * @param int $income_range
+     * @param int $income_range Could be only one of these values: 1 - for incomes &lt;18K€),2 - for incomes between 18 and 30K€, 3 - for incomes between 30 and 50K€, 4 - for incomes between 50 and 80K€, 5 - for incomes between 80 and 120K€, 6 - for incomes &gt;120K€
      * @return $this
      */
     public function setIncomeRange($income_range)
@@ -1515,7 +1518,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets proof_of_identity
-     * @param string $proof_of_identity
+     * @param string $proof_of_identity Proof of identity.
      * @return $this
      */
     public function setProofOfIdentity($proof_of_identity)
@@ -1536,7 +1539,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets proof_of_address
-     * @param string $proof_of_address
+     * @param string $proof_of_address Proof of address.
      * @return $this
      */
     public function setProofOfAddress($proof_of_address)
@@ -1557,14 +1560,14 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets person_type
-     * @param string $person_type
+     * @param string $person_type Type of user
      * @return $this
      */
     public function setPersonType($person_type)
     {
-        $allowed_values = array('Natural', 'Legal');
+        $allowed_values = array('Natural', 'Legal', 'Fees');
         if (!is_null($person_type) && (!in_array($person_type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'person_type', must be one of 'Natural', 'Legal'");
+            throw new \InvalidArgumentException("Invalid value for 'person_type', must be one of 'Natural', 'Legal', 'Fees'");
         }
         $this->container['person_type'] = $person_type;
 
@@ -1582,7 +1585,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets kyc_level
-     * @param string $kyc_level
+     * @param string $kyc_level 
      * @return $this
      */
     public function setKycLevel($kyc_level)

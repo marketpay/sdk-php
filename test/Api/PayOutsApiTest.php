@@ -79,7 +79,7 @@ class PayOutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payOutsGet
      *
-     * .
+     * SwaggerDocSummary.
      *
      */
     public function testPayOutsGet()
@@ -90,7 +90,7 @@ class PayOutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payOutsPost
      *
-     * .
+     * SwaggerDocSummary.
      *
      */
     public function testPayOutsPost()

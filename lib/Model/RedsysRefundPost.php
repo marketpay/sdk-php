@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * RedsysRefundPost Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -57,8 +56,8 @@ class RedsysRefundPost implements ArrayAccess
     protected static $swaggerTypes = [
         'tag' => 'string',
         'author_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money'
+        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds'
     ];
 
     public static function swaggerTypes()
@@ -146,6 +145,7 @@ class RedsysRefundPost implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -153,10 +153,11 @@ class RedsysRefundPost implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
@@ -172,7 +173,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag
+     * @param string $tag Custom data that you can add to this item
      * @return $this
      */
     public function setTag($tag)
@@ -193,7 +194,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id
+     * @param string $author_id A user's ID
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -205,7 +206,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getDebitedFunds()
     {
@@ -214,7 +215,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -226,7 +227,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getFees()
     {
@@ -235,7 +236,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
      * @return $this
      */
     public function setFees($fees)

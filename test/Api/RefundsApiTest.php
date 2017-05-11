@@ -79,7 +79,7 @@ class RefundsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for refundsRefundGet
      *
-     * .
+     * View a Refund.
      *
      */
     public function testRefundsRefundGet()

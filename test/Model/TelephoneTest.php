@@ -83,9 +83,9 @@ class TelephoneTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "prefix"
+     * Test attribute "country_code"
      */
-    public function testPropertyPrefix()
+    public function testPropertyCountryCode()
     {
 
     }

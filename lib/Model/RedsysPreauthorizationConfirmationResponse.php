@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * RedsysPreauthorizationConfirmationResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -131,6 +130,7 @@ class RedsysPreauthorizationConfirmationResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -138,10 +138,11 @@ class RedsysPreauthorizationConfirmationResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
@@ -157,7 +158,7 @@ class RedsysPreauthorizationConfirmationResponse implements ArrayAccess
 
     /**
      * Sets pay_in_id
-     * @param string $pay_in_id
+     * @param string $pay_in_id Id of the payment
      * @return $this
      */
     public function setPayInId($pay_in_id)

@@ -123,9 +123,25 @@ class RedsysPreauthorizeByWebPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "success_url"
+     */
+    public function testPropertySuccessUrl()
+    {
+
+    }
+
+    /**
      * Test attribute "url_ok"
      */
     public function testPropertyUrlOk()
+    {
+
+    }
+
+    /**
+     * Test attribute "cancel_url"
+     */
+    public function testPropertyCancelUrl()
     {
 
     }

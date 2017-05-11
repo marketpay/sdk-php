@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * RedsysPreauthorizeResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -55,8 +54,9 @@ class RedsysPreauthorizeResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
         'status' => 'string',
+        'payment_status' => 'string',
         'execution_date' => 'int',
         'result_code' => 'string',
         'result_message' => 'string',
@@ -64,6 +64,8 @@ class RedsysPreauthorizeResponse implements ArrayAccess
         'card_id' => 'string',
         'statement_descriptor' => 'string',
         'author_id' => 'string',
+        'pay_in_id' => 'string',
+        'provider' => '\Swagger\Client\Model\InlineResponse2003Provider',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -81,6 +83,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
     protected static $attributeMap = [
         'debited_funds' => 'DebitedFunds',
         'status' => 'Status',
+        'payment_status' => 'PaymentStatus',
         'execution_date' => 'ExecutionDate',
         'result_code' => 'ResultCode',
         'result_message' => 'ResultMessage',
@@ -88,6 +91,8 @@ class RedsysPreauthorizeResponse implements ArrayAccess
         'card_id' => 'CardId',
         'statement_descriptor' => 'StatementDescriptor',
         'author_id' => 'AuthorId',
+        'pay_in_id' => 'PayInId',
+        'provider' => 'Provider',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -101,6 +106,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
     protected static $setters = [
         'debited_funds' => 'setDebitedFunds',
         'status' => 'setStatus',
+        'payment_status' => 'setPaymentStatus',
         'execution_date' => 'setExecutionDate',
         'result_code' => 'setResultCode',
         'result_message' => 'setResultMessage',
@@ -108,6 +114,8 @@ class RedsysPreauthorizeResponse implements ArrayAccess
         'card_id' => 'setCardId',
         'statement_descriptor' => 'setStatementDescriptor',
         'author_id' => 'setAuthorId',
+        'pay_in_id' => 'setPayInId',
+        'provider' => 'setProvider',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -121,6 +129,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
     protected static $getters = [
         'debited_funds' => 'getDebitedFunds',
         'status' => 'getStatus',
+        'payment_status' => 'getPaymentStatus',
         'execution_date' => 'getExecutionDate',
         'result_code' => 'getResultCode',
         'result_message' => 'getResultMessage',
@@ -128,6 +137,8 @@ class RedsysPreauthorizeResponse implements ArrayAccess
         'card_id' => 'getCardId',
         'statement_descriptor' => 'getStatementDescriptor',
         'author_id' => 'getAuthorId',
+        'pay_in_id' => 'getPayInId',
+        'provider' => 'getProvider',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -151,6 +162,11 @@ class RedsysPreauthorizeResponse implements ArrayAccess
     const STATUS_CREATED = 'CREATED';
     const STATUS_SUCCEEDED = 'SUCCEEDED';
     const STATUS_FAILED = 'FAILED';
+    const PAYMENT_STATUS_NOT_SPECIFIED = 'NotSpecified';
+    const PAYMENT_STATUS_WAITING = 'WAITING';
+    const PAYMENT_STATUS_CANCELED = 'CANCELED';
+    const PAYMENT_STATUS_EXPIRED = 'EXPIRED';
+    const PAYMENT_STATUS_VALIDATED = 'VALIDATED';
     const EXECUTION_TYPE_NOT_SPECIFIED = 'NotSpecified';
     const EXECUTION_TYPE_WEB = 'WEB';
     const EXECUTION_TYPE_DIRECT = 'DIRECT';
@@ -167,6 +183,21 @@ class RedsysPreauthorizeResponse implements ArrayAccess
             self::STATUS_CREATED,
             self::STATUS_SUCCEEDED,
             self::STATUS_FAILED,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getPaymentStatusAllowableValues()
+    {
+        return [
+            self::PAYMENT_STATUS_NOT_SPECIFIED,
+            self::PAYMENT_STATUS_WAITING,
+            self::PAYMENT_STATUS_CANCELED,
+            self::PAYMENT_STATUS_EXPIRED,
+            self::PAYMENT_STATUS_VALIDATED,
         ];
     }
     
@@ -198,6 +229,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
     {
         $this->container['debited_funds'] = isset($data['debited_funds']) ? $data['debited_funds'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['payment_status'] = isset($data['payment_status']) ? $data['payment_status'] : null;
         $this->container['execution_date'] = isset($data['execution_date']) ? $data['execution_date'] : null;
         $this->container['result_code'] = isset($data['result_code']) ? $data['result_code'] : null;
         $this->container['result_message'] = isset($data['result_message']) ? $data['result_message'] : null;
@@ -205,6 +237,8 @@ class RedsysPreauthorizeResponse implements ArrayAccess
         $this->container['card_id'] = isset($data['card_id']) ? $data['card_id'] : null;
         $this->container['statement_descriptor'] = isset($data['statement_descriptor']) ? $data['statement_descriptor'] : null;
         $this->container['author_id'] = isset($data['author_id']) ? $data['author_id'] : null;
+        $this->container['pay_in_id'] = isset($data['pay_in_id']) ? $data['pay_in_id'] : null;
+        $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -218,14 +252,20 @@ class RedsysPreauthorizeResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["CREATED", "SUCCEEDED", "FAILED"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'CREATED', 'SUCCEEDED', 'FAILED'.";
+        }
+
+        $allowed_values = ["NotSpecified", "WAITING", "CANCELED", "EXPIRED", "VALIDATED"];
+        if (!in_array($this->container['payment_status'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'payment_status', must be one of 'NotSpecified', 'WAITING', 'CANCELED', 'EXPIRED', 'VALIDATED'.";
         }
 
         $allowed_values = ["NotSpecified", "WEB", "DIRECT"];
         if (!in_array($this->container['execution_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'execution_type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'execution_type', must be one of 'NotSpecified', 'WEB', 'DIRECT'.";
         }
 
         return $invalid_properties;
@@ -235,12 +275,17 @@ class RedsysPreauthorizeResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["CREATED", "SUCCEEDED", "FAILED"];
         if (!in_array($this->container['status'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = ["NotSpecified", "WAITING", "CANCELED", "EXPIRED", "VALIDATED"];
+        if (!in_array($this->container['payment_status'], $allowed_values)) {
             return false;
         }
         $allowed_values = ["NotSpecified", "WEB", "DIRECT"];
@@ -253,7 +298,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getDebitedFunds()
     {
@@ -262,7 +307,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -283,7 +328,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status
+     * @param string $status The status of the transaction
      * @return $this
      */
     public function setStatus($status)
@@ -293,6 +338,31 @@ class RedsysPreauthorizeResponse implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'CREATED', 'SUCCEEDED', 'FAILED'");
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_status
+     * @return string
+     */
+    public function getPaymentStatus()
+    {
+        return $this->container['payment_status'];
+    }
+
+    /**
+     * Sets payment_status
+     * @param string $payment_status Status of the payment
+     * @return $this
+     */
+    public function setPaymentStatus($payment_status)
+    {
+        $allowed_values = array('NotSpecified', 'WAITING', 'CANCELED', 'EXPIRED', 'VALIDATED');
+        if (!is_null($payment_status) && (!in_array($payment_status, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'payment_status', must be one of 'NotSpecified', 'WAITING', 'CANCELED', 'EXPIRED', 'VALIDATED'");
+        }
+        $this->container['payment_status'] = $payment_status;
 
         return $this;
     }
@@ -308,7 +378,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets execution_date
-     * @param int $execution_date
+     * @param int $execution_date When the transaction happened
      * @return $this
      */
     public function setExecutionDate($execution_date)
@@ -329,7 +399,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets result_code
-     * @param string $result_code
+     * @param string $result_code The result code
      * @return $this
      */
     public function setResultCode($result_code)
@@ -350,7 +420,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets result_message
-     * @param string $result_message
+     * @param string $result_message A verbal explanation of the ResultCode
      * @return $this
      */
     public function setResultMessage($result_message)
@@ -371,7 +441,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets execution_type
-     * @param string $execution_type
+     * @param string $execution_type The type of execution for the payin
      * @return $this
      */
     public function setExecutionType($execution_type)
@@ -396,7 +466,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets card_id
-     * @param string $card_id
+     * @param string $card_id The Id of the card saved, if any.
      * @return $this
      */
     public function setCardId($card_id)
@@ -417,7 +487,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets statement_descriptor
-     * @param string $statement_descriptor
+     * @param string $statement_descriptor A custom description to appear on the user's bank statement. It can be up to 10 characters long, and can only include alphanumeric characters or spaces
      * @return $this
      */
     public function setStatementDescriptor($statement_descriptor)
@@ -438,12 +508,54 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id
+     * @param string $author_id A user's ID
      * @return $this
      */
     public function setAuthorId($author_id)
     {
         $this->container['author_id'] = $author_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets pay_in_id
+     * @return string
+     */
+    public function getPayInId()
+    {
+        return $this->container['pay_in_id'];
+    }
+
+    /**
+     * Sets pay_in_id
+     * @param string $pay_in_id The Id of the associated PayIn
+     * @return $this
+     */
+    public function setPayInId($pay_in_id)
+    {
+        $this->container['pay_in_id'] = $pay_in_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets provider
+     * @return \Swagger\Client\Model\InlineResponse2003Provider
+     */
+    public function getProvider()
+    {
+        return $this->container['provider'];
+    }
+
+    /**
+     * Sets provider
+     * @param \Swagger\Client\Model\InlineResponse2003Provider $provider
+     * @return $this
+     */
+    public function setProvider($provider)
+    {
+        $this->container['provider'] = $provider;
 
         return $this;
     }

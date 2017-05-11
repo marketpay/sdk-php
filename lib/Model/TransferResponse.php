@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * TransferResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -55,9 +54,9 @@ class TransferResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'credited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'credited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
         'debited_wallet_id' => 'string',
         'credited_wallet_id' => 'string',
         'author_id' => 'string',
@@ -256,19 +255,20 @@ class TransferResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["REGULAR", "REFUND", "REPUDIATION", "SETTLEMENT"];
         if (!in_array($this->container['nature'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'nature', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'nature', must be one of 'REGULAR', 'REFUND', 'REPUDIATION', 'SETTLEMENT'.";
         }
 
         $allowed_values = ["CREATED", "SUCCEEDED", "FAILED"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'CREATED', 'SUCCEEDED', 'FAILED'.";
         }
 
         $allowed_values = ["PAYIN", "PAYOUT", "TRANSFER"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'PAYIN', 'PAYOUT', 'TRANSFER'.";
         }
 
         return $invalid_properties;
@@ -278,10 +278,11 @@ class TransferResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["REGULAR", "REFUND", "REPUDIATION", "SETTLEMENT"];
         if (!in_array($this->container['nature'], $allowed_values)) {
             return false;
@@ -300,7 +301,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getDebitedFunds()
     {
@@ -309,7 +310,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -321,7 +322,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getCreditedFunds()
     {
@@ -330,7 +331,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\Money $credited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $credited_funds
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -342,7 +343,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getFees()
     {
@@ -351,7 +352,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
      * @return $this
      */
     public function setFees($fees)
@@ -372,7 +373,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets debited_wallet_id
-     * @param string $debited_wallet_id
+     * @param string $debited_wallet_id The ID of the wallet that was debited
      * @return $this
      */
     public function setDebitedWalletId($debited_wallet_id)
@@ -393,7 +394,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id
+     * @param string $credited_wallet_id The ID of the wallet where money will be credited
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -414,7 +415,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id
+     * @param string $author_id A user's ID
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -435,7 +436,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets credited_user_id
-     * @param string $credited_user_id
+     * @param string $credited_user_id The user ID who was credited
      * @return $this
      */
     public function setCreditedUserId($credited_user_id)
@@ -456,7 +457,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets nature
-     * @param string $nature
+     * @param string $nature The nature of the transaction
      * @return $this
      */
     public function setNature($nature)
@@ -481,7 +482,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status
+     * @param string $status The status of the transaction
      * @return $this
      */
     public function setStatus($status)
@@ -506,7 +507,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets execution_date
-     * @param int $execution_date
+     * @param int $execution_date When the transaction happened
      * @return $this
      */
     public function setExecutionDate($execution_date)
@@ -527,7 +528,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets result_code
-     * @param string $result_code
+     * @param string $result_code The result code
      * @return $this
      */
     public function setResultCode($result_code)
@@ -548,7 +549,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets result_message
-     * @param string $result_message
+     * @param string $result_message A verbal explanation of the ResultCode
      * @return $this
      */
     public function setResultMessage($result_message)
@@ -569,7 +570,7 @@ class TransferResponse implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type
+     * @param string $type The type of the transaction
      * @return $this
      */
     public function setType($type)

@@ -79,7 +79,7 @@ class ShipmentSeurApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for shipmentSeurSeurCancelShipment
      *
-     * .
+     * Cancels a shipment.
      *
      */
     public function testShipmentSeurSeurCancelShipment()
@@ -90,7 +90,7 @@ class ShipmentSeurApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for shipmentSeurSeurCreateShipment
      *
-     * .
+     * Creates a shipment.
      *
      */
     public function testShipmentSeurSeurCreateShipment()
@@ -101,7 +101,7 @@ class ShipmentSeurApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for shipmentSeurSeurGetShipment
      *
-     * .
+     * Cancels a shipment.
      *
      */
     public function testShipmentSeurSeurGetShipment()

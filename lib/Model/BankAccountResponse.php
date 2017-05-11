@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * BankAccountResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -56,7 +55,7 @@ class BankAccountResponse implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'type' => 'string',
-        'owner_address' => '\Swagger\Client\Model\Address',
+        'owner_address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
         'owner_name' => 'string',
         'user_id' => 'string',
         'active' => 'bool',
@@ -186,9 +185,10 @@ class BankAccountResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         $allowed_values = ["IBAN", "GB", "US", "CA", "OTHER"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'IBAN', 'GB', 'US', 'CA', 'OTHER'.";
         }
 
         return $invalid_properties;
@@ -198,10 +198,11 @@ class BankAccountResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         $allowed_values = ["IBAN", "GB", "US", "CA", "OTHER"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
@@ -221,7 +222,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type
+     * @param string $type The type of bank account
      * @return $this
      */
     public function setType($type)
@@ -237,7 +238,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Gets owner_address
-     * @return \Swagger\Client\Model\Address
+     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
      */
     public function getOwnerAddress()
     {
@@ -246,7 +247,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address
+     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -267,7 +268,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name
+     * @param string $owner_name The name of the owner of the bank account
      * @return $this
      */
     public function setOwnerName($owner_name)
@@ -288,7 +289,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Sets user_id
-     * @param string $user_id
+     * @param string $user_id The object owner's UserId
      * @return $this
      */
     public function setUserId($user_id)
@@ -309,7 +310,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Sets active
-     * @param bool $active
+     * @param bool $active Whether the bank account is active or not
      * @return $this
      */
     public function setActive($active)

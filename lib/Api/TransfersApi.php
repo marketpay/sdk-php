@@ -90,11 +90,11 @@ class TransfersApi
     /**
      * Operation transfersGet
      *
-     * 
+     * View a Transfer
      *
-     * @param int $transfer_id  (required)
+     * @param int $transfer_id The Id of a transfer (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TransferResponse
+     * @return \Swagger\Client\Model\InlineResponse20014
      */
     public function transfersGet($transfer_id)
     {
@@ -105,11 +105,11 @@ class TransfersApi
     /**
      * Operation transfersGetWithHttpInfo
      *
-     * 
+     * View a Transfer
      *
-     * @param int $transfer_id  (required)
+     * @param int $transfer_id The Id of a transfer (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TransferResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20014, HTTP status code, HTTP response headers (array of strings)
      */
     public function transfersGetWithHttpInfo($transfer_id)
     {
@@ -159,19 +159,19 @@ class TransfersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TransferResponse',
+                '\Swagger\Client\Model\InlineResponse20014',
                 '/v2.01/Transfers/{TransferId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TransferResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20014', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TransferResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20014', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -183,11 +183,11 @@ class TransfersApi
     /**
      * Operation transfersPost
      *
-     * 
+     * Create a Transfer
      *
-     * @param \Swagger\Client\Model\TransferPost $transfer  (optional)
+     * @param \Swagger\Client\Model\Transfer $transfer Transfer Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TransferResponse
+     * @return \Swagger\Client\Model\InlineResponse20014
      */
     public function transfersPost($transfer = null)
     {
@@ -198,11 +198,11 @@ class TransfersApi
     /**
      * Operation transfersPostWithHttpInfo
      *
-     * 
+     * Create a Transfer
      *
-     * @param \Swagger\Client\Model\TransferPost $transfer  (optional)
+     * @param \Swagger\Client\Model\Transfer $transfer Transfer Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TransferResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20014, HTTP status code, HTTP response headers (array of strings)
      */
     public function transfersPostWithHttpInfo($transfer = null)
     {
@@ -245,19 +245,19 @@ class TransfersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TransferResponse',
+                '\Swagger\Client\Model\InlineResponse20014',
                 '/v2.01/Transfers'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TransferResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20014', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TransferResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20014', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

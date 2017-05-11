@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * BankAccountCaPost Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -60,7 +59,7 @@ class BankAccountCaPost implements ArrayAccess
         'account_number' => 'string',
         'bank_name' => 'string',
         'tag' => 'string',
-        'owner_address' => '\Swagger\Client\Model\Address',
+        'owner_address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
         'owner_name' => 'string'
     ];
 
@@ -161,6 +160,7 @@ class BankAccountCaPost implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -168,10 +168,11 @@ class BankAccountCaPost implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
@@ -187,7 +188,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets branch_code
-     * @param string $branch_code
+     * @param string $branch_code The branch code of the bank where the bank account. Must be numbers only, and 5 digits long
      * @return $this
      */
     public function setBranchCode($branch_code)
@@ -208,7 +209,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets institution_number
-     * @param string $institution_number
+     * @param string $institution_number The institution number of the bank account. Must be numbers only, and 3 or 4 digits long
      * @return $this
      */
     public function setInstitutionNumber($institution_number)
@@ -229,7 +230,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets account_number
-     * @param string $account_number
+     * @param string $account_number The account number of the bank account. Must be numbers only. Canadian account numbers must be a maximum of 20 digits
      * @return $this
      */
     public function setAccountNumber($account_number)
@@ -250,7 +251,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets bank_name
-     * @param string $bank_name
+     * @param string $bank_name The name of the bank where the account is held. Must be letters or numbers only and maximum 50 characters long
      * @return $this
      */
     public function setBankName($bank_name)
@@ -271,7 +272,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag
+     * @param string $tag Custom data that you can add to this item
      * @return $this
      */
     public function setTag($tag)
@@ -283,7 +284,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Gets owner_address
-     * @return \Swagger\Client\Model\Address
+     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
      */
     public function getOwnerAddress()
     {
@@ -292,7 +293,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address
+     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $owner_address
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -313,7 +314,7 @@ class BankAccountCaPost implements ArrayAccess
 
     /**
      * Sets owner_name
-     * @param string $owner_name
+     * @param string $owner_name The name of the owner of the bank account
      * @return $this
      */
     public function setOwnerName($owner_name)

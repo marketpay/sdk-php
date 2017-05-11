@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * RedsysPreauthorizeByWebResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -151,6 +150,7 @@ class RedsysPreauthorizeByWebResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
         return $invalid_properties;
     }
 
@@ -158,10 +158,11 @@ class RedsysPreauthorizeByWebResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
         return true;
     }
 
@@ -177,7 +178,7 @@ class RedsysPreauthorizeByWebResponse implements ArrayAccess
 
     /**
      * Sets preauthorization_id
-     * @param string $preauthorization_id
+     * @param string $preauthorization_id Id of the preauthorization
      * @return $this
      */
     public function setPreauthorizationId($preauthorization_id)
@@ -198,7 +199,7 @@ class RedsysPreauthorizeByWebResponse implements ArrayAccess
 
     /**
      * Sets url
-     * @param string $url
+     * @param string $url Url to post from the user's browser
      * @return $this
      */
     public function setUrl($url)
@@ -219,7 +220,7 @@ class RedsysPreauthorizeByWebResponse implements ArrayAccess
 
     /**
      * Sets ds_signature_version
-     * @param string $ds_signature_version
+     * @param string $ds_signature_version This paramater must be include in the Post to the Url
      * @return $this
      */
     public function setDsSignatureVersion($ds_signature_version)
@@ -240,7 +241,7 @@ class RedsysPreauthorizeByWebResponse implements ArrayAccess
 
     /**
      * Sets ds_merchant_parameters
-     * @param string $ds_merchant_parameters
+     * @param string $ds_merchant_parameters This paramater must be include in the Post to the Url
      * @return $this
      */
     public function setDsMerchantParameters($ds_merchant_parameters)
@@ -261,7 +262,7 @@ class RedsysPreauthorizeByWebResponse implements ArrayAccess
 
     /**
      * Sets ds_signature
-     * @param string $ds_signature
+     * @param string $ds_signature This paramater must be include in the Post to the Url
      * @return $this
      */
     public function setDsSignature($ds_signature)

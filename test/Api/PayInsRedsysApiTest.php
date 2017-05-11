@@ -79,7 +79,7 @@ class PayInsRedsysApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsRedsysRedsysGetPayment
      *
-     * .
+     * View a Redsys payment.
      *
      */
     public function testPayInsRedsysRedsysGetPayment()
@@ -90,7 +90,7 @@ class PayInsRedsysApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsRedsysRedsysGetPreauthorization
      *
-     * .
+     * View a Redsys Preauthorization.
      *
      */
     public function testPayInsRedsysRedsysGetPreauthorization()
@@ -101,7 +101,7 @@ class PayInsRedsysApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsRedsysRedsysPostPaymentByWeb
      *
-     * .
+     * Create a Redsys PayIn Request.
      *
      */
     public function testPayInsRedsysRedsysPostPaymentByWeb()
@@ -112,7 +112,7 @@ class PayInsRedsysApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsRedsysRedsysPostPreauthorizationByWeb
      *
-     * .
+     * Create a Redsys Preauthorization Request.
      *
      */
     public function testPayInsRedsysRedsysPostPreauthorizationByWeb()
@@ -123,7 +123,7 @@ class PayInsRedsysApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsRedsysRedsysPostPreauthorizationCancellation
      *
-     * .
+     * Cancels a Preauthorization.
      *
      */
     public function testPayInsRedsysRedsysPostPreauthorizationCancellation()
@@ -134,7 +134,7 @@ class PayInsRedsysApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsRedsysRedsysPostPreauthorizationConfirmation
      *
-     * .
+     * Confirms a Preauthorization.
      *
      */
     public function testPayInsRedsysRedsysPostPreauthorizationConfirmation()
@@ -145,7 +145,7 @@ class PayInsRedsysApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsRedsysRedsysPostRefund
      *
-     * .
+     * Create a Redsys Payment Refund.
      *
      */
     public function testPayInsRedsysRedsysPostRefund()

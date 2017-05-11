@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * UserResponse Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -122,6 +121,7 @@ class UserResponse implements ArrayAccess
 
     const PERSON_TYPE_NATURAL = 'Natural';
     const PERSON_TYPE_LEGAL = 'Legal';
+    const PERSON_TYPE_FEES = 'Fees';
     const KYC_LEVEL_NOT_SPECIFIED = 'NotSpecified';
     const KYC_LEVEL_LIGHT = 'LIGHT';
     const KYC_LEVEL_REGULAR = 'REGULAR';
@@ -137,6 +137,7 @@ class UserResponse implements ArrayAccess
         return [
             self::PERSON_TYPE_NATURAL,
             self::PERSON_TYPE_LEGAL,
+            self::PERSON_TYPE_FEES,
         ];
     }
     
@@ -181,14 +182,15 @@ class UserResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-        $allowed_values = ["Natural", "Legal"];
+
+        $allowed_values = ["Natural", "Legal", "Fees"];
         if (!in_array($this->container['person_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'person_type', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'person_type', must be one of 'Natural', 'Legal', 'Fees'.";
         }
 
         $allowed_values = ["NotSpecified", "LIGHT", "REGULAR"];
         if (!in_array($this->container['kyc_level'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'kyc_level', must be one of #{allowed_values}.";
+            $invalid_properties[] = "invalid value for 'kyc_level', must be one of 'NotSpecified', 'LIGHT', 'REGULAR'.";
         }
 
         return $invalid_properties;
@@ -198,11 +200,12 @@ class UserResponse implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
-        $allowed_values = ["Natural", "Legal"];
+
+        $allowed_values = ["Natural", "Legal", "Fees"];
         if (!in_array($this->container['person_type'], $allowed_values)) {
             return false;
         }
@@ -225,14 +228,14 @@ class UserResponse implements ArrayAccess
 
     /**
      * Sets person_type
-     * @param string $person_type
+     * @param string $person_type Type of user
      * @return $this
      */
     public function setPersonType($person_type)
     {
-        $allowed_values = array('Natural', 'Legal');
+        $allowed_values = array('Natural', 'Legal', 'Fees');
         if (!is_null($person_type) && (!in_array($person_type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'person_type', must be one of 'Natural', 'Legal'");
+            throw new \InvalidArgumentException("Invalid value for 'person_type', must be one of 'Natural', 'Legal', 'Fees'");
         }
         $this->container['person_type'] = $person_type;
 
@@ -250,7 +253,7 @@ class UserResponse implements ArrayAccess
 
     /**
      * Sets kyc_level
-     * @param string $kyc_level
+     * @param string $kyc_level 
      * @return $this
      */
     public function setKycLevel($kyc_level)

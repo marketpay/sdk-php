@@ -34,8 +34,7 @@ use \ArrayAccess;
 /**
  * RedsysPreauthorizeByWebPost Class Doc Comment
  *
- * @category    Class */
-/**
+ * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -60,9 +59,11 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
         'card_id' => 'string',
         'author_id' => 'string',
         'statement_descriptor' => 'string',
+        'success_url' => 'string',
         'url_ok' => 'string',
+        'cancel_url' => 'string',
         'url_ko' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\Money'
+        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds'
     ];
 
     public static function swaggerTypes()
@@ -80,7 +81,9 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
         'card_id' => 'CardId',
         'author_id' => 'AuthorId',
         'statement_descriptor' => 'StatementDescriptor',
+        'success_url' => 'SuccessUrl',
         'url_ok' => 'UrlOk',
+        'cancel_url' => 'CancelUrl',
         'url_ko' => 'UrlKo',
         'debited_funds' => 'DebitedFunds'
     ];
@@ -96,7 +99,9 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
         'card_id' => 'setCardId',
         'author_id' => 'setAuthorId',
         'statement_descriptor' => 'setStatementDescriptor',
+        'success_url' => 'setSuccessUrl',
         'url_ok' => 'setUrlOk',
+        'cancel_url' => 'setCancelUrl',
         'url_ko' => 'setUrlKo',
         'debited_funds' => 'setDebitedFunds'
     ];
@@ -112,7 +117,9 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
         'card_id' => 'getCardId',
         'author_id' => 'getAuthorId',
         'statement_descriptor' => 'getStatementDescriptor',
+        'success_url' => 'getSuccessUrl',
         'url_ok' => 'getUrlOk',
+        'cancel_url' => 'getCancelUrl',
         'url_ko' => 'getUrlKo',
         'debited_funds' => 'getDebitedFunds'
     ];
@@ -153,7 +160,9 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
         $this->container['card_id'] = isset($data['card_id']) ? $data['card_id'] : null;
         $this->container['author_id'] = isset($data['author_id']) ? $data['author_id'] : null;
         $this->container['statement_descriptor'] = isset($data['statement_descriptor']) ? $data['statement_descriptor'] : null;
+        $this->container['success_url'] = isset($data['success_url']) ? $data['success_url'] : null;
         $this->container['url_ok'] = isset($data['url_ok']) ? $data['url_ok'] : null;
+        $this->container['cancel_url'] = isset($data['cancel_url']) ? $data['cancel_url'] : null;
         $this->container['url_ko'] = isset($data['url_ko']) ? $data['url_ko'] : null;
         $this->container['debited_funds'] = isset($data['debited_funds']) ? $data['debited_funds'] : null;
     }
@@ -166,6 +175,13 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        if ($this->container['success_url'] === null) {
+            $invalid_properties[] = "'success_url' can't be null";
+        }
+        if ($this->container['cancel_url'] === null) {
+            $invalid_properties[] = "'cancel_url' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -173,10 +189,17 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
      * validate all the properties in the model
      * return true if all passed
      *
-     * @return bool True if all properteis are valid
+     * @return bool True if all properties are valid
      */
     public function valid()
     {
+
+        if ($this->container['success_url'] === null) {
+            return false;
+        }
+        if ($this->container['cancel_url'] === null) {
+            return false;
+        }
         return true;
     }
 
@@ -192,7 +215,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag
+     * @param string $tag Custom data that you can add to this item
      * @return $this
      */
     public function setTag($tag)
@@ -213,7 +236,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets save_card
-     * @param bool $save_card
+     * @param bool $save_card Whether to save or not the card for future use. SaveCard and CardId are mutually exclusive
      * @return $this
      */
     public function setSaveCard($save_card)
@@ -234,7 +257,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets card_id
-     * @param string $card_id
+     * @param string $card_id The id of a previous saved card. SaveCard and CardId are mutually exclusive
      * @return $this
      */
     public function setCardId($card_id)
@@ -255,7 +278,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id
+     * @param string $author_id A user's ID
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -276,12 +299,33 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets statement_descriptor
-     * @param string $statement_descriptor
+     * @param string $statement_descriptor A custom description to appear on the user's bank statement. It can be up to 10 characters long, and can only include alphanumeric characters or spaces
      * @return $this
      */
     public function setStatementDescriptor($statement_descriptor)
     {
         $this->container['statement_descriptor'] = $statement_descriptor;
+
+        return $this;
+    }
+
+    /**
+     * Gets success_url
+     * @return string
+     */
+    public function getSuccessUrl()
+    {
+        return $this->container['success_url'];
+    }
+
+    /**
+     * Sets success_url
+     * @param string $success_url Dirección (relativa a la tienda) a la que redirigirá cuando se haya completado el pago.
+     * @return $this
+     */
+    public function setSuccessUrl($success_url)
+    {
+        $this->container['success_url'] = $success_url;
 
         return $this;
     }
@@ -297,12 +341,33 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets url_ok
-     * @param string $url_ok
+     * @param string $url_ok Url to redirect the browser in case the payment is completed successfully
      * @return $this
      */
     public function setUrlOk($url_ok)
     {
         $this->container['url_ok'] = $url_ok;
+
+        return $this;
+    }
+
+    /**
+     * Gets cancel_url
+     * @return string
+     */
+    public function getCancelUrl()
+    {
+        return $this->container['cancel_url'];
+    }
+
+    /**
+     * Sets cancel_url
+     * @param string $cancel_url Dirección (relativa a la tienda) a la que redirigirá en caso de error en el pago.
+     * @return $this
+     */
+    public function setCancelUrl($cancel_url)
+    {
+        $this->container['cancel_url'] = $cancel_url;
 
         return $this;
     }
@@ -318,7 +383,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets url_ko
-     * @param string $url_ko
+     * @param string $url_ko Url to redirect the browser in case the payment is not completed successfully
      * @return $this
      */
     public function setUrlKo($url_ko)
@@ -330,7 +395,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
      */
     public function getDebitedFunds()
     {
@@ -339,7 +404,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds
+     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)

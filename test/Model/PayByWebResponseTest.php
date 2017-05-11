@@ -91,33 +91,9 @@ class PayByWebResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "url"
+     * Test attribute "checkout_data"
      */
-    public function testPropertyUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "ds_signature_version"
-     */
-    public function testPropertyDsSignatureVersion()
-    {
-
-    }
-
-    /**
-     * Test attribute "ds_merchant_parameters"
-     */
-    public function testPropertyDsMerchantParameters()
-    {
-
-    }
-
-    /**
-     * Test attribute "ds_signature"
-     */
-    public function testPropertyDsSignature()
+    public function testPropertyCheckoutData()
     {
 
     }

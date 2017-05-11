@@ -79,7 +79,7 @@ class TransfersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for transfersGet
      *
-     * .
+     * View a Transfer.
      *
      */
     public function testTransfersGet()
@@ -90,7 +90,7 @@ class TransfersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for transfersPost
      *
-     * .
+     * Create a Transfer.
      *
      */
     public function testTransfersPost()
