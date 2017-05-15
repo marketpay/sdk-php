@@ -17,14 +17,8 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
 
 ```
 {
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com//.git"
-    }
-  ],
   "require": {
-    "/": "*@dev"
+    "marketpay/sdk-php": "dev-master"
   }
 }
 ```
