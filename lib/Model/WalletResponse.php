@@ -55,7 +55,7 @@ class WalletResponse implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'owners' => 'string[]',
-        'balance' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'balance' => '\Swagger\Client\Model\Money',
         'funds_type' => 'string',
         'description' => 'string',
         'currency' => 'string',
@@ -615,7 +615,7 @@ class WalletResponse implements ArrayAccess
 
     /**
      * Gets balance
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getBalance()
     {
@@ -624,7 +624,7 @@ class WalletResponse implements ArrayAccess
 
     /**
      * Sets balance
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $balance
+     * @param \Swagger\Client\Model\Money $balance The current balance of the wallet
      * @return $this
      */
     public function setBalance($balance)
@@ -716,7 +716,7 @@ class WalletResponse implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id The item's ID
+     * @param string $id
      * @return $this
      */
     public function setId($id)
@@ -737,7 +737,7 @@ class WalletResponse implements ArrayAccess
 
     /**
      * Sets creation_date
-     * @param int $creation_date When the item was created
+     * @param int $creation_date
      * @return $this
      */
     public function setCreationDate($creation_date)
@@ -758,7 +758,7 @@ class WalletResponse implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)

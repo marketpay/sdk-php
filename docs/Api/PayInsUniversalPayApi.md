@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **payInsUniversalPayUniversalPayGetPayment**
-> \Swagger\Client\Model\InlineResponse2009 payInsUniversalPayUniversalPayGetPayment($pay_in_id)
+> \Swagger\Client\Model\UniversalPayPayInsResponse payInsUniversalPayUniversalPayGetPayment($pay_in_id)
 
 View a UniversalPay payment
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\Swagger\Client\Model\UniversalPayPayInsResponse**](../Model/UniversalPayPayInsResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPayPostPaymentByWeb**
-> \Swagger\Client\Model\InlineResponse20010 payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in)
+> \Swagger\Client\Model\UniversalPayPayByWebResponse payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in)
 
 Create a UniversalPay PayIn Request
 
@@ -74,7 +74,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\PayInsUniversalPayApi();
-$universal_pay_pay_in = new \Swagger\Client\Model\UniversalPayPayIn(); // \Swagger\Client\Model\UniversalPayPayIn | UniversalPay PayIn Request Object params
+$universal_pay_pay_in = new \Swagger\Client\Model\UniversalPayPayByWebPost(); // \Swagger\Client\Model\UniversalPayPayByWebPost | UniversalPay PayIn Request Object params
 
 try {
     $result = $api_instance->payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in);
@@ -89,11 +89,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **universal_pay_pay_in** | [**\Swagger\Client\Model\UniversalPayPayIn**](../Model/\Swagger\Client\Model\UniversalPayPayIn.md)| UniversalPay PayIn Request Object params | [optional]
+ **universal_pay_pay_in** | [**\Swagger\Client\Model\UniversalPayPayByWebPost**](../Model/\Swagger\Client\Model\UniversalPayPayByWebPost.md)| UniversalPay PayIn Request Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\Swagger\Client\Model\UniversalPayPayByWebResponse**](../Model/UniversalPayPayByWebResponse.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPayPostRefund**
-> \Swagger\Client\Model\InlineResponse204 payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund)
+> \Swagger\Client\Model\UniversalPayRefundResponse payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund)
 
 Create a UniversalPay Payment Refund
 
@@ -123,7 +123,7 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_AC
 
 $api_instance = new Swagger\Client\Api\PayInsUniversalPayApi();
 $pay_in_id = 789; // int | The Id of a PayIn
-$universal_pay_refund = new \Swagger\Client\Model\UniversalPayRefund(); // \Swagger\Client\Model\UniversalPayRefund | Refund Object params
+$universal_pay_refund = new \Swagger\Client\Model\UniversalPayRefundPost(); // \Swagger\Client\Model\UniversalPayRefundPost | Refund Object params
 
 try {
     $result = $api_instance->payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund);
@@ -139,11 +139,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **int**| The Id of a PayIn |
- **universal_pay_refund** | [**\Swagger\Client\Model\UniversalPayRefund**](../Model/\Swagger\Client\Model\UniversalPayRefund.md)| Refund Object params | [optional]
+ **universal_pay_refund** | [**\Swagger\Client\Model\UniversalPayRefundPost**](../Model/\Swagger\Client\Model\UniversalPayRefundPost.md)| Refund Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse204**](../Model/InlineResponse204.md)
+[**\Swagger\Client\Model\UniversalPayRefundResponse**](../Model/UniversalPayRefundResponse.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPaySaveCard**
-> \Swagger\Client\Model\InlineResponse20010 payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card)
+> \Swagger\Client\Model\UniversalPayPayByWebResponse payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card)
 
 
 
@@ -170,7 +170,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\PayInsUniversalPayApi();
-$universal_pay_save_card = new \Swagger\Client\Model\UniversalPaySaveCard(); // \Swagger\Client\Model\UniversalPaySaveCard | 
+$universal_pay_save_card = new \Swagger\Client\Model\UniversalPayTokenRequestPost(); // \Swagger\Client\Model\UniversalPayTokenRequestPost | 
 
 try {
     $result = $api_instance->payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card);
@@ -185,11 +185,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **universal_pay_save_card** | [**\Swagger\Client\Model\UniversalPaySaveCard**](../Model/\Swagger\Client\Model\UniversalPaySaveCard.md)|  | [optional]
+ **universal_pay_save_card** | [**\Swagger\Client\Model\UniversalPayTokenRequestPost**](../Model/\Swagger\Client\Model\UniversalPayTokenRequestPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\Swagger\Client\Model\UniversalPayPayByWebResponse**](../Model/UniversalPayPayByWebResponse.md)
 
 ### Authorization
 

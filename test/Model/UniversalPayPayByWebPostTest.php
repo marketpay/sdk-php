@@ -115,33 +115,9 @@ class UniversalPayPayByWebPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "total_discount"
+     * Test attribute "statement_descriptor"
      */
-    public function testPropertyTotalDiscount()
-    {
-
-    }
-
-    /**
-     * Test attribute "total_shipping"
-     */
-    public function testPropertyTotalShipping()
-    {
-
-    }
-
-    /**
-     * Test attribute "total_tax"
-     */
-    public function testPropertyTotalTax()
-    {
-
-    }
-
-    /**
-     * Test attribute "order_items"
-     */
-    public function testPropertyOrderItems()
+    public function testPropertyStatementDescriptor()
     {
 
     }
@@ -190,14 +166,6 @@ class UniversalPayPayByWebPostTest extends \PHPUnit_Framework_TestCase
      * Test attribute "auto_return"
      */
     public function testPropertyAutoReturn()
-    {
-
-    }
-
-    /**
-     * Test attribute "checkout_layout"
-     */
-    public function testPropertyCheckoutLayout()
     {
 
     }

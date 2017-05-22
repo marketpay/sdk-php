@@ -54,9 +54,9 @@ class RedsysRefundResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'credited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'credited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money',
         'debited_wallet_id' => 'string',
         'credited_wallet_id' => 'string',
         'author_id' => 'string',
@@ -69,8 +69,8 @@ class RedsysRefundResponse implements ArrayAccess
         'type' => 'string',
         'initial_transaction_id' => 'string',
         'initial_transaction_type' => 'string',
-        'refund_reason' => '\Swagger\Client\Model\InlineResponse204RefundReason',
-        'provider' => '\Swagger\Client\Model\InlineResponse2003Provider',
+        'refund_reason' => '\Swagger\Client\Model\RefundReason',
+        'provider' => '\Swagger\Client\Model\RefundRedsysData',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -348,7 +348,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -357,7 +357,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -369,7 +369,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getCreditedFunds()
     {
@@ -378,7 +378,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $credited_funds
+     * @param \Swagger\Client\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -390,7 +390,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -399,7 +399,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)
@@ -679,7 +679,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Gets refund_reason
-     * @return \Swagger\Client\Model\InlineResponse204RefundReason
+     * @return \Swagger\Client\Model\RefundReason
      */
     public function getRefundReason()
     {
@@ -688,7 +688,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets refund_reason
-     * @param \Swagger\Client\Model\InlineResponse204RefundReason $refund_reason
+     * @param \Swagger\Client\Model\RefundReason $refund_reason Contains info about the reason for refund
      * @return $this
      */
     public function setRefundReason($refund_reason)
@@ -700,7 +700,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Gets provider
-     * @return \Swagger\Client\Model\InlineResponse2003Provider
+     * @return \Swagger\Client\Model\RefundRedsysData
      */
     public function getProvider()
     {
@@ -709,7 +709,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets provider
-     * @param \Swagger\Client\Model\InlineResponse2003Provider $provider
+     * @param \Swagger\Client\Model\RefundRedsysData $provider Redsys related data
      * @return $this
      */
     public function setProvider($provider)
@@ -730,7 +730,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id The item's ID
+     * @param string $id
      * @return $this
      */
     public function setId($id)
@@ -751,7 +751,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets creation_date
-     * @param int $creation_date When the item was created
+     * @param int $creation_date
      * @return $this
      */
     public function setCreationDate($creation_date)
@@ -772,7 +772,7 @@ class RedsysRefundResponse implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)

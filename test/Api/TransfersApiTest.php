@@ -88,6 +88,17 @@ class TransfersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for transfersGetList
+     *
+     * .
+     *
+     */
+    public function testTransfersGetList()
+    {
+
+    }
+
+    /**
      * Test case for transfersPost
      *
      * Create a Transfer.

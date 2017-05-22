@@ -91,14 +91,6 @@ class TransferPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "author_id"
-     */
-    public function testPropertyAuthorId()
-    {
-
-    }
-
-    /**
      * Test attribute "credited_user_id"
      */
     public function testPropertyCreditedUserId()

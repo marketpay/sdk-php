@@ -91,14 +91,6 @@ class RedsysRefundPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "author_id"
-     */
-    public function testPropertyAuthorId()
-    {
-
-    }
-
-    /**
      * Test attribute "debited_funds"
      */
     public function testPropertyDebitedFunds()

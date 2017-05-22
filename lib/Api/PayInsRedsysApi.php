@@ -94,7 +94,7 @@ class PayInsRedsysApi
      *
      * @param int $pay_in_id The Id of a payment (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2003
+     * @return \Swagger\Client\Model\RedsysPayInsResponse
      */
     public function payInsRedsysRedsysGetPayment($pay_in_id)
     {
@@ -109,7 +109,7 @@ class PayInsRedsysApi
      *
      * @param int $pay_in_id The Id of a payment (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\RedsysPayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsRedsysRedsysGetPaymentWithHttpInfo($pay_in_id)
     {
@@ -159,19 +159,19 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2003',
+                '\Swagger\Client\Model\RedsysPayInsResponse',
                 '/v2.01/PayInsRedsys/payments/{PayInId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2003', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RedsysPayInsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2003', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RedsysPayInsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -187,7 +187,7 @@ class PayInsRedsysApi
      *
      * @param int $preauthorization_id The Id of a Redsys Preauthorization (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2006
+     * @return \Swagger\Client\Model\RedsysPreauthorizeResponse
      */
     public function payInsRedsysRedsysGetPreauthorization($preauthorization_id)
     {
@@ -202,7 +202,7 @@ class PayInsRedsysApi
      *
      * @param int $preauthorization_id The Id of a Redsys Preauthorization (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\RedsysPreauthorizeResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsRedsysRedsysGetPreauthorizationWithHttpInfo($preauthorization_id)
     {
@@ -252,19 +252,19 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2006',
+                '\Swagger\Client\Model\RedsysPreauthorizeResponse',
                 '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2006', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RedsysPreauthorizeResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2006', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RedsysPreauthorizeResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -278,9 +278,9 @@ class PayInsRedsysApi
      *
      * Create a Redsys PayIn Request
      *
-     * @param \Swagger\Client\Model\RedsysPayIn $redsys_pay_in Redsys PayIn Request Object params (optional)
+     * @param \Swagger\Client\Model\RedsysPayByWebPost $redsys_pay_in Redsys PayIn Request Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2004
+     * @return \Swagger\Client\Model\RedsysPayByWebResponse
      */
     public function payInsRedsysRedsysPostPaymentByWeb($redsys_pay_in = null)
     {
@@ -293,9 +293,9 @@ class PayInsRedsysApi
      *
      * Create a Redsys PayIn Request
      *
-     * @param \Swagger\Client\Model\RedsysPayIn $redsys_pay_in Redsys PayIn Request Object params (optional)
+     * @param \Swagger\Client\Model\RedsysPayByWebPost $redsys_pay_in Redsys PayIn Request Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\RedsysPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsRedsysRedsysPostPaymentByWebWithHttpInfo($redsys_pay_in = null)
     {
@@ -338,19 +338,19 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2004',
+                '\Swagger\Client\Model\RedsysPayByWebResponse',
                 '/v2.01/PayInsRedsys/payments/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2004', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RedsysPayByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2004', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RedsysPayByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -364,9 +364,9 @@ class PayInsRedsysApi
      *
      * Create a Redsys Preauthorization Request
      *
-     * @param \Swagger\Client\Model\RedsysPreauthorization $redsys_preauthorization RedsysPreauthorization Object params (optional)
+     * @param \Swagger\Client\Model\RedsysPreauthorizeByWebPost $redsys_preauthorization RedsysPreauthorization Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2007
+     * @return \Swagger\Client\Model\RedsysPreauthorizeByWebResponse
      */
     public function payInsRedsysRedsysPostPreauthorizationByWeb($redsys_preauthorization = null)
     {
@@ -379,9 +379,9 @@ class PayInsRedsysApi
      *
      * Create a Redsys Preauthorization Request
      *
-     * @param \Swagger\Client\Model\RedsysPreauthorization $redsys_preauthorization RedsysPreauthorization Object params (optional)
+     * @param \Swagger\Client\Model\RedsysPreauthorizeByWebPost $redsys_preauthorization RedsysPreauthorization Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\RedsysPreauthorizeByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsRedsysRedsysPostPreauthorizationByWebWithHttpInfo($redsys_preauthorization = null)
     {
@@ -424,19 +424,19 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2007',
+                '\Swagger\Client\Model\RedsysPreauthorizeByWebResponse',
                 '/v2.01/PayInsRedsys/preauthorizations/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2007', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RedsysPreauthorizeByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2007', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RedsysPreauthorizeByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -451,9 +451,9 @@ class PayInsRedsysApi
      * Cancels a Preauthorization
      *
      * @param int $preauthorization_id The Id of a Redsys PreauthorizationCancellation (required)
-     * @param object $redsys_preauthorization_cancellation PreauthorizationCancellation Object params (optional)
+     * @param \Swagger\Client\Model\RedsysPreauthorizationCancellationPost $redsys_preauthorization_cancellation PreauthorizationCancellation Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return object
+     * @return \Swagger\Client\Model\RedsysPreauthorizationCancellationResponse
      */
     public function payInsRedsysRedsysPostPreauthorizationCancellation($preauthorization_id, $redsys_preauthorization_cancellation = null)
     {
@@ -467,9 +467,9 @@ class PayInsRedsysApi
      * Cancels a Preauthorization
      *
      * @param int $preauthorization_id The Id of a Redsys PreauthorizationCancellation (required)
-     * @param object $redsys_preauthorization_cancellation PreauthorizationCancellation Object params (optional)
+     * @param \Swagger\Client\Model\RedsysPreauthorizationCancellationPost $redsys_preauthorization_cancellation PreauthorizationCancellation Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\RedsysPreauthorizationCancellationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsRedsysRedsysPostPreauthorizationCancellationWithHttpInfo($preauthorization_id, $redsys_preauthorization_cancellation = null)
     {
@@ -524,19 +524,19 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'object',
+                '\Swagger\Client\Model\RedsysPreauthorizationCancellationResponse',
                 '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, 'object', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RedsysPreauthorizationCancellationResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'object', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RedsysPreauthorizationCancellationResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -551,9 +551,9 @@ class PayInsRedsysApi
      * Confirms a Preauthorization
      *
      * @param int $preauthorization_id The Id of a Redsys PreauthorizationConfirmation (required)
-     * @param \Swagger\Client\Model\RedsysPreauthorizationConfirmation $redsys_preauthorization_confirmation PreauthorizationConfirmation Object params (optional)
+     * @param \Swagger\Client\Model\RedsysPreauthorizationConfirmationPost $redsys_preauthorization_confirmation PreauthorizationConfirmation Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2008
+     * @return \Swagger\Client\Model\RedsysPreauthorizationConfirmationResponse
      */
     public function payInsRedsysRedsysPostPreauthorizationConfirmation($preauthorization_id, $redsys_preauthorization_confirmation = null)
     {
@@ -567,9 +567,9 @@ class PayInsRedsysApi
      * Confirms a Preauthorization
      *
      * @param int $preauthorization_id The Id of a Redsys PreauthorizationConfirmation (required)
-     * @param \Swagger\Client\Model\RedsysPreauthorizationConfirmation $redsys_preauthorization_confirmation PreauthorizationConfirmation Object params (optional)
+     * @param \Swagger\Client\Model\RedsysPreauthorizationConfirmationPost $redsys_preauthorization_confirmation PreauthorizationConfirmation Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\RedsysPreauthorizationConfirmationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsRedsysRedsysPostPreauthorizationConfirmationWithHttpInfo($preauthorization_id, $redsys_preauthorization_confirmation = null)
     {
@@ -624,19 +624,19 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2008',
+                '\Swagger\Client\Model\RedsysPreauthorizationConfirmationResponse',
                 '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2008', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RedsysPreauthorizationConfirmationResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2008', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RedsysPreauthorizationConfirmationResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -651,9 +651,9 @@ class PayInsRedsysApi
      * Create a Redsys Payment Refund
      *
      * @param int $pay_in_id The Id of a PayIn (required)
-     * @param \Swagger\Client\Model\RedsysRefund $redsys_refund Refund Object params (optional)
+     * @param \Swagger\Client\Model\RedsysRefundPost $redsys_refund Refund Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2005
+     * @return \Swagger\Client\Model\RedsysRefundResponse
      */
     public function payInsRedsysRedsysPostRefund($pay_in_id, $redsys_refund = null)
     {
@@ -667,9 +667,9 @@ class PayInsRedsysApi
      * Create a Redsys Payment Refund
      *
      * @param int $pay_in_id The Id of a PayIn (required)
-     * @param \Swagger\Client\Model\RedsysRefund $redsys_refund Refund Object params (optional)
+     * @param \Swagger\Client\Model\RedsysRefundPost $redsys_refund Refund Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\RedsysRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsRedsysRedsysPostRefundWithHttpInfo($pay_in_id, $redsys_refund = null)
     {
@@ -724,19 +724,19 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2005',
+                '\Swagger\Client\Model\RedsysRefundResponse',
                 '/v2.01/PayInsRedsys/payments/{PayInId}/refunds'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2005', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RedsysRefundResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2005', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RedsysRefundResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -57,7 +57,7 @@ class UserNaturalResponse implements ArrayAccess
         'email' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
-        'address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
+        'address' => '\Swagger\Client\Model\Address',
         'birthday' => 'int',
         'nationality' => 'string',
         'country_of_residence' => 'string',
@@ -1375,7 +1375,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Gets address
-     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
+     * @return \Swagger\Client\Model\Address
      */
     public function getAddress()
     {
@@ -1384,7 +1384,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $address
+     * @param \Swagger\Client\Model\Address $address The address
      * @return $this
      */
     public function setAddress($address)
@@ -1610,7 +1610,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id The item's ID
+     * @param string $id
      * @return $this
      */
     public function setId($id)
@@ -1631,7 +1631,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets creation_date
-     * @param int $creation_date When the item was created
+     * @param int $creation_date
      * @return $this
      */
     public function setCreationDate($creation_date)
@@ -1652,7 +1652,7 @@ class UserNaturalResponse implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)

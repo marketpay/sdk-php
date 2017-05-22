@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **refundsRefundGet**
-> \Swagger\Client\Model\InlineResponse204 refundsRefundGet($refund_id)
+> \Swagger\Client\Model\UniversalPayRefundResponse refundsRefundGet($refund_id)
 
 View a Refund
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse204**](../Model/InlineResponse204.md)
+[**\Swagger\Client\Model\UniversalPayRefundResponse**](../Model/UniversalPayRefundResponse.md)
 
 ### Authorization
 

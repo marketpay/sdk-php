@@ -88,6 +88,17 @@ class CardsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for cardsGetList
+     *
+     * .
+     *
+     */
+    public function testCardsGetList()
+    {
+
+    }
+
+    /**
      * Test case for cardsPut
      *
      * Deactivate a Card.

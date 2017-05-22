@@ -54,7 +54,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'debited_funds' => '\Swagger\Client\Model\Money',
         'status' => 'string',
         'payment_status' => 'string',
         'execution_date' => 'int',
@@ -65,7 +65,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
         'statement_descriptor' => 'string',
         'author_id' => 'string',
         'pay_in_id' => 'string',
-        'provider' => '\Swagger\Client\Model\InlineResponse2003Provider',
+        'provider' => '\Swagger\Client\Model\PreauthorizationRedsysData',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -298,7 +298,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -307,7 +307,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -541,7 +541,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Gets provider
-     * @return \Swagger\Client\Model\InlineResponse2003Provider
+     * @return \Swagger\Client\Model\PreauthorizationRedsysData
      */
     public function getProvider()
     {
@@ -550,7 +550,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets provider
-     * @param \Swagger\Client\Model\InlineResponse2003Provider $provider
+     * @param \Swagger\Client\Model\PreauthorizationRedsysData $provider Redsys related data
      * @return $this
      */
     public function setProvider($provider)
@@ -571,7 +571,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id The item's ID
+     * @param string $id
      * @return $this
      */
     public function setId($id)
@@ -592,7 +592,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets creation_date
-     * @param int $creation_date When the item was created
+     * @param int $creation_date
      * @return $this
      */
     public function setCreationDate($creation_date)
@@ -613,7 +613,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)

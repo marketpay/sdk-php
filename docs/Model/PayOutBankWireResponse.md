@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **author_id** | **string** |  | [optional] 
 **credited_user_id** | **string** |  | [optional] 
-**debited_funds** | [**\Swagger\Client\Model\InlineResponse2001DebitedFunds**](InlineResponse2001DebitedFunds.md) |  | [optional] 
-**credited_funds** | [**\Swagger\Client\Model\InlineResponse2001DebitedFunds**](InlineResponse2001DebitedFunds.md) |  | [optional] 
-**fees** | [**\Swagger\Client\Model\InlineResponse2001DebitedFunds**](InlineResponse2001DebitedFunds.md) |  | [optional] 
+**debited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
+**credited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
+**fees** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
 **status** | **string** |  | [optional] 
 **result_code** | **string** |  | [optional] 
 **result_message** | **string** |  | [optional] 
@@ -19,9 +19,9 @@ Name | Type | Description | Notes
 **payment_type** | **string** |  | [optional] 
 **bank_account_id** | **string** |  | [optional] 
 **bank_wire_ref** | **string** |  | [optional] 
-**id** | **string** | The item&#39;s ID | [optional] 
-**creation_date** | **int** | When the item was created | [optional] 
-**tag** | **string** | Custom data that you can add to this item | [optional] 
+**id** | **string** |  | [optional] 
+**creation_date** | **int** |  | [optional] 
+**tag** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

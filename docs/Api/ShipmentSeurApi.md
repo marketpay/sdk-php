@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **shipmentSeurSeurCancelShipment**
-> \Swagger\Client\Model\InlineResponse20013 shipmentSeurSeurCancelShipment($shipment_id)
+> \Swagger\Client\Model\SeurShipmentCancellationResponse shipmentSeurSeurCancelShipment($shipment_id)
 
 Cancels a shipment
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
+[**\Swagger\Client\Model\SeurShipmentCancellationResponse**](../Model/SeurShipmentCancellationResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentSeurSeurCreateShipment**
-> \Swagger\Client\Model\InlineResponse20012 shipmentSeurSeurCreateShipment($shipment)
+> \Swagger\Client\Model\SeurShipmentResponse shipmentSeurSeurCreateShipment($shipment)
 
 Creates a shipment
 
@@ -73,7 +73,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\ShipmentSeurApi();
-$shipment = new \Swagger\Client\Model\Shipment(); // \Swagger\Client\Model\Shipment | Seur Shipment Object params
+$shipment = new \Swagger\Client\Model\SeurShipmentPost(); // \Swagger\Client\Model\SeurShipmentPost | Seur Shipment Object params
 
 try {
     $result = $api_instance->shipmentSeurSeurCreateShipment($shipment);
@@ -88,11 +88,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shipment** | [**\Swagger\Client\Model\Shipment**](../Model/\Swagger\Client\Model\Shipment.md)| Seur Shipment Object params | [optional]
+ **shipment** | [**\Swagger\Client\Model\SeurShipmentPost**](../Model/\Swagger\Client\Model\SeurShipmentPost.md)| Seur Shipment Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Swagger\Client\Model\SeurShipmentResponse**](../Model/SeurShipmentResponse.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentSeurSeurGetShipment**
-> \Swagger\Client\Model\InlineResponse20012 shipmentSeurSeurGetShipment($shipment_id)
+> \Swagger\Client\Model\SeurShipmentResponse shipmentSeurSeurGetShipment($shipment_id)
 
 Cancels a shipment
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Swagger\Client\Model\SeurShipmentResponse**](../Model/SeurShipmentResponse.md)
 
 ### Authorization
 

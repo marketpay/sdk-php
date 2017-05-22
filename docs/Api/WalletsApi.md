@@ -5,13 +5,14 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**walletsGet**](WalletsApi.md#walletsGet) | **GET** /v2.01/Wallets/{WalletId} | View a Wallet
+[**walletsGetList**](WalletsApi.md#walletsGetList) | **GET** /v2.01/Wallets | 
 [**walletsGetTransactionList**](WalletsApi.md#walletsGetTransactionList) | **GET** /v2.01/Wallets/{WalletId}/transactions | List a Wallet&#39;s Transactions
 [**walletsPost**](WalletsApi.md#walletsPost) | **POST** /v2.01/Wallets | Create a Wallet
 [**walletsPut**](WalletsApi.md#walletsPut) | **PUT** /v2.01/Wallets/{WalletId} | Update a Wallet
 
 
 # **walletsGet**
-> \Swagger\Client\Model\InlineResponse20016 walletsGet($wallet_id)
+> \Swagger\Client\Model\WalletResponse walletsGet($wallet_id)
 
 View a Wallet
 
@@ -45,7 +46,55 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
+[**\Swagger\Client\Model\WalletResponse**](../Model/WalletResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **walletsGetList**
+> \Swagger\Client\Model\ResponseListWalletResponse walletsGetList($page, $per_page)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$api_instance = new Swagger\Client\Api\WalletsApi();
+$page = 56; // int | 
+$per_page = 56; // int | 
+
+try {
+    $result = $api_instance->walletsGetList($page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WalletsApi->walletsGetList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ResponseListWalletResponse**](../Model/ResponseListWalletResponse.md)
 
 ### Authorization
 
@@ -59,7 +108,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsGetTransactionList**
-> \Swagger\Client\Model\InlineResponse20014[] walletsGetTransactionList($wallet_id, $page, $per_page)
+> \Swagger\Client\Model\TransactionResponse[] walletsGetTransactionList($wallet_id, $page, $per_page)
 
 List a Wallet's Transactions
 
@@ -97,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20014[]**](../Model/InlineResponse20014.md)
+[**\Swagger\Client\Model\TransactionResponse[]**](../Model/TransactionResponse.md)
 
 ### Authorization
 
@@ -111,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsPost**
-> \Swagger\Client\Model\InlineResponse20016 walletsPost($wallet)
+> \Swagger\Client\Model\WalletResponse walletsPost($wallet)
 
 Create a Wallet
 
@@ -126,7 +175,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\WalletsApi();
-$wallet = new \Swagger\Client\Model\Wallet(); // \Swagger\Client\Model\Wallet | Wallet Object params
+$wallet = new \Swagger\Client\Model\WalletPost(); // \Swagger\Client\Model\WalletPost | Wallet Object params
 
 try {
     $result = $api_instance->walletsPost($wallet);
@@ -141,11 +190,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wallet** | [**\Swagger\Client\Model\Wallet**](../Model/\Swagger\Client\Model\Wallet.md)| Wallet Object params | [optional]
+ **wallet** | [**\Swagger\Client\Model\WalletPost**](../Model/\Swagger\Client\Model\WalletPost.md)| Wallet Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
+[**\Swagger\Client\Model\WalletResponse**](../Model/WalletResponse.md)
 
 ### Authorization
 
@@ -159,7 +208,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsPut**
-> \Swagger\Client\Model\InlineResponse20016 walletsPut($wallet_id, $wallet)
+> \Swagger\Client\Model\WalletResponse walletsPut($wallet_id, $wallet)
 
 Update a Wallet
 
@@ -175,7 +224,7 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_AC
 
 $api_instance = new Swagger\Client\Api\WalletsApi();
 $wallet_id = 789; // int | The Id of a wallet
-$wallet = new \Swagger\Client\Model\Wallet1(); // \Swagger\Client\Model\Wallet1 | Wallet Object params
+$wallet = new \Swagger\Client\Model\WalletPut(); // \Swagger\Client\Model\WalletPut | Wallet Object params
 
 try {
     $result = $api_instance->walletsPut($wallet_id, $wallet);
@@ -191,11 +240,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **wallet_id** | **int**| The Id of a wallet |
- **wallet** | [**\Swagger\Client\Model\Wallet1**](../Model/\Swagger\Client\Model\Wallet1.md)| Wallet Object params | [optional]
+ **wallet** | [**\Swagger\Client\Model\WalletPut**](../Model/\Swagger\Client\Model\WalletPut.md)| Wallet Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
+[**\Swagger\Client\Model\WalletResponse**](../Model/WalletResponse.md)
 
 ### Authorization
 

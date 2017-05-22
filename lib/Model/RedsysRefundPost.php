@@ -55,9 +55,8 @@ class RedsysRefundPost implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'tag' => 'string',
-        'author_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds'
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money'
     ];
 
     public static function swaggerTypes()
@@ -71,7 +70,6 @@ class RedsysRefundPost implements ArrayAccess
      */
     protected static $attributeMap = [
         'tag' => 'Tag',
-        'author_id' => 'AuthorId',
         'debited_funds' => 'DebitedFunds',
         'fees' => 'Fees'
     ];
@@ -83,7 +81,6 @@ class RedsysRefundPost implements ArrayAccess
      */
     protected static $setters = [
         'tag' => 'setTag',
-        'author_id' => 'setAuthorId',
         'debited_funds' => 'setDebitedFunds',
         'fees' => 'setFees'
     ];
@@ -95,7 +92,6 @@ class RedsysRefundPost implements ArrayAccess
      */
     protected static $getters = [
         'tag' => 'getTag',
-        'author_id' => 'getAuthorId',
         'debited_funds' => 'getDebitedFunds',
         'fees' => 'getFees'
     ];
@@ -132,7 +128,6 @@ class RedsysRefundPost implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
-        $this->container['author_id'] = isset($data['author_id']) ? $data['author_id'] : null;
         $this->container['debited_funds'] = isset($data['debited_funds']) ? $data['debited_funds'] : null;
         $this->container['fees'] = isset($data['fees']) ? $data['fees'] : null;
     }
@@ -184,29 +179,8 @@ class RedsysRefundPost implements ArrayAccess
     }
 
     /**
-     * Gets author_id
-     * @return string
-     */
-    public function getAuthorId()
-    {
-        return $this->container['author_id'];
-    }
-
-    /**
-     * Sets author_id
-     * @param string $author_id A user's ID
-     * @return $this
-     */
-    public function setAuthorId($author_id)
-    {
-        $this->container['author_id'] = $author_id;
-
-        return $this;
-    }
-
-    /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -215,7 +189,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -227,7 +201,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -236,7 +210,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)

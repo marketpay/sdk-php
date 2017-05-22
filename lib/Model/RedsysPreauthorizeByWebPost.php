@@ -63,7 +63,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
         'url_ok' => 'string',
         'cancel_url' => 'string',
         'url_ko' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds'
+        'debited_funds' => '\Swagger\Client\Model\Money'
     ];
 
     public static function swaggerTypes()
@@ -395,7 +395,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -404,7 +404,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)

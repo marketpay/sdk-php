@@ -54,23 +54,19 @@ class UniversalPayPayByWebPost implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money',
         'card_id' => 'string',
         'save_card' => 'bool',
-        'total_discount' => 'int',
-        'total_shipping' => 'int',
-        'total_tax' => 'int',
-        'order_items' => '\Swagger\Client\Model\V201PayInsUniversalPaypaymentswebOrderItems[]',
+        'statement_descriptor' => 'string',
         'tag' => 'string',
         'credited_wallet_id' => 'string',
         'secure_mode' => 'string',
         'success_url' => 'string',
         'cancel_url' => 'string',
         'auto_return' => 'bool',
-        'checkout_layout' => 'string',
         'language' => 'string',
-        'customer' => '\Swagger\Client\Model\V201PayInsUniversalPaypaymentswebCustomer'
+        'customer' => '\Swagger\Client\Model\CustomerDetail'
     ];
 
     public static function swaggerTypes()
@@ -87,17 +83,13 @@ class UniversalPayPayByWebPost implements ArrayAccess
         'fees' => 'Fees',
         'card_id' => 'CardId',
         'save_card' => 'SaveCard',
-        'total_discount' => 'TotalDiscount',
-        'total_shipping' => 'TotalShipping',
-        'total_tax' => 'TotalTax',
-        'order_items' => 'OrderItems',
+        'statement_descriptor' => 'StatementDescriptor',
         'tag' => 'Tag',
         'credited_wallet_id' => 'CreditedWalletId',
         'secure_mode' => 'SecureMode',
         'success_url' => 'SuccessUrl',
         'cancel_url' => 'CancelUrl',
         'auto_return' => 'AutoReturn',
-        'checkout_layout' => 'CheckoutLayout',
         'language' => 'Language',
         'customer' => 'Customer'
     ];
@@ -112,17 +104,13 @@ class UniversalPayPayByWebPost implements ArrayAccess
         'fees' => 'setFees',
         'card_id' => 'setCardId',
         'save_card' => 'setSaveCard',
-        'total_discount' => 'setTotalDiscount',
-        'total_shipping' => 'setTotalShipping',
-        'total_tax' => 'setTotalTax',
-        'order_items' => 'setOrderItems',
+        'statement_descriptor' => 'setStatementDescriptor',
         'tag' => 'setTag',
         'credited_wallet_id' => 'setCreditedWalletId',
         'secure_mode' => 'setSecureMode',
         'success_url' => 'setSuccessUrl',
         'cancel_url' => 'setCancelUrl',
         'auto_return' => 'setAutoReturn',
-        'checkout_layout' => 'setCheckoutLayout',
         'language' => 'setLanguage',
         'customer' => 'setCustomer'
     ];
@@ -137,17 +125,13 @@ class UniversalPayPayByWebPost implements ArrayAccess
         'fees' => 'getFees',
         'card_id' => 'getCardId',
         'save_card' => 'getSaveCard',
-        'total_discount' => 'getTotalDiscount',
-        'total_shipping' => 'getTotalShipping',
-        'total_tax' => 'getTotalTax',
-        'order_items' => 'getOrderItems',
+        'statement_descriptor' => 'getStatementDescriptor',
         'tag' => 'getTag',
         'credited_wallet_id' => 'getCreditedWalletId',
         'secure_mode' => 'getSecureMode',
         'success_url' => 'getSuccessUrl',
         'cancel_url' => 'getCancelUrl',
         'auto_return' => 'getAutoReturn',
-        'checkout_layout' => 'getCheckoutLayout',
         'language' => 'getLanguage',
         'customer' => 'getCustomer'
     ];
@@ -170,8 +154,6 @@ class UniversalPayPayByWebPost implements ArrayAccess
     const SECURE_MODE_NOT_SPECIFIED = 'NotSpecified';
     const SECURE_MODE_DEFAULT = 'DEFAULT';
     const SECURE_MODE_FORCE = 'FORCE';
-    const CHECKOUT_LAYOUT_IFRAME = 'IFRAME';
-    const CHECKOUT_LAYOUT_REDIRECT = 'REDIRECT';
     const LANGUAGE_NOT_SPECIFIED = 'NotSpecified';
     const LANGUAGE_DE = 'DE';
     const LANGUAGE_EN = 'EN';
@@ -203,18 +185,6 @@ class UniversalPayPayByWebPost implements ArrayAccess
             self::SECURE_MODE_NOT_SPECIFIED,
             self::SECURE_MODE_DEFAULT,
             self::SECURE_MODE_FORCE,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getCheckoutLayoutAllowableValues()
-    {
-        return [
-            self::CHECKOUT_LAYOUT_IFRAME,
-            self::CHECKOUT_LAYOUT_REDIRECT,
         ];
     }
     
@@ -263,17 +233,13 @@ class UniversalPayPayByWebPost implements ArrayAccess
         $this->container['fees'] = isset($data['fees']) ? $data['fees'] : null;
         $this->container['card_id'] = isset($data['card_id']) ? $data['card_id'] : null;
         $this->container['save_card'] = isset($data['save_card']) ? $data['save_card'] : null;
-        $this->container['total_discount'] = isset($data['total_discount']) ? $data['total_discount'] : null;
-        $this->container['total_shipping'] = isset($data['total_shipping']) ? $data['total_shipping'] : null;
-        $this->container['total_tax'] = isset($data['total_tax']) ? $data['total_tax'] : null;
-        $this->container['order_items'] = isset($data['order_items']) ? $data['order_items'] : null;
+        $this->container['statement_descriptor'] = isset($data['statement_descriptor']) ? $data['statement_descriptor'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['credited_wallet_id'] = isset($data['credited_wallet_id']) ? $data['credited_wallet_id'] : null;
         $this->container['secure_mode'] = isset($data['secure_mode']) ? $data['secure_mode'] : null;
         $this->container['success_url'] = isset($data['success_url']) ? $data['success_url'] : null;
         $this->container['cancel_url'] = isset($data['cancel_url']) ? $data['cancel_url'] : null;
         $this->container['auto_return'] = isset($data['auto_return']) ? $data['auto_return'] : null;
-        $this->container['checkout_layout'] = isset($data['checkout_layout']) ? $data['checkout_layout'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
     }
@@ -287,8 +253,14 @@ class UniversalPayPayByWebPost implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['order_items'] === null) {
-            $invalid_properties[] = "'order_items' can't be null";
+        if ($this->container['debited_funds'] === null) {
+            $invalid_properties[] = "'debited_funds' can't be null";
+        }
+        if ($this->container['fees'] === null) {
+            $invalid_properties[] = "'fees' can't be null";
+        }
+        if ($this->container['statement_descriptor'] === null) {
+            $invalid_properties[] = "'statement_descriptor' can't be null";
         }
         if ($this->container['credited_wallet_id'] === null) {
             $invalid_properties[] = "'credited_wallet_id' can't be null";
@@ -298,16 +270,14 @@ class UniversalPayPayByWebPost implements ArrayAccess
             $invalid_properties[] = "invalid value for 'secure_mode', must be one of 'NotSpecified', 'DEFAULT', 'FORCE'.";
         }
 
-        $allowed_values = ["IFRAME", "REDIRECT"];
-        if (!in_array($this->container['checkout_layout'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'checkout_layout', must be one of 'IFRAME', 'REDIRECT'.";
-        }
-
         $allowed_values = ["NotSpecified", "DE", "EN", "DA", "ES", "ET", "FI", "FR", "EL", "HU", "IT", "NL", "NO", "PL", "PT", "SK", "SV", "CS"];
         if (!in_array($this->container['language'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'language', must be one of 'NotSpecified', 'DE', 'EN', 'DA', 'ES', 'ET', 'FI', 'FR', 'EL', 'HU', 'IT', 'NL', 'NO', 'PL', 'PT', 'SK', 'SV', 'CS'.";
         }
 
+        if ($this->container['customer'] === null) {
+            $invalid_properties[] = "'customer' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -320,7 +290,13 @@ class UniversalPayPayByWebPost implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['order_items'] === null) {
+        if ($this->container['debited_funds'] === null) {
+            return false;
+        }
+        if ($this->container['fees'] === null) {
+            return false;
+        }
+        if ($this->container['statement_descriptor'] === null) {
             return false;
         }
         if ($this->container['credited_wallet_id'] === null) {
@@ -330,12 +306,11 @@ class UniversalPayPayByWebPost implements ArrayAccess
         if (!in_array($this->container['secure_mode'], $allowed_values)) {
             return false;
         }
-        $allowed_values = ["IFRAME", "REDIRECT"];
-        if (!in_array($this->container['checkout_layout'], $allowed_values)) {
-            return false;
-        }
         $allowed_values = ["NotSpecified", "DE", "EN", "DA", "ES", "ET", "FI", "FR", "EL", "HU", "IT", "NL", "NO", "PL", "PT", "SK", "SV", "CS"];
         if (!in_array($this->container['language'], $allowed_values)) {
+            return false;
+        }
+        if ($this->container['customer'] === null) {
             return false;
         }
         return true;
@@ -344,7 +319,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -353,7 +328,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -365,7 +340,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -374,7 +349,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)
@@ -427,85 +402,22 @@ class UniversalPayPayByWebPost implements ArrayAccess
     }
 
     /**
-     * Gets total_discount
-     * @return int
+     * Gets statement_descriptor
+     * @return string
      */
-    public function getTotalDiscount()
+    public function getStatementDescriptor()
     {
-        return $this->container['total_discount'];
+        return $this->container['statement_descriptor'];
     }
 
     /**
-     * Sets total_discount
-     * @param int $total_discount
+     * Sets statement_descriptor
+     * @param string $statement_descriptor
      * @return $this
      */
-    public function setTotalDiscount($total_discount)
+    public function setStatementDescriptor($statement_descriptor)
     {
-        $this->container['total_discount'] = $total_discount;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_shipping
-     * @return int
-     */
-    public function getTotalShipping()
-    {
-        return $this->container['total_shipping'];
-    }
-
-    /**
-     * Sets total_shipping
-     * @param int $total_shipping
-     * @return $this
-     */
-    public function setTotalShipping($total_shipping)
-    {
-        $this->container['total_shipping'] = $total_shipping;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_tax
-     * @return int
-     */
-    public function getTotalTax()
-    {
-        return $this->container['total_tax'];
-    }
-
-    /**
-     * Sets total_tax
-     * @param int $total_tax
-     * @return $this
-     */
-    public function setTotalTax($total_tax)
-    {
-        $this->container['total_tax'] = $total_tax;
-
-        return $this;
-    }
-
-    /**
-     * Gets order_items
-     * @return \Swagger\Client\Model\V201PayInsUniversalPaypaymentswebOrderItems[]
-     */
-    public function getOrderItems()
-    {
-        return $this->container['order_items'];
-    }
-
-    /**
-     * Sets order_items
-     * @param \Swagger\Client\Model\V201PayInsUniversalPaypaymentswebOrderItems[] $order_items
-     * @return $this
-     */
-    public function setOrderItems($order_items)
-    {
-        $this->container['order_items'] = $order_items;
+        $this->container['statement_descriptor'] = $statement_descriptor;
 
         return $this;
     }
@@ -641,31 +553,6 @@ class UniversalPayPayByWebPost implements ArrayAccess
     }
 
     /**
-     * Gets checkout_layout
-     * @return string
-     */
-    public function getCheckoutLayout()
-    {
-        return $this->container['checkout_layout'];
-    }
-
-    /**
-     * Sets checkout_layout
-     * @param string $checkout_layout Omit to redirect browser
-     * @return $this
-     */
-    public function setCheckoutLayout($checkout_layout)
-    {
-        $allowed_values = array('IFRAME', 'REDIRECT');
-        if (!is_null($checkout_layout) && (!in_array($checkout_layout, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'checkout_layout', must be one of 'IFRAME', 'REDIRECT'");
-        }
-        $this->container['checkout_layout'] = $checkout_layout;
-
-        return $this;
-    }
-
-    /**
      * Gets language
      * @return string
      */
@@ -692,7 +579,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Gets customer
-     * @return \Swagger\Client\Model\V201PayInsUniversalPaypaymentswebCustomer
+     * @return \Swagger\Client\Model\CustomerDetail
      */
     public function getCustomer()
     {
@@ -701,7 +588,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets customer
-     * @param \Swagger\Client\Model\V201PayInsUniversalPaypaymentswebCustomer $customer
+     * @param \Swagger\Client\Model\CustomerDetail $customer
      * @return $this
      */
     public function setCustomer($customer)

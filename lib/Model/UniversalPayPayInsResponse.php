@@ -54,9 +54,9 @@ class UniversalPayPayInsResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'credited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'credited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money',
         'credited_wallet_id' => 'string',
         'nature' => 'string',
         'status' => 'string',
@@ -72,7 +72,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
         'id' => 'string',
         'tag' => 'string',
         'creation_date' => '\DateTime',
-        'provider' => '\Swagger\Client\Model\InlineResponse2009Provider',
+        'provider' => '\Swagger\Client\Model\PaymentUniversalPayData',
         'card_id' => 'string'
     ];
 
@@ -375,7 +375,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -384,7 +384,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -396,7 +396,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getCreditedFunds()
     {
@@ -405,7 +405,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $credited_funds
+     * @param \Swagger\Client\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -417,7 +417,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -426,7 +426,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)
@@ -773,7 +773,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Gets provider
-     * @return \Swagger\Client\Model\InlineResponse2009Provider
+     * @return \Swagger\Client\Model\PaymentUniversalPayData
      */
     public function getProvider()
     {
@@ -782,7 +782,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets provider
-     * @param \Swagger\Client\Model\InlineResponse2009Provider $provider
+     * @param \Swagger\Client\Model\PaymentUniversalPayData $provider
      * @return $this
      */
     public function setProvider($provider)

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **payOutsGet**
-> \Swagger\Client\Model\InlineResponse20011 payOutsGet($id)
+> \Swagger\Client\Model\PayOutBankWireResponse payOutsGet($id)
 
 SwaggerDocSummary
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\Swagger\Client\Model\PayOutBankWireResponse**](../Model/PayOutBankWireResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payOutsPost**
-> \Swagger\Client\Model\InlineResponse20011 payOutsPost($request)
+> \Swagger\Client\Model\PayOutBankWireResponse payOutsPost($request)
 
 SwaggerDocSummary
 
@@ -72,7 +72,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\PayOutsApi();
-$request = new \Swagger\Client\Model\Request(); // \Swagger\Client\Model\Request | SwaggerDocParameter
+$request = new \Swagger\Client\Model\PayOutBankWirePost(); // \Swagger\Client\Model\PayOutBankWirePost | SwaggerDocParameter
 
 try {
     $result = $api_instance->payOutsPost($request);
@@ -87,11 +87,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**\Swagger\Client\Model\Request**](../Model/\Swagger\Client\Model\Request.md)| SwaggerDocParameter | [optional]
+ **request** | [**\Swagger\Client\Model\PayOutBankWirePost**](../Model/\Swagger\Client\Model\PayOutBankWirePost.md)| SwaggerDocParameter | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\Swagger\Client\Model\PayOutBankWireResponse**](../Model/PayOutBankWireResponse.md)
 
 ### Authorization
 

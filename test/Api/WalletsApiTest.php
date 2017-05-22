@@ -88,6 +88,17 @@ class WalletsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for walletsGetList
+     *
+     * .
+     *
+     */
+    public function testWalletsGetList()
+    {
+
+    }
+
+    /**
      * Test case for walletsGetTransactionList
      *
      * List a Wallet's Transactions.

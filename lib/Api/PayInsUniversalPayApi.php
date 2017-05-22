@@ -94,7 +94,7 @@ class PayInsUniversalPayApi
      *
      * @param int $pay_in_id The Id of a payment (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2009
+     * @return \Swagger\Client\Model\UniversalPayPayInsResponse
      */
     public function payInsUniversalPayUniversalPayGetPayment($pay_in_id)
     {
@@ -109,7 +109,7 @@ class PayInsUniversalPayApi
      *
      * @param int $pay_in_id The Id of a payment (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\UniversalPayPayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsUniversalPayUniversalPayGetPaymentWithHttpInfo($pay_in_id)
     {
@@ -159,19 +159,19 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2009',
+                '\Swagger\Client\Model\UniversalPayPayInsResponse',
                 '/v2.01/PayInsUniversalPay/payments/{PayInId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2009', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayPayInsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2009', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayPayInsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -185,9 +185,9 @@ class PayInsUniversalPayApi
      *
      * Create a UniversalPay PayIn Request
      *
-     * @param \Swagger\Client\Model\UniversalPayPayIn $universal_pay_pay_in UniversalPay PayIn Request Object params (optional)
+     * @param \Swagger\Client\Model\UniversalPayPayByWebPost $universal_pay_pay_in UniversalPay PayIn Request Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse20010
+     * @return \Swagger\Client\Model\UniversalPayPayByWebResponse
      */
     public function payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in = null)
     {
@@ -200,9 +200,9 @@ class PayInsUniversalPayApi
      *
      * Create a UniversalPay PayIn Request
      *
-     * @param \Swagger\Client\Model\UniversalPayPayIn $universal_pay_pay_in UniversalPay PayIn Request Object params (optional)
+     * @param \Swagger\Client\Model\UniversalPayPayByWebPost $universal_pay_pay_in UniversalPay PayIn Request Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\UniversalPayPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsUniversalPayUniversalPayPostPaymentByWebWithHttpInfo($universal_pay_pay_in = null)
     {
@@ -245,19 +245,19 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse20010',
+                '\Swagger\Client\Model\UniversalPayPayByWebResponse',
                 '/v2.01/PayInsUniversalPay/payments/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20010', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayPayByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20010', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayPayByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -272,9 +272,9 @@ class PayInsUniversalPayApi
      * Create a UniversalPay Payment Refund
      *
      * @param int $pay_in_id The Id of a PayIn (required)
-     * @param \Swagger\Client\Model\UniversalPayRefund $universal_pay_refund Refund Object params (optional)
+     * @param \Swagger\Client\Model\UniversalPayRefundPost $universal_pay_refund Refund Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse204
+     * @return \Swagger\Client\Model\UniversalPayRefundResponse
      */
     public function payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund = null)
     {
@@ -288,9 +288,9 @@ class PayInsUniversalPayApi
      * Create a UniversalPay Payment Refund
      *
      * @param int $pay_in_id The Id of a PayIn (required)
-     * @param \Swagger\Client\Model\UniversalPayRefund $universal_pay_refund Refund Object params (optional)
+     * @param \Swagger\Client\Model\UniversalPayRefundPost $universal_pay_refund Refund Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse204, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\UniversalPayRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsUniversalPayUniversalPayPostRefundWithHttpInfo($pay_in_id, $universal_pay_refund = null)
     {
@@ -345,19 +345,19 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse204',
+                '\Swagger\Client\Model\UniversalPayRefundResponse',
                 '/v2.01/PayInsUniversalPay/payments/{PayInId}/refunds'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse204', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayRefundResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse204', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayRefundResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -371,9 +371,9 @@ class PayInsUniversalPayApi
      *
      * 
      *
-     * @param \Swagger\Client\Model\UniversalPaySaveCard $universal_pay_save_card  (optional)
+     * @param \Swagger\Client\Model\UniversalPayTokenRequestPost $universal_pay_save_card  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse20010
+     * @return \Swagger\Client\Model\UniversalPayPayByWebResponse
      */
     public function payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card = null)
     {
@@ -386,9 +386,9 @@ class PayInsUniversalPayApi
      *
      * 
      *
-     * @param \Swagger\Client\Model\UniversalPaySaveCard $universal_pay_save_card  (optional)
+     * @param \Swagger\Client\Model\UniversalPayTokenRequestPost $universal_pay_save_card  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\UniversalPayPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsUniversalPayUniversalPaySaveCardWithHttpInfo($universal_pay_save_card = null)
     {
@@ -431,19 +431,19 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse20010',
+                '\Swagger\Client\Model\UniversalPayPayByWebResponse',
                 '/v2.01/PayInsUniversalPay/cards'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20010', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayPayByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20010', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayPayByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

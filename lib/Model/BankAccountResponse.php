@@ -55,7 +55,7 @@ class BankAccountResponse implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'type' => 'string',
-        'owner_address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
+        'owner_address' => '\Swagger\Client\Model\Address',
         'owner_name' => 'string',
         'user_id' => 'string',
         'active' => 'bool',
@@ -238,7 +238,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Gets owner_address
-     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
+     * @return \Swagger\Client\Model\Address
      */
     public function getOwnerAddress()
     {
@@ -247,7 +247,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $owner_address
+     * @param \Swagger\Client\Model\Address $owner_address The address of the owner of the bank account
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -331,7 +331,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id The item's ID
+     * @param string $id
      * @return $this
      */
     public function setId($id)
@@ -352,7 +352,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Sets creation_date
-     * @param int $creation_date When the item was created
+     * @param int $creation_date
      * @return $this
      */
     public function setCreationDate($creation_date)
@@ -373,7 +373,7 @@ class BankAccountResponse implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)

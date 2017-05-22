@@ -57,8 +57,8 @@ class CustomerDetail implements ArrayAccess
         'email' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
-        'telephone' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerTelephone',
-        'address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress'
+        'telephone' => '\Swagger\Client\Model\Telephone',
+        'address' => '\Swagger\Client\Model\Address'
     ];
 
     public static function swaggerTypes()
@@ -283,7 +283,7 @@ class CustomerDetail implements ArrayAccess
 
     /**
      * Gets telephone
-     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerTelephone
+     * @return \Swagger\Client\Model\Telephone
      */
     public function getTelephone()
     {
@@ -292,7 +292,7 @@ class CustomerDetail implements ArrayAccess
 
     /**
      * Sets telephone
-     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerTelephone $telephone
+     * @param \Swagger\Client\Model\Telephone $telephone
      * @return $this
      */
     public function setTelephone($telephone)
@@ -304,7 +304,7 @@ class CustomerDetail implements ArrayAccess
 
     /**
      * Gets address
-     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
+     * @return \Swagger\Client\Model\Address
      */
     public function getAddress()
     {
@@ -313,7 +313,7 @@ class CustomerDetail implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $address
+     * @param \Swagger\Client\Model\Address $address
      * @return $this
      */
     public function setAddress($address)

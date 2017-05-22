@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **payInsAplazameAplazameGetPayment**
-> \Swagger\Client\Model\InlineResponse2001 payInsAplazameAplazameGetPayment($pay_in_id)
+> \Swagger\Client\Model\AplazamePayInsResponse payInsAplazameAplazameGetPayment($pay_in_id)
 
 -------
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\AplazamePayInsResponse**](../Model/AplazamePayInsResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAplazameAplazamePostPaymentByWeb**
-> \Swagger\Client\Model\InlineResponse2002 payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in)
+> \Swagger\Client\Model\PayByWebResponse payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in)
 
 --------
 
@@ -73,7 +73,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\PayInsAplazameApi();
-$aplazame_pay_in = new \Swagger\Client\Model\AplazamePayIn(); // \Swagger\Client\Model\AplazamePayIn | ------------
+$aplazame_pay_in = new \Swagger\Client\Model\AplazamePayByWebPost(); // \Swagger\Client\Model\AplazamePayByWebPost | ------------
 
 try {
     $result = $api_instance->payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in);
@@ -88,11 +88,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **aplazame_pay_in** | [**\Swagger\Client\Model\AplazamePayIn**](../Model/\Swagger\Client\Model\AplazamePayIn.md)| ------------ | [optional]
+ **aplazame_pay_in** | [**\Swagger\Client\Model\AplazamePayByWebPost**](../Model/\Swagger\Client\Model\AplazamePayByWebPost.md)| ------------ | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\PayByWebResponse**](../Model/PayByWebResponse.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAplazameRefund**
-> \Swagger\Client\Model\InlineResponse204 payInsAplazameRefund($pay_in_id, $aplazame_refund)
+> \Swagger\Client\Model\AplazameRefundResponse payInsAplazameRefund($pay_in_id, $aplazame_refund)
 
 
 
@@ -120,7 +120,7 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_AC
 
 $api_instance = new Swagger\Client\Api\PayInsAplazameApi();
 $pay_in_id = "pay_in_id_example"; // string | 
-$aplazame_refund = new \Swagger\Client\Model\AplazameRefund(); // \Swagger\Client\Model\AplazameRefund | 
+$aplazame_refund = new \Swagger\Client\Model\AplazameRefundPaymentPost(); // \Swagger\Client\Model\AplazameRefundPaymentPost | 
 
 try {
     $result = $api_instance->payInsAplazameRefund($pay_in_id, $aplazame_refund);
@@ -136,11 +136,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **string**|  |
- **aplazame_refund** | [**\Swagger\Client\Model\AplazameRefund**](../Model/\Swagger\Client\Model\AplazameRefund.md)|  | [optional]
+ **aplazame_refund** | [**\Swagger\Client\Model\AplazameRefundPaymentPost**](../Model/\Swagger\Client\Model\AplazameRefundPaymentPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse204**](../Model/InlineResponse204.md)
+[**\Swagger\Client\Model\AplazameRefundResponse**](../Model/AplazameRefundResponse.md)
 
 ### Authorization
 

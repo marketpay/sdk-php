@@ -56,11 +56,11 @@ class SeurShipmentPost implements ArrayAccess
     protected static $swaggerTypes = [
         'tag' => 'string',
         'pick_up_date' => 'int',
-        'sender' => '\Swagger\Client\Model\V201ShipmentSeurshipmentsSender',
-        'receiver' => '\Swagger\Client\Model\V201ShipmentSeurshipmentsSender',
+        'sender' => '\Swagger\Client\Model\ShipmentActor',
+        'receiver' => '\Swagger\Client\Model\ShipmentActor',
         'sender_user_id' => 'string',
         'receiver_user_id' => 'string',
-        'product' => '\Swagger\Client\Model\V201ShipmentSeurshipmentsProduct'
+        'product' => '\Swagger\Client\Model\Product'
     ];
 
     public static function swaggerTypes()
@@ -221,7 +221,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Gets sender
-     * @return \Swagger\Client\Model\V201ShipmentSeurshipmentsSender
+     * @return \Swagger\Client\Model\ShipmentActor
      */
     public function getSender()
     {
@@ -230,7 +230,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets sender
-     * @param \Swagger\Client\Model\V201ShipmentSeurshipmentsSender $sender
+     * @param \Swagger\Client\Model\ShipmentActor $sender 
      * @return $this
      */
     public function setSender($sender)
@@ -242,7 +242,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Gets receiver
-     * @return \Swagger\Client\Model\V201ShipmentSeurshipmentsSender
+     * @return \Swagger\Client\Model\ShipmentActor
      */
     public function getReceiver()
     {
@@ -251,7 +251,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets receiver
-     * @param \Swagger\Client\Model\V201ShipmentSeurshipmentsSender $receiver
+     * @param \Swagger\Client\Model\ShipmentActor $receiver 
      * @return $this
      */
     public function setReceiver($receiver)
@@ -305,7 +305,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Gets product
-     * @return \Swagger\Client\Model\V201ShipmentSeurshipmentsProduct
+     * @return \Swagger\Client\Model\Product
      */
     public function getProduct()
     {
@@ -314,7 +314,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets product
-     * @param \Swagger\Client\Model\V201ShipmentSeurshipmentsProduct $product
+     * @param \Swagger\Client\Model\Product $product 
      * @return $this
      */
     public function setProduct($product)

@@ -54,16 +54,15 @@ class UniversalPayTokenRequestPost implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'token_request' => 'object',
+        'token_request' => '\Swagger\Client\Model\PayInUniversalTokenRequest',
         'tag' => 'string',
         'credited_wallet_id' => 'string',
         'secure_mode' => 'string',
         'success_url' => 'string',
         'cancel_url' => 'string',
         'auto_return' => 'bool',
-        'checkout_layout' => 'string',
         'language' => 'string',
-        'customer' => '\Swagger\Client\Model\V201PayInsUniversalPaypaymentswebCustomer'
+        'customer' => '\Swagger\Client\Model\CustomerDetail'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +82,6 @@ class UniversalPayTokenRequestPost implements ArrayAccess
         'success_url' => 'SuccessUrl',
         'cancel_url' => 'CancelUrl',
         'auto_return' => 'AutoReturn',
-        'checkout_layout' => 'CheckoutLayout',
         'language' => 'Language',
         'customer' => 'Customer'
     ];
@@ -101,7 +99,6 @@ class UniversalPayTokenRequestPost implements ArrayAccess
         'success_url' => 'setSuccessUrl',
         'cancel_url' => 'setCancelUrl',
         'auto_return' => 'setAutoReturn',
-        'checkout_layout' => 'setCheckoutLayout',
         'language' => 'setLanguage',
         'customer' => 'setCustomer'
     ];
@@ -119,7 +116,6 @@ class UniversalPayTokenRequestPost implements ArrayAccess
         'success_url' => 'getSuccessUrl',
         'cancel_url' => 'getCancelUrl',
         'auto_return' => 'getAutoReturn',
-        'checkout_layout' => 'getCheckoutLayout',
         'language' => 'getLanguage',
         'customer' => 'getCustomer'
     ];
@@ -142,8 +138,6 @@ class UniversalPayTokenRequestPost implements ArrayAccess
     const SECURE_MODE_NOT_SPECIFIED = 'NotSpecified';
     const SECURE_MODE_DEFAULT = 'DEFAULT';
     const SECURE_MODE_FORCE = 'FORCE';
-    const CHECKOUT_LAYOUT_IFRAME = 'IFRAME';
-    const CHECKOUT_LAYOUT_REDIRECT = 'REDIRECT';
     const LANGUAGE_NOT_SPECIFIED = 'NotSpecified';
     const LANGUAGE_DE = 'DE';
     const LANGUAGE_EN = 'EN';
@@ -175,18 +169,6 @@ class UniversalPayTokenRequestPost implements ArrayAccess
             self::SECURE_MODE_NOT_SPECIFIED,
             self::SECURE_MODE_DEFAULT,
             self::SECURE_MODE_FORCE,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getCheckoutLayoutAllowableValues()
-    {
-        return [
-            self::CHECKOUT_LAYOUT_IFRAME,
-            self::CHECKOUT_LAYOUT_REDIRECT,
         ];
     }
     
@@ -238,7 +220,6 @@ class UniversalPayTokenRequestPost implements ArrayAccess
         $this->container['success_url'] = isset($data['success_url']) ? $data['success_url'] : null;
         $this->container['cancel_url'] = isset($data['cancel_url']) ? $data['cancel_url'] : null;
         $this->container['auto_return'] = isset($data['auto_return']) ? $data['auto_return'] : null;
-        $this->container['checkout_layout'] = isset($data['checkout_layout']) ? $data['checkout_layout'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
     }
@@ -260,16 +241,14 @@ class UniversalPayTokenRequestPost implements ArrayAccess
             $invalid_properties[] = "invalid value for 'secure_mode', must be one of 'NotSpecified', 'DEFAULT', 'FORCE'.";
         }
 
-        $allowed_values = ["IFRAME", "REDIRECT"];
-        if (!in_array($this->container['checkout_layout'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'checkout_layout', must be one of 'IFRAME', 'REDIRECT'.";
-        }
-
         $allowed_values = ["NotSpecified", "DE", "EN", "DA", "ES", "ET", "FI", "FR", "EL", "HU", "IT", "NL", "NO", "PL", "PT", "SK", "SV", "CS"];
         if (!in_array($this->container['language'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'language', must be one of 'NotSpecified', 'DE', 'EN', 'DA', 'ES', 'ET', 'FI', 'FR', 'EL', 'HU', 'IT', 'NL', 'NO', 'PL', 'PT', 'SK', 'SV', 'CS'.";
         }
 
+        if ($this->container['customer'] === null) {
+            $invalid_properties[] = "'customer' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -289,12 +268,11 @@ class UniversalPayTokenRequestPost implements ArrayAccess
         if (!in_array($this->container['secure_mode'], $allowed_values)) {
             return false;
         }
-        $allowed_values = ["IFRAME", "REDIRECT"];
-        if (!in_array($this->container['checkout_layout'], $allowed_values)) {
-            return false;
-        }
         $allowed_values = ["NotSpecified", "DE", "EN", "DA", "ES", "ET", "FI", "FR", "EL", "HU", "IT", "NL", "NO", "PL", "PT", "SK", "SV", "CS"];
         if (!in_array($this->container['language'], $allowed_values)) {
+            return false;
+        }
+        if ($this->container['customer'] === null) {
             return false;
         }
         return true;
@@ -303,7 +281,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Gets token_request
-     * @return object
+     * @return \Swagger\Client\Model\PayInUniversalTokenRequest
      */
     public function getTokenRequest()
     {
@@ -312,7 +290,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Sets token_request
-     * @param object $token_request
+     * @param \Swagger\Client\Model\PayInUniversalTokenRequest $token_request
      * @return $this
      */
     public function setTokenRequest($token_request)
@@ -453,31 +431,6 @@ class UniversalPayTokenRequestPost implements ArrayAccess
     }
 
     /**
-     * Gets checkout_layout
-     * @return string
-     */
-    public function getCheckoutLayout()
-    {
-        return $this->container['checkout_layout'];
-    }
-
-    /**
-     * Sets checkout_layout
-     * @param string $checkout_layout Omit to redirect browser
-     * @return $this
-     */
-    public function setCheckoutLayout($checkout_layout)
-    {
-        $allowed_values = array('IFRAME', 'REDIRECT');
-        if (!is_null($checkout_layout) && (!in_array($checkout_layout, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'checkout_layout', must be one of 'IFRAME', 'REDIRECT'");
-        }
-        $this->container['checkout_layout'] = $checkout_layout;
-
-        return $this;
-    }
-
-    /**
      * Gets language
      * @return string
      */
@@ -504,7 +457,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Gets customer
-     * @return \Swagger\Client\Model\V201PayInsUniversalPaypaymentswebCustomer
+     * @return \Swagger\Client\Model\CustomerDetail
      */
     public function getCustomer()
     {
@@ -513,7 +466,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Sets customer
-     * @param \Swagger\Client\Model\V201PayInsUniversalPaypaymentswebCustomer $customer
+     * @param \Swagger\Client\Model\CustomerDetail $customer
      * @return $this
      */
     public function setCustomer($customer)

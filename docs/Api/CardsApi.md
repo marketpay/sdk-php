@@ -5,11 +5,12 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cardsGet**](CardsApi.md#cardsGet) | **GET** /v2.01/Cards/{CardId} | View a Card
+[**cardsGetList**](CardsApi.md#cardsGetList) | **GET** /v2.01/Cards | 
 [**cardsPut**](CardsApi.md#cardsPut) | **PUT** /v2.01/Cards/{CardId} | Deactivate a Card
 
 
 # **cardsGet**
-> \Swagger\Client\Model\InlineResponse200 cardsGet($card_id)
+> \Swagger\Client\Model\CardResponse cardsGet($card_id)
 
 View a Card
 
@@ -43,7 +44,55 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\CardResponse**](../Model/CardResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **cardsGetList**
+> \Swagger\Client\Model\ResponseListCardResponse cardsGetList($page, $per_page)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$api_instance = new Swagger\Client\Api\CardsApi();
+$page = 56; // int | 
+$per_page = 56; // int | 
+
+try {
+    $result = $api_instance->cardsGetList($page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CardsApi->cardsGetList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ResponseListCardResponse**](../Model/ResponseListCardResponse.md)
 
 ### Authorization
 
@@ -57,7 +106,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cardsPut**
-> \Swagger\Client\Model\InlineResponse200 cardsPut($card_id, $card)
+> \Swagger\Client\Model\CardResponse cardsPut($card_id, $card)
 
 Deactivate a Card
 
@@ -73,7 +122,7 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_AC
 
 $api_instance = new Swagger\Client\Api\CardsApi();
 $card_id = 789; // int | The Id of a card
-$card = new \Swagger\Client\Model\Card(); // \Swagger\Client\Model\Card | Card Object params
+$card = new \Swagger\Client\Model\CardPut(); // \Swagger\Client\Model\CardPut | Card Object params
 
 try {
     $result = $api_instance->cardsPut($card_id, $card);
@@ -89,11 +138,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **card_id** | **int**| The Id of a card |
- **card** | [**\Swagger\Client\Model\Card**](../Model/\Swagger\Client\Model\Card.md)| Card Object params | [optional]
+ **card** | [**\Swagger\Client\Model\CardPut**](../Model/\Swagger\Client\Model\CardPut.md)| Card Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Swagger\Client\Model\CardResponse**](../Model/CardResponse.md)
 
 ### Authorization
 

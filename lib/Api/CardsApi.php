@@ -94,7 +94,7 @@ class CardsApi
      *
      * @param int $card_id The Id of a card (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \Swagger\Client\Model\CardResponse
      */
     public function cardsGet($card_id)
     {
@@ -109,7 +109,7 @@ class CardsApi
      *
      * @param int $card_id The Id of a card (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\CardResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cardsGetWithHttpInfo($card_id)
     {
@@ -159,19 +159,110 @@ class CardsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse200',
+                '\Swagger\Client\Model\CardResponse',
                 '/v2.01/Cards/{CardId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CardResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CardResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation cardsGetList
+     *
+     * 
+     *
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\ResponseListCardResponse
+     */
+    public function cardsGetList($page = null, $per_page = null)
+    {
+        list($response) = $this->cardsGetListWithHttpInfo($page, $per_page);
+        return $response;
+    }
+
+    /**
+     * Operation cardsGetListWithHttpInfo
+     *
+     * 
+     *
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\ResponseListCardResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function cardsGetListWithHttpInfo($page = null, $per_page = null)
+    {
+        // parse inputs
+        $resourcePath = "/v2.01/Cards";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // query params
+        if ($page !== null) {
+            $queryParams['Page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }
+        // query params
+        if ($per_page !== null) {
+            $queryParams['Per_Page'] = $this->apiClient->getSerializer()->toQueryValue($per_page);
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\ResponseListCardResponse',
+                '/v2.01/Cards'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ResponseListCardResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ResponseListCardResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -186,9 +277,9 @@ class CardsApi
      * Deactivate a Card
      *
      * @param int $card_id The Id of a card (required)
-     * @param \Swagger\Client\Model\Card $card Card Object params (optional)
+     * @param \Swagger\Client\Model\CardPut $card Card Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \Swagger\Client\Model\CardResponse
      */
     public function cardsPut($card_id, $card = null)
     {
@@ -202,9 +293,9 @@ class CardsApi
      * Deactivate a Card
      *
      * @param int $card_id The Id of a card (required)
-     * @param \Swagger\Client\Model\Card $card Card Object params (optional)
+     * @param \Swagger\Client\Model\CardPut $card Card Object params (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\CardResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function cardsPutWithHttpInfo($card_id, $card = null)
     {
@@ -259,19 +350,19 @@ class CardsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse200',
+                '\Swagger\Client\Model\CardResponse',
                 '/v2.01/Cards/{CardId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CardResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CardResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -56,9 +56,9 @@ class PayOutBankWireResponse implements ArrayAccess
     protected static $swaggerTypes = [
         'author_id' => 'string',
         'credited_user_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'credited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'credited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money',
         'status' => 'string',
         'result_code' => 'string',
         'result_message' => 'string',
@@ -381,7 +381,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -390,7 +390,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -402,7 +402,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getCreditedFunds()
     {
@@ -411,7 +411,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $credited_funds
+     * @param \Swagger\Client\Model\Money $credited_funds
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -423,7 +423,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -432,7 +432,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)
@@ -700,7 +700,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id The item's ID
+     * @param string $id
      * @return $this
      */
     public function setId($id)
@@ -721,7 +721,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Sets creation_date
-     * @param int $creation_date When the item was created
+     * @param int $creation_date
      * @return $this
      */
     public function setCreationDate($creation_date)
@@ -742,7 +742,7 @@ class PayOutBankWireResponse implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)

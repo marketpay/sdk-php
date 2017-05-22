@@ -58,7 +58,7 @@ class BankAccountOtherPost implements ArrayAccess
         'bic' => 'string',
         'account_number' => 'string',
         'tag' => 'string',
-        'owner_address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
+        'owner_address' => '\Swagger\Client\Model\Address',
         'owner_name' => 'string'
     ];
 
@@ -781,7 +781,7 @@ class BankAccountOtherPost implements ArrayAccess
 
     /**
      * Gets owner_address
-     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
+     * @return \Swagger\Client\Model\Address
      */
     public function getOwnerAddress()
     {
@@ -790,7 +790,7 @@ class BankAccountOtherPost implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $owner_address
+     * @param \Swagger\Client\Model\Address $owner_address The address of the owner of the bank account
      * @return $this
      */
     public function setOwnerAddress($owner_address)

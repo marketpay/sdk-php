@@ -55,9 +55,8 @@ class PayOutBankWirePost implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'tag' => 'string',
-        'author_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money',
         'bank_account_id' => 'string',
         'debited_wallet_id' => 'string',
         'bank_wire_ref' => 'string'
@@ -74,7 +73,6 @@ class PayOutBankWirePost implements ArrayAccess
      */
     protected static $attributeMap = [
         'tag' => 'Tag',
-        'author_id' => 'AuthorId',
         'debited_funds' => 'DebitedFunds',
         'fees' => 'Fees',
         'bank_account_id' => 'BankAccountId',
@@ -89,7 +87,6 @@ class PayOutBankWirePost implements ArrayAccess
      */
     protected static $setters = [
         'tag' => 'setTag',
-        'author_id' => 'setAuthorId',
         'debited_funds' => 'setDebitedFunds',
         'fees' => 'setFees',
         'bank_account_id' => 'setBankAccountId',
@@ -104,7 +101,6 @@ class PayOutBankWirePost implements ArrayAccess
      */
     protected static $getters = [
         'tag' => 'getTag',
-        'author_id' => 'getAuthorId',
         'debited_funds' => 'getDebitedFunds',
         'fees' => 'getFees',
         'bank_account_id' => 'getBankAccountId',
@@ -144,7 +140,6 @@ class PayOutBankWirePost implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
-        $this->container['author_id'] = isset($data['author_id']) ? $data['author_id'] : null;
         $this->container['debited_funds'] = isset($data['debited_funds']) ? $data['debited_funds'] : null;
         $this->container['fees'] = isset($data['fees']) ? $data['fees'] : null;
         $this->container['bank_account_id'] = isset($data['bank_account_id']) ? $data['bank_account_id'] : null;
@@ -199,29 +194,8 @@ class PayOutBankWirePost implements ArrayAccess
     }
 
     /**
-     * Gets author_id
-     * @return string
-     */
-    public function getAuthorId()
-    {
-        return $this->container['author_id'];
-    }
-
-    /**
-     * Sets author_id
-     * @param string $author_id
-     * @return $this
-     */
-    public function setAuthorId($author_id)
-    {
-        $this->container['author_id'] = $author_id;
-
-        return $this;
-    }
-
-    /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -230,7 +204,7 @@ class PayOutBankWirePost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -242,7 +216,7 @@ class PayOutBankWirePost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -251,7 +225,7 @@ class PayOutBankWirePost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)

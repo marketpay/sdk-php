@@ -94,7 +94,7 @@ class PayInsAplazameApi
      *
      * @param string $pay_in_id ------ (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2001
+     * @return \Swagger\Client\Model\AplazamePayInsResponse
      */
     public function payInsAplazameAplazameGetPayment($pay_in_id)
     {
@@ -109,7 +109,7 @@ class PayInsAplazameApi
      *
      * @param string $pay_in_id ------ (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\AplazamePayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsAplazameAplazameGetPaymentWithHttpInfo($pay_in_id)
     {
@@ -159,19 +159,19 @@ class PayInsAplazameApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2001',
+                '\Swagger\Client\Model\AplazamePayInsResponse',
                 '/v2.01/PayInsAplazame/payments/{PayInId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\AplazamePayInsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2001', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\AplazamePayInsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -185,9 +185,9 @@ class PayInsAplazameApi
      *
      * --------
      *
-     * @param \Swagger\Client\Model\AplazamePayIn $aplazame_pay_in ------------ (optional)
+     * @param \Swagger\Client\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2002
+     * @return \Swagger\Client\Model\PayByWebResponse
      */
     public function payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in = null)
     {
@@ -200,9 +200,9 @@ class PayInsAplazameApi
      *
      * --------
      *
-     * @param \Swagger\Client\Model\AplazamePayIn $aplazame_pay_in ------------ (optional)
+     * @param \Swagger\Client\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\PayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsAplazameAplazamePostPaymentByWebWithHttpInfo($aplazame_pay_in = null)
     {
@@ -245,19 +245,19 @@ class PayInsAplazameApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2002',
+                '\Swagger\Client\Model\PayByWebResponse',
                 '/v2.01/PayInsAplazame/payments/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PayByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2002', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PayByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -272,9 +272,9 @@ class PayInsAplazameApi
      * 
      *
      * @param string $pay_in_id  (required)
-     * @param \Swagger\Client\Model\AplazameRefund $aplazame_refund  (optional)
+     * @param \Swagger\Client\Model\AplazameRefundPaymentPost $aplazame_refund  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse204
+     * @return \Swagger\Client\Model\AplazameRefundResponse
      */
     public function payInsAplazameRefund($pay_in_id, $aplazame_refund = null)
     {
@@ -288,9 +288,9 @@ class PayInsAplazameApi
      * 
      *
      * @param string $pay_in_id  (required)
-     * @param \Swagger\Client\Model\AplazameRefund $aplazame_refund  (optional)
+     * @param \Swagger\Client\Model\AplazameRefundPaymentPost $aplazame_refund  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse204, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\AplazameRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsAplazameRefundWithHttpInfo($pay_in_id, $aplazame_refund = null)
     {
@@ -345,19 +345,19 @@ class PayInsAplazameApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse204',
+                '\Swagger\Client\Model\AplazameRefundResponse',
                 '/v2.01/PayInsAplazame/payments/{PayInId}/refunds'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse204', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\AplazameRefundResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 204:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse204', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\AplazameRefundResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse400', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

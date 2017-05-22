@@ -139,14 +139,6 @@ class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "checkout_layout"
-     */
-    public function testPropertyCheckoutLayout()
-    {
-
-    }
-
-    /**
      * Test attribute "language"
      */
     public function testPropertyLanguage()

@@ -57,14 +57,14 @@ class AplazamePayByWebPost implements ArrayAccess
         'tag' => 'string',
         'user_id' => 'int',
         'credited_wallet_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'shipping' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money',
+        'shipping' => '\Swagger\Client\Model\Money',
         'cancel_url' => 'string',
         'success_url' => 'string',
         'checkout_url' => 'string',
-        'order_items' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebOrderItems[]',
-        'customer' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomer'
+        'order_items' => '\Swagger\Client\Model\AplazameOrderItem[]',
+        'customer' => '\Swagger\Client\Model\Customer'
     ];
 
     public static function swaggerTypes()
@@ -181,6 +181,9 @@ class AplazamePayByWebPost implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['debited_funds'] === null) {
+            $invalid_properties[] = "'debited_funds' can't be null";
+        }
         if ($this->container['cancel_url'] === null) {
             $invalid_properties[] = "'cancel_url' can't be null";
         }
@@ -189,6 +192,9 @@ class AplazamePayByWebPost implements ArrayAccess
         }
         if ($this->container['order_items'] === null) {
             $invalid_properties[] = "'order_items' can't be null";
+        }
+        if ($this->container['customer'] === null) {
+            $invalid_properties[] = "'customer' can't be null";
         }
         return $invalid_properties;
     }
@@ -202,6 +208,9 @@ class AplazamePayByWebPost implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['debited_funds'] === null) {
+            return false;
+        }
         if ($this->container['cancel_url'] === null) {
             return false;
         }
@@ -209,6 +218,9 @@ class AplazamePayByWebPost implements ArrayAccess
             return false;
         }
         if ($this->container['order_items'] === null) {
+            return false;
+        }
+        if ($this->container['customer'] === null) {
             return false;
         }
         return true;
@@ -280,7 +292,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -289,7 +301,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -301,7 +313,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -310,7 +322,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)
@@ -322,7 +334,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Gets shipping
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getShipping()
     {
@@ -331,7 +343,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets shipping
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $shipping
+     * @param \Swagger\Client\Model\Money $shipping
      * @return $this
      */
     public function setShipping($shipping)
@@ -406,7 +418,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Gets order_items
-     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebOrderItems[]
+     * @return \Swagger\Client\Model\AplazameOrderItem[]
      */
     public function getOrderItems()
     {
@@ -415,7 +427,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets order_items
-     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebOrderItems[] $order_items
+     * @param \Swagger\Client\Model\AplazameOrderItem[] $order_items
      * @return $this
      */
     public function setOrderItems($order_items)
@@ -427,7 +439,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Gets customer
-     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomer
+     * @return \Swagger\Client\Model\Customer
      */
     public function getCustomer()
     {
@@ -436,7 +448,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets customer
-     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomer $customer
+     * @param \Swagger\Client\Model\Customer $customer Customer data.  Optional user info. If it is not set, Marketpay will try to use the data it does currently have about the user, but it will fail if existing data is not enough.
      * @return $this
      */
     public function setCustomer($customer)

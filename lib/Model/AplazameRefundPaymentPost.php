@@ -55,9 +55,8 @@ class AplazameRefundPaymentPost implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'tag' => 'string',
-        'author_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds'
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money'
     ];
 
     public static function swaggerTypes()
@@ -71,7 +70,6 @@ class AplazameRefundPaymentPost implements ArrayAccess
      */
     protected static $attributeMap = [
         'tag' => 'Tag',
-        'author_id' => 'AuthorId',
         'debited_funds' => 'DebitedFunds',
         'fees' => 'Fees'
     ];
@@ -83,7 +81,6 @@ class AplazameRefundPaymentPost implements ArrayAccess
      */
     protected static $setters = [
         'tag' => 'setTag',
-        'author_id' => 'setAuthorId',
         'debited_funds' => 'setDebitedFunds',
         'fees' => 'setFees'
     ];
@@ -95,7 +92,6 @@ class AplazameRefundPaymentPost implements ArrayAccess
      */
     protected static $getters = [
         'tag' => 'getTag',
-        'author_id' => 'getAuthorId',
         'debited_funds' => 'getDebitedFunds',
         'fees' => 'getFees'
     ];
@@ -132,7 +128,6 @@ class AplazameRefundPaymentPost implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
-        $this->container['author_id'] = isset($data['author_id']) ? $data['author_id'] : null;
         $this->container['debited_funds'] = isset($data['debited_funds']) ? $data['debited_funds'] : null;
         $this->container['fees'] = isset($data['fees']) ? $data['fees'] : null;
     }
@@ -146,6 +141,12 @@ class AplazameRefundPaymentPost implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['debited_funds'] === null) {
+            $invalid_properties[] = "'debited_funds' can't be null";
+        }
+        if ($this->container['fees'] === null) {
+            $invalid_properties[] = "'fees' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -158,6 +159,12 @@ class AplazameRefundPaymentPost implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['debited_funds'] === null) {
+            return false;
+        }
+        if ($this->container['fees'] === null) {
+            return false;
+        }
         return true;
     }
 
@@ -184,29 +191,8 @@ class AplazameRefundPaymentPost implements ArrayAccess
     }
 
     /**
-     * Gets author_id
-     * @return string
-     */
-    public function getAuthorId()
-    {
-        return $this->container['author_id'];
-    }
-
-    /**
-     * Sets author_id
-     * @param string $author_id A user's ID
-     * @return $this
-     */
-    public function setAuthorId($author_id)
-    {
-        $this->container['author_id'] = $author_id;
-
-        return $this;
-    }
-
-    /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -215,7 +201,7 @@ class AplazameRefundPaymentPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -227,7 +213,7 @@ class AplazameRefundPaymentPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -236,7 +222,7 @@ class AplazameRefundPaymentPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)

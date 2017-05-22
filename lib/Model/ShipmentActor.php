@@ -55,8 +55,8 @@ class ShipmentActor implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-        'telephone' => '\Swagger\Client\Model\V201ShipmentSeurshipmentsSenderTelephone',
-        'address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress'
+        'telephone' => '\Swagger\Client\Model\TelephoneSeur',
+        'address' => '\Swagger\Client\Model\Address'
     ];
 
     public static function swaggerTypes()
@@ -180,7 +180,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Gets telephone
-     * @return \Swagger\Client\Model\V201ShipmentSeurshipmentsSenderTelephone
+     * @return \Swagger\Client\Model\TelephoneSeur
      */
     public function getTelephone()
     {
@@ -189,7 +189,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Sets telephone
-     * @param \Swagger\Client\Model\V201ShipmentSeurshipmentsSenderTelephone $telephone
+     * @param \Swagger\Client\Model\TelephoneSeur $telephone
      * @return $this
      */
     public function setTelephone($telephone)
@@ -201,7 +201,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Gets address
-     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
+     * @return \Swagger\Client\Model\Address
      */
     public function getAddress()
     {
@@ -210,7 +210,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $address
+     * @param \Swagger\Client\Model\Address $address
      * @return $this
      */
     public function setAddress($address)

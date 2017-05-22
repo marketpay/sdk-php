@@ -63,8 +63,8 @@ class RedsysPayByWebPost implements ArrayAccess
         'url_ok' => 'string',
         'cancel_url' => 'string',
         'url_ko' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds'
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money'
     ];
 
     public static function swaggerTypes()
@@ -190,6 +190,12 @@ class RedsysPayByWebPost implements ArrayAccess
         if ($this->container['cancel_url'] === null) {
             $invalid_properties[] = "'cancel_url' can't be null";
         }
+        if ($this->container['debited_funds'] === null) {
+            $invalid_properties[] = "'debited_funds' can't be null";
+        }
+        if ($this->container['fees'] === null) {
+            $invalid_properties[] = "'fees' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -209,6 +215,12 @@ class RedsysPayByWebPost implements ArrayAccess
             return false;
         }
         if ($this->container['cancel_url'] === null) {
+            return false;
+        }
+        if ($this->container['debited_funds'] === null) {
+            return false;
+        }
+        if ($this->container['fees'] === null) {
             return false;
         }
         return true;
@@ -406,7 +418,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -415,7 +427,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -427,7 +439,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -436,7 +448,7 @@ class RedsysPayByWebPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)

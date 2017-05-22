@@ -56,8 +56,8 @@ class RedsysPreauthorizationConfirmationPost implements ArrayAccess
     protected static $swaggerTypes = [
         'tag' => 'string',
         'credited_wallet_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds'
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money'
     ];
 
     public static function swaggerTypes()
@@ -206,7 +206,7 @@ class RedsysPreauthorizationConfirmationPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -215,7 +215,7 @@ class RedsysPreauthorizationConfirmationPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited. This value must be equal o less than the value informed at the Preauthorization creation
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -227,7 +227,7 @@ class RedsysPreauthorizationConfirmationPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -236,7 +236,7 @@ class RedsysPreauthorizationConfirmationPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)

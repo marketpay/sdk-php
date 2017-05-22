@@ -57,7 +57,7 @@ class UserNaturalPost implements ArrayAccess
         'email' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
-        'address' => '\Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress',
+        'address' => '\Swagger\Client\Model\Address',
         'birthday' => 'int',
         'nationality' => 'string',
         'country_of_residence' => 'string',
@@ -1295,7 +1295,7 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Gets address
-     * @return \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress
+     * @return \Swagger\Client\Model\Address
      */
     public function getAddress()
     {
@@ -1304,7 +1304,7 @@ class UserNaturalPost implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\V201PayInsAplazamepaymentswebCustomerAddress $address
+     * @param \Swagger\Client\Model\Address $address The address
      * @return $this
      */
     public function setAddress($address)

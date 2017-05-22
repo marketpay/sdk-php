@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **payInsRedsysRedsysGetPayment**
-> \Swagger\Client\Model\InlineResponse2003 payInsRedsysRedsysGetPayment($pay_in_id)
+> \Swagger\Client\Model\RedsysPayInsResponse payInsRedsysRedsysGetPayment($pay_in_id)
 
 View a Redsys payment
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Swagger\Client\Model\RedsysPayInsResponse**](../Model/RedsysPayInsResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysGetPreauthorization**
-> \Swagger\Client\Model\InlineResponse2006 payInsRedsysRedsysGetPreauthorization($preauthorization_id)
+> \Swagger\Client\Model\RedsysPreauthorizeResponse payInsRedsysRedsysGetPreauthorization($preauthorization_id)
 
 View a Redsys Preauthorization
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\Swagger\Client\Model\RedsysPreauthorizeResponse**](../Model/RedsysPreauthorizeResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostPaymentByWeb**
-> \Swagger\Client\Model\InlineResponse2004 payInsRedsysRedsysPostPaymentByWeb($redsys_pay_in)
+> \Swagger\Client\Model\RedsysPayByWebResponse payInsRedsysRedsysPostPaymentByWeb($redsys_pay_in)
 
 Create a Redsys PayIn Request
 
@@ -125,7 +125,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\PayInsRedsysApi();
-$redsys_pay_in = new \Swagger\Client\Model\RedsysPayIn(); // \Swagger\Client\Model\RedsysPayIn | Redsys PayIn Request Object params
+$redsys_pay_in = new \Swagger\Client\Model\RedsysPayByWebPost(); // \Swagger\Client\Model\RedsysPayByWebPost | Redsys PayIn Request Object params
 
 try {
     $result = $api_instance->payInsRedsysRedsysPostPaymentByWeb($redsys_pay_in);
@@ -140,11 +140,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **redsys_pay_in** | [**\Swagger\Client\Model\RedsysPayIn**](../Model/\Swagger\Client\Model\RedsysPayIn.md)| Redsys PayIn Request Object params | [optional]
+ **redsys_pay_in** | [**\Swagger\Client\Model\RedsysPayByWebPost**](../Model/\Swagger\Client\Model\RedsysPayByWebPost.md)| Redsys PayIn Request Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Swagger\Client\Model\RedsysPayByWebResponse**](../Model/RedsysPayByWebResponse.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostPreauthorizationByWeb**
-> \Swagger\Client\Model\InlineResponse2007 payInsRedsysRedsysPostPreauthorizationByWeb($redsys_preauthorization)
+> \Swagger\Client\Model\RedsysPreauthorizeByWebResponse payInsRedsysRedsysPostPreauthorizationByWeb($redsys_preauthorization)
 
 Create a Redsys Preauthorization Request
 
@@ -173,7 +173,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new Swagger\Client\Api\PayInsRedsysApi();
-$redsys_preauthorization = new \Swagger\Client\Model\RedsysPreauthorization(); // \Swagger\Client\Model\RedsysPreauthorization | RedsysPreauthorization Object params
+$redsys_preauthorization = new \Swagger\Client\Model\RedsysPreauthorizeByWebPost(); // \Swagger\Client\Model\RedsysPreauthorizeByWebPost | RedsysPreauthorization Object params
 
 try {
     $result = $api_instance->payInsRedsysRedsysPostPreauthorizationByWeb($redsys_preauthorization);
@@ -188,11 +188,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **redsys_preauthorization** | [**\Swagger\Client\Model\RedsysPreauthorization**](../Model/\Swagger\Client\Model\RedsysPreauthorization.md)| RedsysPreauthorization Object params | [optional]
+ **redsys_preauthorization** | [**\Swagger\Client\Model\RedsysPreauthorizeByWebPost**](../Model/\Swagger\Client\Model\RedsysPreauthorizeByWebPost.md)| RedsysPreauthorization Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
+[**\Swagger\Client\Model\RedsysPreauthorizeByWebResponse**](../Model/RedsysPreauthorizeByWebResponse.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostPreauthorizationCancellation**
-> object payInsRedsysRedsysPostPreauthorizationCancellation($preauthorization_id, $redsys_preauthorization_cancellation)
+> \Swagger\Client\Model\RedsysPreauthorizationCancellationResponse payInsRedsysRedsysPostPreauthorizationCancellation($preauthorization_id, $redsys_preauthorization_cancellation)
 
 Cancels a Preauthorization
 
@@ -222,7 +222,7 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_AC
 
 $api_instance = new Swagger\Client\Api\PayInsRedsysApi();
 $preauthorization_id = 789; // int | The Id of a Redsys PreauthorizationCancellation
-$redsys_preauthorization_cancellation = NULL; // object | PreauthorizationCancellation Object params
+$redsys_preauthorization_cancellation = new \Swagger\Client\Model\RedsysPreauthorizationCancellationPost(); // \Swagger\Client\Model\RedsysPreauthorizationCancellationPost | PreauthorizationCancellation Object params
 
 try {
     $result = $api_instance->payInsRedsysRedsysPostPreauthorizationCancellation($preauthorization_id, $redsys_preauthorization_cancellation);
@@ -238,11 +238,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **preauthorization_id** | **int**| The Id of a Redsys PreauthorizationCancellation |
- **redsys_preauthorization_cancellation** | **object**| PreauthorizationCancellation Object params | [optional]
+ **redsys_preauthorization_cancellation** | [**\Swagger\Client\Model\RedsysPreauthorizationCancellationPost**](../Model/\Swagger\Client\Model\RedsysPreauthorizationCancellationPost.md)| PreauthorizationCancellation Object params | [optional]
 
 ### Return type
 
-**object**
+[**\Swagger\Client\Model\RedsysPreauthorizationCancellationResponse**](../Model/RedsysPreauthorizationCancellationResponse.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostPreauthorizationConfirmation**
-> \Swagger\Client\Model\InlineResponse2008 payInsRedsysRedsysPostPreauthorizationConfirmation($preauthorization_id, $redsys_preauthorization_confirmation)
+> \Swagger\Client\Model\RedsysPreauthorizationConfirmationResponse payInsRedsysRedsysPostPreauthorizationConfirmation($preauthorization_id, $redsys_preauthorization_confirmation)
 
 Confirms a Preauthorization
 
@@ -272,7 +272,7 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_AC
 
 $api_instance = new Swagger\Client\Api\PayInsRedsysApi();
 $preauthorization_id = 789; // int | The Id of a Redsys PreauthorizationConfirmation
-$redsys_preauthorization_confirmation = new \Swagger\Client\Model\RedsysPreauthorizationConfirmation(); // \Swagger\Client\Model\RedsysPreauthorizationConfirmation | PreauthorizationConfirmation Object params
+$redsys_preauthorization_confirmation = new \Swagger\Client\Model\RedsysPreauthorizationConfirmationPost(); // \Swagger\Client\Model\RedsysPreauthorizationConfirmationPost | PreauthorizationConfirmation Object params
 
 try {
     $result = $api_instance->payInsRedsysRedsysPostPreauthorizationConfirmation($preauthorization_id, $redsys_preauthorization_confirmation);
@@ -288,11 +288,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **preauthorization_id** | **int**| The Id of a Redsys PreauthorizationConfirmation |
- **redsys_preauthorization_confirmation** | [**\Swagger\Client\Model\RedsysPreauthorizationConfirmation**](../Model/\Swagger\Client\Model\RedsysPreauthorizationConfirmation.md)| PreauthorizationConfirmation Object params | [optional]
+ **redsys_preauthorization_confirmation** | [**\Swagger\Client\Model\RedsysPreauthorizationConfirmationPost**](../Model/\Swagger\Client\Model\RedsysPreauthorizationConfirmationPost.md)| PreauthorizationConfirmation Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Swagger\Client\Model\RedsysPreauthorizationConfirmationResponse**](../Model/RedsysPreauthorizationConfirmationResponse.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostRefund**
-> \Swagger\Client\Model\InlineResponse2005 payInsRedsysRedsysPostRefund($pay_in_id, $redsys_refund)
+> \Swagger\Client\Model\RedsysRefundResponse payInsRedsysRedsysPostRefund($pay_in_id, $redsys_refund)
 
 Create a Redsys Payment Refund
 
@@ -322,7 +322,7 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_AC
 
 $api_instance = new Swagger\Client\Api\PayInsRedsysApi();
 $pay_in_id = 789; // int | The Id of a PayIn
-$redsys_refund = new \Swagger\Client\Model\RedsysRefund(); // \Swagger\Client\Model\RedsysRefund | Refund Object params
+$redsys_refund = new \Swagger\Client\Model\RedsysRefundPost(); // \Swagger\Client\Model\RedsysRefundPost | Refund Object params
 
 try {
     $result = $api_instance->payInsRedsysRedsysPostRefund($pay_in_id, $redsys_refund);
@@ -338,11 +338,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **int**| The Id of a PayIn |
- **redsys_refund** | [**\Swagger\Client\Model\RedsysRefund**](../Model/\Swagger\Client\Model\RedsysRefund.md)| Refund Object params | [optional]
+ **redsys_refund** | [**\Swagger\Client\Model\RedsysRefundPost**](../Model/\Swagger\Client\Model\RedsysRefundPost.md)| Refund Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Swagger\Client\Model\RedsysRefundResponse**](../Model/RedsysRefundResponse.md)
 
 ### Authorization
 

@@ -54,9 +54,9 @@ class UniversalPayRefundResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'credited_funds' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
-        'fees' => '\Swagger\Client\Model\InlineResponse2001DebitedFunds',
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'credited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money',
         'debited_wallet_id' => 'string',
         'credited_wallet_id' => 'string',
         'author_id' => 'string',
@@ -69,7 +69,7 @@ class UniversalPayRefundResponse implements ArrayAccess
         'type' => 'string',
         'initial_transaction_id' => 'string',
         'initial_transaction_type' => 'string',
-        'refund_reason' => '\Swagger\Client\Model\InlineResponse204RefundReason',
+        'refund_reason' => '\Swagger\Client\Model\RefundReason',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -343,7 +343,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -352,7 +352,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -364,7 +364,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getCreditedFunds()
     {
@@ -373,7 +373,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $credited_funds
+     * @param \Swagger\Client\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -385,7 +385,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\InlineResponse2001DebitedFunds
+     * @return \Swagger\Client\Model\Money
      */
     public function getFees()
     {
@@ -394,7 +394,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\InlineResponse2001DebitedFunds $fees
+     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)
@@ -674,7 +674,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Gets refund_reason
-     * @return \Swagger\Client\Model\InlineResponse204RefundReason
+     * @return \Swagger\Client\Model\RefundReason
      */
     public function getRefundReason()
     {
@@ -683,7 +683,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets refund_reason
-     * @param \Swagger\Client\Model\InlineResponse204RefundReason $refund_reason
+     * @param \Swagger\Client\Model\RefundReason $refund_reason Contains info about the reason for refund
      * @return $this
      */
     public function setRefundReason($refund_reason)
@@ -704,7 +704,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id The item's ID
+     * @param string $id
      * @return $this
      */
     public function setId($id)
@@ -725,7 +725,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets creation_date
-     * @param int $creation_date When the item was created
+     * @param int $creation_date
      * @return $this
      */
     public function setCreationDate($creation_date)
@@ -746,7 +746,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
