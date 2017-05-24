@@ -40,6 +40,8 @@ class UrlTool
             $url = '/v2.01/' . $this->_root->Config->ClientId . $urlKey;
         }
 
+        $url = '/v2.01' . $urlKey; // MarketPay Fix
+
         $paramsAdded = false;
         if (!is_null($pagination)) {
             $url .= '?page=' . $pagination->Page . '&per_page=' . $pagination->ItemsPerPage;
