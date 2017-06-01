@@ -1,6 +1,6 @@
 <?php
 /**
- * PayByWebResponse
+ * ResponseListTransactionResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * PayByWebResponse Class Doc Comment
+ * ResponseListTransactionResponse Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PayByWebResponse implements ArrayAccess
+class ResponseListTransactionResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,15 @@ class PayByWebResponse implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PayByWebResponse';
+    protected static $swaggerModelName = 'ResponseList[TransactionResponse]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pay_in_id' => 'string',
-        'checkout_data' => 'string'
+        'values' => '\Swagger\Client\Model\TransactionResponse[]',
+        'total' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +68,8 @@ class PayByWebResponse implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pay_in_id' => 'PayInId',
-        'checkout_data' => 'CheckoutData'
+        'values' => 'values',
+        'total' => 'total'
     ];
 
 
@@ -78,8 +78,8 @@ class PayByWebResponse implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'pay_in_id' => 'setPayInId',
-        'checkout_data' => 'setCheckoutData'
+        'values' => 'setValues',
+        'total' => 'setTotal'
     ];
 
 
@@ -88,8 +88,8 @@ class PayByWebResponse implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'pay_in_id' => 'getPayInId',
-        'checkout_data' => 'getCheckoutData'
+        'values' => 'getValues',
+        'total' => 'getTotal'
     ];
 
     public static function attributeMap()
@@ -123,8 +123,8 @@ class PayByWebResponse implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pay_in_id'] = isset($data['pay_in_id']) ? $data['pay_in_id'] : null;
-        $this->container['checkout_data'] = isset($data['checkout_data']) ? $data['checkout_data'] : null;
+        $this->container['values'] = isset($data['values']) ? $data['values'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -153,43 +153,43 @@ class PayByWebResponse implements ArrayAccess
 
 
     /**
-     * Gets pay_in_id
-     * @return string
+     * Gets values
+     * @return \Swagger\Client\Model\TransactionResponse[]
      */
-    public function getPayInId()
+    public function getValues()
     {
-        return $this->container['pay_in_id'];
+        return $this->container['values'];
     }
 
     /**
-     * Sets pay_in_id
-     * @param string $pay_in_id Id of the payment
+     * Sets values
+     * @param \Swagger\Client\Model\TransactionResponse[] $values
      * @return $this
      */
-    public function setPayInId($pay_in_id)
+    public function setValues($values)
     {
-        $this->container['pay_in_id'] = $pay_in_id;
+        $this->container['values'] = $values;
 
         return $this;
     }
 
     /**
-     * Gets checkout_data
-     * @return string
+     * Gets total
+     * @return int
      */
-    public function getCheckoutData()
+    public function getTotal()
     {
-        return $this->container['checkout_data'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets checkout_data
-     * @param string $checkout_data
+     * Sets total
+     * @param int $total
      * @return $this
      */
-    public function setCheckoutData($checkout_data)
+    public function setTotal($total)
     {
-        $this->container['checkout_data'] = $checkout_data;
+        $this->container['total'] = $total;
 
         return $this;
     }

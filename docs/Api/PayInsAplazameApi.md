@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAplazameAplazamePostPaymentByWeb**
-> \Swagger\Client\Model\PayByWebResponse payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in)
+> \Swagger\Client\Model\AplazamePayByWebResponse payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in)
 
 --------
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PayByWebResponse**](../Model/PayByWebResponse.md)
+[**\Swagger\Client\Model\AplazamePayByWebResponse**](../Model/AplazamePayByWebResponse.md)
 
 ### Authorization
 

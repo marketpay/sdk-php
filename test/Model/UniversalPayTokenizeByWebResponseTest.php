@@ -1,6 +1,6 @@
 <?php
 /**
- * PayInUniversalTokenRequestTest
+ * UniversalPayTokenizeByWebResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Swagger\Client;
 
 /**
- * PayInUniversalTokenRequestTest Class Doc Comment
+ * UniversalPayTokenizeByWebResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description PayInUniversalTokenRequest
+// * @description UniversalPayTokenizeByWebResponse
 /**
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PayInUniversalTokenRequestTest extends \PHPUnit_Framework_TestCase
+class UniversalPayTokenizeByWebResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,25 @@ class PayInUniversalTokenRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PayInUniversalTokenRequest"
+     * Test "UniversalPayTokenizeByWebResponse"
      */
-    public function testPayInUniversalTokenRequest()
+    public function testUniversalPayTokenizeByWebResponse()
+    {
+
+    }
+
+    /**
+     * Test attribute "token_id"
+     */
+    public function testPropertyTokenId()
+    {
+
+    }
+
+    /**
+     * Test attribute "url"
+     */
+    public function testPropertyUrl()
     {
 
     }

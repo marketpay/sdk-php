@@ -64,7 +64,6 @@ class UniversalPayPayByWebPost implements ArrayAccess
         'secure_mode' => 'string',
         'success_url' => 'string',
         'cancel_url' => 'string',
-        'auto_return' => 'bool',
         'language' => 'string',
         'customer' => '\Swagger\Client\Model\CustomerDetail'
     ];
@@ -89,7 +88,6 @@ class UniversalPayPayByWebPost implements ArrayAccess
         'secure_mode' => 'SecureMode',
         'success_url' => 'SuccessUrl',
         'cancel_url' => 'CancelUrl',
-        'auto_return' => 'AutoReturn',
         'language' => 'Language',
         'customer' => 'Customer'
     ];
@@ -110,7 +108,6 @@ class UniversalPayPayByWebPost implements ArrayAccess
         'secure_mode' => 'setSecureMode',
         'success_url' => 'setSuccessUrl',
         'cancel_url' => 'setCancelUrl',
-        'auto_return' => 'setAutoReturn',
         'language' => 'setLanguage',
         'customer' => 'setCustomer'
     ];
@@ -131,7 +128,6 @@ class UniversalPayPayByWebPost implements ArrayAccess
         'secure_mode' => 'getSecureMode',
         'success_url' => 'getSuccessUrl',
         'cancel_url' => 'getCancelUrl',
-        'auto_return' => 'getAutoReturn',
         'language' => 'getLanguage',
         'customer' => 'getCustomer'
     ];
@@ -239,7 +235,6 @@ class UniversalPayPayByWebPost implements ArrayAccess
         $this->container['secure_mode'] = isset($data['secure_mode']) ? $data['secure_mode'] : null;
         $this->container['success_url'] = isset($data['success_url']) ? $data['success_url'] : null;
         $this->container['cancel_url'] = isset($data['cancel_url']) ? $data['cancel_url'] : null;
-        $this->container['auto_return'] = isset($data['auto_return']) ? $data['auto_return'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
     }
@@ -527,27 +522,6 @@ class UniversalPayPayByWebPost implements ArrayAccess
     public function setCancelUrl($cancel_url)
     {
         $this->container['cancel_url'] = $cancel_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets auto_return
-     * @return bool
-     */
-    public function getAutoReturn()
-    {
-        return $this->container['auto_return'];
-    }
-
-    /**
-     * Sets auto_return
-     * @param bool $auto_return Defaults to false (show thank you page) Forced to true for iframe
-     * @return $this
-     */
-    public function setAutoReturn($auto_return)
-    {
-        $this->container['auto_return'] = $auto_return;
 
         return $this;
     }

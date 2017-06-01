@@ -73,10 +73,13 @@ All URIs are relative to *https://localhost/*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CardsApi* | [**cardsGet**](docs/Api/CardsApi.md#cardsget) | **GET** /v2.01/Cards/{CardId} | View a Card
+*CardsApi* | [**cardsGetList**](docs/Api/CardsApi.md#cardsgetlist) | **GET** /v2.01/Cards | 
 *CardsApi* | [**cardsPut**](docs/Api/CardsApi.md#cardsput) | **PUT** /v2.01/Cards/{CardId} | Deactivate a Card
 *PayInsAplazameApi* | [**payInsAplazameAplazameGetPayment**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamegetpayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | -------
 *PayInsAplazameApi* | [**payInsAplazameAplazamePostPaymentByWeb**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamepostpaymentbyweb) | **POST** /v2.01/PayInsAplazame/payments/web | --------
 *PayInsAplazameApi* | [**payInsAplazameRefund**](docs/Api/PayInsAplazameApi.md#payinsaplazamerefund) | **POST** /v2.01/PayInsAplazame/payments/{PayInId}/refunds | 
+*PayInsBankwireApi* | [**payInsBankwireBankwireGetPayment**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwiregetpayment) | **GET** /v2.01/PayInsBankwire/payments/{PayInId} | 
+*PayInsBankwireApi* | [**payInsBankwireBankwirePaymentByDirect**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepaymentbydirect) | **POST** /v2.01/PayInsBankwire/payments/direct | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysGetPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpayment) | **GET** /v2.01/PayInsRedsys/payments/{PayInId} | View a Redsys payment
 *PayInsRedsysApi* | [**payInsRedsysRedsysGetPreauthorization**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpreauthorization) | **GET** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId} | View a Redsys Preauthorization
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPaymentByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpaymentbyweb) | **POST** /v2.01/PayInsRedsys/payments/web | Create a Redsys PayIn Request
@@ -84,17 +87,20 @@ Class | Method | HTTP request | Description
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationCancellation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationcancellation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | Cancels a Preauthorization
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationConfirmation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationconfirmation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | Confirms a Preauthorization
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostRefund**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostrefund) | **POST** /v2.01/PayInsRedsys/payments/{PayInId}/refunds | Create a Redsys Payment Refund
+*PayInsUniversalPayApi* | [**payInsUniversalPayGetUniversalPayTokenization**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpaygetuniversalpaytokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | 
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayGetPayment**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaygetpayment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | View a UniversalPay payment
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostPaymentByWeb**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostpaymentbyweb) | **POST** /v2.01/PayInsUniversalPay/payments/web | Create a UniversalPay PayIn Request
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostRefund**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostrefund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | Create a UniversalPay Payment Refund
-*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPaySaveCard**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaysavecard) | **POST** /v2.01/PayInsUniversalPay/cards | 
+*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPaySaveCard**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaysavecard) | **POST** /v2.01/PayInsUniversalPay/token/web | 
 *PayOutsApi* | [**payOutsGet**](docs/Api/PayOutsApi.md#payoutsget) | **GET** /v2.01/PayOuts/bankwire/{id} | SwaggerDocSummary
 *PayOutsApi* | [**payOutsPost**](docs/Api/PayOutsApi.md#payoutspost) | **POST** /v2.01/PayOuts/bankwire | SwaggerDocSummary
 *RefundsApi* | [**refundsRefundGet**](docs/Api/RefundsApi.md#refundsrefundget) | **GET** /v2.01/Refunds/{RefundId} | View a Refund
 *ShipmentSeurApi* | [**shipmentSeurSeurCancelShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcancelshipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | Cancels a shipment
 *ShipmentSeurApi* | [**shipmentSeurSeurCreateShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcreateshipment) | **POST** /v2.01/ShipmentSeur/shipments | Creates a shipment
 *ShipmentSeurApi* | [**shipmentSeurSeurGetShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurgetshipment) | **GET** /v2.01/ShipmentSeur/shipments/{ShipmentId} | Cancels a shipment
+*TransactionsApi* | [**transactionsGetList**](docs/Api/TransactionsApi.md#transactionsgetlist) | **GET** /v2.01/Transactions | 
 *TransfersApi* | [**transfersGet**](docs/Api/TransfersApi.md#transfersget) | **GET** /v2.01/Transfers/{TransferId} | View a Transfer
+*TransfersApi* | [**transfersGetList**](docs/Api/TransfersApi.md#transfersgetlist) | **GET** /v2.01/Transfers | 
 *TransfersApi* | [**transfersPost**](docs/Api/TransfersApi.md#transferspost) | **POST** /v2.01/Transfers | Create a Transfer
 *UsersApi* | [**usersGet**](docs/Api/UsersApi.md#usersget) | **GET** /v2.01/Users/{UserId} | View a User
 *UsersApi* | [**usersGetBankAccount**](docs/Api/UsersApi.md#usersgetbankaccount) | **GET** /v2.01/Users/{UserId}/bankaccounts/{BankAccountId} | View a Bank Account
@@ -115,6 +121,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**usersPutLegal**](docs/Api/UsersApi.md#usersputlegal) | **PUT** /v2.01/Users/legal/{UserId} | Update a Legal User
 *UsersApi* | [**usersPutNatural**](docs/Api/UsersApi.md#usersputnatural) | **PUT** /v2.01/Users/natural/{UserId} | Update a Natural User
 *WalletsApi* | [**walletsGet**](docs/Api/WalletsApi.md#walletsget) | **GET** /v2.01/Wallets/{WalletId} | View a Wallet
+*WalletsApi* | [**walletsGetList**](docs/Api/WalletsApi.md#walletsgetlist) | **GET** /v2.01/Wallets | 
 *WalletsApi* | [**walletsGetTransactionList**](docs/Api/WalletsApi.md#walletsgettransactionlist) | **GET** /v2.01/Wallets/{WalletId}/transactions | List a Wallet&#39;s Transactions
 *WalletsApi* | [**walletsPost**](docs/Api/WalletsApi.md#walletspost) | **POST** /v2.01/Wallets | Create a Wallet
 *WalletsApi* | [**walletsPut**](docs/Api/WalletsApi.md#walletsput) | **PUT** /v2.01/Wallets/{WalletId} | Update a Wallet
@@ -125,18 +132,13 @@ Class | Method | HTTP request | Description
  - [Address](docs/Model/Address.md)
  - [AplazameOrderItem](docs/Model/AplazameOrderItem.md)
  - [AplazamePayByWebPost](docs/Model/AplazamePayByWebPost.md)
- - [AplazamePayIn](docs/Model/AplazamePayIn.md)
+ - [AplazamePayByWebResponse](docs/Model/AplazamePayByWebResponse.md)
  - [AplazamePayInsResponse](docs/Model/AplazamePayInsResponse.md)
- - [AplazameRefund](docs/Model/AplazameRefund.md)
  - [AplazameRefundPaymentPost](docs/Model/AplazameRefundPaymentPost.md)
  - [AplazameRefundResponse](docs/Model/AplazameRefundResponse.md)
- - [BankAccountCA](docs/Model/BankAccountCA.md)
  - [BankAccountCaPost](docs/Model/BankAccountCaPost.md)
- - [BankAccountGB](docs/Model/BankAccountGB.md)
  - [BankAccountGbPost](docs/Model/BankAccountGbPost.md)
- - [BankAccountIBAN](docs/Model/BankAccountIBAN.md)
  - [BankAccountIbanPost](docs/Model/BankAccountIbanPost.md)
- - [BankAccountOTHER](docs/Model/BankAccountOTHER.md)
  - [BankAccountOtherPost](docs/Model/BankAccountOtherPost.md)
  - [BankAccountResponse](docs/Model/BankAccountResponse.md)
  - [BankAccountResponseCa](docs/Model/BankAccountResponseCa.md)
@@ -144,49 +146,17 @@ Class | Method | HTTP request | Description
  - [BankAccountResponseIban](docs/Model/BankAccountResponseIban.md)
  - [BankAccountResponseOther](docs/Model/BankAccountResponseOther.md)
  - [BankAccountResponseUs](docs/Model/BankAccountResponseUs.md)
- - [BankAccountUS](docs/Model/BankAccountUS.md)
+ - [BankAccountType](docs/Model/BankAccountType.md)
  - [BankAccountUsPost](docs/Model/BankAccountUsPost.md)
- - [Card](docs/Model/Card.md)
+ - [BankwirePayInPayInPost](docs/Model/BankwirePayInPayInPost.md)
+ - [BankwirePayInPayInResponse](docs/Model/BankwirePayInPayInResponse.md)
  - [CardPut](docs/Model/CardPut.md)
  - [CardResponse](docs/Model/CardResponse.md)
  - [CustomApiErrorResponse](docs/Model/CustomApiErrorResponse.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerDetail](docs/Model/CustomerDetail.md)
  - [ExampleUserNaturalPost](docs/Model/ExampleUserNaturalPost.md)
- - [InlineResponse200](docs/Model/InlineResponse200.md)
- - [InlineResponse2001](docs/Model/InlineResponse2001.md)
- - [InlineResponse20010](docs/Model/InlineResponse20010.md)
- - [InlineResponse20011](docs/Model/InlineResponse20011.md)
- - [InlineResponse20012](docs/Model/InlineResponse20012.md)
- - [InlineResponse20013](docs/Model/InlineResponse20013.md)
- - [InlineResponse20014](docs/Model/InlineResponse20014.md)
- - [InlineResponse20015](docs/Model/InlineResponse20015.md)
- - [InlineResponse20016](docs/Model/InlineResponse20016.md)
- - [InlineResponse20017](docs/Model/InlineResponse20017.md)
- - [InlineResponse20018](docs/Model/InlineResponse20018.md)
- - [InlineResponse20019](docs/Model/InlineResponse20019.md)
- - [InlineResponse2001DebitedFunds](docs/Model/InlineResponse2001DebitedFunds.md)
- - [InlineResponse2002](docs/Model/InlineResponse2002.md)
- - [InlineResponse20020](docs/Model/InlineResponse20020.md)
- - [InlineResponse20021](docs/Model/InlineResponse20021.md)
- - [InlineResponse20022](docs/Model/InlineResponse20022.md)
- - [InlineResponse20023](docs/Model/InlineResponse20023.md)
- - [InlineResponse20024](docs/Model/InlineResponse20024.md)
- - [InlineResponse2003](docs/Model/InlineResponse2003.md)
- - [InlineResponse2003Provider](docs/Model/InlineResponse2003Provider.md)
- - [InlineResponse2004](docs/Model/InlineResponse2004.md)
- - [InlineResponse2005](docs/Model/InlineResponse2005.md)
- - [InlineResponse2006](docs/Model/InlineResponse2006.md)
- - [InlineResponse2007](docs/Model/InlineResponse2007.md)
- - [InlineResponse2008](docs/Model/InlineResponse2008.md)
- - [InlineResponse2009](docs/Model/InlineResponse2009.md)
- - [InlineResponse2009Provider](docs/Model/InlineResponse2009Provider.md)
- - [InlineResponse204](docs/Model/InlineResponse204.md)
- - [InlineResponse204RefundReason](docs/Model/InlineResponse204RefundReason.md)
- - [InlineResponse400](docs/Model/InlineResponse400.md)
  - [Money](docs/Model/Money.md)
- - [PayByWebResponse](docs/Model/PayByWebResponse.md)
- - [PayInUniversalTokenRequest](docs/Model/PayInUniversalTokenRequest.md)
  - [PayOutBankWirePost](docs/Model/PayOutBankWirePost.md)
  - [PayOutBankWireResponse](docs/Model/PayOutBankWireResponse.md)
  - [PaymentRedsysData](docs/Model/PaymentRedsysData.md)
@@ -195,66 +165,47 @@ Class | Method | HTTP request | Description
  - [Product](docs/Model/Product.md)
  - [RedsysPayByWebPost](docs/Model/RedsysPayByWebPost.md)
  - [RedsysPayByWebResponse](docs/Model/RedsysPayByWebResponse.md)
- - [RedsysPayIn](docs/Model/RedsysPayIn.md)
  - [RedsysPayInsResponse](docs/Model/RedsysPayInsResponse.md)
- - [RedsysPreauthorization](docs/Model/RedsysPreauthorization.md)
  - [RedsysPreauthorizationCancellationPost](docs/Model/RedsysPreauthorizationCancellationPost.md)
  - [RedsysPreauthorizationCancellationResponse](docs/Model/RedsysPreauthorizationCancellationResponse.md)
- - [RedsysPreauthorizationConfirmation](docs/Model/RedsysPreauthorizationConfirmation.md)
  - [RedsysPreauthorizationConfirmationPost](docs/Model/RedsysPreauthorizationConfirmationPost.md)
  - [RedsysPreauthorizationConfirmationResponse](docs/Model/RedsysPreauthorizationConfirmationResponse.md)
  - [RedsysPreauthorizeByWebPost](docs/Model/RedsysPreauthorizeByWebPost.md)
  - [RedsysPreauthorizeByWebResponse](docs/Model/RedsysPreauthorizeByWebResponse.md)
  - [RedsysPreauthorizeResponse](docs/Model/RedsysPreauthorizeResponse.md)
- - [RedsysRefund](docs/Model/RedsysRefund.md)
  - [RedsysRefundPost](docs/Model/RedsysRefundPost.md)
  - [RedsysRefundResponse](docs/Model/RedsysRefundResponse.md)
  - [RefundReason](docs/Model/RefundReason.md)
  - [RefundRedsysData](docs/Model/RefundRedsysData.md)
- - [Request](docs/Model/Request.md)
+ - [ResponseListCardResponse](docs/Model/ResponseListCardResponse.md)
+ - [ResponseListTransactionResponse](docs/Model/ResponseListTransactionResponse.md)
+ - [ResponseListTransferResponse](docs/Model/ResponseListTransferResponse.md)
+ - [ResponseListWalletResponse](docs/Model/ResponseListWalletResponse.md)
  - [SeurShipmentCancellationResponse](docs/Model/SeurShipmentCancellationResponse.md)
  - [SeurShipmentPost](docs/Model/SeurShipmentPost.md)
  - [SeurShipmentResponse](docs/Model/SeurShipmentResponse.md)
- - [Shipment](docs/Model/Shipment.md)
  - [ShipmentActor](docs/Model/ShipmentActor.md)
  - [Telephone](docs/Model/Telephone.md)
  - [TelephoneSeur](docs/Model/TelephoneSeur.md)
+ - [TokenUniversalPayData](docs/Model/TokenUniversalPayData.md)
  - [TransactionResponse](docs/Model/TransactionResponse.md)
- - [Transfer](docs/Model/Transfer.md)
  - [TransferPost](docs/Model/TransferPost.md)
  - [TransferResponse](docs/Model/TransferResponse.md)
- - [UniversalPayOrderItem](docs/Model/UniversalPayOrderItem.md)
  - [UniversalPayPayByWebPost](docs/Model/UniversalPayPayByWebPost.md)
  - [UniversalPayPayByWebResponse](docs/Model/UniversalPayPayByWebResponse.md)
- - [UniversalPayPayIn](docs/Model/UniversalPayPayIn.md)
  - [UniversalPayPayInsResponse](docs/Model/UniversalPayPayInsResponse.md)
- - [UniversalPayRefund](docs/Model/UniversalPayRefund.md)
  - [UniversalPayRefundPost](docs/Model/UniversalPayRefundPost.md)
  - [UniversalPayRefundResponse](docs/Model/UniversalPayRefundResponse.md)
- - [UniversalPaySaveCard](docs/Model/UniversalPaySaveCard.md)
  - [UniversalPayTokenRequestPost](docs/Model/UniversalPayTokenRequestPost.md)
- - [UserLegal](docs/Model/UserLegal.md)
- - [UserLegal1](docs/Model/UserLegal1.md)
+ - [UniversalPayTokenizationResponse](docs/Model/UniversalPayTokenizationResponse.md)
+ - [UniversalPayTokenizeByWebResponse](docs/Model/UniversalPayTokenizeByWebResponse.md)
  - [UserLegalPost](docs/Model/UserLegalPost.md)
  - [UserLegalPut](docs/Model/UserLegalPut.md)
  - [UserLegalResponse](docs/Model/UserLegalResponse.md)
- - [UserNatural](docs/Model/UserNatural.md)
- - [UserNatural1](docs/Model/UserNatural1.md)
  - [UserNaturalPost](docs/Model/UserNaturalPost.md)
  - [UserNaturalPut](docs/Model/UserNaturalPut.md)
  - [UserNaturalResponse](docs/Model/UserNaturalResponse.md)
  - [UserResponse](docs/Model/UserResponse.md)
- - [V201PayInsAplazamepaymentswebCustomer](docs/Model/V201PayInsAplazamepaymentswebCustomer.md)
- - [V201PayInsAplazamepaymentswebCustomerAddress](docs/Model/V201PayInsAplazamepaymentswebCustomerAddress.md)
- - [V201PayInsAplazamepaymentswebCustomerTelephone](docs/Model/V201PayInsAplazamepaymentswebCustomerTelephone.md)
- - [V201PayInsAplazamepaymentswebOrderItems](docs/Model/V201PayInsAplazamepaymentswebOrderItems.md)
- - [V201PayInsUniversalPaypaymentswebCustomer](docs/Model/V201PayInsUniversalPaypaymentswebCustomer.md)
- - [V201PayInsUniversalPaypaymentswebOrderItems](docs/Model/V201PayInsUniversalPaypaymentswebOrderItems.md)
- - [V201ShipmentSeurshipmentsProduct](docs/Model/V201ShipmentSeurshipmentsProduct.md)
- - [V201ShipmentSeurshipmentsSender](docs/Model/V201ShipmentSeurshipmentsSender.md)
- - [V201ShipmentSeurshipmentsSenderTelephone](docs/Model/V201ShipmentSeurshipmentsSenderTelephone.md)
- - [Wallet](docs/Model/Wallet.md)
- - [Wallet1](docs/Model/Wallet1.md)
  - [WalletPost](docs/Model/WalletPost.md)
  - [WalletPut](docs/Model/WalletPut.md)
  - [WalletResponse](docs/Model/WalletResponse.md)

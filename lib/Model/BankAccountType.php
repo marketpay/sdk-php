@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomerDetail
+ * BankAccountType
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * CustomerDetail Class Doc Comment
+ * BankAccountType Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CustomerDetail implements ArrayAccess
+class BankAccountType implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,18 @@ class CustomerDetail implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CustomerDetail';
+    protected static $swaggerModelName = 'BankAccountType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'telephone' => '\Swagger\Client\Model\Telephone',
-        'address' => '\Swagger\Client\Model\Address'
+        'type' => 'string',
+        'owner_address' => '\Swagger\Client\Model\Address',
+        'owner_name' => 'string',
+        'iban' => 'string',
+        'bic' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +71,11 @@ class CustomerDetail implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'first_name' => 'FirstName',
-        'last_name' => 'LastName',
-        'telephone' => 'Telephone',
-        'address' => 'Address'
+        'type' => 'Type',
+        'owner_address' => 'OwnerAddress',
+        'owner_name' => 'OwnerName',
+        'iban' => 'IBAN',
+        'bic' => 'BIC'
     ];
 
 
@@ -82,10 +84,11 @@ class CustomerDetail implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'telephone' => 'setTelephone',
-        'address' => 'setAddress'
+        'type' => 'setType',
+        'owner_address' => 'setOwnerAddress',
+        'owner_name' => 'setOwnerName',
+        'iban' => 'setIban',
+        'bic' => 'setBic'
     ];
 
 
@@ -94,10 +97,11 @@ class CustomerDetail implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'telephone' => 'getTelephone',
-        'address' => 'getAddress'
+        'type' => 'getType',
+        'owner_address' => 'getOwnerAddress',
+        'owner_name' => 'getOwnerName',
+        'iban' => 'getIban',
+        'bic' => 'getBic'
     ];
 
     public static function attributeMap()
@@ -115,8 +119,28 @@ class CustomerDetail implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_IBAN = 'IBAN';
+    const TYPE_GB = 'GB';
+    const TYPE_US = 'US';
+    const TYPE_CA = 'CA';
+    const TYPE_OTHER = 'OTHER';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_IBAN,
+            self::TYPE_GB,
+            self::TYPE_US,
+            self::TYPE_CA,
+            self::TYPE_OTHER,
+        ];
+    }
     
 
     /**
@@ -131,10 +155,11 @@ class CustomerDetail implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
-        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
-        $this->container['telephone'] = isset($data['telephone']) ? $data['telephone'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['owner_address'] = isset($data['owner_address']) ? $data['owner_address'] : null;
+        $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
+        $this->container['iban'] = isset($data['iban']) ? $data['iban'] : null;
+        $this->container['bic'] = isset($data['bic']) ? $data['bic'] : null;
     }
 
     /**
@@ -146,17 +171,11 @@ class CustomerDetail implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if (!is_null($this->container['first_name']) && (strlen($this->container['first_name']) > 32)) {
-            $invalid_properties[] = "invalid value for 'first_name', the character length must be smaller than or equal to 32.";
+        $allowed_values = ["IBAN", "GB", "US", "CA", "OTHER"];
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of 'IBAN', 'GB', 'US', 'CA', 'OTHER'.";
         }
 
-        if (!is_null($this->container['last_name']) && (strlen($this->container['last_name']) > 32)) {
-            $invalid_properties[] = "invalid value for 'last_name', the character length must be smaller than or equal to 32.";
-        }
-
-        if ($this->container['address'] === null) {
-            $invalid_properties[] = "'address' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -169,13 +188,8 @@ class CustomerDetail implements ArrayAccess
     public function valid()
     {
 
-        if (strlen($this->container['first_name']) > 32) {
-            return false;
-        }
-        if (strlen($this->container['last_name']) > 32) {
-            return false;
-        }
-        if ($this->container['address'] === null) {
+        $allowed_values = ["IBAN", "GB", "US", "CA", "OTHER"];
+        if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
         return true;
@@ -183,93 +197,110 @@ class CustomerDetail implements ArrayAccess
 
 
     /**
-     * Gets first_name
+     * Gets type
      * @return string
      */
-    public function getFirstName()
+    public function getType()
     {
-        return $this->container['first_name'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets first_name
-     * @param string $first_name
+     * Sets type
+     * @param string $type
      * @return $this
      */
-    public function setFirstName($first_name)
+    public function setType($type)
     {
-        if (!is_null($first_name) && (strlen($first_name) > 32)) {
-            throw new \InvalidArgumentException('invalid length for $first_name when calling CustomerDetail., must be smaller than or equal to 32.');
+        $allowed_values = array('IBAN', 'GB', 'US', 'CA', 'OTHER');
+        if (!is_null($type) && (!in_array($type, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'IBAN', 'GB', 'US', 'CA', 'OTHER'");
         }
-
-        $this->container['first_name'] = $first_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_name
-     * @return string
-     */
-    public function getLastName()
-    {
-        return $this->container['last_name'];
-    }
-
-    /**
-     * Sets last_name
-     * @param string $last_name
-     * @return $this
-     */
-    public function setLastName($last_name)
-    {
-        if (!is_null($last_name) && (strlen($last_name) > 32)) {
-            throw new \InvalidArgumentException('invalid length for $last_name when calling CustomerDetail., must be smaller than or equal to 32.');
-        }
-
-        $this->container['last_name'] = $last_name;
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets telephone
-     * @return \Swagger\Client\Model\Telephone
-     */
-    public function getTelephone()
-    {
-        return $this->container['telephone'];
-    }
-
-    /**
-     * Sets telephone
-     * @param \Swagger\Client\Model\Telephone $telephone
-     * @return $this
-     */
-    public function setTelephone($telephone)
-    {
-        $this->container['telephone'] = $telephone;
-
-        return $this;
-    }
-
-    /**
-     * Gets address
+     * Gets owner_address
      * @return \Swagger\Client\Model\Address
      */
-    public function getAddress()
+    public function getOwnerAddress()
     {
-        return $this->container['address'];
+        return $this->container['owner_address'];
     }
 
     /**
-     * Sets address
-     * @param \Swagger\Client\Model\Address $address
+     * Sets owner_address
+     * @param \Swagger\Client\Model\Address $owner_address
      * @return $this
      */
-    public function setAddress($address)
+    public function setOwnerAddress($owner_address)
     {
-        $this->container['address'] = $address;
+        $this->container['owner_address'] = $owner_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_name
+     * @return string
+     */
+    public function getOwnerName()
+    {
+        return $this->container['owner_name'];
+    }
+
+    /**
+     * Sets owner_name
+     * @param string $owner_name
+     * @return $this
+     */
+    public function setOwnerName($owner_name)
+    {
+        $this->container['owner_name'] = $owner_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets iban
+     * @return string
+     */
+    public function getIban()
+    {
+        return $this->container['iban'];
+    }
+
+    /**
+     * Sets iban
+     * @param string $iban
+     * @return $this
+     */
+    public function setIban($iban)
+    {
+        $this->container['iban'] = $iban;
+
+        return $this;
+    }
+
+    /**
+     * Gets bic
+     * @return string
+     */
+    public function getBic()
+    {
+        return $this->container['bic'];
+    }
+
+    /**
+     * Sets bic
+     * @param string $bic
+     * @return $this
+     */
+    public function setBic($bic)
+    {
+        $this->container['bic'] = $bic;
 
         return $this;
     }

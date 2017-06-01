@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomerDetail
+ * BankwirePayInPayInPost
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * CustomerDetail Class Doc Comment
+ * BankwirePayInPayInPost Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CustomerDetail implements ArrayAccess
+class BankwirePayInPayInPost implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,17 @@ class CustomerDetail implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CustomerDetail';
+    protected static $swaggerModelName = 'BankwirePayInPayInPost';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'telephone' => '\Swagger\Client\Model\Telephone',
-        'address' => '\Swagger\Client\Model\Address'
+        'tag' => 'string',
+        'credited_wallet_id' => 'string',
+        'debited_funds' => '\Swagger\Client\Model\Money',
+        'fees' => '\Swagger\Client\Model\Money'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +70,10 @@ class CustomerDetail implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'first_name' => 'FirstName',
-        'last_name' => 'LastName',
-        'telephone' => 'Telephone',
-        'address' => 'Address'
+        'tag' => 'Tag',
+        'credited_wallet_id' => 'CreditedWalletId',
+        'debited_funds' => 'DebitedFunds',
+        'fees' => 'Fees'
     ];
 
 
@@ -82,10 +82,10 @@ class CustomerDetail implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'telephone' => 'setTelephone',
-        'address' => 'setAddress'
+        'tag' => 'setTag',
+        'credited_wallet_id' => 'setCreditedWalletId',
+        'debited_funds' => 'setDebitedFunds',
+        'fees' => 'setFees'
     ];
 
 
@@ -94,10 +94,10 @@ class CustomerDetail implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'telephone' => 'getTelephone',
-        'address' => 'getAddress'
+        'tag' => 'getTag',
+        'credited_wallet_id' => 'getCreditedWalletId',
+        'debited_funds' => 'getDebitedFunds',
+        'fees' => 'getFees'
     ];
 
     public static function attributeMap()
@@ -131,10 +131,10 @@ class CustomerDetail implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
-        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
-        $this->container['telephone'] = isset($data['telephone']) ? $data['telephone'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['credited_wallet_id'] = isset($data['credited_wallet_id']) ? $data['credited_wallet_id'] : null;
+        $this->container['debited_funds'] = isset($data['debited_funds']) ? $data['debited_funds'] : null;
+        $this->container['fees'] = isset($data['fees']) ? $data['fees'] : null;
     }
 
     /**
@@ -146,16 +146,14 @@ class CustomerDetail implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if (!is_null($this->container['first_name']) && (strlen($this->container['first_name']) > 32)) {
-            $invalid_properties[] = "invalid value for 'first_name', the character length must be smaller than or equal to 32.";
+        if ($this->container['credited_wallet_id'] === null) {
+            $invalid_properties[] = "'credited_wallet_id' can't be null";
         }
-
-        if (!is_null($this->container['last_name']) && (strlen($this->container['last_name']) > 32)) {
-            $invalid_properties[] = "invalid value for 'last_name', the character length must be smaller than or equal to 32.";
+        if ($this->container['debited_funds'] === null) {
+            $invalid_properties[] = "'debited_funds' can't be null";
         }
-
-        if ($this->container['address'] === null) {
-            $invalid_properties[] = "'address' can't be null";
+        if ($this->container['fees'] === null) {
+            $invalid_properties[] = "'fees' can't be null";
         }
         return $invalid_properties;
     }
@@ -169,13 +167,13 @@ class CustomerDetail implements ArrayAccess
     public function valid()
     {
 
-        if (strlen($this->container['first_name']) > 32) {
+        if ($this->container['credited_wallet_id'] === null) {
             return false;
         }
-        if (strlen($this->container['last_name']) > 32) {
+        if ($this->container['debited_funds'] === null) {
             return false;
         }
-        if ($this->container['address'] === null) {
+        if ($this->container['fees'] === null) {
             return false;
         }
         return true;
@@ -183,93 +181,85 @@ class CustomerDetail implements ArrayAccess
 
 
     /**
-     * Gets first_name
+     * Gets tag
      * @return string
      */
-    public function getFirstName()
+    public function getTag()
     {
-        return $this->container['first_name'];
+        return $this->container['tag'];
     }
 
     /**
-     * Sets first_name
-     * @param string $first_name
+     * Sets tag
+     * @param string $tag
      * @return $this
      */
-    public function setFirstName($first_name)
+    public function setTag($tag)
     {
-        if (!is_null($first_name) && (strlen($first_name) > 32)) {
-            throw new \InvalidArgumentException('invalid length for $first_name when calling CustomerDetail., must be smaller than or equal to 32.');
-        }
-
-        $this->container['first_name'] = $first_name;
+        $this->container['tag'] = $tag;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets credited_wallet_id
      * @return string
      */
-    public function getLastName()
+    public function getCreditedWalletId()
     {
-        return $this->container['last_name'];
+        return $this->container['credited_wallet_id'];
     }
 
     /**
-     * Sets last_name
-     * @param string $last_name
+     * Sets credited_wallet_id
+     * @param string $credited_wallet_id
      * @return $this
      */
-    public function setLastName($last_name)
+    public function setCreditedWalletId($credited_wallet_id)
     {
-        if (!is_null($last_name) && (strlen($last_name) > 32)) {
-            throw new \InvalidArgumentException('invalid length for $last_name when calling CustomerDetail., must be smaller than or equal to 32.');
-        }
-
-        $this->container['last_name'] = $last_name;
+        $this->container['credited_wallet_id'] = $credited_wallet_id;
 
         return $this;
     }
 
     /**
-     * Gets telephone
-     * @return \Swagger\Client\Model\Telephone
+     * Gets debited_funds
+     * @return \Swagger\Client\Model\Money
      */
-    public function getTelephone()
+    public function getDebitedFunds()
     {
-        return $this->container['telephone'];
+        return $this->container['debited_funds'];
     }
 
     /**
-     * Sets telephone
-     * @param \Swagger\Client\Model\Telephone $telephone
+     * Sets debited_funds
+     * @param \Swagger\Client\Model\Money $debited_funds
      * @return $this
      */
-    public function setTelephone($telephone)
+    public function setDebitedFunds($debited_funds)
     {
-        $this->container['telephone'] = $telephone;
+        $this->container['debited_funds'] = $debited_funds;
 
         return $this;
     }
 
     /**
-     * Gets address
-     * @return \Swagger\Client\Model\Address
+     * Gets fees
+     * @return \Swagger\Client\Model\Money
      */
-    public function getAddress()
+    public function getFees()
     {
-        return $this->container['address'];
+        return $this->container['fees'];
     }
 
     /**
-     * Sets address
-     * @param \Swagger\Client\Model\Address $address
+     * Sets fees
+     * @param \Swagger\Client\Model\Money $fees
      * @return $this
      */
-    public function setAddress($address)
+    public function setFees($fees)
     {
-        $this->container['address'] = $address;
+        $this->container['fees'] = $fees;
 
         return $this;
     }

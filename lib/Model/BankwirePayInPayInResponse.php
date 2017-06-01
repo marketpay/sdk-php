@@ -1,6 +1,6 @@
 <?php
 /**
- * UniversalPayPayInsResponse
+ * BankwirePayInPayInResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * UniversalPayPayInsResponse Class Doc Comment
+ * BankwirePayInPayInResponse Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UniversalPayPayInsResponse implements ArrayAccess
+class BankwirePayInPayInResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'UniversalPayPayInsResponse';
+    protected static $swaggerModelName = 'BankwirePayInPayInResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -66,11 +66,10 @@ class UniversalPayPayInsResponse implements ArrayAccess
         'type' => 'string',
         'payment_type' => 'string',
         'execution_type' => 'string',
-        'statement_descriptor' => 'string',
         'author_id' => 'string',
         'credited_user_id' => 'string',
-        'provider' => '\Swagger\Client\Model\PaymentUniversalPayData',
-        'card_id' => 'string',
+        'wire_reference' => 'string',
+        'bank_account' => '\Swagger\Client\Model\BankAccountType',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -98,11 +97,10 @@ class UniversalPayPayInsResponse implements ArrayAccess
         'type' => 'Type',
         'payment_type' => 'PaymentType',
         'execution_type' => 'ExecutionType',
-        'statement_descriptor' => 'StatementDescriptor',
         'author_id' => 'AuthorId',
         'credited_user_id' => 'CreditedUserId',
-        'provider' => 'Provider',
-        'card_id' => 'CardId',
+        'wire_reference' => 'WireReference',
+        'bank_account' => 'BankAccount',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -126,11 +124,10 @@ class UniversalPayPayInsResponse implements ArrayAccess
         'type' => 'setType',
         'payment_type' => 'setPaymentType',
         'execution_type' => 'setExecutionType',
-        'statement_descriptor' => 'setStatementDescriptor',
         'author_id' => 'setAuthorId',
         'credited_user_id' => 'setCreditedUserId',
-        'provider' => 'setProvider',
-        'card_id' => 'setCardId',
+        'wire_reference' => 'setWireReference',
+        'bank_account' => 'setBankAccount',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -154,11 +151,10 @@ class UniversalPayPayInsResponse implements ArrayAccess
         'type' => 'getType',
         'payment_type' => 'getPaymentType',
         'execution_type' => 'getExecutionType',
-        'statement_descriptor' => 'getStatementDescriptor',
         'author_id' => 'getAuthorId',
         'credited_user_id' => 'getCreditedUserId',
-        'provider' => 'getProvider',
-        'card_id' => 'getCardId',
+        'wire_reference' => 'getWireReference',
+        'bank_account' => 'getBankAccount',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -293,11 +289,10 @@ class UniversalPayPayInsResponse implements ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['payment_type'] = isset($data['payment_type']) ? $data['payment_type'] : null;
         $this->container['execution_type'] = isset($data['execution_type']) ? $data['execution_type'] : null;
-        $this->container['statement_descriptor'] = isset($data['statement_descriptor']) ? $data['statement_descriptor'] : null;
         $this->container['author_id'] = isset($data['author_id']) ? $data['author_id'] : null;
         $this->container['credited_user_id'] = isset($data['credited_user_id']) ? $data['credited_user_id'] : null;
-        $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
-        $this->container['card_id'] = isset($data['card_id']) ? $data['card_id'] : null;
+        $this->container['wire_reference'] = isset($data['wire_reference']) ? $data['wire_reference'] : null;
+        $this->container['bank_account'] = isset($data['bank_account']) ? $data['bank_account'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -384,7 +379,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \Swagger\Client\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -405,7 +400,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
+     * @param \Swagger\Client\Model\Money $credited_funds
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -426,7 +421,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \Swagger\Client\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)
@@ -447,7 +442,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id The ID of the wallet where money will be credited
+     * @param string $credited_wallet_id
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -468,7 +463,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets nature
-     * @param string $nature The nature of the transaction
+     * @param string $nature
      * @return $this
      */
     public function setNature($nature)
@@ -493,7 +488,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status The status of the transaction
+     * @param string $status
      * @return $this
      */
     public function setStatus($status)
@@ -518,7 +513,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets execution_date
-     * @param int $execution_date When the transaction happened
+     * @param int $execution_date
      * @return $this
      */
     public function setExecutionDate($execution_date)
@@ -539,7 +534,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets result_code
-     * @param string $result_code The result code
+     * @param string $result_code
      * @return $this
      */
     public function setResultCode($result_code)
@@ -560,7 +555,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets result_message
-     * @param string $result_message A verbal explanation of the ResultCode
+     * @param string $result_message
      * @return $this
      */
     public function setResultMessage($result_message)
@@ -581,7 +576,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type The type of the transaction
+     * @param string $type
      * @return $this
      */
     public function setType($type)
@@ -606,7 +601,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets payment_type
-     * @param string $payment_type The type of payin
+     * @param string $payment_type
      * @return $this
      */
     public function setPaymentType($payment_type)
@@ -631,7 +626,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets execution_type
-     * @param string $execution_type The type of execution for the payin
+     * @param string $execution_type
      * @return $this
      */
     public function setExecutionType($execution_type)
@@ -641,27 +636,6 @@ class UniversalPayPayInsResponse implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'execution_type', must be one of 'NotSpecified', 'WEB', 'DIRECT'");
         }
         $this->container['execution_type'] = $execution_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets statement_descriptor
-     * @return string
-     */
-    public function getStatementDescriptor()
-    {
-        return $this->container['statement_descriptor'];
-    }
-
-    /**
-     * Sets statement_descriptor
-     * @param string $statement_descriptor A custom description to appear on the user's bank statement. It can be up to 10 characters long, and can only include alphanumeric characters or spaces
-     * @return $this
-     */
-    public function setStatementDescriptor($statement_descriptor)
-    {
-        $this->container['statement_descriptor'] = $statement_descriptor;
 
         return $this;
     }
@@ -677,7 +651,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id A user's ID
+     * @param string $author_id
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -698,7 +672,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_user_id
-     * @param string $credited_user_id The user ID who was credited
+     * @param string $credited_user_id
      * @return $this
      */
     public function setCreditedUserId($credited_user_id)
@@ -709,43 +683,43 @@ class UniversalPayPayInsResponse implements ArrayAccess
     }
 
     /**
-     * Gets provider
-     * @return \Swagger\Client\Model\PaymentUniversalPayData
+     * Gets wire_reference
+     * @return string
      */
-    public function getProvider()
+    public function getWireReference()
     {
-        return $this->container['provider'];
+        return $this->container['wire_reference'];
     }
 
     /**
-     * Sets provider
-     * @param \Swagger\Client\Model\PaymentUniversalPayData $provider
+     * Sets wire_reference
+     * @param string $wire_reference
      * @return $this
      */
-    public function setProvider($provider)
+    public function setWireReference($wire_reference)
     {
-        $this->container['provider'] = $provider;
+        $this->container['wire_reference'] = $wire_reference;
 
         return $this;
     }
 
     /**
-     * Gets card_id
-     * @return string
+     * Gets bank_account
+     * @return \Swagger\Client\Model\BankAccountType
      */
-    public function getCardId()
+    public function getBankAccount()
     {
-        return $this->container['card_id'];
+        return $this->container['bank_account'];
     }
 
     /**
-     * Sets card_id
-     * @param string $card_id
+     * Sets bank_account
+     * @param \Swagger\Client\Model\BankAccountType $bank_account
      * @return $this
      */
-    public function setCardId($card_id)
+    public function setBankAccount($bank_account)
     {
-        $this->container['card_id'] = $card_id;
+        $this->container['bank_account'] = $bank_account;
 
         return $this;
     }

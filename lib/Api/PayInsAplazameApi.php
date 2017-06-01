@@ -187,7 +187,7 @@ class PayInsAplazameApi
      *
      * @param \Swagger\Client\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\PayByWebResponse
+     * @return \Swagger\Client\Model\AplazamePayByWebResponse
      */
     public function payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in = null)
     {
@@ -202,7 +202,7 @@ class PayInsAplazameApi
      *
      * @param \Swagger\Client\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\PayByWebResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\AplazamePayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsAplazameAplazamePostPaymentByWebWithHttpInfo($aplazame_pay_in = null)
     {
@@ -245,15 +245,15 @@ class PayInsAplazameApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\PayByWebResponse',
+                '\Swagger\Client\Model\AplazamePayByWebResponse',
                 '/v2.01/PayInsAplazame/payments/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PayByWebResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\AplazamePayByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PayByWebResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\AplazamePayByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

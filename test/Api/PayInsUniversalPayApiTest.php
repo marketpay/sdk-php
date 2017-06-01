@@ -77,6 +77,17 @@ class PayInsUniversalPayApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for payInsUniversalPayGetUniversalPayTokenization
+     *
+     * .
+     *
+     */
+    public function testPayInsUniversalPayGetUniversalPayTokenization()
+    {
+
+    }
+
+    /**
      * Test case for payInsUniversalPayUniversalPayGetPayment
      *
      * View a UniversalPay payment.

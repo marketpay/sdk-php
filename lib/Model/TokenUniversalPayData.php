@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomerDetail
+ * TokenUniversalPayData
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * CustomerDetail Class Doc Comment
+ * TokenUniversalPayData Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CustomerDetail implements ArrayAccess
+class TokenUniversalPayData implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,14 @@ class CustomerDetail implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CustomerDetail';
+    protected static $swaggerModelName = 'TokenUniversalPayData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'telephone' => '\Swagger\Client\Model\Telephone',
-        'address' => '\Swagger\Client\Model\Address'
+        'transaction_id' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +67,7 @@ class CustomerDetail implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'first_name' => 'FirstName',
-        'last_name' => 'LastName',
-        'telephone' => 'Telephone',
-        'address' => 'Address'
+        'transaction_id' => 'TransactionId'
     ];
 
 
@@ -82,10 +76,7 @@ class CustomerDetail implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'telephone' => 'setTelephone',
-        'address' => 'setAddress'
+        'transaction_id' => 'setTransactionId'
     ];
 
 
@@ -94,10 +85,7 @@ class CustomerDetail implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'telephone' => 'getTelephone',
-        'address' => 'getAddress'
+        'transaction_id' => 'getTransactionId'
     ];
 
     public static function attributeMap()
@@ -131,10 +119,7 @@ class CustomerDetail implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
-        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
-        $this->container['telephone'] = isset($data['telephone']) ? $data['telephone'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['transaction_id'] = isset($data['transaction_id']) ? $data['transaction_id'] : null;
     }
 
     /**
@@ -146,17 +131,6 @@ class CustomerDetail implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if (!is_null($this->container['first_name']) && (strlen($this->container['first_name']) > 32)) {
-            $invalid_properties[] = "invalid value for 'first_name', the character length must be smaller than or equal to 32.";
-        }
-
-        if (!is_null($this->container['last_name']) && (strlen($this->container['last_name']) > 32)) {
-            $invalid_properties[] = "invalid value for 'last_name', the character length must be smaller than or equal to 32.";
-        }
-
-        if ($this->container['address'] === null) {
-            $invalid_properties[] = "'address' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -169,107 +143,27 @@ class CustomerDetail implements ArrayAccess
     public function valid()
     {
 
-        if (strlen($this->container['first_name']) > 32) {
-            return false;
-        }
-        if (strlen($this->container['last_name']) > 32) {
-            return false;
-        }
-        if ($this->container['address'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets first_name
+     * Gets transaction_id
      * @return string
      */
-    public function getFirstName()
+    public function getTransactionId()
     {
-        return $this->container['first_name'];
+        return $this->container['transaction_id'];
     }
 
     /**
-     * Sets first_name
-     * @param string $first_name
+     * Sets transaction_id
+     * @param string $transaction_id
      * @return $this
      */
-    public function setFirstName($first_name)
+    public function setTransactionId($transaction_id)
     {
-        if (!is_null($first_name) && (strlen($first_name) > 32)) {
-            throw new \InvalidArgumentException('invalid length for $first_name when calling CustomerDetail., must be smaller than or equal to 32.');
-        }
-
-        $this->container['first_name'] = $first_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_name
-     * @return string
-     */
-    public function getLastName()
-    {
-        return $this->container['last_name'];
-    }
-
-    /**
-     * Sets last_name
-     * @param string $last_name
-     * @return $this
-     */
-    public function setLastName($last_name)
-    {
-        if (!is_null($last_name) && (strlen($last_name) > 32)) {
-            throw new \InvalidArgumentException('invalid length for $last_name when calling CustomerDetail., must be smaller than or equal to 32.');
-        }
-
-        $this->container['last_name'] = $last_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets telephone
-     * @return \Swagger\Client\Model\Telephone
-     */
-    public function getTelephone()
-    {
-        return $this->container['telephone'];
-    }
-
-    /**
-     * Sets telephone
-     * @param \Swagger\Client\Model\Telephone $telephone
-     * @return $this
-     */
-    public function setTelephone($telephone)
-    {
-        $this->container['telephone'] = $telephone;
-
-        return $this;
-    }
-
-    /**
-     * Gets address
-     * @return \Swagger\Client\Model\Address
-     */
-    public function getAddress()
-    {
-        return $this->container['address'];
-    }
-
-    /**
-     * Sets address
-     * @param \Swagger\Client\Model\Address $address
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        $this->container['address'] = $address;
+        $this->container['transaction_id'] = $transaction_id;
 
         return $this;
     }

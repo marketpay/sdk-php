@@ -1,6 +1,6 @@
 <?php
 /**
- * UniversalPayTokenRequestPostTest
+ * UniversalPayTokenizationResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Swagger\Client;
 
 /**
- * UniversalPayTokenRequestPostTest Class Doc Comment
+ * UniversalPayTokenizationResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description UniversalPayTokenRequestPost
+// * @description UniversalPayTokenizationResponse
 /**
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
+class UniversalPayTokenizationResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,25 +75,9 @@ class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UniversalPayTokenRequestPost"
+     * Test "UniversalPayTokenizationResponse"
      */
-    public function testUniversalPayTokenRequestPost()
-    {
-
-    }
-
-    /**
-     * Test attribute "authorization_funds"
-     */
-    public function testPropertyAuthorizationFunds()
-    {
-
-    }
-
-    /**
-     * Test attribute "tag"
-     */
-    public function testPropertyTag()
+    public function testUniversalPayTokenizationResponse()
     {
 
     }
@@ -107,41 +91,73 @@ class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "secure_mode"
+     * Test attribute "status"
      */
-    public function testPropertySecureMode()
+    public function testPropertyStatus()
     {
 
     }
 
     /**
-     * Test attribute "success_url"
+     * Test attribute "execution_date"
      */
-    public function testPropertySuccessUrl()
+    public function testPropertyExecutionDate()
     {
 
     }
 
     /**
-     * Test attribute "cancel_url"
+     * Test attribute "result_code"
      */
-    public function testPropertyCancelUrl()
+    public function testPropertyResultCode()
     {
 
     }
 
     /**
-     * Test attribute "language"
+     * Test attribute "result_message"
      */
-    public function testPropertyLanguage()
+    public function testPropertyResultMessage()
     {
 
     }
 
     /**
-     * Test attribute "customer"
+     * Test attribute "execution_type"
      */
-    public function testPropertyCustomer()
+    public function testPropertyExecutionType()
+    {
+
+    }
+
+    /**
+     * Test attribute "author_id"
+     */
+    public function testPropertyAuthorId()
+    {
+
+    }
+
+    /**
+     * Test attribute "credited_user_id"
+     */
+    public function testPropertyCreditedUserId()
+    {
+
+    }
+
+    /**
+     * Test attribute "provider"
+     */
+    public function testPropertyProvider()
+    {
+
+    }
+
+    /**
+     * Test attribute "card_id"
+     */
+    public function testPropertyCardId()
     {
 
     }

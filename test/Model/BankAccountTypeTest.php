@@ -1,6 +1,6 @@
 <?php
 /**
- * UniversalPayTokenRequestPostTest
+ * BankAccountTypeTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Swagger\Client;
 
 /**
- * UniversalPayTokenRequestPostTest Class Doc Comment
+ * BankAccountTypeTest Class Doc Comment
  *
  * @category    Class */
-// * @description UniversalPayTokenRequestPost
+// * @description BankAccountType
 /**
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
+class BankAccountTypeTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,73 +75,49 @@ class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UniversalPayTokenRequestPost"
+     * Test "BankAccountType"
      */
-    public function testUniversalPayTokenRequestPost()
+    public function testBankAccountType()
     {
 
     }
 
     /**
-     * Test attribute "authorization_funds"
+     * Test attribute "type"
      */
-    public function testPropertyAuthorizationFunds()
+    public function testPropertyType()
     {
 
     }
 
     /**
-     * Test attribute "tag"
+     * Test attribute "owner_address"
      */
-    public function testPropertyTag()
+    public function testPropertyOwnerAddress()
     {
 
     }
 
     /**
-     * Test attribute "credited_wallet_id"
+     * Test attribute "owner_name"
      */
-    public function testPropertyCreditedWalletId()
+    public function testPropertyOwnerName()
     {
 
     }
 
     /**
-     * Test attribute "secure_mode"
+     * Test attribute "iban"
      */
-    public function testPropertySecureMode()
+    public function testPropertyIban()
     {
 
     }
 
     /**
-     * Test attribute "success_url"
+     * Test attribute "bic"
      */
-    public function testPropertySuccessUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "cancel_url"
-     */
-    public function testPropertyCancelUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "language"
-     */
-    public function testPropertyLanguage()
-    {
-
-    }
-
-    /**
-     * Test attribute "customer"
-     */
-    public function testPropertyCustomer()
+    public function testPropertyBic()
     {
 
     }

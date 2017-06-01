@@ -1,6 +1,6 @@
 <?php
 /**
- * UniversalPayPayInsResponseTest
+ * BankwirePayInPayInResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Swagger\Client;
 
 /**
- * UniversalPayPayInsResponseTest Class Doc Comment
+ * BankwirePayInPayInResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description UniversalPayPayInsResponse
+// * @description BankwirePayInPayInResponse
 /**
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UniversalPayPayInsResponseTest extends \PHPUnit_Framework_TestCase
+class BankwirePayInPayInResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class UniversalPayPayInsResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UniversalPayPayInsResponse"
+     * Test "BankwirePayInPayInResponse"
      */
-    public function testUniversalPayPayInsResponse()
+    public function testBankwirePayInPayInResponse()
     {
 
     }
@@ -179,14 +179,6 @@ class UniversalPayPayInsResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "statement_descriptor"
-     */
-    public function testPropertyStatementDescriptor()
-    {
-
-    }
-
-    /**
      * Test attribute "author_id"
      */
     public function testPropertyAuthorId()
@@ -203,17 +195,17 @@ class UniversalPayPayInsResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "provider"
+     * Test attribute "wire_reference"
      */
-    public function testPropertyProvider()
+    public function testPropertyWireReference()
     {
 
     }
 
     /**
-     * Test attribute "card_id"
+     * Test attribute "bank_account"
      */
-    public function testPropertyCardId()
+    public function testPropertyBankAccount()
     {
 
     }

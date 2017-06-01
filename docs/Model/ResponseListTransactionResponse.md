@@ -1,10 +1,10 @@
-# PayByWebResponse
+# ResponseListTransactionResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pay_in_id** | **string** | Id of the payment | [optional] 
-**checkout_data** | **string** |  | [optional] 
+**values** | [**\Swagger\Client\Model\TransactionResponse[]**](TransactionResponse.md) |  | [optional] 
+**total** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

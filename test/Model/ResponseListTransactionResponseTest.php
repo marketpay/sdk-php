@@ -1,6 +1,6 @@
 <?php
 /**
- * UniversalPayTokenRequestPostTest
+ * ResponseListTransactionResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Swagger\Client;
 
 /**
- * UniversalPayTokenRequestPostTest Class Doc Comment
+ * ResponseListTransactionResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description UniversalPayTokenRequestPost
+// * @description ResponseListTransactionResponse
 /**
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
+class ResponseListTransactionResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,73 +75,25 @@ class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UniversalPayTokenRequestPost"
+     * Test "ResponseListTransactionResponse"
      */
-    public function testUniversalPayTokenRequestPost()
+    public function testResponseListTransactionResponse()
     {
 
     }
 
     /**
-     * Test attribute "authorization_funds"
+     * Test attribute "values"
      */
-    public function testPropertyAuthorizationFunds()
+    public function testPropertyValues()
     {
 
     }
 
     /**
-     * Test attribute "tag"
+     * Test attribute "total"
      */
-    public function testPropertyTag()
-    {
-
-    }
-
-    /**
-     * Test attribute "credited_wallet_id"
-     */
-    public function testPropertyCreditedWalletId()
-    {
-
-    }
-
-    /**
-     * Test attribute "secure_mode"
-     */
-    public function testPropertySecureMode()
-    {
-
-    }
-
-    /**
-     * Test attribute "success_url"
-     */
-    public function testPropertySuccessUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "cancel_url"
-     */
-    public function testPropertyCancelUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "language"
-     */
-    public function testPropertyLanguage()
-    {
-
-    }
-
-    /**
-     * Test attribute "customer"
-     */
-    public function testPropertyCustomer()
+    public function testPropertyTotal()
     {
 
     }

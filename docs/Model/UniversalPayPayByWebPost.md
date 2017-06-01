@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **secure_mode** | **string** |  | [optional] 
 **success_url** | **string** | Url to redirect the browser in case the payment is completed successfully | [optional] 
 **cancel_url** | **string** | Url to redirect the browser in case the payment is not completed successfully | [optional] 
-**auto_return** | **bool** | Defaults to false (show thank you page) Forced to true for iframe | [optional] 
 **language** | **string** | Valid values are ES, EN, FR | [optional] 
 **customer** | [**\Swagger\Client\Model\CustomerDetail**](CustomerDetail.md) |  | 
 

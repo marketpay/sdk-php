@@ -1,6 +1,6 @@
 <?php
 /**
- * UniversalPayTokenRequestPostTest
+ * BankwirePayInPayInPostTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Swagger\Client;
 
 /**
- * UniversalPayTokenRequestPostTest Class Doc Comment
+ * BankwirePayInPayInPostTest Class Doc Comment
  *
  * @category    Class */
-// * @description UniversalPayTokenRequestPost
+// * @description BankwirePayInPayInPost
 /**
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
+class BankwirePayInPayInPostTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,17 +75,9 @@ class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UniversalPayTokenRequestPost"
+     * Test "BankwirePayInPayInPost"
      */
-    public function testUniversalPayTokenRequestPost()
-    {
-
-    }
-
-    /**
-     * Test attribute "authorization_funds"
-     */
-    public function testPropertyAuthorizationFunds()
+    public function testBankwirePayInPayInPost()
     {
 
     }
@@ -107,41 +99,17 @@ class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "secure_mode"
+     * Test attribute "debited_funds"
      */
-    public function testPropertySecureMode()
+    public function testPropertyDebitedFunds()
     {
 
     }
 
     /**
-     * Test attribute "success_url"
+     * Test attribute "fees"
      */
-    public function testPropertySuccessUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "cancel_url"
-     */
-    public function testPropertyCancelUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "language"
-     */
-    public function testPropertyLanguage()
-    {
-
-    }
-
-    /**
-     * Test attribute "customer"
-     */
-    public function testPropertyCustomer()
+    public function testPropertyFees()
     {
 
     }

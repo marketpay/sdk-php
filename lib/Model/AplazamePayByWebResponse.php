@@ -1,6 +1,6 @@
 <?php
 /**
- * PayInUniversalTokenRequest
+ * AplazamePayByWebResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * PayInUniversalTokenRequest Class Doc Comment
+ * AplazamePayByWebResponse Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PayInUniversalTokenRequest implements ArrayAccess
+class AplazamePayByWebResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,15 @@ class PayInUniversalTokenRequest implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PayInUniversalTokenRequest';
+    protected static $swaggerModelName = 'AplazamePayByWebResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'pay_in_id' => 'string',
+        'checkout_data' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -67,7 +68,8 @@ class PayInUniversalTokenRequest implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'pay_in_id' => 'PayInId',
+        'checkout_data' => 'CheckoutData'
     ];
 
 
@@ -76,7 +78,8 @@ class PayInUniversalTokenRequest implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'pay_in_id' => 'setPayInId',
+        'checkout_data' => 'setCheckoutData'
     ];
 
 
@@ -85,7 +88,8 @@ class PayInUniversalTokenRequest implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'pay_in_id' => 'getPayInId',
+        'checkout_data' => 'getCheckoutData'
     ];
 
     public static function attributeMap()
@@ -119,6 +123,8 @@ class PayInUniversalTokenRequest implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['pay_in_id'] = isset($data['pay_in_id']) ? $data['pay_in_id'] : null;
+        $this->container['checkout_data'] = isset($data['checkout_data']) ? $data['checkout_data'] : null;
     }
 
     /**
@@ -145,6 +151,48 @@ class PayInUniversalTokenRequest implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets pay_in_id
+     * @return string
+     */
+    public function getPayInId()
+    {
+        return $this->container['pay_in_id'];
+    }
+
+    /**
+     * Sets pay_in_id
+     * @param string $pay_in_id
+     * @return $this
+     */
+    public function setPayInId($pay_in_id)
+    {
+        $this->container['pay_in_id'] = $pay_in_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets checkout_data
+     * @return string
+     */
+    public function getCheckoutData()
+    {
+        return $this->container['checkout_data'];
+    }
+
+    /**
+     * Sets checkout_data
+     * @param string $checkout_data
+     * @return $this
+     */
+    public function setCheckoutData($checkout_data)
+    {
+        $this->container['checkout_data'] = $checkout_data;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

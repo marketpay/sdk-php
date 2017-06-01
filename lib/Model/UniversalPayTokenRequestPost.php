@@ -54,13 +54,12 @@ class UniversalPayTokenRequestPost implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'token_request' => '\Swagger\Client\Model\PayInUniversalTokenRequest',
+        'authorization_funds' => '\Swagger\Client\Model\Money',
         'tag' => 'string',
         'credited_wallet_id' => 'string',
         'secure_mode' => 'string',
         'success_url' => 'string',
         'cancel_url' => 'string',
-        'auto_return' => 'bool',
         'language' => 'string',
         'customer' => '\Swagger\Client\Model\CustomerDetail'
     ];
@@ -75,13 +74,12 @@ class UniversalPayTokenRequestPost implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'token_request' => 'TokenRequest',
+        'authorization_funds' => 'AuthorizationFunds',
         'tag' => 'Tag',
         'credited_wallet_id' => 'CreditedWalletId',
         'secure_mode' => 'SecureMode',
         'success_url' => 'SuccessUrl',
         'cancel_url' => 'CancelUrl',
-        'auto_return' => 'AutoReturn',
         'language' => 'Language',
         'customer' => 'Customer'
     ];
@@ -92,13 +90,12 @@ class UniversalPayTokenRequestPost implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'token_request' => 'setTokenRequest',
+        'authorization_funds' => 'setAuthorizationFunds',
         'tag' => 'setTag',
         'credited_wallet_id' => 'setCreditedWalletId',
         'secure_mode' => 'setSecureMode',
         'success_url' => 'setSuccessUrl',
         'cancel_url' => 'setCancelUrl',
-        'auto_return' => 'setAutoReturn',
         'language' => 'setLanguage',
         'customer' => 'setCustomer'
     ];
@@ -109,13 +106,12 @@ class UniversalPayTokenRequestPost implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'token_request' => 'getTokenRequest',
+        'authorization_funds' => 'getAuthorizationFunds',
         'tag' => 'getTag',
         'credited_wallet_id' => 'getCreditedWalletId',
         'secure_mode' => 'getSecureMode',
         'success_url' => 'getSuccessUrl',
         'cancel_url' => 'getCancelUrl',
-        'auto_return' => 'getAutoReturn',
         'language' => 'getLanguage',
         'customer' => 'getCustomer'
     ];
@@ -213,13 +209,12 @@ class UniversalPayTokenRequestPost implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['token_request'] = isset($data['token_request']) ? $data['token_request'] : null;
+        $this->container['authorization_funds'] = isset($data['authorization_funds']) ? $data['authorization_funds'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['credited_wallet_id'] = isset($data['credited_wallet_id']) ? $data['credited_wallet_id'] : null;
         $this->container['secure_mode'] = isset($data['secure_mode']) ? $data['secure_mode'] : null;
         $this->container['success_url'] = isset($data['success_url']) ? $data['success_url'] : null;
         $this->container['cancel_url'] = isset($data['cancel_url']) ? $data['cancel_url'] : null;
-        $this->container['auto_return'] = isset($data['auto_return']) ? $data['auto_return'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
     }
@@ -280,22 +275,22 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
 
     /**
-     * Gets token_request
-     * @return \Swagger\Client\Model\PayInUniversalTokenRequest
+     * Gets authorization_funds
+     * @return \Swagger\Client\Model\Money
      */
-    public function getTokenRequest()
+    public function getAuthorizationFunds()
     {
-        return $this->container['token_request'];
+        return $this->container['authorization_funds'];
     }
 
     /**
-     * Sets token_request
-     * @param \Swagger\Client\Model\PayInUniversalTokenRequest $token_request
+     * Sets authorization_funds
+     * @param \Swagger\Client\Model\Money $authorization_funds
      * @return $this
      */
-    public function setTokenRequest($token_request)
+    public function setAuthorizationFunds($authorization_funds)
     {
-        $this->container['token_request'] = $token_request;
+        $this->container['authorization_funds'] = $authorization_funds;
 
         return $this;
     }
@@ -405,27 +400,6 @@ class UniversalPayTokenRequestPost implements ArrayAccess
     public function setCancelUrl($cancel_url)
     {
         $this->container['cancel_url'] = $cancel_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets auto_return
-     * @return bool
-     */
-    public function getAutoReturn()
-    {
-        return $this->container['auto_return'];
-    }
-
-    /**
-     * Sets auto_return
-     * @param bool $auto_return Defaults to false (show thank you page) Forced to true for iframe
-     * @return $this
-     */
-    public function setAutoReturn($auto_return)
-    {
-        $this->container['auto_return'] = $auto_return;
 
         return $this;
     }

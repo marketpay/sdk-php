@@ -163,14 +163,6 @@ class UniversalPayPayByWebPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "auto_return"
-     */
-    public function testPropertyAutoReturn()
-    {
-
-    }
-
-    /**
      * Test attribute "language"
      */
     public function testPropertyLanguage()

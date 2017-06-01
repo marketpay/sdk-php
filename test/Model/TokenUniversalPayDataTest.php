@@ -1,6 +1,6 @@
 <?php
 /**
- * UniversalPayTokenRequestPostTest
+ * TokenUniversalPayDataTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Swagger\Client;
 
 /**
- * UniversalPayTokenRequestPostTest Class Doc Comment
+ * TokenUniversalPayDataTest Class Doc Comment
  *
  * @category    Class */
-// * @description UniversalPayTokenRequestPost
+// * @description TokenUniversalPayData
 /**
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
+class TokenUniversalPayDataTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,73 +75,17 @@ class UniversalPayTokenRequestPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UniversalPayTokenRequestPost"
+     * Test "TokenUniversalPayData"
      */
-    public function testUniversalPayTokenRequestPost()
+    public function testTokenUniversalPayData()
     {
 
     }
 
     /**
-     * Test attribute "authorization_funds"
+     * Test attribute "transaction_id"
      */
-    public function testPropertyAuthorizationFunds()
-    {
-
-    }
-
-    /**
-     * Test attribute "tag"
-     */
-    public function testPropertyTag()
-    {
-
-    }
-
-    /**
-     * Test attribute "credited_wallet_id"
-     */
-    public function testPropertyCreditedWalletId()
-    {
-
-    }
-
-    /**
-     * Test attribute "secure_mode"
-     */
-    public function testPropertySecureMode()
-    {
-
-    }
-
-    /**
-     * Test attribute "success_url"
-     */
-    public function testPropertySuccessUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "cancel_url"
-     */
-    public function testPropertyCancelUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "language"
-     */
-    public function testPropertyLanguage()
-    {
-
-    }
-
-    /**
-     * Test attribute "customer"
-     */
-    public function testPropertyCustomer()
+    public function testPropertyTransactionId()
     {
 
     }

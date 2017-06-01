@@ -4,11 +4,58 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**payInsUniversalPayGetUniversalPayTokenization**](PayInsUniversalPayApi.md#payInsUniversalPayGetUniversalPayTokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | 
 [**payInsUniversalPayUniversalPayGetPayment**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayGetPayment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | View a UniversalPay payment
 [**payInsUniversalPayUniversalPayPostPaymentByWeb**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayPostPaymentByWeb) | **POST** /v2.01/PayInsUniversalPay/payments/web | Create a UniversalPay PayIn Request
 [**payInsUniversalPayUniversalPayPostRefund**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayPostRefund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | Create a UniversalPay Payment Refund
-[**payInsUniversalPayUniversalPaySaveCard**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPaySaveCard) | **POST** /v2.01/PayInsUniversalPay/cards | 
+[**payInsUniversalPayUniversalPaySaveCard**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPaySaveCard) | **POST** /v2.01/PayInsUniversalPay/token/web | 
 
+
+# **payInsUniversalPayGetUniversalPayTokenization**
+> \Swagger\Client\Model\UniversalPayTokenizationResponse payInsUniversalPayGetUniversalPayTokenization($token_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$api_instance = new Swagger\Client\Api\PayInsUniversalPayApi();
+$token_id = 789; // int | 
+
+try {
+    $result = $api_instance->payInsUniversalPayGetUniversalPayTokenization($token_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PayInsUniversalPayApi->payInsUniversalPayGetUniversalPayTokenization: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token_id** | **int**|  |
+
+### Return type
+
+[**\Swagger\Client\Model\UniversalPayTokenizationResponse**](../Model/UniversalPayTokenizationResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPayGetPayment**
 > \Swagger\Client\Model\UniversalPayPayInsResponse payInsUniversalPayUniversalPayGetPayment($pay_in_id)
@@ -157,7 +204,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPaySaveCard**
-> \Swagger\Client\Model\UniversalPayPayByWebResponse payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card)
+> \Swagger\Client\Model\UniversalPayTokenizeByWebResponse payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card)
 
 
 
@@ -189,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UniversalPayPayByWebResponse**](../Model/UniversalPayPayByWebResponse.md)
+[**\Swagger\Client\Model\UniversalPayTokenizeByWebResponse**](../Model/UniversalPayTokenizeByWebResponse.md)
 
 ### Authorization
 

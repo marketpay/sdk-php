@@ -88,6 +88,99 @@ class PayInsUniversalPayApi
     }
 
     /**
+     * Operation payInsUniversalPayGetUniversalPayTokenization
+     *
+     * 
+     *
+     * @param int $token_id  (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\UniversalPayTokenizationResponse
+     */
+    public function payInsUniversalPayGetUniversalPayTokenization($token_id)
+    {
+        list($response) = $this->payInsUniversalPayGetUniversalPayTokenizationWithHttpInfo($token_id);
+        return $response;
+    }
+
+    /**
+     * Operation payInsUniversalPayGetUniversalPayTokenizationWithHttpInfo
+     *
+     * 
+     *
+     * @param int $token_id  (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\UniversalPayTokenizationResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function payInsUniversalPayGetUniversalPayTokenizationWithHttpInfo($token_id)
+    {
+        // verify the required parameter 'token_id' is set
+        if ($token_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $token_id when calling payInsUniversalPayGetUniversalPayTokenization');
+        }
+        // parse inputs
+        $resourcePath = "/v2.01/PayInsUniversalPay/token/{TokenId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($token_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "TokenId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($token_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\UniversalPayTokenizationResponse',
+                '/v2.01/PayInsUniversalPay/token/{TokenId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayTokenizationResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayTokenizationResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation payInsUniversalPayUniversalPayGetPayment
      *
      * View a UniversalPay payment
@@ -373,7 +466,7 @@ class PayInsUniversalPayApi
      *
      * @param \Swagger\Client\Model\UniversalPayTokenRequestPost $universal_pay_save_card  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UniversalPayPayByWebResponse
+     * @return \Swagger\Client\Model\UniversalPayTokenizeByWebResponse
      */
     public function payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card = null)
     {
@@ -388,12 +481,12 @@ class PayInsUniversalPayApi
      *
      * @param \Swagger\Client\Model\UniversalPayTokenRequestPost $universal_pay_save_card  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UniversalPayPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\UniversalPayTokenizeByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsUniversalPayUniversalPaySaveCardWithHttpInfo($universal_pay_save_card = null)
     {
         // parse inputs
-        $resourcePath = "/v2.01/PayInsUniversalPay/cards";
+        $resourcePath = "/v2.01/PayInsUniversalPay/token/web";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -431,15 +524,15 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UniversalPayPayByWebResponse',
-                '/v2.01/PayInsUniversalPay/cards'
+                '\Swagger\Client\Model\UniversalPayTokenizeByWebResponse',
+                '/v2.01/PayInsUniversalPay/token/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayPayByWebResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayTokenizeByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayPayByWebResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayTokenizeByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
