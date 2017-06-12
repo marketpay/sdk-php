@@ -1,19 +1,17 @@
-# Swagger\Client\PayOutsApi
+# Swagger\Client\PayOutsBankwireApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payOutsGet**](PayOutsApi.md#payOutsGet) | **GET** /v2.01/PayOuts/bankwire/{id} | SwaggerDocSummary
-[**payOutsPost**](PayOutsApi.md#payOutsPost) | **POST** /v2.01/PayOuts/bankwire | SwaggerDocSummary
+[**payOutsBankwireGet**](PayOutsBankwireApi.md#payOutsBankwireGet) | **GET** /v2.01/PayOutsBankwire/bankwire/{id} | 
+[**payOutsBankwirePost**](PayOutsBankwireApi.md#payOutsBankwirePost) | **POST** /v2.01/PayOutsBankwire/bankwire | 
 
 
-# **payOutsGet**
-> \Swagger\Client\Model\PayOutBankWireResponse payOutsGet($id)
+# **payOutsBankwireGet**
+> \Swagger\Client\Model\PayOutBankwireResponse payOutsBankwireGet($pay_in_id, $id)
 
-SwaggerDocSummary
 
-SwaggerDocDescription
 
 ### Example
 ```php
@@ -23,14 +21,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: oauth2
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayOutsApi();
-$id = 789; // int | SwaggerDocParameter
+$api_instance = new Swagger\Client\Api\PayOutsBankwireApi();
+$pay_in_id = 789; // int | 
+$id = "id_example"; // string | 
 
 try {
-    $result = $api_instance->payOutsGet($id);
+    $result = $api_instance->payOutsBankwireGet($pay_in_id, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PayOutsApi->payOutsGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PayOutsBankwireApi->payOutsBankwireGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -39,11 +38,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| SwaggerDocParameter |
+ **pay_in_id** | **int**|  |
+ **id** | **string**|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PayOutBankWireResponse**](../Model/PayOutBankWireResponse.md)
+[**\Swagger\Client\Model\PayOutBankwireResponse**](../Model/PayOutBankwireResponse.md)
 
 ### Authorization
 
@@ -56,12 +56,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **payOutsPost**
-> \Swagger\Client\Model\PayOutBankWireResponse payOutsPost($request)
+# **payOutsBankwirePost**
+> \Swagger\Client\Model\PayOutBankwireResponse payOutsBankwirePost($bankwire_pay_in)
 
-SwaggerDocSummary
 
-SwaggerDocDescription
 
 ### Example
 ```php
@@ -71,14 +69,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: oauth2
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayOutsApi();
-$request = new \Swagger\Client\Model\PayOutBankWirePost(); // \Swagger\Client\Model\PayOutBankWirePost | SwaggerDocParameter
+$api_instance = new Swagger\Client\Api\PayOutsBankwireApi();
+$bankwire_pay_in = new \Swagger\Client\Model\PayOutBankwirePost(); // \Swagger\Client\Model\PayOutBankwirePost | 
 
 try {
-    $result = $api_instance->payOutsPost($request);
+    $result = $api_instance->payOutsBankwirePost($bankwire_pay_in);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PayOutsApi->payOutsPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PayOutsBankwireApi->payOutsBankwirePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -87,11 +85,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**\Swagger\Client\Model\PayOutBankWirePost**](../Model/\Swagger\Client\Model\PayOutBankWirePost.md)| SwaggerDocParameter | [optional]
+ **bankwire_pay_in** | [**\Swagger\Client\Model\PayOutBankwirePost**](../Model/\Swagger\Client\Model\PayOutBankwirePost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\PayOutBankWireResponse**](../Model/PayOutBankWireResponse.md)
+[**\Swagger\Client\Model\PayOutBankwireResponse**](../Model/PayOutBankwireResponse.md)
 
 ### Authorization
 

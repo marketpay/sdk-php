@@ -1,6 +1,6 @@
 <?php
 /**
- * PayOutsApi
+ * PayOutsBankwireApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Swagger\Client\Configuration;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PayOutsApi Class Doc Comment
+ * PayOutsBankwireApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayOutsApi
+class PayOutsBankwireApi
 {
     /**
      * API Client
@@ -79,7 +79,7 @@ class PayOutsApi
      *
      * @param \Swagger\Client\ApiClient $apiClient set the API client
      *
-     * @return PayOutsApi
+     * @return PayOutsBankwireApi
      */
     public function setApiClient(\Swagger\Client\ApiClient $apiClient)
     {
@@ -88,37 +88,43 @@ class PayOutsApi
     }
 
     /**
-     * Operation payOutsGet
+     * Operation payOutsBankwireGet
      *
-     * SwaggerDocSummary
+     * 
      *
-     * @param int $id SwaggerDocParameter (required)
+     * @param int $pay_in_id  (required)
+     * @param string $id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\PayOutBankWireResponse
+     * @return \Swagger\Client\Model\PayOutBankwireResponse
      */
-    public function payOutsGet($id)
+    public function payOutsBankwireGet($pay_in_id, $id)
     {
-        list($response) = $this->payOutsGetWithHttpInfo($id);
+        list($response) = $this->payOutsBankwireGetWithHttpInfo($pay_in_id, $id);
         return $response;
     }
 
     /**
-     * Operation payOutsGetWithHttpInfo
+     * Operation payOutsBankwireGetWithHttpInfo
      *
-     * SwaggerDocSummary
+     * 
      *
-     * @param int $id SwaggerDocParameter (required)
+     * @param int $pay_in_id  (required)
+     * @param string $id  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\PayOutBankWireResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\PayOutBankwireResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payOutsGetWithHttpInfo($id)
+    public function payOutsBankwireGetWithHttpInfo($pay_in_id, $id)
     {
+        // verify the required parameter 'pay_in_id' is set
+        if ($pay_in_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payOutsBankwireGet');
+        }
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling payOutsGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling payOutsBankwireGet');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayOuts/bankwire/{id}";
+        $resourcePath = "/v2.01/PayOutsBankwire/bankwire/{id}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -129,6 +135,14 @@ class PayOutsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
+        // path params
+        if ($pay_in_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "PayInId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($pay_in_id),
+                $resourcePath
+            );
+        }
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -159,15 +173,15 @@ class PayOutsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\PayOutBankWireResponse',
-                '/v2.01/PayOuts/bankwire/{id}'
+                '\Swagger\Client\Model\PayOutBankwireResponse',
+                '/v2.01/PayOutsBankwire/bankwire/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PayOutBankWireResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PayOutBankwireResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PayOutBankWireResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PayOutBankwireResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -181,33 +195,33 @@ class PayOutsApi
     }
 
     /**
-     * Operation payOutsPost
+     * Operation payOutsBankwirePost
      *
-     * SwaggerDocSummary
+     * 
      *
-     * @param \Swagger\Client\Model\PayOutBankWirePost $request SwaggerDocParameter (optional)
+     * @param \Swagger\Client\Model\PayOutBankwirePost $bankwire_pay_in  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\PayOutBankWireResponse
+     * @return \Swagger\Client\Model\PayOutBankwireResponse
      */
-    public function payOutsPost($request = null)
+    public function payOutsBankwirePost($bankwire_pay_in = null)
     {
-        list($response) = $this->payOutsPostWithHttpInfo($request);
+        list($response) = $this->payOutsBankwirePostWithHttpInfo($bankwire_pay_in);
         return $response;
     }
 
     /**
-     * Operation payOutsPostWithHttpInfo
+     * Operation payOutsBankwirePostWithHttpInfo
      *
-     * SwaggerDocSummary
+     * 
      *
-     * @param \Swagger\Client\Model\PayOutBankWirePost $request SwaggerDocParameter (optional)
+     * @param \Swagger\Client\Model\PayOutBankwirePost $bankwire_pay_in  (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\PayOutBankWireResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\PayOutBankwireResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payOutsPostWithHttpInfo($request = null)
+    public function payOutsBankwirePostWithHttpInfo($bankwire_pay_in = null)
     {
         // parse inputs
-        $resourcePath = "/v2.01/PayOuts/bankwire";
+        $resourcePath = "/v2.01/PayOutsBankwire/bankwire";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -223,8 +237,8 @@ class PayOutsApi
 
         // body params
         $_tempBody = null;
-        if (isset($request)) {
-            $_tempBody = $request;
+        if (isset($bankwire_pay_in)) {
+            $_tempBody = $bankwire_pay_in;
         }
 
         // for model (json/xml)
@@ -245,15 +259,15 @@ class PayOutsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\PayOutBankWireResponse',
-                '/v2.01/PayOuts/bankwire'
+                '\Swagger\Client\Model\PayOutBankwireResponse',
+                '/v2.01/PayOutsBankwire/bankwire'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PayOutBankWireResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PayOutBankwireResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PayOutBankWireResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PayOutBankwireResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
