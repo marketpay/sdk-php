@@ -92,8 +92,10 @@ Class | Method | HTTP request | Description
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostPaymentByWeb**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostpaymentbyweb) | **POST** /v2.01/PayInsUniversalPay/payments/web | Create a UniversalPay PayIn Request
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostRefund**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostrefund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | Create a UniversalPay Payment Refund
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPaySaveCard**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaysavecard) | **POST** /v2.01/PayInsUniversalPay/token/web | 
-*PayOutsBankwireApi* | [**payOutsBankwireGet**](docs/Api/PayOutsBankwireApi.md#payoutsbankwireget) | **GET** /v2.01/PayOutsBankwire/bankwire/{id} | 
+*PayOutsBankwireApi* | [**payOutsBankwireGet**](docs/Api/PayOutsBankwireApi.md#payoutsbankwireget) | **GET** /v2.01/PayOutsBankwire/bankwire/{PayOutId} | 
+*PayOutsBankwireApi* | [**payOutsBankwireGet_0**](docs/Api/PayOutsBankwireApi.md#payoutsbankwireget_0) | **GET** /v2.01/PayOutsBankwire/payments/{PayOutId} | 
 *PayOutsBankwireApi* | [**payOutsBankwirePost**](docs/Api/PayOutsBankwireApi.md#payoutsbankwirepost) | **POST** /v2.01/PayOutsBankwire/bankwire | 
+*PayOutsBankwireApi* | [**payOutsBankwirePost_0**](docs/Api/PayOutsBankwireApi.md#payoutsbankwirepost_0) | **POST** /v2.01/PayOutsBankwire/payments/direct | 
 *RefundsApi* | [**refundsRefundGet**](docs/Api/RefundsApi.md#refundsrefundget) | **GET** /v2.01/Refunds/{RefundId} | View a Refund
 *ShipmentSeurApi* | [**shipmentSeurSeurCancelShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcancelshipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | Cancels a shipment
 *ShipmentSeurApi* | [**shipmentSeurSeurCreateShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcreateshipment) | **POST** /v2.01/ShipmentSeur/shipments | Creates a shipment
