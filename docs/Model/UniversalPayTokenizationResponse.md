@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **execution_type** | **string** | The type of execution for the payin | [optional] 
 **author_id** | **string** | A user&#39;s ID | [optional] 
 **credited_user_id** | **string** | The user ID who was credited | [optional] 
-**provider** | [**\Swagger\Client\Model\TokenUniversalPayData**](TokenUniversalPayData.md) |  | [optional] 
+**provider** | [**\MarketPay\Model\TokenUniversalPayData**](TokenUniversalPayData.md) |  | [optional] 
 **card_id** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

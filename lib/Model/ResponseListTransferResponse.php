@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * ResponseListTransferResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,7 +54,7 @@ class ResponseListTransferResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'values' => '\Swagger\Client\Model\TransferResponse[]',
+        'values' => '\MarketPay\Model\TransferResponse[]',
         'total' => 'int'
     ];
 
@@ -168,7 +168,7 @@ class ResponseListTransferResponse implements ArrayAccess
 
     /**
      * Gets values
-     * @return \Swagger\Client\Model\TransferResponse[]
+     * @return \MarketPay\Model\TransferResponse[]
      */
     public function getValues()
     {
@@ -177,7 +177,7 @@ class ResponseListTransferResponse implements ArrayAccess
 
     /**
      * Sets values
-     * @param \Swagger\Client\Model\TransferResponse[] $values
+     * @param \MarketPay\Model\TransferResponse[] $values
      * @return $this
      */
     public function setValues($values)
@@ -259,10 +259,10 @@ class ResponseListTransferResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

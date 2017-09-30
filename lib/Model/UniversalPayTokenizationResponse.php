@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * UniversalPayTokenizationResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
         'execution_type' => 'string',
         'author_id' => 'string',
         'credited_user_id' => 'string',
-        'provider' => '\Swagger\Client\Model\TokenUniversalPayData',
+        'provider' => '\MarketPay\Model\TokenUniversalPayData',
         'card_id' => 'string'
     ];
 
@@ -458,7 +458,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
 
     /**
      * Gets provider
-     * @return \Swagger\Client\Model\TokenUniversalPayData
+     * @return \MarketPay\Model\TokenUniversalPayData
      */
     public function getProvider()
     {
@@ -467,7 +467,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
 
     /**
      * Sets provider
-     * @param \Swagger\Client\Model\TokenUniversalPayData $provider
+     * @param \MarketPay\Model\TokenUniversalPayData $provider
      * @return $this
      */
     public function setProvider($provider)
@@ -549,10 +549,10 @@ class UniversalPayTokenizationResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

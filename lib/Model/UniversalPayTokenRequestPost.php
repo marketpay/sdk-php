@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * UniversalPayTokenRequestPost Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,14 +54,14 @@ class UniversalPayTokenRequestPost implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'authorization_funds' => '\Swagger\Client\Model\Money',
+        'authorization_funds' => '\MarketPay\Model\Money',
         'tag' => 'string',
         'credited_wallet_id' => 'string',
         'secure_mode' => 'string',
         'success_url' => 'string',
         'cancel_url' => 'string',
         'language' => 'string',
-        'customer' => '\Swagger\Client\Model\CustomerDetail'
+        'customer' => '\MarketPay\Model\CustomerDetail'
     ];
 
     /**
@@ -308,7 +308,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Gets authorization_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getAuthorizationFunds()
     {
@@ -317,7 +317,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Sets authorization_funds
-     * @param \Swagger\Client\Model\Money $authorization_funds Amount that will be charged to authorize the card. Default value is 1 euro. Authorizations with zero amount may be rejected by the credit card issuer and are not guaranteed to succeed.
+     * @param \MarketPay\Model\Money $authorization_funds Amount that will be charged to authorize the card. Default value is 1 euro. Authorizations with zero amount may be rejected by the credit card issuer and are not guaranteed to succeed.
      * @return $this
      */
     public function setAuthorizationFunds($authorization_funds)
@@ -473,7 +473,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Gets customer
-     * @return \Swagger\Client\Model\CustomerDetail
+     * @return \MarketPay\Model\CustomerDetail
      */
     public function getCustomer()
     {
@@ -482,7 +482,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Sets customer
-     * @param \Swagger\Client\Model\CustomerDetail $customer
+     * @param \MarketPay\Model\CustomerDetail $customer
      * @return $this
      */
     public function setCustomer($customer)
@@ -543,10 +543,10 @@ class UniversalPayTokenRequestPost implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

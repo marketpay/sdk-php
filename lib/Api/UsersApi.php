@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace MarketPay\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \MarketPay\ApiClient;
+use \MarketPay\ApiException;
+use \MarketPay\Configuration;
+use \MarketPay\ObjectSerializer;
 
 /**
  * UsersApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class UsersApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \MarketPay\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \MarketPay\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\MarketPay\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class UsersApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \MarketPay\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class UsersApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \MarketPay\ApiClient $apiClient set the API client
      *
      * @return UsersApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\MarketPay\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -93,8 +93,8 @@ class UsersApi
      * View a User
      *
      * @param int $user_id The Id of a user (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UserResponse
      */
     public function usersGet($user_id)
     {
@@ -108,8 +108,8 @@ class UsersApi
      * View a User
      *
      * @param int $user_id The Id of a user (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UserResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetWithHttpInfo($user_id)
     {
@@ -156,19 +156,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserResponse',
+                '\MarketPay\Model\UserResponse',
                 '/v2.01/Users/{UserId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UserResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UserResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -184,8 +184,8 @@ class UsersApi
      *
      * @param int $user_id The Id of a user (required)
      * @param int $bank_account_id The Id of a bank account (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\BankAccountResponse
      */
     public function usersGetBankAccount($user_id, $bank_account_id)
     {
@@ -200,8 +200,8 @@ class UsersApi
      *
      * @param int $user_id The Id of a user (required)
      * @param int $bank_account_id The Id of a bank account (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\BankAccountResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetBankAccountWithHttpInfo($user_id, $bank_account_id)
     {
@@ -260,19 +260,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponse',
+                '\MarketPay\Model\BankAccountResponse',
                 '/v2.01/Users/{UserId}/bankaccounts/{BankAccountId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -289,8 +289,8 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponse[]
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\BankAccountResponse[]
      */
     public function usersGetBankAccountList($user_id, $page = null, $per_page = null)
     {
@@ -306,8 +306,8 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\BankAccountResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetBankAccountListWithHttpInfo($user_id, $page = null, $per_page = null)
     {
@@ -362,19 +362,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponse[]',
+                '\MarketPay\Model\BankAccountResponse[]',
                 '/v2.01/Users/{UserId}/bankaccounts'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -391,8 +391,8 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CardResponse[]
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\CardResponse[]
      */
     public function usersGetCardList($user_id, $page = null, $per_page = null)
     {
@@ -408,8 +408,8 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CardResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\CardResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetCardListWithHttpInfo($user_id, $page = null, $per_page = null)
     {
@@ -464,19 +464,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CardResponse[]',
+                '\MarketPay\Model\CardResponse[]',
                 '/v2.01/Users/{UserId}/cards'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CardResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\CardResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CardResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CardResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -491,8 +491,8 @@ class UsersApi
      * View a Legal User
      *
      * @param int $user_id The Id of a legal user (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserLegalResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UserLegalResponse
      */
     public function usersGetLegal($user_id)
     {
@@ -506,8 +506,8 @@ class UsersApi
      * View a Legal User
      *
      * @param int $user_id The Id of a legal user (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetLegalWithHttpInfo($user_id)
     {
@@ -554,19 +554,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserLegalResponse',
+                '\MarketPay\Model\UserLegalResponse',
                 '/v2.01/Users/legal/{UserId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserLegalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UserLegalResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserLegalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UserLegalResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -582,8 +582,8 @@ class UsersApi
      *
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserResponse[]
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UserResponse[]
      */
     public function usersGetList($page = null, $per_page = null)
     {
@@ -598,8 +598,8 @@ class UsersApi
      *
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UserResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetListWithHttpInfo($page = null, $per_page = null)
     {
@@ -642,19 +642,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserResponse[]',
+                '\MarketPay\Model\UserResponse[]',
                 '/v2.01/Users'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UserResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UserResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -669,8 +669,8 @@ class UsersApi
      * View a Natural User
      *
      * @param int $user_id The Id of a natural user (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserNaturalResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UserNaturalResponse
      */
     public function usersGetNatural($user_id)
     {
@@ -684,8 +684,8 @@ class UsersApi
      * View a Natural User
      *
      * @param int $user_id The Id of a natural user (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetNaturalWithHttpInfo($user_id)
     {
@@ -732,19 +732,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserNaturalResponse',
+                '\MarketPay\Model\UserNaturalResponse',
                 '/v2.01/Users/natural/{UserId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserNaturalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UserNaturalResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -761,8 +761,8 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TransactionResponse[]
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\TransactionResponse[]
      */
     public function usersGetTransactionList($user_id, $page = null, $per_page = null)
     {
@@ -778,8 +778,8 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TransactionResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\TransactionResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetTransactionListWithHttpInfo($user_id, $page = null, $per_page = null)
     {
@@ -834,19 +834,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TransactionResponse[]',
+                '\MarketPay\Model\TransactionResponse[]',
                 '/v2.01/Users/{UserId}/transactions'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TransactionResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\TransactionResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TransactionResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\TransactionResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -863,8 +863,8 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\WalletResponse[]
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\WalletResponse[]
      */
     public function usersGetWalletList($user_id, $page = null, $per_page = null)
     {
@@ -880,8 +880,8 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\WalletResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\WalletResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetWalletListWithHttpInfo($user_id, $page = null, $per_page = null)
     {
@@ -936,19 +936,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\WalletResponse[]',
+                '\MarketPay\Model\WalletResponse[]',
                 '/v2.01/Users/{UserId}/wallets'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\WalletResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WalletResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\WalletResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WalletResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -963,9 +963,9 @@ class UsersApi
      * Create a CA BankAccount
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountCaPost $bank_account_ca BankAccountCA Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponseCa
+     * @param \MarketPay\Model\BankAccountCaPost $bank_account_ca BankAccountCA Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\BankAccountResponseCa
      */
     public function usersPostBankAccountCa($user_id, $bank_account_ca = null)
     {
@@ -979,9 +979,9 @@ class UsersApi
      * Create a CA BankAccount
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountCaPost $bank_account_ca BankAccountCA Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponseCa, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\BankAccountCaPost $bank_account_ca BankAccountCA Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\BankAccountResponseCa, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountCaWithHttpInfo($user_id, $bank_account_ca = null)
     {
@@ -1033,19 +1033,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponseCa',
+                '\MarketPay\Model\BankAccountResponseCa',
                 '/v2.01/Users/{UserId}/bankaccounts/CA'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponseCa', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponseCa', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponseCa', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponseCa', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1060,9 +1060,9 @@ class UsersApi
      * Create a GB BankAccount
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountGbPost $bank_account_gb  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponseGb
+     * @param \MarketPay\Model\BankAccountGbPost $bank_account_gb  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\BankAccountResponseGb
      */
     public function usersPostBankAccountGb($user_id, $bank_account_gb = null)
     {
@@ -1076,9 +1076,9 @@ class UsersApi
      * Create a GB BankAccount
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountGbPost $bank_account_gb  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponseGb, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\BankAccountGbPost $bank_account_gb  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\BankAccountResponseGb, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountGbWithHttpInfo($user_id, $bank_account_gb = null)
     {
@@ -1130,19 +1130,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponseGb',
+                '\MarketPay\Model\BankAccountResponseGb',
                 '/v2.01/Users/{UserId}/bankaccounts/GB'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponseGb', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponseGb', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponseGb', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponseGb', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1157,9 +1157,9 @@ class UsersApi
      * Create an IBAN BankAccount
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountIbanPost $bank_account_iban BankAccountIBAN Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponseIban
+     * @param \MarketPay\Model\BankAccountIbanPost $bank_account_iban BankAccountIBAN Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\BankAccountResponseIban
      */
     public function usersPostBankAccountIban($user_id, $bank_account_iban = null)
     {
@@ -1173,9 +1173,9 @@ class UsersApi
      * Create an IBAN BankAccount
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountIbanPost $bank_account_iban BankAccountIBAN Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponseIban, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\BankAccountIbanPost $bank_account_iban BankAccountIBAN Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\BankAccountResponseIban, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountIbanWithHttpInfo($user_id, $bank_account_iban = null)
     {
@@ -1227,19 +1227,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponseIban',
+                '\MarketPay\Model\BankAccountResponseIban',
                 '/v2.01/Users/{UserId}/bankaccounts/IBAN'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponseIban', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponseIban', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponseIban', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponseIban', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1254,9 +1254,9 @@ class UsersApi
      * Create an OTHER BankAccount
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountOtherPost $bank_account_other  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponseOther
+     * @param \MarketPay\Model\BankAccountOtherPost $bank_account_other  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\BankAccountResponseOther
      */
     public function usersPostBankAccountOther($user_id, $bank_account_other = null)
     {
@@ -1270,9 +1270,9 @@ class UsersApi
      * Create an OTHER BankAccount
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountOtherPost $bank_account_other  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponseOther, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\BankAccountOtherPost $bank_account_other  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\BankAccountResponseOther, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountOtherWithHttpInfo($user_id, $bank_account_other = null)
     {
@@ -1324,19 +1324,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponseOther',
+                '\MarketPay\Model\BankAccountResponseOther',
                 '/v2.01/Users/{UserId}/bankaccounts/OTHER'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponseOther', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponseOther', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponseOther', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponseOther', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1351,9 +1351,9 @@ class UsersApi
      * Create an US BankAccount
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountUsPost $bank_account_us BankAccountUS Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BankAccountResponseUs
+     * @param \MarketPay\Model\BankAccountUsPost $bank_account_us BankAccountUS Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\BankAccountResponseUs
      */
     public function usersPostBankAccountUs($user_id, $bank_account_us = null)
     {
@@ -1367,9 +1367,9 @@ class UsersApi
      * Create an US BankAccount
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\BankAccountUsPost $bank_account_us BankAccountUS Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BankAccountResponseUs, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\BankAccountUsPost $bank_account_us BankAccountUS Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\BankAccountResponseUs, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountUsWithHttpInfo($user_id, $bank_account_us = null)
     {
@@ -1421,19 +1421,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BankAccountResponseUs',
+                '\MarketPay\Model\BankAccountResponseUs',
                 '/v2.01/Users/{UserId}/bankaccounts/US'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BankAccountResponseUs', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponseUs', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BankAccountResponseUs', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponseUs', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1447,9 +1447,9 @@ class UsersApi
      *
      * Create a Legal User
      *
-     * @param \Swagger\Client\Model\UserLegalPost $user_legal UserLegal Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserLegalResponse
+     * @param \MarketPay\Model\UserLegalPost $user_legal UserLegal Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UserLegalResponse
      */
     public function usersPostLegal($user_legal = null)
     {
@@ -1462,9 +1462,9 @@ class UsersApi
      *
      * Create a Legal User
      *
-     * @param \Swagger\Client\Model\UserLegalPost $user_legal UserLegal Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\UserLegalPost $user_legal UserLegal Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostLegalWithHttpInfo($user_legal = null)
     {
@@ -1504,19 +1504,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserLegalResponse',
+                '\MarketPay\Model\UserLegalResponse',
                 '/v2.01/Users/legal'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserLegalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UserLegalResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserLegalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UserLegalResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1530,9 +1530,9 @@ class UsersApi
      *
      * Create a Natural User
      *
-     * @param \Swagger\Client\Model\UserNaturalPost $user_natural UserNatural Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserNaturalResponse
+     * @param \MarketPay\Model\UserNaturalPost $user_natural UserNatural Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UserNaturalResponse
      */
     public function usersPostNatural($user_natural = null)
     {
@@ -1545,9 +1545,9 @@ class UsersApi
      *
      * Create a Natural User
      *
-     * @param \Swagger\Client\Model\UserNaturalPost $user_natural UserNatural Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\UserNaturalPost $user_natural UserNatural Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostNaturalWithHttpInfo($user_natural = null)
     {
@@ -1587,19 +1587,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserNaturalResponse',
+                '\MarketPay\Model\UserNaturalResponse',
                 '/v2.01/Users/natural'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserNaturalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UserNaturalResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1614,9 +1614,9 @@ class UsersApi
      * Update a Legal User
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\UserLegalPut $user_legal UserLegal Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserLegalResponse
+     * @param \MarketPay\Model\UserLegalPut $user_legal UserLegal Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UserLegalResponse
      */
     public function usersPutLegal($user_id, $user_legal = null)
     {
@@ -1630,9 +1630,9 @@ class UsersApi
      * Update a Legal User
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\UserLegalPut $user_legal UserLegal Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\UserLegalPut $user_legal UserLegal Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UserLegalResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPutLegalWithHttpInfo($user_id, $user_legal = null)
     {
@@ -1684,19 +1684,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserLegalResponse',
+                '\MarketPay\Model\UserLegalResponse',
                 '/v2.01/Users/legal/{UserId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserLegalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UserLegalResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserLegalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UserLegalResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1711,9 +1711,9 @@ class UsersApi
      * Update a Natural User
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\UserNaturalPut $user_natural UserNatural Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UserNaturalResponse
+     * @param \MarketPay\Model\UserNaturalPut $user_natural UserNatural Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UserNaturalResponse
      */
     public function usersPutNatural($user_id, $user_natural = null)
     {
@@ -1727,9 +1727,9 @@ class UsersApi
      * Update a Natural User
      *
      * @param int $user_id The Id of a user (required)
-     * @param \Swagger\Client\Model\UserNaturalPut $user_natural UserNatural Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\UserNaturalPut $user_natural UserNatural Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UserNaturalResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPutNaturalWithHttpInfo($user_id, $user_natural = null)
     {
@@ -1781,19 +1781,19 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UserNaturalResponse',
+                '\MarketPay\Model\UserNaturalResponse',
                 '/v2.01/Users/natural/{UserId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UserNaturalResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserNaturalResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UserNaturalResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * UniversalPayPayByWebPost Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,8 +54,8 @@ class UniversalPayPayByWebPost implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\MarketPay\Model\Money',
+        'fees' => '\MarketPay\Model\Money',
         'card_id' => 'string',
         'save_card' => 'bool',
         'statement_descriptor' => 'string',
@@ -65,7 +65,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
         'success_url' => 'string',
         'cancel_url' => 'string',
         'language' => 'string',
-        'customer' => '\Swagger\Client\Model\CustomerDetail'
+        'customer' => '\MarketPay\Model\CustomerDetail'
     ];
 
     /**
@@ -350,7 +350,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -359,7 +359,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -371,7 +371,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getFees()
     {
@@ -380,7 +380,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)
@@ -599,7 +599,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Gets customer
-     * @return \Swagger\Client\Model\CustomerDetail
+     * @return \MarketPay\Model\CustomerDetail
      */
     public function getCustomer()
     {
@@ -608,7 +608,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets customer
-     * @param \Swagger\Client\Model\CustomerDetail $customer
+     * @param \MarketPay\Model\CustomerDetail $customer
      * @return $this
      */
     public function setCustomer($customer)
@@ -669,10 +669,10 @@ class UniversalPayPayByWebPost implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

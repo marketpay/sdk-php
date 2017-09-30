@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * RedsysPreauthorizeResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,7 +54,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\MarketPay\Model\Money',
         'status' => 'string',
         'payment_status' => 'string',
         'execution_date' => 'int',
@@ -66,7 +66,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
         'author_id' => 'string',
         'pay_in_id' => 'string',
         'language' => 'string',
-        'provider' => '\Swagger\Client\Model\PreauthorizationRedsysData',
+        'provider' => '\MarketPay\Model\PreauthorizationRedsysData',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -404,7 +404,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -413,7 +413,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -692,7 +692,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Gets provider
-     * @return \Swagger\Client\Model\PreauthorizationRedsysData
+     * @return \MarketPay\Model\PreauthorizationRedsysData
      */
     public function getProvider()
     {
@@ -701,7 +701,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets provider
-     * @param \Swagger\Client\Model\PreauthorizationRedsysData $provider Redsys related data
+     * @param \MarketPay\Model\PreauthorizationRedsysData $provider Redsys related data
      * @return $this
      */
     public function setProvider($provider)
@@ -825,10 +825,10 @@ class RedsysPreauthorizeResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

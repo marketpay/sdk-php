@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**debited_funds** | [**\Swagger\Client\Model\Money**](Money.md) | Information about the funds that are being debited | [optional] 
-**credited_funds** | [**\Swagger\Client\Model\Money**](Money.md) | Details about the funds that are being credited (DebitedFunds – Fees &#x3D; CreditedFunds) | [optional] 
-**fees** | [**\Swagger\Client\Model\Money**](Money.md) | Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client&#39;s platform wallet) | [optional] 
+**debited_funds** | [**\MarketPay\Model\Money**](Money.md) | Information about the funds that are being debited | [optional] 
+**credited_funds** | [**\MarketPay\Model\Money**](Money.md) | Details about the funds that are being credited (DebitedFunds – Fees &#x3D; CreditedFunds) | [optional] 
+**fees** | [**\MarketPay\Model\Money**](Money.md) | Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client&#39;s platform wallet) | [optional] 
 **credited_wallet_id** | **string** | The ID of the wallet where money will be credited | [optional] 
 **nature** | **string** | The nature of the transaction | [optional] 
 **status** | **string** | The status of the transaction | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **author_id** | **string** | A user&#39;s ID | [optional] 
 **credited_user_id** | **string** | The user ID who was credited | [optional] 
 **wire_reference** | **string** |  | [optional] 
-**bank_account** | [**\Swagger\Client\Model\BankAccountType**](BankAccountType.md) |  | [optional] 
+**bank_account** | [**\MarketPay\Model\BankAccountType**](BankAccountType.md) |  | [optional] 
 **id** | **string** | The item&#39;s ID | [optional] 
 **creation_date** | **int** | When the item was created | [optional] 
 **tag** | **string** | Custom data that you can add to this item | [optional] 

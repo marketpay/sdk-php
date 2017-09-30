@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace MarketPay\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \MarketPay\ApiClient;
+use \MarketPay\ApiException;
+use \MarketPay\Configuration;
+use \MarketPay\ObjectSerializer;
 
 /**
  * WalletsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class WalletsApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \MarketPay\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \MarketPay\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\MarketPay\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class WalletsApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \MarketPay\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class WalletsApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \MarketPay\ApiClient $apiClient set the API client
      *
      * @return WalletsApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\MarketPay\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -93,8 +93,8 @@ class WalletsApi
      * View a Wallet
      *
      * @param int $wallet_id The Id of a wallet (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\WalletResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\WalletResponse
      */
     public function walletsGet($wallet_id)
     {
@@ -108,8 +108,8 @@ class WalletsApi
      * View a Wallet
      *
      * @param int $wallet_id The Id of a wallet (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsGetWithHttpInfo($wallet_id)
     {
@@ -156,19 +156,19 @@ class WalletsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\WalletResponse',
+                '\MarketPay\Model\WalletResponse',
                 '/v2.01/Wallets/{WalletId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\WalletResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WalletResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\WalletResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WalletResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -182,8 +182,8 @@ class WalletsApi
      *
      * @param int $page  (optional)
      * @param int $per_page  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ResponseListWalletResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\ResponseListWalletResponse
      */
     public function walletsGetList($page = null, $per_page = null)
     {
@@ -196,8 +196,8 @@ class WalletsApi
      *
      * @param int $page  (optional)
      * @param int $per_page  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ResponseListWalletResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\ResponseListWalletResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsGetListWithHttpInfo($page = null, $per_page = null)
     {
@@ -240,19 +240,19 @@ class WalletsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ResponseListWalletResponse',
+                '\MarketPay\Model\ResponseListWalletResponse',
                 '/v2.01/Wallets'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ResponseListWalletResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\ResponseListWalletResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ResponseListWalletResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\ResponseListWalletResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -269,8 +269,8 @@ class WalletsApi
      * @param int $wallet_id The Id of a wallet (required)
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TransactionResponse[]
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\TransactionResponse[]
      */
     public function walletsGetTransactionList($wallet_id, $page = null, $per_page = null)
     {
@@ -286,8 +286,8 @@ class WalletsApi
      * @param int $wallet_id The Id of a wallet (required)
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TransactionResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\TransactionResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsGetTransactionListWithHttpInfo($wallet_id, $page = null, $per_page = null)
     {
@@ -342,19 +342,19 @@ class WalletsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TransactionResponse[]',
+                '\MarketPay\Model\TransactionResponse[]',
                 '/v2.01/Wallets/{WalletId}/transactions'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TransactionResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\TransactionResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TransactionResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\TransactionResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -368,9 +368,9 @@ class WalletsApi
      *
      * Create a Wallet
      *
-     * @param \Swagger\Client\Model\WalletPost $wallet Wallet Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\WalletResponse
+     * @param \MarketPay\Model\WalletPost $wallet Wallet Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\WalletResponse
      */
     public function walletsPost($wallet = null)
     {
@@ -383,9 +383,9 @@ class WalletsApi
      *
      * Create a Wallet
      *
-     * @param \Swagger\Client\Model\WalletPost $wallet Wallet Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\WalletPost $wallet Wallet Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsPostWithHttpInfo($wallet = null)
     {
@@ -425,19 +425,19 @@ class WalletsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\WalletResponse',
+                '\MarketPay\Model\WalletResponse',
                 '/v2.01/Wallets'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\WalletResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WalletResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\WalletResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WalletResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -452,9 +452,9 @@ class WalletsApi
      * Update a Wallet
      *
      * @param int $wallet_id The Id of a wallet (required)
-     * @param \Swagger\Client\Model\WalletPut $wallet Wallet Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\WalletResponse
+     * @param \MarketPay\Model\WalletPut $wallet Wallet Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\WalletResponse
      */
     public function walletsPut($wallet_id, $wallet = null)
     {
@@ -468,9 +468,9 @@ class WalletsApi
      * Update a Wallet
      *
      * @param int $wallet_id The Id of a wallet (required)
-     * @param \Swagger\Client\Model\WalletPut $wallet Wallet Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\WalletPut $wallet Wallet Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\WalletResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsPutWithHttpInfo($wallet_id, $wallet = null)
     {
@@ -522,19 +522,19 @@ class WalletsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\WalletResponse',
+                '\MarketPay\Model\WalletResponse',
                 '/v2.01/Wallets/{WalletId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\WalletResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WalletResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\WalletResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WalletResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

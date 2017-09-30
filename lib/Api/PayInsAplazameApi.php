@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace MarketPay\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \MarketPay\ApiClient;
+use \MarketPay\ApiException;
+use \MarketPay\Configuration;
+use \MarketPay\ObjectSerializer;
 
 /**
  * PayInsAplazameApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class PayInsAplazameApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \MarketPay\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \MarketPay\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\MarketPay\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class PayInsAplazameApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \MarketPay\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class PayInsAplazameApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \MarketPay\ApiClient $apiClient set the API client
      *
      * @return PayInsAplazameApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\MarketPay\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -93,8 +93,8 @@ class PayInsAplazameApi
      * -------
      *
      * @param string $pay_in_id ------ (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\AplazamePayInsResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\AplazamePayInsResponse
      */
     public function payInsAplazameAplazameGetPayment($pay_in_id)
     {
@@ -108,8 +108,8 @@ class PayInsAplazameApi
      * -------
      *
      * @param string $pay_in_id ------ (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\AplazamePayInsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\AplazamePayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsAplazameAplazameGetPaymentWithHttpInfo($pay_in_id)
     {
@@ -156,19 +156,19 @@ class PayInsAplazameApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\AplazamePayInsResponse',
+                '\MarketPay\Model\AplazamePayInsResponse',
                 '/v2.01/PayInsAplazame/payments/{PayInId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\AplazamePayInsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AplazamePayInsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\AplazamePayInsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AplazamePayInsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -182,9 +182,9 @@ class PayInsAplazameApi
      *
      * --------
      *
-     * @param \Swagger\Client\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\AplazamePayByWebResponse
+     * @param \MarketPay\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\AplazamePayByWebResponse
      */
     public function payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in = null)
     {
@@ -197,9 +197,9 @@ class PayInsAplazameApi
      *
      * --------
      *
-     * @param \Swagger\Client\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\AplazamePayByWebResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\AplazamePayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsAplazameAplazamePostPaymentByWebWithHttpInfo($aplazame_pay_in = null)
     {
@@ -239,19 +239,19 @@ class PayInsAplazameApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\AplazamePayByWebResponse',
+                '\MarketPay\Model\AplazamePayByWebResponse',
                 '/v2.01/PayInsAplazame/payments/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\AplazamePayByWebResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AplazamePayByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\AplazamePayByWebResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AplazamePayByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -264,9 +264,9 @@ class PayInsAplazameApi
      * Operation payInsAplazameRefund
      *
      * @param string $pay_in_id  (required)
-     * @param \Swagger\Client\Model\AplazameRefundPaymentPost $aplazame_refund  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\AplazameRefundResponse
+     * @param \MarketPay\Model\AplazameRefundPaymentPost $aplazame_refund  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\AplazameRefundResponse
      */
     public function payInsAplazameRefund($pay_in_id, $aplazame_refund = null)
     {
@@ -278,9 +278,9 @@ class PayInsAplazameApi
      * Operation payInsAplazameRefundWithHttpInfo
      *
      * @param string $pay_in_id  (required)
-     * @param \Swagger\Client\Model\AplazameRefundPaymentPost $aplazame_refund  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\AplazameRefundResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\AplazameRefundPaymentPost $aplazame_refund  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\AplazameRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsAplazameRefundWithHttpInfo($pay_in_id, $aplazame_refund = null)
     {
@@ -332,19 +332,19 @@ class PayInsAplazameApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\AplazameRefundResponse',
+                '\MarketPay\Model\AplazameRefundResponse',
                 '/v2.01/PayInsAplazame/payments/{PayInId}/refunds'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\AplazameRefundResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AplazameRefundResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 204:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\AplazameRefundResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AplazameRefundResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

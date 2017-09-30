@@ -1,4 +1,4 @@
-# Swagger\Client\WalletsApi
+# MarketPay\WalletsApi
 
 All URIs are relative to *https://localhost*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **walletsGet**
-> \Swagger\Client\Model\WalletResponse walletsGet($wallet_id)
+> \MarketPay\Model\WalletResponse walletsGet($wallet_id)
 
 View a Wallet
 
@@ -24,9 +24,9 @@ A Wallet is an object in which PayIns and Transfers from users are stored in ord
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletsApi();
+$api_instance = new MarketPay\Api\WalletsApi();
 $wallet_id = 789; // int | The Id of a wallet
 
 try {
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\WalletResponse**](../Model/WalletResponse.md)
+[**\MarketPay\Model\WalletResponse**](../Model/WalletResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsGetList**
-> \Swagger\Client\Model\ResponseListWalletResponse walletsGetList($page, $per_page)
+> \MarketPay\Model\ResponseListWalletResponse walletsGetList($page, $per_page)
 
 
 
@@ -70,9 +70,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletsApi();
+$api_instance = new MarketPay\Api\WalletsApi();
 $page = 56; // int | 
 $per_page = 56; // int | 
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ResponseListWalletResponse**](../Model/ResponseListWalletResponse.md)
+[**\MarketPay\Model\ResponseListWalletResponse**](../Model/ResponseListWalletResponse.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsGetTransactionList**
-> \Swagger\Client\Model\TransactionResponse[] walletsGetTransactionList($wallet_id, $page, $per_page)
+> \MarketPay\Model\TransactionResponse[] walletsGetTransactionList($wallet_id, $page, $per_page)
 
 List a Wallet's Transactions
 
@@ -120,9 +120,9 @@ List a Wallet's Transactions
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletsApi();
+$api_instance = new MarketPay\Api\WalletsApi();
 $wallet_id = 789; // int | The Id of a wallet
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TransactionResponse[]**](../Model/TransactionResponse.md)
+[**\MarketPay\Model\TransactionResponse[]**](../Model/TransactionResponse.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsPost**
-> \Swagger\Client\Model\WalletResponse walletsPost($wallet)
+> \MarketPay\Model\WalletResponse walletsPost($wallet)
 
 Create a Wallet
 
@@ -172,10 +172,10 @@ Create a Wallet
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletsApi();
-$wallet = new \Swagger\Client\Model\WalletPost(); // \Swagger\Client\Model\WalletPost | Wallet Object params
+$api_instance = new MarketPay\Api\WalletsApi();
+$wallet = new \MarketPay\Model\WalletPost(); // \MarketPay\Model\WalletPost | Wallet Object params
 
 try {
     $result = $api_instance->walletsPost($wallet);
@@ -190,11 +190,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wallet** | [**\Swagger\Client\Model\WalletPost**](../Model/WalletPost.md)| Wallet Object params | [optional]
+ **wallet** | [**\MarketPay\Model\WalletPost**](../Model/WalletPost.md)| Wallet Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\WalletResponse**](../Model/WalletResponse.md)
+[**\MarketPay\Model\WalletResponse**](../Model/WalletResponse.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsPut**
-> \Swagger\Client\Model\WalletResponse walletsPut($wallet_id, $wallet)
+> \MarketPay\Model\WalletResponse walletsPut($wallet_id, $wallet)
 
 Update a Wallet
 
@@ -220,11 +220,11 @@ Update a Wallet
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletsApi();
+$api_instance = new MarketPay\Api\WalletsApi();
 $wallet_id = 789; // int | The Id of a wallet
-$wallet = new \Swagger\Client\Model\WalletPut(); // \Swagger\Client\Model\WalletPut | Wallet Object params
+$wallet = new \MarketPay\Model\WalletPut(); // \MarketPay\Model\WalletPut | Wallet Object params
 
 try {
     $result = $api_instance->walletsPut($wallet_id, $wallet);
@@ -240,11 +240,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **wallet_id** | **int**| The Id of a wallet |
- **wallet** | [**\Swagger\Client\Model\WalletPut**](../Model/WalletPut.md)| Wallet Object params | [optional]
+ **wallet** | [**\MarketPay\Model\WalletPut**](../Model/WalletPut.md)| Wallet Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\WalletResponse**](../Model/WalletResponse.md)
+[**\MarketPay\Model\WalletResponse**](../Model/WalletResponse.md)
 
 ### Authorization
 

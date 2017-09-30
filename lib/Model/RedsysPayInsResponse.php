@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * RedsysPayInsResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,9 +54,9 @@ class RedsysPayInsResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'credited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\MarketPay\Model\Money',
+        'credited_funds' => '\MarketPay\Model\Money',
+        'fees' => '\MarketPay\Model\Money',
         'credited_wallet_id' => 'string',
         'nature' => 'string',
         'status' => 'string',
@@ -71,7 +71,7 @@ class RedsysPayInsResponse implements ArrayAccess
         'author_id' => 'string',
         'credited_user_id' => 'string',
         'language' => 'string',
-        'provider' => '\Swagger\Client\Model\PaymentRedsysData',
+        'provider' => '\MarketPay\Model\PaymentRedsysData',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -492,7 +492,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -501,7 +501,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -513,7 +513,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getCreditedFunds()
     {
@@ -522,7 +522,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
+     * @param \MarketPay\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -534,7 +534,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getFees()
     {
@@ -543,7 +543,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)
@@ -903,7 +903,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Gets provider
-     * @return \Swagger\Client\Model\PaymentRedsysData
+     * @return \MarketPay\Model\PaymentRedsysData
      */
     public function getProvider()
     {
@@ -912,7 +912,7 @@ class RedsysPayInsResponse implements ArrayAccess
 
     /**
      * Sets provider
-     * @param \Swagger\Client\Model\PaymentRedsysData $provider Redsys related data
+     * @param \MarketPay\Model\PaymentRedsysData $provider Redsys related data
      * @return $this
      */
     public function setProvider($provider)
@@ -1036,10 +1036,10 @@ class RedsysPayInsResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

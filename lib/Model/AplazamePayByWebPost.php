@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * AplazamePayByWebPost Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -57,14 +57,14 @@ class AplazamePayByWebPost implements ArrayAccess
         'tag' => 'string',
         'user_id' => 'int',
         'credited_wallet_id' => 'string',
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
-        'shipping' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\MarketPay\Model\Money',
+        'fees' => '\MarketPay\Model\Money',
+        'shipping' => '\MarketPay\Model\Money',
         'cancel_url' => 'string',
         'success_url' => 'string',
         'checkout_url' => 'string',
-        'order_items' => '\Swagger\Client\Model\AplazameOrderItem[]',
-        'customer' => '\Swagger\Client\Model\Customer'
+        'order_items' => '\MarketPay\Model\AplazameOrderItem[]',
+        'customer' => '\MarketPay\Model\Customer'
     ];
 
     /**
@@ -315,7 +315,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -324,7 +324,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -336,7 +336,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getFees()
     {
@@ -345,7 +345,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)
@@ -357,7 +357,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Gets shipping
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getShipping()
     {
@@ -366,7 +366,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets shipping
-     * @param \Swagger\Client\Model\Money $shipping
+     * @param \MarketPay\Model\Money $shipping
      * @return $this
      */
     public function setShipping($shipping)
@@ -441,7 +441,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Gets order_items
-     * @return \Swagger\Client\Model\AplazameOrderItem[]
+     * @return \MarketPay\Model\AplazameOrderItem[]
      */
     public function getOrderItems()
     {
@@ -450,7 +450,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets order_items
-     * @param \Swagger\Client\Model\AplazameOrderItem[] $order_items
+     * @param \MarketPay\Model\AplazameOrderItem[] $order_items
      * @return $this
      */
     public function setOrderItems($order_items)
@@ -462,7 +462,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Gets customer
-     * @return \Swagger\Client\Model\Customer
+     * @return \MarketPay\Model\Customer
      */
     public function getCustomer()
     {
@@ -471,7 +471,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets customer
-     * @param \Swagger\Client\Model\Customer $customer Customer data.
+     * @param \MarketPay\Model\Customer $customer Customer data.
      * @return $this
      */
     public function setCustomer($customer)
@@ -532,10 +532,10 @@ class AplazamePayByWebPost implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

@@ -1,4 +1,4 @@
-# Swagger\Client\PayInsBankwireApi
+# MarketPay\PayInsBankwireApi
 
 All URIs are relative to *https://localhost*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **payInsBankwireBankwireGetPayment**
-> \Swagger\Client\Model\PayInBankwireResponse payInsBankwireBankwireGetPayment($pay_in_id)
+> \MarketPay\Model\PayInBankwireResponse payInsBankwireBankwireGetPayment($pay_in_id)
 
 View a Bankwire PayIn
 
@@ -21,9 +21,9 @@ View a Bankwire PayIn
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsBankwireApi();
+$api_instance = new MarketPay\Api\PayInsBankwireApi();
 $pay_in_id = 789; // int | The Id of a payment
 
 try {
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PayInBankwireResponse**](../Model/PayInBankwireResponse.md)
+[**\MarketPay\Model\PayInBankwireResponse**](../Model/PayInBankwireResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsBankwireBankwirePaymentByDirect**
-> \Swagger\Client\Model\PayInBankwireResponse payInsBankwireBankwirePaymentByDirect($bankwire_pay_in)
+> \MarketPay\Model\PayInBankwireResponse payInsBankwireBankwirePaymentByDirect($bankwire_pay_in)
 
 Create a Bankwire PayIn
 
@@ -69,10 +69,10 @@ Create a Bankwire PayIn.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsBankwireApi();
-$bankwire_pay_in = new \Swagger\Client\Model\PayInBankwirePost(); // \Swagger\Client\Model\PayInBankwirePost | Redsys PayIn Request Object params
+$api_instance = new MarketPay\Api\PayInsBankwireApi();
+$bankwire_pay_in = new \MarketPay\Model\PayInBankwirePost(); // \MarketPay\Model\PayInBankwirePost | Redsys PayIn Request Object params
 
 try {
     $result = $api_instance->payInsBankwireBankwirePaymentByDirect($bankwire_pay_in);
@@ -87,11 +87,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bankwire_pay_in** | [**\Swagger\Client\Model\PayInBankwirePost**](../Model/PayInBankwirePost.md)| Redsys PayIn Request Object params | [optional]
+ **bankwire_pay_in** | [**\MarketPay\Model\PayInBankwirePost**](../Model/PayInBankwirePost.md)| Redsys PayIn Request Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\PayInBankwireResponse**](../Model/PayInBankwireResponse.md)
+[**\MarketPay\Model\PayInBankwireResponse**](../Model/PayInBankwireResponse.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Swagger\Client\TransactionsApi
+# MarketPay\TransactionsApi
 
 All URIs are relative to *https://localhost*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **transactionsGetList**
-> \Swagger\Client\Model\ResponseListTransactionResponse transactionsGetList($page, $per_page, $before_date, $after_date)
+> \MarketPay\Model\ResponseListTransactionResponse transactionsGetList($page, $per_page, $before_date, $after_date)
 
 View a Transaction
 
@@ -20,9 +20,9 @@ A Transaction is any movement of money
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\TransactionsApi();
+$api_instance = new MarketPay\Api\TransactionsApi();
 $page = 56; // int | 
 $per_page = 56; // int | 
 $before_date = 789; // int | 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ResponseListTransactionResponse**](../Model/ResponseListTransactionResponse.md)
+[**\MarketPay\Model\ResponseListTransactionResponse**](../Model/ResponseListTransactionResponse.md)
 
 ### Authorization
 

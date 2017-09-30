@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace MarketPay\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \MarketPay\ApiClient;
+use \MarketPay\ApiException;
+use \MarketPay\Configuration;
+use \MarketPay\ObjectSerializer;
 
 /**
  * PayInsUniversalPayApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class PayInsUniversalPayApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \MarketPay\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \MarketPay\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\MarketPay\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class PayInsUniversalPayApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \MarketPay\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class PayInsUniversalPayApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \MarketPay\ApiClient $apiClient set the API client
      *
      * @return PayInsUniversalPayApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\MarketPay\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -93,8 +93,8 @@ class PayInsUniversalPayApi
      * View a UniversalPay card tokenization status
      *
      * @param int $token_id The Id of a tokenization (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UniversalPayTokenizationResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UniversalPayTokenizationResponse
      */
     public function payInsUniversalPayGetUniversalPayTokenization($token_id)
     {
@@ -108,8 +108,8 @@ class PayInsUniversalPayApi
      * View a UniversalPay card tokenization status
      *
      * @param int $token_id The Id of a tokenization (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UniversalPayTokenizationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UniversalPayTokenizationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsUniversalPayGetUniversalPayTokenizationWithHttpInfo($token_id)
     {
@@ -156,19 +156,19 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UniversalPayTokenizationResponse',
+                '\MarketPay\Model\UniversalPayTokenizationResponse',
                 '/v2.01/PayInsUniversalPay/token/{TokenId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayTokenizationResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayTokenizationResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayTokenizationResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayTokenizationResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -183,8 +183,8 @@ class PayInsUniversalPayApi
      * View a UniversalPay payment
      *
      * @param int $pay_in_id The Id of a payment (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UniversalPayPayInsResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UniversalPayPayInsResponse
      */
     public function payInsUniversalPayUniversalPayGetPayment($pay_in_id)
     {
@@ -198,8 +198,8 @@ class PayInsUniversalPayApi
      * View a UniversalPay payment
      *
      * @param int $pay_in_id The Id of a payment (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UniversalPayPayInsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UniversalPayPayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsUniversalPayUniversalPayGetPaymentWithHttpInfo($pay_in_id)
     {
@@ -246,19 +246,19 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UniversalPayPayInsResponse',
+                '\MarketPay\Model\UniversalPayPayInsResponse',
                 '/v2.01/PayInsUniversalPay/payments/{PayInId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayPayInsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayPayInsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayPayInsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayPayInsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -272,9 +272,9 @@ class PayInsUniversalPayApi
      *
      * Create a UniversalPay PayIn Request
      *
-     * @param \Swagger\Client\Model\UniversalPayPayByWebPost $universal_pay_pay_in UniversalPay PayIn Request Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UniversalPayPayByWebResponse
+     * @param \MarketPay\Model\UniversalPayPayByWebPost $universal_pay_pay_in UniversalPay PayIn Request Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UniversalPayPayByWebResponse
      */
     public function payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in = null)
     {
@@ -287,9 +287,9 @@ class PayInsUniversalPayApi
      *
      * Create a UniversalPay PayIn Request
      *
-     * @param \Swagger\Client\Model\UniversalPayPayByWebPost $universal_pay_pay_in UniversalPay PayIn Request Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UniversalPayPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\UniversalPayPayByWebPost $universal_pay_pay_in UniversalPay PayIn Request Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UniversalPayPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsUniversalPayUniversalPayPostPaymentByWebWithHttpInfo($universal_pay_pay_in = null)
     {
@@ -329,19 +329,19 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UniversalPayPayByWebResponse',
+                '\MarketPay\Model\UniversalPayPayByWebResponse',
                 '/v2.01/PayInsUniversalPay/payments/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayPayByWebResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayPayByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayPayByWebResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayPayByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -356,9 +356,9 @@ class PayInsUniversalPayApi
      * Create a UniversalPay Payment Refund
      *
      * @param int $pay_in_id The Id of a PayIn (required)
-     * @param \Swagger\Client\Model\UniversalPayRefundPost $universal_pay_refund Refund Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UniversalPayRefundResponse
+     * @param \MarketPay\Model\UniversalPayRefundPost $universal_pay_refund Refund Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UniversalPayRefundResponse
      */
     public function payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund = null)
     {
@@ -372,9 +372,9 @@ class PayInsUniversalPayApi
      * Create a UniversalPay Payment Refund
      *
      * @param int $pay_in_id The Id of a PayIn (required)
-     * @param \Swagger\Client\Model\UniversalPayRefundPost $universal_pay_refund Refund Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UniversalPayRefundResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\UniversalPayRefundPost $universal_pay_refund Refund Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UniversalPayRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsUniversalPayUniversalPayPostRefundWithHttpInfo($pay_in_id, $universal_pay_refund = null)
     {
@@ -426,19 +426,19 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UniversalPayRefundResponse',
+                '\MarketPay\Model\UniversalPayRefundResponse',
                 '/v2.01/PayInsUniversalPay/payments/{PayInId}/refunds'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayRefundResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayRefundResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayRefundResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayRefundResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -450,9 +450,9 @@ class PayInsUniversalPayApi
     /**
      * Operation payInsUniversalPayUniversalPaySaveCard
      *
-     * @param \Swagger\Client\Model\UniversalPayTokenRequestPost $universal_pay_save_card  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\UniversalPayTokenizeByWebResponse
+     * @param \MarketPay\Model\UniversalPayTokenRequestPost $universal_pay_save_card  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UniversalPayTokenizeByWebResponse
      */
     public function payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card = null)
     {
@@ -463,9 +463,9 @@ class PayInsUniversalPayApi
     /**
      * Operation payInsUniversalPayUniversalPaySaveCardWithHttpInfo
      *
-     * @param \Swagger\Client\Model\UniversalPayTokenRequestPost $universal_pay_save_card  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\UniversalPayTokenizeByWebResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\UniversalPayTokenRequestPost $universal_pay_save_card  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UniversalPayTokenizeByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payInsUniversalPayUniversalPaySaveCardWithHttpInfo($universal_pay_save_card = null)
     {
@@ -505,19 +505,19 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\UniversalPayTokenizeByWebResponse',
+                '\MarketPay\Model\UniversalPayTokenizeByWebResponse',
                 '/v2.01/PayInsUniversalPay/token/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UniversalPayTokenizeByWebResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayTokenizeByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UniversalPayTokenizeByWebResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayTokenizeByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

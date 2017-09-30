@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * CustomerDetail Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class CustomerDetail implements ArrayAccess
     protected static $swaggerTypes = [
         'first_name' => 'string',
         'last_name' => 'string',
-        'telephone' => '\Swagger\Client\Model\Telephone',
-        'address' => '\Swagger\Client\Model\Address'
+        'telephone' => '\MarketPay\Model\Telephone',
+        'address' => '\MarketPay\Model\Address'
     ];
 
     /**
@@ -250,7 +250,7 @@ class CustomerDetail implements ArrayAccess
 
     /**
      * Gets telephone
-     * @return \Swagger\Client\Model\Telephone
+     * @return \MarketPay\Model\Telephone
      */
     public function getTelephone()
     {
@@ -259,7 +259,7 @@ class CustomerDetail implements ArrayAccess
 
     /**
      * Sets telephone
-     * @param \Swagger\Client\Model\Telephone $telephone
+     * @param \MarketPay\Model\Telephone $telephone
      * @return $this
      */
     public function setTelephone($telephone)
@@ -271,7 +271,7 @@ class CustomerDetail implements ArrayAccess
 
     /**
      * Gets address
-     * @return \Swagger\Client\Model\Address
+     * @return \MarketPay\Model\Address
      */
     public function getAddress()
     {
@@ -280,7 +280,7 @@ class CustomerDetail implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\Address $address
+     * @param \MarketPay\Model\Address $address
      * @return $this
      */
     public function setAddress($address)
@@ -341,10 +341,10 @@ class CustomerDetail implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

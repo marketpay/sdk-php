@@ -1,4 +1,4 @@
-# Swagger\Client\PayInsUniversalPayApi
+# MarketPay\PayInsUniversalPayApi
 
 All URIs are relative to *https://localhost*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **payInsUniversalPayGetUniversalPayTokenization**
-> \Swagger\Client\Model\UniversalPayTokenizationResponse payInsUniversalPayGetUniversalPayTokenization($token_id)
+> \MarketPay\Model\UniversalPayTokenizationResponse payInsUniversalPayGetUniversalPayTokenization($token_id)
 
 View a UniversalPay card tokenization status
 
@@ -24,9 +24,9 @@ View a UniversalPay card tokenization status
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsUniversalPayApi();
+$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
 $token_id = 789; // int | The Id of a tokenization
 
 try {
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UniversalPayTokenizationResponse**](../Model/UniversalPayTokenizationResponse.md)
+[**\MarketPay\Model\UniversalPayTokenizationResponse**](../Model/UniversalPayTokenizationResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPayGetPayment**
-> \Swagger\Client\Model\UniversalPayPayInsResponse payInsUniversalPayUniversalPayGetPayment($pay_in_id)
+> \MarketPay\Model\UniversalPayPayInsResponse payInsUniversalPayUniversalPayGetPayment($pay_in_id)
 
 View a UniversalPay payment
 
@@ -72,9 +72,9 @@ View a UniversalPay payment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsUniversalPayApi();
+$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
 $pay_in_id = 789; // int | The Id of a payment
 
 try {
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UniversalPayPayInsResponse**](../Model/UniversalPayPayInsResponse.md)
+[**\MarketPay\Model\UniversalPayPayInsResponse**](../Model/UniversalPayPayInsResponse.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPayPostPaymentByWeb**
-> \Swagger\Client\Model\UniversalPayPayByWebResponse payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in)
+> \MarketPay\Model\UniversalPayPayByWebResponse payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in)
 
 Create a UniversalPay PayIn Request
 
@@ -120,10 +120,10 @@ Prepares a payment on UniversalPay. The data returned is used to show the Univer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsUniversalPayApi();
-$universal_pay_pay_in = new \Swagger\Client\Model\UniversalPayPayByWebPost(); // \Swagger\Client\Model\UniversalPayPayByWebPost | UniversalPay PayIn Request Object params
+$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
+$universal_pay_pay_in = new \MarketPay\Model\UniversalPayPayByWebPost(); // \MarketPay\Model\UniversalPayPayByWebPost | UniversalPay PayIn Request Object params
 
 try {
     $result = $api_instance->payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in);
@@ -138,11 +138,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **universal_pay_pay_in** | [**\Swagger\Client\Model\UniversalPayPayByWebPost**](../Model/UniversalPayPayByWebPost.md)| UniversalPay PayIn Request Object params | [optional]
+ **universal_pay_pay_in** | [**\MarketPay\Model\UniversalPayPayByWebPost**](../Model/UniversalPayPayByWebPost.md)| UniversalPay PayIn Request Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\UniversalPayPayByWebResponse**](../Model/UniversalPayPayByWebResponse.md)
+[**\MarketPay\Model\UniversalPayPayByWebResponse**](../Model/UniversalPayPayByWebResponse.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPayPostRefund**
-> \Swagger\Client\Model\UniversalPayRefundResponse payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund)
+> \MarketPay\Model\UniversalPayRefundResponse payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund)
 
 Create a UniversalPay Payment Refund
 
@@ -168,11 +168,11 @@ A PayIn Refund is a request to reimburse a user on their payment card. The money
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsUniversalPayApi();
+$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
 $pay_in_id = 789; // int | The Id of a PayIn
-$universal_pay_refund = new \Swagger\Client\Model\UniversalPayRefundPost(); // \Swagger\Client\Model\UniversalPayRefundPost | Refund Object params
+$universal_pay_refund = new \MarketPay\Model\UniversalPayRefundPost(); // \MarketPay\Model\UniversalPayRefundPost | Refund Object params
 
 try {
     $result = $api_instance->payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund);
@@ -188,11 +188,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **int**| The Id of a PayIn |
- **universal_pay_refund** | [**\Swagger\Client\Model\UniversalPayRefundPost**](../Model/UniversalPayRefundPost.md)| Refund Object params | [optional]
+ **universal_pay_refund** | [**\MarketPay\Model\UniversalPayRefundPost**](../Model/UniversalPayRefundPost.md)| Refund Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\UniversalPayRefundResponse**](../Model/UniversalPayRefundResponse.md)
+[**\MarketPay\Model\UniversalPayRefundResponse**](../Model/UniversalPayRefundResponse.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPaySaveCard**
-> \Swagger\Client\Model\UniversalPayTokenizeByWebResponse payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card)
+> \MarketPay\Model\UniversalPayTokenizeByWebResponse payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card)
 
 
 
@@ -216,10 +216,10 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsUniversalPayApi();
-$universal_pay_save_card = new \Swagger\Client\Model\UniversalPayTokenRequestPost(); // \Swagger\Client\Model\UniversalPayTokenRequestPost | 
+$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
+$universal_pay_save_card = new \MarketPay\Model\UniversalPayTokenRequestPost(); // \MarketPay\Model\UniversalPayTokenRequestPost | 
 
 try {
     $result = $api_instance->payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card);
@@ -234,11 +234,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **universal_pay_save_card** | [**\Swagger\Client\Model\UniversalPayTokenRequestPost**](../Model/UniversalPayTokenRequestPost.md)|  | [optional]
+ **universal_pay_save_card** | [**\MarketPay\Model\UniversalPayTokenRequestPost**](../Model/UniversalPayTokenRequestPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\UniversalPayTokenizeByWebResponse**](../Model/UniversalPayTokenizeByWebResponse.md)
+[**\MarketPay\Model\UniversalPayTokenizeByWebResponse**](../Model/UniversalPayTokenizeByWebResponse.md)
 
 ### Authorization
 

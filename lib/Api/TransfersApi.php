@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace MarketPay\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \MarketPay\ApiClient;
+use \MarketPay\ApiException;
+use \MarketPay\Configuration;
+use \MarketPay\ObjectSerializer;
 
 /**
  * TransfersApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class TransfersApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \MarketPay\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \MarketPay\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\MarketPay\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class TransfersApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \MarketPay\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class TransfersApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \MarketPay\ApiClient $apiClient set the API client
      *
      * @return TransfersApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\MarketPay\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -93,8 +93,8 @@ class TransfersApi
      * View a Transfer
      *
      * @param int $transfer_id The Id of a transfer (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TransferResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\TransferResponse
      */
     public function transfersGet($transfer_id)
     {
@@ -108,8 +108,8 @@ class TransfersApi
      * View a Transfer
      *
      * @param int $transfer_id The Id of a transfer (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TransferResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\TransferResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function transfersGetWithHttpInfo($transfer_id)
     {
@@ -156,19 +156,19 @@ class TransfersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TransferResponse',
+                '\MarketPay\Model\TransferResponse',
                 '/v2.01/Transfers/{TransferId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TransferResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\TransferResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TransferResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\TransferResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -186,8 +186,8 @@ class TransfersApi
      * @param int $per_page  (optional)
      * @param int $before_date  (optional)
      * @param int $after_date  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ResponseListTransferResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\ResponseListTransferResponse
      */
     public function transfersGetList($page = null, $per_page = null, $before_date = null, $after_date = null)
     {
@@ -204,8 +204,8 @@ class TransfersApi
      * @param int $per_page  (optional)
      * @param int $before_date  (optional)
      * @param int $after_date  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ResponseListTransferResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\ResponseListTransferResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function transfersGetListWithHttpInfo($page = null, $per_page = null, $before_date = null, $after_date = null)
     {
@@ -256,19 +256,19 @@ class TransfersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ResponseListTransferResponse',
+                '\MarketPay\Model\ResponseListTransferResponse',
                 '/v2.01/Transfers'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ResponseListTransferResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\ResponseListTransferResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ResponseListTransferResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\ResponseListTransferResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -282,9 +282,9 @@ class TransfersApi
      *
      * Create a Transfer
      *
-     * @param \Swagger\Client\Model\TransferPost $transfer Transfer Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TransferResponse
+     * @param \MarketPay\Model\TransferPost $transfer Transfer Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\TransferResponse
      */
     public function transfersPost($transfer = null)
     {
@@ -297,9 +297,9 @@ class TransfersApi
      *
      * Create a Transfer
      *
-     * @param \Swagger\Client\Model\TransferPost $transfer Transfer Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TransferResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\TransferPost $transfer Transfer Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\TransferResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function transfersPostWithHttpInfo($transfer = null)
     {
@@ -339,19 +339,19 @@ class TransfersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TransferResponse',
+                '\MarketPay\Model\TransferResponse',
                 '/v2.01/Transfers'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TransferResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\TransferResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TransferResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\TransferResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

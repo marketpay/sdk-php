@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * AplazameRefundResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,9 +54,9 @@ class AplazameRefundResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'credited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\MarketPay\Model\Money',
+        'credited_funds' => '\MarketPay\Model\Money',
+        'fees' => '\MarketPay\Model\Money',
         'debited_wallet_id' => 'string',
         'credited_wallet_id' => 'string',
         'author_id' => 'string',
@@ -69,7 +69,7 @@ class AplazameRefundResponse implements ArrayAccess
         'type' => 'string',
         'initial_transaction_id' => 'string',
         'initial_transaction_type' => 'string',
-        'refund_reason' => '\Swagger\Client\Model\RefundReason',
+        'refund_reason' => '\MarketPay\Model\RefundReason',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -386,7 +386,7 @@ class AplazameRefundResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -395,7 +395,7 @@ class AplazameRefundResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -407,7 +407,7 @@ class AplazameRefundResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getCreditedFunds()
     {
@@ -416,7 +416,7 @@ class AplazameRefundResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
+     * @param \MarketPay\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -428,7 +428,7 @@ class AplazameRefundResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getFees()
     {
@@ -437,7 +437,7 @@ class AplazameRefundResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)
@@ -737,7 +737,7 @@ class AplazameRefundResponse implements ArrayAccess
 
     /**
      * Gets refund_reason
-     * @return \Swagger\Client\Model\RefundReason
+     * @return \MarketPay\Model\RefundReason
      */
     public function getRefundReason()
     {
@@ -746,7 +746,7 @@ class AplazameRefundResponse implements ArrayAccess
 
     /**
      * Sets refund_reason
-     * @param \Swagger\Client\Model\RefundReason $refund_reason Contains info about the reason for refund
+     * @param \MarketPay\Model\RefundReason $refund_reason Contains info about the reason for refund
      * @return $this
      */
     public function setRefundReason($refund_reason)
@@ -870,10 +870,10 @@ class AplazameRefundResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

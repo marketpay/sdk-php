@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * UserLegalResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,10 +54,10 @@ class UserLegalResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'headquarters_address' => '\Swagger\Client\Model\Address',
+        'headquarters_address' => '\MarketPay\Model\Address',
         'legal_person_type' => 'string',
         'name' => 'string',
-        'legal_representative_address' => '\Swagger\Client\Model\Address',
+        'legal_representative_address' => '\MarketPay\Model\Address',
         'legal_representative_birthday' => 'int',
         'legal_representative_country_of_residence' => 'string',
         'legal_representative_nationality' => 'string',
@@ -1398,7 +1398,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Gets headquarters_address
-     * @return \Swagger\Client\Model\Address
+     * @return \MarketPay\Model\Address
      */
     public function getHeadquartersAddress()
     {
@@ -1407,7 +1407,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets headquarters_address
-     * @param \Swagger\Client\Model\Address $headquarters_address The address of the company’s headquarters
+     * @param \MarketPay\Model\Address $headquarters_address The address of the company’s headquarters
      * @return $this
      */
     public function setHeadquartersAddress($headquarters_address)
@@ -1470,7 +1470,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Gets legal_representative_address
-     * @return \Swagger\Client\Model\Address
+     * @return \MarketPay\Model\Address
      */
     public function getLegalRepresentativeAddress()
     {
@@ -1479,7 +1479,7 @@ class UserLegalResponse implements ArrayAccess
 
     /**
      * Sets legal_representative_address
-     * @param \Swagger\Client\Model\Address $legal_representative_address The address of the company’s Legal representative person
+     * @param \MarketPay\Model\Address $legal_representative_address The address of the company’s Legal representative person
      * @return $this
      */
     public function setLegalRepresentativeAddress($legal_representative_address)
@@ -1891,10 +1891,10 @@ class UserLegalResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

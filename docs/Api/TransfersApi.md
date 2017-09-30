@@ -1,4 +1,4 @@
-# Swagger\Client\TransfersApi
+# MarketPay\TransfersApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **transfersGet**
-> \Swagger\Client\Model\TransferResponse transfersGet($transfer_id)
+> \MarketPay\Model\TransferResponse transfersGet($transfer_id)
 
 View a Transfer
 
@@ -22,9 +22,9 @@ A Transfer is a request to relocate e-money from one wallet to another wallet.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\TransfersApi();
+$api_instance = new MarketPay\Api\TransfersApi();
 $transfer_id = 789; // int | The Id of a transfer
 
 try {
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TransferResponse**](../Model/TransferResponse.md)
+[**\MarketPay\Model\TransferResponse**](../Model/TransferResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **transfersGetList**
-> \Swagger\Client\Model\ResponseListTransferResponse transfersGetList($page, $per_page, $before_date, $after_date)
+> \MarketPay\Model\ResponseListTransferResponse transfersGetList($page, $per_page, $before_date, $after_date)
 
 View a Transfer
 
@@ -70,9 +70,9 @@ A Transfer is a request to relocate e-money from one wallet to another wallet.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\TransfersApi();
+$api_instance = new MarketPay\Api\TransfersApi();
 $page = 56; // int | 
 $per_page = 56; // int | 
 $before_date = 789; // int | 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ResponseListTransferResponse**](../Model/ResponseListTransferResponse.md)
+[**\MarketPay\Model\ResponseListTransferResponse**](../Model/ResponseListTransferResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **transfersPost**
-> \Swagger\Client\Model\TransferResponse transfersPost($transfer)
+> \MarketPay\Model\TransferResponse transfersPost($transfer)
 
 Create a Transfer
 
@@ -124,10 +124,10 @@ Create a Transfer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\TransfersApi();
-$transfer = new \Swagger\Client\Model\TransferPost(); // \Swagger\Client\Model\TransferPost | Transfer Object params
+$api_instance = new MarketPay\Api\TransfersApi();
+$transfer = new \MarketPay\Model\TransferPost(); // \MarketPay\Model\TransferPost | Transfer Object params
 
 try {
     $result = $api_instance->transfersPost($transfer);
@@ -142,11 +142,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transfer** | [**\Swagger\Client\Model\TransferPost**](../Model/TransferPost.md)| Transfer Object params | [optional]
+ **transfer** | [**\MarketPay\Model\TransferPost**](../Model/TransferPost.md)| Transfer Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\TransferResponse**](../Model/TransferResponse.md)
+[**\MarketPay\Model\TransferResponse**](../Model/TransferResponse.md)
 
 ### Authorization
 

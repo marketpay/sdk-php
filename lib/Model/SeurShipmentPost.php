@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * SeurShipmentPost Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -56,11 +56,11 @@ class SeurShipmentPost implements ArrayAccess
     protected static $swaggerTypes = [
         'tag' => 'string',
         'pick_up_date' => 'int',
-        'sender' => '\Swagger\Client\Model\ShipmentActor',
-        'receiver' => '\Swagger\Client\Model\ShipmentActor',
+        'sender' => '\MarketPay\Model\ShipmentActor',
+        'receiver' => '\MarketPay\Model\ShipmentActor',
         'sender_user_id' => 'string',
         'receiver_user_id' => 'string',
-        'product' => '\Swagger\Client\Model\Product',
+        'product' => '\MarketPay\Model\Product',
         'observations' => 'string'
     ];
 
@@ -246,7 +246,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Gets sender
-     * @return \Swagger\Client\Model\ShipmentActor
+     * @return \MarketPay\Model\ShipmentActor
      */
     public function getSender()
     {
@@ -255,7 +255,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets sender
-     * @param \Swagger\Client\Model\ShipmentActor $sender 
+     * @param \MarketPay\Model\ShipmentActor $sender 
      * @return $this
      */
     public function setSender($sender)
@@ -267,7 +267,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Gets receiver
-     * @return \Swagger\Client\Model\ShipmentActor
+     * @return \MarketPay\Model\ShipmentActor
      */
     public function getReceiver()
     {
@@ -276,7 +276,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets receiver
-     * @param \Swagger\Client\Model\ShipmentActor $receiver 
+     * @param \MarketPay\Model\ShipmentActor $receiver 
      * @return $this
      */
     public function setReceiver($receiver)
@@ -330,7 +330,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Gets product
-     * @return \Swagger\Client\Model\Product
+     * @return \MarketPay\Model\Product
      */
     public function getProduct()
     {
@@ -339,7 +339,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets product
-     * @param \Swagger\Client\Model\Product $product 
+     * @param \MarketPay\Model\Product $product 
      * @return $this
      */
     public function setProduct($product)
@@ -421,10 +421,10 @@ class SeurShipmentPost implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

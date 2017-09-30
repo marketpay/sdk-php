@@ -1,4 +1,4 @@
-# Swagger\Client\PayOutsBankwireApi
+# MarketPay\PayOutsBankwireApi
 
 All URIs are relative to *https://localhost*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **payOutsBankwireGet**
-> \Swagger\Client\Model\PayOutBankwireResponse payOutsBankwireGet($pay_out_id)
+> \MarketPay\Model\PayOutBankwireResponse payOutsBankwireGet($pay_out_id)
 
 View a Bankwire PayOut
 
@@ -21,9 +21,9 @@ View a Bankwire PayOut
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayOutsBankwireApi();
+$api_instance = new MarketPay\Api\PayOutsBankwireApi();
 $pay_out_id = 789; // int | The Id of a payment
 
 try {
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PayOutBankwireResponse**](../Model/PayOutBankwireResponse.md)
+[**\MarketPay\Model\PayOutBankwireResponse**](../Model/PayOutBankwireResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payOutsBankwirePost**
-> \Swagger\Client\Model\PayOutBankwireResponse payOutsBankwirePost($bankwire_pay_out)
+> \MarketPay\Model\PayOutBankwireResponse payOutsBankwirePost($bankwire_pay_out)
 
 Create a Bankwire PayOut
 
@@ -69,10 +69,10 @@ Create a Bankwire PayOut.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayOutsBankwireApi();
-$bankwire_pay_out = new \Swagger\Client\Model\PayOutBankwirePost(); // \Swagger\Client\Model\PayOutBankwirePost | Redsys PayIn Request Object params
+$api_instance = new MarketPay\Api\PayOutsBankwireApi();
+$bankwire_pay_out = new \MarketPay\Model\PayOutBankwirePost(); // \MarketPay\Model\PayOutBankwirePost | Redsys PayIn Request Object params
 
 try {
     $result = $api_instance->payOutsBankwirePost($bankwire_pay_out);
@@ -87,11 +87,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bankwire_pay_out** | [**\Swagger\Client\Model\PayOutBankwirePost**](../Model/PayOutBankwirePost.md)| Redsys PayIn Request Object params | [optional]
+ **bankwire_pay_out** | [**\MarketPay\Model\PayOutBankwirePost**](../Model/PayOutBankwirePost.md)| Redsys PayIn Request Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\PayOutBankwireResponse**](../Model/PayOutBankwireResponse.md)
+[**\MarketPay\Model\PayOutBankwireResponse**](../Model/PayOutBankwireResponse.md)
 
 ### Authorization
 

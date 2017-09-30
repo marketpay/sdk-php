@@ -1,4 +1,4 @@
-# Swagger\Client\RefundsApi
+# MarketPay\RefundsApi
 
 All URIs are relative to *https://localhost*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **refundsRefundGet**
-> \Swagger\Client\Model\UniversalPayRefundResponse refundsRefundGet($refund_id)
+> \MarketPay\Model\UniversalPayRefundResponse refundsRefundGet($refund_id)
 
 View a Refund
 
@@ -20,9 +20,9 @@ No matter if it is              a PayIn refund : request to reimburse a user on 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\RefundsApi();
+$api_instance = new MarketPay\Api\RefundsApi();
 $refund_id = 789; // int | The ID of a refund
 
 try {
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UniversalPayRefundResponse**](../Model/UniversalPayRefundResponse.md)
+[**\MarketPay\Model\UniversalPayRefundResponse**](../Model/UniversalPayRefundResponse.md)
 
 ### Authorization
 

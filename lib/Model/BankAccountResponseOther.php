@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * BankAccountResponseOther Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class BankAccountResponseOther implements ArrayAccess
         'bic' => 'string',
         'account_number' => 'string',
         'type' => 'string',
-        'owner_address' => '\Swagger\Client\Model\Address',
+        'owner_address' => '\MarketPay\Model\Address',
         'owner_name' => 'string',
         'user_id' => 'string',
         'active' => 'bool',
@@ -878,7 +878,7 @@ class BankAccountResponseOther implements ArrayAccess
 
     /**
      * Gets owner_address
-     * @return \Swagger\Client\Model\Address
+     * @return \MarketPay\Model\Address
      */
     public function getOwnerAddress()
     {
@@ -887,7 +887,7 @@ class BankAccountResponseOther implements ArrayAccess
 
     /**
      * Sets owner_address
-     * @param \Swagger\Client\Model\Address $owner_address The address of the owner of the bank account
+     * @param \MarketPay\Model\Address $owner_address The address of the owner of the bank account
      * @return $this
      */
     public function setOwnerAddress($owner_address)
@@ -1074,10 +1074,10 @@ class BankAccountResponseOther implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

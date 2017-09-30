@@ -1,4 +1,4 @@
-# Swagger\Client\ShipmentSeurApi
+# MarketPay\ShipmentSeurApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **shipmentSeurSeurCancelShipment**
-> \Swagger\Client\Model\SeurShipmentCancellationResponse shipmentSeurSeurCancelShipment($shipment_id)
+> \MarketPay\Model\SeurShipmentCancellationResponse shipmentSeurSeurCancelShipment($shipment_id)
 
 Cancels a shipment
 
@@ -22,9 +22,9 @@ Cancels a shipment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\ShipmentSeurApi();
+$api_instance = new MarketPay\Api\ShipmentSeurApi();
 $shipment_id = 789; // int | The Id of a Shipment
 
 try {
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SeurShipmentCancellationResponse**](../Model/SeurShipmentCancellationResponse.md)
+[**\MarketPay\Model\SeurShipmentCancellationResponse**](../Model/SeurShipmentCancellationResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentSeurSeurCreateShipment**
-> \Swagger\Client\Model\SeurShipmentResponse shipmentSeurSeurCreateShipment($shipment)
+> \MarketPay\Model\SeurShipmentResponse shipmentSeurSeurCreateShipment($shipment)
 
 Creates a shipment
 
@@ -70,10 +70,10 @@ Creates a shipment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\ShipmentSeurApi();
-$shipment = new \Swagger\Client\Model\SeurShipmentPost(); // \Swagger\Client\Model\SeurShipmentPost | Seur Shipment Object params
+$api_instance = new MarketPay\Api\ShipmentSeurApi();
+$shipment = new \MarketPay\Model\SeurShipmentPost(); // \MarketPay\Model\SeurShipmentPost | Seur Shipment Object params
 
 try {
     $result = $api_instance->shipmentSeurSeurCreateShipment($shipment);
@@ -88,11 +88,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shipment** | [**\Swagger\Client\Model\SeurShipmentPost**](../Model/SeurShipmentPost.md)| Seur Shipment Object params | [optional]
+ **shipment** | [**\MarketPay\Model\SeurShipmentPost**](../Model/SeurShipmentPost.md)| Seur Shipment Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SeurShipmentResponse**](../Model/SeurShipmentResponse.md)
+[**\MarketPay\Model\SeurShipmentResponse**](../Model/SeurShipmentResponse.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentSeurSeurGetShipment**
-> \Swagger\Client\Model\SeurShipmentResponse shipmentSeurSeurGetShipment($shipment_id)
+> \MarketPay\Model\SeurShipmentResponse shipmentSeurSeurGetShipment($shipment_id)
 
 Cancels a shipment
 
@@ -118,9 +118,9 @@ Cancels a shipment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\ShipmentSeurApi();
+$api_instance = new MarketPay\Api\ShipmentSeurApi();
 $shipment_id = 789; // int | The Id of a Shipment
 
 try {
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SeurShipmentResponse**](../Model/SeurShipmentResponse.md)
+[**\MarketPay\Model\SeurShipmentResponse**](../Model/SeurShipmentResponse.md)
 
 ### Authorization
 

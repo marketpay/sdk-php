@@ -1,4 +1,4 @@
-# Swagger\Client\PayInsAplazameApi
+# MarketPay\PayInsAplazameApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **payInsAplazameAplazameGetPayment**
-> \Swagger\Client\Model\AplazamePayInsResponse payInsAplazameAplazameGetPayment($pay_in_id)
+> \MarketPay\Model\AplazamePayInsResponse payInsAplazameAplazameGetPayment($pay_in_id)
 
 -------
 
@@ -22,9 +22,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsAplazameApi();
+$api_instance = new MarketPay\Api\PayInsAplazameApi();
 $pay_in_id = "pay_in_id_example"; // string | ------
 
 try {
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AplazamePayInsResponse**](../Model/AplazamePayInsResponse.md)
+[**\MarketPay\Model\AplazamePayInsResponse**](../Model/AplazamePayInsResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAplazameAplazamePostPaymentByWeb**
-> \Swagger\Client\Model\AplazamePayByWebResponse payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in)
+> \MarketPay\Model\AplazamePayByWebResponse payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in)
 
 --------
 
@@ -70,10 +70,10 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsAplazameApi();
-$aplazame_pay_in = new \Swagger\Client\Model\AplazamePayByWebPost(); // \Swagger\Client\Model\AplazamePayByWebPost | ------------
+$api_instance = new MarketPay\Api\PayInsAplazameApi();
+$aplazame_pay_in = new \MarketPay\Model\AplazamePayByWebPost(); // \MarketPay\Model\AplazamePayByWebPost | ------------
 
 try {
     $result = $api_instance->payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in);
@@ -88,11 +88,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **aplazame_pay_in** | [**\Swagger\Client\Model\AplazamePayByWebPost**](../Model/AplazamePayByWebPost.md)| ------------ | [optional]
+ **aplazame_pay_in** | [**\MarketPay\Model\AplazamePayByWebPost**](../Model/AplazamePayByWebPost.md)| ------------ | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AplazamePayByWebResponse**](../Model/AplazamePayByWebResponse.md)
+[**\MarketPay\Model\AplazamePayByWebResponse**](../Model/AplazamePayByWebResponse.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAplazameRefund**
-> \Swagger\Client\Model\AplazameRefundResponse payInsAplazameRefund($pay_in_id, $aplazame_refund)
+> \MarketPay\Model\AplazameRefundResponse payInsAplazameRefund($pay_in_id, $aplazame_refund)
 
 
 
@@ -116,11 +116,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsAplazameApi();
+$api_instance = new MarketPay\Api\PayInsAplazameApi();
 $pay_in_id = "pay_in_id_example"; // string | 
-$aplazame_refund = new \Swagger\Client\Model\AplazameRefundPaymentPost(); // \Swagger\Client\Model\AplazameRefundPaymentPost | 
+$aplazame_refund = new \MarketPay\Model\AplazameRefundPaymentPost(); // \MarketPay\Model\AplazameRefundPaymentPost | 
 
 try {
     $result = $api_instance->payInsAplazameRefund($pay_in_id, $aplazame_refund);
@@ -136,11 +136,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **string**|  |
- **aplazame_refund** | [**\Swagger\Client\Model\AplazameRefundPaymentPost**](../Model/AplazameRefundPaymentPost.md)|  | [optional]
+ **aplazame_refund** | [**\MarketPay\Model\AplazameRefundPaymentPost**](../Model/AplazameRefundPaymentPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AplazameRefundResponse**](../Model/AplazameRefundResponse.md)
+[**\MarketPay\Model\AplazameRefundResponse**](../Model/AplazameRefundResponse.md)
 
 ### Authorization
 

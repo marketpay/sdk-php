@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * UniversalPayPayInsResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,9 +54,9 @@ class UniversalPayPayInsResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'debited_funds' => '\Swagger\Client\Model\Money',
-        'credited_funds' => '\Swagger\Client\Model\Money',
-        'fees' => '\Swagger\Client\Model\Money',
+        'debited_funds' => '\MarketPay\Model\Money',
+        'credited_funds' => '\MarketPay\Model\Money',
+        'fees' => '\MarketPay\Model\Money',
         'credited_wallet_id' => 'string',
         'nature' => 'string',
         'status' => 'string',
@@ -69,7 +69,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
         'statement_descriptor' => 'string',
         'author_id' => 'string',
         'credited_user_id' => 'string',
-        'provider' => '\Swagger\Client\Model\PaymentUniversalPayData',
+        'provider' => '\MarketPay\Model\PaymentUniversalPayData',
         'card_id' => 'string',
         'id' => 'string',
         'creation_date' => 'int',
@@ -422,7 +422,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Gets debited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getDebitedFunds()
     {
@@ -431,7 +431,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \Swagger\Client\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -443,7 +443,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Gets credited_funds
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getCreditedFunds()
     {
@@ -452,7 +452,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \Swagger\Client\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
+     * @param \MarketPay\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -464,7 +464,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Gets fees
-     * @return \Swagger\Client\Model\Money
+     * @return \MarketPay\Model\Money
      */
     public function getFees()
     {
@@ -473,7 +473,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \Swagger\Client\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
      * @return $this
      */
     public function setFees($fees)
@@ -782,7 +782,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Gets provider
-     * @return \Swagger\Client\Model\PaymentUniversalPayData
+     * @return \MarketPay\Model\PaymentUniversalPayData
      */
     public function getProvider()
     {
@@ -791,7 +791,7 @@ class UniversalPayPayInsResponse implements ArrayAccess
 
     /**
      * Sets provider
-     * @param \Swagger\Client\Model\PaymentUniversalPayData $provider
+     * @param \MarketPay\Model\PaymentUniversalPayData $provider
      * @return $this
      */
     public function setProvider($provider)
@@ -936,10 +936,10 @@ class UniversalPayPayInsResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

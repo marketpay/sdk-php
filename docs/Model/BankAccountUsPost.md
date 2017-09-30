@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **aba** | **string** | The ABA of the bank account. Must be numbers only, and 9 digits long | [optional] 
 **deposit_account_type** | **string** | The type of account | [optional] 
 **tag** | **string** | Custom data that you can add to this item | [optional] 
-**owner_address** | [**\Swagger\Client\Model\Address**](Address.md) | The address of the owner of the bank account | [optional] 
+**owner_address** | [**\MarketPay\Model\Address**](Address.md) | The address of the owner of the bank account | [optional] 
 **owner_name** | **string** | The name of the owner of the bank account | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

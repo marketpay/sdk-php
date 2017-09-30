@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace MarketPay\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * ShipmentActor Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -55,8 +55,8 @@ class ShipmentActor implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-        'telephone' => '\Swagger\Client\Model\TelephoneSeur',
-        'address' => '\Swagger\Client\Model\Address'
+        'telephone' => '\MarketPay\Model\TelephoneSeur',
+        'address' => '\MarketPay\Model\Address'
     ];
 
     /**
@@ -195,7 +195,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Gets telephone
-     * @return \Swagger\Client\Model\TelephoneSeur
+     * @return \MarketPay\Model\TelephoneSeur
      */
     public function getTelephone()
     {
@@ -204,7 +204,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Sets telephone
-     * @param \Swagger\Client\Model\TelephoneSeur $telephone
+     * @param \MarketPay\Model\TelephoneSeur $telephone
      * @return $this
      */
     public function setTelephone($telephone)
@@ -216,7 +216,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Gets address
-     * @return \Swagger\Client\Model\Address
+     * @return \MarketPay\Model\Address
      */
     public function getAddress()
     {
@@ -225,7 +225,7 @@ class ShipmentActor implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\Address $address
+     * @param \MarketPay\Model\Address $address
      * @return $this
      */
     public function setAddress($address)
@@ -286,10 +286,10 @@ class ShipmentActor implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\MarketPay\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

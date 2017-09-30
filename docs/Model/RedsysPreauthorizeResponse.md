@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**debited_funds** | [**\Swagger\Client\Model\Money**](Money.md) | Information about the funds that are being debited | [optional] 
+**debited_funds** | [**\MarketPay\Model\Money**](Money.md) | Information about the funds that are being debited | [optional] 
 **status** | **string** | The status of the transaction | [optional] 
 **payment_status** | **string** | Status of the payment | [optional] 
 **execution_date** | **int** | When the transaction happened | [optional] 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **author_id** | **string** | A user&#39;s ID | [optional] 
 **pay_in_id** | **string** | The Id of the associated PayIn | [optional] 
 **language** | **string** | Valid values are ES, EN, CA, FR, DE, NL, IT, SV, PT, PL, GL and EU | [optional] 
-**provider** | [**\Swagger\Client\Model\PreauthorizationRedsysData**](PreauthorizationRedsysData.md) | Redsys related data | [optional] 
+**provider** | [**\MarketPay\Model\PreauthorizationRedsysData**](PreauthorizationRedsysData.md) | Redsys related data | [optional] 
 **id** | **string** | The item&#39;s ID | [optional] 
 **creation_date** | **int** | When the item was created | [optional] 
 **tag** | **string** | Custom data that you can add to this item | [optional] 

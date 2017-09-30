@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace MarketPay\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \MarketPay\ApiClient;
+use \MarketPay\ApiException;
+use \MarketPay\Configuration;
+use \MarketPay\ObjectSerializer;
 
 /**
  * ShipmentSeurApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class ShipmentSeurApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \MarketPay\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \MarketPay\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\MarketPay\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class ShipmentSeurApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \MarketPay\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class ShipmentSeurApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \MarketPay\ApiClient $apiClient set the API client
      *
      * @return ShipmentSeurApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\MarketPay\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -93,8 +93,8 @@ class ShipmentSeurApi
      * Cancels a shipment
      *
      * @param int $shipment_id The Id of a Shipment (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\SeurShipmentCancellationResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\SeurShipmentCancellationResponse
      */
     public function shipmentSeurSeurCancelShipment($shipment_id)
     {
@@ -108,8 +108,8 @@ class ShipmentSeurApi
      * Cancels a shipment
      *
      * @param int $shipment_id The Id of a Shipment (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\SeurShipmentCancellationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\SeurShipmentCancellationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentSeurSeurCancelShipmentWithHttpInfo($shipment_id)
     {
@@ -156,19 +156,19 @@ class ShipmentSeurApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\SeurShipmentCancellationResponse',
+                '\MarketPay\Model\SeurShipmentCancellationResponse',
                 '/v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SeurShipmentCancellationResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\SeurShipmentCancellationResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SeurShipmentCancellationResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\SeurShipmentCancellationResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -182,9 +182,9 @@ class ShipmentSeurApi
      *
      * Creates a shipment
      *
-     * @param \Swagger\Client\Model\SeurShipmentPost $shipment Seur Shipment Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\SeurShipmentResponse
+     * @param \MarketPay\Model\SeurShipmentPost $shipment Seur Shipment Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\SeurShipmentResponse
      */
     public function shipmentSeurSeurCreateShipment($shipment = null)
     {
@@ -197,9 +197,9 @@ class ShipmentSeurApi
      *
      * Creates a shipment
      *
-     * @param \Swagger\Client\Model\SeurShipmentPost $shipment Seur Shipment Object params (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\SeurShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \MarketPay\Model\SeurShipmentPost $shipment Seur Shipment Object params (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\SeurShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentSeurSeurCreateShipmentWithHttpInfo($shipment = null)
     {
@@ -239,19 +239,19 @@ class ShipmentSeurApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\SeurShipmentResponse',
+                '\MarketPay\Model\SeurShipmentResponse',
                 '/v2.01/ShipmentSeur/shipments'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SeurShipmentResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\SeurShipmentResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SeurShipmentResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\SeurShipmentResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -266,8 +266,8 @@ class ShipmentSeurApi
      * Cancels a shipment
      *
      * @param int $shipment_id The Id of a Shipment (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\SeurShipmentResponse
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\SeurShipmentResponse
      */
     public function shipmentSeurSeurGetShipment($shipment_id)
     {
@@ -281,8 +281,8 @@ class ShipmentSeurApi
      * Cancels a shipment
      *
      * @param int $shipment_id The Id of a Shipment (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\SeurShipmentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\SeurShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentSeurSeurGetShipmentWithHttpInfo($shipment_id)
     {
@@ -329,19 +329,19 @@ class ShipmentSeurApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\SeurShipmentResponse',
+                '\MarketPay\Model\SeurShipmentResponse',
                 '/v2.01/ShipmentSeur/shipments/{ShipmentId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SeurShipmentResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\SeurShipmentResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SeurShipmentResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\SeurShipmentResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
