@@ -477,7 +477,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **usersPostBankAccountCa**
-> \MarketPay\Model\BankAccountResponseCa usersPostBankAccountCa($user_id, $bank_account_ca)
+> \MarketPay\Model\BankAccountCaResponse usersPostBankAccountCa($user_id, $bank_account_ca)
 
 Create a CA BankAccount
 
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\BankAccountResponseCa**](../Model/BankAccountResponseCa.md)
+[**\MarketPay\Model\BankAccountCaResponse**](../Model/BankAccountCaResponse.md)
 
 ### Authorization
 
@@ -527,7 +527,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **usersPostBankAccountGb**
-> \MarketPay\Model\BankAccountResponseGb usersPostBankAccountGb($user_id, $bank_account_gb)
+> \MarketPay\Model\BankAccountGbResponse usersPostBankAccountGb($user_id, $bank_account_gb)
 
 Create a GB BankAccount
 
@@ -563,7 +563,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\BankAccountResponseGb**](../Model/BankAccountResponseGb.md)
+[**\MarketPay\Model\BankAccountGbResponse**](../Model/BankAccountGbResponse.md)
 
 ### Authorization
 
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **usersPostBankAccountIban**
-> \MarketPay\Model\BankAccountResponseIban usersPostBankAccountIban($user_id, $bank_account_iban)
+> \MarketPay\Model\BankAccountIbanResponse usersPostBankAccountIban($user_id, $bank_account_iban)
 
 Create an IBAN BankAccount
 
@@ -613,7 +613,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\BankAccountResponseIban**](../Model/BankAccountResponseIban.md)
+[**\MarketPay\Model\BankAccountIbanResponse**](../Model/BankAccountIbanResponse.md)
 
 ### Authorization
 
@@ -627,7 +627,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **usersPostBankAccountOther**
-> \MarketPay\Model\BankAccountResponseOther usersPostBankAccountOther($user_id, $bank_account_other)
+> \MarketPay\Model\BankAccountOtherResponse usersPostBankAccountOther($user_id, $bank_account_other)
 
 Create an OTHER BankAccount
 
@@ -663,7 +663,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\BankAccountResponseOther**](../Model/BankAccountResponseOther.md)
+[**\MarketPay\Model\BankAccountOtherResponse**](../Model/BankAccountOtherResponse.md)
 
 ### Authorization
 
@@ -677,7 +677,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **usersPostBankAccountUs**
-> \MarketPay\Model\BankAccountResponseUs usersPostBankAccountUs($user_id, $bank_account_us)
+> \MarketPay\Model\BankAccountUsResponse usersPostBankAccountUs($user_id, $bank_account_us)
 
 Create an US BankAccount
 
@@ -713,7 +713,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\BankAccountResponseUs**](../Model/BankAccountResponseUs.md)
+[**\MarketPay\Model\BankAccountUsResponse**](../Model/BankAccountUsResponse.md)
 
 ### Authorization
 

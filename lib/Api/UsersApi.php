@@ -965,7 +965,7 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param \MarketPay\Model\BankAccountCaPost $bank_account_ca BankAccountCA Object params (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\BankAccountResponseCa
+     * @return \MarketPay\Model\BankAccountCaResponse
      */
     public function usersPostBankAccountCa($user_id, $bank_account_ca = null)
     {
@@ -981,7 +981,7 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param \MarketPay\Model\BankAccountCaPost $bank_account_ca BankAccountCA Object params (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\BankAccountResponseCa, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\BankAccountCaResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountCaWithHttpInfo($user_id, $bank_account_ca = null)
     {
@@ -1033,15 +1033,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\BankAccountResponseCa',
+                '\MarketPay\Model\BankAccountCaResponse',
                 '/v2.01/Users/{UserId}/bankaccounts/CA'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponseCa', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountCaResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponseCa', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountCaResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -1062,7 +1062,7 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param \MarketPay\Model\BankAccountGbPost $bank_account_gb  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\BankAccountResponseGb
+     * @return \MarketPay\Model\BankAccountGbResponse
      */
     public function usersPostBankAccountGb($user_id, $bank_account_gb = null)
     {
@@ -1078,7 +1078,7 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param \MarketPay\Model\BankAccountGbPost $bank_account_gb  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\BankAccountResponseGb, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\BankAccountGbResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountGbWithHttpInfo($user_id, $bank_account_gb = null)
     {
@@ -1130,15 +1130,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\BankAccountResponseGb',
+                '\MarketPay\Model\BankAccountGbResponse',
                 '/v2.01/Users/{UserId}/bankaccounts/GB'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponseGb', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountGbResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponseGb', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountGbResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -1159,7 +1159,7 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param \MarketPay\Model\BankAccountIbanPost $bank_account_iban BankAccountIBAN Object params (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\BankAccountResponseIban
+     * @return \MarketPay\Model\BankAccountIbanResponse
      */
     public function usersPostBankAccountIban($user_id, $bank_account_iban = null)
     {
@@ -1175,7 +1175,7 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param \MarketPay\Model\BankAccountIbanPost $bank_account_iban BankAccountIBAN Object params (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\BankAccountResponseIban, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\BankAccountIbanResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountIbanWithHttpInfo($user_id, $bank_account_iban = null)
     {
@@ -1227,15 +1227,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\BankAccountResponseIban',
+                '\MarketPay\Model\BankAccountIbanResponse',
                 '/v2.01/Users/{UserId}/bankaccounts/IBAN'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponseIban', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountIbanResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponseIban', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountIbanResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -1256,7 +1256,7 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param \MarketPay\Model\BankAccountOtherPost $bank_account_other  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\BankAccountResponseOther
+     * @return \MarketPay\Model\BankAccountOtherResponse
      */
     public function usersPostBankAccountOther($user_id, $bank_account_other = null)
     {
@@ -1272,7 +1272,7 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param \MarketPay\Model\BankAccountOtherPost $bank_account_other  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\BankAccountResponseOther, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\BankAccountOtherResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountOtherWithHttpInfo($user_id, $bank_account_other = null)
     {
@@ -1324,15 +1324,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\BankAccountResponseOther',
+                '\MarketPay\Model\BankAccountOtherResponse',
                 '/v2.01/Users/{UserId}/bankaccounts/OTHER'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponseOther', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountOtherResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponseOther', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountOtherResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -1353,7 +1353,7 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param \MarketPay\Model\BankAccountUsPost $bank_account_us BankAccountUS Object params (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\BankAccountResponseUs
+     * @return \MarketPay\Model\BankAccountUsResponse
      */
     public function usersPostBankAccountUs($user_id, $bank_account_us = null)
     {
@@ -1369,7 +1369,7 @@ class UsersApi
      * @param int $user_id The Id of a user (required)
      * @param \MarketPay\Model\BankAccountUsPost $bank_account_us BankAccountUS Object params (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\BankAccountResponseUs, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\BankAccountUsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersPostBankAccountUsWithHttpInfo($user_id, $bank_account_us = null)
     {
@@ -1421,15 +1421,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\BankAccountResponseUs',
+                '\MarketPay\Model\BankAccountUsResponse',
                 '/v2.01/Users/{UserId}/bankaccounts/US'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountResponseUs', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\BankAccountUsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountResponseUs', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\BankAccountUsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

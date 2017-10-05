@@ -272,13 +272,14 @@ class PayInsRedsysApi
      *
      * Create a Redsys PayIn Request
      *
+     * @param string $x_webhook  (optional)
      * @param \MarketPay\Model\RedsysPayByWebPost $redsys_pay_in Redsys PayIn Request Object params (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\RedsysPayByWebResponse
      */
-    public function payInsRedsysRedsysPostPaymentByWeb($redsys_pay_in = null)
+    public function payInsRedsysRedsysPostPaymentByWeb($x_webhook = null, $redsys_pay_in = null)
     {
-        list($response) = $this->payInsRedsysRedsysPostPaymentByWebWithHttpInfo($redsys_pay_in);
+        list($response) = $this->payInsRedsysRedsysPostPaymentByWebWithHttpInfo($x_webhook, $redsys_pay_in);
         return $response;
     }
 
@@ -287,11 +288,12 @@ class PayInsRedsysApi
      *
      * Create a Redsys PayIn Request
      *
+     * @param string $x_webhook  (optional)
      * @param \MarketPay\Model\RedsysPayByWebPost $redsys_pay_in Redsys PayIn Request Object params (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\RedsysPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsRedsysRedsysPostPaymentByWebWithHttpInfo($redsys_pay_in = null)
+    public function payInsRedsysRedsysPostPaymentByWebWithHttpInfo($x_webhook = null, $redsys_pay_in = null)
     {
         // parse inputs
         $resourcePath = "/v2.01/PayInsRedsys/payments/web";
@@ -305,6 +307,10 @@ class PayInsRedsysApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'text/json', 'application/json-patch+json']);
 
+        // header params
+        if ($x_webhook !== null) {
+            $headerParams['X-Webhook'] = $this->apiClient->getSerializer()->toHeaderValue($x_webhook);
+        }
         // body params
         $_tempBody = null;
         if (isset($redsys_pay_in)) {
