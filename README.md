@@ -75,6 +75,14 @@ Class | Method | HTTP request | Description
 *CardsApi* | [**cardsGet**](docs/Api/CardsApi.md#cardsget) | **GET** /v2.01/Cards/{CardId} | View a Card
 *CardsApi* | [**cardsGetList**](docs/Api/CardsApi.md#cardsgetlist) | **GET** /v2.01/Cards | 
 *CardsApi* | [**cardsPut**](docs/Api/CardsApi.md#cardsput) | **PUT** /v2.01/Cards/{CardId} | Deactivate a Card
+*KycApi* | [**kycGetLegal**](docs/Api/KycApi.md#kycgetlegal) | **GET** /v2.01/Kyc/users/legal/{UserId} | View a Legal User
+*KycApi* | [**kycGetNatural**](docs/Api/KycApi.md#kycgetnatural) | **GET** /v2.01/Kyc/users/natural/{UserId} | View a Natural User
+*KycApi* | [**kycGetValidaton**](docs/Api/KycApi.md#kycgetvalidaton) | **GET** /v2.01/Kyc/users/natural/{UserId}/validation | 
+*KycApi* | [**kycPostDocument**](docs/Api/KycApi.md#kycpostdocument) | **POST** /v2.01/Kyc/users/{UserId}/documents/new/{DocumentType} | Uploads a new document and uploads a file. If the document already exists it will be replaced.
+*KycApi* | [**kycPostNatural**](docs/Api/KycApi.md#kycpostnatural) | **POST** /v2.01/Kyc/users/natural/{UserId} | Update a Natural User Kyc Data
+*KycApi* | [**kycPutDocument**](docs/Api/KycApi.md#kycputdocument) | **PUT** /v2.01/Kyc/users/{UserId}/documents/add/{DocumentType} | Adds files to a document.
+*KycApi* | [**kycPutLegal**](docs/Api/KycApi.md#kycputlegal) | **POST** /v2.01/Kyc/users/legal/{UserId} | Update a Legal User
+*KycApi* | [**kycPutRequest**](docs/Api/KycApi.md#kycputrequest) | **PUT** /v2.01/Kyc/users/natural/{UserId}/requestValidation | 
 *PayInsAplazameApi* | [**payInsAplazameAplazameGetPayment**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamegetpayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | -------
 *PayInsAplazameApi* | [**payInsAplazameAplazamePostPaymentByWeb**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamepostpaymentbyweb) | **POST** /v2.01/PayInsAplazame/payments/web | --------
 *PayInsAplazameApi* | [**payInsAplazameRefund**](docs/Api/PayInsAplazameApi.md#payinsaplazamerefund) | **POST** /v2.01/PayInsAplazame/payments/{PayInId}/refunds | 
@@ -137,23 +145,34 @@ Class | Method | HTTP request | Description
  - [AplazameRefundPaymentPost](docs/Model/AplazameRefundPaymentPost.md)
  - [AplazameRefundResponse](docs/Model/AplazameRefundResponse.md)
  - [BankAccountCaPost](docs/Model/BankAccountCaPost.md)
+ - [BankAccountCaResponse](docs/Model/BankAccountCaResponse.md)
  - [BankAccountGbPost](docs/Model/BankAccountGbPost.md)
+ - [BankAccountGbResponse](docs/Model/BankAccountGbResponse.md)
  - [BankAccountIbanPost](docs/Model/BankAccountIbanPost.md)
+ - [BankAccountIbanResponse](docs/Model/BankAccountIbanResponse.md)
  - [BankAccountOtherPost](docs/Model/BankAccountOtherPost.md)
+ - [BankAccountOtherResponse](docs/Model/BankAccountOtherResponse.md)
  - [BankAccountResponse](docs/Model/BankAccountResponse.md)
- - [BankAccountResponseCa](docs/Model/BankAccountResponseCa.md)
- - [BankAccountResponseGb](docs/Model/BankAccountResponseGb.md)
- - [BankAccountResponseIban](docs/Model/BankAccountResponseIban.md)
- - [BankAccountResponseOther](docs/Model/BankAccountResponseOther.md)
- - [BankAccountResponseUs](docs/Model/BankAccountResponseUs.md)
  - [BankAccountType](docs/Model/BankAccountType.md)
  - [BankAccountUsPost](docs/Model/BankAccountUsPost.md)
+ - [BankAccountUsResponse](docs/Model/BankAccountUsResponse.md)
  - [CardPut](docs/Model/CardPut.md)
  - [CardResponse](docs/Model/CardResponse.md)
  - [CustomApiErrorResponse](docs/Model/CustomApiErrorResponse.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerDetail](docs/Model/CustomerDetail.md)
+ - [DocumentFileStatus](docs/Model/DocumentFileStatus.md)
  - [ExampleUserNaturalPost](docs/Model/ExampleUserNaturalPost.md)
+ - [KycDocumentDetails](docs/Model/KycDocumentDetails.md)
+ - [KycFileUploadResponse](docs/Model/KycFileUploadResponse.md)
+ - [KycIdentificationRequest](docs/Model/KycIdentificationRequest.md)
+ - [KycUserLegalPut](docs/Model/KycUserLegalPut.md)
+ - [KycUserNaturalPut](docs/Model/KycUserNaturalPut.md)
+ - [KycUserValidationLevelLegalResponse](docs/Model/KycUserValidationLevelLegalResponse.md)
+ - [KycUserValidationLevelNaturalResponse](docs/Model/KycUserValidationLevelNaturalResponse.md)
+ - [KycValidationPerLevelStatus](docs/Model/KycValidationPerLevelStatus.md)
+ - [KycValidationRequestResponse](docs/Model/KycValidationRequestResponse.md)
+ - [KycValidationUserStatusResponse](docs/Model/KycValidationUserStatusResponse.md)
  - [Money](docs/Model/Money.md)
  - [PayInBankwirePost](docs/Model/PayInBankwirePost.md)
  - [PayInBankwireResponse](docs/Model/PayInBankwireResponse.md)
@@ -163,6 +182,9 @@ Class | Method | HTTP request | Description
  - [PaymentUniversalPayData](docs/Model/PaymentUniversalPayData.md)
  - [PreauthorizationRedsysData](docs/Model/PreauthorizationRedsysData.md)
  - [Product](docs/Model/Product.md)
+ - [PropertyValidationCountry](docs/Model/PropertyValidationCountry.md)
+ - [PropertyValidationDateNullable](docs/Model/PropertyValidationDateNullable.md)
+ - [PropertyValidationString](docs/Model/PropertyValidationString.md)
  - [RedsysPayByWebPost](docs/Model/RedsysPayByWebPost.md)
  - [RedsysPayByWebResponse](docs/Model/RedsysPayByWebResponse.md)
  - [RedsysPayInsResponse](docs/Model/RedsysPayInsResponse.md)
@@ -185,6 +207,10 @@ Class | Method | HTTP request | Description
  - [SeurShipmentPost](docs/Model/SeurShipmentPost.md)
  - [SeurShipmentResponse](docs/Model/SeurShipmentResponse.md)
  - [ShipmentActor](docs/Model/ShipmentActor.md)
+ - [TAddressValidationResult](docs/Model/TAddressValidationResult.md)
+ - [TKycFileDetails](docs/Model/TKycFileDetails.md)
+ - [TKycNaturalUserData](docs/Model/TKycNaturalUserData.md)
+ - [TTelephoneValidationResult](docs/Model/TTelephoneValidationResult.md)
  - [Telephone](docs/Model/Telephone.md)
  - [TelephoneSeur](docs/Model/TelephoneSeur.md)
  - [TokenUniversalPayData](docs/Model/TokenUniversalPayData.md)
