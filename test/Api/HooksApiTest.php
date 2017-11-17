@@ -1,6 +1,6 @@
 <?php
 /**
- * PayInsAplazameApiTest
+ * HooksApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \MarketPay\ApiException;
 use \MarketPay\ObjectSerializer;
 
 /**
- * PayInsAplazameApiTest Class Doc Comment
+ * HooksApiTest Class Doc Comment
  *
  * @category Class
  * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayInsAplazameApiTest extends \PHPUnit_Framework_TestCase
+class HooksApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -73,42 +73,42 @@ class PayInsAplazameApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for payInsAplazameAplazameConfirmPayment
+     * Test case for hooksGet
      *
      * .
      *
      */
-    public function testPayInsAplazameAplazameConfirmPayment()
+    public function testHooksGet()
     {
     }
 
     /**
-     * Test case for payInsAplazameAplazameGetPayment
-     *
-     * -------.
-     *
-     */
-    public function testPayInsAplazameAplazameGetPayment()
-    {
-    }
-
-    /**
-     * Test case for payInsAplazameAplazamePostPaymentByWeb
-     *
-     * --------.
-     *
-     */
-    public function testPayInsAplazameAplazamePostPaymentByWeb()
-    {
-    }
-
-    /**
-     * Test case for payInsAplazameRefund
+     * Test case for hooksGet_0
      *
      * .
      *
      */
-    public function testPayInsAplazameRefund()
+    public function testHooksGet0()
+    {
+    }
+
+    /**
+     * Test case for hooksPost
+     *
+     * .
+     *
+     */
+    public function testHooksPost()
+    {
+    }
+
+    /**
+     * Test case for hooksPut
+     *
+     * .
+     *
+     */
+    public function testHooksPut()
     {
     }
 }

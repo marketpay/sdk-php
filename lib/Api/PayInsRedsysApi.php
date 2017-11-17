@@ -729,4 +729,404 @@ class PayInsRedsysApi
             throw $e;
         }
     }
+
+    /**
+     * Operation payInsRedsysRedsysWebhookPayment
+     *
+     * @param int $intent_id  (required)
+     * @param string $ds_signature_version  (optional)
+     * @param string $ds_merchant_parameters  (optional)
+     * @param string $ds_signature  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return void
+     */
+    public function payInsRedsysRedsysWebhookPayment($intent_id, $ds_signature_version = null, $ds_merchant_parameters = null, $ds_signature = null)
+    {
+        list($response) = $this->payInsRedsysRedsysWebhookPaymentWithHttpInfo($intent_id, $ds_signature_version, $ds_merchant_parameters, $ds_signature);
+        return $response;
+    }
+
+    /**
+     * Operation payInsRedsysRedsysWebhookPaymentWithHttpInfo
+     *
+     * @param int $intent_id  (required)
+     * @param string $ds_signature_version  (optional)
+     * @param string $ds_merchant_parameters  (optional)
+     * @param string $ds_signature  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function payInsRedsysRedsysWebhookPaymentWithHttpInfo($intent_id, $ds_signature_version = null, $ds_merchant_parameters = null, $ds_signature = null)
+    {
+        // verify the required parameter 'intent_id' is set
+        if ($intent_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $intent_id when calling payInsRedsysRedsysWebhookPayment');
+        }
+        // parse inputs
+        $resourcePath = "/v2.01/PayInsRedsys/webhook/pay/{IntentId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($intent_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "IntentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($intent_id),
+                $resourcePath
+            );
+        }
+        // form params
+        if ($ds_signature_version !== null) {
+            $formParams['Ds_SignatureVersion'] = $this->apiClient->getSerializer()->toFormValue($ds_signature_version);
+        }
+        // form params
+        if ($ds_merchant_parameters !== null) {
+            $formParams['Ds_MerchantParameters'] = $this->apiClient->getSerializer()->toFormValue($ds_merchant_parameters);
+        }
+        // form params
+        if ($ds_signature !== null) {
+            $formParams['Ds_Signature'] = $this->apiClient->getSerializer()->toFormValue($ds_signature);
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.01/PayInsRedsys/webhook/pay/{IntentId}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation payInsRedsysRedsysWebhookPaymentSoap
+     *
+     * @param int $intent_id  (required)
+     * @param string $ds_signature_version  (optional)
+     * @param string $ds_merchant_parameters  (optional)
+     * @param string $ds_signature  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return void
+     */
+    public function payInsRedsysRedsysWebhookPaymentSoap($intent_id, $ds_signature_version = null, $ds_merchant_parameters = null, $ds_signature = null)
+    {
+        list($response) = $this->payInsRedsysRedsysWebhookPaymentSoapWithHttpInfo($intent_id, $ds_signature_version, $ds_merchant_parameters, $ds_signature);
+        return $response;
+    }
+
+    /**
+     * Operation payInsRedsysRedsysWebhookPaymentSoapWithHttpInfo
+     *
+     * @param int $intent_id  (required)
+     * @param string $ds_signature_version  (optional)
+     * @param string $ds_merchant_parameters  (optional)
+     * @param string $ds_signature  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function payInsRedsysRedsysWebhookPaymentSoapWithHttpInfo($intent_id, $ds_signature_version = null, $ds_merchant_parameters = null, $ds_signature = null)
+    {
+        // verify the required parameter 'intent_id' is set
+        if ($intent_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $intent_id when calling payInsRedsysRedsysWebhookPaymentSoap');
+        }
+        // parse inputs
+        $resourcePath = "/v2.01/PayInsRedsys/webhook/paysoap/{IntentId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($intent_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "IntentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($intent_id),
+                $resourcePath
+            );
+        }
+        // form params
+        if ($ds_signature_version !== null) {
+            $formParams['Ds_SignatureVersion'] = $this->apiClient->getSerializer()->toFormValue($ds_signature_version);
+        }
+        // form params
+        if ($ds_merchant_parameters !== null) {
+            $formParams['Ds_MerchantParameters'] = $this->apiClient->getSerializer()->toFormValue($ds_merchant_parameters);
+        }
+        // form params
+        if ($ds_signature !== null) {
+            $formParams['Ds_Signature'] = $this->apiClient->getSerializer()->toFormValue($ds_signature);
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.01/PayInsRedsys/webhook/paysoap/{IntentId}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation payInsRedsysRedsysWebhookPreauthorization
+     *
+     * @param int $intent_id  (required)
+     * @param string $ds_signature_version  (optional)
+     * @param string $ds_merchant_parameters  (optional)
+     * @param string $ds_signature  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return void
+     */
+    public function payInsRedsysRedsysWebhookPreauthorization($intent_id, $ds_signature_version = null, $ds_merchant_parameters = null, $ds_signature = null)
+    {
+        list($response) = $this->payInsRedsysRedsysWebhookPreauthorizationWithHttpInfo($intent_id, $ds_signature_version, $ds_merchant_parameters, $ds_signature);
+        return $response;
+    }
+
+    /**
+     * Operation payInsRedsysRedsysWebhookPreauthorizationWithHttpInfo
+     *
+     * @param int $intent_id  (required)
+     * @param string $ds_signature_version  (optional)
+     * @param string $ds_merchant_parameters  (optional)
+     * @param string $ds_signature  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function payInsRedsysRedsysWebhookPreauthorizationWithHttpInfo($intent_id, $ds_signature_version = null, $ds_merchant_parameters = null, $ds_signature = null)
+    {
+        // verify the required parameter 'intent_id' is set
+        if ($intent_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $intent_id when calling payInsRedsysRedsysWebhookPreauthorization');
+        }
+        // parse inputs
+        $resourcePath = "/v2.01/PayInsRedsys/webhook/preauthorize/{IntentId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($intent_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "IntentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($intent_id),
+                $resourcePath
+            );
+        }
+        // form params
+        if ($ds_signature_version !== null) {
+            $formParams['Ds_SignatureVersion'] = $this->apiClient->getSerializer()->toFormValue($ds_signature_version);
+        }
+        // form params
+        if ($ds_merchant_parameters !== null) {
+            $formParams['Ds_MerchantParameters'] = $this->apiClient->getSerializer()->toFormValue($ds_merchant_parameters);
+        }
+        // form params
+        if ($ds_signature !== null) {
+            $formParams['Ds_Signature'] = $this->apiClient->getSerializer()->toFormValue($ds_signature);
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.01/PayInsRedsys/webhook/preauthorize/{IntentId}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation payInsRedsysRedsysWebhookPreauthorizationSoap
+     *
+     * @param int $intent_id  (required)
+     * @param string $ds_signature_version  (optional)
+     * @param string $ds_merchant_parameters  (optional)
+     * @param string $ds_signature  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return void
+     */
+    public function payInsRedsysRedsysWebhookPreauthorizationSoap($intent_id, $ds_signature_version = null, $ds_merchant_parameters = null, $ds_signature = null)
+    {
+        list($response) = $this->payInsRedsysRedsysWebhookPreauthorizationSoapWithHttpInfo($intent_id, $ds_signature_version, $ds_merchant_parameters, $ds_signature);
+        return $response;
+    }
+
+    /**
+     * Operation payInsRedsysRedsysWebhookPreauthorizationSoapWithHttpInfo
+     *
+     * @param int $intent_id  (required)
+     * @param string $ds_signature_version  (optional)
+     * @param string $ds_merchant_parameters  (optional)
+     * @param string $ds_signature  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function payInsRedsysRedsysWebhookPreauthorizationSoapWithHttpInfo($intent_id, $ds_signature_version = null, $ds_merchant_parameters = null, $ds_signature = null)
+    {
+        // verify the required parameter 'intent_id' is set
+        if ($intent_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $intent_id when calling payInsRedsysRedsysWebhookPreauthorizationSoap');
+        }
+        // parse inputs
+        $resourcePath = "/v2.01/PayInsRedsys/webhook/preauthorizesoap/{IntentId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($intent_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "IntentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($intent_id),
+                $resourcePath
+            );
+        }
+        // form params
+        if ($ds_signature_version !== null) {
+            $formParams['Ds_SignatureVersion'] = $this->apiClient->getSerializer()->toFormValue($ds_signature_version);
+        }
+        // form params
+        if ($ds_merchant_parameters !== null) {
+            $formParams['Ds_MerchantParameters'] = $this->apiClient->getSerializer()->toFormValue($ds_merchant_parameters);
+        }
+        // form params
+        if ($ds_signature !== null) {
+            $formParams['Ds_Signature'] = $this->apiClient->getSerializer()->toFormValue($ds_signature);
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/v2.01/PayInsRedsys/webhook/preauthorizesoap/{IntentId}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }

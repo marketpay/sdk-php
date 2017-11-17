@@ -1,6 +1,6 @@
 <?php
 /**
- * PayInsAplazameApiTest
+ * EventsApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \MarketPay\ApiException;
 use \MarketPay\ObjectSerializer;
 
 /**
- * PayInsAplazameApiTest Class Doc Comment
+ * EventsApiTest Class Doc Comment
  *
  * @category Class
  * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayInsAplazameApiTest extends \PHPUnit_Framework_TestCase
+class EventsApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -73,42 +73,12 @@ class PayInsAplazameApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for payInsAplazameAplazameConfirmPayment
+     * Test case for eventsGet
      *
-     * .
-     *
-     */
-    public function testPayInsAplazameAplazameConfirmPayment()
-    {
-    }
-
-    /**
-     * Test case for payInsAplazameAplazameGetPayment
-     *
-     * -------.
+     * Values List.
      *
      */
-    public function testPayInsAplazameAplazameGetPayment()
-    {
-    }
-
-    /**
-     * Test case for payInsAplazameAplazamePostPaymentByWeb
-     *
-     * --------.
-     *
-     */
-    public function testPayInsAplazameAplazamePostPaymentByWeb()
-    {
-    }
-
-    /**
-     * Test case for payInsAplazameRefund
-     *
-     * .
-     *
-     */
-    public function testPayInsAplazameRefund()
+    public function testEventsGet()
     {
     }
 }

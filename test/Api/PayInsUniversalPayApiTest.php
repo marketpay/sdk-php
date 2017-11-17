@@ -121,4 +121,14 @@ class PayInsUniversalPayApiTest extends \PHPUnit_Framework_TestCase
     public function testPayInsUniversalPayUniversalPaySaveCard()
     {
     }
+
+    /**
+     * Test case for payInsUniversalPayUniversalPayWebhookPayment
+     *
+     * .
+     *
+     */
+    public function testPayInsUniversalPayUniversalPayWebhookPayment()
+    {
+    }
 }

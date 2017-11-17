@@ -1,6 +1,6 @@
 <?php
 /**
- * PayInsAplazameApi
+ * HooksApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \MarketPay\Configuration;
 use \MarketPay\ObjectSerializer;
 
 /**
- * PayInsAplazameApi Class Doc Comment
+ * HooksApi Class Doc Comment
  *
  * @category Class
  * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayInsAplazameApi
+class HooksApi
 {
     /**
      * API Client
@@ -79,7 +79,7 @@ class PayInsAplazameApi
      *
      * @param \MarketPay\ApiClient $apiClient set the API client
      *
-     * @return PayInsAplazameApi
+     * @return HooksApi
      */
     public function setApiClient(\MarketPay\ApiClient $apiClient)
     {
@@ -88,35 +88,199 @@ class PayInsAplazameApi
     }
 
     /**
-     * Operation payInsAplazameAplazameConfirmPayment
+     * Operation hooksGet
      *
-     * @param string $pay_in_id  (required)
-     * @param \MarketPay\Model\ConfirmPaymentPost $request  (optional)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return string
+     * @return \MarketPay\Model\HookResponse[]
      */
-    public function payInsAplazameAplazameConfirmPayment($pay_in_id, $request = null)
+    public function hooksGet($page = null, $per_page = null)
     {
-        list($response) = $this->payInsAplazameAplazameConfirmPaymentWithHttpInfo($pay_in_id, $request);
+        list($response) = $this->hooksGetWithHttpInfo($page, $per_page);
         return $response;
     }
 
     /**
-     * Operation payInsAplazameAplazameConfirmPaymentWithHttpInfo
+     * Operation hooksGetWithHttpInfo
      *
-     * @param string $pay_in_id  (required)
-     * @param \MarketPay\Model\ConfirmPaymentPost $request  (optional)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\HookResponse[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsAplazameAplazameConfirmPaymentWithHttpInfo($pay_in_id, $request = null)
+    public function hooksGetWithHttpInfo($page = null, $per_page = null)
     {
-        // verify the required parameter 'pay_in_id' is set
-        if ($pay_in_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsAplazameAplazameConfirmPayment');
+        // parse inputs
+        $resourcePath = "/v2.01/Hooks";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }
+        // query params
+        if ($per_page !== null) {
+            $queryParams['per_page'] = $this->apiClient->getSerializer()->toQueryValue($per_page);
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\MarketPay\Model\HookResponse[]',
+                '/v2.01/Hooks'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\HookResponse[]', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\HookResponse[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation hooksGet_0
+     *
+     * @param string $hook_id  (required)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\HookResponse
+     */
+    public function hooksGet_0($hook_id)
+    {
+        list($response) = $this->hooksGet_0WithHttpInfo($hook_id);
+        return $response;
+    }
+
+    /**
+     * Operation hooksGet_0WithHttpInfo
+     *
+     * @param string $hook_id  (required)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\HookResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function hooksGet_0WithHttpInfo($hook_id)
+    {
+        // verify the required parameter 'hook_id' is set
+        if ($hook_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $hook_id when calling hooksGet_0');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayInsAplazame/webhook/pay/{PayInId}";
+        $resourcePath = "/v2.01/Hooks/{hookId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($hook_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "hookId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($hook_id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\MarketPay\Model\HookResponse',
+                '/v2.01/Hooks/{hookId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\HookResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\HookResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation hooksPost
+     *
+     * @param \MarketPay\Model\HookPost $request  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\HookResponse
+     */
+    public function hooksPost($request = null)
+    {
+        list($response) = $this->hooksPostWithHttpInfo($request);
+        return $response;
+    }
+
+    /**
+     * Operation hooksPostWithHttpInfo
+     *
+     * @param \MarketPay\Model\HookPost $request  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\HookResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function hooksPostWithHttpInfo($request = null)
+    {
+        // parse inputs
+        $resourcePath = "/v2.01/Hooks";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -127,14 +291,6 @@ class PayInsAplazameApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json']);
 
-        // path params
-        if ($pay_in_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "PayInId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($pay_in_id),
-                $resourcePath
-            );
-        }
         // body params
         $_tempBody = null;
         if (isset($request)) {
@@ -159,105 +315,15 @@ class PayInsAplazameApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
-                '/v2.01/PayInsAplazame/webhook/pay/{PayInId}'
+                '\MarketPay\Model\HookResponse',
+                '/v2.01/Hooks'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 204:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation payInsAplazameAplazameGetPayment
-     *
-     * -------
-     *
-     * @param string $pay_in_id ------ (required)
-     * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\AplazamePayInsResponse
-     */
-    public function payInsAplazameAplazameGetPayment($pay_in_id)
-    {
-        list($response) = $this->payInsAplazameAplazameGetPaymentWithHttpInfo($pay_in_id);
-        return $response;
-    }
-
-    /**
-     * Operation payInsAplazameAplazameGetPaymentWithHttpInfo
-     *
-     * -------
-     *
-     * @param string $pay_in_id ------ (required)
-     * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\AplazamePayInsResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function payInsAplazameAplazameGetPaymentWithHttpInfo($pay_in_id)
-    {
-        // verify the required parameter 'pay_in_id' is set
-        if ($pay_in_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsAplazameAplazameGetPayment');
-        }
-        // parse inputs
-        $resourcePath = "/v2.01/PayInsAplazame/payments/{PayInId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        // path params
-        if ($pay_in_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "PayInId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($pay_in_id),
-                $resourcePath
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\MarketPay\Model\AplazamePayInsResponse',
-                '/v2.01/PayInsAplazame/payments/{PayInId}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AplazamePayInsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\HookResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AplazamePayInsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\HookResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -271,118 +337,35 @@ class PayInsAplazameApi
     }
 
     /**
-     * Operation payInsAplazameAplazamePostPaymentByWeb
+     * Operation hooksPut
      *
-     * --------
-     *
-     * @param \MarketPay\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
+     * @param string $hook_id  (required)
+     * @param \MarketPay\Model\HookPut $request  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\AplazamePayByWebResponse
+     * @return \MarketPay\Model\HookResponse
      */
-    public function payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in = null)
+    public function hooksPut($hook_id, $request = null)
     {
-        list($response) = $this->payInsAplazameAplazamePostPaymentByWebWithHttpInfo($aplazame_pay_in);
+        list($response) = $this->hooksPutWithHttpInfo($hook_id, $request);
         return $response;
     }
 
     /**
-     * Operation payInsAplazameAplazamePostPaymentByWebWithHttpInfo
+     * Operation hooksPutWithHttpInfo
      *
-     * --------
-     *
-     * @param \MarketPay\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
+     * @param string $hook_id  (required)
+     * @param \MarketPay\Model\HookPut $request  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\AplazamePayByWebResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\HookResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsAplazameAplazamePostPaymentByWebWithHttpInfo($aplazame_pay_in = null)
+    public function hooksPutWithHttpInfo($hook_id, $request = null)
     {
-        // parse inputs
-        $resourcePath = "/v2.01/PayInsAplazame/payments/web";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json']);
-
-        // body params
-        $_tempBody = null;
-        if (isset($aplazame_pay_in)) {
-            $_tempBody = $aplazame_pay_in;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires OAuth (access token)
-        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
-            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\MarketPay\Model\AplazamePayByWebResponse',
-                '/v2.01/PayInsAplazame/payments/web'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AplazamePayByWebResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AplazamePayByWebResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation payInsAplazameRefund
-     *
-     * @param string $pay_in_id  (required)
-     * @param \MarketPay\Model\AplazameRefundPaymentPost $aplazame_refund  (optional)
-     * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\AplazameRefundResponse
-     */
-    public function payInsAplazameRefund($pay_in_id, $aplazame_refund = null)
-    {
-        list($response) = $this->payInsAplazameRefundWithHttpInfo($pay_in_id, $aplazame_refund);
-        return $response;
-    }
-
-    /**
-     * Operation payInsAplazameRefundWithHttpInfo
-     *
-     * @param string $pay_in_id  (required)
-     * @param \MarketPay\Model\AplazameRefundPaymentPost $aplazame_refund  (optional)
-     * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\AplazameRefundResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function payInsAplazameRefundWithHttpInfo($pay_in_id, $aplazame_refund = null)
-    {
-        // verify the required parameter 'pay_in_id' is set
-        if ($pay_in_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsAplazameRefund');
+        // verify the required parameter 'hook_id' is set
+        if ($hook_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $hook_id when calling hooksPut');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayInsAplazame/payments/{PayInId}/refunds";
+        $resourcePath = "/v2.01/Hooks/{hookId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -394,17 +377,17 @@ class PayInsAplazameApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json']);
 
         // path params
-        if ($pay_in_id !== null) {
+        if ($hook_id !== null) {
             $resourcePath = str_replace(
-                "{" . "PayInId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($pay_in_id),
+                "{" . "hookId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($hook_id),
                 $resourcePath
             );
         }
         // body params
         $_tempBody = null;
-        if (isset($aplazame_refund)) {
-            $_tempBody = $aplazame_refund;
+        if (isset($request)) {
+            $_tempBody = $request;
         }
 
         // for model (json/xml)
@@ -421,19 +404,19 @@ class PayInsAplazameApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'POST',
+                'PUT',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\AplazameRefundResponse',
-                '/v2.01/PayInsAplazame/payments/{PayInId}/refunds'
+                '\MarketPay\Model\HookResponse',
+                '/v2.01/Hooks/{hookId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AplazameRefundResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\HookResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AplazameRefundResponse', $e->getResponseHeaders());
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\HookResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

@@ -525,4 +525,130 @@ class PayInsUniversalPayApi
             throw $e;
         }
     }
+
+    /**
+     * Operation payInsUniversalPayUniversalPayWebhookPayment
+     *
+     * @param string $message_type  (optional)
+     * @param string $message_description  (optional)
+     * @param string $merchant_order_id  (optional)
+     * @param string $merchant_subscription_id  (optional)
+     * @param string $merchant_transaction_id  (optional)
+     * @param string $merchant_token_id  (optional)
+     * @param string $mac  (optional)
+     * @param string $txn_id  (optional)
+     * @param string $objects  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\UniversalPayWebhookResponse
+     */
+    public function payInsUniversalPayUniversalPayWebhookPayment($message_type = null, $message_description = null, $merchant_order_id = null, $merchant_subscription_id = null, $merchant_transaction_id = null, $merchant_token_id = null, $mac = null, $txn_id = null, $objects = null)
+    {
+        list($response) = $this->payInsUniversalPayUniversalPayWebhookPaymentWithHttpInfo($message_type, $message_description, $merchant_order_id, $merchant_subscription_id, $merchant_transaction_id, $merchant_token_id, $mac, $txn_id, $objects);
+        return $response;
+    }
+
+    /**
+     * Operation payInsUniversalPayUniversalPayWebhookPaymentWithHttpInfo
+     *
+     * @param string $message_type  (optional)
+     * @param string $message_description  (optional)
+     * @param string $merchant_order_id  (optional)
+     * @param string $merchant_subscription_id  (optional)
+     * @param string $merchant_transaction_id  (optional)
+     * @param string $merchant_token_id  (optional)
+     * @param string $mac  (optional)
+     * @param string $txn_id  (optional)
+     * @param string $objects  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\UniversalPayWebhookResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function payInsUniversalPayUniversalPayWebhookPaymentWithHttpInfo($message_type = null, $message_description = null, $merchant_order_id = null, $merchant_subscription_id = null, $merchant_transaction_id = null, $merchant_token_id = null, $mac = null, $txn_id = null, $objects = null)
+    {
+        // parse inputs
+        $resourcePath = "/v2.01/PayInsUniversalPay/webhook";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // form params
+        if ($message_type !== null) {
+            $formParams['Message_Type'] = $this->apiClient->getSerializer()->toFormValue($message_type);
+        }
+        // form params
+        if ($message_description !== null) {
+            $formParams['Message_Description'] = $this->apiClient->getSerializer()->toFormValue($message_description);
+        }
+        // form params
+        if ($merchant_order_id !== null) {
+            $formParams['Merchant_Order_Id'] = $this->apiClient->getSerializer()->toFormValue($merchant_order_id);
+        }
+        // form params
+        if ($merchant_subscription_id !== null) {
+            $formParams['Merchant_Subscription_Id'] = $this->apiClient->getSerializer()->toFormValue($merchant_subscription_id);
+        }
+        // form params
+        if ($merchant_transaction_id !== null) {
+            $formParams['Merchant_Transaction_Id'] = $this->apiClient->getSerializer()->toFormValue($merchant_transaction_id);
+        }
+        // form params
+        if ($merchant_token_id !== null) {
+            $formParams['Merchant_Token_Id'] = $this->apiClient->getSerializer()->toFormValue($merchant_token_id);
+        }
+        // form params
+        if ($mac !== null) {
+            $formParams['Mac'] = $this->apiClient->getSerializer()->toFormValue($mac);
+        }
+        // form params
+        if ($txn_id !== null) {
+            $formParams['Txn_Id'] = $this->apiClient->getSerializer()->toFormValue($txn_id);
+        }
+        // form params
+        if ($objects !== null) {
+            $formParams['Objects'] = $this->apiClient->getSerializer()->toFormValue($objects);
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\MarketPay\Model\UniversalPayWebhookResponse',
+                '/v2.01/PayInsUniversalPay/webhook'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayWebhookResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayWebhookResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }

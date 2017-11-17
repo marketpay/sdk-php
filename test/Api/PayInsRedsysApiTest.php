@@ -141,4 +141,44 @@ class PayInsRedsysApiTest extends \PHPUnit_Framework_TestCase
     public function testPayInsRedsysRedsysPostRefund()
     {
     }
+
+    /**
+     * Test case for payInsRedsysRedsysWebhookPayment
+     *
+     * .
+     *
+     */
+    public function testPayInsRedsysRedsysWebhookPayment()
+    {
+    }
+
+    /**
+     * Test case for payInsRedsysRedsysWebhookPaymentSoap
+     *
+     * .
+     *
+     */
+    public function testPayInsRedsysRedsysWebhookPaymentSoap()
+    {
+    }
+
+    /**
+     * Test case for payInsRedsysRedsysWebhookPreauthorization
+     *
+     * .
+     *
+     */
+    public function testPayInsRedsysRedsysWebhookPreauthorization()
+    {
+    }
+
+    /**
+     * Test case for payInsRedsysRedsysWebhookPreauthorizationSoap
+     *
+     * .
+     *
+     */
+    public function testPayInsRedsysRedsysWebhookPreauthorizationSoap()
+    {
+    }
 }
