@@ -75,14 +75,20 @@ Class | Method | HTTP request | Description
 *CardsApi* | [**cardsGet**](docs/Api/CardsApi.md#cardsget) | **GET** /v2.01/Cards/{CardId} | View a Card
 *CardsApi* | [**cardsGetList**](docs/Api/CardsApi.md#cardsgetlist) | **GET** /v2.01/Cards | 
 *CardsApi* | [**cardsPut**](docs/Api/CardsApi.md#cardsput) | **PUT** /v2.01/Cards/{CardId} | Deactivate a Card
+*EventsApi* | [**eventsGet**](docs/Api/EventsApi.md#eventsget) | **GET** /v2.01/Events | Values List
+*HooksApi* | [**hooksGet**](docs/Api/HooksApi.md#hooksget) | **GET** /v2.01/Hooks | 
+*HooksApi* | [**hooksGet_0**](docs/Api/HooksApi.md#hooksget_0) | **GET** /v2.01/Hooks/{hookId} | 
+*HooksApi* | [**hooksPost**](docs/Api/HooksApi.md#hookspost) | **POST** /v2.01/Hooks | 
+*HooksApi* | [**hooksPut**](docs/Api/HooksApi.md#hooksput) | **PUT** /v2.01/Hooks/{hookId} | 
 *KycApi* | [**kycGetLegal**](docs/Api/KycApi.md#kycgetlegal) | **GET** /v2.01/Kyc/users/legal/{UserId} | View a Legal User
 *KycApi* | [**kycGetNatural**](docs/Api/KycApi.md#kycgetnatural) | **GET** /v2.01/Kyc/users/natural/{UserId} | View a Natural User
 *KycApi* | [**kycGetValidaton**](docs/Api/KycApi.md#kycgetvalidaton) | **GET** /v2.01/Kyc/users/natural/{UserId}/validation | 
-*KycApi* | [**kycPostDocument**](docs/Api/KycApi.md#kycpostdocument) | **POST** /v2.01/Kyc/users/{UserId}/documents/new/{DocumentType} | 
+*KycApi* | [**kycPostDocument**](docs/Api/KycApi.md#kycpostdocument) | **POST** /v2.01/Kyc/users/{UserId}/documents/new/{DocumentType} | Uploads a new document and uploads a file. If the document already exists it will be replaced.
 *KycApi* | [**kycPostNatural**](docs/Api/KycApi.md#kycpostnatural) | **POST** /v2.01/Kyc/users/natural/{UserId} | Update a Natural User Kyc Data
-*KycApi* | [**kycPutDocument**](docs/Api/KycApi.md#kycputdocument) | **PUT** /v2.01/Kyc/users/{UserId}/documents/add/{DocumentType} | 
+*KycApi* | [**kycPutDocument**](docs/Api/KycApi.md#kycputdocument) | **PUT** /v2.01/Kyc/users/{UserId}/documents/add/{DocumentType} | Adds files to a document.
 *KycApi* | [**kycPutLegal**](docs/Api/KycApi.md#kycputlegal) | **POST** /v2.01/Kyc/users/legal/{UserId} | Update a Legal User
 *KycApi* | [**kycPutRequest**](docs/Api/KycApi.md#kycputrequest) | **PUT** /v2.01/Kyc/users/natural/{UserId}/requestValidation | 
+*PayInsAplazameApi* | [**payInsAplazameAplazameConfirmPayment**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazameconfirmpayment) | **POST** /v2.01/PayInsAplazame/webhook/pay/{PayInId} | 
 *PayInsAplazameApi* | [**payInsAplazameAplazameGetPayment**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamegetpayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | -------
 *PayInsAplazameApi* | [**payInsAplazameAplazamePostPaymentByWeb**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamepostpaymentbyweb) | **POST** /v2.01/PayInsAplazame/payments/web | --------
 *PayInsAplazameApi* | [**payInsAplazameRefund**](docs/Api/PayInsAplazameApi.md#payinsaplazamerefund) | **POST** /v2.01/PayInsAplazame/payments/{PayInId}/refunds | 
@@ -95,13 +101,19 @@ Class | Method | HTTP request | Description
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationCancellation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationcancellation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | Cancels a Preauthorization
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationConfirmation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationconfirmation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | Confirms a Preauthorization
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostRefund**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostrefund) | **POST** /v2.01/PayInsRedsys/payments/{PayInId}/refunds | Create a Redsys Payment Refund
+*PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpayment) | **POST** /v2.01/PayInsRedsys/webhook/pay/{IntentId} | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPaymentSoap**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpaymentsoap) | **POST** /v2.01/PayInsRedsys/webhook/paysoap/{IntentId} | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPreauthorization**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpreauthorization) | **POST** /v2.01/PayInsRedsys/webhook/preauthorize/{IntentId} | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPreauthorizationSoap**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpreauthorizationsoap) | **POST** /v2.01/PayInsRedsys/webhook/preauthorizesoap/{IntentId} | 
 *PayInsUniversalPayApi* | [**payInsUniversalPayGetUniversalPayTokenization**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpaygetuniversalpaytokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | View a UniversalPay card tokenization status
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayGetPayment**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaygetpayment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | View a UniversalPay payment
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostPaymentByWeb**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostpaymentbyweb) | **POST** /v2.01/PayInsUniversalPay/payments/web | Create a UniversalPay PayIn Request
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostRefund**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostrefund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | Create a UniversalPay Payment Refund
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPaySaveCard**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaysavecard) | **POST** /v2.01/PayInsUniversalPay/token/web | 
+*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayWebhookPayment**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaywebhookpayment) | **POST** /v2.01/PayInsUniversalPay/webhook | 
 *PayOutsBankwireApi* | [**payOutsBankwireGet**](docs/Api/PayOutsBankwireApi.md#payoutsbankwireget) | **GET** /v2.01/PayOutsBankwire/payments/{PayOutId} | View a Bankwire PayOut
 *PayOutsBankwireApi* | [**payOutsBankwirePost**](docs/Api/PayOutsBankwireApi.md#payoutsbankwirepost) | **POST** /v2.01/PayOutsBankwire/payments/direct | Create a Bankwire PayOut
+*PingAuthorizedApi* | [**pingAuthorizedGet**](docs/Api/PingAuthorizedApi.md#pingauthorizedget) | **GET** /v2.01/PingAuthorized | 
 *RefundsApi* | [**refundsRefundGet**](docs/Api/RefundsApi.md#refundsrefundget) | **GET** /v2.01/Refunds/{RefundId} | View a Refund
 *ShipmentSeurApi* | [**shipmentSeurSeurCancelShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcancelshipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | Cancels a shipment
 *ShipmentSeurApi* | [**shipmentSeurSeurCreateShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcreateshipment) | **POST** /v2.01/ShipmentSeur/shipments | Creates a shipment
@@ -158,11 +170,16 @@ Class | Method | HTTP request | Description
  - [BankAccountUsResponse](docs/Model/BankAccountUsResponse.md)
  - [CardPut](docs/Model/CardPut.md)
  - [CardResponse](docs/Model/CardResponse.md)
+ - [ConfirmPaymentPost](docs/Model/ConfirmPaymentPost.md)
  - [CustomApiErrorResponse](docs/Model/CustomApiErrorResponse.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerDetail](docs/Model/CustomerDetail.md)
  - [DocumentFileStatus](docs/Model/DocumentFileStatus.md)
+ - [EventResponse](docs/Model/EventResponse.md)
  - [ExampleUserNaturalPost](docs/Model/ExampleUserNaturalPost.md)
+ - [HookPost](docs/Model/HookPost.md)
+ - [HookPut](docs/Model/HookPut.md)
+ - [HookResponse](docs/Model/HookResponse.md)
  - [KycDocumentDetails](docs/Model/KycDocumentDetails.md)
  - [KycFileUploadResponse](docs/Model/KycFileUploadResponse.md)
  - [KycIdentificationRequest](docs/Model/KycIdentificationRequest.md)
@@ -225,6 +242,7 @@ Class | Method | HTTP request | Description
  - [UniversalPayTokenRequestPost](docs/Model/UniversalPayTokenRequestPost.md)
  - [UniversalPayTokenizationResponse](docs/Model/UniversalPayTokenizationResponse.md)
  - [UniversalPayTokenizeByWebResponse](docs/Model/UniversalPayTokenizeByWebResponse.md)
+ - [UniversalPayWebhookResponse](docs/Model/UniversalPayWebhookResponse.md)
  - [UserLegalPost](docs/Model/UserLegalPost.md)
  - [UserLegalPut](docs/Model/UserLegalPut.md)
  - [UserLegalResponse](docs/Model/UserLegalResponse.md)

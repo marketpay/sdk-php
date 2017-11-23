@@ -583,7 +583,7 @@ class UsersApi
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\UserResponse[]
+     * @return \MarketPay\Model\UserNaturalResponse[]
      */
     public function usersGetList($page = null, $per_page = null)
     {
@@ -599,7 +599,7 @@ class UsersApi
      * @param int $page The page number of results you wish to return (optional)
      * @param int $per_page The number of results to return per page (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\UserResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\UserNaturalResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function usersGetListWithHttpInfo($page = null, $per_page = null)
     {
@@ -642,15 +642,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\UserResponse[]',
+                '\MarketPay\Model\UserNaturalResponse[]',
                 '/v2.01/Users'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UserResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UserNaturalResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UserResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UserNaturalResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **usersGetList**
-> \MarketPay\Model\UserResponse[] usersGetList($page, $per_page)
+> \MarketPay\Model\UserNaturalResponse[] usersGetList($page, $per_page)
 
 List all Users
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\UserResponse[]**](../Model/UserResponse.md)
+[**\MarketPay\Model\UserNaturalResponse[]**](../Model/UserResponse.md)
 
 ### Authorization
 
