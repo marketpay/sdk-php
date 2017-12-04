@@ -56,6 +56,9 @@ class UserResponse implements ArrayAccess
     protected static $swaggerTypes = [
         'person_type' => 'string',
         'kyc_level' => 'string',
+        'email' => 'string',
+        'first_name' => 'string',
+        'last_name' => 'string',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -68,6 +71,9 @@ class UserResponse implements ArrayAccess
     protected static $swaggerFormats = [
         'person_type' => null,
         'kyc_level' => null,
+        'email' => null,
+        'first_name' => null,
+        'last_name' => null,
         'id' => null,
         'creation_date' => 'int64',
         'tag' => null
@@ -90,6 +96,9 @@ class UserResponse implements ArrayAccess
     protected static $attributeMap = [
         'person_type' => 'PersonType',
         'kyc_level' => 'KYCLevel',
+        'email' => 'Email',
+        'first_name' => 'FirstName',
+        'last_name' => 'LastName',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -103,6 +112,9 @@ class UserResponse implements ArrayAccess
     protected static $setters = [
         'person_type' => 'setPersonType',
         'kyc_level' => 'setKycLevel',
+        'email' => 'setEmail',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -116,6 +128,9 @@ class UserResponse implements ArrayAccess
     protected static $getters = [
         'person_type' => 'getPersonType',
         'kyc_level' => 'getKycLevel',
+        'email' => 'getEmail',
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -186,6 +201,9 @@ class UserResponse implements ArrayAccess
     {
         $this->container['person_type'] = isset($data['person_type']) ? $data['person_type'] : null;
         $this->container['kyc_level'] = isset($data['kyc_level']) ? $data['kyc_level'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -296,6 +314,69 @@ class UserResponse implements ArrayAccess
             );
         }
         $this->container['kyc_level'] = $kyc_level;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email The user's email address - must be a valid email
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets first_name
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     * @param string $first_name The name of the user
+     * @return $this
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     * @param string $last_name The last name of the user
+     * @return $this
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }

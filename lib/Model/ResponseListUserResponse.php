@@ -1,6 +1,6 @@
 <?php
 /**
- * TKycFileDetails
+ * ResponseListUserResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace MarketPay\Model;
 use \ArrayAccess;
 
 /**
- * TKycFileDetails Class Doc Comment
+ * ResponseListUserResponse Class Doc Comment
  *
  * @category    Class
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TKycFileDetails implements ArrayAccess
+class ResponseListUserResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,15 @@ class TKycFileDetails implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TKycFileDetails';
+    protected static $swaggerModelName = 'ResponseList[UserResponse]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'file_status' => '\MarketPay\Model\DocumentFileStatus[]',
-        'value' => 'string',
-        'status' => 'string',
-        'operator_comments' => 'string'
+        'values' => '\MarketPay\Model\UserResponse[]',
+        'total' => 'int'
     ];
 
     /**
@@ -65,10 +63,8 @@ class TKycFileDetails implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'file_status' => null,
-        'value' => null,
-        'status' => null,
-        'operator_comments' => null
+        'values' => null,
+        'total' => 'int64'
     ];
 
     public static function swaggerTypes()
@@ -86,10 +82,8 @@ class TKycFileDetails implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'file_status' => 'FileStatus',
-        'value' => 'Value',
-        'status' => 'Status',
-        'operator_comments' => 'OperatorComments'
+        'values' => 'Values',
+        'total' => 'Total'
     ];
 
 
@@ -98,10 +92,8 @@ class TKycFileDetails implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'file_status' => 'setFileStatus',
-        'value' => 'setValue',
-        'status' => 'setStatus',
-        'operator_comments' => 'setOperatorComments'
+        'values' => 'setValues',
+        'total' => 'setTotal'
     ];
 
 
@@ -110,10 +102,8 @@ class TKycFileDetails implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'file_status' => 'getFileStatus',
-        'value' => 'getValue',
-        'status' => 'getStatus',
-        'operator_comments' => 'getOperatorComments'
+        'values' => 'getValues',
+        'total' => 'getTotal'
     ];
 
     public static function attributeMap()
@@ -131,26 +121,8 @@ class TKycFileDetails implements ArrayAccess
         return self::$getters;
     }
 
-    const STATUS_MISSING = 'MISSING';
-    const STATUS_NOT_VALIDATED = 'NOT_VALIDATED';
-    const STATUS_ACCEPTED = 'ACCEPTED';
-    const STATUS_REJECTED = 'REJECTED';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_MISSING,
-            self::STATUS_NOT_VALIDATED,
-            self::STATUS_ACCEPTED,
-            self::STATUS_REJECTED,
-        ];
-    }
     
 
     /**
@@ -165,10 +137,8 @@ class TKycFileDetails implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['file_status'] = isset($data['file_status']) ? $data['file_status'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['operator_comments'] = isset($data['operator_comments']) ? $data['operator_comments'] : null;
+        $this->container['values'] = isset($data['values']) ? $data['values'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -179,14 +149,6 @@ class TKycFileDetails implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-
-        $allowed_values = $this->getStatusAllowableValues();
-        if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowed_values)
-            );
-        }
 
         return $invalid_properties;
     }
@@ -200,103 +162,48 @@ class TKycFileDetails implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = $this->getStatusAllowableValues();
-        if (!in_array($this->container['status'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets file_status
-     * @return \MarketPay\Model\DocumentFileStatus[]
+     * Gets values
+     * @return \MarketPay\Model\UserResponse[]
      */
-    public function getFileStatus()
+    public function getValues()
     {
-        return $this->container['file_status'];
+        return $this->container['values'];
     }
 
     /**
-     * Sets file_status
-     * @param \MarketPay\Model\DocumentFileStatus[] $file_status
+     * Sets values
+     * @param \MarketPay\Model\UserResponse[] $values
      * @return $this
      */
-    public function setFileStatus($file_status)
+    public function setValues($values)
     {
-        $this->container['file_status'] = $file_status;
+        $this->container['values'] = $values;
 
         return $this;
     }
 
     /**
-     * Gets value
-     * @return string
+     * Gets total
+     * @return int
      */
-    public function getValue()
+    public function getTotal()
     {
-        return $this->container['value'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets value
-     * @param string $value
+     * Sets total
+     * @param int $total
      * @return $this
      */
-    public function setValue($value)
+    public function setTotal($total)
     {
-        $this->container['value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     * @param string $status
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $allowed_values = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowed_values)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'status', must be one of '%s'",
-                    implode("', '", $allowed_values)
-                )
-            );
-        }
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets operator_comments
-     * @return string
-     */
-    public function getOperatorComments()
-    {
-        return $this->container['operator_comments'];
-    }
-
-    /**
-     * Sets operator_comments
-     * @param string $operator_comments
-     * @return $this
-     */
-    public function setOperatorComments($operator_comments)
-    {
-        $this->container['operator_comments'] = $operator_comments;
+        $this->container['total'] = $total;
 
         return $this;
     }

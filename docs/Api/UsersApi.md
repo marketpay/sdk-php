@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**usersGetCardList**](UsersApi.md#usersGetCardList) | **GET** /v2.01/Users/{UserId}/cards | List Cards for a User
 [**usersGetLegal**](UsersApi.md#usersGetLegal) | **GET** /v2.01/Users/legal/{UserId} | View a Legal User
 [**usersGetList**](UsersApi.md#usersGetList) | **GET** /v2.01/Users | List all Users
+[**usersGetListNatural**](UsersApi.md#usersGetListNatural) | **GET** /v2.01/Users/natural | List all Natural Users
 [**usersGetNatural**](UsersApi.md#usersGetNatural) | **GET** /v2.01/Users/natural/{UserId} | View a Natural User
 [**usersGetTransactionList**](UsersApi.md#usersGetTransactionList) | **GET** /v2.01/Users/{UserId}/transactions | List Transactions for a User
 [**usersGetWalletList**](UsersApi.md#usersGetWalletList) | **GET** /v2.01/Users/{UserId}/wallets | List Wallets for a User
@@ -275,7 +276,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **usersGetList**
-> \MarketPay\Model\UserNaturalResponse[] usersGetList($page, $per_page)
+> \MarketPay\Model\UserResponse[] usersGetList($page, $per_page)
 
 List all Users
 
@@ -311,7 +312,61 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\UserNaturalResponse[]**](../Model/UserResponse.md)
+[**\MarketPay\Model\UserResponse[]**](../Model/UserResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **usersGetListNatural**
+> \MarketPay\Model\ResponseListUserResponse usersGetListNatural($page, $per_page, $first_name_contains, $last_name_contains)
+
+List all Natural Users
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$api_instance = new MarketPay\Api\UsersApi();
+$page = 56; // int | The page number of results you wish to return
+$per_page = 56; // int | The number of results to return per page
+$first_name_contains = "first_name_contains_example"; // string | 
+$last_name_contains = "last_name_contains_example"; // string | 
+
+try {
+    $result = $api_instance->usersGetListNatural($page, $per_page, $first_name_contains, $last_name_contains);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->usersGetListNatural: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| The page number of results you wish to return | [optional]
+ **per_page** | **int**| The number of results to return per page | [optional]
+ **first_name_contains** | **string**|  | [optional]
+ **last_name_contains** | **string**|  | [optional]
+
+### Return type
+
+[**\MarketPay\Model\ResponseListUserResponse**](../Model/ResponseListUserResponse.md)
 
 ### Authorization
 

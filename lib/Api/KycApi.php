@@ -178,6 +178,112 @@ class KycApi
     }
 
     /**
+     * Operation kycGetNaturaList
+     *
+     * List all Natural User
+     *
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
+     * @param string $first_name_contains  (optional)
+     * @param string $last_name_contains  (optional)
+     * @param string $id_card_contains  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\ResponseListKycUserValidationLevelNaturalResponse
+     */
+    public function kycGetNaturaList($page = null, $per_page = null, $first_name_contains = null, $last_name_contains = null, $id_card_contains = null)
+    {
+        list($response) = $this->kycGetNaturaListWithHttpInfo($page, $per_page, $first_name_contains, $last_name_contains, $id_card_contains);
+        return $response;
+    }
+
+    /**
+     * Operation kycGetNaturaListWithHttpInfo
+     *
+     * List all Natural User
+     *
+     * @param int $page The page number of results you wish to return (optional)
+     * @param int $per_page The number of results to return per page (optional)
+     * @param string $first_name_contains  (optional)
+     * @param string $last_name_contains  (optional)
+     * @param string $id_card_contains  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\ResponseListKycUserValidationLevelNaturalResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function kycGetNaturaListWithHttpInfo($page = null, $per_page = null, $first_name_contains = null, $last_name_contains = null, $id_card_contains = null)
+    {
+        // parse inputs
+        $resourcePath = "/v2.01/Kyc/users/natural";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // query params
+        if ($page !== null) {
+            $queryParams['Page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }
+        // query params
+        if ($per_page !== null) {
+            $queryParams['Per_Page'] = $this->apiClient->getSerializer()->toQueryValue($per_page);
+        }
+        // query params
+        if ($first_name_contains !== null) {
+            $queryParams['FirstName-Contains'] = $this->apiClient->getSerializer()->toQueryValue($first_name_contains);
+        }
+        // query params
+        if ($last_name_contains !== null) {
+            $queryParams['LastName-Contains'] = $this->apiClient->getSerializer()->toQueryValue($last_name_contains);
+        }
+        // query params
+        if ($id_card_contains !== null) {
+            $queryParams['IdCard-Contains'] = $this->apiClient->getSerializer()->toQueryValue($id_card_contains);
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\MarketPay\Model\ResponseListKycUserValidationLevelNaturalResponse',
+                '/v2.01/Kyc/users/natural'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\ResponseListKycUserValidationLevelNaturalResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\ResponseListKycUserValidationLevelNaturalResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation kycGetNatural
      *
      * View a Natural User

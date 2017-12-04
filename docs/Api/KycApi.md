@@ -5,6 +5,7 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**kycGetLegal**](KycApi.md#kycGetLegal) | **GET** /v2.01/Kyc/users/legal/{UserId} | View a Legal User
+[**kycGetNaturaList**](KycApi.md#kycGetNaturaList) | **GET** /v2.01/Kyc/users/natural | List all Natural User
 [**kycGetNatural**](KycApi.md#kycGetNatural) | **GET** /v2.01/Kyc/users/natural/{UserId} | View a Natural User
 [**kycGetValidaton**](KycApi.md#kycGetValidaton) | **GET** /v2.01/Kyc/users/natural/{UserId}/validation | 
 [**kycPostDocument**](KycApi.md#kycPostDocument) | **POST** /v2.01/Kyc/users/{UserId}/documents/new/{DocumentType} | Uploads a new document and uploads a file. If the document already exists it will be replaced.
@@ -50,6 +51,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\MarketPay\Model\KycUserValidationLevelLegalResponse**](../Model/KycUserValidationLevelLegalResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **kycGetNaturaList**
+> \MarketPay\Model\ResponseListKycUserValidationLevelNaturalResponse kycGetNaturaList($page, $per_page, $first_name_contains, $last_name_contains, $id_card_contains)
+
+List all Natural User
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$api_instance = new MarketPay\Api\KycApi();
+$page = 56; // int | The page number of results you wish to return
+$per_page = 56; // int | The number of results to return per page
+$first_name_contains = "first_name_contains_example"; // string | 
+$last_name_contains = "last_name_contains_example"; // string | 
+$id_card_contains = "id_card_contains_example"; // string | 
+
+try {
+    $result = $api_instance->kycGetNaturaList($page, $per_page, $first_name_contains, $last_name_contains, $id_card_contains);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling KycApi->kycGetNaturaList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| The page number of results you wish to return | [optional]
+ **per_page** | **int**| The number of results to return per page | [optional]
+ **first_name_contains** | **string**|  | [optional]
+ **last_name_contains** | **string**|  | [optional]
+ **id_card_contains** | **string**|  | [optional]
+
+### Return type
+
+[**\MarketPay\Model\ResponseListKycUserValidationLevelNaturalResponse**](../Model/ResponseListKycUserValidationLevelNaturalResponse.md)
 
 ### Authorization
 

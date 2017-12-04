@@ -133,6 +133,16 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for usersGetListNatural
+     *
+     * List all Natural Users.
+     *
+     */
+    public function testUsersGetListNatural()
+    {
+    }
+
+    /**
      * Test case for usersGetNatural
      *
      * View a Natural User.

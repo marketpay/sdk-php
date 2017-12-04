@@ -54,9 +54,6 @@ class UserNaturalResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string',
-        'first_name' => 'string',
-        'last_name' => 'string',
         'address' => '\MarketPay\Model\Address',
         'birthday' => 'int',
         'nationality' => 'string',
@@ -67,6 +64,9 @@ class UserNaturalResponse implements ArrayAccess
         'proof_of_address' => 'string',
         'person_type' => 'string',
         'kyc_level' => 'string',
+        'email' => 'string',
+        'first_name' => 'string',
+        'last_name' => 'string',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -77,9 +77,6 @@ class UserNaturalResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'email' => null,
-        'first_name' => null,
-        'last_name' => null,
         'address' => null,
         'birthday' => 'int64',
         'nationality' => null,
@@ -90,6 +87,9 @@ class UserNaturalResponse implements ArrayAccess
         'proof_of_address' => null,
         'person_type' => null,
         'kyc_level' => null,
+        'email' => null,
+        'first_name' => null,
+        'last_name' => null,
         'id' => null,
         'creation_date' => 'int64',
         'tag' => null
@@ -110,9 +110,6 @@ class UserNaturalResponse implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email' => 'Email',
-        'first_name' => 'FirstName',
-        'last_name' => 'LastName',
         'address' => 'Address',
         'birthday' => 'Birthday',
         'nationality' => 'Nationality',
@@ -123,6 +120,9 @@ class UserNaturalResponse implements ArrayAccess
         'proof_of_address' => 'ProofOfAddress',
         'person_type' => 'PersonType',
         'kyc_level' => 'KYCLevel',
+        'email' => 'Email',
+        'first_name' => 'FirstName',
+        'last_name' => 'LastName',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -134,9 +134,6 @@ class UserNaturalResponse implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email' => 'setEmail',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
         'address' => 'setAddress',
         'birthday' => 'setBirthday',
         'nationality' => 'setNationality',
@@ -147,6 +144,9 @@ class UserNaturalResponse implements ArrayAccess
         'proof_of_address' => 'setProofOfAddress',
         'person_type' => 'setPersonType',
         'kyc_level' => 'setKycLevel',
+        'email' => 'setEmail',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -158,9 +158,6 @@ class UserNaturalResponse implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email' => 'getEmail',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
         'address' => 'getAddress',
         'birthday' => 'getBirthday',
         'nationality' => 'getNationality',
@@ -171,6 +168,9 @@ class UserNaturalResponse implements ArrayAccess
         'proof_of_address' => 'getProofOfAddress',
         'person_type' => 'getPersonType',
         'kyc_level' => 'getKycLevel',
+        'email' => 'getEmail',
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -1259,9 +1259,6 @@ class UserNaturalResponse implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
-        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['birthday'] = isset($data['birthday']) ? $data['birthday'] : null;
         $this->container['nationality'] = isset($data['nationality']) ? $data['nationality'] : null;
@@ -1272,6 +1269,9 @@ class UserNaturalResponse implements ArrayAccess
         $this->container['proof_of_address'] = isset($data['proof_of_address']) ? $data['proof_of_address'] : null;
         $this->container['person_type'] = isset($data['person_type']) ? $data['person_type'] : null;
         $this->container['kyc_level'] = isset($data['kyc_level']) ? $data['kyc_level'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -1349,69 +1349,6 @@ class UserNaturalResponse implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     * @param string $email The user's email address - must be a valid email
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets first_name
-     * @return string
-     */
-    public function getFirstName()
-    {
-        return $this->container['first_name'];
-    }
-
-    /**
-     * Sets first_name
-     * @param string $first_name The name of the user
-     * @return $this
-     */
-    public function setFirstName($first_name)
-    {
-        $this->container['first_name'] = $first_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_name
-     * @return string
-     */
-    public function getLastName()
-    {
-        return $this->container['last_name'];
-    }
-
-    /**
-     * Sets last_name
-     * @param string $last_name The last name of the user
-     * @return $this
-     */
-    public function setLastName($last_name)
-    {
-        $this->container['last_name'] = $last_name;
-
-        return $this;
-    }
 
     /**
      * Gets address
@@ -1655,6 +1592,69 @@ class UserNaturalResponse implements ArrayAccess
             );
         }
         $this->container['kyc_level'] = $kyc_level;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email The user's email address - must be a valid email
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets first_name
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     * @param string $first_name The name of the user
+     * @return $this
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     * @param string $last_name The last name of the user
+     * @return $this
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }

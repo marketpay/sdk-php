@@ -83,6 +83,16 @@ class KycApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for kycGetNaturaList
+     *
+     * List all Natural User.
+     *
+     */
+    public function testKycGetNaturaList()
+    {
+    }
+
+    /**
      * Test case for kycGetNatural
      *
      * View a Natural User.

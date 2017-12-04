@@ -55,8 +55,8 @@ class PropertyValidationCountry implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'value' => 'string',
-        'operator_comments' => 'string',
-        'status' => 'string'
+        'status' => 'string',
+        'operator_comments' => 'string'
     ];
 
     /**
@@ -65,8 +65,8 @@ class PropertyValidationCountry implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'value' => null,
-        'operator_comments' => null,
-        'status' => null
+        'status' => null,
+        'operator_comments' => null
     ];
 
     public static function swaggerTypes()
@@ -85,8 +85,8 @@ class PropertyValidationCountry implements ArrayAccess
      */
     protected static $attributeMap = [
         'value' => 'Value',
-        'operator_comments' => 'OperatorComments',
-        'status' => 'Status'
+        'status' => 'Status',
+        'operator_comments' => 'OperatorComments'
     ];
 
 
@@ -96,8 +96,8 @@ class PropertyValidationCountry implements ArrayAccess
      */
     protected static $setters = [
         'value' => 'setValue',
-        'operator_comments' => 'setOperatorComments',
-        'status' => 'setStatus'
+        'status' => 'setStatus',
+        'operator_comments' => 'setOperatorComments'
     ];
 
 
@@ -107,8 +107,8 @@ class PropertyValidationCountry implements ArrayAccess
      */
     protected static $getters = [
         'value' => 'getValue',
-        'operator_comments' => 'getOperatorComments',
-        'status' => 'getStatus'
+        'status' => 'getStatus',
+        'operator_comments' => 'getOperatorComments'
     ];
 
     public static function attributeMap()
@@ -671,8 +671,8 @@ class PropertyValidationCountry implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['operator_comments'] = isset($data['operator_comments']) ? $data['operator_comments'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['operator_comments'] = isset($data['operator_comments']) ? $data['operator_comments'] : null;
     }
 
     /**
@@ -755,27 +755,6 @@ class PropertyValidationCountry implements ArrayAccess
     }
 
     /**
-     * Gets operator_comments
-     * @return string
-     */
-    public function getOperatorComments()
-    {
-        return $this->container['operator_comments'];
-    }
-
-    /**
-     * Sets operator_comments
-     * @param string $operator_comments
-     * @return $this
-     */
-    public function setOperatorComments($operator_comments)
-    {
-        $this->container['operator_comments'] = $operator_comments;
-
-        return $this;
-    }
-
-    /**
      * Gets status
      * @return string
      */
@@ -801,6 +780,27 @@ class PropertyValidationCountry implements ArrayAccess
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets operator_comments
+     * @return string
+     */
+    public function getOperatorComments()
+    {
+        return $this->container['operator_comments'];
+    }
+
+    /**
+     * Sets operator_comments
+     * @param string $operator_comments
+     * @return $this
+     */
+    public function setOperatorComments($operator_comments)
+    {
+        $this->container['operator_comments'] = $operator_comments;
 
         return $this;
     }

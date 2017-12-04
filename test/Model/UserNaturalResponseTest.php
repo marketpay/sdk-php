@@ -78,27 +78,6 @@ class UserNaturalResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-    }
-
-    /**
-     * Test attribute "first_name"
-     */
-    public function testPropertyFirstName()
-    {
-    }
-
-    /**
-     * Test attribute "last_name"
-     */
-    public function testPropertyLastName()
-    {
-    }
-
-    /**
      * Test attribute "address"
      */
     public function testPropertyAddress()
@@ -165,6 +144,27 @@ class UserNaturalResponseTest extends \PHPUnit_Framework_TestCase
      * Test attribute "kyc_level"
      */
     public function testPropertyKycLevel()
+    {
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+    }
+
+    /**
+     * Test attribute "first_name"
+     */
+    public function testPropertyFirstName()
+    {
+    }
+
+    /**
+     * Test attribute "last_name"
+     */
+    public function testPropertyLastName()
     {
     }
 

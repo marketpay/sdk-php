@@ -1,6 +1,6 @@
 <?php
 /**
- * PropertyValidationCountryTest
+ * ResponseListUserResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace MarketPay;
 
 /**
- * PropertyValidationCountryTest Class Doc Comment
+ * ResponseListUserResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description PropertyValidationCountry
+// * @description ResponseListUserResponse
 /**
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PropertyValidationCountryTest extends \PHPUnit_Framework_TestCase
+class ResponseListUserResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,30 +71,23 @@ class PropertyValidationCountryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PropertyValidationCountry"
+     * Test "ResponseListUserResponse"
      */
-    public function testPropertyValidationCountry()
+    public function testResponseListUserResponse()
     {
     }
 
     /**
-     * Test attribute "value"
+     * Test attribute "values"
      */
-    public function testPropertyValue()
+    public function testPropertyValues()
     {
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "total"
      */
-    public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "operator_comments"
-     */
-    public function testPropertyOperatorComments()
+    public function testPropertyTotal()
     {
     }
 }
