@@ -201,7 +201,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -222,7 +222,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets credited_user_id
-     * @param string $credited_user_id The user ID who was credited
+     * @param string $credited_user_id
      * @return $this
      */
     public function setCreditedUserId($credited_user_id)
@@ -243,7 +243,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -264,7 +264,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)
@@ -285,7 +285,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets debited_wallet_id
-     * @param string $debited_wallet_id The ID of the wallet that was debited
+     * @param string $debited_wallet_id
      * @return $this
      */
     public function setDebitedWalletId($debited_wallet_id)
@@ -306,7 +306,7 @@ class TransferPost implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id The ID of the wallet where money will be credited
+     * @param string $credited_wallet_id
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)

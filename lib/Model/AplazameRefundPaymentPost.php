@@ -195,7 +195,7 @@ class AplazameRefundPaymentPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)

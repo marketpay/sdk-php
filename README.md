@@ -81,6 +81,7 @@ Class | Method | HTTP request | Description
 *HooksApi* | [**hooksPost**](docs/Api/HooksApi.md#hookspost) | **POST** /v2.01/Hooks | 
 *HooksApi* | [**hooksPut**](docs/Api/HooksApi.md#hooksput) | **PUT** /v2.01/Hooks/{hookId} | 
 *KycApi* | [**kycGetLegal**](docs/Api/KycApi.md#kycgetlegal) | **GET** /v2.01/Kyc/users/legal/{UserId} | View a Legal User
+*KycApi* | [**kycGetNaturaList**](docs/Api/KycApi.md#kycgetnaturalist) | **GET** /v2.01/Kyc/users/natural | List all Natural User
 *KycApi* | [**kycGetNatural**](docs/Api/KycApi.md#kycgetnatural) | **GET** /v2.01/Kyc/users/natural/{UserId} | View a Natural User
 *KycApi* | [**kycGetValidaton**](docs/Api/KycApi.md#kycgetvalidaton) | **GET** /v2.01/Kyc/users/natural/{UserId}/validation | 
 *KycApi* | [**kycPostDocument**](docs/Api/KycApi.md#kycpostdocument) | **POST** /v2.01/Kyc/users/{UserId}/documents/new/{DocumentType} | Uploads a new document and uploads a file. If the document already exists it will be replaced.
@@ -89,45 +90,47 @@ Class | Method | HTTP request | Description
 *KycApi* | [**kycPutLegal**](docs/Api/KycApi.md#kycputlegal) | **POST** /v2.01/Kyc/users/legal/{UserId} | Update a Legal User
 *KycApi* | [**kycPutRequest**](docs/Api/KycApi.md#kycputrequest) | **PUT** /v2.01/Kyc/users/natural/{UserId}/requestValidation | 
 *PayInsAplazameApi* | [**payInsAplazameAplazameConfirmPayment**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazameconfirmpayment) | **POST** /v2.01/PayInsAplazame/webhook/pay/{PayInId} | 
-*PayInsAplazameApi* | [**payInsAplazameAplazameGetPayment**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamegetpayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | -------
-*PayInsAplazameApi* | [**payInsAplazameAplazamePostPaymentByWeb**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamepostpaymentbyweb) | **POST** /v2.01/PayInsAplazame/payments/web | --------
+*PayInsAplazameApi* | [**payInsAplazameAplazameGetPayment**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamegetpayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | 
+*PayInsAplazameApi* | [**payInsAplazameAplazamePostPaymentByWeb**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamepostpaymentbyweb) | **POST** /v2.01/PayInsAplazame/payments/web | 
 *PayInsAplazameApi* | [**payInsAplazameRefund**](docs/Api/PayInsAplazameApi.md#payinsaplazamerefund) | **POST** /v2.01/PayInsAplazame/payments/{PayInId}/refunds | 
-*PayInsBankwireApi* | [**payInsBankwireBankwireGetPayment**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwiregetpayment) | **GET** /v2.01/PayInsBankwire/payments/{PayInId} | View a Bankwire PayIn
-*PayInsBankwireApi* | [**payInsBankwireBankwirePaymentByDirect**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepaymentbydirect) | **POST** /v2.01/PayInsBankwire/payments/direct | Create a Bankwire PayIn
-*PayInsRedsysApi* | [**payInsRedsysRedsysGetPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpayment) | **GET** /v2.01/PayInsRedsys/payments/{PayInId} | View a Redsys payment
-*PayInsRedsysApi* | [**payInsRedsysRedsysGetPreauthorization**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpreauthorization) | **GET** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId} | View a Redsys Preauthorization
-*PayInsRedsysApi* | [**payInsRedsysRedsysPostPaymentByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpaymentbyweb) | **POST** /v2.01/PayInsRedsys/payments/web | Create a Redsys PayIn Request
-*PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationbyweb) | **POST** /v2.01/PayInsRedsys/preauthorizations/web | Create a Redsys Preauthorization Request
-*PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationCancellation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationcancellation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | Cancels a Preauthorization
-*PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationConfirmation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationconfirmation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | Confirms a Preauthorization
-*PayInsRedsysApi* | [**payInsRedsysRedsysPostRefund**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostrefund) | **POST** /v2.01/PayInsRedsys/payments/{PayInId}/refunds | Create a Redsys Payment Refund
+*PayInsBankwireApi* | [**payInsBankwireBankwireGetPayment**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwiregetpayment) | **GET** /v2.01/PayInsBankwire/payments/{PayInId} | 
+*PayInsBankwireApi* | [**payInsBankwireBankwirePaymentByDirect**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepaymentbydirect) | **POST** /v2.01/PayInsBankwire/payments/direct | 
+*PayInsBankwireApi* | [**payInsBankwireBankwirePostRefund**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepostrefund) | **POST** /v2.01/PayInsBankwire/payments/{PayInId}/refunds | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysGetPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpayment) | **GET** /v2.01/PayInsRedsys/payments/{PayInId} | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysGetPreauthorization**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpreauthorization) | **GET** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId} | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysPostPaymentByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpaymentbyweb) | **POST** /v2.01/PayInsRedsys/payments/web | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationbyweb) | **POST** /v2.01/PayInsRedsys/preauthorizations/web | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationCancellation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationcancellation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationConfirmation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationconfirmation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysPostRefund**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostrefund) | **POST** /v2.01/PayInsRedsys/payments/{PayInId}/refunds | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpayment) | **POST** /v2.01/PayInsRedsys/webhook/pay/{IntentId} | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPaymentSoap**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpaymentsoap) | **POST** /v2.01/PayInsRedsys/webhook/paysoap/{IntentId} | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPreauthorization**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpreauthorization) | **POST** /v2.01/PayInsRedsys/webhook/preauthorize/{IntentId} | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPreauthorizationSoap**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpreauthorizationsoap) | **POST** /v2.01/PayInsRedsys/webhook/preauthorizesoap/{IntentId} | 
-*PayInsUniversalPayApi* | [**payInsUniversalPayGetUniversalPayTokenization**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpaygetuniversalpaytokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | View a UniversalPay card tokenization status
-*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayGetPayment**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaygetpayment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | View a UniversalPay payment
-*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostPaymentByWeb**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostpaymentbyweb) | **POST** /v2.01/PayInsUniversalPay/payments/web | Create a UniversalPay PayIn Request
-*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostRefund**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostrefund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | Create a UniversalPay Payment Refund
+*PayInsUniversalPayApi* | [**payInsUniversalPayGetUniversalPayTokenization**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpaygetuniversalpaytokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | 
+*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayGetPayment**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaygetpayment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | 
+*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostPaymentByWeb**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostpaymentbyweb) | **POST** /v2.01/PayInsUniversalPay/payments/web | 
+*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostRefund**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostrefund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | 
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPaySaveCard**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaysavecard) | **POST** /v2.01/PayInsUniversalPay/token/web | 
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayWebhookPayment**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaywebhookpayment) | **POST** /v2.01/PayInsUniversalPay/webhook | 
-*PayOutsBankwireApi* | [**payOutsBankwireGet**](docs/Api/PayOutsBankwireApi.md#payoutsbankwireget) | **GET** /v2.01/PayOutsBankwire/payments/{PayOutId} | View a Bankwire PayOut
-*PayOutsBankwireApi* | [**payOutsBankwirePost**](docs/Api/PayOutsBankwireApi.md#payoutsbankwirepost) | **POST** /v2.01/PayOutsBankwire/payments/direct | Create a Bankwire PayOut
+*PayOutsBankwireApi* | [**payOutsBankwireGet**](docs/Api/PayOutsBankwireApi.md#payoutsbankwireget) | **GET** /v2.01/PayOutsBankwire/payments/{PayOutId} | 
+*PayOutsBankwireApi* | [**payOutsBankwirePost**](docs/Api/PayOutsBankwireApi.md#payoutsbankwirepost) | **POST** /v2.01/PayOutsBankwire/payments/direct | 
 *PingAuthorizedApi* | [**pingAuthorizedGet**](docs/Api/PingAuthorizedApi.md#pingauthorizedget) | **GET** /v2.01/PingAuthorized | 
-*RefundsApi* | [**refundsRefundGet**](docs/Api/RefundsApi.md#refundsrefundget) | **GET** /v2.01/Refunds/{RefundId} | View a Refund
-*ShipmentSeurApi* | [**shipmentSeurSeurCancelShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcancelshipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | Cancels a shipment
-*ShipmentSeurApi* | [**shipmentSeurSeurCreateShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcreateshipment) | **POST** /v2.01/ShipmentSeur/shipments | Creates a shipment
-*ShipmentSeurApi* | [**shipmentSeurSeurGetShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurgetshipment) | **GET** /v2.01/ShipmentSeur/shipments/{ShipmentId} | Cancels a shipment
+*RefundsApi* | [**refundsRefundGet**](docs/Api/RefundsApi.md#refundsrefundget) | **GET** /v2.01/Refunds/{RefundId} | 
+*ShipmentSeurApi* | [**shipmentSeurSeurCancelShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcancelshipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | 
+*ShipmentSeurApi* | [**shipmentSeurSeurCreateShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcreateshipment) | **POST** /v2.01/ShipmentSeur/shipments | 
+*ShipmentSeurApi* | [**shipmentSeurSeurGetShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurgetshipment) | **GET** /v2.01/ShipmentSeur/shipments/{ShipmentId} | 
 *TransactionsApi* | [**transactionsGetList**](docs/Api/TransactionsApi.md#transactionsgetlist) | **GET** /v2.01/Transactions | View a Transaction
-*TransfersApi* | [**transfersGet**](docs/Api/TransfersApi.md#transfersget) | **GET** /v2.01/Transfers/{TransferId} | View a Transfer
-*TransfersApi* | [**transfersGetList**](docs/Api/TransfersApi.md#transfersgetlist) | **GET** /v2.01/Transfers | View a Transfer
-*TransfersApi* | [**transfersPost**](docs/Api/TransfersApi.md#transferspost) | **POST** /v2.01/Transfers | Create a Transfer
+*TransfersApi* | [**transfersGet**](docs/Api/TransfersApi.md#transfersget) | **GET** /v2.01/Transfers/{TransferId} | 
+*TransfersApi* | [**transfersGetList**](docs/Api/TransfersApi.md#transfersgetlist) | **GET** /v2.01/Transfers | 
+*TransfersApi* | [**transfersPost**](docs/Api/TransfersApi.md#transferspost) | **POST** /v2.01/Transfers | 
 *UsersApi* | [**usersGet**](docs/Api/UsersApi.md#usersget) | **GET** /v2.01/Users/{UserId} | View a User
 *UsersApi* | [**usersGetBankAccount**](docs/Api/UsersApi.md#usersgetbankaccount) | **GET** /v2.01/Users/{UserId}/bankaccounts/{BankAccountId} | View a Bank Account
 *UsersApi* | [**usersGetBankAccountList**](docs/Api/UsersApi.md#usersgetbankaccountlist) | **GET** /v2.01/Users/{UserId}/bankaccounts | List Bank Accounts for a User
 *UsersApi* | [**usersGetCardList**](docs/Api/UsersApi.md#usersgetcardlist) | **GET** /v2.01/Users/{UserId}/cards | List Cards for a User
 *UsersApi* | [**usersGetLegal**](docs/Api/UsersApi.md#usersgetlegal) | **GET** /v2.01/Users/legal/{UserId} | View a Legal User
 *UsersApi* | [**usersGetList**](docs/Api/UsersApi.md#usersgetlist) | **GET** /v2.01/Users | List all Users
+*UsersApi* | [**usersGetListNatural**](docs/Api/UsersApi.md#usersgetlistnatural) | **GET** /v2.01/Users/natural | List all Natural Users
 *UsersApi* | [**usersGetNatural**](docs/Api/UsersApi.md#usersgetnatural) | **GET** /v2.01/Users/natural/{UserId} | View a Natural User
 *UsersApi* | [**usersGetTransactionList**](docs/Api/UsersApi.md#usersgettransactionlist) | **GET** /v2.01/Users/{UserId}/transactions | List Transactions for a User
 *UsersApi* | [**usersGetWalletList**](docs/Api/UsersApi.md#usersgetwalletlist) | **GET** /v2.01/Users/{UserId}/wallets | List Wallets for a User
@@ -165,9 +168,9 @@ Class | Method | HTTP request | Description
  - [BankAccountOtherPost](docs/Model/BankAccountOtherPost.md)
  - [BankAccountOtherResponse](docs/Model/BankAccountOtherResponse.md)
  - [BankAccountResponse](docs/Model/BankAccountResponse.md)
- - [BankAccountType](docs/Model/BankAccountType.md)
  - [BankAccountUsPost](docs/Model/BankAccountUsPost.md)
  - [BankAccountUsResponse](docs/Model/BankAccountUsResponse.md)
+ - [BankwirePayInBankAccount](docs/Model/BankwirePayInBankAccount.md)
  - [CardPut](docs/Model/CardPut.md)
  - [CardResponse](docs/Model/CardResponse.md)
  - [ConfirmPaymentPost](docs/Model/ConfirmPaymentPost.md)
@@ -192,6 +195,8 @@ Class | Method | HTTP request | Description
  - [KycValidationUserStatusResponse](docs/Model/KycValidationUserStatusResponse.md)
  - [Money](docs/Model/Money.md)
  - [PayInBankwirePost](docs/Model/PayInBankwirePost.md)
+ - [PayInBankwireRefundPost](docs/Model/PayInBankwireRefundPost.md)
+ - [PayInBankwireRefundResponse](docs/Model/PayInBankwireRefundResponse.md)
  - [PayInBankwireResponse](docs/Model/PayInBankwireResponse.md)
  - [PayOutBankwirePost](docs/Model/PayOutBankwirePost.md)
  - [PayOutBankwireResponse](docs/Model/PayOutBankwireResponse.md)
@@ -217,8 +222,10 @@ Class | Method | HTTP request | Description
  - [RefundReason](docs/Model/RefundReason.md)
  - [RefundRedsysData](docs/Model/RefundRedsysData.md)
  - [ResponseListCardResponse](docs/Model/ResponseListCardResponse.md)
+ - [ResponseListKycUserValidationLevelNaturalResponse](docs/Model/ResponseListKycUserValidationLevelNaturalResponse.md)
  - [ResponseListTransactionResponse](docs/Model/ResponseListTransactionResponse.md)
  - [ResponseListTransferResponse](docs/Model/ResponseListTransferResponse.md)
+ - [ResponseListUserResponse](docs/Model/ResponseListUserResponse.md)
  - [ResponseListWalletResponse](docs/Model/ResponseListWalletResponse.md)
  - [SeurShipmentCancellationResponse](docs/Model/SeurShipmentCancellationResponse.md)
  - [SeurShipmentPost](docs/Model/SeurShipmentPost.md)

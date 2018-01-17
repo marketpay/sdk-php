@@ -99,9 +99,9 @@ class UniversalPayRefundPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "statement_description"
+     * Test attribute "statement_descriptor"
      */
-    public function testPropertyStatementDescription()
+    public function testPropertyStatementDescriptor()
     {
     }
 }

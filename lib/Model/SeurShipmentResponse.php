@@ -315,7 +315,7 @@ class SeurShipmentResponse implements ArrayAccess
 
     /**
      * Sets locator_number
-     * @param string $locator_number NumRecogida. Utilizar el id de base de datos
+     * @param string $locator_number
      * @return $this
      */
     public function setLocatorNumber($locator_number)
@@ -336,7 +336,7 @@ class SeurShipmentResponse implements ArrayAccess
 
     /**
      * Sets quotation
-     * @param int $quotation Tasacion
+     * @param int $quotation
      * @return $this
      */
     public function setQuotation($quotation)
@@ -357,7 +357,7 @@ class SeurShipmentResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status The status of the transaction
+     * @param string $status
      * @return $this
      */
     public function setStatus($status)
@@ -387,7 +387,7 @@ class SeurShipmentResponse implements ArrayAccess
 
     /**
      * Sets status_pick_up
-     * @param string $status_pick_up 
+     * @param string $status_pick_up
      * @return $this
      */
     public function setStatusPickUp($status_pick_up)
@@ -417,7 +417,7 @@ class SeurShipmentResponse implements ArrayAccess
 
     /**
      * Sets status_pick_up_code
-     * @param string $status_pick_up_code 
+     * @param string $status_pick_up_code
      * @return $this
      */
     public function setStatusPickUpCode($status_pick_up_code)
@@ -438,7 +438,7 @@ class SeurShipmentResponse implements ArrayAccess
 
     /**
      * Sets status_delivery
-     * @param string $status_delivery 
+     * @param string $status_delivery
      * @return $this
      */
     public function setStatusDelivery($status_delivery)
@@ -468,7 +468,7 @@ class SeurShipmentResponse implements ArrayAccess
 
     /**
      * Sets status_delivery_code
-     * @param string $status_delivery_code 
+     * @param string $status_delivery_code
      * @return $this
      */
     public function setStatusDeliveryCode($status_delivery_code)

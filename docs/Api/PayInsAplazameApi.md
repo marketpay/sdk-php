@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**payInsAplazameAplazameConfirmPayment**](PayInsAplazameApi.md#payInsAplazameAplazameConfirmPayment) | **POST** /v2.01/PayInsAplazame/webhook/pay/{PayInId} | 
-[**payInsAplazameAplazameGetPayment**](PayInsAplazameApi.md#payInsAplazameAplazameGetPayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | -------
-[**payInsAplazameAplazamePostPaymentByWeb**](PayInsAplazameApi.md#payInsAplazameAplazamePostPaymentByWeb) | **POST** /v2.01/PayInsAplazame/payments/web | --------
+[**payInsAplazameAplazameGetPayment**](PayInsAplazameApi.md#payInsAplazameAplazameGetPayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | 
+[**payInsAplazameAplazamePostPaymentByWeb**](PayInsAplazameApi.md#payInsAplazameAplazamePostPaymentByWeb) | **POST** /v2.01/PayInsAplazame/payments/web | 
 [**payInsAplazameRefund**](PayInsAplazameApi.md#payInsAplazameRefund) | **POST** /v2.01/PayInsAplazame/payments/{PayInId}/refunds | 
 
 
@@ -61,8 +61,6 @@ Name | Type | Description  | Notes
 # **payInsAplazameAplazameGetPayment**
 > \MarketPay\Model\AplazamePayInsResponse payInsAplazameAplazameGetPayment($pay_in_id)
 
--------
-
 
 
 ### Example
@@ -74,7 +72,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsAplazameApi();
-$pay_in_id = "pay_in_id_example"; // string | ------
+$pay_in_id = "pay_in_id_example"; // string | 
 
 try {
     $result = $api_instance->payInsAplazameAplazameGetPayment($pay_in_id);
@@ -89,7 +87,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pay_in_id** | **string**| ------ |
+ **pay_in_id** | **string**|  |
 
 ### Return type
 
@@ -109,8 +107,6 @@ Name | Type | Description  | Notes
 # **payInsAplazameAplazamePostPaymentByWeb**
 > \MarketPay\Model\AplazamePayByWebResponse payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in)
 
---------
-
 
 
 ### Example
@@ -122,7 +118,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsAplazameApi();
-$aplazame_pay_in = new \MarketPay\Model\AplazamePayByWebPost(); // \MarketPay\Model\AplazamePayByWebPost | ------------
+$aplazame_pay_in = new \MarketPay\Model\AplazamePayByWebPost(); // \MarketPay\Model\AplazamePayByWebPost | 
 
 try {
     $result = $api_instance->payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in);
@@ -137,7 +133,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **aplazame_pay_in** | [**\MarketPay\Model\AplazamePayByWebPost**](../Model/AplazamePayByWebPost.md)| ------------ | [optional]
+ **aplazame_pay_in** | [**\MarketPay\Model\AplazamePayByWebPost**](../Model/AplazamePayByWebPost.md)|  | [optional]
 
 ### Return type
 

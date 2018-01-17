@@ -90,9 +90,7 @@ class PayOutsBankwireApi
     /**
      * Operation payOutsBankwireGet
      *
-     * View a Bankwire PayOut
-     *
-     * @param int $pay_out_id The Id of a payment (required)
+     * @param int $pay_out_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\PayOutBankwireResponse
      */
@@ -105,9 +103,7 @@ class PayOutsBankwireApi
     /**
      * Operation payOutsBankwireGetWithHttpInfo
      *
-     * View a Bankwire PayOut
-     *
-     * @param int $pay_out_id The Id of a payment (required)
+     * @param int $pay_out_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\PayOutBankwireResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -180,9 +176,7 @@ class PayOutsBankwireApi
     /**
      * Operation payOutsBankwirePost
      *
-     * Create a Bankwire PayOut
-     *
-     * @param \MarketPay\Model\PayOutBankwirePost $bankwire_pay_out Redsys PayIn Request Object params (optional)
+     * @param \MarketPay\Model\PayOutBankwirePost $bankwire_pay_out  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\PayOutBankwireResponse
      */
@@ -195,9 +189,7 @@ class PayOutsBankwireApi
     /**
      * Operation payOutsBankwirePostWithHttpInfo
      *
-     * Create a Bankwire PayOut
-     *
-     * @param \MarketPay\Model\PayOutBankwirePost $bankwire_pay_out Redsys PayIn Request Object params (optional)
+     * @param \MarketPay\Model\PayOutBankwirePost $bankwire_pay_out  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\PayOutBankwireResponse, HTTP status code, HTTP response headers (array of strings)
      */

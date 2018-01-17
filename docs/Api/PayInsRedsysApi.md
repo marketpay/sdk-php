@@ -4,13 +4,13 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payInsRedsysRedsysGetPayment**](PayInsRedsysApi.md#payInsRedsysRedsysGetPayment) | **GET** /v2.01/PayInsRedsys/payments/{PayInId} | View a Redsys payment
-[**payInsRedsysRedsysGetPreauthorization**](PayInsRedsysApi.md#payInsRedsysRedsysGetPreauthorization) | **GET** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId} | View a Redsys Preauthorization
-[**payInsRedsysRedsysPostPaymentByWeb**](PayInsRedsysApi.md#payInsRedsysRedsysPostPaymentByWeb) | **POST** /v2.01/PayInsRedsys/payments/web | Create a Redsys PayIn Request
-[**payInsRedsysRedsysPostPreauthorizationByWeb**](PayInsRedsysApi.md#payInsRedsysRedsysPostPreauthorizationByWeb) | **POST** /v2.01/PayInsRedsys/preauthorizations/web | Create a Redsys Preauthorization Request
-[**payInsRedsysRedsysPostPreauthorizationCancellation**](PayInsRedsysApi.md#payInsRedsysRedsysPostPreauthorizationCancellation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | Cancels a Preauthorization
-[**payInsRedsysRedsysPostPreauthorizationConfirmation**](PayInsRedsysApi.md#payInsRedsysRedsysPostPreauthorizationConfirmation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | Confirms a Preauthorization
-[**payInsRedsysRedsysPostRefund**](PayInsRedsysApi.md#payInsRedsysRedsysPostRefund) | **POST** /v2.01/PayInsRedsys/payments/{PayInId}/refunds | Create a Redsys Payment Refund
+[**payInsRedsysRedsysGetPayment**](PayInsRedsysApi.md#payInsRedsysRedsysGetPayment) | **GET** /v2.01/PayInsRedsys/payments/{PayInId} | 
+[**payInsRedsysRedsysGetPreauthorization**](PayInsRedsysApi.md#payInsRedsysRedsysGetPreauthorization) | **GET** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId} | 
+[**payInsRedsysRedsysPostPaymentByWeb**](PayInsRedsysApi.md#payInsRedsysRedsysPostPaymentByWeb) | **POST** /v2.01/PayInsRedsys/payments/web | 
+[**payInsRedsysRedsysPostPreauthorizationByWeb**](PayInsRedsysApi.md#payInsRedsysRedsysPostPreauthorizationByWeb) | **POST** /v2.01/PayInsRedsys/preauthorizations/web | 
+[**payInsRedsysRedsysPostPreauthorizationCancellation**](PayInsRedsysApi.md#payInsRedsysRedsysPostPreauthorizationCancellation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | 
+[**payInsRedsysRedsysPostPreauthorizationConfirmation**](PayInsRedsysApi.md#payInsRedsysRedsysPostPreauthorizationConfirmation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | 
+[**payInsRedsysRedsysPostRefund**](PayInsRedsysApi.md#payInsRedsysRedsysPostRefund) | **POST** /v2.01/PayInsRedsys/payments/{PayInId}/refunds | 
 [**payInsRedsysRedsysWebhookPayment**](PayInsRedsysApi.md#payInsRedsysRedsysWebhookPayment) | **POST** /v2.01/PayInsRedsys/webhook/pay/{IntentId} | 
 [**payInsRedsysRedsysWebhookPaymentSoap**](PayInsRedsysApi.md#payInsRedsysRedsysWebhookPaymentSoap) | **POST** /v2.01/PayInsRedsys/webhook/paysoap/{IntentId} | 
 [**payInsRedsysRedsysWebhookPreauthorization**](PayInsRedsysApi.md#payInsRedsysRedsysWebhookPreauthorization) | **POST** /v2.01/PayInsRedsys/webhook/preauthorize/{IntentId} | 
@@ -19,8 +19,6 @@ Method | HTTP request | Description
 
 # **payInsRedsysRedsysGetPayment**
 > \MarketPay\Model\RedsysPayInsResponse payInsRedsysRedsysGetPayment($pay_in_id)
-
-View a Redsys payment
 
 
 
@@ -33,7 +31,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsRedsysApi();
-$pay_in_id = 789; // int | The Id of a payment
+$pay_in_id = 789; // int | 
 
 try {
     $result = $api_instance->payInsRedsysRedsysGetPayment($pay_in_id);
@@ -48,7 +46,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pay_in_id** | **int**| The Id of a payment |
+ **pay_in_id** | **int**|  |
 
 ### Return type
 
@@ -68,8 +66,6 @@ Name | Type | Description  | Notes
 # **payInsRedsysRedsysGetPreauthorization**
 > \MarketPay\Model\RedsysPreauthorizeResponse payInsRedsysRedsysGetPreauthorization($preauthorization_id)
 
-View a Redsys Preauthorization
-
 
 
 ### Example
@@ -81,7 +77,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsRedsysApi();
-$preauthorization_id = 789; // int | The Id of a Redsys Preauthorization
+$preauthorization_id = 789; // int | 
 
 try {
     $result = $api_instance->payInsRedsysRedsysGetPreauthorization($preauthorization_id);
@@ -96,7 +92,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **preauthorization_id** | **int**| The Id of a Redsys Preauthorization |
+ **preauthorization_id** | **int**|  |
 
 ### Return type
 
@@ -116,9 +112,7 @@ Name | Type | Description  | Notes
 # **payInsRedsysRedsysPostPaymentByWeb**
 > \MarketPay\Model\RedsysPayByWebResponse payInsRedsysRedsysPostPaymentByWeb($x_webhook, $redsys_pay_in)
 
-Create a Redsys PayIn Request
 
-Prepares a payment on Redsys. The data returned is used to show the Redsys interface to the user.  Once the payment is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*_/_*;q=0.8\" -H \"Cache-Control: no-cache\" -H \"Postman-Token: c313f10b-0de1-227e-53d2-f721f25cd79d\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
 
 ### Example
 ```php
@@ -130,7 +124,7 @@ MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_
 
 $api_instance = new MarketPay\Api\PayInsRedsysApi();
 $x_webhook = "x_webhook_example"; // string | 
-$redsys_pay_in = new \MarketPay\Model\RedsysPayByWebPost(); // \MarketPay\Model\RedsysPayByWebPost | Redsys PayIn Request Object params
+$redsys_pay_in = new \MarketPay\Model\RedsysPayByWebPost(); // \MarketPay\Model\RedsysPayByWebPost | 
 
 try {
     $result = $api_instance->payInsRedsysRedsysPostPaymentByWeb($x_webhook, $redsys_pay_in);
@@ -146,7 +140,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_webhook** | **string**|  | [optional]
- **redsys_pay_in** | [**\MarketPay\Model\RedsysPayByWebPost**](../Model/RedsysPayByWebPost.md)| Redsys PayIn Request Object params | [optional]
+ **redsys_pay_in** | [**\MarketPay\Model\RedsysPayByWebPost**](../Model/RedsysPayByWebPost.md)|  | [optional]
 
 ### Return type
 
@@ -166,9 +160,7 @@ Name | Type | Description  | Notes
 # **payInsRedsysRedsysPostPreauthorizationByWeb**
 > \MarketPay\Model\RedsysPreauthorizeByWebResponse payInsRedsysRedsysPostPreauthorizationByWeb($redsys_preauthorization)
 
-Create a Redsys Preauthorization Request
 
-Prepares a preauthorization on Redsys. The data returned is used to show the Redsys interface to the user.  Once the preauthoriation is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*_/_*;q=0.8\" -H \"Cache-Control: no-cache\" -H \"Postman-Token: c313f10b-0de1-227e-53d2-f721f25cd79d\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
 
 ### Example
 ```php
@@ -179,7 +171,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsRedsysApi();
-$redsys_preauthorization = new \MarketPay\Model\RedsysPreauthorizeByWebPost(); // \MarketPay\Model\RedsysPreauthorizeByWebPost | RedsysPreauthorization Object params
+$redsys_preauthorization = new \MarketPay\Model\RedsysPreauthorizeByWebPost(); // \MarketPay\Model\RedsysPreauthorizeByWebPost | 
 
 try {
     $result = $api_instance->payInsRedsysRedsysPostPreauthorizationByWeb($redsys_preauthorization);
@@ -194,7 +186,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **redsys_preauthorization** | [**\MarketPay\Model\RedsysPreauthorizeByWebPost**](../Model/RedsysPreauthorizeByWebPost.md)| RedsysPreauthorization Object params | [optional]
+ **redsys_preauthorization** | [**\MarketPay\Model\RedsysPreauthorizeByWebPost**](../Model/RedsysPreauthorizeByWebPost.md)|  | [optional]
 
 ### Return type
 
@@ -214,8 +206,6 @@ Name | Type | Description  | Notes
 # **payInsRedsysRedsysPostPreauthorizationCancellation**
 > \MarketPay\Model\RedsysPreauthorizationCancellationResponse payInsRedsysRedsysPostPreauthorizationCancellation($preauthorization_id, $redsys_preauthorization_cancellation)
 
-Cancels a Preauthorization
-
 
 
 ### Example
@@ -227,8 +217,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsRedsysApi();
-$preauthorization_id = 789; // int | The Id of a Redsys Preauthorization
-$redsys_preauthorization_cancellation = new \MarketPay\Model\RedsysPreauthorizationCancellationPost(); // \MarketPay\Model\RedsysPreauthorizationCancellationPost | PreauthorizationCancellation Object params
+$preauthorization_id = 789; // int | 
+$redsys_preauthorization_cancellation = new \MarketPay\Model\RedsysPreauthorizationCancellationPost(); // \MarketPay\Model\RedsysPreauthorizationCancellationPost | 
 
 try {
     $result = $api_instance->payInsRedsysRedsysPostPreauthorizationCancellation($preauthorization_id, $redsys_preauthorization_cancellation);
@@ -243,8 +233,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **preauthorization_id** | **int**| The Id of a Redsys Preauthorization |
- **redsys_preauthorization_cancellation** | [**\MarketPay\Model\RedsysPreauthorizationCancellationPost**](../Model/RedsysPreauthorizationCancellationPost.md)| PreauthorizationCancellation Object params | [optional]
+ **preauthorization_id** | **int**|  |
+ **redsys_preauthorization_cancellation** | [**\MarketPay\Model\RedsysPreauthorizationCancellationPost**](../Model/RedsysPreauthorizationCancellationPost.md)|  | [optional]
 
 ### Return type
 
@@ -264,8 +254,6 @@ Name | Type | Description  | Notes
 # **payInsRedsysRedsysPostPreauthorizationConfirmation**
 > \MarketPay\Model\RedsysPreauthorizationConfirmationResponse payInsRedsysRedsysPostPreauthorizationConfirmation($preauthorization_id, $redsys_preauthorization_confirmation)
 
-Confirms a Preauthorization
-
 
 
 ### Example
@@ -277,8 +265,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsRedsysApi();
-$preauthorization_id = 789; // int | The Id of a Redsys Preauthorization
-$redsys_preauthorization_confirmation = new \MarketPay\Model\RedsysPreauthorizationConfirmationPost(); // \MarketPay\Model\RedsysPreauthorizationConfirmationPost | PreauthorizationConfirmation Object params
+$preauthorization_id = 789; // int | 
+$redsys_preauthorization_confirmation = new \MarketPay\Model\RedsysPreauthorizationConfirmationPost(); // \MarketPay\Model\RedsysPreauthorizationConfirmationPost | 
 
 try {
     $result = $api_instance->payInsRedsysRedsysPostPreauthorizationConfirmation($preauthorization_id, $redsys_preauthorization_confirmation);
@@ -293,8 +281,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **preauthorization_id** | **int**| The Id of a Redsys Preauthorization |
- **redsys_preauthorization_confirmation** | [**\MarketPay\Model\RedsysPreauthorizationConfirmationPost**](../Model/RedsysPreauthorizationConfirmationPost.md)| PreauthorizationConfirmation Object params | [optional]
+ **preauthorization_id** | **int**|  |
+ **redsys_preauthorization_confirmation** | [**\MarketPay\Model\RedsysPreauthorizationConfirmationPost**](../Model/RedsysPreauthorizationConfirmationPost.md)|  | [optional]
 
 ### Return type
 
@@ -314,9 +302,7 @@ Name | Type | Description  | Notes
 # **payInsRedsysRedsysPostRefund**
 > \MarketPay\Model\RedsysRefundResponse payInsRedsysRedsysPostRefund($pay_in_id, $redsys_refund)
 
-Create a Redsys Payment Refund
 
-A PayIn Refund is a request to reimburse a user on their payment card. The money which has already been paid will automatically go back to the user’s bank account.              Minimum amount to refund is 1€.              If you're doing a partial Refund, note that you can only refund the same amount on the same transaction once per day (this is to prevent unintended duplicate refunds). After 24h you can do another refund of the same amount on the same transaction. If it is a different amount on the same transaction, there is not this limit.              If you do not specify DebitedFunds and Fees parameters, it will automatically fully refund the PayIn. However if you do provide one or the other, you must provide both. Note that Fees must be negative if you wish to refund them - adding a positive value for the Fees is a way to charge your customers for the Refund (in the same way you might for a PayIn, Transfer or any other Transaction
 
 ### Example
 ```php
@@ -327,8 +313,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsRedsysApi();
-$pay_in_id = 789; // int | The Id of a PayIn
-$redsys_refund = new \MarketPay\Model\RedsysRefundPost(); // \MarketPay\Model\RedsysRefundPost | Refund Object params
+$pay_in_id = 789; // int | 
+$redsys_refund = new \MarketPay\Model\RedsysRefundPost(); // \MarketPay\Model\RedsysRefundPost | 
 
 try {
     $result = $api_instance->payInsRedsysRedsysPostRefund($pay_in_id, $redsys_refund);
@@ -343,8 +329,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pay_in_id** | **int**| The Id of a PayIn |
- **redsys_refund** | [**\MarketPay\Model\RedsysRefundPost**](../Model/RedsysRefundPost.md)| Refund Object params | [optional]
+ **pay_in_id** | **int**|  |
+ **redsys_refund** | [**\MarketPay\Model\RedsysRefundPost**](../Model/RedsysRefundPost.md)|  | [optional]
 
 ### Return type
 

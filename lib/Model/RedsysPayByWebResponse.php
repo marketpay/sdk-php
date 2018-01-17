@@ -195,7 +195,7 @@ class RedsysPayByWebResponse implements ArrayAccess
 
     /**
      * Sets pay_in_id
-     * @param string $pay_in_id Id of the payment
+     * @param string $pay_in_id
      * @return $this
      */
     public function setPayInId($pay_in_id)
@@ -216,7 +216,7 @@ class RedsysPayByWebResponse implements ArrayAccess
 
     /**
      * Sets url
-     * @param string $url Url to post from the user's browser
+     * @param string $url
      * @return $this
      */
     public function setUrl($url)
@@ -237,7 +237,7 @@ class RedsysPayByWebResponse implements ArrayAccess
 
     /**
      * Sets ds_signature_version
-     * @param string $ds_signature_version This paramater must be include in the Post to the Url
+     * @param string $ds_signature_version
      * @return $this
      */
     public function setDsSignatureVersion($ds_signature_version)
@@ -258,7 +258,7 @@ class RedsysPayByWebResponse implements ArrayAccess
 
     /**
      * Sets ds_merchant_parameters
-     * @param string $ds_merchant_parameters This paramater must be include in the Post to the Url
+     * @param string $ds_merchant_parameters
      * @return $this
      */
     public function setDsMerchantParameters($ds_merchant_parameters)
@@ -279,7 +279,7 @@ class RedsysPayByWebResponse implements ArrayAccess
 
     /**
      * Sets ds_signature
-     * @param string $ds_signature This paramater must be include in the Post to the Url
+     * @param string $ds_signature
      * @return $this
      */
     public function setDsSignature($ds_signature)

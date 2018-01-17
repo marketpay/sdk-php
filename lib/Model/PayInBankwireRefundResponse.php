@@ -1,6 +1,6 @@
 <?php
 /**
- * RedsysRefundResponse
+ * PayInBankwireRefundResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace MarketPay\Model;
 use \ArrayAccess;
 
 /**
- * RedsysRefundResponse Class Doc Comment
+ * PayInBankwireRefundResponse Class Doc Comment
  *
  * @category    Class
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RedsysRefundResponse implements ArrayAccess
+class PayInBankwireRefundResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class RedsysRefundResponse implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'RedsysRefundResponse';
+    protected static $swaggerModelName = 'PayInBankwireRefundResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,8 @@ class RedsysRefundResponse implements ArrayAccess
         'credited_funds' => '\MarketPay\Model\Money',
         'fees' => '\MarketPay\Model\Money',
         'debited_wallet_id' => 'string',
-        'credited_wallet_id' => 'string',
         'author_id' => 'string',
-        'credited_user_id' => 'string',
+        'statement_descriptor' => 'string',
         'nature' => 'string',
         'status' => 'string',
         'execution_date' => 'int',
@@ -70,7 +69,6 @@ class RedsysRefundResponse implements ArrayAccess
         'initial_transaction_id' => 'string',
         'initial_transaction_type' => 'string',
         'refund_reason' => '\MarketPay\Model\RefundReason',
-        'provider' => '\MarketPay\Model\RefundRedsysData',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -85,9 +83,8 @@ class RedsysRefundResponse implements ArrayAccess
         'credited_funds' => null,
         'fees' => null,
         'debited_wallet_id' => null,
-        'credited_wallet_id' => null,
         'author_id' => null,
-        'credited_user_id' => null,
+        'statement_descriptor' => null,
         'nature' => null,
         'status' => null,
         'execution_date' => 'int64',
@@ -97,7 +94,6 @@ class RedsysRefundResponse implements ArrayAccess
         'initial_transaction_id' => null,
         'initial_transaction_type' => null,
         'refund_reason' => null,
-        'provider' => null,
         'id' => null,
         'creation_date' => 'int64',
         'tag' => null
@@ -122,9 +118,8 @@ class RedsysRefundResponse implements ArrayAccess
         'credited_funds' => 'CreditedFunds',
         'fees' => 'Fees',
         'debited_wallet_id' => 'DebitedWalletId',
-        'credited_wallet_id' => 'CreditedWalletId',
         'author_id' => 'AuthorId',
-        'credited_user_id' => 'CreditedUserId',
+        'statement_descriptor' => 'StatementDescriptor',
         'nature' => 'Nature',
         'status' => 'Status',
         'execution_date' => 'ExecutionDate',
@@ -134,7 +129,6 @@ class RedsysRefundResponse implements ArrayAccess
         'initial_transaction_id' => 'InitialTransactionId',
         'initial_transaction_type' => 'InitialTransactionType',
         'refund_reason' => 'RefundReason',
-        'provider' => 'Provider',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -150,9 +144,8 @@ class RedsysRefundResponse implements ArrayAccess
         'credited_funds' => 'setCreditedFunds',
         'fees' => 'setFees',
         'debited_wallet_id' => 'setDebitedWalletId',
-        'credited_wallet_id' => 'setCreditedWalletId',
         'author_id' => 'setAuthorId',
-        'credited_user_id' => 'setCreditedUserId',
+        'statement_descriptor' => 'setStatementDescriptor',
         'nature' => 'setNature',
         'status' => 'setStatus',
         'execution_date' => 'setExecutionDate',
@@ -162,7 +155,6 @@ class RedsysRefundResponse implements ArrayAccess
         'initial_transaction_id' => 'setInitialTransactionId',
         'initial_transaction_type' => 'setInitialTransactionType',
         'refund_reason' => 'setRefundReason',
-        'provider' => 'setProvider',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -178,9 +170,8 @@ class RedsysRefundResponse implements ArrayAccess
         'credited_funds' => 'getCreditedFunds',
         'fees' => 'getFees',
         'debited_wallet_id' => 'getDebitedWalletId',
-        'credited_wallet_id' => 'getCreditedWalletId',
         'author_id' => 'getAuthorId',
-        'credited_user_id' => 'getCreditedUserId',
+        'statement_descriptor' => 'getStatementDescriptor',
         'nature' => 'getNature',
         'status' => 'getStatus',
         'execution_date' => 'getExecutionDate',
@@ -190,7 +181,6 @@ class RedsysRefundResponse implements ArrayAccess
         'initial_transaction_id' => 'getInitialTransactionId',
         'initial_transaction_type' => 'getInitialTransactionType',
         'refund_reason' => 'getRefundReason',
-        'provider' => 'getProvider',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -299,9 +289,8 @@ class RedsysRefundResponse implements ArrayAccess
         $this->container['credited_funds'] = isset($data['credited_funds']) ? $data['credited_funds'] : null;
         $this->container['fees'] = isset($data['fees']) ? $data['fees'] : null;
         $this->container['debited_wallet_id'] = isset($data['debited_wallet_id']) ? $data['debited_wallet_id'] : null;
-        $this->container['credited_wallet_id'] = isset($data['credited_wallet_id']) ? $data['credited_wallet_id'] : null;
         $this->container['author_id'] = isset($data['author_id']) ? $data['author_id'] : null;
-        $this->container['credited_user_id'] = isset($data['credited_user_id']) ? $data['credited_user_id'] : null;
+        $this->container['statement_descriptor'] = isset($data['statement_descriptor']) ? $data['statement_descriptor'] : null;
         $this->container['nature'] = isset($data['nature']) ? $data['nature'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['execution_date'] = isset($data['execution_date']) ? $data['execution_date'] : null;
@@ -311,7 +300,6 @@ class RedsysRefundResponse implements ArrayAccess
         $this->container['initial_transaction_id'] = isset($data['initial_transaction_id']) ? $data['initial_transaction_id'] : null;
         $this->container['initial_transaction_type'] = isset($data['initial_transaction_type']) ? $data['initial_transaction_type'] : null;
         $this->container['refund_reason'] = isset($data['refund_reason']) ? $data['refund_reason'] : null;
-        $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -475,27 +463,6 @@ class RedsysRefundResponse implements ArrayAccess
     }
 
     /**
-     * Gets credited_wallet_id
-     * @return string
-     */
-    public function getCreditedWalletId()
-    {
-        return $this->container['credited_wallet_id'];
-    }
-
-    /**
-     * Sets credited_wallet_id
-     * @param string $credited_wallet_id
-     * @return $this
-     */
-    public function setCreditedWalletId($credited_wallet_id)
-    {
-        $this->container['credited_wallet_id'] = $credited_wallet_id;
-
-        return $this;
-    }
-
-    /**
      * Gets author_id
      * @return string
      */
@@ -517,22 +484,22 @@ class RedsysRefundResponse implements ArrayAccess
     }
 
     /**
-     * Gets credited_user_id
+     * Gets statement_descriptor
      * @return string
      */
-    public function getCreditedUserId()
+    public function getStatementDescriptor()
     {
-        return $this->container['credited_user_id'];
+        return $this->container['statement_descriptor'];
     }
 
     /**
-     * Sets credited_user_id
-     * @param string $credited_user_id
+     * Sets statement_descriptor
+     * @param string $statement_descriptor
      * @return $this
      */
-    public function setCreditedUserId($credited_user_id)
+    public function setStatementDescriptor($statement_descriptor)
     {
-        $this->container['credited_user_id'] = $credited_user_id;
+        $this->container['statement_descriptor'] = $statement_descriptor;
 
         return $this;
     }
@@ -758,27 +725,6 @@ class RedsysRefundResponse implements ArrayAccess
     public function setRefundReason($refund_reason)
     {
         $this->container['refund_reason'] = $refund_reason;
-
-        return $this;
-    }
-
-    /**
-     * Gets provider
-     * @return \MarketPay\Model\RefundRedsysData
-     */
-    public function getProvider()
-    {
-        return $this->container['provider'];
-    }
-
-    /**
-     * Sets provider
-     * @param \MarketPay\Model\RefundRedsysData $provider
-     * @return $this
-     */
-    public function setProvider($provider)
-    {
-        $this->container['provider'] = $provider;
 
         return $this;
     }

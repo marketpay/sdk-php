@@ -201,7 +201,7 @@ class SeurShipmentCancellationResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status 
+     * @param string $status
      * @return $this
      */
     public function setStatus($status)

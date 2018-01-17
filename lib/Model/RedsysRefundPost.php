@@ -183,7 +183,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -204,7 +204,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -225,7 +225,7 @@ class RedsysRefundPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)

@@ -395,7 +395,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -416,7 +416,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \MarketPay\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
+     * @param \MarketPay\Model\Money $credited_funds
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -437,7 +437,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)
@@ -458,7 +458,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets debited_wallet_id
-     * @param string $debited_wallet_id The ID of the wallet that was debited
+     * @param string $debited_wallet_id
      * @return $this
      */
     public function setDebitedWalletId($debited_wallet_id)
@@ -479,7 +479,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id The ID of the wallet where money will be credited
+     * @param string $credited_wallet_id
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -500,7 +500,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id A user's ID
+     * @param string $author_id
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -521,7 +521,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets credited_user_id
-     * @param string $credited_user_id The user ID who was credited
+     * @param string $credited_user_id
      * @return $this
      */
     public function setCreditedUserId($credited_user_id)
@@ -542,7 +542,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets nature
-     * @param string $nature The nature of the transaction
+     * @param string $nature
      * @return $this
      */
     public function setNature($nature)
@@ -572,7 +572,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status The status of the transaction
+     * @param string $status
      * @return $this
      */
     public function setStatus($status)
@@ -602,7 +602,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets execution_date
-     * @param int $execution_date When the transaction happened
+     * @param int $execution_date
      * @return $this
      */
     public function setExecutionDate($execution_date)
@@ -623,7 +623,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets result_code
-     * @param string $result_code The result code
+     * @param string $result_code
      * @return $this
      */
     public function setResultCode($result_code)
@@ -644,7 +644,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets result_message
-     * @param string $result_message A verbal explanation of the ResultCode
+     * @param string $result_message
      * @return $this
      */
     public function setResultMessage($result_message)
@@ -665,7 +665,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type The type of the transaction
+     * @param string $type
      * @return $this
      */
     public function setType($type)
@@ -695,7 +695,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets initial_transaction_id
-     * @param string $initial_transaction_id The initial transaction ID
+     * @param string $initial_transaction_id
      * @return $this
      */
     public function setInitialTransactionId($initial_transaction_id)
@@ -716,7 +716,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets initial_transaction_type
-     * @param string $initial_transaction_type The initial transaction type
+     * @param string $initial_transaction_type
      * @return $this
      */
     public function setInitialTransactionType($initial_transaction_type)
@@ -746,7 +746,7 @@ class UniversalPayRefundResponse implements ArrayAccess
 
     /**
      * Sets refund_reason
-     * @param \MarketPay\Model\RefundReason $refund_reason Contains info about the reason for refund
+     * @param \MarketPay\Model\RefundReason $refund_reason
      * @return $this
      */
     public function setRefundReason($refund_reason)

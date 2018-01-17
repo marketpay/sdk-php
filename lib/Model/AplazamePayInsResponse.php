@@ -425,7 +425,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -446,7 +446,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_funds
-     * @param \MarketPay\Model\Money $credited_funds Details about the funds that are being credited (DebitedFunds – Fees = CreditedFunds)
+     * @param \MarketPay\Model\Money $credited_funds
      * @return $this
      */
     public function setCreditedFunds($credited_funds)
@@ -467,7 +467,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)
@@ -488,7 +488,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id The ID of the wallet where money will be credited
+     * @param string $credited_wallet_id
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -509,7 +509,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets nature
-     * @param string $nature The nature of the transaction
+     * @param string $nature
      * @return $this
      */
     public function setNature($nature)
@@ -539,7 +539,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status The status of the transaction
+     * @param string $status
      * @return $this
      */
     public function setStatus($status)
@@ -569,7 +569,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets execution_date
-     * @param int $execution_date When the transaction happened
+     * @param int $execution_date
      * @return $this
      */
     public function setExecutionDate($execution_date)
@@ -590,7 +590,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets result_code
-     * @param string $result_code The result code
+     * @param string $result_code
      * @return $this
      */
     public function setResultCode($result_code)
@@ -611,7 +611,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets result_message
-     * @param string $result_message A verbal explanation of the ResultCode
+     * @param string $result_message
      * @return $this
      */
     public function setResultMessage($result_message)
@@ -632,7 +632,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type The type of the transaction
+     * @param string $type
      * @return $this
      */
     public function setType($type)
@@ -662,7 +662,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets payment_type
-     * @param string $payment_type The type of payin
+     * @param string $payment_type
      * @return $this
      */
     public function setPaymentType($payment_type)
@@ -692,7 +692,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets execution_type
-     * @param string $execution_type The type of execution for the payin
+     * @param string $execution_type
      * @return $this
      */
     public function setExecutionType($execution_type)
@@ -722,7 +722,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets card_id
-     * @param string $card_id The Id of the card saved, if any.
+     * @param string $card_id
      * @return $this
      */
     public function setCardId($card_id)
@@ -743,7 +743,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets statement_descriptor
-     * @param string $statement_descriptor A custom description to appear on the user's bank statement. It can be up to 10 characters long, and can only include alphanumeric characters or spaces
+     * @param string $statement_descriptor
      * @return $this
      */
     public function setStatementDescriptor($statement_descriptor)
@@ -764,7 +764,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id A user's ID
+     * @param string $author_id
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -785,7 +785,7 @@ class AplazamePayInsResponse implements ArrayAccess
 
     /**
      * Sets credited_user_id
-     * @param string $credited_user_id The user ID who was credited
+     * @param string $credited_user_id
      * @return $this
      */
     public function setCreditedUserId($credited_user_id)

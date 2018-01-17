@@ -413,7 +413,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -434,7 +434,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status The status of the transaction
+     * @param string $status
      * @return $this
      */
     public function setStatus($status)
@@ -464,7 +464,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets payment_status
-     * @param string $payment_status Status of the payment
+     * @param string $payment_status
      * @return $this
      */
     public function setPaymentStatus($payment_status)
@@ -494,7 +494,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets execution_date
-     * @param int $execution_date When the transaction happened
+     * @param int $execution_date
      * @return $this
      */
     public function setExecutionDate($execution_date)
@@ -515,7 +515,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets result_code
-     * @param string $result_code The result code
+     * @param string $result_code
      * @return $this
      */
     public function setResultCode($result_code)
@@ -536,7 +536,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets result_message
-     * @param string $result_message A verbal explanation of the ResultCode
+     * @param string $result_message
      * @return $this
      */
     public function setResultMessage($result_message)
@@ -557,7 +557,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets execution_type
-     * @param string $execution_type The type of execution for the payin
+     * @param string $execution_type
      * @return $this
      */
     public function setExecutionType($execution_type)
@@ -587,7 +587,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets card_id
-     * @param string $card_id The Id of the card saved, if any.
+     * @param string $card_id
      * @return $this
      */
     public function setCardId($card_id)
@@ -608,7 +608,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets statement_descriptor
-     * @param string $statement_descriptor A custom description to appear on the user's bank statement. It can be up to 10 characters long, and can only include alphanumeric characters or spaces
+     * @param string $statement_descriptor
      * @return $this
      */
     public function setStatementDescriptor($statement_descriptor)
@@ -629,7 +629,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id A user's ID
+     * @param string $author_id
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -650,7 +650,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets pay_in_id
-     * @param string $pay_in_id The Id of the associated PayIn
+     * @param string $pay_in_id
      * @return $this
      */
     public function setPayInId($pay_in_id)
@@ -671,7 +671,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets language
-     * @param string $language Valid values are ES, EN, CA, FR, DE, NL, IT, SV, PT, PL, GL and EU
+     * @param string $language
      * @return $this
      */
     public function setLanguage($language)
@@ -701,7 +701,7 @@ class RedsysPreauthorizeResponse implements ArrayAccess
 
     /**
      * Sets provider
-     * @param \MarketPay\Model\PreauthorizationRedsysData $provider Redsys related data
+     * @param \MarketPay\Model\PreauthorizationRedsysData $provider
      * @return $this
      */
     public function setProvider($provider)

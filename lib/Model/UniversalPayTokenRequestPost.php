@@ -317,7 +317,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Sets authorization_funds
-     * @param \MarketPay\Model\Money $authorization_funds Amount that will be charged to authorize the card. Default value is 1 euro. Authorizations with zero amount may be rejected by the credit card issuer and are not guaranteed to succeed.
+     * @param \MarketPay\Model\Money $authorization_funds
      * @return $this
      */
     public function setAuthorizationFunds($authorization_funds)
@@ -338,7 +338,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -359,7 +359,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id The ID of the wallet where money will be credited
+     * @param string $credited_wallet_id
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -410,7 +410,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Sets success_url
-     * @param string $success_url Url to redirect the browser in case the payment is completed successfully
+     * @param string $success_url
      * @return $this
      */
     public function setSuccessUrl($success_url)
@@ -431,7 +431,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Sets cancel_url
-     * @param string $cancel_url Url to redirect the browser in case the payment is not completed successfully
+     * @param string $cancel_url
      * @return $this
      */
     public function setCancelUrl($cancel_url)
@@ -452,7 +452,7 @@ class UniversalPayTokenRequestPost implements ArrayAccess
 
     /**
      * Sets language
-     * @param string $language Valid values are ES, EN, FR
+     * @param string $language
      * @return $this
      */
     public function setLanguage($language)

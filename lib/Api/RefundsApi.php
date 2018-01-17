@@ -90,9 +90,7 @@ class RefundsApi
     /**
      * Operation refundsRefundGet
      *
-     * View a Refund
-     *
-     * @param int $refund_id The ID of a refund (required)
+     * @param int $refund_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\UniversalPayRefundResponse
      */
@@ -105,9 +103,7 @@ class RefundsApi
     /**
      * Operation refundsRefundGetWithHttpInfo
      *
-     * View a Refund
-     *
-     * @param int $refund_id The ID of a refund (required)
+     * @param int $refund_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\UniversalPayRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */

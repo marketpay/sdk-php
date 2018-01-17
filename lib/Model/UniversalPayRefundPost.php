@@ -57,7 +57,7 @@ class UniversalPayRefundPost implements ArrayAccess
         'tag' => 'string',
         'debited_funds' => '\MarketPay\Model\Money',
         'fees' => '\MarketPay\Model\Money',
-        'statement_description' => 'string'
+        'statement_descriptor' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class UniversalPayRefundPost implements ArrayAccess
         'tag' => null,
         'debited_funds' => null,
         'fees' => null,
-        'statement_description' => null
+        'statement_descriptor' => null
     ];
 
     public static function swaggerTypes()
@@ -89,7 +89,7 @@ class UniversalPayRefundPost implements ArrayAccess
         'tag' => 'Tag',
         'debited_funds' => 'DebitedFunds',
         'fees' => 'Fees',
-        'statement_description' => 'StatementDescription'
+        'statement_descriptor' => 'StatementDescriptor'
     ];
 
 
@@ -101,7 +101,7 @@ class UniversalPayRefundPost implements ArrayAccess
         'tag' => 'setTag',
         'debited_funds' => 'setDebitedFunds',
         'fees' => 'setFees',
-        'statement_description' => 'setStatementDescription'
+        'statement_descriptor' => 'setStatementDescriptor'
     ];
 
 
@@ -113,7 +113,7 @@ class UniversalPayRefundPost implements ArrayAccess
         'tag' => 'getTag',
         'debited_funds' => 'getDebitedFunds',
         'fees' => 'getFees',
-        'statement_description' => 'getStatementDescription'
+        'statement_descriptor' => 'getStatementDescriptor'
     ];
 
     public static function attributeMap()
@@ -150,7 +150,7 @@ class UniversalPayRefundPost implements ArrayAccess
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['debited_funds'] = isset($data['debited_funds']) ? $data['debited_funds'] : null;
         $this->container['fees'] = isset($data['fees']) ? $data['fees'] : null;
-        $this->container['statement_description'] = isset($data['statement_description']) ? $data['statement_description'] : null;
+        $this->container['statement_descriptor'] = isset($data['statement_descriptor']) ? $data['statement_descriptor'] : null;
     }
 
     /**
@@ -195,7 +195,7 @@ class UniversalPayRefundPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -216,7 +216,7 @@ class UniversalPayRefundPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -237,7 +237,7 @@ class UniversalPayRefundPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)
@@ -248,22 +248,22 @@ class UniversalPayRefundPost implements ArrayAccess
     }
 
     /**
-     * Gets statement_description
+     * Gets statement_descriptor
      * @return string
      */
-    public function getStatementDescription()
+    public function getStatementDescriptor()
     {
-        return $this->container['statement_description'];
+        return $this->container['statement_descriptor'];
     }
 
     /**
-     * Sets statement_description
-     * @param string $statement_description
+     * Sets statement_descriptor
+     * @param string $statement_descriptor
      * @return $this
      */
-    public function setStatementDescription($statement_description)
+    public function setStatementDescriptor($statement_descriptor)
     {
-        $this->container['statement_description'] = $statement_description;
+        $this->container['statement_descriptor'] = $statement_descriptor;
 
         return $this;
     }

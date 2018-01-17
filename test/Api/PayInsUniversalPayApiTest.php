@@ -75,7 +75,7 @@ class PayInsUniversalPayApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsUniversalPayGetUniversalPayTokenization
      *
-     * View a UniversalPay card tokenization status.
+     * .
      *
      */
     public function testPayInsUniversalPayGetUniversalPayTokenization()
@@ -85,7 +85,7 @@ class PayInsUniversalPayApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsUniversalPayUniversalPayGetPayment
      *
-     * View a UniversalPay payment.
+     * .
      *
      */
     public function testPayInsUniversalPayUniversalPayGetPayment()
@@ -95,7 +95,7 @@ class PayInsUniversalPayApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsUniversalPayUniversalPayPostPaymentByWeb
      *
-     * Create a UniversalPay PayIn Request.
+     * .
      *
      */
     public function testPayInsUniversalPayUniversalPayPostPaymentByWeb()
@@ -105,7 +105,7 @@ class PayInsUniversalPayApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsUniversalPayUniversalPayPostRefund
      *
-     * Create a UniversalPay Payment Refund.
+     * .
      *
      */
     public function testPayInsUniversalPayUniversalPayPostRefund()

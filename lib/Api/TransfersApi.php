@@ -90,9 +90,7 @@ class TransfersApi
     /**
      * Operation transfersGet
      *
-     * View a Transfer
-     *
-     * @param int $transfer_id The Id of a transfer (required)
+     * @param int $transfer_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\TransferResponse
      */
@@ -105,9 +103,7 @@ class TransfersApi
     /**
      * Operation transfersGetWithHttpInfo
      *
-     * View a Transfer
-     *
-     * @param int $transfer_id The Id of a transfer (required)
+     * @param int $transfer_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\TransferResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -180,8 +176,6 @@ class TransfersApi
     /**
      * Operation transfersGetList
      *
-     * View a Transfer
-     *
      * @param int $page  (optional)
      * @param int $per_page  (optional)
      * @param int $before_date  (optional)
@@ -198,8 +192,6 @@ class TransfersApi
 
     /**
      * Operation transfersGetListWithHttpInfo
-     *
-     * View a Transfer
      *
      * @param int $page  (optional)
      * @param int $per_page  (optional)
@@ -286,9 +278,7 @@ class TransfersApi
     /**
      * Operation transfersPost
      *
-     * Create a Transfer
-     *
-     * @param \MarketPay\Model\TransferPost $transfer Transfer Object params (optional)
+     * @param \MarketPay\Model\TransferPost $transfer  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\TransferResponse
      */
@@ -301,9 +291,7 @@ class TransfersApi
     /**
      * Operation transfersPostWithHttpInfo
      *
-     * Create a Transfer
-     *
-     * @param \MarketPay\Model\TransferPost $transfer Transfer Object params (optional)
+     * @param \MarketPay\Model\TransferPost $transfer  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\TransferResponse, HTTP status code, HTTP response headers (array of strings)
      */

@@ -281,7 +281,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id The ID of the wallet where money will be credited
+     * @param string $credited_wallet_id
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -302,7 +302,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status The status of the transaction
+     * @param string $status
      * @return $this
      */
     public function setStatus($status)
@@ -332,7 +332,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
 
     /**
      * Sets execution_date
-     * @param int $execution_date When the transaction happened
+     * @param int $execution_date
      * @return $this
      */
     public function setExecutionDate($execution_date)
@@ -353,7 +353,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
 
     /**
      * Sets result_code
-     * @param string $result_code The result code
+     * @param string $result_code
      * @return $this
      */
     public function setResultCode($result_code)
@@ -374,7 +374,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
 
     /**
      * Sets result_message
-     * @param string $result_message A verbal explanation of the ResultCode
+     * @param string $result_message
      * @return $this
      */
     public function setResultMessage($result_message)
@@ -395,7 +395,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
 
     /**
      * Sets execution_type
-     * @param string $execution_type The type of execution for the payin
+     * @param string $execution_type
      * @return $this
      */
     public function setExecutionType($execution_type)
@@ -425,7 +425,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id A user's ID
+     * @param string $author_id
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -446,7 +446,7 @@ class UniversalPayTokenizationResponse implements ArrayAccess
 
     /**
      * Sets credited_user_id
-     * @param string $credited_user_id The user ID who was credited
+     * @param string $credited_user_id
      * @return $this
      */
     public function setCreditedUserId($credited_user_id)

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tag** | **string** | Custom data that you can add to this item | [optional] 
+**tag** | **string** |  | [optional] 
 **debited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | 
 **fees** | [**\MarketPay\Model\Money**](Money.md) |  | 
 

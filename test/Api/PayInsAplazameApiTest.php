@@ -85,7 +85,7 @@ class PayInsAplazameApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsAplazameAplazameGetPayment
      *
-     * -------.
+     * .
      *
      */
     public function testPayInsAplazameAplazameGetPayment()
@@ -95,7 +95,7 @@ class PayInsAplazameApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payInsAplazameAplazamePostPaymentByWeb
      *
-     * --------.
+     * .
      *
      */
     public function testPayInsAplazameAplazamePostPaymentByWeb()

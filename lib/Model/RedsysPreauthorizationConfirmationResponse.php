@@ -171,7 +171,7 @@ class RedsysPreauthorizationConfirmationResponse implements ArrayAccess
 
     /**
      * Sets pay_in_id
-     * @param string $pay_in_id Id of the payment
+     * @param string $pay_in_id
      * @return $this
      */
     public function setPayInId($pay_in_id)

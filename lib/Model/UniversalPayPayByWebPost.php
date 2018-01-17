@@ -359,7 +359,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -380,7 +380,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)
@@ -401,7 +401,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets card_id
-     * @param string $card_id The id of a previous saved card. SaveCard and CardId are mutually exclusive
+     * @param string $card_id
      * @return $this
      */
     public function setCardId($card_id)
@@ -422,7 +422,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets save_card
-     * @param bool $save_card Whether to save or not the card for future use. SaveCard and CardId are mutually exclusive
+     * @param bool $save_card
      * @return $this
      */
     public function setSaveCard($save_card)
@@ -464,7 +464,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -485,7 +485,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id The ID of the wallet where money will be credited
+     * @param string $credited_wallet_id
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -536,7 +536,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets success_url
-     * @param string $success_url Url to redirect the browser in case the payment is completed successfully
+     * @param string $success_url
      * @return $this
      */
     public function setSuccessUrl($success_url)
@@ -557,7 +557,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets cancel_url
-     * @param string $cancel_url Url to redirect the browser in case the payment is not completed successfully
+     * @param string $cancel_url
      * @return $this
      */
     public function setCancelUrl($cancel_url)
@@ -578,7 +578,7 @@ class UniversalPayPayByWebPost implements ArrayAccess
 
     /**
      * Sets language
-     * @param string $language Valid values are ES, EN, FR
+     * @param string $language
      * @return $this
      */
     public function setLanguage($language)

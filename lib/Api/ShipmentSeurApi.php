@@ -90,9 +90,7 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurCancelShipment
      *
-     * Cancels a shipment
-     *
-     * @param int $shipment_id The Id of a Shipment (required)
+     * @param int $shipment_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\SeurShipmentCancellationResponse
      */
@@ -105,9 +103,7 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurCancelShipmentWithHttpInfo
      *
-     * Cancels a shipment
-     *
-     * @param int $shipment_id The Id of a Shipment (required)
+     * @param int $shipment_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\SeurShipmentCancellationResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -180,9 +176,7 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurCreateShipment
      *
-     * Creates a shipment
-     *
-     * @param \MarketPay\Model\SeurShipmentPost $shipment Seur Shipment Object params (optional)
+     * @param \MarketPay\Model\SeurShipmentPost $shipment  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\SeurShipmentResponse
      */
@@ -195,9 +189,7 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurCreateShipmentWithHttpInfo
      *
-     * Creates a shipment
-     *
-     * @param \MarketPay\Model\SeurShipmentPost $shipment Seur Shipment Object params (optional)
+     * @param \MarketPay\Model\SeurShipmentPost $shipment  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\SeurShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -263,9 +255,7 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurGetShipment
      *
-     * Cancels a shipment
-     *
-     * @param int $shipment_id The Id of a Shipment (required)
+     * @param int $shipment_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\SeurShipmentResponse
      */
@@ -278,9 +268,7 @@ class ShipmentSeurApi
     /**
      * Operation shipmentSeurSeurGetShipmentWithHttpInfo
      *
-     * Cancels a shipment
-     *
-     * @param int $shipment_id The Id of a Shipment (required)
+     * @param int $shipment_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\SeurShipmentResponse, HTTP status code, HTTP response headers (array of strings)
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * UniversalPayPayByWebResponse
+ * BankwirePayInBankAccount
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace MarketPay\Model;
 use \ArrayAccess;
 
 /**
- * UniversalPayPayByWebResponse Class Doc Comment
+ * BankwirePayInBankAccount Class Doc Comment
  *
  * @category    Class
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UniversalPayPayByWebResponse implements ArrayAccess
+class BankwirePayInBankAccount implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,18 @@ class UniversalPayPayByWebResponse implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'UniversalPayPayByWebResponse';
+    protected static $swaggerModelName = 'BankwirePayInBankAccount';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pay_in_id' => 'string',
-        'url' => 'string'
+        'type' => 'string',
+        'owner_address' => '\MarketPay\Model\Address',
+        'owner_name' => 'string',
+        'iban' => 'string',
+        'bic' => 'string'
     ];
 
     /**
@@ -63,8 +66,11 @@ class UniversalPayPayByWebResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'pay_in_id' => null,
-        'url' => null
+        'type' => null,
+        'owner_address' => null,
+        'owner_name' => null,
+        'iban' => null,
+        'bic' => null
     ];
 
     public static function swaggerTypes()
@@ -82,8 +88,11 @@ class UniversalPayPayByWebResponse implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pay_in_id' => 'PayInId',
-        'url' => 'Url'
+        'type' => 'Type',
+        'owner_address' => 'OwnerAddress',
+        'owner_name' => 'OwnerName',
+        'iban' => 'IBAN',
+        'bic' => 'BIC'
     ];
 
 
@@ -92,8 +101,11 @@ class UniversalPayPayByWebResponse implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'pay_in_id' => 'setPayInId',
-        'url' => 'setUrl'
+        'type' => 'setType',
+        'owner_address' => 'setOwnerAddress',
+        'owner_name' => 'setOwnerName',
+        'iban' => 'setIban',
+        'bic' => 'setBic'
     ];
 
 
@@ -102,8 +114,11 @@ class UniversalPayPayByWebResponse implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'pay_in_id' => 'getPayInId',
-        'url' => 'getUrl'
+        'type' => 'getType',
+        'owner_address' => 'getOwnerAddress',
+        'owner_name' => 'getOwnerName',
+        'iban' => 'getIban',
+        'bic' => 'getBic'
     ];
 
     public static function attributeMap()
@@ -121,8 +136,28 @@ class UniversalPayPayByWebResponse implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_IBAN = 'IBAN';
+    const TYPE_GB = 'GB';
+    const TYPE_US = 'US';
+    const TYPE_CA = 'CA';
+    const TYPE_OTHER = 'OTHER';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_IBAN,
+            self::TYPE_GB,
+            self::TYPE_US,
+            self::TYPE_CA,
+            self::TYPE_OTHER,
+        ];
+    }
     
 
     /**
@@ -137,8 +172,11 @@ class UniversalPayPayByWebResponse implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pay_in_id'] = isset($data['pay_in_id']) ? $data['pay_in_id'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['owner_address'] = isset($data['owner_address']) ? $data['owner_address'] : null;
+        $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
+        $this->container['iban'] = isset($data['iban']) ? $data['iban'] : null;
+        $this->container['bic'] = isset($data['bic']) ? $data['bic'] : null;
     }
 
     /**
@@ -149,6 +187,14 @@ class UniversalPayPayByWebResponse implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = $this->getTypeAllowableValues();
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
 
         return $invalid_properties;
     }
@@ -162,48 +208,124 @@ class UniversalPayPayByWebResponse implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = $this->getTypeAllowableValues();
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets pay_in_id
+     * Gets type
      * @return string
      */
-    public function getPayInId()
+    public function getType()
     {
-        return $this->container['pay_in_id'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets pay_in_id
-     * @param string $pay_in_id
+     * Sets type
+     * @param string $type
      * @return $this
      */
-    public function setPayInId($pay_in_id)
+    public function setType($type)
     {
-        $this->container['pay_in_id'] = $pay_in_id;
+        $allowed_values = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'type', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets url
-     * @return string
+     * Gets owner_address
+     * @return \MarketPay\Model\Address
      */
-    public function getUrl()
+    public function getOwnerAddress()
     {
-        return $this->container['url'];
+        return $this->container['owner_address'];
     }
 
     /**
-     * Sets url
-     * @param string $url
+     * Sets owner_address
+     * @param \MarketPay\Model\Address $owner_address
      * @return $this
      */
-    public function setUrl($url)
+    public function setOwnerAddress($owner_address)
     {
-        $this->container['url'] = $url;
+        $this->container['owner_address'] = $owner_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_name
+     * @return string
+     */
+    public function getOwnerName()
+    {
+        return $this->container['owner_name'];
+    }
+
+    /**
+     * Sets owner_name
+     * @param string $owner_name
+     * @return $this
+     */
+    public function setOwnerName($owner_name)
+    {
+        $this->container['owner_name'] = $owner_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets iban
+     * @return string
+     */
+    public function getIban()
+    {
+        return $this->container['iban'];
+    }
+
+    /**
+     * Sets iban
+     * @param string $iban
+     * @return $this
+     */
+    public function setIban($iban)
+    {
+        $this->container['iban'] = $iban;
+
+        return $this;
+    }
+
+    /**
+     * Gets bic
+     * @return string
+     */
+    public function getBic()
+    {
+        return $this->container['bic'];
+    }
+
+    /**
+     * Sets bic
+     * @param string $bic
+     * @return $this
+     */
+    public function setBic($bic)
+    {
+        $this->container['bic'] = $bic;
 
         return $this;
     }

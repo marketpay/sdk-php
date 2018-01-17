@@ -213,7 +213,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -234,7 +234,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets pick_up_date
-     * @param int $pick_up_date 
+     * @param int $pick_up_date
      * @return $this
      */
     public function setPickUpDate($pick_up_date)
@@ -255,7 +255,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets sender
-     * @param \MarketPay\Model\ShipmentActor $sender 
+     * @param \MarketPay\Model\ShipmentActor $sender
      * @return $this
      */
     public function setSender($sender)
@@ -276,7 +276,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets receiver
-     * @param \MarketPay\Model\ShipmentActor $receiver 
+     * @param \MarketPay\Model\ShipmentActor $receiver
      * @return $this
      */
     public function setReceiver($receiver)
@@ -297,7 +297,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets sender_user_id
-     * @param string $sender_user_id The ID of the user sending the package
+     * @param string $sender_user_id
      * @return $this
      */
     public function setSenderUserId($sender_user_id)
@@ -318,7 +318,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets receiver_user_id
-     * @param string $receiver_user_id The ID of the user sending the package
+     * @param string $receiver_user_id
      * @return $this
      */
     public function setReceiverUserId($receiver_user_id)
@@ -339,7 +339,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets product
-     * @param \MarketPay\Model\Product $product 
+     * @param \MarketPay\Model\Product $product
      * @return $this
      */
     public function setProduct($product)
@@ -360,7 +360,7 @@ class SeurShipmentPost implements ArrayAccess
 
     /**
      * Sets observations
-     * @param string $observations 
+     * @param string $observations
      * @return $this
      */
     public function setObservations($observations)

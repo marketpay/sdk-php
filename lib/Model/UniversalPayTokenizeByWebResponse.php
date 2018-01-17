@@ -177,7 +177,7 @@ class UniversalPayTokenizeByWebResponse implements ArrayAccess
 
     /**
      * Sets token_id
-     * @param string $token_id Id of the payment
+     * @param string $token_id
      * @return $this
      */
     public function setTokenId($token_id)

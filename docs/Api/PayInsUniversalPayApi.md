@@ -4,18 +4,16 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payInsUniversalPayGetUniversalPayTokenization**](PayInsUniversalPayApi.md#payInsUniversalPayGetUniversalPayTokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | View a UniversalPay card tokenization status
-[**payInsUniversalPayUniversalPayGetPayment**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayGetPayment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | View a UniversalPay payment
-[**payInsUniversalPayUniversalPayPostPaymentByWeb**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayPostPaymentByWeb) | **POST** /v2.01/PayInsUniversalPay/payments/web | Create a UniversalPay PayIn Request
-[**payInsUniversalPayUniversalPayPostRefund**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayPostRefund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | Create a UniversalPay Payment Refund
+[**payInsUniversalPayGetUniversalPayTokenization**](PayInsUniversalPayApi.md#payInsUniversalPayGetUniversalPayTokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | 
+[**payInsUniversalPayUniversalPayGetPayment**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayGetPayment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | 
+[**payInsUniversalPayUniversalPayPostPaymentByWeb**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayPostPaymentByWeb) | **POST** /v2.01/PayInsUniversalPay/payments/web | 
+[**payInsUniversalPayUniversalPayPostRefund**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayPostRefund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | 
 [**payInsUniversalPayUniversalPaySaveCard**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPaySaveCard) | **POST** /v2.01/PayInsUniversalPay/token/web | 
 [**payInsUniversalPayUniversalPayWebhookPayment**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayWebhookPayment) | **POST** /v2.01/PayInsUniversalPay/webhook | 
 
 
 # **payInsUniversalPayGetUniversalPayTokenization**
 > \MarketPay\Model\UniversalPayTokenizationResponse payInsUniversalPayGetUniversalPayTokenization($token_id)
-
-View a UniversalPay card tokenization status
 
 
 
@@ -28,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsUniversalPayApi();
-$token_id = 789; // int | The Id of a tokenization
+$token_id = 789; // int | 
 
 try {
     $result = $api_instance->payInsUniversalPayGetUniversalPayTokenization($token_id);
@@ -43,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token_id** | **int**| The Id of a tokenization |
+ **token_id** | **int**|  |
 
 ### Return type
 
@@ -63,8 +61,6 @@ Name | Type | Description  | Notes
 # **payInsUniversalPayUniversalPayGetPayment**
 > \MarketPay\Model\UniversalPayPayInsResponse payInsUniversalPayUniversalPayGetPayment($pay_in_id)
 
-View a UniversalPay payment
-
 
 
 ### Example
@@ -76,7 +72,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsUniversalPayApi();
-$pay_in_id = 789; // int | The Id of a payment
+$pay_in_id = 789; // int | 
 
 try {
     $result = $api_instance->payInsUniversalPayUniversalPayGetPayment($pay_in_id);
@@ -91,7 +87,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pay_in_id** | **int**| The Id of a payment |
+ **pay_in_id** | **int**|  |
 
 ### Return type
 
@@ -111,9 +107,7 @@ Name | Type | Description  | Notes
 # **payInsUniversalPayUniversalPayPostPaymentByWeb**
 > \MarketPay\Model\UniversalPayPayByWebResponse payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in)
 
-Create a UniversalPay PayIn Request
 
-Prepares a payment on UniversalPay. The data returned is used to show the UniversalPay interface to the user.  Once the payment is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*_/_*;q=0.8\" -H \"Cache-Control: no-cache\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
 
 ### Example
 ```php
@@ -124,7 +118,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsUniversalPayApi();
-$universal_pay_pay_in = new \MarketPay\Model\UniversalPayPayByWebPost(); // \MarketPay\Model\UniversalPayPayByWebPost | UniversalPay PayIn Request Object params
+$universal_pay_pay_in = new \MarketPay\Model\UniversalPayPayByWebPost(); // \MarketPay\Model\UniversalPayPayByWebPost | 
 
 try {
     $result = $api_instance->payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in);
@@ -139,7 +133,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **universal_pay_pay_in** | [**\MarketPay\Model\UniversalPayPayByWebPost**](../Model/UniversalPayPayByWebPost.md)| UniversalPay PayIn Request Object params | [optional]
+ **universal_pay_pay_in** | [**\MarketPay\Model\UniversalPayPayByWebPost**](../Model/UniversalPayPayByWebPost.md)|  | [optional]
 
 ### Return type
 
@@ -159,9 +153,7 @@ Name | Type | Description  | Notes
 # **payInsUniversalPayUniversalPayPostRefund**
 > \MarketPay\Model\UniversalPayRefundResponse payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund)
 
-Create a UniversalPay Payment Refund
 
-A PayIn Refund is a request to reimburse a user on their payment card. The money which has already been paid will automatically go back to the user’s bank account.              Minimum amount to refund is 1€.              If you're doing a partial Refund, note that you can only refund the same amount on the same transaction once per day (this is to prevent unintended duplicate refunds). After 24h you can do another refund of the same amount on the same transaction. If it is a different amount on the same transaction, there is not this limit.              If you do not specify DebitedFunds and Fees parameters, it will automatically fully refund the PayIn. However if you do provide one or the other, you must provide both. Note that Fees must be negative if you wish to refund them - adding a positive value for the Fees is a way to charge your customers for the Refund (in the same way you might for a PayIn, Transfer or any other Transaction
 
 ### Example
 ```php
@@ -172,8 +164,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayInsUniversalPayApi();
-$pay_in_id = 789; // int | The Id of a PayIn
-$universal_pay_refund = new \MarketPay\Model\UniversalPayRefundPost(); // \MarketPay\Model\UniversalPayRefundPost | Refund Object params
+$pay_in_id = 789; // int | 
+$universal_pay_refund = new \MarketPay\Model\UniversalPayRefundPost(); // \MarketPay\Model\UniversalPayRefundPost | 
 
 try {
     $result = $api_instance->payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund);
@@ -188,8 +180,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pay_in_id** | **int**| The Id of a PayIn |
- **universal_pay_refund** | [**\MarketPay\Model\UniversalPayRefundPost**](../Model/UniversalPayRefundPost.md)| Refund Object params | [optional]
+ **pay_in_id** | **int**|  |
+ **universal_pay_refund** | [**\MarketPay\Model\UniversalPayRefundPost**](../Model/UniversalPayRefundPost.md)|  | [optional]
 
 ### Return type
 

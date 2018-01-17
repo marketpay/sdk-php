@@ -1,6 +1,6 @@
 <?php
 /**
- * BankAccountType
+ * PayInBankwireRefundPost
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace MarketPay\Model;
 use \ArrayAccess;
 
 /**
- * BankAccountType Class Doc Comment
+ * PayInBankwireRefundPost Class Doc Comment
  *
  * @category    Class
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BankAccountType implements ArrayAccess
+class PayInBankwireRefundPost implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,17 @@ class BankAccountType implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'BankAccountType';
+    protected static $swaggerModelName = 'PayInBankwireRefundPost';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'type' => 'string',
-        'owner_address' => '\MarketPay\Model\Address',
-        'owner_name' => 'string',
-        'iban' => 'string',
-        'bic' => 'string'
+        'tag' => 'string',
+        'debited_funds' => '\MarketPay\Model\Money',
+        'fees' => '\MarketPay\Model\Money',
+        'statement_descriptor' => 'string'
     ];
 
     /**
@@ -66,11 +65,10 @@ class BankAccountType implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'type' => null,
-        'owner_address' => null,
-        'owner_name' => null,
-        'iban' => null,
-        'bic' => null
+        'tag' => null,
+        'debited_funds' => null,
+        'fees' => null,
+        'statement_descriptor' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +86,10 @@ class BankAccountType implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'Type',
-        'owner_address' => 'OwnerAddress',
-        'owner_name' => 'OwnerName',
-        'iban' => 'IBAN',
-        'bic' => 'BIC'
+        'tag' => 'Tag',
+        'debited_funds' => 'DebitedFunds',
+        'fees' => 'Fees',
+        'statement_descriptor' => 'StatementDescriptor'
     ];
 
 
@@ -101,11 +98,10 @@ class BankAccountType implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'owner_address' => 'setOwnerAddress',
-        'owner_name' => 'setOwnerName',
-        'iban' => 'setIban',
-        'bic' => 'setBic'
+        'tag' => 'setTag',
+        'debited_funds' => 'setDebitedFunds',
+        'fees' => 'setFees',
+        'statement_descriptor' => 'setStatementDescriptor'
     ];
 
 
@@ -114,11 +110,10 @@ class BankAccountType implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'owner_address' => 'getOwnerAddress',
-        'owner_name' => 'getOwnerName',
-        'iban' => 'getIban',
-        'bic' => 'getBic'
+        'tag' => 'getTag',
+        'debited_funds' => 'getDebitedFunds',
+        'fees' => 'getFees',
+        'statement_descriptor' => 'getStatementDescriptor'
     ];
 
     public static function attributeMap()
@@ -136,28 +131,8 @@ class BankAccountType implements ArrayAccess
         return self::$getters;
     }
 
-    const TYPE_IBAN = 'IBAN';
-    const TYPE_GB = 'GB';
-    const TYPE_US = 'US';
-    const TYPE_CA = 'CA';
-    const TYPE_OTHER = 'OTHER';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_IBAN,
-            self::TYPE_GB,
-            self::TYPE_US,
-            self::TYPE_CA,
-            self::TYPE_OTHER,
-        ];
-    }
     
 
     /**
@@ -172,11 +147,10 @@ class BankAccountType implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['owner_address'] = isset($data['owner_address']) ? $data['owner_address'] : null;
-        $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
-        $this->container['iban'] = isset($data['iban']) ? $data['iban'] : null;
-        $this->container['bic'] = isset($data['bic']) ? $data['bic'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['debited_funds'] = isset($data['debited_funds']) ? $data['debited_funds'] : null;
+        $this->container['fees'] = isset($data['fees']) ? $data['fees'] : null;
+        $this->container['statement_descriptor'] = isset($data['statement_descriptor']) ? $data['statement_descriptor'] : null;
     }
 
     /**
@@ -187,14 +161,6 @@ class BankAccountType implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-
-        $allowed_values = $this->getTypeAllowableValues();
-        if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowed_values)
-            );
-        }
 
         return $invalid_properties;
     }
@@ -208,124 +174,90 @@ class BankAccountType implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = $this->getTypeAllowableValues();
-        if (!in_array($this->container['type'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets type
+     * Gets tag
      * @return string
      */
-    public function getType()
+    public function getTag()
     {
-        return $this->container['type'];
+        return $this->container['tag'];
     }
 
     /**
-     * Sets type
-     * @param string $type The type of bank account
+     * Sets tag
+     * @param string $tag
      * @return $this
      */
-    public function setType($type)
+    public function setTag($tag)
     {
-        $allowed_values = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowed_values)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
-                    implode("', '", $allowed_values)
-                )
-            );
-        }
-        $this->container['type'] = $type;
+        $this->container['tag'] = $tag;
 
         return $this;
     }
 
     /**
-     * Gets owner_address
-     * @return \MarketPay\Model\Address
+     * Gets debited_funds
+     * @return \MarketPay\Model\Money
      */
-    public function getOwnerAddress()
+    public function getDebitedFunds()
     {
-        return $this->container['owner_address'];
+        return $this->container['debited_funds'];
     }
 
     /**
-     * Sets owner_address
-     * @param \MarketPay\Model\Address $owner_address The address of the owner of the bank account
+     * Sets debited_funds
+     * @param \MarketPay\Model\Money $debited_funds
      * @return $this
      */
-    public function setOwnerAddress($owner_address)
+    public function setDebitedFunds($debited_funds)
     {
-        $this->container['owner_address'] = $owner_address;
+        $this->container['debited_funds'] = $debited_funds;
 
         return $this;
     }
 
     /**
-     * Gets owner_name
-     * @return string
+     * Gets fees
+     * @return \MarketPay\Model\Money
      */
-    public function getOwnerName()
+    public function getFees()
     {
-        return $this->container['owner_name'];
+        return $this->container['fees'];
     }
 
     /**
-     * Sets owner_name
-     * @param string $owner_name The name of the owner of the bank account
+     * Sets fees
+     * @param \MarketPay\Model\Money $fees
      * @return $this
      */
-    public function setOwnerName($owner_name)
+    public function setFees($fees)
     {
-        $this->container['owner_name'] = $owner_name;
+        $this->container['fees'] = $fees;
 
         return $this;
     }
 
     /**
-     * Gets iban
+     * Gets statement_descriptor
      * @return string
      */
-    public function getIban()
+    public function getStatementDescriptor()
     {
-        return $this->container['iban'];
+        return $this->container['statement_descriptor'];
     }
 
     /**
-     * Sets iban
-     * @param string $iban The IBAN of the bank account
+     * Sets statement_descriptor
+     * @param string $statement_descriptor
      * @return $this
      */
-    public function setIban($iban)
+    public function setStatementDescriptor($statement_descriptor)
     {
-        $this->container['iban'] = $iban;
-
-        return $this;
-    }
-
-    /**
-     * Gets bic
-     * @return string
-     */
-    public function getBic()
-    {
-        return $this->container['bic'];
-    }
-
-    /**
-     * Sets bic
-     * @param string $bic The BIC of the bank account
-     * @return $this
-     */
-    public function setBic($bic)
-    {
-        $this->container['bic'] = $bic;
+        $this->container['statement_descriptor'] = $statement_descriptor;
 
         return $this;
     }

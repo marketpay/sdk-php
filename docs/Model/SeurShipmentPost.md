@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tag** | **string** | Custom data that you can add to this item | [optional] 
+**tag** | **string** |  | [optional] 
 **pick_up_date** | **int** |  | [optional] 
 **sender** | [**\MarketPay\Model\ShipmentActor**](ShipmentActor.md) |  | [optional] 
 **receiver** | [**\MarketPay\Model\ShipmentActor**](ShipmentActor.md) |  | [optional] 
-**sender_user_id** | **string** | The ID of the user sending the package | [optional] 
-**receiver_user_id** | **string** | The ID of the user sending the package | [optional] 
+**sender_user_id** | **string** |  | [optional] 
+**receiver_user_id** | **string** |  | [optional] 
 **product** | [**\MarketPay\Model\Product**](Product.md) |  | [optional] 
 **observations** | **string** |  | [optional] 
 

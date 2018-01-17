@@ -90,9 +90,7 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysGetPayment
      *
-     * View a Redsys payment
-     *
-     * @param int $pay_in_id The Id of a payment (required)
+     * @param int $pay_in_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\RedsysPayInsResponse
      */
@@ -105,9 +103,7 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysGetPaymentWithHttpInfo
      *
-     * View a Redsys payment
-     *
-     * @param int $pay_in_id The Id of a payment (required)
+     * @param int $pay_in_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\RedsysPayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -180,9 +176,7 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysGetPreauthorization
      *
-     * View a Redsys Preauthorization
-     *
-     * @param int $preauthorization_id The Id of a Redsys Preauthorization (required)
+     * @param int $preauthorization_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\RedsysPreauthorizeResponse
      */
@@ -195,9 +189,7 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysGetPreauthorizationWithHttpInfo
      *
-     * View a Redsys Preauthorization
-     *
-     * @param int $preauthorization_id The Id of a Redsys Preauthorization (required)
+     * @param int $preauthorization_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\RedsysPreauthorizeResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -270,10 +262,8 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysPostPaymentByWeb
      *
-     * Create a Redsys PayIn Request
-     *
      * @param string $x_webhook  (optional)
-     * @param \MarketPay\Model\RedsysPayByWebPost $redsys_pay_in Redsys PayIn Request Object params (optional)
+     * @param \MarketPay\Model\RedsysPayByWebPost $redsys_pay_in  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\RedsysPayByWebResponse
      */
@@ -286,10 +276,8 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysPostPaymentByWebWithHttpInfo
      *
-     * Create a Redsys PayIn Request
-     *
      * @param string $x_webhook  (optional)
-     * @param \MarketPay\Model\RedsysPayByWebPost $redsys_pay_in Redsys PayIn Request Object params (optional)
+     * @param \MarketPay\Model\RedsysPayByWebPost $redsys_pay_in  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\RedsysPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -359,9 +347,7 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysPostPreauthorizationByWeb
      *
-     * Create a Redsys Preauthorization Request
-     *
-     * @param \MarketPay\Model\RedsysPreauthorizeByWebPost $redsys_preauthorization RedsysPreauthorization Object params (optional)
+     * @param \MarketPay\Model\RedsysPreauthorizeByWebPost $redsys_preauthorization  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\RedsysPreauthorizeByWebResponse
      */
@@ -374,9 +360,7 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysPostPreauthorizationByWebWithHttpInfo
      *
-     * Create a Redsys Preauthorization Request
-     *
-     * @param \MarketPay\Model\RedsysPreauthorizeByWebPost $redsys_preauthorization RedsysPreauthorization Object params (optional)
+     * @param \MarketPay\Model\RedsysPreauthorizeByWebPost $redsys_preauthorization  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\RedsysPreauthorizeByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -442,10 +426,8 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysPostPreauthorizationCancellation
      *
-     * Cancels a Preauthorization
-     *
-     * @param int $preauthorization_id The Id of a Redsys Preauthorization (required)
-     * @param \MarketPay\Model\RedsysPreauthorizationCancellationPost $redsys_preauthorization_cancellation PreauthorizationCancellation Object params (optional)
+     * @param int $preauthorization_id  (required)
+     * @param \MarketPay\Model\RedsysPreauthorizationCancellationPost $redsys_preauthorization_cancellation  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\RedsysPreauthorizationCancellationResponse
      */
@@ -458,10 +440,8 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysPostPreauthorizationCancellationWithHttpInfo
      *
-     * Cancels a Preauthorization
-     *
-     * @param int $preauthorization_id The Id of a Redsys Preauthorization (required)
-     * @param \MarketPay\Model\RedsysPreauthorizationCancellationPost $redsys_preauthorization_cancellation PreauthorizationCancellation Object params (optional)
+     * @param int $preauthorization_id  (required)
+     * @param \MarketPay\Model\RedsysPreauthorizationCancellationPost $redsys_preauthorization_cancellation  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\RedsysPreauthorizationCancellationResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -539,10 +519,8 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysPostPreauthorizationConfirmation
      *
-     * Confirms a Preauthorization
-     *
-     * @param int $preauthorization_id The Id of a Redsys Preauthorization (required)
-     * @param \MarketPay\Model\RedsysPreauthorizationConfirmationPost $redsys_preauthorization_confirmation PreauthorizationConfirmation Object params (optional)
+     * @param int $preauthorization_id  (required)
+     * @param \MarketPay\Model\RedsysPreauthorizationConfirmationPost $redsys_preauthorization_confirmation  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\RedsysPreauthorizationConfirmationResponse
      */
@@ -555,10 +533,8 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysPostPreauthorizationConfirmationWithHttpInfo
      *
-     * Confirms a Preauthorization
-     *
-     * @param int $preauthorization_id The Id of a Redsys Preauthorization (required)
-     * @param \MarketPay\Model\RedsysPreauthorizationConfirmationPost $redsys_preauthorization_confirmation PreauthorizationConfirmation Object params (optional)
+     * @param int $preauthorization_id  (required)
+     * @param \MarketPay\Model\RedsysPreauthorizationConfirmationPost $redsys_preauthorization_confirmation  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\RedsysPreauthorizationConfirmationResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -636,10 +612,8 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysPostRefund
      *
-     * Create a Redsys Payment Refund
-     *
-     * @param int $pay_in_id The Id of a PayIn (required)
-     * @param \MarketPay\Model\RedsysRefundPost $redsys_refund Refund Object params (optional)
+     * @param int $pay_in_id  (required)
+     * @param \MarketPay\Model\RedsysRefundPost $redsys_refund  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\RedsysRefundResponse
      */
@@ -652,10 +626,8 @@ class PayInsRedsysApi
     /**
      * Operation payInsRedsysRedsysPostRefundWithHttpInfo
      *
-     * Create a Redsys Payment Refund
-     *
-     * @param int $pay_in_id The Id of a PayIn (required)
-     * @param \MarketPay\Model\RedsysRefundPost $redsys_refund Refund Object params (optional)
+     * @param int $pay_in_id  (required)
+     * @param \MarketPay\Model\RedsysRefundPost $redsys_refund  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\RedsysRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */

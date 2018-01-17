@@ -90,9 +90,7 @@ class PayInsBankwireApi
     /**
      * Operation payInsBankwireBankwireGetPayment
      *
-     * View a Bankwire PayIn
-     *
-     * @param int $pay_in_id The Id of a payment (required)
+     * @param int $pay_in_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\PayInBankwireResponse
      */
@@ -105,9 +103,7 @@ class PayInsBankwireApi
     /**
      * Operation payInsBankwireBankwireGetPaymentWithHttpInfo
      *
-     * View a Bankwire PayIn
-     *
-     * @param int $pay_in_id The Id of a payment (required)
+     * @param int $pay_in_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\PayInBankwireResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -180,9 +176,7 @@ class PayInsBankwireApi
     /**
      * Operation payInsBankwireBankwirePaymentByDirect
      *
-     * Create a Bankwire PayIn
-     *
-     * @param \MarketPay\Model\PayInBankwirePost $bankwire_pay_in Redsys PayIn Request Object params (optional)
+     * @param \MarketPay\Model\PayInBankwirePost $bankwire_pay_in  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\PayInBankwireResponse
      */
@@ -195,9 +189,7 @@ class PayInsBankwireApi
     /**
      * Operation payInsBankwireBankwirePaymentByDirectWithHttpInfo
      *
-     * Create a Bankwire PayIn
-     *
-     * @param \MarketPay\Model\PayInBankwirePost $bankwire_pay_in Redsys PayIn Request Object params (optional)
+     * @param \MarketPay\Model\PayInBankwirePost $bankwire_pay_in  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\PayInBankwireResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -248,6 +240,99 @@ class PayInsBankwireApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\PayInBankwireResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation payInsBankwireBankwirePostRefund
+     *
+     * @param int $pay_in_id  (required)
+     * @param \MarketPay\Model\PayInBankwireRefundPost $bankwire_refund  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\PayInBankwireRefundResponse
+     */
+    public function payInsBankwireBankwirePostRefund($pay_in_id, $bankwire_refund = null)
+    {
+        list($response) = $this->payInsBankwireBankwirePostRefundWithHttpInfo($pay_in_id, $bankwire_refund);
+        return $response;
+    }
+
+    /**
+     * Operation payInsBankwireBankwirePostRefundWithHttpInfo
+     *
+     * @param int $pay_in_id  (required)
+     * @param \MarketPay\Model\PayInBankwireRefundPost $bankwire_refund  (optional)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\PayInBankwireRefundResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function payInsBankwireBankwirePostRefundWithHttpInfo($pay_in_id, $bankwire_refund = null)
+    {
+        // verify the required parameter 'pay_in_id' is set
+        if ($pay_in_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsBankwireBankwirePostRefund');
+        }
+        // parse inputs
+        $resourcePath = "/v2.01/PayInsBankwire/payments/{PayInId}/refunds";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json']);
+
+        // path params
+        if ($pay_in_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "PayInId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($pay_in_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($bankwire_refund)) {
+            $_tempBody = $bankwire_refund;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\MarketPay\Model\PayInBankwireRefundResponse',
+                '/v2.01/PayInsBankwire/payments/{PayInId}/refunds'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\PayInBankwireRefundResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\PayInBankwireRefundResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

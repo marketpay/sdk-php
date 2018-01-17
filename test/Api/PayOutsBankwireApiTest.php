@@ -75,7 +75,7 @@ class PayOutsBankwireApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payOutsBankwireGet
      *
-     * View a Bankwire PayOut.
+     * .
      *
      */
     public function testPayOutsBankwireGet()
@@ -85,7 +85,7 @@ class PayOutsBankwireApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for payOutsBankwirePost
      *
-     * Create a Bankwire PayOut.
+     * .
      *
      */
     public function testPayOutsBankwirePost()

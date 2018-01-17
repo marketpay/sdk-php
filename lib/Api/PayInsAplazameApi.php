@@ -183,9 +183,7 @@ class PayInsAplazameApi
     /**
      * Operation payInsAplazameAplazameGetPayment
      *
-     * -------
-     *
-     * @param string $pay_in_id ------ (required)
+     * @param string $pay_in_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\AplazamePayInsResponse
      */
@@ -198,9 +196,7 @@ class PayInsAplazameApi
     /**
      * Operation payInsAplazameAplazameGetPaymentWithHttpInfo
      *
-     * -------
-     *
-     * @param string $pay_in_id ------ (required)
+     * @param string $pay_in_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\AplazamePayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -273,9 +269,7 @@ class PayInsAplazameApi
     /**
      * Operation payInsAplazameAplazamePostPaymentByWeb
      *
-     * --------
-     *
-     * @param \MarketPay\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
+     * @param \MarketPay\Model\AplazamePayByWebPost $aplazame_pay_in  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return \MarketPay\Model\AplazamePayByWebResponse
      */
@@ -288,9 +282,7 @@ class PayInsAplazameApi
     /**
      * Operation payInsAplazameAplazamePostPaymentByWebWithHttpInfo
      *
-     * --------
-     *
-     * @param \MarketPay\Model\AplazamePayByWebPost $aplazame_pay_in ------------ (optional)
+     * @param \MarketPay\Model\AplazamePayByWebPost $aplazame_pay_in  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
      * @return array of \MarketPay\Model\AplazamePayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */

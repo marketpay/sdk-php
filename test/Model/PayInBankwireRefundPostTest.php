@@ -1,6 +1,6 @@
 <?php
 /**
- * BankAccountTypeTest
+ * PayInBankwireRefundPostTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace MarketPay;
 
 /**
- * BankAccountTypeTest Class Doc Comment
+ * PayInBankwireRefundPostTest Class Doc Comment
  *
  * @category    Class */
-// * @description BankAccountType
+// * @description PayInBankwireRefundPost
 /**
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BankAccountTypeTest extends \PHPUnit_Framework_TestCase
+class PayInBankwireRefundPostTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,44 +71,37 @@ class BankAccountTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BankAccountType"
+     * Test "PayInBankwireRefundPost"
      */
-    public function testBankAccountType()
+    public function testPayInBankwireRefundPost()
     {
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "tag"
      */
-    public function testPropertyType()
+    public function testPropertyTag()
     {
     }
 
     /**
-     * Test attribute "owner_address"
+     * Test attribute "debited_funds"
      */
-    public function testPropertyOwnerAddress()
+    public function testPropertyDebitedFunds()
     {
     }
 
     /**
-     * Test attribute "owner_name"
+     * Test attribute "fees"
      */
-    public function testPropertyOwnerName()
+    public function testPropertyFees()
     {
     }
 
     /**
-     * Test attribute "iban"
+     * Test attribute "statement_descriptor"
      */
-    public function testPropertyIban()
-    {
-    }
-
-    /**
-     * Test attribute "bic"
-     */
-    public function testPropertyBic()
+    public function testPropertyStatementDescriptor()
     {
     }
 }

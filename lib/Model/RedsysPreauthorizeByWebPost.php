@@ -295,7 +295,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -316,7 +316,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets save_card
-     * @param bool $save_card Whether to save or not the card for future use. SaveCard and CardId are mutually exclusive
+     * @param bool $save_card
      * @return $this
      */
     public function setSaveCard($save_card)
@@ -337,7 +337,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets card_id
-     * @param string $card_id The id of a previous saved card. SaveCard and CardId are mutually exclusive
+     * @param string $card_id
      * @return $this
      */
     public function setCardId($card_id)
@@ -358,7 +358,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets author_id
-     * @param string $author_id A user's ID
+     * @param string $author_id
      * @return $this
      */
     public function setAuthorId($author_id)
@@ -379,7 +379,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets statement_descriptor
-     * @param string $statement_descriptor A custom description to appear on the user's bank statement. It can be up to 10 characters long, and can only include alphanumeric characters or spaces
+     * @param string $statement_descriptor
      * @return $this
      */
     public function setStatementDescriptor($statement_descriptor)
@@ -400,7 +400,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets success_url
-     * @param string $success_url Dirección (relativa a la tienda) a la que redirigirá cuando se haya completado el pago.
+     * @param string $success_url
      * @return $this
      */
     public function setSuccessUrl($success_url)
@@ -421,7 +421,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets cancel_url
-     * @param string $cancel_url Dirección (relativa a la tienda) a la que redirigirá en caso de error en el pago.
+     * @param string $cancel_url
      * @return $this
      */
     public function setCancelUrl($cancel_url)
@@ -442,7 +442,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -463,7 +463,7 @@ class RedsysPreauthorizeByWebPost implements ArrayAccess
 
     /**
      * Sets language
-     * @param string $language Valid values are ES, EN, CA, FR, DE, NL, IT, SV, PT, PL, GL and EU
+     * @param string $language
      * @return $this
      */
     public function setLanguage($language)

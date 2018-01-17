@@ -4,17 +4,15 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**shipmentSeurSeurCancelShipment**](ShipmentSeurApi.md#shipmentSeurSeurCancelShipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | Cancels a shipment
-[**shipmentSeurSeurCreateShipment**](ShipmentSeurApi.md#shipmentSeurSeurCreateShipment) | **POST** /v2.01/ShipmentSeur/shipments | Creates a shipment
-[**shipmentSeurSeurGetShipment**](ShipmentSeurApi.md#shipmentSeurSeurGetShipment) | **GET** /v2.01/ShipmentSeur/shipments/{ShipmentId} | Cancels a shipment
+[**shipmentSeurSeurCancelShipment**](ShipmentSeurApi.md#shipmentSeurSeurCancelShipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | 
+[**shipmentSeurSeurCreateShipment**](ShipmentSeurApi.md#shipmentSeurSeurCreateShipment) | **POST** /v2.01/ShipmentSeur/shipments | 
+[**shipmentSeurSeurGetShipment**](ShipmentSeurApi.md#shipmentSeurSeurGetShipment) | **GET** /v2.01/ShipmentSeur/shipments/{ShipmentId} | 
 
 
 # **shipmentSeurSeurCancelShipment**
 > \MarketPay\Model\SeurShipmentCancellationResponse shipmentSeurSeurCancelShipment($shipment_id)
 
-Cancels a shipment
 
-Cancels a shipment
 
 ### Example
 ```php
@@ -25,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\ShipmentSeurApi();
-$shipment_id = 789; // int | The Id of a Shipment
+$shipment_id = 789; // int | 
 
 try {
     $result = $api_instance->shipmentSeurSeurCancelShipment($shipment_id);
@@ -40,7 +38,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shipment_id** | **int**| The Id of a Shipment |
+ **shipment_id** | **int**|  |
 
 ### Return type
 
@@ -60,9 +58,7 @@ Name | Type | Description  | Notes
 # **shipmentSeurSeurCreateShipment**
 > \MarketPay\Model\SeurShipmentResponse shipmentSeurSeurCreateShipment($shipment)
 
-Creates a shipment
 
-Creates a shipment
 
 ### Example
 ```php
@@ -73,7 +69,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\ShipmentSeurApi();
-$shipment = new \MarketPay\Model\SeurShipmentPost(); // \MarketPay\Model\SeurShipmentPost | Seur Shipment Object params
+$shipment = new \MarketPay\Model\SeurShipmentPost(); // \MarketPay\Model\SeurShipmentPost | 
 
 try {
     $result = $api_instance->shipmentSeurSeurCreateShipment($shipment);
@@ -88,7 +84,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shipment** | [**\MarketPay\Model\SeurShipmentPost**](../Model/SeurShipmentPost.md)| Seur Shipment Object params | [optional]
+ **shipment** | [**\MarketPay\Model\SeurShipmentPost**](../Model/SeurShipmentPost.md)|  | [optional]
 
 ### Return type
 
@@ -108,9 +104,7 @@ Name | Type | Description  | Notes
 # **shipmentSeurSeurGetShipment**
 > \MarketPay\Model\SeurShipmentResponse shipmentSeurSeurGetShipment($shipment_id)
 
-Cancels a shipment
 
-Cancels a shipment
 
 ### Example
 ```php
@@ -121,7 +115,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\ShipmentSeurApi();
-$shipment_id = 789; // int | The Id of a Shipment
+$shipment_id = 789; // int | 
 
 try {
     $result = $api_instance->shipmentSeurSeurGetShipment($shipment_id);
@@ -136,7 +130,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shipment_id** | **int**| The Id of a Shipment |
+ **shipment_id** | **int**|  |
 
 ### Return type
 

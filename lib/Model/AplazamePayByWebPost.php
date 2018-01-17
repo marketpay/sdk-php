@@ -261,7 +261,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets tag
-     * @param string $tag Custom data that you can add to this item
+     * @param string $tag
      * @return $this
      */
     public function setTag($tag)
@@ -282,7 +282,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets user_id
-     * @param int $user_id Whether to save or not the card for future use. SaveCard and CardId are mutually exclusive
+     * @param int $user_id
      * @return $this
      */
     public function setUserId($user_id)
@@ -303,7 +303,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets credited_wallet_id
-     * @param string $credited_wallet_id The ID of the wallet where money will be credited
+     * @param string $credited_wallet_id
      * @return $this
      */
     public function setCreditedWalletId($credited_wallet_id)
@@ -324,7 +324,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets debited_funds
-     * @param \MarketPay\Model\Money $debited_funds Information about the funds that are being debited
+     * @param \MarketPay\Model\Money $debited_funds
      * @return $this
      */
     public function setDebitedFunds($debited_funds)
@@ -345,7 +345,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets fees
-     * @param \MarketPay\Model\Money $fees Information about the fees that were taken by the client for this transaction (and were hence transferred to the Client's platform wallet)
+     * @param \MarketPay\Model\Money $fees
      * @return $this
      */
     public function setFees($fees)
@@ -387,7 +387,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets cancel_url
-     * @param string $cancel_url Dirección (relativa a la tienda) a la que redirigirá en caso de error en el pago.
+     * @param string $cancel_url
      * @return $this
      */
     public function setCancelUrl($cancel_url)
@@ -408,7 +408,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets success_url
-     * @param string $success_url Dirección (relativa a la tienda) a la que redirigirá cuando se haya completado el pago.
+     * @param string $success_url
      * @return $this
      */
     public function setSuccessUrl($success_url)
@@ -429,7 +429,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets checkout_url
-     * @param string $checkout_url Dirección a la que se redirigirá el usuario si escoge volver a la tienda (por omisión '/').
+     * @param string $checkout_url
      * @return $this
      */
     public function setCheckoutUrl($checkout_url)
@@ -471,7 +471,7 @@ class AplazamePayByWebPost implements ArrayAccess
 
     /**
      * Sets customer
-     * @param \MarketPay\Model\Customer $customer Customer data.
+     * @param \MarketPay\Model\Customer $customer
      * @return $this
      */
     public function setCustomer($customer)

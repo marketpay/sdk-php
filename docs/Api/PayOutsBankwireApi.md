@@ -4,16 +4,14 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payOutsBankwireGet**](PayOutsBankwireApi.md#payOutsBankwireGet) | **GET** /v2.01/PayOutsBankwire/payments/{PayOutId} | View a Bankwire PayOut
-[**payOutsBankwirePost**](PayOutsBankwireApi.md#payOutsBankwirePost) | **POST** /v2.01/PayOutsBankwire/payments/direct | Create a Bankwire PayOut
+[**payOutsBankwireGet**](PayOutsBankwireApi.md#payOutsBankwireGet) | **GET** /v2.01/PayOutsBankwire/payments/{PayOutId} | 
+[**payOutsBankwirePost**](PayOutsBankwireApi.md#payOutsBankwirePost) | **POST** /v2.01/PayOutsBankwire/payments/direct | 
 
 
 # **payOutsBankwireGet**
 > \MarketPay\Model\PayOutBankwireResponse payOutsBankwireGet($pay_out_id)
 
-View a Bankwire PayOut
 
-View a Bankwire PayOut
 
 ### Example
 ```php
@@ -24,7 +22,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayOutsBankwireApi();
-$pay_out_id = 789; // int | The Id of a payment
+$pay_out_id = 789; // int | 
 
 try {
     $result = $api_instance->payOutsBankwireGet($pay_out_id);
@@ -39,7 +37,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pay_out_id** | **int**| The Id of a payment |
+ **pay_out_id** | **int**|  |
 
 ### Return type
 
@@ -59,9 +57,7 @@ Name | Type | Description  | Notes
 # **payOutsBankwirePost**
 > \MarketPay\Model\PayOutBankwireResponse payOutsBankwirePost($bankwire_pay_out)
 
-Create a Bankwire PayOut
 
-Create a Bankwire PayOut.
 
 ### Example
 ```php
@@ -72,7 +68,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 $api_instance = new MarketPay\Api\PayOutsBankwireApi();
-$bankwire_pay_out = new \MarketPay\Model\PayOutBankwirePost(); // \MarketPay\Model\PayOutBankwirePost | Redsys PayIn Request Object params
+$bankwire_pay_out = new \MarketPay\Model\PayOutBankwirePost(); // \MarketPay\Model\PayOutBankwirePost | 
 
 try {
     $result = $api_instance->payOutsBankwirePost($bankwire_pay_out);
@@ -87,7 +83,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bankwire_pay_out** | [**\MarketPay\Model\PayOutBankwirePost**](../Model/PayOutBankwirePost.md)| Redsys PayIn Request Object params | [optional]
+ **bankwire_pay_out** | [**\MarketPay\Model\PayOutBankwirePost**](../Model/PayOutBankwirePost.md)|  | [optional]
 
 ### Return type
 
