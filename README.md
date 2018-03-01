@@ -89,7 +89,13 @@ Class | Method | HTTP request | Description
 *KycApi* | [**kycPutDocument**](docs/Api/KycApi.md#kycputdocument) | **PUT** /v2.01/Kyc/users/{UserId}/documents/add/{DocumentType} | Adds files to a document.
 *KycApi* | [**kycPutLegal**](docs/Api/KycApi.md#kycputlegal) | **POST** /v2.01/Kyc/users/legal/{UserId} | Update a Legal User
 *KycApi* | [**kycPutRequest**](docs/Api/KycApi.md#kycputrequest) | **PUT** /v2.01/Kyc/users/natural/{UserId}/requestValidation | 
-*PayInsAplazameApi* | [**payInsAplazameAplazameConfirmPayment**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazameconfirmpayment) | **POST** /v2.01/PayInsAplazame/webhook/pay/{PayInId} | 
+*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsGetPayment**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentsgetpayment) | **GET** /v2.01/PayInsAddonPayments/payments/{PayInId} | 
+*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsGetPreauthorization**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentsgetpreauthorization) | **GET** /v2.01/PayInsAddonPayments/preauthorizations/{PreauthorizationId} | 
+*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostPaymentByWeb**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostpaymentbyweb) | **POST** /v2.01/PayInsAddonPayments/payments/web | 
+*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostpreauthorizationbyweb) | **POST** /v2.01/PayInsAddonPayments/preauthorizations/web | 
+*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostpreauthorizationcancellation) | **POST** /v2.01/PayInsAddonPayments/preauthorizations/{PreauthorizationId}/cancellation | 
+*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostpreauthorizationconfirmation) | **POST** /v2.01/PayInsAddonPayments/preauthorizations/{PreauthorizationId}/confirmation | 
+*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostRefund**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostrefund) | **POST** /v2.01/PayInsAddonPayments/payments/{PayInId}/refunds | 
 *PayInsAplazameApi* | [**payInsAplazameAplazameGetPayment**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamegetpayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | 
 *PayInsAplazameApi* | [**payInsAplazameAplazamePostPaymentByWeb**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamepostpaymentbyweb) | **POST** /v2.01/PayInsAplazame/payments/web | 
 *PayInsAplazameApi* | [**payInsAplazameRefund**](docs/Api/PayInsAplazameApi.md#payinsaplazamerefund) | **POST** /v2.01/PayInsAplazame/payments/{PayInId}/refunds | 
@@ -103,16 +109,17 @@ Class | Method | HTTP request | Description
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationCancellation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationcancellation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationConfirmation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationconfirmation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostRefund**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostrefund) | **POST** /v2.01/PayInsRedsys/payments/{PayInId}/refunds | 
-*PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpayment) | **POST** /v2.01/PayInsRedsys/webhook/pay/{IntentId} | 
-*PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPaymentSoap**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpaymentsoap) | **POST** /v2.01/PayInsRedsys/webhook/paysoap/{IntentId} | 
-*PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPreauthorization**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpreauthorization) | **POST** /v2.01/PayInsRedsys/webhook/preauthorize/{IntentId} | 
-*PayInsRedsysApi* | [**payInsRedsysRedsysWebhookPreauthorizationSoap**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyswebhookpreauthorizationsoap) | **POST** /v2.01/PayInsRedsys/webhook/preauthorizesoap/{IntentId} | 
 *PayInsUniversalPayApi* | [**payInsUniversalPayGetUniversalPayTokenization**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpaygetuniversalpaytokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | 
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayGetPayment**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaygetpayment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | 
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostPaymentByWeb**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostpaymentbyweb) | **POST** /v2.01/PayInsUniversalPay/payments/web | 
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostRefund**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostrefund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | 
 *PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPaySaveCard**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaysavecard) | **POST** /v2.01/PayInsUniversalPay/token/web | 
-*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayWebhookPayment**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaywebhookpayment) | **POST** /v2.01/PayInsUniversalPay/webhook | 
+*PayInsWebPayApi* | [**payInsWebPayDeleteWebPayToken**](docs/Api/PayInsWebPayApi.md#payinswebpaydeletewebpaytoken) | **DELETE** /v2.01/PayInsWebPay/token/{TokenId} | 
+*PayInsWebPayApi* | [**payInsWebPayGetWebPayTokenization**](docs/Api/PayInsWebPayApi.md#payinswebpaygetwebpaytokenization) | **GET** /v2.01/PayInsWebPay/token/{TokenId} | 
+*PayInsWebPayApi* | [**payInsWebPayWebPayGetPayment**](docs/Api/PayInsWebPayApi.md#payinswebpaywebpaygetpayment) | **GET** /v2.01/PayInsWebPay/payments/{PayInId} | 
+*PayInsWebPayApi* | [**payInsWebPayWebPayPostPaymentByWeb**](docs/Api/PayInsWebPayApi.md#payinswebpaywebpaypostpaymentbyweb) | **POST** /v2.01/PayInsWebPay/payments/web | 
+*PayInsWebPayApi* | [**payInsWebPayWebPayPostRefund**](docs/Api/PayInsWebPayApi.md#payinswebpaywebpaypostrefund) | **POST** /v2.01/PayInsWebPay/payments/{PayInId}/refunds | 
+*PayInsWebPayApi* | [**payInsWebPayWebPaySaveCard**](docs/Api/PayInsWebPayApi.md#payinswebpaywebpaysavecard) | **POST** /v2.01/PayInsWebPay/token/web | 
 *PayOutsBankwireApi* | [**payOutsBankwireGet**](docs/Api/PayOutsBankwireApi.md#payoutsbankwireget) | **GET** /v2.01/PayOutsBankwire/payments/{PayOutId} | 
 *PayOutsBankwireApi* | [**payOutsBankwirePost**](docs/Api/PayOutsBankwireApi.md#payoutsbankwirepost) | **POST** /v2.01/PayOutsBankwire/payments/direct | 
 *PingAuthorizedApi* | [**pingAuthorizedGet**](docs/Api/PingAuthorizedApi.md#pingauthorizedget) | **GET** /v2.01/PingAuthorized | 
@@ -152,6 +159,18 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AddonPaymentsPayByWebPost](docs/Model/AddonPaymentsPayByWebPost.md)
+ - [AddonPaymentsPayByWebResponse](docs/Model/AddonPaymentsPayByWebResponse.md)
+ - [AddonPaymentsPayInsResponse](docs/Model/AddonPaymentsPayInsResponse.md)
+ - [AddonPaymentsPreauthorizationCancellationPost](docs/Model/AddonPaymentsPreauthorizationCancellationPost.md)
+ - [AddonPaymentsPreauthorizationCancellationResponse](docs/Model/AddonPaymentsPreauthorizationCancellationResponse.md)
+ - [AddonPaymentsPreauthorizationConfirmationPost](docs/Model/AddonPaymentsPreauthorizationConfirmationPost.md)
+ - [AddonPaymentsPreauthorizationConfirmationResponse](docs/Model/AddonPaymentsPreauthorizationConfirmationResponse.md)
+ - [AddonPaymentsPreauthorizeByWebPost](docs/Model/AddonPaymentsPreauthorizeByWebPost.md)
+ - [AddonPaymentsPreauthorizeByWebResponse](docs/Model/AddonPaymentsPreauthorizeByWebResponse.md)
+ - [AddonPaymentsPreauthorizeResponse](docs/Model/AddonPaymentsPreauthorizeResponse.md)
+ - [AddonPaymentsRefundPost](docs/Model/AddonPaymentsRefundPost.md)
+ - [AddonPaymentsRefundResponse](docs/Model/AddonPaymentsRefundResponse.md)
  - [Address](docs/Model/Address.md)
  - [AplazameOrderItem](docs/Model/AplazameOrderItem.md)
  - [AplazamePayByWebPost](docs/Model/AplazamePayByWebPost.md)
@@ -173,7 +192,6 @@ Class | Method | HTTP request | Description
  - [BankwirePayInBankAccount](docs/Model/BankwirePayInBankAccount.md)
  - [CardPut](docs/Model/CardPut.md)
  - [CardResponse](docs/Model/CardResponse.md)
- - [ConfirmPaymentPost](docs/Model/ConfirmPaymentPost.md)
  - [CustomApiErrorResponse](docs/Model/CustomApiErrorResponse.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerDetail](docs/Model/CustomerDetail.md)
@@ -200,8 +218,11 @@ Class | Method | HTTP request | Description
  - [PayInBankwireResponse](docs/Model/PayInBankwireResponse.md)
  - [PayOutBankwirePost](docs/Model/PayOutBankwirePost.md)
  - [PayOutBankwireResponse](docs/Model/PayOutBankwireResponse.md)
+ - [PaymentAddonPaymentsData](docs/Model/PaymentAddonPaymentsData.md)
  - [PaymentRedsysData](docs/Model/PaymentRedsysData.md)
  - [PaymentUniversalPayData](docs/Model/PaymentUniversalPayData.md)
+ - [PaymentWebPayData](docs/Model/PaymentWebPayData.md)
+ - [PreauthorizationAddonPaymentsData](docs/Model/PreauthorizationAddonPaymentsData.md)
  - [PreauthorizationRedsysData](docs/Model/PreauthorizationRedsysData.md)
  - [Product](docs/Model/Product.md)
  - [PropertyValidationCountry](docs/Model/PropertyValidationCountry.md)
@@ -219,6 +240,7 @@ Class | Method | HTTP request | Description
  - [RedsysPreauthorizeResponse](docs/Model/RedsysPreauthorizeResponse.md)
  - [RedsysRefundPost](docs/Model/RedsysRefundPost.md)
  - [RedsysRefundResponse](docs/Model/RedsysRefundResponse.md)
+ - [RefundAddonPaymentsData](docs/Model/RefundAddonPaymentsData.md)
  - [RefundReason](docs/Model/RefundReason.md)
  - [RefundRedsysData](docs/Model/RefundRedsysData.md)
  - [ResponseListCardResponse](docs/Model/ResponseListCardResponse.md)
@@ -249,7 +271,6 @@ Class | Method | HTTP request | Description
  - [UniversalPayTokenRequestPost](docs/Model/UniversalPayTokenRequestPost.md)
  - [UniversalPayTokenizationResponse](docs/Model/UniversalPayTokenizationResponse.md)
  - [UniversalPayTokenizeByWebResponse](docs/Model/UniversalPayTokenizeByWebResponse.md)
- - [UniversalPayWebhookResponse](docs/Model/UniversalPayWebhookResponse.md)
  - [UserLegalPost](docs/Model/UserLegalPost.md)
  - [UserLegalPut](docs/Model/UserLegalPut.md)
  - [UserLegalResponse](docs/Model/UserLegalResponse.md)
@@ -260,6 +281,15 @@ Class | Method | HTTP request | Description
  - [WalletPost](docs/Model/WalletPost.md)
  - [WalletPut](docs/Model/WalletPut.md)
  - [WalletResponse](docs/Model/WalletResponse.md)
+ - [WebPayPayByWebPost](docs/Model/WebPayPayByWebPost.md)
+ - [WebPayPayByWebResponse](docs/Model/WebPayPayByWebResponse.md)
+ - [WebPayPayInsResponse](docs/Model/WebPayPayInsResponse.md)
+ - [WebPayRefundPost](docs/Model/WebPayRefundPost.md)
+ - [WebPayRefundResponse](docs/Model/WebPayRefundResponse.md)
+ - [WebPayTokenDeleteResponse](docs/Model/WebPayTokenDeleteResponse.md)
+ - [WebPayTokenRequestPost](docs/Model/WebPayTokenRequestPost.md)
+ - [WebPayTokenizationResponse](docs/Model/WebPayTokenizationResponse.md)
+ - [WebPayTokenizeByWebResponse](docs/Model/WebPayTokenizeByWebResponse.md)
 
 
 ## Documentation For Authorization

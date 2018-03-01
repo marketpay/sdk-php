@@ -1,6 +1,6 @@
 <?php
 /**
- * PayInsAplazameApiTest
+ * PayInsAddonPaymentsApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \MarketPay\ApiException;
 use \MarketPay\ObjectSerializer;
 
 /**
- * PayInsAplazameApiTest Class Doc Comment
+ * PayInsAddonPaymentsApiTest Class Doc Comment
  *
  * @category Class
  * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayInsAplazameApiTest extends \PHPUnit_Framework_TestCase
+class PayInsAddonPaymentsApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -73,32 +73,72 @@ class PayInsAplazameApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for payInsAplazameAplazameGetPayment
+     * Test case for payInsAddonPaymentsAddonPaymentsGetPayment
      *
      * .
      *
      */
-    public function testPayInsAplazameAplazameGetPayment()
+    public function testPayInsAddonPaymentsAddonPaymentsGetPayment()
     {
     }
 
     /**
-     * Test case for payInsAplazameAplazamePostPaymentByWeb
+     * Test case for payInsAddonPaymentsAddonPaymentsGetPreauthorization
      *
      * .
      *
      */
-    public function testPayInsAplazameAplazamePostPaymentByWeb()
+    public function testPayInsAddonPaymentsAddonPaymentsGetPreauthorization()
     {
     }
 
     /**
-     * Test case for payInsAplazameRefund
+     * Test case for payInsAddonPaymentsAddonPaymentsPostPaymentByWeb
      *
      * .
      *
      */
-    public function testPayInsAplazameRefund()
+    public function testPayInsAddonPaymentsAddonPaymentsPostPaymentByWeb()
+    {
+    }
+
+    /**
+     * Test case for payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb
+     *
+     * .
+     *
+     */
+    public function testPayInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb()
+    {
+    }
+
+    /**
+     * Test case for payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation
+     *
+     * .
+     *
+     */
+    public function testPayInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation()
+    {
+    }
+
+    /**
+     * Test case for payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation
+     *
+     * .
+     *
+     */
+    public function testPayInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation()
+    {
+    }
+
+    /**
+     * Test case for payInsAddonPaymentsAddonPaymentsPostRefund
+     *
+     * .
+     *
+     */
+    public function testPayInsAddonPaymentsAddonPaymentsPostRefund()
     {
     }
 }

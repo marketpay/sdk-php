@@ -1,6 +1,6 @@
 <?php
 /**
- * PayInsUniversalPayApi
+ * PayInsWebPayApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \MarketPay\Configuration;
 use \MarketPay\ObjectSerializer;
 
 /**
- * PayInsUniversalPayApi Class Doc Comment
+ * PayInsWebPayApi Class Doc Comment
  *
  * @category Class
  * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayInsUniversalPayApi
+class PayInsWebPayApi
 {
     /**
      * API Client
@@ -79,7 +79,7 @@ class PayInsUniversalPayApi
      *
      * @param \MarketPay\ApiClient $apiClient set the API client
      *
-     * @return PayInsUniversalPayApi
+     * @return PayInsWebPayApi
      */
     public function setApiClient(\MarketPay\ApiClient $apiClient)
     {
@@ -88,33 +88,119 @@ class PayInsUniversalPayApi
     }
 
     /**
-     * Operation payInsUniversalPayGetUniversalPayTokenization
+     * Operation payInsWebPayDeleteWebPayToken
      *
      * @param int $token_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\UniversalPayTokenizationResponse
+     * @return \MarketPay\Model\WebPayTokenDeleteResponse
      */
-    public function payInsUniversalPayGetUniversalPayTokenization($token_id)
+    public function payInsWebPayDeleteWebPayToken($token_id)
     {
-        list($response) = $this->payInsUniversalPayGetUniversalPayTokenizationWithHttpInfo($token_id);
+        list($response) = $this->payInsWebPayDeleteWebPayTokenWithHttpInfo($token_id);
         return $response;
     }
 
     /**
-     * Operation payInsUniversalPayGetUniversalPayTokenizationWithHttpInfo
+     * Operation payInsWebPayDeleteWebPayTokenWithHttpInfo
      *
      * @param int $token_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\UniversalPayTokenizationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\WebPayTokenDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsUniversalPayGetUniversalPayTokenizationWithHttpInfo($token_id)
+    public function payInsWebPayDeleteWebPayTokenWithHttpInfo($token_id)
     {
         // verify the required parameter 'token_id' is set
         if ($token_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $token_id when calling payInsUniversalPayGetUniversalPayTokenization');
+            throw new \InvalidArgumentException('Missing the required parameter $token_id when calling payInsWebPayDeleteWebPayToken');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayInsUniversalPay/token/{TokenId}";
+        $resourcePath = "/v2.01/PayInsWebPay/token/{TokenId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['text/plain', 'application/json', 'text/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($token_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "TokenId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($token_id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires OAuth (access token)
+        if (strlen($this->apiClient->getConfig()->getAccessToken()) !== 0) {
+            $headerParams['Authorization'] = 'Bearer ' . $this->apiClient->getConfig()->getAccessToken();
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\MarketPay\Model\WebPayTokenDeleteResponse',
+                '/v2.01/PayInsWebPay/token/{TokenId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WebPayTokenDeleteResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WebPayTokenDeleteResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\CustomApiErrorResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation payInsWebPayGetWebPayTokenization
+     *
+     * @param int $token_id  (required)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return \MarketPay\Model\WebPayTokenizationResponse
+     */
+    public function payInsWebPayGetWebPayTokenization($token_id)
+    {
+        list($response) = $this->payInsWebPayGetWebPayTokenizationWithHttpInfo($token_id);
+        return $response;
+    }
+
+    /**
+     * Operation payInsWebPayGetWebPayTokenizationWithHttpInfo
+     *
+     * @param int $token_id  (required)
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @return array of \MarketPay\Model\WebPayTokenizationResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function payInsWebPayGetWebPayTokenizationWithHttpInfo($token_id)
+    {
+        // verify the required parameter 'token_id' is set
+        if ($token_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $token_id when calling payInsWebPayGetWebPayTokenization');
+        }
+        // parse inputs
+        $resourcePath = "/v2.01/PayInsWebPay/token/{TokenId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -152,15 +238,15 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\UniversalPayTokenizationResponse',
-                '/v2.01/PayInsUniversalPay/token/{TokenId}'
+                '\MarketPay\Model\WebPayTokenizationResponse',
+                '/v2.01/PayInsWebPay/token/{TokenId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayTokenizationResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WebPayTokenizationResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayTokenizationResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WebPayTokenizationResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -174,33 +260,33 @@ class PayInsUniversalPayApi
     }
 
     /**
-     * Operation payInsUniversalPayUniversalPayGetPayment
+     * Operation payInsWebPayWebPayGetPayment
      *
      * @param int $pay_in_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\UniversalPayPayInsResponse
+     * @return \MarketPay\Model\WebPayPayInsResponse
      */
-    public function payInsUniversalPayUniversalPayGetPayment($pay_in_id)
+    public function payInsWebPayWebPayGetPayment($pay_in_id)
     {
-        list($response) = $this->payInsUniversalPayUniversalPayGetPaymentWithHttpInfo($pay_in_id);
+        list($response) = $this->payInsWebPayWebPayGetPaymentWithHttpInfo($pay_in_id);
         return $response;
     }
 
     /**
-     * Operation payInsUniversalPayUniversalPayGetPaymentWithHttpInfo
+     * Operation payInsWebPayWebPayGetPaymentWithHttpInfo
      *
      * @param int $pay_in_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\UniversalPayPayInsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\WebPayPayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsUniversalPayUniversalPayGetPaymentWithHttpInfo($pay_in_id)
+    public function payInsWebPayWebPayGetPaymentWithHttpInfo($pay_in_id)
     {
         // verify the required parameter 'pay_in_id' is set
         if ($pay_in_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsUniversalPayUniversalPayGetPayment');
+            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsWebPayWebPayGetPayment');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayInsUniversalPay/payments/{PayInId}";
+        $resourcePath = "/v2.01/PayInsWebPay/payments/{PayInId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -238,15 +324,15 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\UniversalPayPayInsResponse',
-                '/v2.01/PayInsUniversalPay/payments/{PayInId}'
+                '\MarketPay\Model\WebPayPayInsResponse',
+                '/v2.01/PayInsWebPay/payments/{PayInId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayPayInsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WebPayPayInsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayPayInsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WebPayPayInsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -260,29 +346,29 @@ class PayInsUniversalPayApi
     }
 
     /**
-     * Operation payInsUniversalPayUniversalPayPostPaymentByWeb
+     * Operation payInsWebPayWebPayPostPaymentByWeb
      *
-     * @param \MarketPay\Model\UniversalPayPayByWebPost $universal_pay_pay_in  (optional)
+     * @param \MarketPay\Model\WebPayPayByWebPost $web_pay_pay_in  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\UniversalPayPayByWebResponse
+     * @return \MarketPay\Model\WebPayPayByWebResponse
      */
-    public function payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in = null)
+    public function payInsWebPayWebPayPostPaymentByWeb($web_pay_pay_in = null)
     {
-        list($response) = $this->payInsUniversalPayUniversalPayPostPaymentByWebWithHttpInfo($universal_pay_pay_in);
+        list($response) = $this->payInsWebPayWebPayPostPaymentByWebWithHttpInfo($web_pay_pay_in);
         return $response;
     }
 
     /**
-     * Operation payInsUniversalPayUniversalPayPostPaymentByWebWithHttpInfo
+     * Operation payInsWebPayWebPayPostPaymentByWebWithHttpInfo
      *
-     * @param \MarketPay\Model\UniversalPayPayByWebPost $universal_pay_pay_in  (optional)
+     * @param \MarketPay\Model\WebPayPayByWebPost $web_pay_pay_in  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\UniversalPayPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\WebPayPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsUniversalPayUniversalPayPostPaymentByWebWithHttpInfo($universal_pay_pay_in = null)
+    public function payInsWebPayWebPayPostPaymentByWebWithHttpInfo($web_pay_pay_in = null)
     {
         // parse inputs
-        $resourcePath = "/v2.01/PayInsUniversalPay/payments/web";
+        $resourcePath = "/v2.01/PayInsWebPay/payments/web";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -295,8 +381,8 @@ class PayInsUniversalPayApi
 
         // body params
         $_tempBody = null;
-        if (isset($universal_pay_pay_in)) {
-            $_tempBody = $universal_pay_pay_in;
+        if (isset($web_pay_pay_in)) {
+            $_tempBody = $web_pay_pay_in;
         }
 
         // for model (json/xml)
@@ -317,15 +403,15 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\UniversalPayPayByWebResponse',
-                '/v2.01/PayInsUniversalPay/payments/web'
+                '\MarketPay\Model\WebPayPayByWebResponse',
+                '/v2.01/PayInsWebPay/payments/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayPayByWebResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WebPayPayByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayPayByWebResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WebPayPayByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -339,35 +425,35 @@ class PayInsUniversalPayApi
     }
 
     /**
-     * Operation payInsUniversalPayUniversalPayPostRefund
+     * Operation payInsWebPayWebPayPostRefund
      *
      * @param int $pay_in_id  (required)
-     * @param \MarketPay\Model\UniversalPayRefundPost $universal_pay_refund  (optional)
+     * @param \MarketPay\Model\WebPayRefundPost $web_pay_refund  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\UniversalPayRefundResponse
+     * @return \MarketPay\Model\WebPayRefundResponse
      */
-    public function payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund = null)
+    public function payInsWebPayWebPayPostRefund($pay_in_id, $web_pay_refund = null)
     {
-        list($response) = $this->payInsUniversalPayUniversalPayPostRefundWithHttpInfo($pay_in_id, $universal_pay_refund);
+        list($response) = $this->payInsWebPayWebPayPostRefundWithHttpInfo($pay_in_id, $web_pay_refund);
         return $response;
     }
 
     /**
-     * Operation payInsUniversalPayUniversalPayPostRefundWithHttpInfo
+     * Operation payInsWebPayWebPayPostRefundWithHttpInfo
      *
      * @param int $pay_in_id  (required)
-     * @param \MarketPay\Model\UniversalPayRefundPost $universal_pay_refund  (optional)
+     * @param \MarketPay\Model\WebPayRefundPost $web_pay_refund  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\UniversalPayRefundResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\WebPayRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsUniversalPayUniversalPayPostRefundWithHttpInfo($pay_in_id, $universal_pay_refund = null)
+    public function payInsWebPayWebPayPostRefundWithHttpInfo($pay_in_id, $web_pay_refund = null)
     {
         // verify the required parameter 'pay_in_id' is set
         if ($pay_in_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsUniversalPayUniversalPayPostRefund');
+            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsWebPayWebPayPostRefund');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayInsUniversalPay/payments/{PayInId}/refunds";
+        $resourcePath = "/v2.01/PayInsWebPay/payments/{PayInId}/refunds";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -388,8 +474,8 @@ class PayInsUniversalPayApi
         }
         // body params
         $_tempBody = null;
-        if (isset($universal_pay_refund)) {
-            $_tempBody = $universal_pay_refund;
+        if (isset($web_pay_refund)) {
+            $_tempBody = $web_pay_refund;
         }
 
         // for model (json/xml)
@@ -410,15 +496,15 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\UniversalPayRefundResponse',
-                '/v2.01/PayInsUniversalPay/payments/{PayInId}/refunds'
+                '\MarketPay\Model\WebPayRefundResponse',
+                '/v2.01/PayInsWebPay/payments/{PayInId}/refunds'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayRefundResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WebPayRefundResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayRefundResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WebPayRefundResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -432,29 +518,29 @@ class PayInsUniversalPayApi
     }
 
     /**
-     * Operation payInsUniversalPayUniversalPaySaveCard
+     * Operation payInsWebPayWebPaySaveCard
      *
-     * @param \MarketPay\Model\UniversalPayTokenRequestPost $universal_pay_save_card  (optional)
+     * @param \MarketPay\Model\WebPayTokenRequestPost $web_pay_save_card  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\UniversalPayTokenizeByWebResponse
+     * @return \MarketPay\Model\WebPayTokenizeByWebResponse
      */
-    public function payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card = null)
+    public function payInsWebPayWebPaySaveCard($web_pay_save_card = null)
     {
-        list($response) = $this->payInsUniversalPayUniversalPaySaveCardWithHttpInfo($universal_pay_save_card);
+        list($response) = $this->payInsWebPayWebPaySaveCardWithHttpInfo($web_pay_save_card);
         return $response;
     }
 
     /**
-     * Operation payInsUniversalPayUniversalPaySaveCardWithHttpInfo
+     * Operation payInsWebPayWebPaySaveCardWithHttpInfo
      *
-     * @param \MarketPay\Model\UniversalPayTokenRequestPost $universal_pay_save_card  (optional)
+     * @param \MarketPay\Model\WebPayTokenRequestPost $web_pay_save_card  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\UniversalPayTokenizeByWebResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\WebPayTokenizeByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsUniversalPayUniversalPaySaveCardWithHttpInfo($universal_pay_save_card = null)
+    public function payInsWebPayWebPaySaveCardWithHttpInfo($web_pay_save_card = null)
     {
         // parse inputs
-        $resourcePath = "/v2.01/PayInsUniversalPay/token/web";
+        $resourcePath = "/v2.01/PayInsWebPay/token/web";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -467,8 +553,8 @@ class PayInsUniversalPayApi
 
         // body params
         $_tempBody = null;
-        if (isset($universal_pay_save_card)) {
-            $_tempBody = $universal_pay_save_card;
+        if (isset($web_pay_save_card)) {
+            $_tempBody = $web_pay_save_card;
         }
 
         // for model (json/xml)
@@ -489,15 +575,15 @@ class PayInsUniversalPayApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\UniversalPayTokenizeByWebResponse',
-                '/v2.01/PayInsUniversalPay/token/web'
+                '\MarketPay\Model\WebPayTokenizeByWebResponse',
+                '/v2.01/PayInsWebPay/token/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayTokenizeByWebResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WebPayTokenizeByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayTokenizeByWebResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WebPayTokenizeByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

@@ -1,6 +1,6 @@
 <?php
 /**
- * UniversalPayWebhookResponse
+ * PreauthorizationAddonPaymentsData
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace MarketPay\Model;
 use \ArrayAccess;
 
 /**
- * UniversalPayWebhookResponse Class Doc Comment
+ * PreauthorizationAddonPaymentsData Class Doc Comment
  *
  * @category    Class
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UniversalPayWebhookResponse implements ArrayAccess
+class PreauthorizationAddonPaymentsData implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,15 @@ class UniversalPayWebhookResponse implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'UniversalPayWebhookResponse';
+    protected static $swaggerModelName = 'PreauthorizationAddonPaymentsData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'ds_order' => 'string',
+        'ds_authorisation_code' => 'string'
     ];
 
     /**
@@ -62,7 +63,8 @@ class UniversalPayWebhookResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        
+        'ds_order' => null,
+        'ds_authorisation_code' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class UniversalPayWebhookResponse implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'ds_order' => 'DsOrder',
+        'ds_authorisation_code' => 'DsAuthorisationCode'
     ];
 
 
@@ -89,7 +92,8 @@ class UniversalPayWebhookResponse implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'ds_order' => 'setDsOrder',
+        'ds_authorisation_code' => 'setDsAuthorisationCode'
     ];
 
 
@@ -98,7 +102,8 @@ class UniversalPayWebhookResponse implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'ds_order' => 'getDsOrder',
+        'ds_authorisation_code' => 'getDsAuthorisationCode'
     ];
 
     public static function attributeMap()
@@ -132,6 +137,8 @@ class UniversalPayWebhookResponse implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['ds_order'] = isset($data['ds_order']) ? $data['ds_order'] : null;
+        $this->container['ds_authorisation_code'] = isset($data['ds_authorisation_code']) ? $data['ds_authorisation_code'] : null;
     }
 
     /**
@@ -158,6 +165,48 @@ class UniversalPayWebhookResponse implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets ds_order
+     * @return string
+     */
+    public function getDsOrder()
+    {
+        return $this->container['ds_order'];
+    }
+
+    /**
+     * Sets ds_order
+     * @param string $ds_order
+     * @return $this
+     */
+    public function setDsOrder($ds_order)
+    {
+        $this->container['ds_order'] = $ds_order;
+
+        return $this;
+    }
+
+    /**
+     * Gets ds_authorisation_code
+     * @return string
+     */
+    public function getDsAuthorisationCode()
+    {
+        return $this->container['ds_authorisation_code'];
+    }
+
+    /**
+     * Sets ds_authorisation_code
+     * @param string $ds_authorisation_code
+     * @return $this
+     */
+    public function setDsAuthorisationCode($ds_authorisation_code)
+    {
+        $this->container['ds_authorisation_code'] = $ds_authorisation_code;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

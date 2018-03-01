@@ -1,6 +1,6 @@
 <?php
 /**
- * UniversalPayWebhookResponseTest
+ * WebPayPayByWebPostTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace MarketPay;
 
 /**
- * UniversalPayWebhookResponseTest Class Doc Comment
+ * WebPayPayByWebPostTest Class Doc Comment
  *
  * @category    Class */
-// * @description UniversalPayWebhookResponse
+// * @description WebPayPayByWebPost
 /**
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UniversalPayWebhookResponseTest extends \PHPUnit_Framework_TestCase
+class WebPayPayByWebPostTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,65 @@ class UniversalPayWebhookResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UniversalPayWebhookResponse"
+     * Test "WebPayPayByWebPost"
      */
-    public function testUniversalPayWebhookResponse()
+    public function testWebPayPayByWebPost()
+    {
+    }
+
+    /**
+     * Test attribute "debited_funds"
+     */
+    public function testPropertyDebitedFunds()
+    {
+    }
+
+    /**
+     * Test attribute "fees"
+     */
+    public function testPropertyFees()
+    {
+    }
+
+    /**
+     * Test attribute "card_id"
+     */
+    public function testPropertyCardId()
+    {
+    }
+
+    /**
+     * Test attribute "statement_descriptor"
+     */
+    public function testPropertyStatementDescriptor()
+    {
+    }
+
+    /**
+     * Test attribute "tag"
+     */
+    public function testPropertyTag()
+    {
+    }
+
+    /**
+     * Test attribute "credited_wallet_id"
+     */
+    public function testPropertyCreditedWalletId()
+    {
+    }
+
+    /**
+     * Test attribute "success_url"
+     */
+    public function testPropertySuccessUrl()
+    {
+    }
+
+    /**
+     * Test attribute "cancel_url"
+     */
+    public function testPropertyCancelUrl()
     {
     }
 }

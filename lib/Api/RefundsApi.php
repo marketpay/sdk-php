@@ -92,7 +92,7 @@ class RefundsApi
      *
      * @param int $refund_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\UniversalPayRefundResponse
+     * @return \MarketPay\Model\WebPayRefundResponse
      */
     public function refundsRefundGet($refund_id)
     {
@@ -105,7 +105,7 @@ class RefundsApi
      *
      * @param int $refund_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\UniversalPayRefundResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\WebPayRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function refundsRefundGetWithHttpInfo($refund_id)
     {
@@ -152,15 +152,15 @@ class RefundsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\UniversalPayRefundResponse',
+                '\MarketPay\Model\WebPayRefundResponse',
                 '/v2.01/Refunds/{RefundId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\UniversalPayRefundResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\WebPayRefundResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\UniversalPayRefundResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\WebPayRefundResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

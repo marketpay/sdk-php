@@ -1,6 +1,6 @@
 <?php
 /**
- * PayInsRedsysApi
+ * PayInsAddonPaymentsApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \MarketPay\Configuration;
 use \MarketPay\ObjectSerializer;
 
 /**
- * PayInsRedsysApi Class Doc Comment
+ * PayInsAddonPaymentsApi Class Doc Comment
  *
  * @category Class
  * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayInsRedsysApi
+class PayInsAddonPaymentsApi
 {
     /**
      * API Client
@@ -79,7 +79,7 @@ class PayInsRedsysApi
      *
      * @param \MarketPay\ApiClient $apiClient set the API client
      *
-     * @return PayInsRedsysApi
+     * @return PayInsAddonPaymentsApi
      */
     public function setApiClient(\MarketPay\ApiClient $apiClient)
     {
@@ -88,33 +88,33 @@ class PayInsRedsysApi
     }
 
     /**
-     * Operation payInsRedsysRedsysGetPayment
+     * Operation payInsAddonPaymentsAddonPaymentsGetPayment
      *
      * @param int $pay_in_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\RedsysPayInsResponse
+     * @return \MarketPay\Model\AddonPaymentsPayInsResponse
      */
-    public function payInsRedsysRedsysGetPayment($pay_in_id)
+    public function payInsAddonPaymentsAddonPaymentsGetPayment($pay_in_id)
     {
-        list($response) = $this->payInsRedsysRedsysGetPaymentWithHttpInfo($pay_in_id);
+        list($response) = $this->payInsAddonPaymentsAddonPaymentsGetPaymentWithHttpInfo($pay_in_id);
         return $response;
     }
 
     /**
-     * Operation payInsRedsysRedsysGetPaymentWithHttpInfo
+     * Operation payInsAddonPaymentsAddonPaymentsGetPaymentWithHttpInfo
      *
      * @param int $pay_in_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\RedsysPayInsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\AddonPaymentsPayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsRedsysRedsysGetPaymentWithHttpInfo($pay_in_id)
+    public function payInsAddonPaymentsAddonPaymentsGetPaymentWithHttpInfo($pay_in_id)
     {
         // verify the required parameter 'pay_in_id' is set
         if ($pay_in_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsRedsysRedsysGetPayment');
+            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsAddonPaymentsAddonPaymentsGetPayment');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayInsRedsys/payments/{PayInId}";
+        $resourcePath = "/v2.01/PayInsAddonPayments/payments/{PayInId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -152,15 +152,15 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\RedsysPayInsResponse',
-                '/v2.01/PayInsRedsys/payments/{PayInId}'
+                '\MarketPay\Model\AddonPaymentsPayInsResponse',
+                '/v2.01/PayInsAddonPayments/payments/{PayInId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\RedsysPayInsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AddonPaymentsPayInsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\RedsysPayInsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AddonPaymentsPayInsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -174,33 +174,33 @@ class PayInsRedsysApi
     }
 
     /**
-     * Operation payInsRedsysRedsysGetPreauthorization
+     * Operation payInsAddonPaymentsAddonPaymentsGetPreauthorization
      *
      * @param int $preauthorization_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\RedsysPreauthorizeResponse
+     * @return \MarketPay\Model\AddonPaymentsPreauthorizeResponse
      */
-    public function payInsRedsysRedsysGetPreauthorization($preauthorization_id)
+    public function payInsAddonPaymentsAddonPaymentsGetPreauthorization($preauthorization_id)
     {
-        list($response) = $this->payInsRedsysRedsysGetPreauthorizationWithHttpInfo($preauthorization_id);
+        list($response) = $this->payInsAddonPaymentsAddonPaymentsGetPreauthorizationWithHttpInfo($preauthorization_id);
         return $response;
     }
 
     /**
-     * Operation payInsRedsysRedsysGetPreauthorizationWithHttpInfo
+     * Operation payInsAddonPaymentsAddonPaymentsGetPreauthorizationWithHttpInfo
      *
      * @param int $preauthorization_id  (required)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\RedsysPreauthorizeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\AddonPaymentsPreauthorizeResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsRedsysRedsysGetPreauthorizationWithHttpInfo($preauthorization_id)
+    public function payInsAddonPaymentsAddonPaymentsGetPreauthorizationWithHttpInfo($preauthorization_id)
     {
         // verify the required parameter 'preauthorization_id' is set
         if ($preauthorization_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $preauthorization_id when calling payInsRedsysRedsysGetPreauthorization');
+            throw new \InvalidArgumentException('Missing the required parameter $preauthorization_id when calling payInsAddonPaymentsAddonPaymentsGetPreauthorization');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}";
+        $resourcePath = "/v2.01/PayInsAddonPayments/preauthorizations/{PreauthorizationId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -238,15 +238,15 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\RedsysPreauthorizeResponse',
-                '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}'
+                '\MarketPay\Model\AddonPaymentsPreauthorizeResponse',
+                '/v2.01/PayInsAddonPayments/preauthorizations/{PreauthorizationId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\RedsysPreauthorizeResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AddonPaymentsPreauthorizeResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\RedsysPreauthorizeResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AddonPaymentsPreauthorizeResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -260,31 +260,31 @@ class PayInsRedsysApi
     }
 
     /**
-     * Operation payInsRedsysRedsysPostPaymentByWeb
+     * Operation payInsAddonPaymentsAddonPaymentsPostPaymentByWeb
      *
      * @param string $x_webhook  (optional)
-     * @param \MarketPay\Model\RedsysPayByWebPost $redsys_pay_in  (optional)
+     * @param \MarketPay\Model\AddonPaymentsPayByWebPost $addon_payments_pay_in  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\RedsysPayByWebResponse
+     * @return \MarketPay\Model\AddonPaymentsPayByWebResponse
      */
-    public function payInsRedsysRedsysPostPaymentByWeb($x_webhook = null, $redsys_pay_in = null)
+    public function payInsAddonPaymentsAddonPaymentsPostPaymentByWeb($x_webhook = null, $addon_payments_pay_in = null)
     {
-        list($response) = $this->payInsRedsysRedsysPostPaymentByWebWithHttpInfo($x_webhook, $redsys_pay_in);
+        list($response) = $this->payInsAddonPaymentsAddonPaymentsPostPaymentByWebWithHttpInfo($x_webhook, $addon_payments_pay_in);
         return $response;
     }
 
     /**
-     * Operation payInsRedsysRedsysPostPaymentByWebWithHttpInfo
+     * Operation payInsAddonPaymentsAddonPaymentsPostPaymentByWebWithHttpInfo
      *
      * @param string $x_webhook  (optional)
-     * @param \MarketPay\Model\RedsysPayByWebPost $redsys_pay_in  (optional)
+     * @param \MarketPay\Model\AddonPaymentsPayByWebPost $addon_payments_pay_in  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\RedsysPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\AddonPaymentsPayByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsRedsysRedsysPostPaymentByWebWithHttpInfo($x_webhook = null, $redsys_pay_in = null)
+    public function payInsAddonPaymentsAddonPaymentsPostPaymentByWebWithHttpInfo($x_webhook = null, $addon_payments_pay_in = null)
     {
         // parse inputs
-        $resourcePath = "/v2.01/PayInsRedsys/payments/web";
+        $resourcePath = "/v2.01/PayInsAddonPayments/payments/web";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -301,8 +301,8 @@ class PayInsRedsysApi
         }
         // body params
         $_tempBody = null;
-        if (isset($redsys_pay_in)) {
-            $_tempBody = $redsys_pay_in;
+        if (isset($addon_payments_pay_in)) {
+            $_tempBody = $addon_payments_pay_in;
         }
 
         // for model (json/xml)
@@ -323,15 +323,15 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\RedsysPayByWebResponse',
-                '/v2.01/PayInsRedsys/payments/web'
+                '\MarketPay\Model\AddonPaymentsPayByWebResponse',
+                '/v2.01/PayInsAddonPayments/payments/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\RedsysPayByWebResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AddonPaymentsPayByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\RedsysPayByWebResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AddonPaymentsPayByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -345,29 +345,29 @@ class PayInsRedsysApi
     }
 
     /**
-     * Operation payInsRedsysRedsysPostPreauthorizationByWeb
+     * Operation payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb
      *
-     * @param \MarketPay\Model\RedsysPreauthorizeByWebPost $redsys_preauthorization  (optional)
+     * @param \MarketPay\Model\AddonPaymentsPreauthorizeByWebPost $addon_payments_preauthorization  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\RedsysPreauthorizeByWebResponse
+     * @return \MarketPay\Model\AddonPaymentsPreauthorizeByWebResponse
      */
-    public function payInsRedsysRedsysPostPreauthorizationByWeb($redsys_preauthorization = null)
+    public function payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb($addon_payments_preauthorization = null)
     {
-        list($response) = $this->payInsRedsysRedsysPostPreauthorizationByWebWithHttpInfo($redsys_preauthorization);
+        list($response) = $this->payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWebWithHttpInfo($addon_payments_preauthorization);
         return $response;
     }
 
     /**
-     * Operation payInsRedsysRedsysPostPreauthorizationByWebWithHttpInfo
+     * Operation payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWebWithHttpInfo
      *
-     * @param \MarketPay\Model\RedsysPreauthorizeByWebPost $redsys_preauthorization  (optional)
+     * @param \MarketPay\Model\AddonPaymentsPreauthorizeByWebPost $addon_payments_preauthorization  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\RedsysPreauthorizeByWebResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\AddonPaymentsPreauthorizeByWebResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsRedsysRedsysPostPreauthorizationByWebWithHttpInfo($redsys_preauthorization = null)
+    public function payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWebWithHttpInfo($addon_payments_preauthorization = null)
     {
         // parse inputs
-        $resourcePath = "/v2.01/PayInsRedsys/preauthorizations/web";
+        $resourcePath = "/v2.01/PayInsAddonPayments/preauthorizations/web";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -380,8 +380,8 @@ class PayInsRedsysApi
 
         // body params
         $_tempBody = null;
-        if (isset($redsys_preauthorization)) {
-            $_tempBody = $redsys_preauthorization;
+        if (isset($addon_payments_preauthorization)) {
+            $_tempBody = $addon_payments_preauthorization;
         }
 
         // for model (json/xml)
@@ -402,15 +402,15 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\RedsysPreauthorizeByWebResponse',
-                '/v2.01/PayInsRedsys/preauthorizations/web'
+                '\MarketPay\Model\AddonPaymentsPreauthorizeByWebResponse',
+                '/v2.01/PayInsAddonPayments/preauthorizations/web'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\RedsysPreauthorizeByWebResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AddonPaymentsPreauthorizeByWebResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\RedsysPreauthorizeByWebResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AddonPaymentsPreauthorizeByWebResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -424,35 +424,35 @@ class PayInsRedsysApi
     }
 
     /**
-     * Operation payInsRedsysRedsysPostPreauthorizationCancellation
+     * Operation payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation
      *
      * @param int $preauthorization_id  (required)
-     * @param \MarketPay\Model\RedsysPreauthorizationCancellationPost $redsys_preauthorization_cancellation  (optional)
+     * @param \MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost $addon_payments_preauthorization_cancellation  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\RedsysPreauthorizationCancellationResponse
+     * @return \MarketPay\Model\AddonPaymentsPreauthorizationCancellationResponse
      */
-    public function payInsRedsysRedsysPostPreauthorizationCancellation($preauthorization_id, $redsys_preauthorization_cancellation = null)
+    public function payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation($preauthorization_id, $addon_payments_preauthorization_cancellation = null)
     {
-        list($response) = $this->payInsRedsysRedsysPostPreauthorizationCancellationWithHttpInfo($preauthorization_id, $redsys_preauthorization_cancellation);
+        list($response) = $this->payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellationWithHttpInfo($preauthorization_id, $addon_payments_preauthorization_cancellation);
         return $response;
     }
 
     /**
-     * Operation payInsRedsysRedsysPostPreauthorizationCancellationWithHttpInfo
+     * Operation payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellationWithHttpInfo
      *
      * @param int $preauthorization_id  (required)
-     * @param \MarketPay\Model\RedsysPreauthorizationCancellationPost $redsys_preauthorization_cancellation  (optional)
+     * @param \MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost $addon_payments_preauthorization_cancellation  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\RedsysPreauthorizationCancellationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\AddonPaymentsPreauthorizationCancellationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsRedsysRedsysPostPreauthorizationCancellationWithHttpInfo($preauthorization_id, $redsys_preauthorization_cancellation = null)
+    public function payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellationWithHttpInfo($preauthorization_id, $addon_payments_preauthorization_cancellation = null)
     {
         // verify the required parameter 'preauthorization_id' is set
         if ($preauthorization_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $preauthorization_id when calling payInsRedsysRedsysPostPreauthorizationCancellation');
+            throw new \InvalidArgumentException('Missing the required parameter $preauthorization_id when calling payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation";
+        $resourcePath = "/v2.01/PayInsAddonPayments/preauthorizations/{PreauthorizationId}/cancellation";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -473,8 +473,8 @@ class PayInsRedsysApi
         }
         // body params
         $_tempBody = null;
-        if (isset($redsys_preauthorization_cancellation)) {
-            $_tempBody = $redsys_preauthorization_cancellation;
+        if (isset($addon_payments_preauthorization_cancellation)) {
+            $_tempBody = $addon_payments_preauthorization_cancellation;
         }
 
         // for model (json/xml)
@@ -495,15 +495,15 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\RedsysPreauthorizationCancellationResponse',
-                '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation'
+                '\MarketPay\Model\AddonPaymentsPreauthorizationCancellationResponse',
+                '/v2.01/PayInsAddonPayments/preauthorizations/{PreauthorizationId}/cancellation'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\RedsysPreauthorizationCancellationResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AddonPaymentsPreauthorizationCancellationResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\RedsysPreauthorizationCancellationResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AddonPaymentsPreauthorizationCancellationResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -517,35 +517,35 @@ class PayInsRedsysApi
     }
 
     /**
-     * Operation payInsRedsysRedsysPostPreauthorizationConfirmation
+     * Operation payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation
      *
      * @param int $preauthorization_id  (required)
-     * @param \MarketPay\Model\RedsysPreauthorizationConfirmationPost $redsys_preauthorization_confirmation  (optional)
+     * @param \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost $addon_payments_preauthorization_confirmation  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\RedsysPreauthorizationConfirmationResponse
+     * @return \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationResponse
      */
-    public function payInsRedsysRedsysPostPreauthorizationConfirmation($preauthorization_id, $redsys_preauthorization_confirmation = null)
+    public function payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation($preauthorization_id, $addon_payments_preauthorization_confirmation = null)
     {
-        list($response) = $this->payInsRedsysRedsysPostPreauthorizationConfirmationWithHttpInfo($preauthorization_id, $redsys_preauthorization_confirmation);
+        list($response) = $this->payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmationWithHttpInfo($preauthorization_id, $addon_payments_preauthorization_confirmation);
         return $response;
     }
 
     /**
-     * Operation payInsRedsysRedsysPostPreauthorizationConfirmationWithHttpInfo
+     * Operation payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmationWithHttpInfo
      *
      * @param int $preauthorization_id  (required)
-     * @param \MarketPay\Model\RedsysPreauthorizationConfirmationPost $redsys_preauthorization_confirmation  (optional)
+     * @param \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost $addon_payments_preauthorization_confirmation  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\RedsysPreauthorizationConfirmationResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsRedsysRedsysPostPreauthorizationConfirmationWithHttpInfo($preauthorization_id, $redsys_preauthorization_confirmation = null)
+    public function payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmationWithHttpInfo($preauthorization_id, $addon_payments_preauthorization_confirmation = null)
     {
         // verify the required parameter 'preauthorization_id' is set
         if ($preauthorization_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $preauthorization_id when calling payInsRedsysRedsysPostPreauthorizationConfirmation');
+            throw new \InvalidArgumentException('Missing the required parameter $preauthorization_id when calling payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation";
+        $resourcePath = "/v2.01/PayInsAddonPayments/preauthorizations/{PreauthorizationId}/confirmation";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -566,8 +566,8 @@ class PayInsRedsysApi
         }
         // body params
         $_tempBody = null;
-        if (isset($redsys_preauthorization_confirmation)) {
-            $_tempBody = $redsys_preauthorization_confirmation;
+        if (isset($addon_payments_preauthorization_confirmation)) {
+            $_tempBody = $addon_payments_preauthorization_confirmation;
         }
 
         // for model (json/xml)
@@ -588,15 +588,15 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\RedsysPreauthorizationConfirmationResponse',
-                '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation'
+                '\MarketPay\Model\AddonPaymentsPreauthorizationConfirmationResponse',
+                '/v2.01/PayInsAddonPayments/preauthorizations/{PreauthorizationId}/confirmation'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\RedsysPreauthorizationConfirmationResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AddonPaymentsPreauthorizationConfirmationResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\RedsysPreauthorizationConfirmationResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AddonPaymentsPreauthorizationConfirmationResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
@@ -610,35 +610,35 @@ class PayInsRedsysApi
     }
 
     /**
-     * Operation payInsRedsysRedsysPostRefund
+     * Operation payInsAddonPaymentsAddonPaymentsPostRefund
      *
      * @param int $pay_in_id  (required)
-     * @param \MarketPay\Model\RedsysRefundPost $redsys_refund  (optional)
+     * @param \MarketPay\Model\AddonPaymentsRefundPost $addon_payments_refund  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return \MarketPay\Model\RedsysRefundResponse
+     * @return \MarketPay\Model\AddonPaymentsRefundResponse
      */
-    public function payInsRedsysRedsysPostRefund($pay_in_id, $redsys_refund = null)
+    public function payInsAddonPaymentsAddonPaymentsPostRefund($pay_in_id, $addon_payments_refund = null)
     {
-        list($response) = $this->payInsRedsysRedsysPostRefundWithHttpInfo($pay_in_id, $redsys_refund);
+        list($response) = $this->payInsAddonPaymentsAddonPaymentsPostRefundWithHttpInfo($pay_in_id, $addon_payments_refund);
         return $response;
     }
 
     /**
-     * Operation payInsRedsysRedsysPostRefundWithHttpInfo
+     * Operation payInsAddonPaymentsAddonPaymentsPostRefundWithHttpInfo
      *
      * @param int $pay_in_id  (required)
-     * @param \MarketPay\Model\RedsysRefundPost $redsys_refund  (optional)
+     * @param \MarketPay\Model\AddonPaymentsRefundPost $addon_payments_refund  (optional)
      * @throws \MarketPay\ApiException on non-2xx response
-     * @return array of \MarketPay\Model\RedsysRefundResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\AddonPaymentsRefundResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payInsRedsysRedsysPostRefundWithHttpInfo($pay_in_id, $redsys_refund = null)
+    public function payInsAddonPaymentsAddonPaymentsPostRefundWithHttpInfo($pay_in_id, $addon_payments_refund = null)
     {
         // verify the required parameter 'pay_in_id' is set
         if ($pay_in_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsRedsysRedsysPostRefund');
+            throw new \InvalidArgumentException('Missing the required parameter $pay_in_id when calling payInsAddonPaymentsAddonPaymentsPostRefund');
         }
         // parse inputs
-        $resourcePath = "/v2.01/PayInsRedsys/payments/{PayInId}/refunds";
+        $resourcePath = "/v2.01/PayInsAddonPayments/payments/{PayInId}/refunds";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -659,8 +659,8 @@ class PayInsRedsysApi
         }
         // body params
         $_tempBody = null;
-        if (isset($redsys_refund)) {
-            $_tempBody = $redsys_refund;
+        if (isset($addon_payments_refund)) {
+            $_tempBody = $addon_payments_refund;
         }
 
         // for model (json/xml)
@@ -681,15 +681,15 @@ class PayInsRedsysApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\MarketPay\Model\RedsysRefundResponse',
-                '/v2.01/PayInsRedsys/payments/{PayInId}/refunds'
+                '\MarketPay\Model\AddonPaymentsRefundResponse',
+                '/v2.01/PayInsAddonPayments/payments/{PayInId}/refunds'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\RedsysRefundResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\MarketPay\Model\AddonPaymentsRefundResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\RedsysRefundResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\MarketPay\Model\AddonPaymentsRefundResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

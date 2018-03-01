@@ -4,59 +4,10 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payInsAplazameAplazameConfirmPayment**](PayInsAplazameApi.md#payInsAplazameAplazameConfirmPayment) | **POST** /v2.01/PayInsAplazame/webhook/pay/{PayInId} | 
 [**payInsAplazameAplazameGetPayment**](PayInsAplazameApi.md#payInsAplazameAplazameGetPayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | 
 [**payInsAplazameAplazamePostPaymentByWeb**](PayInsAplazameApi.md#payInsAplazameAplazamePostPaymentByWeb) | **POST** /v2.01/PayInsAplazame/payments/web | 
 [**payInsAplazameRefund**](PayInsAplazameApi.md#payInsAplazameRefund) | **POST** /v2.01/PayInsAplazame/payments/{PayInId}/refunds | 
 
-
-# **payInsAplazameAplazameConfirmPayment**
-> string payInsAplazameAplazameConfirmPayment($pay_in_id, $request)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$api_instance = new MarketPay\Api\PayInsAplazameApi();
-$pay_in_id = "pay_in_id_example"; // string | 
-$request = new \MarketPay\Model\ConfirmPaymentPost(); // \MarketPay\Model\ConfirmPaymentPost | 
-
-try {
-    $result = $api_instance->payInsAplazameAplazameConfirmPayment($pay_in_id, $request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PayInsAplazameApi->payInsAplazameAplazameConfirmPayment: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pay_in_id** | **string**|  |
- **request** | [**\MarketPay\Model\ConfirmPaymentPost**](../Model/ConfirmPaymentPost.md)|  | [optional]
-
-### Return type
-
-**string**
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAplazameAplazameGetPayment**
 > \MarketPay\Model\AplazamePayInsResponse payInsAplazameAplazameGetPayment($pay_in_id)

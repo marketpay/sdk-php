@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **refundsRefundGet**
-> \MarketPay\Model\UniversalPayRefundResponse refundsRefundGet($refund_id)
+> \MarketPay\Model\WebPayRefundResponse refundsRefundGet($refund_id)
 
 
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\UniversalPayRefundResponse**](../Model/UniversalPayRefundResponse.md)
+[**\MarketPay\Model\WebPayRefundResponse**](../Model/WebPayRefundResponse.md)
 
 ### Authorization
 

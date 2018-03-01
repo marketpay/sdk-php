@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfirmPaymentPostTest
+ * WebPayTokenDeleteResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace MarketPay;
 
 /**
- * ConfirmPaymentPostTest Class Doc Comment
+ * WebPayTokenDeleteResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description ConfirmPaymentPost
+// * @description WebPayTokenDeleteResponse
 /**
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConfirmPaymentPostTest extends \PHPUnit_Framework_TestCase
+class WebPayTokenDeleteResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,16 +71,9 @@ class ConfirmPaymentPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ConfirmPaymentPost"
+     * Test "WebPayTokenDeleteResponse"
      */
-    public function testConfirmPaymentPost()
-    {
-    }
-
-    /**
-     * Test attribute "checkout_token"
-     */
-    public function testPropertyCheckoutToken()
+    public function testWebPayTokenDeleteResponse()
     {
     }
 }

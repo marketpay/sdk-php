@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**payInsUniversalPayUniversalPayPostPaymentByWeb**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayPostPaymentByWeb) | **POST** /v2.01/PayInsUniversalPay/payments/web | 
 [**payInsUniversalPayUniversalPayPostRefund**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayPostRefund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | 
 [**payInsUniversalPayUniversalPaySaveCard**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPaySaveCard) | **POST** /v2.01/PayInsUniversalPay/token/web | 
-[**payInsUniversalPayUniversalPayWebhookPayment**](PayInsUniversalPayApi.md#payInsUniversalPayUniversalPayWebhookPayment) | **POST** /v2.01/PayInsUniversalPay/webhook | 
 
 
 # **payInsUniversalPayGetUniversalPayTokenization**
@@ -240,68 +239,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **payInsUniversalPayUniversalPayWebhookPayment**
-> \MarketPay\Model\UniversalPayWebhookResponse payInsUniversalPayUniversalPayWebhookPayment($message_type, $message_description, $merchant_order_id, $merchant_subscription_id, $merchant_transaction_id, $merchant_token_id, $mac, $txn_id, $objects)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
-$message_type = "message_type_example"; // string | 
-$message_description = "message_description_example"; // string | 
-$merchant_order_id = "merchant_order_id_example"; // string | 
-$merchant_subscription_id = "merchant_subscription_id_example"; // string | 
-$merchant_transaction_id = "merchant_transaction_id_example"; // string | 
-$merchant_token_id = "merchant_token_id_example"; // string | 
-$mac = "mac_example"; // string | 
-$txn_id = "txn_id_example"; // string | 
-$objects = "objects_example"; // string | 
-
-try {
-    $result = $api_instance->payInsUniversalPayUniversalPayWebhookPayment($message_type, $message_description, $merchant_order_id, $merchant_subscription_id, $merchant_transaction_id, $merchant_token_id, $mac, $txn_id, $objects);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PayInsUniversalPayApi->payInsUniversalPayUniversalPayWebhookPayment: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **message_type** | **string**|  | [optional]
- **message_description** | **string**|  | [optional]
- **merchant_order_id** | **string**|  | [optional]
- **merchant_subscription_id** | **string**|  | [optional]
- **merchant_transaction_id** | **string**|  | [optional]
- **merchant_token_id** | **string**|  | [optional]
- **mac** | **string**|  | [optional]
- **txn_id** | **string**|  | [optional]
- **objects** | **string**|  | [optional]
-
-### Return type
-
-[**\MarketPay\Model\UniversalPayWebhookResponse**](../Model/UniversalPayWebhookResponse.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

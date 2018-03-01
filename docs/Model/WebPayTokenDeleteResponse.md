@@ -1,4 +1,4 @@
-# UniversalPayWebhookResponse
+# WebPayTokenDeleteResponse
 
 ## Properties
 Name | Type | Description | Notes

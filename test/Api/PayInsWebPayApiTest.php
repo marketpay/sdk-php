@@ -1,6 +1,6 @@
 <?php
 /**
- * PayInsAplazameApiTest
+ * PayInsWebPayApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \MarketPay\ApiException;
 use \MarketPay\ObjectSerializer;
 
 /**
- * PayInsAplazameApiTest Class Doc Comment
+ * PayInsWebPayApiTest Class Doc Comment
  *
  * @category Class
  * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayInsAplazameApiTest extends \PHPUnit_Framework_TestCase
+class PayInsWebPayApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -73,32 +73,62 @@ class PayInsAplazameApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for payInsAplazameAplazameGetPayment
+     * Test case for payInsWebPayDeleteWebPayToken
      *
      * .
      *
      */
-    public function testPayInsAplazameAplazameGetPayment()
+    public function testPayInsWebPayDeleteWebPayToken()
     {
     }
 
     /**
-     * Test case for payInsAplazameAplazamePostPaymentByWeb
+     * Test case for payInsWebPayGetWebPayTokenization
      *
      * .
      *
      */
-    public function testPayInsAplazameAplazamePostPaymentByWeb()
+    public function testPayInsWebPayGetWebPayTokenization()
     {
     }
 
     /**
-     * Test case for payInsAplazameRefund
+     * Test case for payInsWebPayWebPayGetPayment
      *
      * .
      *
      */
-    public function testPayInsAplazameRefund()
+    public function testPayInsWebPayWebPayGetPayment()
+    {
+    }
+
+    /**
+     * Test case for payInsWebPayWebPayPostPaymentByWeb
+     *
+     * .
+     *
+     */
+    public function testPayInsWebPayWebPayPostPaymentByWeb()
+    {
+    }
+
+    /**
+     * Test case for payInsWebPayWebPayPostRefund
+     *
+     * .
+     *
+     */
+    public function testPayInsWebPayWebPayPostRefund()
+    {
+    }
+
+    /**
+     * Test case for payInsWebPayWebPaySaveCard
+     *
+     * .
+     *
+     */
+    public function testPayInsWebPayWebPaySaveCard()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfirmPaymentPost
+ * AddonPaymentsPreauthorizeByWebResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace MarketPay\Model;
 use \ArrayAccess;
 
 /**
- * ConfirmPaymentPost Class Doc Comment
+ * AddonPaymentsPreauthorizeByWebResponse Class Doc Comment
  *
  * @category    Class
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConfirmPaymentPost implements ArrayAccess
+class AddonPaymentsPreauthorizeByWebResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,18 @@ class ConfirmPaymentPost implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ConfirmPaymentPost';
+    protected static $swaggerModelName = 'AddonPaymentsPreauthorizeByWebResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'checkout_token' => 'string'
+        'preauthorization_id' => 'string',
+        'url' => 'string',
+        'ds_signature_version' => 'string',
+        'ds_merchant_parameters' => 'string',
+        'ds_signature' => 'string'
     ];
 
     /**
@@ -62,7 +66,11 @@ class ConfirmPaymentPost implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'checkout_token' => null
+        'preauthorization_id' => null,
+        'url' => null,
+        'ds_signature_version' => null,
+        'ds_merchant_parameters' => null,
+        'ds_signature' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +88,11 @@ class ConfirmPaymentPost implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'checkout_token' => 'checkout_token'
+        'preauthorization_id' => 'PreauthorizationId',
+        'url' => 'Url',
+        'ds_signature_version' => 'Ds_SignatureVersion',
+        'ds_merchant_parameters' => 'Ds_MerchantParameters',
+        'ds_signature' => 'Ds_Signature'
     ];
 
 
@@ -89,7 +101,11 @@ class ConfirmPaymentPost implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'checkout_token' => 'setCheckoutToken'
+        'preauthorization_id' => 'setPreauthorizationId',
+        'url' => 'setUrl',
+        'ds_signature_version' => 'setDsSignatureVersion',
+        'ds_merchant_parameters' => 'setDsMerchantParameters',
+        'ds_signature' => 'setDsSignature'
     ];
 
 
@@ -98,7 +114,11 @@ class ConfirmPaymentPost implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'checkout_token' => 'getCheckoutToken'
+        'preauthorization_id' => 'getPreauthorizationId',
+        'url' => 'getUrl',
+        'ds_signature_version' => 'getDsSignatureVersion',
+        'ds_merchant_parameters' => 'getDsMerchantParameters',
+        'ds_signature' => 'getDsSignature'
     ];
 
     public static function attributeMap()
@@ -132,7 +152,11 @@ class ConfirmPaymentPost implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['checkout_token'] = isset($data['checkout_token']) ? $data['checkout_token'] : null;
+        $this->container['preauthorization_id'] = isset($data['preauthorization_id']) ? $data['preauthorization_id'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['ds_signature_version'] = isset($data['ds_signature_version']) ? $data['ds_signature_version'] : null;
+        $this->container['ds_merchant_parameters'] = isset($data['ds_merchant_parameters']) ? $data['ds_merchant_parameters'] : null;
+        $this->container['ds_signature'] = isset($data['ds_signature']) ? $data['ds_signature'] : null;
     }
 
     /**
@@ -144,9 +168,6 @@ class ConfirmPaymentPost implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['checkout_token'] === null) {
-            $invalid_properties[] = "'checkout_token' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -159,30 +180,111 @@ class ConfirmPaymentPost implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['checkout_token'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets checkout_token
+     * Gets preauthorization_id
      * @return string
      */
-    public function getCheckoutToken()
+    public function getPreauthorizationId()
     {
-        return $this->container['checkout_token'];
+        return $this->container['preauthorization_id'];
     }
 
     /**
-     * Sets checkout_token
-     * @param string $checkout_token
+     * Sets preauthorization_id
+     * @param string $preauthorization_id
      * @return $this
      */
-    public function setCheckoutToken($checkout_token)
+    public function setPreauthorizationId($preauthorization_id)
     {
-        $this->container['checkout_token'] = $checkout_token;
+        $this->container['preauthorization_id'] = $preauthorization_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets url
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+     * Sets url
+     * @param string $url
+     * @return $this
+     */
+    public function setUrl($url)
+    {
+        $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets ds_signature_version
+     * @return string
+     */
+    public function getDsSignatureVersion()
+    {
+        return $this->container['ds_signature_version'];
+    }
+
+    /**
+     * Sets ds_signature_version
+     * @param string $ds_signature_version
+     * @return $this
+     */
+    public function setDsSignatureVersion($ds_signature_version)
+    {
+        $this->container['ds_signature_version'] = $ds_signature_version;
+
+        return $this;
+    }
+
+    /**
+     * Gets ds_merchant_parameters
+     * @return string
+     */
+    public function getDsMerchantParameters()
+    {
+        return $this->container['ds_merchant_parameters'];
+    }
+
+    /**
+     * Sets ds_merchant_parameters
+     * @param string $ds_merchant_parameters
+     * @return $this
+     */
+    public function setDsMerchantParameters($ds_merchant_parameters)
+    {
+        $this->container['ds_merchant_parameters'] = $ds_merchant_parameters;
+
+        return $this;
+    }
+
+    /**
+     * Gets ds_signature
+     * @return string
+     */
+    public function getDsSignature()
+    {
+        return $this->container['ds_signature'];
+    }
+
+    /**
+     * Sets ds_signature
+     * @param string $ds_signature
+     * @return $this
+     */
+    public function setDsSignature($ds_signature)
+    {
+        $this->container['ds_signature'] = $ds_signature;
 
         return $this;
     }
