@@ -18,13 +18,18 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\RefundsApi();
+$apiInstance = new MarketPay\Api\RefundsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $refund_id = 789; // int | 
 
 try {
-    $result = $api_instance->refundsRefundGet($refund_id);
+    $result = $apiInstance->refundsRefundGet($refund_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RefundsApi->refundsRefundGet: ', $e->getMessage(), PHP_EOL;

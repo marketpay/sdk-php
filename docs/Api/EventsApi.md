@@ -20,14 +20,19 @@ The User Activity endpoint returns data about a user's lifetime activity with Ub
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\EventsApi();
+$apiInstance = new MarketPay\Api\EventsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $page = 56; // int | 
 $per_page = 56; // int | 
 
 try {
-    $result = $api_instance->eventsGet($page, $per_page);
+    $result = $apiInstance->eventsGet($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->eventsGet: ', $e->getMessage(), PHP_EOL;

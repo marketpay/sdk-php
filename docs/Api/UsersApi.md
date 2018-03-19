@@ -38,13 +38,18 @@ A User can be \"Natural\" or \"Legal\". With a UserId, you are able to:         
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 
 try {
-    $result = $api_instance->usersGet($user_id);
+    $result = $apiInstance->usersGet($user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGet: ', $e->getMessage(), PHP_EOL;
@@ -86,14 +91,19 @@ View a Bank Account
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 56; // int | The Id of a user
 $bank_account_id = 56; // int | The Id of a bank account
 
 try {
-    $result = $api_instance->usersGetBankAccount($user_id, $bank_account_id);
+    $result = $apiInstance->usersGetBankAccount($user_id, $bank_account_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetBankAccount: ', $e->getMessage(), PHP_EOL;
@@ -136,15 +146,20 @@ List Bank Accounts for a User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 
 try {
-    $result = $api_instance->usersGetBankAccountList($user_id, $page, $per_page);
+    $result = $apiInstance->usersGetBankAccountList($user_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetBankAccountList: ', $e->getMessage(), PHP_EOL;
@@ -188,15 +203,20 @@ List Cards for a User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 
 try {
-    $result = $api_instance->usersGetCardList($user_id, $page, $per_page);
+    $result = $apiInstance->usersGetCardList($user_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetCardList: ', $e->getMessage(), PHP_EOL;
@@ -240,13 +260,18 @@ View a Legal User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a legal user
 
 try {
-    $result = $api_instance->usersGetLegal($user_id);
+    $result = $apiInstance->usersGetLegal($user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetLegal: ', $e->getMessage(), PHP_EOL;
@@ -288,14 +313,19 @@ List all Users
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 
 try {
-    $result = $api_instance->usersGetList($page, $per_page);
+    $result = $apiInstance->usersGetList($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetList: ', $e->getMessage(), PHP_EOL;
@@ -338,16 +368,21 @@ List all Natural Users
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 $first_name_contains = "first_name_contains_example"; // string | 
 $last_name_contains = "last_name_contains_example"; // string | 
 
 try {
-    $result = $api_instance->usersGetListNatural($page, $per_page, $first_name_contains, $last_name_contains);
+    $result = $apiInstance->usersGetListNatural($page, $per_page, $first_name_contains, $last_name_contains);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetListNatural: ', $e->getMessage(), PHP_EOL;
@@ -392,13 +427,18 @@ View a Natural User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a natural user
 
 try {
-    $result = $api_instance->usersGetNatural($user_id);
+    $result = $apiInstance->usersGetNatural($user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetNatural: ', $e->getMessage(), PHP_EOL;
@@ -440,15 +480,20 @@ List Transactions for a User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 
 try {
-    $result = $api_instance->usersGetTransactionList($user_id, $page, $per_page);
+    $result = $apiInstance->usersGetTransactionList($user_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetTransactionList: ', $e->getMessage(), PHP_EOL;
@@ -492,15 +537,20 @@ List Wallets for a User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 
 try {
-    $result = $api_instance->usersGetWalletList($user_id, $page, $per_page);
+    $result = $apiInstance->usersGetWalletList($user_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetWalletList: ', $e->getMessage(), PHP_EOL;
@@ -544,14 +594,19 @@ In the case of CAD PayOut, the author (AuthorId) of the PayOut should have their
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $bank_account_ca = new \MarketPay\Model\BankAccountCaPost(); // \MarketPay\Model\BankAccountCaPost | BankAccountCA Object params
 
 try {
-    $result = $api_instance->usersPostBankAccountCa($user_id, $bank_account_ca);
+    $result = $apiInstance->usersPostBankAccountCa($user_id, $bank_account_ca);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostBankAccountCa: ', $e->getMessage(), PHP_EOL;
@@ -594,14 +649,19 @@ Create a GB BankAccount
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $bank_account_gb = new \MarketPay\Model\BankAccountGbPost(); // \MarketPay\Model\BankAccountGbPost | 
 
 try {
-    $result = $api_instance->usersPostBankAccountGb($user_id, $bank_account_gb);
+    $result = $apiInstance->usersPostBankAccountGb($user_id, $bank_account_gb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostBankAccountGb: ', $e->getMessage(), PHP_EOL;
@@ -644,14 +704,19 @@ Create an IBAN BankAccount
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $bank_account_iban = new \MarketPay\Model\BankAccountIbanPost(); // \MarketPay\Model\BankAccountIbanPost | BankAccountIBAN Object params
 
 try {
-    $result = $api_instance->usersPostBankAccountIban($user_id, $bank_account_iban);
+    $result = $apiInstance->usersPostBankAccountIban($user_id, $bank_account_iban);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostBankAccountIban: ', $e->getMessage(), PHP_EOL;
@@ -694,14 +759,19 @@ Create an OTHER BankAccount
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $bank_account_other = new \MarketPay\Model\BankAccountOtherPost(); // \MarketPay\Model\BankAccountOtherPost | 
 
 try {
-    $result = $api_instance->usersPostBankAccountOther($user_id, $bank_account_other);
+    $result = $apiInstance->usersPostBankAccountOther($user_id, $bank_account_other);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostBankAccountOther: ', $e->getMessage(), PHP_EOL;
@@ -744,14 +814,19 @@ In the case of USD PayOut, the author (AuthorId) of the PayOut should have their
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $bank_account_us = new \MarketPay\Model\BankAccountUsPost(); // \MarketPay\Model\BankAccountUsPost | BankAccountUS Object params
 
 try {
-    $result = $api_instance->usersPostBankAccountUs($user_id, $bank_account_us);
+    $result = $apiInstance->usersPostBankAccountUs($user_id, $bank_account_us);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostBankAccountUs: ', $e->getMessage(), PHP_EOL;
@@ -794,13 +869,18 @@ Note that the LegalRepresentativeBirthday field is a timestamp, but be careful t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_legal = new \MarketPay\Model\UserLegalPost(); // \MarketPay\Model\UserLegalPost | UserLegal Object params
 
 try {
-    $result = $api_instance->usersPostLegal($user_legal);
+    $result = $apiInstance->usersPostLegal($user_legal);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostLegal: ', $e->getMessage(), PHP_EOL;
@@ -842,13 +922,18 @@ Note that the Birthday field is a timestamp, but be careful to ensure that the t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_natural = new \MarketPay\Model\UserNaturalPost(); // \MarketPay\Model\UserNaturalPost | UserNatural Object params
 
 try {
-    $result = $api_instance->usersPostNatural($user_natural);
+    $result = $apiInstance->usersPostNatural($user_natural);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostNatural: ', $e->getMessage(), PHP_EOL;
@@ -890,14 +975,19 @@ Note that the LegalRepresentativeBirthday field is a timestamp, but be careful t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $user_legal = new \MarketPay\Model\UserLegalPut(); // \MarketPay\Model\UserLegalPut | UserLegal Object params
 
 try {
-    $result = $api_instance->usersPutLegal($user_id, $user_legal);
+    $result = $apiInstance->usersPutLegal($user_id, $user_legal);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPutLegal: ', $e->getMessage(), PHP_EOL;
@@ -940,14 +1030,19 @@ Note that the Birthday field is a timestamp, but be careful to ensure that the t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\UsersApi();
+$apiInstance = new MarketPay\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $user_natural = new \MarketPay\Model\UserNaturalPut(); // \MarketPay\Model\UserNaturalPut | UserNatural Object params
 
 try {
-    $result = $api_instance->usersPutNatural($user_id, $user_natural);
+    $result = $apiInstance->usersPutNatural($user_id, $user_natural);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPutNatural: ', $e->getMessage(), PHP_EOL;

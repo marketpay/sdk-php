@@ -20,13 +20,18 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsBankwireApi();
+$apiInstance = new MarketPay\Api\PayInsBankwireApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = 789; // int | 
 
 try {
-    $result = $api_instance->payInsBankwireBankwireGetPayment($pay_in_id);
+    $result = $apiInstance->payInsBankwireBankwireGetPayment($pay_in_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsBankwireApi->payInsBankwireBankwireGetPayment: ', $e->getMessage(), PHP_EOL;
@@ -66,13 +71,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsBankwireApi();
+$apiInstance = new MarketPay\Api\PayInsBankwireApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $bankwire_pay_in = new \MarketPay\Model\PayInBankwirePost(); // \MarketPay\Model\PayInBankwirePost | 
 
 try {
-    $result = $api_instance->payInsBankwireBankwirePaymentByDirect($bankwire_pay_in);
+    $result = $apiInstance->payInsBankwireBankwirePaymentByDirect($bankwire_pay_in);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsBankwireApi->payInsBankwireBankwirePaymentByDirect: ', $e->getMessage(), PHP_EOL;
@@ -112,14 +122,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsBankwireApi();
+$apiInstance = new MarketPay\Api\PayInsBankwireApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = 789; // int | 
 $bankwire_refund = new \MarketPay\Model\PayInBankwireRefundPost(); // \MarketPay\Model\PayInBankwireRefundPost | 
 
 try {
-    $result = $api_instance->payInsBankwireBankwirePostRefund($pay_in_id, $bankwire_refund);
+    $result = $apiInstance->payInsBankwireBankwirePostRefund($pay_in_id, $bankwire_refund);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsBankwireApi->payInsBankwireBankwirePostRefund: ', $e->getMessage(), PHP_EOL;

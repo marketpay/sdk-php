@@ -18,12 +18,17 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PingAuthorizedApi();
+$apiInstance = new MarketPay\Api\PingAuthorizedApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 
 try {
-    $api_instance->pingAuthorizedGet();
+    $apiInstance->pingAuthorizedGet();
 } catch (Exception $e) {
     echo 'Exception when calling PingAuthorizedApi->pingAuthorizedGet: ', $e->getMessage(), PHP_EOL;
 }

@@ -22,13 +22,18 @@ In order to save cards, the next methods are currently available:              -
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\CardsApi();
+$apiInstance = new MarketPay\Api\CardsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $card_id = 789; // int | The Id of a card
 
 try {
-    $result = $api_instance->cardsGet($card_id);
+    $result = $apiInstance->cardsGet($card_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CardsApi->cardsGet: ', $e->getMessage(), PHP_EOL;
@@ -68,14 +73,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\CardsApi();
+$apiInstance = new MarketPay\Api\CardsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $page = 56; // int | 
 $per_page = 56; // int | 
 
 try {
-    $result = $api_instance->cardsGetList($page, $per_page);
+    $result = $apiInstance->cardsGetList($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CardsApi->cardsGetList: ', $e->getMessage(), PHP_EOL;
@@ -118,14 +128,19 @@ Note that once deactivated, a card can't be reactivated afterwards
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\CardsApi();
+$apiInstance = new MarketPay\Api\CardsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $card_id = 789; // int | The Id of a card
 $card = new \MarketPay\Model\CardPut(); // \MarketPay\Model\CardPut | Card Object params
 
 try {
-    $result = $api_instance->cardsPut($card_id, $card);
+    $result = $apiInstance->cardsPut($card_id, $card);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CardsApi->cardsPut: ', $e->getMessage(), PHP_EOL;

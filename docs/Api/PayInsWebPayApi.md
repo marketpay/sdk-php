@@ -23,13 +23,18 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsWebPayApi();
+$apiInstance = new MarketPay\Api\PayInsWebPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $token_id = 789; // int | 
 
 try {
-    $result = $api_instance->payInsWebPayDeleteWebPayToken($token_id);
+    $result = $apiInstance->payInsWebPayDeleteWebPayToken($token_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsWebPayApi->payInsWebPayDeleteWebPayToken: ', $e->getMessage(), PHP_EOL;
@@ -69,13 +74,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsWebPayApi();
+$apiInstance = new MarketPay\Api\PayInsWebPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $token_id = 789; // int | 
 
 try {
-    $result = $api_instance->payInsWebPayGetWebPayTokenization($token_id);
+    $result = $apiInstance->payInsWebPayGetWebPayTokenization($token_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsWebPayApi->payInsWebPayGetWebPayTokenization: ', $e->getMessage(), PHP_EOL;
@@ -115,13 +125,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsWebPayApi();
+$apiInstance = new MarketPay\Api\PayInsWebPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = 789; // int | 
 
 try {
-    $result = $api_instance->payInsWebPayWebPayGetPayment($pay_in_id);
+    $result = $apiInstance->payInsWebPayWebPayGetPayment($pay_in_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsWebPayApi->payInsWebPayWebPayGetPayment: ', $e->getMessage(), PHP_EOL;
@@ -161,13 +176,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsWebPayApi();
+$apiInstance = new MarketPay\Api\PayInsWebPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $web_pay_pay_in = new \MarketPay\Model\WebPayPayByWebPost(); // \MarketPay\Model\WebPayPayByWebPost | 
 
 try {
-    $result = $api_instance->payInsWebPayWebPayPostPaymentByWeb($web_pay_pay_in);
+    $result = $apiInstance->payInsWebPayWebPayPostPaymentByWeb($web_pay_pay_in);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsWebPayApi->payInsWebPayWebPayPostPaymentByWeb: ', $e->getMessage(), PHP_EOL;
@@ -207,14 +227,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsWebPayApi();
+$apiInstance = new MarketPay\Api\PayInsWebPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = 789; // int | 
 $web_pay_refund = new \MarketPay\Model\WebPayRefundPost(); // \MarketPay\Model\WebPayRefundPost | 
 
 try {
-    $result = $api_instance->payInsWebPayWebPayPostRefund($pay_in_id, $web_pay_refund);
+    $result = $apiInstance->payInsWebPayWebPayPostRefund($pay_in_id, $web_pay_refund);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsWebPayApi->payInsWebPayWebPayPostRefund: ', $e->getMessage(), PHP_EOL;
@@ -255,13 +280,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsWebPayApi();
+$apiInstance = new MarketPay\Api\PayInsWebPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $web_pay_save_card = new \MarketPay\Model\WebPayTokenRequestPost(); // \MarketPay\Model\WebPayTokenRequestPost | 
 
 try {
-    $result = $api_instance->payInsWebPayWebPaySaveCard($web_pay_save_card);
+    $result = $apiInstance->payInsWebPayWebPaySaveCard($web_pay_save_card);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsWebPayApi->payInsWebPayWebPaySaveCard: ', $e->getMessage(), PHP_EOL;

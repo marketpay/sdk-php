@@ -20,13 +20,18 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\TransfersApi();
+$apiInstance = new MarketPay\Api\TransfersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $transfer_id = 789; // int | 
 
 try {
-    $result = $api_instance->transfersGet($transfer_id);
+    $result = $apiInstance->transfersGet($transfer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransfersApi->transfersGet: ', $e->getMessage(), PHP_EOL;
@@ -66,9 +71,14 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\TransfersApi();
+$apiInstance = new MarketPay\Api\TransfersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $page = 56; // int | 
 $per_page = 56; // int | 
 $before_date = 789; // int | 
@@ -76,7 +86,7 @@ $after_date = 789; // int |
 $sort = "sort_example"; // string | 
 
 try {
-    $result = $api_instance->transfersGetList($page, $per_page, $before_date, $after_date, $sort);
+    $result = $apiInstance->transfersGetList($page, $per_page, $before_date, $after_date, $sort);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransfersApi->transfersGetList: ', $e->getMessage(), PHP_EOL;
@@ -120,13 +130,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\TransfersApi();
+$apiInstance = new MarketPay\Api\TransfersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $transfer = new \MarketPay\Model\TransferPost(); // \MarketPay\Model\TransferPost | 
 
 try {
-    $result = $api_instance->transfersPost($transfer);
+    $result = $apiInstance->transfersPost($transfer);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransfersApi->transfersPost: ', $e->getMessage(), PHP_EOL;

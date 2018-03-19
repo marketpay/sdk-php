@@ -20,9 +20,14 @@ A Transaction is any movement of money
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\TransactionsApi();
+$apiInstance = new MarketPay\Api\TransactionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $page = 56; // int | 
 $per_page = 56; // int | 
 $before_date = 789; // int | 
@@ -30,7 +35,7 @@ $after_date = 789; // int |
 $sort = "sort_example"; // string | 
 
 try {
-    $result = $api_instance->transactionsGetList($page, $per_page, $before_date, $after_date, $sort);
+    $result = $apiInstance->transactionsGetList($page, $per_page, $before_date, $after_date, $sort);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransactionsApi->transactionsGetList: ', $e->getMessage(), PHP_EOL;

@@ -21,14 +21,19 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\HooksApi();
+$apiInstance = new MarketPay\Api\HooksApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $page = 56; // int | 
 $per_page = 56; // int | 
 
 try {
-    $result = $api_instance->hooksGet($page, $per_page);
+    $result = $apiInstance->hooksGet($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling HooksApi->hooksGet: ', $e->getMessage(), PHP_EOL;
@@ -69,13 +74,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\HooksApi();
+$apiInstance = new MarketPay\Api\HooksApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $hook_id = "hook_id_example"; // string | 
 
 try {
-    $result = $api_instance->hooksGet_0($hook_id);
+    $result = $apiInstance->hooksGet_0($hook_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling HooksApi->hooksGet_0: ', $e->getMessage(), PHP_EOL;
@@ -115,13 +125,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\HooksApi();
+$apiInstance = new MarketPay\Api\HooksApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $request = new \MarketPay\Model\HookPost(); // \MarketPay\Model\HookPost | 
 
 try {
-    $result = $api_instance->hooksPost($request);
+    $result = $apiInstance->hooksPost($request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling HooksApi->hooksPost: ', $e->getMessage(), PHP_EOL;
@@ -161,14 +176,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\HooksApi();
+$apiInstance = new MarketPay\Api\HooksApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $hook_id = "hook_id_example"; // string | 
 $request = new \MarketPay\Model\HookPut(); // \MarketPay\Model\HookPut | 
 
 try {
-    $result = $api_instance->hooksPut($hook_id, $request);
+    $result = $apiInstance->hooksPut($hook_id, $request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling HooksApi->hooksPut: ', $e->getMessage(), PHP_EOL;

@@ -19,13 +19,18 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayOutsBankwireApi();
+$apiInstance = new MarketPay\Api\PayOutsBankwireApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_out_id = 789; // int | 
 
 try {
-    $result = $api_instance->payOutsBankwireGet($pay_out_id);
+    $result = $apiInstance->payOutsBankwireGet($pay_out_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayOutsBankwireApi->payOutsBankwireGet: ', $e->getMessage(), PHP_EOL;
@@ -65,13 +70,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayOutsBankwireApi();
+$apiInstance = new MarketPay\Api\PayOutsBankwireApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $bankwire_pay_out = new \MarketPay\Model\PayOutBankwirePost(); // \MarketPay\Model\PayOutBankwirePost | 
 
 try {
-    $result = $api_instance->payOutsBankwirePost($bankwire_pay_out);
+    $result = $apiInstance->payOutsBankwirePost($bankwire_pay_out);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayOutsBankwireApi->payOutsBankwirePost: ', $e->getMessage(), PHP_EOL;

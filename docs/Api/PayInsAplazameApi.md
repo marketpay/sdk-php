@@ -20,13 +20,18 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsAplazameApi();
+$apiInstance = new MarketPay\Api\PayInsAplazameApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = "pay_in_id_example"; // string | 
 
 try {
-    $result = $api_instance->payInsAplazameAplazameGetPayment($pay_in_id);
+    $result = $apiInstance->payInsAplazameAplazameGetPayment($pay_in_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAplazameApi->payInsAplazameAplazameGetPayment: ', $e->getMessage(), PHP_EOL;
@@ -66,13 +71,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsAplazameApi();
+$apiInstance = new MarketPay\Api\PayInsAplazameApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $aplazame_pay_in = new \MarketPay\Model\AplazamePayByWebPost(); // \MarketPay\Model\AplazamePayByWebPost | 
 
 try {
-    $result = $api_instance->payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in);
+    $result = $apiInstance->payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAplazameApi->payInsAplazameAplazamePostPaymentByWeb: ', $e->getMessage(), PHP_EOL;
@@ -112,14 +122,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsAplazameApi();
+$apiInstance = new MarketPay\Api\PayInsAplazameApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = "pay_in_id_example"; // string | 
 $aplazame_refund = new \MarketPay\Model\AplazameRefundPaymentPost(); // \MarketPay\Model\AplazameRefundPaymentPost | 
 
 try {
-    $result = $api_instance->payInsAplazameRefund($pay_in_id, $aplazame_refund);
+    $result = $apiInstance->payInsAplazameRefund($pay_in_id, $aplazame_refund);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAplazameApi->payInsAplazameRefund: ', $e->getMessage(), PHP_EOL;

@@ -22,13 +22,18 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
+$apiInstance = new MarketPay\Api\PayInsUniversalPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $token_id = 789; // int | 
 
 try {
-    $result = $api_instance->payInsUniversalPayGetUniversalPayTokenization($token_id);
+    $result = $apiInstance->payInsUniversalPayGetUniversalPayTokenization($token_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsUniversalPayApi->payInsUniversalPayGetUniversalPayTokenization: ', $e->getMessage(), PHP_EOL;
@@ -68,13 +73,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
+$apiInstance = new MarketPay\Api\PayInsUniversalPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = 789; // int | 
 
 try {
-    $result = $api_instance->payInsUniversalPayUniversalPayGetPayment($pay_in_id);
+    $result = $apiInstance->payInsUniversalPayUniversalPayGetPayment($pay_in_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsUniversalPayApi->payInsUniversalPayUniversalPayGetPayment: ', $e->getMessage(), PHP_EOL;
@@ -114,13 +124,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
+$apiInstance = new MarketPay\Api\PayInsUniversalPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $universal_pay_pay_in = new \MarketPay\Model\UniversalPayPayByWebPost(); // \MarketPay\Model\UniversalPayPayByWebPost | 
 
 try {
-    $result = $api_instance->payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in);
+    $result = $apiInstance->payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsUniversalPayApi->payInsUniversalPayUniversalPayPostPaymentByWeb: ', $e->getMessage(), PHP_EOL;
@@ -160,14 +175,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
+$apiInstance = new MarketPay\Api\PayInsUniversalPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = 789; // int | 
 $universal_pay_refund = new \MarketPay\Model\UniversalPayRefundPost(); // \MarketPay\Model\UniversalPayRefundPost | 
 
 try {
-    $result = $api_instance->payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund);
+    $result = $apiInstance->payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsUniversalPayApi->payInsUniversalPayUniversalPayPostRefund: ', $e->getMessage(), PHP_EOL;
@@ -208,13 +228,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsUniversalPayApi();
+$apiInstance = new MarketPay\Api\PayInsUniversalPayApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $universal_pay_save_card = new \MarketPay\Model\UniversalPayTokenRequestPost(); // \MarketPay\Model\UniversalPayTokenRequestPost | 
 
 try {
-    $result = $api_instance->payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card);
+    $result = $apiInstance->payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsUniversalPayApi->payInsUniversalPayUniversalPaySaveCard: ', $e->getMessage(), PHP_EOL;

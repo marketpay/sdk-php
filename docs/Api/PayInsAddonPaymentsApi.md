@@ -24,13 +24,18 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsAddonPaymentsApi();
+$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = 789; // int | 
 
 try {
-    $result = $api_instance->payInsAddonPaymentsAddonPaymentsGetPayment($pay_in_id);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsGetPayment($pay_in_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsGetPayment: ', $e->getMessage(), PHP_EOL;
@@ -70,13 +75,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsAddonPaymentsApi();
+$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $preauthorization_id = 789; // int | 
 
 try {
-    $result = $api_instance->payInsAddonPaymentsAddonPaymentsGetPreauthorization($preauthorization_id);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsGetPreauthorization($preauthorization_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsGetPreauthorization: ', $e->getMessage(), PHP_EOL;
@@ -116,14 +126,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsAddonPaymentsApi();
+$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $x_webhook = "x_webhook_example"; // string | 
 $addon_payments_pay_in = new \MarketPay\Model\AddonPaymentsPayByWebPost(); // \MarketPay\Model\AddonPaymentsPayByWebPost | 
 
 try {
-    $result = $api_instance->payInsAddonPaymentsAddonPaymentsPostPaymentByWeb($x_webhook, $addon_payments_pay_in);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPaymentByWeb($x_webhook, $addon_payments_pay_in);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostPaymentByWeb: ', $e->getMessage(), PHP_EOL;
@@ -164,13 +179,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsAddonPaymentsApi();
+$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $addon_payments_preauthorization = new \MarketPay\Model\AddonPaymentsPreauthorizeByWebPost(); // \MarketPay\Model\AddonPaymentsPreauthorizeByWebPost | 
 
 try {
-    $result = $api_instance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb($addon_payments_preauthorization);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb($addon_payments_preauthorization);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb: ', $e->getMessage(), PHP_EOL;
@@ -210,14 +230,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsAddonPaymentsApi();
+$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $preauthorization_id = 789; // int | 
 $addon_payments_preauthorization_cancellation = new \MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost(); // \MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost | 
 
 try {
-    $result = $api_instance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation($preauthorization_id, $addon_payments_preauthorization_cancellation);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation($preauthorization_id, $addon_payments_preauthorization_cancellation);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation: ', $e->getMessage(), PHP_EOL;
@@ -258,14 +283,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsAddonPaymentsApi();
+$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $preauthorization_id = 789; // int | 
 $addon_payments_preauthorization_confirmation = new \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost(); // \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost | 
 
 try {
-    $result = $api_instance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation($preauthorization_id, $addon_payments_preauthorization_confirmation);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation($preauthorization_id, $addon_payments_preauthorization_confirmation);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation: ', $e->getMessage(), PHP_EOL;
@@ -306,14 +336,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new MarketPay\Api\PayInsAddonPaymentsApi();
+$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = 789; // int | 
 $addon_payments_refund = new \MarketPay\Model\AddonPaymentsRefundPost(); // \MarketPay\Model\AddonPaymentsRefundPost | 
 
 try {
-    $result = $api_instance->payInsAddonPaymentsAddonPaymentsPostRefund($pay_in_id, $addon_payments_refund);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostRefund($pay_in_id, $addon_payments_refund);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostRefund: ', $e->getMessage(), PHP_EOL;
