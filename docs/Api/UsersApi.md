@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**usersGetCardList**](UsersApi.md#usersGetCardList) | **GET** /v2.01/Users/{UserId}/cards | List Cards for a User
 [**usersGetLegal**](UsersApi.md#usersGetLegal) | **GET** /v2.01/Users/legal/{UserId} | View a Legal User
 [**usersGetList**](UsersApi.md#usersGetList) | **GET** /v2.01/Users | List all Users
+[**usersGetListNatural**](UsersApi.md#usersGetListNatural) | **GET** /v2.01/Users/natural | List all Natural Users
 [**usersGetNatural**](UsersApi.md#usersGetNatural) | **GET** /v2.01/Users/natural/{UserId} | View a Natural User
 [**usersGetTransactionList**](UsersApi.md#usersGetTransactionList) | **GET** /v2.01/Users/{UserId}/transactions | List Transactions for a User
 [**usersGetWalletList**](UsersApi.md#usersGetWalletList) | **GET** /v2.01/Users/{UserId}/wallets | List Wallets for a User
@@ -37,13 +38,18 @@ A User can be \"Natural\" or \"Legal\". With a UserId, you are able to:         
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 
 try {
-    $result = $api_instance->usersGet($user_id);
+    $result = $apiInstance->usersGet($user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGet: ', $e->getMessage(), PHP_EOL;
@@ -85,14 +91,19 @@ View a Bank Account
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 56; // int | The Id of a user
 $bank_account_id = 56; // int | The Id of a bank account
 
 try {
-    $result = $api_instance->usersGetBankAccount($user_id, $bank_account_id);
+    $result = $apiInstance->usersGetBankAccount($user_id, $bank_account_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetBankAccount: ', $e->getMessage(), PHP_EOL;
@@ -135,15 +146,20 @@ List Bank Accounts for a User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 
 try {
-    $result = $api_instance->usersGetBankAccountList($user_id, $page, $per_page);
+    $result = $apiInstance->usersGetBankAccountList($user_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetBankAccountList: ', $e->getMessage(), PHP_EOL;
@@ -187,15 +203,20 @@ List Cards for a User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 
 try {
-    $result = $api_instance->usersGetCardList($user_id, $page, $per_page);
+    $result = $apiInstance->usersGetCardList($user_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetCardList: ', $e->getMessage(), PHP_EOL;
@@ -239,13 +260,18 @@ View a Legal User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a legal user
 
 try {
-    $result = $api_instance->usersGetLegal($user_id);
+    $result = $apiInstance->usersGetLegal($user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetLegal: ', $e->getMessage(), PHP_EOL;
@@ -287,14 +313,19 @@ List all Users
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 
 try {
-    $result = $api_instance->usersGetList($page, $per_page);
+    $result = $apiInstance->usersGetList($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetList: ', $e->getMessage(), PHP_EOL;
@@ -324,6 +355,65 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **usersGetListNatural**
+> \Swagger\Client\Model\ResponseListUserResponse usersGetListNatural($page, $per_page, $first_name_contains, $last_name_contains)
+
+List all Natural Users
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$page = 56; // int | The page number of results you wish to return
+$per_page = 56; // int | The number of results to return per page
+$first_name_contains = "first_name_contains_example"; // string | 
+$last_name_contains = "last_name_contains_example"; // string | 
+
+try {
+    $result = $apiInstance->usersGetListNatural($page, $per_page, $first_name_contains, $last_name_contains);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->usersGetListNatural: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| The page number of results you wish to return | [optional]
+ **per_page** | **int**| The number of results to return per page | [optional]
+ **first_name_contains** | **string**|  | [optional]
+ **last_name_contains** | **string**|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\ResponseListUserResponse**](../Model/ResponseListUserResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **usersGetNatural**
 > \Swagger\Client\Model\UserNaturalResponse usersGetNatural($user_id)
 
@@ -337,13 +427,18 @@ View a Natural User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a natural user
 
 try {
-    $result = $api_instance->usersGetNatural($user_id);
+    $result = $apiInstance->usersGetNatural($user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetNatural: ', $e->getMessage(), PHP_EOL;
@@ -385,15 +480,20 @@ List Transactions for a User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 
 try {
-    $result = $api_instance->usersGetTransactionList($user_id, $page, $per_page);
+    $result = $apiInstance->usersGetTransactionList($user_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetTransactionList: ', $e->getMessage(), PHP_EOL;
@@ -437,15 +537,20 @@ List Wallets for a User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $page = 56; // int | The page number of results you wish to return
 $per_page = 56; // int | The number of results to return per page
 
 try {
-    $result = $api_instance->usersGetWalletList($user_id, $page, $per_page);
+    $result = $apiInstance->usersGetWalletList($user_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersGetWalletList: ', $e->getMessage(), PHP_EOL;
@@ -489,14 +594,19 @@ In the case of CAD PayOut, the author (AuthorId) of the PayOut should have their
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $bank_account_ca = new \Swagger\Client\Model\BankAccountCaPost(); // \Swagger\Client\Model\BankAccountCaPost | BankAccountCA Object params
 
 try {
-    $result = $api_instance->usersPostBankAccountCa($user_id, $bank_account_ca);
+    $result = $apiInstance->usersPostBankAccountCa($user_id, $bank_account_ca);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostBankAccountCa: ', $e->getMessage(), PHP_EOL;
@@ -539,14 +649,19 @@ Create a GB BankAccount
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $bank_account_gb = new \Swagger\Client\Model\BankAccountGbPost(); // \Swagger\Client\Model\BankAccountGbPost | 
 
 try {
-    $result = $api_instance->usersPostBankAccountGb($user_id, $bank_account_gb);
+    $result = $apiInstance->usersPostBankAccountGb($user_id, $bank_account_gb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostBankAccountGb: ', $e->getMessage(), PHP_EOL;
@@ -589,14 +704,19 @@ Create an IBAN BankAccount
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $bank_account_iban = new \Swagger\Client\Model\BankAccountIbanPost(); // \Swagger\Client\Model\BankAccountIbanPost | BankAccountIBAN Object params
 
 try {
-    $result = $api_instance->usersPostBankAccountIban($user_id, $bank_account_iban);
+    $result = $apiInstance->usersPostBankAccountIban($user_id, $bank_account_iban);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostBankAccountIban: ', $e->getMessage(), PHP_EOL;
@@ -639,14 +759,19 @@ Create an OTHER BankAccount
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $bank_account_other = new \Swagger\Client\Model\BankAccountOtherPost(); // \Swagger\Client\Model\BankAccountOtherPost | 
 
 try {
-    $result = $api_instance->usersPostBankAccountOther($user_id, $bank_account_other);
+    $result = $apiInstance->usersPostBankAccountOther($user_id, $bank_account_other);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostBankAccountOther: ', $e->getMessage(), PHP_EOL;
@@ -689,14 +814,19 @@ In the case of USD PayOut, the author (AuthorId) of the PayOut should have their
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $bank_account_us = new \Swagger\Client\Model\BankAccountUsPost(); // \Swagger\Client\Model\BankAccountUsPost | BankAccountUS Object params
 
 try {
-    $result = $api_instance->usersPostBankAccountUs($user_id, $bank_account_us);
+    $result = $apiInstance->usersPostBankAccountUs($user_id, $bank_account_us);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostBankAccountUs: ', $e->getMessage(), PHP_EOL;
@@ -739,13 +869,18 @@ Note that the LegalRepresentativeBirthday field is a timestamp, but be careful t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_legal = new \Swagger\Client\Model\UserLegalPost(); // \Swagger\Client\Model\UserLegalPost | UserLegal Object params
 
 try {
-    $result = $api_instance->usersPostLegal($user_legal);
+    $result = $apiInstance->usersPostLegal($user_legal);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostLegal: ', $e->getMessage(), PHP_EOL;
@@ -787,13 +922,18 @@ Note that the Birthday field is a timestamp, but be careful to ensure that the t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_natural = new \Swagger\Client\Model\UserNaturalPost(); // \Swagger\Client\Model\UserNaturalPost | UserNatural Object params
 
 try {
-    $result = $api_instance->usersPostNatural($user_natural);
+    $result = $apiInstance->usersPostNatural($user_natural);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPostNatural: ', $e->getMessage(), PHP_EOL;
@@ -835,14 +975,19 @@ Note that the LegalRepresentativeBirthday field is a timestamp, but be careful t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $user_legal = new \Swagger\Client\Model\UserLegalPut(); // \Swagger\Client\Model\UserLegalPut | UserLegal Object params
 
 try {
-    $result = $api_instance->usersPutLegal($user_id, $user_legal);
+    $result = $apiInstance->usersPutLegal($user_id, $user_legal);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPutLegal: ', $e->getMessage(), PHP_EOL;
@@ -885,14 +1030,19 @@ Note that the Birthday field is a timestamp, but be careful to ensure that the t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$apiInstance = new Swagger\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $user_id = 789; // int | The Id of a user
 $user_natural = new \Swagger\Client\Model\UserNaturalPut(); // \Swagger\Client\Model\UserNaturalPut | UserNatural Object params
 
 try {
-    $result = $api_instance->usersPutNatural($user_id, $user_natural);
+    $result = $apiInstance->usersPutNatural($user_id, $user_natural);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->usersPutNatural: ', $e->getMessage(), PHP_EOL;

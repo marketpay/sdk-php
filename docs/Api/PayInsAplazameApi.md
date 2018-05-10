@@ -4,15 +4,13 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payInsAplazameAplazameGetPayment**](PayInsAplazameApi.md#payInsAplazameAplazameGetPayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | -------
-[**payInsAplazameAplazamePostPaymentByWeb**](PayInsAplazameApi.md#payInsAplazameAplazamePostPaymentByWeb) | **POST** /v2.01/PayInsAplazame/payments/web | --------
+[**payInsAplazameAplazameGetPayment**](PayInsAplazameApi.md#payInsAplazameAplazameGetPayment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | 
+[**payInsAplazameAplazamePostPaymentByWeb**](PayInsAplazameApi.md#payInsAplazameAplazamePostPaymentByWeb) | **POST** /v2.01/PayInsAplazame/payments/web | 
 [**payInsAplazameRefund**](PayInsAplazameApi.md#payInsAplazameRefund) | **POST** /v2.01/PayInsAplazame/payments/{PayInId}/refunds | 
 
 
 # **payInsAplazameAplazameGetPayment**
 > \Swagger\Client\Model\AplazamePayInsResponse payInsAplazameAplazameGetPayment($pay_in_id)
-
--------
 
 
 
@@ -22,13 +20,18 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsAplazameApi();
-$pay_in_id = "pay_in_id_example"; // string | ------
+$apiInstance = new Swagger\Client\Api\PayInsAplazameApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$pay_in_id = "pay_in_id_example"; // string | 
 
 try {
-    $result = $api_instance->payInsAplazameAplazameGetPayment($pay_in_id);
+    $result = $apiInstance->payInsAplazameAplazameGetPayment($pay_in_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAplazameApi->payInsAplazameAplazameGetPayment: ', $e->getMessage(), PHP_EOL;
@@ -40,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pay_in_id** | **string**| ------ |
+ **pay_in_id** | **string**|  |
 
 ### Return type
 
@@ -60,8 +63,6 @@ Name | Type | Description  | Notes
 # **payInsAplazameAplazamePostPaymentByWeb**
 > \Swagger\Client\Model\AplazamePayByWebResponse payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in)
 
---------
-
 
 
 ### Example
@@ -70,13 +71,18 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsAplazameApi();
-$aplazame_pay_in = new \Swagger\Client\Model\AplazamePayByWebPost(); // \Swagger\Client\Model\AplazamePayByWebPost | ------------
+$apiInstance = new Swagger\Client\Api\PayInsAplazameApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$aplazame_pay_in = new \Swagger\Client\Model\AplazamePayByWebPost(); // \Swagger\Client\Model\AplazamePayByWebPost | 
 
 try {
-    $result = $api_instance->payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in);
+    $result = $apiInstance->payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAplazameApi->payInsAplazameAplazamePostPaymentByWeb: ', $e->getMessage(), PHP_EOL;
@@ -88,7 +94,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **aplazame_pay_in** | [**\Swagger\Client\Model\AplazamePayByWebPost**](../Model/AplazamePayByWebPost.md)| ------------ | [optional]
+ **aplazame_pay_in** | [**\Swagger\Client\Model\AplazamePayByWebPost**](../Model/AplazamePayByWebPost.md)|  | [optional]
 
 ### Return type
 
@@ -116,14 +122,19 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PayInsAplazameApi();
+$apiInstance = new Swagger\Client\Api\PayInsAplazameApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $pay_in_id = "pay_in_id_example"; // string | 
 $aplazame_refund = new \Swagger\Client\Model\AplazameRefundPaymentPost(); // \Swagger\Client\Model\AplazameRefundPaymentPost | 
 
 try {
-    $result = $api_instance->payInsAplazameRefund($pay_in_id, $aplazame_refund);
+    $result = $apiInstance->payInsAplazameRefund($pay_in_id, $aplazame_refund);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAplazameApi->payInsAplazameRefund: ', $e->getMessage(), PHP_EOL;

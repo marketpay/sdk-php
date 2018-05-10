@@ -4,17 +4,15 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**transfersGet**](TransfersApi.md#transfersGet) | **GET** /v2.01/Transfers/{TransferId} | View a Transfer
-[**transfersGetList**](TransfersApi.md#transfersGetList) | **GET** /v2.01/Transfers | View a Transfer
-[**transfersPost**](TransfersApi.md#transfersPost) | **POST** /v2.01/Transfers | Create a Transfer
+[**transfersGet**](TransfersApi.md#transfersGet) | **GET** /v2.01/Transfers/{TransferId} | 
+[**transfersGetList**](TransfersApi.md#transfersGetList) | **GET** /v2.01/Transfers | 
+[**transfersPost**](TransfersApi.md#transfersPost) | **POST** /v2.01/Transfers | 
 
 
 # **transfersGet**
 > \Swagger\Client\Model\TransferResponse transfersGet($transfer_id)
 
-View a Transfer
 
-A Transfer is a request to relocate e-money from one wallet to another wallet.
 
 ### Example
 ```php
@@ -22,13 +20,18 @@ A Transfer is a request to relocate e-money from one wallet to another wallet.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\TransfersApi();
-$transfer_id = 789; // int | The Id of a transfer
+$apiInstance = new Swagger\Client\Api\TransfersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$transfer_id = 789; // int | 
 
 try {
-    $result = $api_instance->transfersGet($transfer_id);
+    $result = $apiInstance->transfersGet($transfer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransfersApi->transfersGet: ', $e->getMessage(), PHP_EOL;
@@ -40,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transfer_id** | **int**| The Id of a transfer |
+ **transfer_id** | **int**|  |
 
 ### Return type
 
@@ -60,9 +63,7 @@ Name | Type | Description  | Notes
 # **transfersGetList**
 > \Swagger\Client\Model\ResponseListTransferResponse transfersGetList($page, $per_page, $before_date, $after_date, $sort)
 
-View a Transfer
 
-A Transfer is a request to relocate e-money from one wallet to another wallet.
 
 ### Example
 ```php
@@ -70,9 +71,14 @@ A Transfer is a request to relocate e-money from one wallet to another wallet.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\TransfersApi();
+$apiInstance = new Swagger\Client\Api\TransfersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $page = 56; // int | 
 $per_page = 56; // int | 
 $before_date = 789; // int | 
@@ -80,7 +86,7 @@ $after_date = 789; // int |
 $sort = "sort_example"; // string | 
 
 try {
-    $result = $api_instance->transfersGetList($page, $per_page, $before_date, $after_date, $sort);
+    $result = $apiInstance->transfersGetList($page, $per_page, $before_date, $after_date, $sort);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransfersApi->transfersGetList: ', $e->getMessage(), PHP_EOL;
@@ -116,8 +122,6 @@ Name | Type | Description  | Notes
 # **transfersPost**
 > \Swagger\Client\Model\TransferResponse transfersPost($transfer)
 
-Create a Transfer
-
 
 
 ### Example
@@ -126,13 +130,18 @@ Create a Transfer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\TransfersApi();
-$transfer = new \Swagger\Client\Model\TransferPost(); // \Swagger\Client\Model\TransferPost | Transfer Object params
+$apiInstance = new Swagger\Client\Api\TransfersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$transfer = new \Swagger\Client\Model\TransferPost(); // \Swagger\Client\Model\TransferPost | 
 
 try {
-    $result = $api_instance->transfersPost($transfer);
+    $result = $apiInstance->transfersPost($transfer);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransfersApi->transfersPost: ', $e->getMessage(), PHP_EOL;
@@ -144,7 +153,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transfer** | [**\Swagger\Client\Model\TransferPost**](../Model/TransferPost.md)| Transfer Object params | [optional]
+ **transfer** | [**\Swagger\Client\Model\TransferPost**](../Model/TransferPost.md)|  | [optional]
 
 ### Return type
 
