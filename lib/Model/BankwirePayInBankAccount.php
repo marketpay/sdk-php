@@ -61,7 +61,9 @@ class BankwirePayInBankAccount implements ModelInterface, ArrayAccess
         'owner_address' => '\MarketPay\Model\Address',
         'owner_name' => 'string',
         'iban' => 'string',
-        'bic' => 'string'
+        'bic' => 'string',
+        'sort_code' => 'string',
+        'account_number' => 'string'
     ];
 
     /**
@@ -74,7 +76,9 @@ class BankwirePayInBankAccount implements ModelInterface, ArrayAccess
         'owner_address' => null,
         'owner_name' => null,
         'iban' => null,
-        'bic' => null
+        'bic' => null,
+        'sort_code' => null,
+        'account_number' => null
     ];
 
     /**
@@ -108,7 +112,9 @@ class BankwirePayInBankAccount implements ModelInterface, ArrayAccess
         'owner_address' => 'OwnerAddress',
         'owner_name' => 'OwnerName',
         'iban' => 'IBAN',
-        'bic' => 'BIC'
+        'bic' => 'BIC',
+        'sort_code' => 'SortCode',
+        'account_number' => 'AccountNumber'
     ];
 
     /**
@@ -121,7 +127,9 @@ class BankwirePayInBankAccount implements ModelInterface, ArrayAccess
         'owner_address' => 'setOwnerAddress',
         'owner_name' => 'setOwnerName',
         'iban' => 'setIban',
-        'bic' => 'setBic'
+        'bic' => 'setBic',
+        'sort_code' => 'setSortCode',
+        'account_number' => 'setAccountNumber'
     ];
 
     /**
@@ -134,7 +142,9 @@ class BankwirePayInBankAccount implements ModelInterface, ArrayAccess
         'owner_address' => 'getOwnerAddress',
         'owner_name' => 'getOwnerName',
         'iban' => 'getIban',
-        'bic' => 'getBic'
+        'bic' => 'getBic',
+        'sort_code' => 'getSortCode',
+        'account_number' => 'getAccountNumber'
     ];
 
     /**
@@ -223,6 +233,8 @@ class BankwirePayInBankAccount implements ModelInterface, ArrayAccess
         $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
         $this->container['iban'] = isset($data['iban']) ? $data['iban'] : null;
         $this->container['bic'] = isset($data['bic']) ? $data['bic'] : null;
+        $this->container['sort_code'] = isset($data['sort_code']) ? $data['sort_code'] : null;
+        $this->container['account_number'] = isset($data['account_number']) ? $data['account_number'] : null;
     }
 
     /**
@@ -387,6 +399,54 @@ class BankwirePayInBankAccount implements ModelInterface, ArrayAccess
     public function setBic($bic)
     {
         $this->container['bic'] = $bic;
+
+        return $this;
+    }
+
+    /**
+     * Gets sort_code
+     *
+     * @return string
+     */
+    public function getSortCode()
+    {
+        return $this->container['sort_code'];
+    }
+
+    /**
+     * Sets sort_code
+     *
+     * @param string $sort_code sort_code
+     *
+     * @return $this
+     */
+    public function setSortCode($sort_code)
+    {
+        $this->container['sort_code'] = $sort_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_number
+     *
+     * @return string
+     */
+    public function getAccountNumber()
+    {
+        return $this->container['account_number'];
+    }
+
+    /**
+     * Sets account_number
+     *
+     * @param string $account_number account_number
+     *
+     * @return $this
+     */
+    public function setAccountNumber($account_number)
+    {
+        $this->container['account_number'] = $account_number;
 
         return $this;
     }

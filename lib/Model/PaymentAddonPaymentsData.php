@@ -57,8 +57,10 @@ class PaymentAddonPaymentsData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ds_order' => 'string',
-        'ds_authorisation_code' => 'string'
+        'order_id' => 'string',
+        'acccount' => 'string',
+        'statement_description' => 'string',
+        'is3d_secure' => 'bool'
     ];
 
     /**
@@ -67,8 +69,10 @@ class PaymentAddonPaymentsData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'ds_order' => null,
-        'ds_authorisation_code' => null
+        'order_id' => null,
+        'acccount' => null,
+        'statement_description' => null,
+        'is3d_secure' => null
     ];
 
     /**
@@ -98,8 +102,10 @@ class PaymentAddonPaymentsData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ds_order' => 'DsOrder',
-        'ds_authorisation_code' => 'DsAuthorisationCode'
+        'order_id' => 'OrderId',
+        'acccount' => 'Acccount',
+        'statement_description' => 'StatementDescription',
+        'is3d_secure' => 'Is3dSecure'
     ];
 
     /**
@@ -108,8 +114,10 @@ class PaymentAddonPaymentsData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ds_order' => 'setDsOrder',
-        'ds_authorisation_code' => 'setDsAuthorisationCode'
+        'order_id' => 'setOrderId',
+        'acccount' => 'setAcccount',
+        'statement_description' => 'setStatementDescription',
+        'is3d_secure' => 'setIs3dSecure'
     ];
 
     /**
@@ -118,8 +126,10 @@ class PaymentAddonPaymentsData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ds_order' => 'getDsOrder',
-        'ds_authorisation_code' => 'getDsAuthorisationCode'
+        'order_id' => 'getOrderId',
+        'acccount' => 'getAcccount',
+        'statement_description' => 'getStatementDescription',
+        'is3d_secure' => 'getIs3dSecure'
     ];
 
     /**
@@ -182,8 +192,10 @@ class PaymentAddonPaymentsData implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ds_order'] = isset($data['ds_order']) ? $data['ds_order'] : null;
-        $this->container['ds_authorisation_code'] = isset($data['ds_authorisation_code']) ? $data['ds_authorisation_code'] : null;
+        $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
+        $this->container['acccount'] = isset($data['acccount']) ? $data['acccount'] : null;
+        $this->container['statement_description'] = isset($data['statement_description']) ? $data['statement_description'] : null;
+        $this->container['is3d_secure'] = isset($data['is3d_secure']) ? $data['is3d_secure'] : null;
     }
 
     /**
@@ -212,49 +224,97 @@ class PaymentAddonPaymentsData implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets ds_order
+     * Gets order_id
      *
      * @return string
      */
-    public function getDsOrder()
+    public function getOrderId()
     {
-        return $this->container['ds_order'];
+        return $this->container['order_id'];
     }
 
     /**
-     * Sets ds_order
+     * Sets order_id
      *
-     * @param string $ds_order ds_order
+     * @param string $order_id order_id
      *
      * @return $this
      */
-    public function setDsOrder($ds_order)
+    public function setOrderId($order_id)
     {
-        $this->container['ds_order'] = $ds_order;
+        $this->container['order_id'] = $order_id;
 
         return $this;
     }
 
     /**
-     * Gets ds_authorisation_code
+     * Gets acccount
      *
      * @return string
      */
-    public function getDsAuthorisationCode()
+    public function getAcccount()
     {
-        return $this->container['ds_authorisation_code'];
+        return $this->container['acccount'];
     }
 
     /**
-     * Sets ds_authorisation_code
+     * Sets acccount
      *
-     * @param string $ds_authorisation_code ds_authorisation_code
+     * @param string $acccount acccount
      *
      * @return $this
      */
-    public function setDsAuthorisationCode($ds_authorisation_code)
+    public function setAcccount($acccount)
     {
-        $this->container['ds_authorisation_code'] = $ds_authorisation_code;
+        $this->container['acccount'] = $acccount;
+
+        return $this;
+    }
+
+    /**
+     * Gets statement_description
+     *
+     * @return string
+     */
+    public function getStatementDescription()
+    {
+        return $this->container['statement_description'];
+    }
+
+    /**
+     * Sets statement_description
+     *
+     * @param string $statement_description statement_description
+     *
+     * @return $this
+     */
+    public function setStatementDescription($statement_description)
+    {
+        $this->container['statement_description'] = $statement_description;
+
+        return $this;
+    }
+
+    /**
+     * Gets is3d_secure
+     *
+     * @return bool
+     */
+    public function getIs3dSecure()
+    {
+        return $this->container['is3d_secure'];
+    }
+
+    /**
+     * Sets is3d_secure
+     *
+     * @param bool $is3d_secure is3d_secure
+     *
+     * @return $this
+     */
+    public function setIs3dSecure($is3d_secure)
+    {
+        $this->container['is3d_secure'] = $is3d_secure;
 
         return $this;
     }

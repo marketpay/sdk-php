@@ -78,16 +78,30 @@ class PaymentAddonPaymentsDataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ds_order"
+     * Test attribute "order_id"
      */
-    public function testPropertyDsOrder()
+    public function testPropertyOrderId()
     {
     }
 
     /**
-     * Test attribute "ds_authorisation_code"
+     * Test attribute "acccount"
      */
-    public function testPropertyDsAuthorisationCode()
+    public function testPropertyAcccount()
+    {
+    }
+
+    /**
+     * Test attribute "statement_description"
+     */
+    public function testPropertyStatementDescription()
+    {
+    }
+
+    /**
+     * Test attribute "is3d_secure"
+     */
+    public function testPropertyIs3dSecure()
     {
     }
 }

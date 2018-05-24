@@ -92,23 +92,100 @@ class AddonPaymentsPreauthorizeByWebResponseTest extends \PHPUnit_Framework_Test
     }
 
     /**
-     * Test attribute "ds_signature_version"
+     * Test attribute "amount"
      */
-    public function testPropertyDsSignatureVersion()
+    public function testPropertyAmount()
     {
     }
 
     /**
-     * Test attribute "ds_merchant_parameters"
+     * Test attribute "auto_settle_flag"
      */
-    public function testPropertyDsMerchantParameters()
+    public function testPropertyAutoSettleFlag()
     {
     }
 
     /**
-     * Test attribute "ds_signature"
+     * Test attribute "card_payment_button"
      */
-    public function testPropertyDsSignature()
+    public function testPropertyCardPaymentButton()
+    {
+    }
+
+    /**
+     * Test attribute "currency"
+     */
+    public function testPropertyCurrency()
+    {
+    }
+
+    /**
+     * Test attribute "hpp_lang"
+     */
+    public function testPropertyHppLang()
+    {
+    }
+
+    /**
+     * Test attribute "merchant_id"
+     */
+    public function testPropertyMerchantId()
+    {
+    }
+
+    /**
+     * Test attribute "merchant_response_url"
+     */
+    public function testPropertyMerchantResponseUrl()
+    {
+    }
+
+    /**
+     * Test attribute "order_id"
+     */
+    public function testPropertyOrderId()
+    {
+    }
+
+    /**
+     * Test attribute "sha1_hash"
+     */
+    public function testPropertySha1Hash()
+    {
+    }
+
+    /**
+     * Test attribute "time_stamp"
+     */
+    public function testPropertyTimeStamp()
+    {
+    }
+
+    /**
+     * Test attribute "comment1"
+     */
+    public function testPropertyComment1()
+    {
+    }
+
+    /**
+     * Test attribute "comment2"
+     */
+    public function testPropertyComment2()
+    {
+    }
+
+    /**
+     * Test attribute "var_ref"
+     */
+    public function testPropertyVarRef()
+    {
+    }
+
+    /**
+     * Test attribute "prod_id"
+     */
+    public function testPropertyProdId()
     {
     }
 }

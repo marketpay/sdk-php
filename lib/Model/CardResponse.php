@@ -68,6 +68,7 @@ class CardResponse implements ModelInterface, ArrayAccess
         'active' => 'bool',
         'currency' => 'string',
         'validity' => 'string',
+        'provider_name' => 'string',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -90,6 +91,7 @@ class CardResponse implements ModelInterface, ArrayAccess
         'active' => null,
         'currency' => null,
         'validity' => null,
+        'provider_name' => null,
         'id' => null,
         'creation_date' => 'int64',
         'tag' => null
@@ -133,6 +135,7 @@ class CardResponse implements ModelInterface, ArrayAccess
         'active' => 'Active',
         'currency' => 'Currency',
         'validity' => 'Validity',
+        'provider_name' => 'ProviderName',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -155,6 +158,7 @@ class CardResponse implements ModelInterface, ArrayAccess
         'active' => 'setActive',
         'currency' => 'setCurrency',
         'validity' => 'setValidity',
+        'provider_name' => 'setProviderName',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -177,6 +181,7 @@ class CardResponse implements ModelInterface, ArrayAccess
         'active' => 'getActive',
         'currency' => 'getCurrency',
         'validity' => 'getValidity',
+        'provider_name' => 'getProviderName',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -678,6 +683,7 @@ class CardResponse implements ModelInterface, ArrayAccess
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['validity'] = isset($data['validity']) ? $data['validity'] : null;
+        $this->container['provider_name'] = isset($data['provider_name']) ? $data['provider_name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -1031,6 +1037,30 @@ class CardResponse implements ModelInterface, ArrayAccess
             );
         }
         $this->container['validity'] = $validity;
+
+        return $this;
+    }
+
+    /**
+     * Gets provider_name
+     *
+     * @return string
+     */
+    public function getProviderName()
+    {
+        return $this->container['provider_name'];
+    }
+
+    /**
+     * Sets provider_name
+     *
+     * @param string $provider_name provider_name
+     *
+     * @return $this
+     */
+    public function setProviderName($provider_name)
+    {
+        $this->container['provider_name'] = $provider_name;
 
         return $this;
     }

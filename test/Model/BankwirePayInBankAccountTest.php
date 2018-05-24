@@ -111,4 +111,18 @@ class BankwirePayInBankAccountTest extends \PHPUnit_Framework_TestCase
     public function testPropertyBic()
     {
     }
+
+    /**
+     * Test attribute "sort_code"
+     */
+    public function testPropertySortCode()
+    {
+    }
+
+    /**
+     * Test attribute "account_number"
+     */
+    public function testPropertyAccountNumber()
+    {
+    }
 }

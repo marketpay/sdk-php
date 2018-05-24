@@ -58,7 +58,10 @@ class RefundAddonPaymentsData implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'ds_order' => 'string',
-        'ds_authorisation_code' => 'string'
+        'ds_authorisation_code' => 'string',
+        'pas_ref' => 'string',
+        'account' => 'string',
+        'cavv' => 'string'
     ];
 
     /**
@@ -68,7 +71,10 @@ class RefundAddonPaymentsData implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'ds_order' => null,
-        'ds_authorisation_code' => null
+        'ds_authorisation_code' => null,
+        'pas_ref' => null,
+        'account' => null,
+        'cavv' => null
     ];
 
     /**
@@ -99,7 +105,10 @@ class RefundAddonPaymentsData implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'ds_order' => 'DsOrder',
-        'ds_authorisation_code' => 'DsAuthorisationCode'
+        'ds_authorisation_code' => 'DsAuthorisationCode',
+        'pas_ref' => 'PasRef',
+        'account' => 'Account',
+        'cavv' => 'Cavv'
     ];
 
     /**
@@ -109,7 +118,10 @@ class RefundAddonPaymentsData implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'ds_order' => 'setDsOrder',
-        'ds_authorisation_code' => 'setDsAuthorisationCode'
+        'ds_authorisation_code' => 'setDsAuthorisationCode',
+        'pas_ref' => 'setPasRef',
+        'account' => 'setAccount',
+        'cavv' => 'setCavv'
     ];
 
     /**
@@ -119,7 +131,10 @@ class RefundAddonPaymentsData implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'ds_order' => 'getDsOrder',
-        'ds_authorisation_code' => 'getDsAuthorisationCode'
+        'ds_authorisation_code' => 'getDsAuthorisationCode',
+        'pas_ref' => 'getPasRef',
+        'account' => 'getAccount',
+        'cavv' => 'getCavv'
     ];
 
     /**
@@ -184,6 +199,9 @@ class RefundAddonPaymentsData implements ModelInterface, ArrayAccess
     {
         $this->container['ds_order'] = isset($data['ds_order']) ? $data['ds_order'] : null;
         $this->container['ds_authorisation_code'] = isset($data['ds_authorisation_code']) ? $data['ds_authorisation_code'] : null;
+        $this->container['pas_ref'] = isset($data['pas_ref']) ? $data['pas_ref'] : null;
+        $this->container['account'] = isset($data['account']) ? $data['account'] : null;
+        $this->container['cavv'] = isset($data['cavv']) ? $data['cavv'] : null;
     }
 
     /**
@@ -255,6 +273,78 @@ class RefundAddonPaymentsData implements ModelInterface, ArrayAccess
     public function setDsAuthorisationCode($ds_authorisation_code)
     {
         $this->container['ds_authorisation_code'] = $ds_authorisation_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets pas_ref
+     *
+     * @return string
+     */
+    public function getPasRef()
+    {
+        return $this->container['pas_ref'];
+    }
+
+    /**
+     * Sets pas_ref
+     *
+     * @param string $pas_ref pas_ref
+     *
+     * @return $this
+     */
+    public function setPasRef($pas_ref)
+    {
+        $this->container['pas_ref'] = $pas_ref;
+
+        return $this;
+    }
+
+    /**
+     * Gets account
+     *
+     * @return string
+     */
+    public function getAccount()
+    {
+        return $this->container['account'];
+    }
+
+    /**
+     * Sets account
+     *
+     * @param string $account account
+     *
+     * @return $this
+     */
+    public function setAccount($account)
+    {
+        $this->container['account'] = $account;
+
+        return $this;
+    }
+
+    /**
+     * Gets cavv
+     *
+     * @return string
+     */
+    public function getCavv()
+    {
+        return $this->container['cavv'];
+    }
+
+    /**
+     * Sets cavv
+     *
+     * @param string $cavv cavv
+     *
+     * @return $this
+     */
+    public function setCavv($cavv)
+    {
+        $this->container['cavv'] = $cavv;
 
         return $this;
     }

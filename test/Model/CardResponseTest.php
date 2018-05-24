@@ -155,6 +155,13 @@ class CardResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "provider_name"
+     */
+    public function testPropertyProviderName()
+    {
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()

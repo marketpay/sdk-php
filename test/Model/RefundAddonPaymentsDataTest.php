@@ -90,4 +90,25 @@ class RefundAddonPaymentsDataTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDsAuthorisationCode()
     {
     }
+
+    /**
+     * Test attribute "pas_ref"
+     */
+    public function testPropertyPasRef()
+    {
+    }
+
+    /**
+     * Test attribute "account"
+     */
+    public function testPropertyAccount()
+    {
+    }
+
+    /**
+     * Test attribute "cavv"
+     */
+    public function testPropertyCavv()
+    {
+    }
 }

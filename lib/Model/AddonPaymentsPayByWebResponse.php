@@ -59,9 +59,28 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'pay_in_id' => 'string',
         'url' => 'string',
-        'ds_signature_version' => 'string',
-        'ds_merchant_parameters' => 'string',
-        'ds_signature' => 'string'
+        'amount' => 'int',
+        'auto_settle_flag' => 'string',
+        'card_payment_button' => 'string',
+        'currency' => 'string',
+        'hpp_lang' => 'string',
+        'merchant_id' => 'string',
+        'merchant_response_url' => 'string',
+        'order_id' => 'string',
+        'sha1_hash' => 'string',
+        'time_stamp' => 'string',
+        'account' => 'string',
+        'comment1' => 'string',
+        'comment2' => 'string',
+        'var_ref' => 'string',
+        'prod_id' => 'string',
+        'card_storage_enable' => 'string',
+        'offer_save_card' => 'string',
+        'pmt_ref' => 'string',
+        'payer_exists' => 'string',
+        'payer_ref' => 'string',
+        'hpp_version' => 'string',
+        'hpp_select_stored_card' => 'string'
     ];
 
     /**
@@ -72,9 +91,28 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'pay_in_id' => null,
         'url' => null,
-        'ds_signature_version' => null,
-        'ds_merchant_parameters' => null,
-        'ds_signature' => null
+        'amount' => 'int64',
+        'auto_settle_flag' => null,
+        'card_payment_button' => null,
+        'currency' => null,
+        'hpp_lang' => null,
+        'merchant_id' => null,
+        'merchant_response_url' => null,
+        'order_id' => null,
+        'sha1_hash' => null,
+        'time_stamp' => null,
+        'account' => null,
+        'comment1' => null,
+        'comment2' => null,
+        'var_ref' => null,
+        'prod_id' => null,
+        'card_storage_enable' => null,
+        'offer_save_card' => null,
+        'pmt_ref' => null,
+        'payer_exists' => null,
+        'payer_ref' => null,
+        'hpp_version' => null,
+        'hpp_select_stored_card' => null
     ];
 
     /**
@@ -106,9 +144,28 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'pay_in_id' => 'PayInId',
         'url' => 'Url',
-        'ds_signature_version' => 'Ds_SignatureVersion',
-        'ds_merchant_parameters' => 'Ds_MerchantParameters',
-        'ds_signature' => 'Ds_Signature'
+        'amount' => 'Amount',
+        'auto_settle_flag' => 'AutoSettleFlag',
+        'card_payment_button' => 'CardPaymentButton',
+        'currency' => 'Currency',
+        'hpp_lang' => 'HppLang',
+        'merchant_id' => 'MerchantId',
+        'merchant_response_url' => 'MerchantResponseUrl',
+        'order_id' => 'OrderId',
+        'sha1_hash' => 'Sha1Hash',
+        'time_stamp' => 'TimeStamp',
+        'account' => 'Account',
+        'comment1' => 'Comment1',
+        'comment2' => 'Comment2',
+        'var_ref' => 'VarRef',
+        'prod_id' => 'ProdId',
+        'card_storage_enable' => 'CardStorageEnable',
+        'offer_save_card' => 'OfferSaveCard',
+        'pmt_ref' => 'PmtRef',
+        'payer_exists' => 'PayerExists',
+        'payer_ref' => 'PayerRef',
+        'hpp_version' => 'HppVersion',
+        'hpp_select_stored_card' => 'HppSelectStoredCard'
     ];
 
     /**
@@ -119,9 +176,28 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
         'pay_in_id' => 'setPayInId',
         'url' => 'setUrl',
-        'ds_signature_version' => 'setDsSignatureVersion',
-        'ds_merchant_parameters' => 'setDsMerchantParameters',
-        'ds_signature' => 'setDsSignature'
+        'amount' => 'setAmount',
+        'auto_settle_flag' => 'setAutoSettleFlag',
+        'card_payment_button' => 'setCardPaymentButton',
+        'currency' => 'setCurrency',
+        'hpp_lang' => 'setHppLang',
+        'merchant_id' => 'setMerchantId',
+        'merchant_response_url' => 'setMerchantResponseUrl',
+        'order_id' => 'setOrderId',
+        'sha1_hash' => 'setSha1Hash',
+        'time_stamp' => 'setTimeStamp',
+        'account' => 'setAccount',
+        'comment1' => 'setComment1',
+        'comment2' => 'setComment2',
+        'var_ref' => 'setVarRef',
+        'prod_id' => 'setProdId',
+        'card_storage_enable' => 'setCardStorageEnable',
+        'offer_save_card' => 'setOfferSaveCard',
+        'pmt_ref' => 'setPmtRef',
+        'payer_exists' => 'setPayerExists',
+        'payer_ref' => 'setPayerRef',
+        'hpp_version' => 'setHppVersion',
+        'hpp_select_stored_card' => 'setHppSelectStoredCard'
     ];
 
     /**
@@ -132,9 +208,28 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
         'pay_in_id' => 'getPayInId',
         'url' => 'getUrl',
-        'ds_signature_version' => 'getDsSignatureVersion',
-        'ds_merchant_parameters' => 'getDsMerchantParameters',
-        'ds_signature' => 'getDsSignature'
+        'amount' => 'getAmount',
+        'auto_settle_flag' => 'getAutoSettleFlag',
+        'card_payment_button' => 'getCardPaymentButton',
+        'currency' => 'getCurrency',
+        'hpp_lang' => 'getHppLang',
+        'merchant_id' => 'getMerchantId',
+        'merchant_response_url' => 'getMerchantResponseUrl',
+        'order_id' => 'getOrderId',
+        'sha1_hash' => 'getSha1Hash',
+        'time_stamp' => 'getTimeStamp',
+        'account' => 'getAccount',
+        'comment1' => 'getComment1',
+        'comment2' => 'getComment2',
+        'var_ref' => 'getVarRef',
+        'prod_id' => 'getProdId',
+        'card_storage_enable' => 'getCardStorageEnable',
+        'offer_save_card' => 'getOfferSaveCard',
+        'pmt_ref' => 'getPmtRef',
+        'payer_exists' => 'getPayerExists',
+        'payer_ref' => 'getPayerRef',
+        'hpp_version' => 'getHppVersion',
+        'hpp_select_stored_card' => 'getHppSelectStoredCard'
     ];
 
     /**
@@ -199,9 +294,28 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
     {
         $this->container['pay_in_id'] = isset($data['pay_in_id']) ? $data['pay_in_id'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
-        $this->container['ds_signature_version'] = isset($data['ds_signature_version']) ? $data['ds_signature_version'] : null;
-        $this->container['ds_merchant_parameters'] = isset($data['ds_merchant_parameters']) ? $data['ds_merchant_parameters'] : null;
-        $this->container['ds_signature'] = isset($data['ds_signature']) ? $data['ds_signature'] : null;
+        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['auto_settle_flag'] = isset($data['auto_settle_flag']) ? $data['auto_settle_flag'] : null;
+        $this->container['card_payment_button'] = isset($data['card_payment_button']) ? $data['card_payment_button'] : null;
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
+        $this->container['hpp_lang'] = isset($data['hpp_lang']) ? $data['hpp_lang'] : null;
+        $this->container['merchant_id'] = isset($data['merchant_id']) ? $data['merchant_id'] : null;
+        $this->container['merchant_response_url'] = isset($data['merchant_response_url']) ? $data['merchant_response_url'] : null;
+        $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
+        $this->container['sha1_hash'] = isset($data['sha1_hash']) ? $data['sha1_hash'] : null;
+        $this->container['time_stamp'] = isset($data['time_stamp']) ? $data['time_stamp'] : null;
+        $this->container['account'] = isset($data['account']) ? $data['account'] : null;
+        $this->container['comment1'] = isset($data['comment1']) ? $data['comment1'] : null;
+        $this->container['comment2'] = isset($data['comment2']) ? $data['comment2'] : null;
+        $this->container['var_ref'] = isset($data['var_ref']) ? $data['var_ref'] : null;
+        $this->container['prod_id'] = isset($data['prod_id']) ? $data['prod_id'] : null;
+        $this->container['card_storage_enable'] = isset($data['card_storage_enable']) ? $data['card_storage_enable'] : null;
+        $this->container['offer_save_card'] = isset($data['offer_save_card']) ? $data['offer_save_card'] : null;
+        $this->container['pmt_ref'] = isset($data['pmt_ref']) ? $data['pmt_ref'] : null;
+        $this->container['payer_exists'] = isset($data['payer_exists']) ? $data['payer_exists'] : null;
+        $this->container['payer_ref'] = isset($data['payer_ref']) ? $data['payer_ref'] : null;
+        $this->container['hpp_version'] = isset($data['hpp_version']) ? $data['hpp_version'] : null;
+        $this->container['hpp_select_stored_card'] = isset($data['hpp_select_stored_card']) ? $data['hpp_select_stored_card'] : null;
     }
 
     /**
@@ -278,73 +392,529 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets ds_signature_version
+     * Gets amount
      *
-     * @return string
+     * @return int
      */
-    public function getDsSignatureVersion()
+    public function getAmount()
     {
-        return $this->container['ds_signature_version'];
+        return $this->container['amount'];
     }
 
     /**
-     * Sets ds_signature_version
+     * Sets amount
      *
-     * @param string $ds_signature_version ds_signature_version
+     * @param int $amount amount
      *
      * @return $this
      */
-    public function setDsSignatureVersion($ds_signature_version)
+    public function setAmount($amount)
     {
-        $this->container['ds_signature_version'] = $ds_signature_version;
+        $this->container['amount'] = $amount;
 
         return $this;
     }
 
     /**
-     * Gets ds_merchant_parameters
+     * Gets auto_settle_flag
      *
      * @return string
      */
-    public function getDsMerchantParameters()
+    public function getAutoSettleFlag()
     {
-        return $this->container['ds_merchant_parameters'];
+        return $this->container['auto_settle_flag'];
     }
 
     /**
-     * Sets ds_merchant_parameters
+     * Sets auto_settle_flag
      *
-     * @param string $ds_merchant_parameters ds_merchant_parameters
+     * @param string $auto_settle_flag auto_settle_flag
      *
      * @return $this
      */
-    public function setDsMerchantParameters($ds_merchant_parameters)
+    public function setAutoSettleFlag($auto_settle_flag)
     {
-        $this->container['ds_merchant_parameters'] = $ds_merchant_parameters;
+        $this->container['auto_settle_flag'] = $auto_settle_flag;
 
         return $this;
     }
 
     /**
-     * Gets ds_signature
+     * Gets card_payment_button
      *
      * @return string
      */
-    public function getDsSignature()
+    public function getCardPaymentButton()
     {
-        return $this->container['ds_signature'];
+        return $this->container['card_payment_button'];
     }
 
     /**
-     * Sets ds_signature
+     * Sets card_payment_button
      *
-     * @param string $ds_signature ds_signature
+     * @param string $card_payment_button card_payment_button
      *
      * @return $this
      */
-    public function setDsSignature($ds_signature)
+    public function setCardPaymentButton($card_payment_button)
     {
-        $this->container['ds_signature'] = $ds_signature;
+        $this->container['card_payment_button'] = $card_payment_button;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency
+     *
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->container['currency'];
+    }
+
+    /**
+     * Sets currency
+     *
+     * @param string $currency currency
+     *
+     * @return $this
+     */
+    public function setCurrency($currency)
+    {
+        $this->container['currency'] = $currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets hpp_lang
+     *
+     * @return string
+     */
+    public function getHppLang()
+    {
+        return $this->container['hpp_lang'];
+    }
+
+    /**
+     * Sets hpp_lang
+     *
+     * @param string $hpp_lang hpp_lang
+     *
+     * @return $this
+     */
+    public function setHppLang($hpp_lang)
+    {
+        $this->container['hpp_lang'] = $hpp_lang;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchant_id
+     *
+     * @return string
+     */
+    public function getMerchantId()
+    {
+        return $this->container['merchant_id'];
+    }
+
+    /**
+     * Sets merchant_id
+     *
+     * @param string $merchant_id merchant_id
+     *
+     * @return $this
+     */
+    public function setMerchantId($merchant_id)
+    {
+        $this->container['merchant_id'] = $merchant_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets merchant_response_url
+     *
+     * @return string
+     */
+    public function getMerchantResponseUrl()
+    {
+        return $this->container['merchant_response_url'];
+    }
+
+    /**
+     * Sets merchant_response_url
+     *
+     * @param string $merchant_response_url merchant_response_url
+     *
+     * @return $this
+     */
+    public function setMerchantResponseUrl($merchant_response_url)
+    {
+        $this->container['merchant_response_url'] = $merchant_response_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_id
+     *
+     * @return string
+     */
+    public function getOrderId()
+    {
+        return $this->container['order_id'];
+    }
+
+    /**
+     * Sets order_id
+     *
+     * @param string $order_id order_id
+     *
+     * @return $this
+     */
+    public function setOrderId($order_id)
+    {
+        $this->container['order_id'] = $order_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets sha1_hash
+     *
+     * @return string
+     */
+    public function getSha1Hash()
+    {
+        return $this->container['sha1_hash'];
+    }
+
+    /**
+     * Sets sha1_hash
+     *
+     * @param string $sha1_hash sha1_hash
+     *
+     * @return $this
+     */
+    public function setSha1Hash($sha1_hash)
+    {
+        $this->container['sha1_hash'] = $sha1_hash;
+
+        return $this;
+    }
+
+    /**
+     * Gets time_stamp
+     *
+     * @return string
+     */
+    public function getTimeStamp()
+    {
+        return $this->container['time_stamp'];
+    }
+
+    /**
+     * Sets time_stamp
+     *
+     * @param string $time_stamp time_stamp
+     *
+     * @return $this
+     */
+    public function setTimeStamp($time_stamp)
+    {
+        $this->container['time_stamp'] = $time_stamp;
+
+        return $this;
+    }
+
+    /**
+     * Gets account
+     *
+     * @return string
+     */
+    public function getAccount()
+    {
+        return $this->container['account'];
+    }
+
+    /**
+     * Sets account
+     *
+     * @param string $account account
+     *
+     * @return $this
+     */
+    public function setAccount($account)
+    {
+        $this->container['account'] = $account;
+
+        return $this;
+    }
+
+    /**
+     * Gets comment1
+     *
+     * @return string
+     */
+    public function getComment1()
+    {
+        return $this->container['comment1'];
+    }
+
+    /**
+     * Sets comment1
+     *
+     * @param string $comment1 comment1
+     *
+     * @return $this
+     */
+    public function setComment1($comment1)
+    {
+        $this->container['comment1'] = $comment1;
+
+        return $this;
+    }
+
+    /**
+     * Gets comment2
+     *
+     * @return string
+     */
+    public function getComment2()
+    {
+        return $this->container['comment2'];
+    }
+
+    /**
+     * Sets comment2
+     *
+     * @param string $comment2 comment2
+     *
+     * @return $this
+     */
+    public function setComment2($comment2)
+    {
+        $this->container['comment2'] = $comment2;
+
+        return $this;
+    }
+
+    /**
+     * Gets var_ref
+     *
+     * @return string
+     */
+    public function getVarRef()
+    {
+        return $this->container['var_ref'];
+    }
+
+    /**
+     * Sets var_ref
+     *
+     * @param string $var_ref var_ref
+     *
+     * @return $this
+     */
+    public function setVarRef($var_ref)
+    {
+        $this->container['var_ref'] = $var_ref;
+
+        return $this;
+    }
+
+    /**
+     * Gets prod_id
+     *
+     * @return string
+     */
+    public function getProdId()
+    {
+        return $this->container['prod_id'];
+    }
+
+    /**
+     * Sets prod_id
+     *
+     * @param string $prod_id prod_id
+     *
+     * @return $this
+     */
+    public function setProdId($prod_id)
+    {
+        $this->container['prod_id'] = $prod_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets card_storage_enable
+     *
+     * @return string
+     */
+    public function getCardStorageEnable()
+    {
+        return $this->container['card_storage_enable'];
+    }
+
+    /**
+     * Sets card_storage_enable
+     *
+     * @param string $card_storage_enable card_storage_enable
+     *
+     * @return $this
+     */
+    public function setCardStorageEnable($card_storage_enable)
+    {
+        $this->container['card_storage_enable'] = $card_storage_enable;
+
+        return $this;
+    }
+
+    /**
+     * Gets offer_save_card
+     *
+     * @return string
+     */
+    public function getOfferSaveCard()
+    {
+        return $this->container['offer_save_card'];
+    }
+
+    /**
+     * Sets offer_save_card
+     *
+     * @param string $offer_save_card offer_save_card
+     *
+     * @return $this
+     */
+    public function setOfferSaveCard($offer_save_card)
+    {
+        $this->container['offer_save_card'] = $offer_save_card;
+
+        return $this;
+    }
+
+    /**
+     * Gets pmt_ref
+     *
+     * @return string
+     */
+    public function getPmtRef()
+    {
+        return $this->container['pmt_ref'];
+    }
+
+    /**
+     * Sets pmt_ref
+     *
+     * @param string $pmt_ref pmt_ref
+     *
+     * @return $this
+     */
+    public function setPmtRef($pmt_ref)
+    {
+        $this->container['pmt_ref'] = $pmt_ref;
+
+        return $this;
+    }
+
+    /**
+     * Gets payer_exists
+     *
+     * @return string
+     */
+    public function getPayerExists()
+    {
+        return $this->container['payer_exists'];
+    }
+
+    /**
+     * Sets payer_exists
+     *
+     * @param string $payer_exists payer_exists
+     *
+     * @return $this
+     */
+    public function setPayerExists($payer_exists)
+    {
+        $this->container['payer_exists'] = $payer_exists;
+
+        return $this;
+    }
+
+    /**
+     * Gets payer_ref
+     *
+     * @return string
+     */
+    public function getPayerRef()
+    {
+        return $this->container['payer_ref'];
+    }
+
+    /**
+     * Sets payer_ref
+     *
+     * @param string $payer_ref payer_ref
+     *
+     * @return $this
+     */
+    public function setPayerRef($payer_ref)
+    {
+        $this->container['payer_ref'] = $payer_ref;
+
+        return $this;
+    }
+
+    /**
+     * Gets hpp_version
+     *
+     * @return string
+     */
+    public function getHppVersion()
+    {
+        return $this->container['hpp_version'];
+    }
+
+    /**
+     * Sets hpp_version
+     *
+     * @param string $hpp_version hpp_version
+     *
+     * @return $this
+     */
+    public function setHppVersion($hpp_version)
+    {
+        $this->container['hpp_version'] = $hpp_version;
+
+        return $this;
+    }
+
+    /**
+     * Gets hpp_select_stored_card
+     *
+     * @return string
+     */
+    public function getHppSelectStoredCard()
+    {
+        return $this->container['hpp_select_stored_card'];
+    }
+
+    /**
+     * Sets hpp_select_stored_card
+     *
+     * @param string $hpp_select_stored_card hpp_select_stored_card
+     *
+     * @return $this
+     */
+    public function setHppSelectStoredCard($hpp_select_stored_card)
+    {
+        $this->container['hpp_select_stored_card'] = $hpp_select_stored_card;
 
         return $this;
     }
