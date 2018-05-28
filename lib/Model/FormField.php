@@ -1,6 +1,6 @@
 <?php
 /**
- * AddonPaymentsPayByWebResponse
+ * FormField
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \MarketPay\ObjectSerializer;
 
 /**
- * AddonPaymentsPayByWebResponse Class Doc Comment
+ * FormField Class Doc Comment
  *
  * @category Class
  * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
+class FormField implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'AddonPaymentsPayByWebResponse';
+    protected static $swaggerModelName = 'FormField';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,8 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pay_in_id' => 'string',
-        'url' => 'string',
-        'form_fields' => '\MarketPay\Model\FormField[]'
+        'name' => 'string',
+        'value' => 'string'
     ];
 
     /**
@@ -68,9 +67,8 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'pay_in_id' => null,
-        'url' => null,
-        'form_fields' => null
+        'name' => null,
+        'value' => null
     ];
 
     /**
@@ -100,9 +98,8 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pay_in_id' => 'PayInId',
-        'url' => 'Url',
-        'form_fields' => 'FormFields'
+        'name' => 'Name',
+        'value' => 'Value'
     ];
 
     /**
@@ -111,9 +108,8 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'pay_in_id' => 'setPayInId',
-        'url' => 'setUrl',
-        'form_fields' => 'setFormFields'
+        'name' => 'setName',
+        'value' => 'setValue'
     ];
 
     /**
@@ -122,9 +118,8 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'pay_in_id' => 'getPayInId',
-        'url' => 'getUrl',
-        'form_fields' => 'getFormFields'
+        'name' => 'getName',
+        'value' => 'getValue'
     ];
 
     /**
@@ -187,9 +182,8 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pay_in_id'] = isset($data['pay_in_id']) ? $data['pay_in_id'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
-        $this->container['form_fields'] = isset($data['form_fields']) ? $data['form_fields'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -218,73 +212,49 @@ class AddonPaymentsPayByWebResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets pay_in_id
+     * Gets name
      *
      * @return string
      */
-    public function getPayInId()
+    public function getName()
     {
-        return $this->container['pay_in_id'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets pay_in_id
+     * Sets name
      *
-     * @param string $pay_in_id pay_in_id
+     * @param string $name name
      *
      * @return $this
      */
-    public function setPayInId($pay_in_id)
+    public function setName($name)
     {
-        $this->container['pay_in_id'] = $pay_in_id;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets url
+     * Gets value
      *
      * @return string
      */
-    public function getUrl()
+    public function getValue()
     {
-        return $this->container['url'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets url
+     * Sets value
      *
-     * @param string $url url
+     * @param string $value value
      *
      * @return $this
      */
-    public function setUrl($url)
+    public function setValue($value)
     {
-        $this->container['url'] = $url;
-
-        return $this;
-    }
-
-    /**
-     * Gets form_fields
-     *
-     * @return \MarketPay\Model\FormField[]
-     */
-    public function getFormFields()
-    {
-        return $this->container['form_fields'];
-    }
-
-    /**
-     * Sets form_fields
-     *
-     * @param \MarketPay\Model\FormField[] $form_fields form_fields
-     *
-     * @return $this
-     */
-    public function setFormFields($form_fields)
-    {
-        $this->container['form_fields'] = $form_fields;
+        $this->container['value'] = $value;
 
         return $this;
     }

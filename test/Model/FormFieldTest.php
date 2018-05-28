@@ -1,6 +1,6 @@
 <?php
 /**
- * AddonPaymentsPreauthorizeByWebResponseTest
+ * FormFieldTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace MarketPay;
 
 /**
- * AddonPaymentsPreauthorizeByWebResponseTest Class Doc Comment
+ * FormFieldTest Class Doc Comment
  *
  * @category    Class */
-// * @description AddonPaymentsPreauthorizeByWebResponse
+// * @description FormField
 /**
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AddonPaymentsPreauthorizeByWebResponseTest extends \PHPUnit_Framework_TestCase
+class FormFieldTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,30 +71,23 @@ class AddonPaymentsPreauthorizeByWebResponseTest extends \PHPUnit_Framework_Test
     }
 
     /**
-     * Test "AddonPaymentsPreauthorizeByWebResponse"
+     * Test "FormField"
      */
-    public function testAddonPaymentsPreauthorizeByWebResponse()
+    public function testFormField()
     {
     }
 
     /**
-     * Test attribute "preauthorization_id"
+     * Test attribute "name"
      */
-    public function testPropertyPreauthorizationId()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "url"
+     * Test attribute "value"
      */
-    public function testPropertyUrl()
-    {
-    }
-
-    /**
-     * Test attribute "form_fields"
-     */
-    public function testPropertyFormFields()
+    public function testPropertyValue()
     {
     }
 }
