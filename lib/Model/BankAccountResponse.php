@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \MarketPay\ObjectSerializer;
  * BankAccountResponse Class Doc Comment
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,11 +57,11 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'type' => 'string',
+        'active' => 'bool',
         'owner_address' => '\MarketPay\Model\Address',
+        'type' => 'string',
         'owner_name' => 'string',
         'user_id' => 'string',
-        'active' => 'bool',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -73,11 +73,11 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'type' => null,
+        'active' => null,
         'owner_address' => null,
+        'type' => null,
         'owner_name' => null,
         'user_id' => null,
-        'active' => null,
         'id' => null,
         'creation_date' => 'int64',
         'tag' => null
@@ -110,11 +110,11 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'Type',
+        'active' => 'Active',
         'owner_address' => 'OwnerAddress',
+        'type' => 'Type',
         'owner_name' => 'OwnerName',
         'user_id' => 'UserId',
-        'active' => 'Active',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -126,11 +126,11 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
+        'active' => 'setActive',
         'owner_address' => 'setOwnerAddress',
+        'type' => 'setType',
         'owner_name' => 'setOwnerName',
         'user_id' => 'setUserId',
-        'active' => 'setActive',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -142,11 +142,11 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
+        'active' => 'getActive',
         'owner_address' => 'getOwnerAddress',
+        'type' => 'getType',
         'owner_name' => 'getOwnerName',
         'user_id' => 'getUserId',
-        'active' => 'getActive',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -233,11 +233,11 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['owner_address'] = isset($data['owner_address']) ? $data['owner_address'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
-        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -281,6 +281,54 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets active
+     *
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     *
+     * @param bool $active active
+     *
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_address
+     *
+     * @return \MarketPay\Model\Address
+     */
+    public function getOwnerAddress()
+    {
+        return $this->container['owner_address'];
+    }
+
+    /**
+     * Sets owner_address
+     *
+     * @param \MarketPay\Model\Address $owner_address owner_address
+     *
+     * @return $this
+     */
+    public function setOwnerAddress($owner_address)
+    {
+        $this->container['owner_address'] = $owner_address;
+
+        return $this;
+    }
+
+    /**
      * Gets type
      *
      * @return string
@@ -309,30 +357,6 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
             );
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets owner_address
-     *
-     * @return \MarketPay\Model\Address
-     */
-    public function getOwnerAddress()
-    {
-        return $this->container['owner_address'];
-    }
-
-    /**
-     * Sets owner_address
-     *
-     * @param \MarketPay\Model\Address $owner_address owner_address
-     *
-     * @return $this
-     */
-    public function setOwnerAddress($owner_address)
-    {
-        $this->container['owner_address'] = $owner_address;
 
         return $this;
     }
@@ -381,30 +405,6 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
     public function setUserId($user_id)
     {
         $this->container['user_id'] = $user_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets active
-     *
-     * @return bool
-     */
-    public function getActive()
-    {
-        return $this->container['active'];
-    }
-
-    /**
-     * Sets active
-     *
-     * @param bool $active active
-     *
-     * @return $this
-     */
-    public function setActive($active)
-    {
-        $this->container['active'] = $active;
 
         return $this;
     }

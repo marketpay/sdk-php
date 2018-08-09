@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \MarketPay\ObjectSerializer;
  * TransactionResponse Class Doc Comment
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -260,6 +260,8 @@ class TransactionResponse implements ModelInterface, ArrayAccess
     const TRANSACTION_SOURCE_PAYINSBANKWIRE = 'PAYINSBANKWIRE';
     const TRANSACTION_SOURCE_PAYINSREDSYS = 'PAYINSREDSYS';
     const TRANSACTION_SOURCE_PAYINSUNIVERSALPAY = 'PAYINSUNIVERSALPAY';
+    const TRANSACTION_SOURCE_PAYINADDONPAYMENTS = 'PAYINADDONPAYMENTS';
+    const TRANSACTION_SOURCE_PAYINWEBPAY = 'PAYINWEBPAY';
     const TRANSACTION_SOURCE_PAYOUTSBANKWIRE = 'PAYOUTSBANKWIRE';
     const TRANSACTION_DESTINATION_WALLET = 'WALLET';
     const TRANSACTION_DESTINATION_WALLETCLIENT = 'WALLETCLIENT';
@@ -268,6 +270,8 @@ class TransactionResponse implements ModelInterface, ArrayAccess
     const TRANSACTION_DESTINATION_PAYINSBANKWIRE = 'PAYINSBANKWIRE';
     const TRANSACTION_DESTINATION_PAYINSREDSYS = 'PAYINSREDSYS';
     const TRANSACTION_DESTINATION_PAYINSUNIVERSALPAY = 'PAYINSUNIVERSALPAY';
+    const TRANSACTION_DESTINATION_PAYINADDONPAYMENTS = 'PAYINADDONPAYMENTS';
+    const TRANSACTION_DESTINATION_PAYINWEBPAY = 'PAYINWEBPAY';
     const TRANSACTION_DESTINATION_PAYOUTSBANKWIRE = 'PAYOUTSBANKWIRE';
     
 
@@ -330,6 +334,8 @@ class TransactionResponse implements ModelInterface, ArrayAccess
             self::TRANSACTION_SOURCE_PAYINSBANKWIRE,
             self::TRANSACTION_SOURCE_PAYINSREDSYS,
             self::TRANSACTION_SOURCE_PAYINSUNIVERSALPAY,
+            self::TRANSACTION_SOURCE_PAYINADDONPAYMENTS,
+            self::TRANSACTION_SOURCE_PAYINWEBPAY,
             self::TRANSACTION_SOURCE_PAYOUTSBANKWIRE,
         ];
     }
@@ -349,6 +355,8 @@ class TransactionResponse implements ModelInterface, ArrayAccess
             self::TRANSACTION_DESTINATION_PAYINSBANKWIRE,
             self::TRANSACTION_DESTINATION_PAYINSREDSYS,
             self::TRANSACTION_DESTINATION_PAYINSUNIVERSALPAY,
+            self::TRANSACTION_DESTINATION_PAYINADDONPAYMENTS,
+            self::TRANSACTION_DESTINATION_PAYINWEBPAY,
             self::TRANSACTION_DESTINATION_PAYOUTSBANKWIRE,
         ];
     }

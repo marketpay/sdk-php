@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \MarketPay\ObjectSerializer;
  * KycValidationUserStatusResponse Class Doc Comment
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class KycValidationUserStatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user_data' => '\MarketPay\Model\TKycNaturalUserData',
+        'user_data' => '\MarketPay\Model\KycNaturalUserDataDto',
         'validations' => '\MarketPay\Model\KycValidationPerLevelStatus[]'
     ];
 
@@ -214,7 +214,7 @@ class KycValidationUserStatusResponse implements ModelInterface, ArrayAccess
     /**
      * Gets user_data
      *
-     * @return \MarketPay\Model\TKycNaturalUserData
+     * @return \MarketPay\Model\KycNaturalUserDataDto
      */
     public function getUserData()
     {
@@ -224,7 +224,7 @@ class KycValidationUserStatusResponse implements ModelInterface, ArrayAccess
     /**
      * Sets user_data
      *
-     * @param \MarketPay\Model\TKycNaturalUserData $user_data user_data
+     * @param \MarketPay\Model\KycNaturalUserDataDto $user_data user_data
      *
      * @return $this
      */

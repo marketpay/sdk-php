@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \MarketPay\ObjectSerializer;
  * SeurShipmentResponse Class Doc Comment
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -210,8 +210,8 @@ class SeurShipmentResponse implements ModelInterface, ArrayAccess
     const STATUS_PICK_UP_UNKNOWN = 'Unknown';
     const STATUS_PICK_UP_READY = 'Ready';
     const STATUS_PICK_UP_STARTED = 'Started';
-    const STATUS_PICK_UP_FAILED = 'Failed';
     const STATUS_PICK_UP_PICKED = 'Picked';
+    const STATUS_PICK_UP_FAILED = 'Failed';
     const STATUS_DELIVERY_UNKNOWN = 'Unknown';
     const STATUS_DELIVERY_READY = 'Ready';
     const STATUS_DELIVERY_DELIVERED = 'Delivered';
@@ -244,8 +244,8 @@ class SeurShipmentResponse implements ModelInterface, ArrayAccess
             self::STATUS_PICK_UP_UNKNOWN,
             self::STATUS_PICK_UP_READY,
             self::STATUS_PICK_UP_STARTED,
-            self::STATUS_PICK_UP_FAILED,
             self::STATUS_PICK_UP_PICKED,
+            self::STATUS_PICK_UP_FAILED,
         ];
     }
     

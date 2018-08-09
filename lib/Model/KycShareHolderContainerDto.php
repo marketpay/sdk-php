@@ -1,11 +1,11 @@
 <?php
 /**
- * TKycNaturalUserData
+ * KycShareHolderContainerDto
  *
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \MarketPay\ObjectSerializer;
 
 /**
- * TKycNaturalUserData Class Doc Comment
+ * KycShareHolderContainerDto Class Doc Comment
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TKycNaturalUserData implements ModelInterface, ArrayAccess
+class KycShareHolderContainerDto implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'TKycNaturalUserData';
+    protected static $swaggerModelName = 'KycShareHolderContainerDto';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,17 +57,20 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int',
+        'id_card' => '\MarketPay\Model\PropertyValidationString',
+        'id_card_document' => '\MarketPay\Model\TKycFileDetails',
+        'country' => '\MarketPay\Model\PropertyValidationCountry',
         'email' => '\MarketPay\Model\PropertyValidationString',
         'first_name' => '\MarketPay\Model\PropertyValidationString',
         'last_name' => '\MarketPay\Model\PropertyValidationString',
-        'address' => '\MarketPay\Model\TAddressValidationResult',
+        'occupation' => '\MarketPay\Model\PropertyValidationString',
         'telephone' => '\MarketPay\Model\TTelephoneValidationResult',
-        'birthday' => '\MarketPay\Model\PropertyValidationDateNullable',
+        'address' => '\MarketPay\Model\TAddressValidationResult',
+        'share_percentage' => '\MarketPay\Model\PropertyValidationDecimal',
         'nationality' => '\MarketPay\Model\PropertyValidationCountry',
         'country_of_residence' => '\MarketPay\Model\PropertyValidationCountry',
-        'occupation' => '\MarketPay\Model\PropertyValidationString',
-        'id_card' => '\MarketPay\Model\PropertyValidationString',
-        'id_card_document' => '\MarketPay\Model\TKycFileDetails'
+        'birthday' => '\MarketPay\Model\PropertyValidationDateNullable'
     ];
 
     /**
@@ -76,17 +79,20 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'id' => 'int64',
+        'id_card' => null,
+        'id_card_document' => null,
+        'country' => null,
         'email' => null,
         'first_name' => null,
         'last_name' => null,
-        'address' => null,
+        'occupation' => null,
         'telephone' => null,
-        'birthday' => null,
+        'address' => null,
+        'share_percentage' => null,
         'nationality' => null,
         'country_of_residence' => null,
-        'occupation' => null,
-        'id_card' => null,
-        'id_card_document' => null
+        'birthday' => null
     ];
 
     /**
@@ -116,17 +122,20 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'Id',
+        'id_card' => 'IdCard',
+        'id_card_document' => 'IdCardDocument',
+        'country' => 'Country',
         'email' => 'Email',
         'first_name' => 'FirstName',
         'last_name' => 'LastName',
-        'address' => 'Address',
+        'occupation' => 'Occupation',
         'telephone' => 'Telephone',
-        'birthday' => 'Birthday',
+        'address' => 'Address',
+        'share_percentage' => 'SharePercentage',
         'nationality' => 'Nationality',
         'country_of_residence' => 'CountryOfResidence',
-        'occupation' => 'Occupation',
-        'id_card' => 'IdCard',
-        'id_card_document' => 'IdCardDocument'
+        'birthday' => 'Birthday'
     ];
 
     /**
@@ -135,17 +144,20 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
+        'id_card' => 'setIdCard',
+        'id_card_document' => 'setIdCardDocument',
+        'country' => 'setCountry',
         'email' => 'setEmail',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
-        'address' => 'setAddress',
+        'occupation' => 'setOccupation',
         'telephone' => 'setTelephone',
-        'birthday' => 'setBirthday',
+        'address' => 'setAddress',
+        'share_percentage' => 'setSharePercentage',
         'nationality' => 'setNationality',
         'country_of_residence' => 'setCountryOfResidence',
-        'occupation' => 'setOccupation',
-        'id_card' => 'setIdCard',
-        'id_card_document' => 'setIdCardDocument'
+        'birthday' => 'setBirthday'
     ];
 
     /**
@@ -154,17 +166,20 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
+        'id_card' => 'getIdCard',
+        'id_card_document' => 'getIdCardDocument',
+        'country' => 'getCountry',
         'email' => 'getEmail',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
-        'address' => 'getAddress',
+        'occupation' => 'getOccupation',
         'telephone' => 'getTelephone',
-        'birthday' => 'getBirthday',
+        'address' => 'getAddress',
+        'share_percentage' => 'getSharePercentage',
         'nationality' => 'getNationality',
         'country_of_residence' => 'getCountryOfResidence',
-        'occupation' => 'getOccupation',
-        'id_card' => 'getIdCard',
-        'id_card_document' => 'getIdCardDocument'
+        'birthday' => 'getBirthday'
     ];
 
     /**
@@ -227,17 +242,20 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['id_card'] = isset($data['id_card']) ? $data['id_card'] : null;
+        $this->container['id_card_document'] = isset($data['id_card_document']) ? $data['id_card_document'] : null;
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['occupation'] = isset($data['occupation']) ? $data['occupation'] : null;
         $this->container['telephone'] = isset($data['telephone']) ? $data['telephone'] : null;
-        $this->container['birthday'] = isset($data['birthday']) ? $data['birthday'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['share_percentage'] = isset($data['share_percentage']) ? $data['share_percentage'] : null;
         $this->container['nationality'] = isset($data['nationality']) ? $data['nationality'] : null;
         $this->container['country_of_residence'] = isset($data['country_of_residence']) ? $data['country_of_residence'] : null;
-        $this->container['occupation'] = isset($data['occupation']) ? $data['occupation'] : null;
-        $this->container['id_card'] = isset($data['id_card']) ? $data['id_card'] : null;
-        $this->container['id_card_document'] = isset($data['id_card_document']) ? $data['id_card_document'] : null;
+        $this->container['birthday'] = isset($data['birthday']) ? $data['birthday'] : null;
     }
 
     /**
@@ -264,6 +282,102 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param int $id id
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets id_card
+     *
+     * @return \MarketPay\Model\PropertyValidationString
+     */
+    public function getIdCard()
+    {
+        return $this->container['id_card'];
+    }
+
+    /**
+     * Sets id_card
+     *
+     * @param \MarketPay\Model\PropertyValidationString $id_card id_card
+     *
+     * @return $this
+     */
+    public function setIdCard($id_card)
+    {
+        $this->container['id_card'] = $id_card;
+
+        return $this;
+    }
+
+    /**
+     * Gets id_card_document
+     *
+     * @return \MarketPay\Model\TKycFileDetails
+     */
+    public function getIdCardDocument()
+    {
+        return $this->container['id_card_document'];
+    }
+
+    /**
+     * Sets id_card_document
+     *
+     * @param \MarketPay\Model\TKycFileDetails $id_card_document id_card_document
+     *
+     * @return $this
+     */
+    public function setIdCardDocument($id_card_document)
+    {
+        $this->container['id_card_document'] = $id_card_document;
+
+        return $this;
+    }
+
+    /**
+     * Gets country
+     *
+     * @return \MarketPay\Model\PropertyValidationCountry
+     */
+    public function getCountry()
+    {
+        return $this->container['country'];
+    }
+
+    /**
+     * Sets country
+     *
+     * @param \MarketPay\Model\PropertyValidationCountry $country country
+     *
+     * @return $this
+     */
+    public function setCountry($country)
+    {
+        $this->container['country'] = $country;
+
+        return $this;
+    }
 
     /**
      * Gets email
@@ -338,25 +452,25 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets address
+     * Gets occupation
      *
-     * @return \MarketPay\Model\TAddressValidationResult
+     * @return \MarketPay\Model\PropertyValidationString
      */
-    public function getAddress()
+    public function getOccupation()
     {
-        return $this->container['address'];
+        return $this->container['occupation'];
     }
 
     /**
-     * Sets address
+     * Sets occupation
      *
-     * @param \MarketPay\Model\TAddressValidationResult $address address
+     * @param \MarketPay\Model\PropertyValidationString $occupation occupation
      *
      * @return $this
      */
-    public function setAddress($address)
+    public function setOccupation($occupation)
     {
-        $this->container['address'] = $address;
+        $this->container['occupation'] = $occupation;
 
         return $this;
     }
@@ -386,25 +500,49 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets birthday
+     * Gets address
      *
-     * @return \MarketPay\Model\PropertyValidationDateNullable
+     * @return \MarketPay\Model\TAddressValidationResult
      */
-    public function getBirthday()
+    public function getAddress()
     {
-        return $this->container['birthday'];
+        return $this->container['address'];
     }
 
     /**
-     * Sets birthday
+     * Sets address
      *
-     * @param \MarketPay\Model\PropertyValidationDateNullable $birthday birthday
+     * @param \MarketPay\Model\TAddressValidationResult $address address
      *
      * @return $this
      */
-    public function setBirthday($birthday)
+    public function setAddress($address)
     {
-        $this->container['birthday'] = $birthday;
+        $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets share_percentage
+     *
+     * @return \MarketPay\Model\PropertyValidationDecimal
+     */
+    public function getSharePercentage()
+    {
+        return $this->container['share_percentage'];
+    }
+
+    /**
+     * Sets share_percentage
+     *
+     * @param \MarketPay\Model\PropertyValidationDecimal $share_percentage share_percentage
+     *
+     * @return $this
+     */
+    public function setSharePercentage($share_percentage)
+    {
+        $this->container['share_percentage'] = $share_percentage;
 
         return $this;
     }
@@ -458,73 +596,25 @@ class TKycNaturalUserData implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets occupation
+     * Gets birthday
      *
-     * @return \MarketPay\Model\PropertyValidationString
+     * @return \MarketPay\Model\PropertyValidationDateNullable
      */
-    public function getOccupation()
+    public function getBirthday()
     {
-        return $this->container['occupation'];
+        return $this->container['birthday'];
     }
 
     /**
-     * Sets occupation
+     * Sets birthday
      *
-     * @param \MarketPay\Model\PropertyValidationString $occupation occupation
+     * @param \MarketPay\Model\PropertyValidationDateNullable $birthday birthday
      *
      * @return $this
      */
-    public function setOccupation($occupation)
+    public function setBirthday($birthday)
     {
-        $this->container['occupation'] = $occupation;
-
-        return $this;
-    }
-
-    /**
-     * Gets id_card
-     *
-     * @return \MarketPay\Model\PropertyValidationString
-     */
-    public function getIdCard()
-    {
-        return $this->container['id_card'];
-    }
-
-    /**
-     * Sets id_card
-     *
-     * @param \MarketPay\Model\PropertyValidationString $id_card id_card
-     *
-     * @return $this
-     */
-    public function setIdCard($id_card)
-    {
-        $this->container['id_card'] = $id_card;
-
-        return $this;
-    }
-
-    /**
-     * Gets id_card_document
-     *
-     * @return \MarketPay\Model\TKycFileDetails
-     */
-    public function getIdCardDocument()
-    {
-        return $this->container['id_card_document'];
-    }
-
-    /**
-     * Sets id_card_document
-     *
-     * @param \MarketPay\Model\TKycFileDetails $id_card_document id_card_document
-     *
-     * @return $this
-     */
-    public function setIdCardDocument($id_card_document)
-    {
-        $this->container['id_card_document'] = $id_card_document;
+        $this->container['birthday'] = $birthday;
 
         return $this;
     }

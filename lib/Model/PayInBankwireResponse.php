@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \MarketPay\ObjectSerializer;
  * PayInBankwireResponse Class Doc Comment
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -263,6 +263,7 @@ class PayInBankwireResponse implements ModelInterface, ArrayAccess
     const PAYMENT_TYPE_BANK_WIRE = 'BANK_WIRE';
     const PAYMENT_TYPE_DIRECT_DEBIT = 'DIRECT_DEBIT';
     const PAYMENT_TYPE_PREAUTHORIZED = 'PREAUTHORIZED';
+    const PAYMENT_TYPE_PLUGIN = 'PLUGIN';
     const EXECUTION_TYPE_NOT_SPECIFIED = 'NotSpecified';
     const EXECUTION_TYPE_WEB = 'WEB';
     const EXECUTION_TYPE_DIRECT = 'DIRECT';
@@ -325,6 +326,7 @@ class PayInBankwireResponse implements ModelInterface, ArrayAccess
             self::PAYMENT_TYPE_BANK_WIRE,
             self::PAYMENT_TYPE_DIRECT_DEBIT,
             self::PAYMENT_TYPE_PREAUTHORIZED,
+            self::PAYMENT_TYPE_PLUGIN,
         ];
     }
     

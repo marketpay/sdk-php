@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \MarketPay\ObjectSerializer;
  * Address Class Doc Comment
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -739,9 +739,6 @@ class Address implements ModelInterface, ArrayAccess
         if ($this->container['postal_code'] === null) {
             $invalidProperties[] = "'postal_code' can't be null";
         }
-        if ($this->container['country'] === null) {
-            $invalidProperties[] = "'country' can't be null";
-        }
         $allowedValues = $this->getCountryAllowableValues();
         if (!in_array($this->container['country'], $allowedValues)) {
             $invalidProperties[] = sprintf(
@@ -769,9 +766,6 @@ class Address implements ModelInterface, ArrayAccess
             return false;
         }
         if ($this->container['postal_code'] === null) {
-            return false;
-        }
-        if ($this->container['country'] === null) {
             return false;
         }
         $allowedValues = $this->getCountryAllowableValues();
@@ -922,7 +916,7 @@ class Address implements ModelInterface, ArrayAccess
     public function setCountry($country)
     {
         $allowedValues = $this->getCountryAllowableValues();
-        if (!in_array($country, $allowedValues)) {
+        if (!is_null($country) && !in_array($country, $allowedValues)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'country', must be one of '%s'",

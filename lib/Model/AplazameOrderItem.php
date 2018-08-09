@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \MarketPay\ObjectSerializer;
  * AplazameOrderItem Class Doc Comment
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -234,9 +234,6 @@ class AplazameOrderItem implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['price'] === null) {
-            $invalidProperties[] = "'price' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -250,9 +247,6 @@ class AplazameOrderItem implements ModelInterface, ArrayAccess
     {
 
         if ($this->container['name'] === null) {
-            return false;
-        }
-        if ($this->container['price'] === null) {
             return false;
         }
         return true;
