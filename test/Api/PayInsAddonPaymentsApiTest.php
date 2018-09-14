@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace MarketPay;
+namespace Swagger\Client;
 
-use \MarketPay\Configuration;
-use \MarketPay\ApiException;
-use \MarketPay\ObjectSerializer;
+use \Swagger\Client\Configuration;
+use \Swagger\Client\ApiException;
+use \Swagger\Client\ObjectSerializer;
 
 /**
  * PayInsAddonPaymentsApiTest Class Doc Comment
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -98,6 +98,16 @@ class PayInsAddonPaymentsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPayInsAddonPaymentsAddonPaymentsPostPaymentByWeb()
+    {
+    }
+
+    /**
+     * Test case for payInsAddonPaymentsAddonPaymentsPostPaymentDirect
+     *
+     * .
+     *
+     */
+    public function testPayInsAddonPaymentsAddonPaymentsPostPaymentDirect()
     {
     }
 

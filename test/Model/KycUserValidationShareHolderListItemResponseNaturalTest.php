@@ -1,11 +1,11 @@
 <?php
 /**
- * TKycNaturalUserDataTest
+ * KycUserValidationShareHolderListItemResponseNaturalTest
  *
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,19 +27,19 @@
  * Please update the test case below to test the model.
  */
 
-namespace MarketPay;
+namespace Swagger\Client;
 
 /**
- * TKycNaturalUserDataTest Class Doc Comment
+ * KycUserValidationShareHolderListItemResponseNaturalTest Class Doc Comment
  *
  * @category    Class */
-// * @description TKycNaturalUserData
+// * @description KycUserValidationShareHolderListItemResponseNatural
 /**
- * @package     MarketPay
+ * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TKycNaturalUserDataTest extends \PHPUnit_Framework_TestCase
+class KycUserValidationShareHolderListItemResponseNaturalTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,16 @@ class TKycNaturalUserDataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TKycNaturalUserData"
+     * Test "KycUserValidationShareHolderListItemResponseNatural"
      */
-    public function testTKycNaturalUserData()
+    public function testKycUserValidationShareHolderListItemResponseNatural()
+    {
+    }
+
+    /**
+     * Test attribute "share_percentage"
+     */
+    public function testPropertySharePercentage()
     {
     }
 
@@ -99,20 +106,6 @@ class TKycNaturalUserDataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "address"
-     */
-    public function testPropertyAddress()
-    {
-    }
-
-    /**
-     * Test attribute "telephone"
-     */
-    public function testPropertyTelephone()
-    {
-    }
-
-    /**
      * Test attribute "birthday"
      */
     public function testPropertyBirthday()
@@ -134,9 +127,9 @@ class TKycNaturalUserDataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "occupation"
+     * Test attribute "telephone"
      */
-    public function testPropertyOccupation()
+    public function testPropertyTelephone()
     {
     }
 
@@ -151,6 +144,34 @@ class TKycNaturalUserDataTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id_card_document"
      */
     public function testPropertyIdCardDocument()
+    {
+    }
+
+    /**
+     * Test attribute "address"
+     */
+    public function testPropertyAddress()
+    {
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "creation_date"
+     */
+    public function testPropertyCreationDate()
+    {
+    }
+
+    /**
+     * Test attribute "tag"
+     */
+    public function testPropertyTag()
     {
     }
 }

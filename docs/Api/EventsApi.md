@@ -1,14 +1,14 @@
-# MarketPay\EventsApi
+# Swagger\Client\EventsApi
 
 All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**eventsGet**](EventsApi.md#eventsGet) | **GET** /v2.01/Events | Values List
+[**eventsGet**](EventsApi.md#eventsGet) | **GET** /v2.1/Events | Values List
 
 
 # **eventsGet**
-> \MarketPay\Model\EventResponse[] eventsGet($page, $per_page)
+> \Swagger\Client\Model\EventResponse[] eventsGet($page, $per_page)
 
 Values List
 
@@ -20,9 +20,9 @@ The User Activity endpoint returns data about a user's lifetime activity with Ub
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\EventsApi(
+$apiInstance = new Swagger\Client\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\EventResponse[]**](../Model/EventResponse.md)
+[**\Swagger\Client\Model\EventResponse[]**](../Model/EventResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

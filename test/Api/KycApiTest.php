@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace MarketPay;
+namespace Swagger\Client;
 
-use \MarketPay\Configuration;
-use \MarketPay\ApiException;
-use \MarketPay\ObjectSerializer;
+use \Swagger\Client\Configuration;
+use \Swagger\Client\ApiException;
+use \Swagger\Client\ObjectSerializer;
 
 /**
  * KycApiTest Class Doc Comment
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -72,12 +72,82 @@ class KycApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for kycDeleteLegalBoardMember
+     *
+     * .
+     *
+     */
+    public function testKycDeleteLegalBoardMember()
+    {
+    }
+
+    /**
+     * Test case for kycDeleteLegalShareHolderNatural
+     *
+     * .
+     *
+     */
+    public function testKycDeleteLegalShareHolderNatural()
+    {
+    }
+
+    /**
      * Test case for kycGetLegal
      *
      * View a Legal User.
      *
      */
     public function testKycGetLegal()
+    {
+    }
+
+    /**
+     * Test case for kycGetLegalBoardMember
+     *
+     * .
+     *
+     */
+    public function testKycGetLegalBoardMember()
+    {
+    }
+
+    /**
+     * Test case for kycGetLegalBoardMembers
+     *
+     * .
+     *
+     */
+    public function testKycGetLegalBoardMembers()
+    {
+    }
+
+    /**
+     * Test case for kycGetLegalList
+     *
+     * List all Natural User.
+     *
+     */
+    public function testKycGetLegalList()
+    {
+    }
+
+    /**
+     * Test case for kycGetLegalShareHolderNatural
+     *
+     * .
+     *
+     */
+    public function testKycGetLegalShareHolderNatural()
+    {
+    }
+
+    /**
+     * Test case for kycGetLegalShareHolders
+     *
+     * .
+     *
+     */
+    public function testKycGetLegalShareHolders()
     {
     }
 
@@ -102,12 +172,22 @@ class KycApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for kycGetValidaton
+     * Test case for kycGetValidation
      *
      * .
      *
      */
-    public function testKycGetValidaton()
+    public function testKycGetValidation()
+    {
+    }
+
+    /**
+     * Test case for kycGetValidationLegal
+     *
+     * .
+     *
+     */
+    public function testKycGetValidationLegal()
     {
     }
 
@@ -118,6 +198,56 @@ class KycApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testKycPostDocument()
+    {
+    }
+
+    /**
+     * Test case for kycPostDocumentBoardMember
+     *
+     * Uploads a new document. If the document already exists it will be replaced..
+     *
+     */
+    public function testKycPostDocumentBoardMember()
+    {
+    }
+
+    /**
+     * Test case for kycPostDocumentShareholder
+     *
+     * Uploads a new document and uploads a file. If the document already exists it will be replaced..
+     *
+     */
+    public function testKycPostDocumentShareholder()
+    {
+    }
+
+    /**
+     * Test case for kycPostLegal
+     *
+     * Update a Natural User Kyc Data.
+     *
+     */
+    public function testKycPostLegal()
+    {
+    }
+
+    /**
+     * Test case for kycPostLegalBoardMember
+     *
+     * .
+     *
+     */
+    public function testKycPostLegalBoardMember()
+    {
+    }
+
+    /**
+     * Test case for kycPostLegalShareHolder
+     *
+     * .
+     *
+     */
+    public function testKycPostLegalShareHolder()
     {
     }
 
@@ -142,6 +272,26 @@ class KycApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for kycPutDocumentBoardMember
+     *
+     * Uploads a new document. If the document already exists it will be replaced..
+     *
+     */
+    public function testKycPutDocumentBoardMember()
+    {
+    }
+
+    /**
+     * Test case for kycPutDocumentShareholder
+     *
+     * Adds files to a document..
+     *
+     */
+    public function testKycPutDocumentShareholder()
+    {
+    }
+
+    /**
      * Test case for kycPutLegal
      *
      * Update a Legal User.
@@ -152,12 +302,42 @@ class KycApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for kycPutLegalBoardMember
+     *
+     * .
+     *
+     */
+    public function testKycPutLegalBoardMember()
+    {
+    }
+
+    /**
+     * Test case for kycPutLegalShareHolder
+     *
+     * .
+     *
+     */
+    public function testKycPutLegalShareHolder()
+    {
+    }
+
+    /**
      * Test case for kycPutRequest
      *
      * .
      *
      */
     public function testKycPutRequest()
+    {
+    }
+
+    /**
+     * Test case for kycPutRequestLegal
+     *
+     * .
+     *
+     */
+    public function testKycPutRequestLegal()
     {
     }
 }

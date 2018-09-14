@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace MarketPay;
+namespace Swagger\Client;
 
 /**
  * KycUserLegalPutTest Class Doc Comment
@@ -35,7 +35,7 @@ namespace MarketPay;
  * @category    Class */
 // * @description KycUserLegalPut
 /**
- * @package     MarketPay
+ * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -78,9 +78,51 @@ class KycUserLegalPutTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "headquarters_address"
+     * Test attribute "name"
      */
-    public function testPropertyHeadquartersAddress()
+    public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "telephone"
+     */
+    public function testPropertyTelephone()
+    {
+    }
+
+    /**
+     * Test attribute "contact_first_name"
+     */
+    public function testPropertyContactFirstName()
+    {
+    }
+
+    /**
+     * Test attribute "contact_last_name"
+     */
+    public function testPropertyContactLastName()
+    {
+    }
+
+    /**
+     * Test attribute "fiscal_id"
+     */
+    public function testPropertyFiscalId()
+    {
+    }
+
+    /**
+     * Test attribute "country"
+     */
+    public function testPropertyCountry()
+    {
+    }
+
+    /**
+     * Test attribute "fiscal_address"
+     */
+    public function testPropertyFiscalAddress()
     {
     }
 
@@ -92,58 +134,9 @@ class KycUserLegalPutTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "email"
      */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "legal_representative_address"
-     */
-    public function testPropertyLegalRepresentativeAddress()
-    {
-    }
-
-    /**
-     * Test attribute "legal_representative_birthday"
-     */
-    public function testPropertyLegalRepresentativeBirthday()
-    {
-    }
-
-    /**
-     * Test attribute "legal_representative_country_of_residence"
-     */
-    public function testPropertyLegalRepresentativeCountryOfResidence()
-    {
-    }
-
-    /**
-     * Test attribute "legal_representative_nationality"
-     */
-    public function testPropertyLegalRepresentativeNationality()
-    {
-    }
-
-    /**
-     * Test attribute "legal_representative_email"
-     */
-    public function testPropertyLegalRepresentativeEmail()
-    {
-    }
-
-    /**
-     * Test attribute "legal_representative_first_name"
-     */
-    public function testPropertyLegalRepresentativeFirstName()
-    {
-    }
-
-    /**
-     * Test attribute "legal_representative_last_name"
-     */
-    public function testPropertyLegalRepresentativeLastName()
+    public function testPropertyEmail()
     {
     }
 

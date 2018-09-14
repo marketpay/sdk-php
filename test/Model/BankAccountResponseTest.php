@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace MarketPay;
+namespace Swagger\Client;
 
 /**
  * BankAccountResponseTest Class Doc Comment
@@ -35,7 +35,7 @@ namespace MarketPay;
  * @category    Class */
 // * @description BankAccountResponse
 /**
- * @package     MarketPay
+ * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -78,9 +78,9 @@ class BankAccountResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "active"
      */
-    public function testPropertyType()
+    public function testPropertyActive()
     {
     }
 
@@ -88,6 +88,13 @@ class BankAccountResponseTest extends \PHPUnit_Framework_TestCase
      * Test attribute "owner_address"
      */
     public function testPropertyOwnerAddress()
+    {
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
     {
     }
 
@@ -102,13 +109,6 @@ class BankAccountResponseTest extends \PHPUnit_Framework_TestCase
      * Test attribute "user_id"
      */
     public function testPropertyUserId()
-    {
-    }
-
-    /**
-     * Test attribute "active"
-     */
-    public function testPropertyActive()
     {
     }
 

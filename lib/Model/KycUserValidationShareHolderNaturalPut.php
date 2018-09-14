@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \MarketPay\ObjectSerializer;
  * KycUserValidationShareHolderNaturalPut Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,7 +66,8 @@ class KycUserValidationShareHolderNaturalPut implements ModelInterface, ArrayAcc
         'birthday' => 'int',
         'nationality' => 'string',
         'country_of_residence' => 'string',
-        'telephone' => '\MarketPay\Model\Telephone'
+        'telephone' => '\MarketPay\Model\Telephone',
+        'address' => '\MarketPay\Model\Address'
     ];
 
     /**
@@ -84,7 +85,8 @@ class KycUserValidationShareHolderNaturalPut implements ModelInterface, ArrayAcc
         'birthday' => 'int64',
         'nationality' => null,
         'country_of_residence' => null,
-        'telephone' => null
+        'telephone' => null,
+        'address' => null
     ];
 
     /**
@@ -123,7 +125,8 @@ class KycUserValidationShareHolderNaturalPut implements ModelInterface, ArrayAcc
         'birthday' => 'Birthday',
         'nationality' => 'Nationality',
         'country_of_residence' => 'CountryOfResidence',
-        'telephone' => 'Telephone'
+        'telephone' => 'Telephone',
+        'address' => 'Address'
     ];
 
     /**
@@ -141,7 +144,8 @@ class KycUserValidationShareHolderNaturalPut implements ModelInterface, ArrayAcc
         'birthday' => 'setBirthday',
         'nationality' => 'setNationality',
         'country_of_residence' => 'setCountryOfResidence',
-        'telephone' => 'setTelephone'
+        'telephone' => 'setTelephone',
+        'address' => 'setAddress'
     ];
 
     /**
@@ -159,7 +163,8 @@ class KycUserValidationShareHolderNaturalPut implements ModelInterface, ArrayAcc
         'birthday' => 'getBirthday',
         'nationality' => 'getNationality',
         'country_of_residence' => 'getCountryOfResidence',
-        'telephone' => 'getTelephone'
+        'telephone' => 'getTelephone',
+        'address' => 'getAddress'
     ];
 
     /**
@@ -1254,6 +1259,7 @@ class KycUserValidationShareHolderNaturalPut implements ModelInterface, ArrayAcc
         $this->container['nationality'] = isset($data['nationality']) ? $data['nationality'] : null;
         $this->container['country_of_residence'] = isset($data['country_of_residence']) ? $data['country_of_residence'] : null;
         $this->container['telephone'] = isset($data['telephone']) ? $data['telephone'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
     }
 
     /**
@@ -1559,6 +1565,30 @@ class KycUserValidationShareHolderNaturalPut implements ModelInterface, ArrayAcc
     public function setTelephone($telephone)
     {
         $this->container['telephone'] = $telephone;
+
+        return $this;
+    }
+
+    /**
+     * Gets address
+     *
+     * @return \MarketPay\Model\Address
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     *
+     * @param \MarketPay\Model\Address $address The address
+     *
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
 
         return $this;
     }
