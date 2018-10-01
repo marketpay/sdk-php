@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@ use MarketPay\ObjectSerializer;
  * KycApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -654,6 +654,276 @@ class KycApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'DELETE',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation kycGetFile
+     *
+     * @param  int $document_id document_id (required)
+     *
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \SplFileObject
+     */
+    public function kycGetFile($document_id)
+    {
+        list($response) = $this->kycGetFileWithHttpInfo($document_id);
+        return $response;
+    }
+
+    /**
+     * Operation kycGetFileWithHttpInfo
+     *
+     * @param  int $document_id (required)
+     *
+     * @throws \MarketPay\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function kycGetFileWithHttpInfo($document_id)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->kycGetFileRequest($document_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\SplFileObject',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MarketPay\Model\CustomApiErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation kycGetFileAsync
+     *
+     * 
+     *
+     * @param  int $document_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function kycGetFileAsync($document_id)
+    {
+        return $this->kycGetFileAsyncWithHttpInfo($document_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation kycGetFileAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  int $document_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function kycGetFileAsyncWithHttpInfo($document_id)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->kycGetFileRequest($document_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'kycGetFile'
+     *
+     * @param  int $document_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function kycGetFileRequest($document_id)
+    {
+        // verify the required parameter 'document_id' is set
+        if ($document_id === null) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $document_id when calling kycGetFile'
+            );
+        }
+
+        $resourcePath = '/v2.1/Kyc/document/{DocumentId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($document_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'DocumentId' . '}',
+                ObjectSerializer::toPathValue($document_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/octet-stream']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/octet-stream'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -1496,7 +1766,7 @@ class KycApi
     /**
      * Operation kycGetLegalList
      *
-     * List all Natural User
+     * List all Legal User
      *
      * @param  int $page The page number of results you wish to return (optional)
      * @param  int $per_page The number of results to return per page (optional)
@@ -1516,7 +1786,7 @@ class KycApi
     /**
      * Operation kycGetLegalListWithHttpInfo
      *
-     * List all Natural User
+     * List all Legal User
      *
      * @param  int $page The page number of results you wish to return (optional)
      * @param  int $per_page The number of results to return per page (optional)
@@ -1602,7 +1872,7 @@ class KycApi
     /**
      * Operation kycGetLegalListAsync
      *
-     * List all Natural User
+     * List all Legal User
      *
      * @param  int $page The page number of results you wish to return (optional)
      * @param  int $per_page The number of results to return per page (optional)
@@ -1625,7 +1895,7 @@ class KycApi
     /**
      * Operation kycGetLegalListAsyncWithHttpInfo
      *
-     * List all Natural User
+     * List all Legal User
      *
      * @param  int $page The page number of results you wish to return (optional)
      * @param  int $per_page The number of results to return per page (optional)
@@ -4452,10 +4722,10 @@ class KycApi
     /**
      * Operation kycPostLegal
      *
-     * Update a Natural User Kyc Data
+     * Update a Legal User Kyc Data
      *
      * @param  int $user_id The Id of a user (required)
-     * @param  \MarketPay\Model\KycUserLegalPut $kyc_user_legal UserNatural Kyc detail params (optional)
+     * @param  \MarketPay\Model\KycUserLegalPut $kyc_user_legal UserLegal Kyc detail params (optional)
      *
      * @throws \MarketPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4470,10 +4740,10 @@ class KycApi
     /**
      * Operation kycPostLegalWithHttpInfo
      *
-     * Update a Natural User Kyc Data
+     * Update a Legal User Kyc Data
      *
      * @param  int $user_id The Id of a user (required)
-     * @param  \MarketPay\Model\KycUserLegalPut $kyc_user_legal UserNatural Kyc detail params (optional)
+     * @param  \MarketPay\Model\KycUserLegalPut $kyc_user_legal UserLegal Kyc detail params (optional)
      *
      * @throws \MarketPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4554,10 +4824,10 @@ class KycApi
     /**
      * Operation kycPostLegalAsync
      *
-     * Update a Natural User Kyc Data
+     * Update a Legal User Kyc Data
      *
      * @param  int $user_id The Id of a user (required)
-     * @param  \MarketPay\Model\KycUserLegalPut $kyc_user_legal UserNatural Kyc detail params (optional)
+     * @param  \MarketPay\Model\KycUserLegalPut $kyc_user_legal UserLegal Kyc detail params (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4575,10 +4845,10 @@ class KycApi
     /**
      * Operation kycPostLegalAsyncWithHttpInfo
      *
-     * Update a Natural User Kyc Data
+     * Update a Legal User Kyc Data
      *
      * @param  int $user_id The Id of a user (required)
-     * @param  \MarketPay\Model\KycUserLegalPut $kyc_user_legal UserNatural Kyc detail params (optional)
+     * @param  \MarketPay\Model\KycUserLegalPut $kyc_user_legal UserLegal Kyc detail params (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4629,7 +4899,7 @@ class KycApi
      * Create request for operation 'kycPostLegal'
      *
      * @param  int $user_id The Id of a user (required)
-     * @param  \MarketPay\Model\KycUserLegalPut $kyc_user_legal UserNatural Kyc detail params (optional)
+     * @param  \MarketPay\Model\KycUserLegalPut $kyc_user_legal UserLegal Kyc detail params (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

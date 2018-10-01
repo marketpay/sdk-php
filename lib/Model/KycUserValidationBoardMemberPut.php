@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \MarketPay\ObjectSerializer;
  * KycUserValidationBoardMemberPut Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,7 +66,8 @@ class KycUserValidationBoardMemberPut implements ModelInterface, ArrayAccess
         'telephone' => '\MarketPay\Model\Telephone',
         'id_card' => 'string',
         'occupation' => 'string',
-        'id_card_document' => '\MarketPay\Model\KycDocumentDetails'
+        'id_card_document' => '\MarketPay\Model\KycDocumentDetails',
+        'address' => '\MarketPay\Model\Address'
     ];
 
     /**
@@ -84,7 +85,8 @@ class KycUserValidationBoardMemberPut implements ModelInterface, ArrayAccess
         'telephone' => null,
         'id_card' => null,
         'occupation' => null,
-        'id_card_document' => null
+        'id_card_document' => null,
+        'address' => null
     ];
 
     /**
@@ -123,7 +125,8 @@ class KycUserValidationBoardMemberPut implements ModelInterface, ArrayAccess
         'telephone' => 'Telephone',
         'id_card' => 'IdCard',
         'occupation' => 'Occupation',
-        'id_card_document' => 'IdCardDocument'
+        'id_card_document' => 'IdCardDocument',
+        'address' => 'Address'
     ];
 
     /**
@@ -141,7 +144,8 @@ class KycUserValidationBoardMemberPut implements ModelInterface, ArrayAccess
         'telephone' => 'setTelephone',
         'id_card' => 'setIdCard',
         'occupation' => 'setOccupation',
-        'id_card_document' => 'setIdCardDocument'
+        'id_card_document' => 'setIdCardDocument',
+        'address' => 'setAddress'
     ];
 
     /**
@@ -159,7 +163,8 @@ class KycUserValidationBoardMemberPut implements ModelInterface, ArrayAccess
         'telephone' => 'getTelephone',
         'id_card' => 'getIdCard',
         'occupation' => 'getOccupation',
-        'id_card_document' => 'getIdCardDocument'
+        'id_card_document' => 'getIdCardDocument',
+        'address' => 'getAddress'
     ];
 
     /**
@@ -1254,6 +1259,7 @@ class KycUserValidationBoardMemberPut implements ModelInterface, ArrayAccess
         $this->container['id_card'] = isset($data['id_card']) ? $data['id_card'] : null;
         $this->container['occupation'] = isset($data['occupation']) ? $data['occupation'] : null;
         $this->container['id_card_document'] = isset($data['id_card_document']) ? $data['id_card_document'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
     }
 
     /**
@@ -1559,6 +1565,30 @@ class KycUserValidationBoardMemberPut implements ModelInterface, ArrayAccess
     public function setIdCardDocument($id_card_document)
     {
         $this->container['id_card_document'] = $id_card_document;
+
+        return $this;
+    }
+
+    /**
+     * Gets address
+     *
+     * @return \MarketPay\Model\Address
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     *
+     * @param \MarketPay\Model\Address $address The address
+     *
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
 
         return $this;
     }
