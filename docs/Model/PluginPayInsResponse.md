@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**debited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
-**credited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
-**fees** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
+**debited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
+**credited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
+**fees** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
 **credited_wallet_id** | **string** |  | [optional] 
 **nature** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 

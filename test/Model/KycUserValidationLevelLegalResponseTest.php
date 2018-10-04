@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace MarketPay;
+namespace Swagger\Client;
 
 /**
  * KycUserValidationLevelLegalResponseTest Class Doc Comment
@@ -35,7 +35,7 @@ namespace MarketPay;
  * @category    Class */
 // * @description KycUserValidationLevelLegalResponse
 /**
- * @package     MarketPay
+ * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -158,6 +158,20 @@ class KycUserValidationLevelLegalResponseTest extends \PHPUnit_Framework_TestCas
      * Test attribute "share_capital_increase"
      */
     public function testPropertyShareCapitalIncrease()
+    {
+    }
+
+    /**
+     * Test attribute "registration_proof"
+     */
+    public function testPropertyRegistrationProof()
+    {
+    }
+
+    /**
+     * Test attribute "share_holder_declaration"
+     */
+    public function testPropertyShareHolderDeclaration()
     {
     }
 

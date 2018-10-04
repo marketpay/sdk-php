@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **owners** | **string[]** |  | [optional] 
-**balance** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
+**balance** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
 **funds_type** | **string** |  | [optional] 
 **description** | **string** |  | [optional] 
 **currency** | **string** |  | [optional] 

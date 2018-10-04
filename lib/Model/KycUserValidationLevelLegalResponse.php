@@ -69,6 +69,8 @@ class KycUserValidationLevelLegalResponse implements ModelInterface, ArrayAccess
         'telephone' => '\MarketPay\Model\Telephone',
         'statute' => '\MarketPay\Model\KycDocumentDetails',
         'share_capital_increase' => '\MarketPay\Model\KycDocumentDetails',
+        'registration_proof' => '\MarketPay\Model\KycDocumentDetails',
+        'share_holder_declaration' => '\MarketPay\Model\KycDocumentDetails',
         'person_type' => 'string',
         'id' => 'string',
         'creation_date' => 'int',
@@ -93,6 +95,8 @@ class KycUserValidationLevelLegalResponse implements ModelInterface, ArrayAccess
         'telephone' => null,
         'statute' => null,
         'share_capital_increase' => null,
+        'registration_proof' => null,
+        'share_holder_declaration' => null,
         'person_type' => null,
         'id' => null,
         'creation_date' => 'int64',
@@ -138,6 +142,8 @@ class KycUserValidationLevelLegalResponse implements ModelInterface, ArrayAccess
         'telephone' => 'Telephone',
         'statute' => 'Statute',
         'share_capital_increase' => 'ShareCapitalIncrease',
+        'registration_proof' => 'RegistrationProof',
+        'share_holder_declaration' => 'ShareHolderDeclaration',
         'person_type' => 'PersonType',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
@@ -162,6 +168,8 @@ class KycUserValidationLevelLegalResponse implements ModelInterface, ArrayAccess
         'telephone' => 'setTelephone',
         'statute' => 'setStatute',
         'share_capital_increase' => 'setShareCapitalIncrease',
+        'registration_proof' => 'setRegistrationProof',
+        'share_holder_declaration' => 'setShareHolderDeclaration',
         'person_type' => 'setPersonType',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
@@ -186,6 +194,8 @@ class KycUserValidationLevelLegalResponse implements ModelInterface, ArrayAccess
         'telephone' => 'getTelephone',
         'statute' => 'getStatute',
         'share_capital_increase' => 'getShareCapitalIncrease',
+        'registration_proof' => 'getRegistrationProof',
+        'share_holder_declaration' => 'getShareHolderDeclaration',
         'person_type' => 'getPersonType',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
@@ -809,6 +819,8 @@ class KycUserValidationLevelLegalResponse implements ModelInterface, ArrayAccess
         $this->container['telephone'] = isset($data['telephone']) ? $data['telephone'] : null;
         $this->container['statute'] = isset($data['statute']) ? $data['statute'] : null;
         $this->container['share_capital_increase'] = isset($data['share_capital_increase']) ? $data['share_capital_increase'] : null;
+        $this->container['registration_proof'] = isset($data['registration_proof']) ? $data['registration_proof'] : null;
+        $this->container['share_holder_declaration'] = isset($data['share_holder_declaration']) ? $data['share_holder_declaration'] : null;
         $this->container['person_type'] = isset($data['person_type']) ? $data['person_type'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
@@ -1178,6 +1190,54 @@ class KycUserValidationLevelLegalResponse implements ModelInterface, ArrayAccess
     public function setShareCapitalIncrease($share_capital_increase)
     {
         $this->container['share_capital_increase'] = $share_capital_increase;
+
+        return $this;
+    }
+
+    /**
+     * Gets registration_proof
+     *
+     * @return \MarketPay\Model\KycDocumentDetails
+     */
+    public function getRegistrationProof()
+    {
+        return $this->container['registration_proof'];
+    }
+
+    /**
+     * Sets registration_proof
+     *
+     * @param \MarketPay\Model\KycDocumentDetails $registration_proof registration_proof
+     *
+     * @return $this
+     */
+    public function setRegistrationProof($registration_proof)
+    {
+        $this->container['registration_proof'] = $registration_proof;
+
+        return $this;
+    }
+
+    /**
+     * Gets share_holder_declaration
+     *
+     * @return \MarketPay\Model\KycDocumentDetails
+     */
+    public function getShareHolderDeclaration()
+    {
+        return $this->container['share_holder_declaration'];
+    }
+
+    /**
+     * Sets share_holder_declaration
+     *
+     * @param \MarketPay\Model\KycDocumentDetails $share_holder_declaration share_holder_declaration
+     *
+     * @return $this
+     */
+    public function setShareHolderDeclaration($share_holder_declaration)
+    {
+        $this->container['share_holder_declaration'] = $share_holder_declaration;
 
         return $this;
     }

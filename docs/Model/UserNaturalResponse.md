@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**\MarketPay\Model\Address**](Address.md) | The address | [optional] 
+**address** | [**\Swagger\Client\Model\Address**](Address.md) | The address | [optional] 
 **birthday** | **int** | The date of birth of the user - be careful to set the right timezone (should be UTC) to avoid 00h becoming 23h (and hence interpreted as the day before) | [optional] 
 **nationality** | **string** | The user’s nationality. ISO 3166-1 alpha-2 format is expected | [optional] 
 **country_of_residence** | **string** | The user’s country of residence. ISO 3166-1 alpha-2 format is expected | [optional] 
