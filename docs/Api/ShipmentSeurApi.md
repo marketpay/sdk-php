@@ -1,4 +1,4 @@
-# Swagger\Client\ShipmentSeurApi
+# MarketPay\ShipmentSeurApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **shipmentSeurSeurCancelShipment**
-> \Swagger\Client\Model\SeurShipmentCancellationResponse shipmentSeurSeurCancelShipment($shipment_id)
+> \MarketPay\Model\SeurShipmentCancellationResponse shipmentSeurSeurCancelShipment($shipment_id)
 
 
 
@@ -20,9 +20,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ShipmentSeurApi(
+$apiInstance = new MarketPay\Api\ShipmentSeurApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SeurShipmentCancellationResponse**](../Model/SeurShipmentCancellationResponse.md)
+[**\MarketPay\Model\SeurShipmentCancellationResponse**](../Model/SeurShipmentCancellationResponse.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentSeurSeurCreateShipment**
-> \Swagger\Client\Model\SeurShipmentResponse shipmentSeurSeurCreateShipment($shipment)
+> \MarketPay\Model\SeurShipmentResponse shipmentSeurSeurCreateShipment($shipment)
 
 
 
@@ -71,15 +71,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ShipmentSeurApi(
+$apiInstance = new MarketPay\Api\ShipmentSeurApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$shipment = new \Swagger\Client\Model\SeurShipmentPost(); // \Swagger\Client\Model\SeurShipmentPost | 
+$shipment = new \MarketPay\Model\SeurShipmentPost(); // \MarketPay\Model\SeurShipmentPost | 
 
 try {
     $result = $apiInstance->shipmentSeurSeurCreateShipment($shipment);
@@ -94,11 +94,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shipment** | [**\Swagger\Client\Model\SeurShipmentPost**](../Model/SeurShipmentPost.md)|  | [optional]
+ **shipment** | [**\MarketPay\Model\SeurShipmentPost**](../Model/SeurShipmentPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SeurShipmentResponse**](../Model/SeurShipmentResponse.md)
+[**\MarketPay\Model\SeurShipmentResponse**](../Model/SeurShipmentResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentSeurSeurGetShipment**
-> \Swagger\Client\Model\SeurShipmentResponse shipmentSeurSeurGetShipment($shipment_id)
+> \MarketPay\Model\SeurShipmentResponse shipmentSeurSeurGetShipment($shipment_id)
 
 
 
@@ -122,9 +122,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ShipmentSeurApi(
+$apiInstance = new MarketPay\Api\ShipmentSeurApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SeurShipmentResponse**](../Model/SeurShipmentResponse.md)
+[**\MarketPay\Model\SeurShipmentResponse**](../Model/SeurShipmentResponse.md)
 
 ### Authorization
 

@@ -4,12 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | The name of the legal user | [optional] 
-**telephone** | [**\Swagger\Client\Model\Telephone**](Telephone.md) |  | [optional] 
+**telephone** | [**\MarketPay\Model\Telephone**](Telephone.md) |  | [optional] 
 **contact_first_name** | **string** |  | [optional] 
 **contact_last_name** | **string** |  | [optional] 
 **fiscal_id** | **string** |  | [optional] 
 **country** | **string** |  | [optional] 
-**fiscal_address** | [**\Swagger\Client\Model\Address**](Address.md) | he address of the company’s headquarters | [optional] 
+**fiscal_address** | [**\MarketPay\Model\Address**](Address.md) | he address of the company’s headquarters | [optional] 
 **legal_person_type** | **string** | The type of legal user | [optional] 
 **email** | **string** |  | [optional] 
 **tag** | **string** | Custom data that you can add to this item | [optional] 

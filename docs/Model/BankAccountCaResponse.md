@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **account_number** | **string** |  | [optional] 
 **bank_name** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
-**owner_address** | [**\Swagger\Client\Model\Address**](Address.md) |  | [optional] 
+**owner_address** | [**\MarketPay\Model\Address**](Address.md) |  | [optional] 
 **owner_name** | **string** |  | [optional] 
 **user_id** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 

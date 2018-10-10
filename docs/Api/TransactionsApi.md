@@ -1,4 +1,4 @@
-# Swagger\Client\TransactionsApi
+# MarketPay\TransactionsApi
 
 All URIs are relative to *https://localhost*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **transactionsGetList**
-> \Swagger\Client\Model\ResponseListTransactionResponse transactionsGetList($page, $per_page, $before_date, $after_date, $sort)
+> \MarketPay\Model\ResponseListTransactionResponse transactionsGetList($page, $per_page, $before_date, $after_date, $sort)
 
 View a Transaction
 
@@ -20,9 +20,9 @@ A Transaction is any movement of money
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TransactionsApi(
+$apiInstance = new MarketPay\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ResponseListTransactionResponse**](../Model/ResponseListTransactionResponse.md)
+[**\MarketPay\Model\ResponseListTransactionResponse**](../Model/ResponseListTransactionResponse.md)
 
 ### Authorization
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**debited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | 
-**fees** | [**\Swagger\Client\Model\Money**](Money.md) |  | 
+**debited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | 
+**fees** | [**\MarketPay\Model\Money**](Money.md) |  | 
 **card_id** | **string** |  | [optional] 
 **statement_descriptor** | **string** |  | 
 **tag** | **string** |  | [optional] 

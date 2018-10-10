@@ -1,4 +1,4 @@
-# Swagger\Client\HooksApi
+# MarketPay\HooksApi
 
 All URIs are relative to *https://localhost*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **hooksGet**
-> \Swagger\Client\Model\HookResponse[] hooksGet($page, $per_page)
+> \MarketPay\Model\HookResponse[] hooksGet($page, $per_page)
 
 
 
@@ -21,9 +21,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\HooksApi(
+$apiInstance = new MarketPay\Api\HooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\HookResponse[]**](../Model/HookResponse.md)
+[**\MarketPay\Model\HookResponse[]**](../Model/HookResponse.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **hooksGet_0**
-> \Swagger\Client\Model\HookResponse hooksGet_0($hook_id)
+> \MarketPay\Model\HookResponse hooksGet_0($hook_id)
 
 
 
@@ -74,9 +74,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\HooksApi(
+$apiInstance = new MarketPay\Api\HooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\HookResponse**](../Model/HookResponse.md)
+[**\MarketPay\Model\HookResponse**](../Model/HookResponse.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **hooksPost**
-> \Swagger\Client\Model\HookResponse hooksPost($request)
+> \MarketPay\Model\HookResponse hooksPost($request)
 
 
 
@@ -125,15 +125,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\HooksApi(
+$apiInstance = new MarketPay\Api\HooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$request = new \Swagger\Client\Model\HookPost(); // \Swagger\Client\Model\HookPost | 
+$request = new \MarketPay\Model\HookPost(); // \MarketPay\Model\HookPost | 
 
 try {
     $result = $apiInstance->hooksPost($request);
@@ -148,11 +148,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**\Swagger\Client\Model\HookPost**](../Model/HookPost.md)|  | [optional]
+ **request** | [**\MarketPay\Model\HookPost**](../Model/HookPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\HookResponse**](../Model/HookResponse.md)
+[**\MarketPay\Model\HookResponse**](../Model/HookResponse.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **hooksPut**
-> \Swagger\Client\Model\HookResponse hooksPut($hook_id, $request)
+> \MarketPay\Model\HookResponse hooksPut($hook_id, $request)
 
 
 
@@ -176,16 +176,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\HooksApi(
+$apiInstance = new MarketPay\Api\HooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $hook_id = "hook_id_example"; // string | 
-$request = new \Swagger\Client\Model\HookPut(); // \Swagger\Client\Model\HookPut | 
+$request = new \MarketPay\Model\HookPut(); // \MarketPay\Model\HookPut | 
 
 try {
     $result = $apiInstance->hooksPut($hook_id, $request);
@@ -201,11 +201,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hook_id** | **string**|  |
- **request** | [**\Swagger\Client\Model\HookPut**](../Model/HookPut.md)|  | [optional]
+ **request** | [**\MarketPay\Model\HookPut**](../Model/HookPut.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\HookResponse**](../Model/HookResponse.md)
+[**\MarketPay\Model\HookResponse**](../Model/HookResponse.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Swagger\Client\EventsApi
+# MarketPay\EventsApi
 
 All URIs are relative to *https://localhost*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **eventsGet**
-> \Swagger\Client\Model\EventResponse[] eventsGet($page, $per_page)
+> \MarketPay\Model\EventResponse[] eventsGet($page, $per_page)
 
 Values List
 
@@ -20,9 +20,9 @@ The User Activity endpoint returns data about a user's lifetime activity with Ub
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\EventsApi(
+$apiInstance = new MarketPay\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\EventResponse[]**](../Model/EventResponse.md)
+[**\MarketPay\Model\EventResponse[]**](../Model/EventResponse.md)
 
 ### Authorization
 

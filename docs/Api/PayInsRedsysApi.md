@@ -1,4 +1,4 @@
-# Swagger\Client\PayInsRedsysApi
+# MarketPay\PayInsRedsysApi
 
 All URIs are relative to *https://localhost*
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **payInsRedsysRedsysGetPayment**
-> \Swagger\Client\Model\RedsysPayInsResponse payInsRedsysRedsysGetPayment($pay_in_id)
+> \MarketPay\Model\RedsysPayInsResponse payInsRedsysRedsysGetPayment($pay_in_id)
 
 
 
@@ -24,9 +24,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PayInsRedsysApi(
+$apiInstance = new MarketPay\Api\PayInsRedsysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RedsysPayInsResponse**](../Model/RedsysPayInsResponse.md)
+[**\MarketPay\Model\RedsysPayInsResponse**](../Model/RedsysPayInsResponse.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysGetPreauthorization**
-> \Swagger\Client\Model\RedsysPreauthorizeResponse payInsRedsysRedsysGetPreauthorization($preauthorization_id)
+> \MarketPay\Model\RedsysPreauthorizeResponse payInsRedsysRedsysGetPreauthorization($preauthorization_id)
 
 
 
@@ -75,9 +75,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PayInsRedsysApi(
+$apiInstance = new MarketPay\Api\PayInsRedsysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RedsysPreauthorizeResponse**](../Model/RedsysPreauthorizeResponse.md)
+[**\MarketPay\Model\RedsysPreauthorizeResponse**](../Model/RedsysPreauthorizeResponse.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostPaymentByWeb**
-> \Swagger\Client\Model\RedsysPayByWebResponse payInsRedsysRedsysPostPaymentByWeb($x_webhook, $redsys_pay_in)
+> \MarketPay\Model\RedsysPayByWebResponse payInsRedsysRedsysPostPaymentByWeb($x_webhook, $redsys_pay_in)
 
 
 
@@ -126,16 +126,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PayInsRedsysApi(
+$apiInstance = new MarketPay\Api\PayInsRedsysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_webhook = "x_webhook_example"; // string | 
-$redsys_pay_in = new \Swagger\Client\Model\RedsysPayByWebPost(); // \Swagger\Client\Model\RedsysPayByWebPost | 
+$redsys_pay_in = new \MarketPay\Model\RedsysPayByWebPost(); // \MarketPay\Model\RedsysPayByWebPost | 
 
 try {
     $result = $apiInstance->payInsRedsysRedsysPostPaymentByWeb($x_webhook, $redsys_pay_in);
@@ -151,11 +151,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_webhook** | **string**|  | [optional]
- **redsys_pay_in** | [**\Swagger\Client\Model\RedsysPayByWebPost**](../Model/RedsysPayByWebPost.md)|  | [optional]
+ **redsys_pay_in** | [**\MarketPay\Model\RedsysPayByWebPost**](../Model/RedsysPayByWebPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\RedsysPayByWebResponse**](../Model/RedsysPayByWebResponse.md)
+[**\MarketPay\Model\RedsysPayByWebResponse**](../Model/RedsysPayByWebResponse.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostPreauthorizationByWeb**
-> \Swagger\Client\Model\RedsysPreauthorizeByWebResponse payInsRedsysRedsysPostPreauthorizationByWeb($redsys_preauthorization)
+> \MarketPay\Model\RedsysPreauthorizeByWebResponse payInsRedsysRedsysPostPreauthorizationByWeb($redsys_preauthorization)
 
 
 
@@ -179,15 +179,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PayInsRedsysApi(
+$apiInstance = new MarketPay\Api\PayInsRedsysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$redsys_preauthorization = new \Swagger\Client\Model\RedsysPreauthorizeByWebPost(); // \Swagger\Client\Model\RedsysPreauthorizeByWebPost | 
+$redsys_preauthorization = new \MarketPay\Model\RedsysPreauthorizeByWebPost(); // \MarketPay\Model\RedsysPreauthorizeByWebPost | 
 
 try {
     $result = $apiInstance->payInsRedsysRedsysPostPreauthorizationByWeb($redsys_preauthorization);
@@ -202,11 +202,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **redsys_preauthorization** | [**\Swagger\Client\Model\RedsysPreauthorizeByWebPost**](../Model/RedsysPreauthorizeByWebPost.md)|  | [optional]
+ **redsys_preauthorization** | [**\MarketPay\Model\RedsysPreauthorizeByWebPost**](../Model/RedsysPreauthorizeByWebPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\RedsysPreauthorizeByWebResponse**](../Model/RedsysPreauthorizeByWebResponse.md)
+[**\MarketPay\Model\RedsysPreauthorizeByWebResponse**](../Model/RedsysPreauthorizeByWebResponse.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostPreauthorizationCancellation**
-> \Swagger\Client\Model\RedsysPreauthorizationCancellationResponse payInsRedsysRedsysPostPreauthorizationCancellation($preauthorization_id, $redsys_preauthorization_cancellation)
+> \MarketPay\Model\RedsysPreauthorizationCancellationResponse payInsRedsysRedsysPostPreauthorizationCancellation($preauthorization_id, $redsys_preauthorization_cancellation)
 
 
 
@@ -230,16 +230,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PayInsRedsysApi(
+$apiInstance = new MarketPay\Api\PayInsRedsysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $preauthorization_id = 789; // int | 
-$redsys_preauthorization_cancellation = new \Swagger\Client\Model\RedsysPreauthorizationCancellationPost(); // \Swagger\Client\Model\RedsysPreauthorizationCancellationPost | 
+$redsys_preauthorization_cancellation = new \MarketPay\Model\RedsysPreauthorizationCancellationPost(); // \MarketPay\Model\RedsysPreauthorizationCancellationPost | 
 
 try {
     $result = $apiInstance->payInsRedsysRedsysPostPreauthorizationCancellation($preauthorization_id, $redsys_preauthorization_cancellation);
@@ -255,11 +255,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **preauthorization_id** | **int**|  |
- **redsys_preauthorization_cancellation** | [**\Swagger\Client\Model\RedsysPreauthorizationCancellationPost**](../Model/RedsysPreauthorizationCancellationPost.md)|  | [optional]
+ **redsys_preauthorization_cancellation** | [**\MarketPay\Model\RedsysPreauthorizationCancellationPost**](../Model/RedsysPreauthorizationCancellationPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\RedsysPreauthorizationCancellationResponse**](../Model/RedsysPreauthorizationCancellationResponse.md)
+[**\MarketPay\Model\RedsysPreauthorizationCancellationResponse**](../Model/RedsysPreauthorizationCancellationResponse.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostPreauthorizationConfirmation**
-> \Swagger\Client\Model\RedsysPreauthorizationConfirmationResponse payInsRedsysRedsysPostPreauthorizationConfirmation($preauthorization_id, $redsys_preauthorization_confirmation)
+> \MarketPay\Model\RedsysPreauthorizationConfirmationResponse payInsRedsysRedsysPostPreauthorizationConfirmation($preauthorization_id, $redsys_preauthorization_confirmation)
 
 
 
@@ -283,16 +283,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PayInsRedsysApi(
+$apiInstance = new MarketPay\Api\PayInsRedsysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $preauthorization_id = 789; // int | 
-$redsys_preauthorization_confirmation = new \Swagger\Client\Model\RedsysPreauthorizationConfirmationPost(); // \Swagger\Client\Model\RedsysPreauthorizationConfirmationPost | 
+$redsys_preauthorization_confirmation = new \MarketPay\Model\RedsysPreauthorizationConfirmationPost(); // \MarketPay\Model\RedsysPreauthorizationConfirmationPost | 
 
 try {
     $result = $apiInstance->payInsRedsysRedsysPostPreauthorizationConfirmation($preauthorization_id, $redsys_preauthorization_confirmation);
@@ -308,11 +308,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **preauthorization_id** | **int**|  |
- **redsys_preauthorization_confirmation** | [**\Swagger\Client\Model\RedsysPreauthorizationConfirmationPost**](../Model/RedsysPreauthorizationConfirmationPost.md)|  | [optional]
+ **redsys_preauthorization_confirmation** | [**\MarketPay\Model\RedsysPreauthorizationConfirmationPost**](../Model/RedsysPreauthorizationConfirmationPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\RedsysPreauthorizationConfirmationResponse**](../Model/RedsysPreauthorizationConfirmationResponse.md)
+[**\MarketPay\Model\RedsysPreauthorizationConfirmationResponse**](../Model/RedsysPreauthorizationConfirmationResponse.md)
 
 ### Authorization
 
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostRefund**
-> \Swagger\Client\Model\RedsysRefundResponse payInsRedsysRedsysPostRefund($pay_in_id, $redsys_refund)
+> \MarketPay\Model\RedsysRefundResponse payInsRedsysRedsysPostRefund($pay_in_id, $redsys_refund)
 
 
 
@@ -336,16 +336,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PayInsRedsysApi(
+$apiInstance = new MarketPay\Api\PayInsRedsysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $pay_in_id = 789; // int | 
-$redsys_refund = new \Swagger\Client\Model\RedsysRefundPost(); // \Swagger\Client\Model\RedsysRefundPost | 
+$redsys_refund = new \MarketPay\Model\RedsysRefundPost(); // \MarketPay\Model\RedsysRefundPost | 
 
 try {
     $result = $apiInstance->payInsRedsysRedsysPostRefund($pay_in_id, $redsys_refund);
@@ -361,11 +361,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **int**|  |
- **redsys_refund** | [**\Swagger\Client\Model\RedsysRefundPost**](../Model/RedsysRefundPost.md)|  | [optional]
+ **redsys_refund** | [**\MarketPay\Model\RedsysRefundPost**](../Model/RedsysRefundPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\RedsysRefundResponse**](../Model/RedsysRefundResponse.md)
+[**\MarketPay\Model\RedsysRefundResponse**](../Model/RedsysRefundResponse.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Swagger\Client\PayInsBankwireApi
+# MarketPay\PayInsBankwireApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **payInsBankwireBankwireGetPayment**
-> \Swagger\Client\Model\PayInBankwireResponse payInsBankwireBankwireGetPayment($pay_in_id)
+> \MarketPay\Model\PayInBankwireResponse payInsBankwireBankwireGetPayment($pay_in_id)
 
 
 
@@ -20,9 +20,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PayInsBankwireApi(
+$apiInstance = new MarketPay\Api\PayInsBankwireApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PayInBankwireResponse**](../Model/PayInBankwireResponse.md)
+[**\MarketPay\Model\PayInBankwireResponse**](../Model/PayInBankwireResponse.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsBankwireBankwirePaymentByDirect**
-> \Swagger\Client\Model\PayInBankwireResponse payInsBankwireBankwirePaymentByDirect($bankwire_pay_in)
+> \MarketPay\Model\PayInBankwireResponse payInsBankwireBankwirePaymentByDirect($bankwire_pay_in)
 
 
 
@@ -71,15 +71,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PayInsBankwireApi(
+$apiInstance = new MarketPay\Api\PayInsBankwireApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$bankwire_pay_in = new \Swagger\Client\Model\PayInBankwirePost(); // \Swagger\Client\Model\PayInBankwirePost | 
+$bankwire_pay_in = new \MarketPay\Model\PayInBankwirePost(); // \MarketPay\Model\PayInBankwirePost | 
 
 try {
     $result = $apiInstance->payInsBankwireBankwirePaymentByDirect($bankwire_pay_in);
@@ -94,11 +94,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bankwire_pay_in** | [**\Swagger\Client\Model\PayInBankwirePost**](../Model/PayInBankwirePost.md)|  | [optional]
+ **bankwire_pay_in** | [**\MarketPay\Model\PayInBankwirePost**](../Model/PayInBankwirePost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\PayInBankwireResponse**](../Model/PayInBankwireResponse.md)
+[**\MarketPay\Model\PayInBankwireResponse**](../Model/PayInBankwireResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsBankwireBankwirePostRefund**
-> \Swagger\Client\Model\PayInBankwireRefundResponse payInsBankwireBankwirePostRefund($pay_in_id, $bankwire_refund)
+> \MarketPay\Model\PayInBankwireRefundResponse payInsBankwireBankwirePostRefund($pay_in_id, $bankwire_refund)
 
 
 
@@ -122,16 +122,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PayInsBankwireApi(
+$apiInstance = new MarketPay\Api\PayInsBankwireApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $pay_in_id = 789; // int | 
-$bankwire_refund = new \Swagger\Client\Model\PayInBankwireRefundPost(); // \Swagger\Client\Model\PayInBankwireRefundPost | 
+$bankwire_refund = new \MarketPay\Model\PayInBankwireRefundPost(); // \MarketPay\Model\PayInBankwireRefundPost | 
 
 try {
     $result = $apiInstance->payInsBankwireBankwirePostRefund($pay_in_id, $bankwire_refund);
@@ -147,11 +147,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **int**|  |
- **bankwire_refund** | [**\Swagger\Client\Model\PayInBankwireRefundPost**](../Model/PayInBankwireRefundPost.md)|  | [optional]
+ **bankwire_refund** | [**\MarketPay\Model\PayInBankwireRefundPost**](../Model/PayInBankwireRefundPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\PayInBankwireRefundResponse**](../Model/PayInBankwireRefundResponse.md)
+[**\MarketPay\Model\PayInBankwireRefundResponse**](../Model/PayInBankwireRefundResponse.md)
 
 ### Authorization
 
