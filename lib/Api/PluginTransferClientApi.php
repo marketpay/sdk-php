@@ -86,15 +86,14 @@ class PluginTransferClientApi
      * Operation pluginTransferClientPluginClientConfirmPayIn
      *
      * @param  int $intent_id intent_id (required)
-     * @param  string $request request (optional)
      *
      * @throws \MarketPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \MarketPay\Model\PluginPayInsResponse
      */
-    public function pluginTransferClientPluginClientConfirmPayIn($intent_id, $request = null)
+    public function pluginTransferClientPluginClientConfirmPayIn($intent_id)
     {
-        list($response) = $this->pluginTransferClientPluginClientConfirmPayInWithHttpInfo($intent_id, $request);
+        list($response) = $this->pluginTransferClientPluginClientConfirmPayInWithHttpInfo($intent_id);
         return $response;
     }
 
@@ -102,16 +101,15 @@ class PluginTransferClientApi
      * Operation pluginTransferClientPluginClientConfirmPayInWithHttpInfo
      *
      * @param  int $intent_id (required)
-     * @param  string $request (optional)
      *
      * @throws \MarketPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \MarketPay\Model\PluginPayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function pluginTransferClientPluginClientConfirmPayInWithHttpInfo($intent_id, $request = null)
+    public function pluginTransferClientPluginClientConfirmPayInWithHttpInfo($intent_id)
     {
         $returnType = '\MarketPay\Model\PluginPayInsResponse';
-        $request = $this->pluginTransferClientPluginClientConfirmPayInRequest($intent_id, $request);
+        $request = $this->pluginTransferClientPluginClientConfirmPayInRequest($intent_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -186,14 +184,13 @@ class PluginTransferClientApi
      * 
      *
      * @param  int $intent_id (required)
-     * @param  string $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function pluginTransferClientPluginClientConfirmPayInAsync($intent_id, $request = null)
+    public function pluginTransferClientPluginClientConfirmPayInAsync($intent_id)
     {
-        return $this->pluginTransferClientPluginClientConfirmPayInAsyncWithHttpInfo($intent_id, $request)
+        return $this->pluginTransferClientPluginClientConfirmPayInAsyncWithHttpInfo($intent_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -207,15 +204,14 @@ class PluginTransferClientApi
      * 
      *
      * @param  int $intent_id (required)
-     * @param  string $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function pluginTransferClientPluginClientConfirmPayInAsyncWithHttpInfo($intent_id, $request = null)
+    public function pluginTransferClientPluginClientConfirmPayInAsyncWithHttpInfo($intent_id)
     {
         $returnType = '\MarketPay\Model\PluginPayInsResponse';
-        $request = $this->pluginTransferClientPluginClientConfirmPayInRequest($intent_id, $request);
+        $request = $this->pluginTransferClientPluginClientConfirmPayInRequest($intent_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -258,12 +254,11 @@ class PluginTransferClientApi
      * Create request for operation 'pluginTransferClientPluginClientConfirmPayIn'
      *
      * @param  int $intent_id (required)
-     * @param  string $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function pluginTransferClientPluginClientConfirmPayInRequest($intent_id, $request = null)
+    protected function pluginTransferClientPluginClientConfirmPayInRequest($intent_id)
     {
         // verify the required parameter 'intent_id' is set
         if ($intent_id === null) {
@@ -289,10 +284,6 @@ class PluginTransferClientApi
             );
         }
 
-        // form params
-        if ($request !== null) {
-            $formParams['request'] = ObjectSerializer::toFormValue($request);
-        }
         // body params
         $_tempBody = null;
 

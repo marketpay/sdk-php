@@ -279,7 +279,6 @@ Class | Method | HTTP request | Description
  - [PaymentRedsysData](docs/Model/PaymentRedsysData.md)
  - [PaymentUniversalPayData](docs/Model/PaymentUniversalPayData.md)
  - [PaymentWebPayData](docs/Model/PaymentWebPayData.md)
- - [PluginPayInConfirmationPost](docs/Model/PluginPayInConfirmationPost.md)
  - [PluginPayInPost](docs/Model/PluginPayInPost.md)
  - [PluginPayInResponse](docs/Model/PluginPayInResponse.md)
  - [PluginPayInsResponse](docs/Model/PluginPayInsResponse.md)

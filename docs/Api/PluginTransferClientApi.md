@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **pluginTransferClientPluginClientConfirmPayIn**
-> \MarketPay\Model\PluginPayInsResponse pluginTransferClientPluginClientConfirmPayIn($intent_id, $request)
+> \MarketPay\Model\PluginPayInsResponse pluginTransferClientPluginClientConfirmPayIn($intent_id)
 
 
 
@@ -29,10 +29,9 @@ $apiInstance = new MarketPay\Api\PluginTransferClientApi(
     $config
 );
 $intent_id = 789; // int | 
-$request = "request_example"; // string | 
 
 try {
-    $result = $apiInstance->pluginTransferClientPluginClientConfirmPayIn($intent_id, $request);
+    $result = $apiInstance->pluginTransferClientPluginClientConfirmPayIn($intent_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PluginTransferClientApi->pluginTransferClientPluginClientConfirmPayIn: ', $e->getMessage(), PHP_EOL;
@@ -45,7 +44,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **intent_id** | **int**|  |
- **request** | **string**|  | [optional]
 
 ### Return type
 
