@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  MarketPay
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace MarketPay;
+namespace Swagger\Client;
 
 /**
  * WebPayTokenRequestPostTest Class Doc Comment
@@ -35,7 +35,7 @@ namespace MarketPay;
  * @category    Class */
 // * @description WebPayTokenRequestPost
 /**
- * @package     MarketPay
+ * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

@@ -1,4 +1,4 @@
-# MarketPay\PayInsAddonPaymentsApi
+# Swagger\Client\PayInsAddonPaymentsApi
 
 All URIs are relative to *https://localhost*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **payInsAddonPaymentsAddonPaymentsGetPayment**
-> \MarketPay\Model\AddonPaymentsPayInsResponse payInsAddonPaymentsAddonPaymentsGetPayment($pay_in_id)
+> \Swagger\Client\Model\AddonPaymentsPayInsResponse payInsAddonPaymentsAddonPaymentsGetPayment($pay_in_id)
 
 
 
@@ -25,9 +25,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+$apiInstance = new Swagger\Client\Api\PayInsAddonPaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\AddonPaymentsPayInsResponse**](../Model/AddonPaymentsPayInsResponse.md)
+[**\Swagger\Client\Model\AddonPaymentsPayInsResponse**](../Model/AddonPaymentsPayInsResponse.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsGetPreauthorization**
-> \MarketPay\Model\AddonPaymentsPreauthorizeResponse payInsAddonPaymentsAddonPaymentsGetPreauthorization($preauthorization_id)
+> \Swagger\Client\Model\AddonPaymentsPreauthorizeResponse payInsAddonPaymentsAddonPaymentsGetPreauthorization($preauthorization_id)
 
 
 
@@ -76,9 +76,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+$apiInstance = new Swagger\Client\Api\PayInsAddonPaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\AddonPaymentsPreauthorizeResponse**](../Model/AddonPaymentsPreauthorizeResponse.md)
+[**\Swagger\Client\Model\AddonPaymentsPreauthorizeResponse**](../Model/AddonPaymentsPreauthorizeResponse.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostPaymentByWeb**
-> \MarketPay\Model\AddonPaymentsPayByWebResponse payInsAddonPaymentsAddonPaymentsPostPaymentByWeb($x_webhook, $addon_payments_pay_in)
+> \Swagger\Client\Model\AddonPaymentsPayByWebResponse payInsAddonPaymentsAddonPaymentsPostPaymentByWeb($x_webhook, $addon_payments_pay_in)
 
 
 
@@ -127,16 +127,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+$apiInstance = new Swagger\Client\Api\PayInsAddonPaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $x_webhook = "x_webhook_example"; // string | 
-$addon_payments_pay_in = new \MarketPay\Model\AddonPaymentsPayByWebPost(); // \MarketPay\Model\AddonPaymentsPayByWebPost | 
+$addon_payments_pay_in = new \Swagger\Client\Model\AddonPaymentsPayByWebPost(); // \Swagger\Client\Model\AddonPaymentsPayByWebPost | 
 
 try {
     $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPaymentByWeb($x_webhook, $addon_payments_pay_in);
@@ -152,11 +152,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_webhook** | **string**|  | [optional]
- **addon_payments_pay_in** | [**\MarketPay\Model\AddonPaymentsPayByWebPost**](../Model/AddonPaymentsPayByWebPost.md)|  | [optional]
+ **addon_payments_pay_in** | [**\Swagger\Client\Model\AddonPaymentsPayByWebPost**](../Model/AddonPaymentsPayByWebPost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\AddonPaymentsPayByWebResponse**](../Model/AddonPaymentsPayByWebResponse.md)
+[**\Swagger\Client\Model\AddonPaymentsPayByWebResponse**](../Model/AddonPaymentsPayByWebResponse.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostPaymentDirect**
-> \MarketPay\Model\AddonPaymentsPayDirectResponse payInsAddonPaymentsAddonPaymentsPostPaymentDirect($addon_payments_pay_in)
+> \Swagger\Client\Model\AddonPaymentsPayDirectResponse payInsAddonPaymentsAddonPaymentsPostPaymentDirect($addon_payments_pay_in)
 
 
 
@@ -180,15 +180,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+$apiInstance = new Swagger\Client\Api\PayInsAddonPaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$addon_payments_pay_in = new \MarketPay\Model\AddonPaymentsPayDirectPost(); // \MarketPay\Model\AddonPaymentsPayDirectPost | 
+$addon_payments_pay_in = new \Swagger\Client\Model\AddonPaymentsPayDirectPost(); // \Swagger\Client\Model\AddonPaymentsPayDirectPost | 
 
 try {
     $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPaymentDirect($addon_payments_pay_in);
@@ -203,11 +203,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addon_payments_pay_in** | [**\MarketPay\Model\AddonPaymentsPayDirectPost**](../Model/AddonPaymentsPayDirectPost.md)|  | [optional]
+ **addon_payments_pay_in** | [**\Swagger\Client\Model\AddonPaymentsPayDirectPost**](../Model/AddonPaymentsPayDirectPost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\AddonPaymentsPayDirectResponse**](../Model/AddonPaymentsPayDirectResponse.md)
+[**\Swagger\Client\Model\AddonPaymentsPayDirectResponse**](../Model/AddonPaymentsPayDirectResponse.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb**
-> \MarketPay\Model\AddonPaymentsPreauthorizeByWebResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb($addon_payments_preauthorization)
+> \Swagger\Client\Model\AddonPaymentsPreauthorizeByWebResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb($addon_payments_preauthorization)
 
 
 
@@ -231,15 +231,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+$apiInstance = new Swagger\Client\Api\PayInsAddonPaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$addon_payments_preauthorization = new \MarketPay\Model\AddonPaymentsPreauthorizeByWebPost(); // \MarketPay\Model\AddonPaymentsPreauthorizeByWebPost | 
+$addon_payments_preauthorization = new \Swagger\Client\Model\AddonPaymentsPreauthorizeByWebPost(); // \Swagger\Client\Model\AddonPaymentsPreauthorizeByWebPost | 
 
 try {
     $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb($addon_payments_preauthorization);
@@ -254,11 +254,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addon_payments_preauthorization** | [**\MarketPay\Model\AddonPaymentsPreauthorizeByWebPost**](../Model/AddonPaymentsPreauthorizeByWebPost.md)|  | [optional]
+ **addon_payments_preauthorization** | [**\Swagger\Client\Model\AddonPaymentsPreauthorizeByWebPost**](../Model/AddonPaymentsPreauthorizeByWebPost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\AddonPaymentsPreauthorizeByWebResponse**](../Model/AddonPaymentsPreauthorizeByWebResponse.md)
+[**\Swagger\Client\Model\AddonPaymentsPreauthorizeByWebResponse**](../Model/AddonPaymentsPreauthorizeByWebResponse.md)
 
 ### Authorization
 
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation**
-> \MarketPay\Model\AddonPaymentsPreauthorizationCancellationResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation($preauthorization_id, $addon_payments_preauthorization_cancellation)
+> \Swagger\Client\Model\AddonPaymentsPreauthorizationCancellationResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation($preauthorization_id, $addon_payments_preauthorization_cancellation)
 
 
 
@@ -282,16 +282,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+$apiInstance = new Swagger\Client\Api\PayInsAddonPaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $preauthorization_id = 789; // int | 
-$addon_payments_preauthorization_cancellation = new \MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost(); // \MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost | 
+$addon_payments_preauthorization_cancellation = new \Swagger\Client\Model\AddonPaymentsPreauthorizationCancellationPost(); // \Swagger\Client\Model\AddonPaymentsPreauthorizationCancellationPost | 
 
 try {
     $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation($preauthorization_id, $addon_payments_preauthorization_cancellation);
@@ -307,11 +307,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **preauthorization_id** | **int**|  |
- **addon_payments_preauthorization_cancellation** | [**\MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost**](../Model/AddonPaymentsPreauthorizationCancellationPost.md)|  | [optional]
+ **addon_payments_preauthorization_cancellation** | [**\Swagger\Client\Model\AddonPaymentsPreauthorizationCancellationPost**](../Model/AddonPaymentsPreauthorizationCancellationPost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\AddonPaymentsPreauthorizationCancellationResponse**](../Model/AddonPaymentsPreauthorizationCancellationResponse.md)
+[**\Swagger\Client\Model\AddonPaymentsPreauthorizationCancellationResponse**](../Model/AddonPaymentsPreauthorizationCancellationResponse.md)
 
 ### Authorization
 
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation**
-> \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation($preauthorization_id, $addon_payments_preauthorization_confirmation)
+> \Swagger\Client\Model\AddonPaymentsPreauthorizationConfirmationResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation($preauthorization_id, $addon_payments_preauthorization_confirmation)
 
 
 
@@ -335,16 +335,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+$apiInstance = new Swagger\Client\Api\PayInsAddonPaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $preauthorization_id = 789; // int | 
-$addon_payments_preauthorization_confirmation = new \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost(); // \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost | 
+$addon_payments_preauthorization_confirmation = new \Swagger\Client\Model\AddonPaymentsPreauthorizationConfirmationPost(); // \Swagger\Client\Model\AddonPaymentsPreauthorizationConfirmationPost | 
 
 try {
     $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation($preauthorization_id, $addon_payments_preauthorization_confirmation);
@@ -360,11 +360,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **preauthorization_id** | **int**|  |
- **addon_payments_preauthorization_confirmation** | [**\MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost**](../Model/AddonPaymentsPreauthorizationConfirmationPost.md)|  | [optional]
+ **addon_payments_preauthorization_confirmation** | [**\Swagger\Client\Model\AddonPaymentsPreauthorizationConfirmationPost**](../Model/AddonPaymentsPreauthorizationConfirmationPost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\AddonPaymentsPreauthorizationConfirmationResponse**](../Model/AddonPaymentsPreauthorizationConfirmationResponse.md)
+[**\Swagger\Client\Model\AddonPaymentsPreauthorizationConfirmationResponse**](../Model/AddonPaymentsPreauthorizationConfirmationResponse.md)
 
 ### Authorization
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostRefund**
-> \MarketPay\Model\AddonPaymentsRefundResponse payInsAddonPaymentsAddonPaymentsPostRefund($pay_in_id, $addon_payments_refund)
+> \Swagger\Client\Model\AddonPaymentsRefundResponse payInsAddonPaymentsAddonPaymentsPostRefund($pay_in_id, $addon_payments_refund)
 
 
 
@@ -388,16 +388,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
+$apiInstance = new Swagger\Client\Api\PayInsAddonPaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $pay_in_id = 789; // int | 
-$addon_payments_refund = new \MarketPay\Model\AddonPaymentsRefundPost(); // \MarketPay\Model\AddonPaymentsRefundPost | 
+$addon_payments_refund = new \Swagger\Client\Model\AddonPaymentsRefundPost(); // \Swagger\Client\Model\AddonPaymentsRefundPost | 
 
 try {
     $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostRefund($pay_in_id, $addon_payments_refund);
@@ -413,11 +413,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **int**|  |
- **addon_payments_refund** | [**\MarketPay\Model\AddonPaymentsRefundPost**](../Model/AddonPaymentsRefundPost.md)|  | [optional]
+ **addon_payments_refund** | [**\Swagger\Client\Model\AddonPaymentsRefundPost**](../Model/AddonPaymentsRefundPost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\AddonPaymentsRefundResponse**](../Model/AddonPaymentsRefundResponse.md)
+[**\Swagger\Client\Model\AddonPaymentsRefundResponse**](../Model/AddonPaymentsRefundResponse.md)
 
 ### Authorization
 

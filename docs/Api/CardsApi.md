@@ -1,4 +1,4 @@
-# MarketPay\CardsApi
+# Swagger\Client\CardsApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **cardsGet**
-> \MarketPay\Model\CardResponse cardsGet($card_id)
+> \Swagger\Client\Model\CardResponse cardsGet($card_id)
 
 View a Card
 
@@ -22,9 +22,9 @@ In order to save cards, the next methods are currently available:              -
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\CardsApi(
+$apiInstance = new Swagger\Client\Api\CardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\CardResponse**](../Model/CardResponse.md)
+[**\Swagger\Client\Model\CardResponse**](../Model/CardResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cardsGetList**
-> \MarketPay\Model\ResponseListCardResponse cardsGetList($page, $per_page)
+> \Swagger\Client\Model\ResponseListCardResponse cardsGetList($page, $per_page)
 
 
 
@@ -73,9 +73,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\CardsApi(
+$apiInstance = new Swagger\Client\Api\CardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\ResponseListCardResponse**](../Model/ResponseListCardResponse.md)
+[**\Swagger\Client\Model\ResponseListCardResponse**](../Model/ResponseListCardResponse.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cardsPut**
-> \MarketPay\Model\CardResponse cardsPut($card_id, $card)
+> \Swagger\Client\Model\CardResponse cardsPut($card_id, $card)
 
 Deactivate a Card
 
@@ -128,16 +128,16 @@ Note that once deactivated, a card can't be reactivated afterwards
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\CardsApi(
+$apiInstance = new Swagger\Client\Api\CardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $card_id = 789; // int | The Id of a card
-$card = new \MarketPay\Model\CardPut(); // \MarketPay\Model\CardPut | Card Object params
+$card = new \Swagger\Client\Model\CardPut(); // \Swagger\Client\Model\CardPut | Card Object params
 
 try {
     $result = $apiInstance->cardsPut($card_id, $card);
@@ -153,11 +153,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **card_id** | **int**| The Id of a card |
- **card** | [**\MarketPay\Model\CardPut**](../Model/CardPut.md)| Card Object params | [optional]
+ **card** | [**\Swagger\Client\Model\CardPut**](../Model/CardPut.md)| Card Object params | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\CardResponse**](../Model/CardResponse.md)
+[**\Swagger\Client\Model\CardResponse**](../Model/CardResponse.md)
 
 ### Authorization
 

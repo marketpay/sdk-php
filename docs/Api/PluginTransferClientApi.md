@@ -1,4 +1,4 @@
-# MarketPay\PluginTransferClientApi
+# Swagger\Client\PluginTransferClientApi
 
 All URIs are relative to *https://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **pluginTransferClientPluginClientConfirmPayIn**
-> \MarketPay\Model\PluginPayInsResponse pluginTransferClientPluginClientConfirmPayIn($intent_id)
+> \Swagger\Client\Model\PluginPayInsResponse pluginTransferClientPluginClientConfirmPayIn($intent_id)
 
 
 
@@ -20,9 +20,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PluginTransferClientApi(
+$apiInstance = new Swagger\Client\Api\PluginTransferClientApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\PluginPayInsResponse**](../Model/PluginPayInsResponse.md)
+[**\Swagger\Client\Model\PluginPayInsResponse**](../Model/PluginPayInsResponse.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **pluginTransferClientPluginClientGetPayment**
-> \MarketPay\Model\PluginPayInsResponse pluginTransferClientPluginClientGetPayment($pay_in_id)
+> \Swagger\Client\Model\PluginPayInsResponse pluginTransferClientPluginClientGetPayment($pay_in_id)
 
 
 
@@ -71,9 +71,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PluginTransferClientApi(
+$apiInstance = new Swagger\Client\Api\PluginTransferClientApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\PluginPayInsResponse**](../Model/PluginPayInsResponse.md)
+[**\Swagger\Client\Model\PluginPayInsResponse**](../Model/PluginPayInsResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **pluginTransferClientPluginClientPayInCreatePost**
-> \MarketPay\Model\PluginPayInResponse pluginTransferClientPluginClientPayInCreatePost($plugin_pay_in)
+> \Swagger\Client\Model\PluginPayInResponse pluginTransferClientPluginClientPayInCreatePost($plugin_pay_in)
 
 
 
@@ -122,15 +122,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PluginTransferClientApi(
+$apiInstance = new Swagger\Client\Api\PluginTransferClientApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$plugin_pay_in = new \MarketPay\Model\PluginPayInPost(); // \MarketPay\Model\PluginPayInPost | 
+$plugin_pay_in = new \Swagger\Client\Model\PluginPayInPost(); // \Swagger\Client\Model\PluginPayInPost | 
 
 try {
     $result = $apiInstance->pluginTransferClientPluginClientPayInCreatePost($plugin_pay_in);
@@ -145,11 +145,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **plugin_pay_in** | [**\MarketPay\Model\PluginPayInPost**](../Model/PluginPayInPost.md)|  | [optional]
+ **plugin_pay_in** | [**\Swagger\Client\Model\PluginPayInPost**](../Model/PluginPayInPost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\PluginPayInResponse**](../Model/PluginPayInResponse.md)
+[**\Swagger\Client\Model\PluginPayInResponse**](../Model/PluginPayInResponse.md)
 
 ### Authorization
 

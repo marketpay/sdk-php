@@ -1,4 +1,4 @@
-# MarketPay\PayInsUniversalPayApi
+# Swagger\Client\PayInsUniversalPayApi
 
 All URIs are relative to *https://localhost*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **payInsUniversalPayGetUniversalPayTokenization**
-> \MarketPay\Model\UniversalPayTokenizationResponse payInsUniversalPayGetUniversalPayTokenization($token_id)
+> \Swagger\Client\Model\UniversalPayTokenizationResponse payInsUniversalPayGetUniversalPayTokenization($token_id)
 
 
 
@@ -22,9 +22,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsUniversalPayApi(
+$apiInstance = new Swagger\Client\Api\PayInsUniversalPayApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\UniversalPayTokenizationResponse**](../Model/UniversalPayTokenizationResponse.md)
+[**\Swagger\Client\Model\UniversalPayTokenizationResponse**](../Model/UniversalPayTokenizationResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPayGetPayment**
-> \MarketPay\Model\UniversalPayPayInsResponse payInsUniversalPayUniversalPayGetPayment($pay_in_id)
+> \Swagger\Client\Model\UniversalPayPayInsResponse payInsUniversalPayUniversalPayGetPayment($pay_in_id)
 
 
 
@@ -73,9 +73,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsUniversalPayApi(
+$apiInstance = new Swagger\Client\Api\PayInsUniversalPayApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\UniversalPayPayInsResponse**](../Model/UniversalPayPayInsResponse.md)
+[**\Swagger\Client\Model\UniversalPayPayInsResponse**](../Model/UniversalPayPayInsResponse.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPayPostPaymentByWeb**
-> \MarketPay\Model\UniversalPayPayByWebResponse payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in)
+> \Swagger\Client\Model\UniversalPayPayByWebResponse payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in)
 
 
 
@@ -124,15 +124,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsUniversalPayApi(
+$apiInstance = new Swagger\Client\Api\PayInsUniversalPayApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$universal_pay_pay_in = new \MarketPay\Model\UniversalPayPayByWebPost(); // \MarketPay\Model\UniversalPayPayByWebPost | 
+$universal_pay_pay_in = new \Swagger\Client\Model\UniversalPayPayByWebPost(); // \Swagger\Client\Model\UniversalPayPayByWebPost | 
 
 try {
     $result = $apiInstance->payInsUniversalPayUniversalPayPostPaymentByWeb($universal_pay_pay_in);
@@ -147,11 +147,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **universal_pay_pay_in** | [**\MarketPay\Model\UniversalPayPayByWebPost**](../Model/UniversalPayPayByWebPost.md)|  | [optional]
+ **universal_pay_pay_in** | [**\Swagger\Client\Model\UniversalPayPayByWebPost**](../Model/UniversalPayPayByWebPost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\UniversalPayPayByWebResponse**](../Model/UniversalPayPayByWebResponse.md)
+[**\Swagger\Client\Model\UniversalPayPayByWebResponse**](../Model/UniversalPayPayByWebResponse.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPayPostRefund**
-> \MarketPay\Model\UniversalPayRefundResponse payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund)
+> \Swagger\Client\Model\UniversalPayRefundResponse payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund)
 
 
 
@@ -175,16 +175,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsUniversalPayApi(
+$apiInstance = new Swagger\Client\Api\PayInsUniversalPayApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $pay_in_id = 789; // int | 
-$universal_pay_refund = new \MarketPay\Model\UniversalPayRefundPost(); // \MarketPay\Model\UniversalPayRefundPost | 
+$universal_pay_refund = new \Swagger\Client\Model\UniversalPayRefundPost(); // \Swagger\Client\Model\UniversalPayRefundPost | 
 
 try {
     $result = $apiInstance->payInsUniversalPayUniversalPayPostRefund($pay_in_id, $universal_pay_refund);
@@ -200,11 +200,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **int**|  |
- **universal_pay_refund** | [**\MarketPay\Model\UniversalPayRefundPost**](../Model/UniversalPayRefundPost.md)|  | [optional]
+ **universal_pay_refund** | [**\Swagger\Client\Model\UniversalPayRefundPost**](../Model/UniversalPayRefundPost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\UniversalPayRefundResponse**](../Model/UniversalPayRefundResponse.md)
+[**\Swagger\Client\Model\UniversalPayRefundResponse**](../Model/UniversalPayRefundResponse.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsUniversalPayUniversalPaySaveCard**
-> \MarketPay\Model\UniversalPayTokenizeByWebResponse payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card)
+> \Swagger\Client\Model\UniversalPayTokenizeByWebResponse payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card)
 
 
 
@@ -228,15 +228,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new MarketPay\Api\PayInsUniversalPayApi(
+$apiInstance = new Swagger\Client\Api\PayInsUniversalPayApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$universal_pay_save_card = new \MarketPay\Model\UniversalPayTokenRequestPost(); // \MarketPay\Model\UniversalPayTokenRequestPost | 
+$universal_pay_save_card = new \Swagger\Client\Model\UniversalPayTokenRequestPost(); // \Swagger\Client\Model\UniversalPayTokenRequestPost | 
 
 try {
     $result = $apiInstance->payInsUniversalPayUniversalPaySaveCard($universal_pay_save_card);
@@ -251,11 +251,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **universal_pay_save_card** | [**\MarketPay\Model\UniversalPayTokenRequestPost**](../Model/UniversalPayTokenRequestPost.md)|  | [optional]
+ **universal_pay_save_card** | [**\Swagger\Client\Model\UniversalPayTokenRequestPost**](../Model/UniversalPayTokenRequestPost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\UniversalPayTokenizeByWebResponse**](../Model/UniversalPayTokenizeByWebResponse.md)
+[**\Swagger\Client\Model\UniversalPayTokenizeByWebResponse**](../Model/UniversalPayTokenizeByWebResponse.md)
 
 ### Authorization
 

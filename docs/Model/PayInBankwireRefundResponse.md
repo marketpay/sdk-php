@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**debited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
-**credited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
-**fees** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
+**debited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
+**credited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
+**fees** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
 **debited_wallet_id** | **string** |  | [optional] 
 **author_id** | **string** |  | [optional] 
 **statement_descriptor** | **string** |  | [optional] 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **type** | **string** |  | [optional] 
 **initial_transaction_id** | **string** |  | [optional] 
 **initial_transaction_type** | **string** |  | [optional] 
-**refund_reason** | [**\MarketPay\Model\RefundReason**](RefundReason.md) |  | [optional] 
+**refund_reason** | [**\Swagger\Client\Model\RefundReason**](RefundReason.md) |  | [optional] 
 **id** | **string** | The item&#39;s ID | [optional] 
 **creation_date** | **int** | When the item was created | [optional] 
 **tag** | **string** | Custom data that you can add to this item | [optional] 
