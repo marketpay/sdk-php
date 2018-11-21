@@ -629,7 +629,7 @@ class PluginTransferClientApi
      *
      * @throws \MarketPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \MarketPay\Model\PluginPayInResponse
+     * @return \MarketPay\Model\PluginPayInsResponse
      */
     public function pluginTransferClientPluginClientPayInCreatePost($plugin_pay_in = null)
     {
@@ -644,11 +644,11 @@ class PluginTransferClientApi
      *
      * @throws \MarketPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \MarketPay\Model\PluginPayInResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\PluginPayInsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function pluginTransferClientPluginClientPayInCreatePostWithHttpInfo($plugin_pay_in = null)
     {
-        $returnType = '\MarketPay\Model\PluginPayInResponse';
+        $returnType = '\MarketPay\Model\PluginPayInsResponse';
         $request = $this->pluginTransferClientPluginClientPayInCreatePostRequest($plugin_pay_in);
 
         try {
@@ -700,7 +700,7 @@ class PluginTransferClientApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MarketPay\Model\PluginPayInResponse',
+                        '\MarketPay\Model\PluginPayInsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -750,7 +750,7 @@ class PluginTransferClientApi
      */
     public function pluginTransferClientPluginClientPayInCreatePostAsyncWithHttpInfo($plugin_pay_in = null)
     {
-        $returnType = '\MarketPay\Model\PluginPayInResponse';
+        $returnType = '\MarketPay\Model\PluginPayInsResponse';
         $request = $this->pluginTransferClientPluginClientPayInCreatePostRequest($plugin_pay_in);
 
         return $this->client

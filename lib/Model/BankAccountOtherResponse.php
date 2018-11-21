@@ -65,6 +65,7 @@ class BankAccountOtherResponse implements ModelInterface, ArrayAccess
         'owner_name' => 'string',
         'user_id' => 'string',
         'active' => 'bool',
+        'bank_account_number' => 'string',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -84,6 +85,7 @@ class BankAccountOtherResponse implements ModelInterface, ArrayAccess
         'owner_name' => null,
         'user_id' => null,
         'active' => null,
+        'bank_account_number' => null,
         'id' => null,
         'creation_date' => 'int64',
         'tag' => null
@@ -124,6 +126,7 @@ class BankAccountOtherResponse implements ModelInterface, ArrayAccess
         'owner_name' => 'OwnerName',
         'user_id' => 'UserId',
         'active' => 'Active',
+        'bank_account_number' => 'BankAccountNumber',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -143,6 +146,7 @@ class BankAccountOtherResponse implements ModelInterface, ArrayAccess
         'owner_name' => 'setOwnerName',
         'user_id' => 'setUserId',
         'active' => 'setActive',
+        'bank_account_number' => 'setBankAccountNumber',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -162,6 +166,7 @@ class BankAccountOtherResponse implements ModelInterface, ArrayAccess
         'owner_name' => 'getOwnerName',
         'user_id' => 'getUserId',
         'active' => 'getActive',
+        'bank_account_number' => 'getBankAccountNumber',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -767,6 +772,7 @@ class BankAccountOtherResponse implements ModelInterface, ArrayAccess
         $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['bank_account_number'] = isset($data['bank_account_number']) ? $data['bank_account_number'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -1027,6 +1033,30 @@ class BankAccountOtherResponse implements ModelInterface, ArrayAccess
     public function setActive($active)
     {
         $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_account_number
+     *
+     * @return string
+     */
+    public function getBankAccountNumber()
+    {
+        return $this->container['bank_account_number'];
+    }
+
+    /**
+     * Sets bank_account_number
+     *
+     * @param string $bank_account_number bank_account_number
+     *
+     * @return $this
+     */
+    public function setBankAccountNumber($bank_account_number)
+    {
+        $this->container['bank_account_number'] = $bank_account_number;
 
         return $this;
     }

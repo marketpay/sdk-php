@@ -134,6 +134,13 @@ class BankAccountUsResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "bank_account_number"
+     */
+    public function testPropertyBankAccountNumber()
+    {
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()

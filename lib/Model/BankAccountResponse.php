@@ -62,6 +62,7 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
         'type' => 'string',
         'owner_name' => 'string',
         'user_id' => 'string',
+        'bank_account_number' => 'string',
         'id' => 'string',
         'creation_date' => 'int',
         'tag' => 'string'
@@ -78,6 +79,7 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
         'type' => null,
         'owner_name' => null,
         'user_id' => null,
+        'bank_account_number' => null,
         'id' => null,
         'creation_date' => 'int64',
         'tag' => null
@@ -115,6 +117,7 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
         'type' => 'Type',
         'owner_name' => 'OwnerName',
         'user_id' => 'UserId',
+        'bank_account_number' => 'BankAccountNumber',
         'id' => 'Id',
         'creation_date' => 'CreationDate',
         'tag' => 'Tag'
@@ -131,6 +134,7 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
         'type' => 'setType',
         'owner_name' => 'setOwnerName',
         'user_id' => 'setUserId',
+        'bank_account_number' => 'setBankAccountNumber',
         'id' => 'setId',
         'creation_date' => 'setCreationDate',
         'tag' => 'setTag'
@@ -147,6 +151,7 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
         'type' => 'getType',
         'owner_name' => 'getOwnerName',
         'user_id' => 'getUserId',
+        'bank_account_number' => 'getBankAccountNumber',
         'id' => 'getId',
         'creation_date' => 'getCreationDate',
         'tag' => 'getTag'
@@ -238,6 +243,7 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
+        $this->container['bank_account_number'] = isset($data['bank_account_number']) ? $data['bank_account_number'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
@@ -405,6 +411,30 @@ class BankAccountResponse implements ModelInterface, ArrayAccess
     public function setUserId($user_id)
     {
         $this->container['user_id'] = $user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_account_number
+     *
+     * @return string
+     */
+    public function getBankAccountNumber()
+    {
+        return $this->container['bank_account_number'];
+    }
+
+    /**
+     * Sets bank_account_number
+     *
+     * @param string $bank_account_number bank_account_number
+     *
+     * @return $this
+     */
+    public function setBankAccountNumber($bank_account_number)
+    {
+        $this->container['bank_account_number'] = $bank_account_number;
 
         return $this;
     }

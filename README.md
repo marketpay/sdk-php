@@ -280,7 +280,6 @@ Class | Method | HTTP request | Description
  - [PaymentUniversalPayData](docs/Model/PaymentUniversalPayData.md)
  - [PaymentWebPayData](docs/Model/PaymentWebPayData.md)
  - [PluginPayInPost](docs/Model/PluginPayInPost.md)
- - [PluginPayInResponse](docs/Model/PluginPayInResponse.md)
  - [PluginPayInsResponse](docs/Model/PluginPayInsResponse.md)
  - [PreauthorizationAddonPaymentsData](docs/Model/PreauthorizationAddonPaymentsData.md)
  - [PreauthorizationRedsysData](docs/Model/PreauthorizationRedsysData.md)

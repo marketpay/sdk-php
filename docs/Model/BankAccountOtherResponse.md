@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **owner_name** | **string** |  | [optional] 
 **user_id** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
+**bank_account_number** | **string** |  | [optional] 
 **id** | **string** | The item&#39;s ID | [optional] 
 **creation_date** | **int** | When the item was created | [optional] 
 **tag** | **string** | Custom data that you can add to this item | [optional] 

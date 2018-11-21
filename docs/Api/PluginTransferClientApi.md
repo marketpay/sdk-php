@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **pluginTransferClientPluginClientPayInCreatePost**
-> \Swagger\Client\Model\PluginPayInResponse pluginTransferClientPluginClientPayInCreatePost($plugin_pay_in)
+> \Swagger\Client\Model\PluginPayInsResponse pluginTransferClientPluginClientPayInCreatePost($plugin_pay_in)
 
 
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PluginPayInResponse**](../Model/PluginPayInResponse.md)
+[**\Swagger\Client\Model\PluginPayInsResponse**](../Model/PluginPayInsResponse.md)
 
 ### Authorization
 
