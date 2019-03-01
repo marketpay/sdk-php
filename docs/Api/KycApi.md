@@ -1,4 +1,4 @@
-# Swagger\Client\KycApi
+# MarketPay\KycApi
 
 All URIs are relative to *https://localhost*
 
@@ -45,9 +45,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -98,9 +98,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -151,9 +151,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycGetLegal**
-> \Swagger\Client\Model\KycUserValidationLevelLegalResponse kycGetLegal($user_id)
+> \MarketPay\Model\KycUserValidationLevelLegalResponse kycGetLegal($user_id)
 
 View a Legal User
 
@@ -204,9 +204,9 @@ View a Legal User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycUserValidationLevelLegalResponse**](../Model/KycUserValidationLevelLegalResponse.md)
+[**\MarketPay\Model\KycUserValidationLevelLegalResponse**](../Model/KycUserValidationLevelLegalResponse.md)
 
 ### Authorization
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycGetLegalBoardMember**
-> \Swagger\Client\Model\KycUserValidationBoardMemberListItemResponse kycGetLegalBoardMember($board_member_id, $user_id)
+> \MarketPay\Model\KycUserValidationBoardMemberListItemResponse kycGetLegalBoardMember($board_member_id, $user_id)
 
 
 
@@ -255,9 +255,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycUserValidationBoardMemberListItemResponse**](../Model/KycUserValidationBoardMemberListItemResponse.md)
+[**\MarketPay\Model\KycUserValidationBoardMemberListItemResponse**](../Model/KycUserValidationBoardMemberListItemResponse.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycGetLegalBoardMembers**
-> \Swagger\Client\Model\KycUserValidationLevelLegalBoardMembersListResponse kycGetLegalBoardMembers($user_id)
+> \MarketPay\Model\KycUserValidationLevelLegalBoardMembersListResponse kycGetLegalBoardMembers($user_id)
 
 
 
@@ -308,9 +308,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycUserValidationLevelLegalBoardMembersListResponse**](../Model/KycUserValidationLevelLegalBoardMembersListResponse.md)
+[**\MarketPay\Model\KycUserValidationLevelLegalBoardMembersListResponse**](../Model/KycUserValidationLevelLegalBoardMembersListResponse.md)
 
 ### Authorization
 
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycGetLegalList**
-> \Swagger\Client\Model\ResponseListKycUserValidationLevelLegalResponse kycGetLegalList($page, $per_page, $name_contains, $fiscal_id_contains)
+> \MarketPay\Model\ResponseListKycUserValidationLevelLegalResponse kycGetLegalList($page, $per_page, $name_contains, $fiscal_id_contains)
 
 List all Legal User
 
@@ -361,9 +361,9 @@ List all Legal User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ResponseListKycUserValidationLevelLegalResponse**](../Model/ResponseListKycUserValidationLevelLegalResponse.md)
+[**\MarketPay\Model\ResponseListKycUserValidationLevelLegalResponse**](../Model/ResponseListKycUserValidationLevelLegalResponse.md)
 
 ### Authorization
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycGetLegalShareHolderNatural**
-> \Swagger\Client\Model\KycUserValidationShareHolderListItemResponseNatural kycGetLegalShareHolderNatural($user_id, $share_holder_id)
+> \MarketPay\Model\KycUserValidationShareHolderListItemResponseNatural kycGetLegalShareHolderNatural($user_id, $share_holder_id)
 
 
 
@@ -418,9 +418,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycUserValidationShareHolderListItemResponseNatural**](../Model/KycUserValidationShareHolderListItemResponseNatural.md)
+[**\MarketPay\Model\KycUserValidationShareHolderListItemResponseNatural**](../Model/KycUserValidationShareHolderListItemResponseNatural.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycGetLegalShareHolders**
-> \Swagger\Client\Model\KycUserValidationLevelLegalShareHoldersListResponse kycGetLegalShareHolders($user_id)
+> \MarketPay\Model\KycUserValidationLevelLegalShareHoldersListResponse kycGetLegalShareHolders($user_id)
 
 
 
@@ -471,9 +471,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycUserValidationLevelLegalShareHoldersListResponse**](../Model/KycUserValidationLevelLegalShareHoldersListResponse.md)
+[**\MarketPay\Model\KycUserValidationLevelLegalShareHoldersListResponse**](../Model/KycUserValidationLevelLegalShareHoldersListResponse.md)
 
 ### Authorization
 
@@ -512,7 +512,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycGetNaturaList**
-> \Swagger\Client\Model\ResponseListKycUserValidationLevelNaturalResponse kycGetNaturaList($page, $per_page, $first_name_contains, $last_name_contains, $id_card_contains)
+> \MarketPay\Model\ResponseListKycUserValidationLevelNaturalResponse kycGetNaturaList($page, $per_page, $first_name_contains, $last_name_contains, $id_card_contains)
 
 List all Natural User
 
@@ -524,9 +524,9 @@ List all Natural User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -559,7 +559,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ResponseListKycUserValidationLevelNaturalResponse**](../Model/ResponseListKycUserValidationLevelNaturalResponse.md)
+[**\MarketPay\Model\ResponseListKycUserValidationLevelNaturalResponse**](../Model/ResponseListKycUserValidationLevelNaturalResponse.md)
 
 ### Authorization
 
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycGetNatural**
-> \Swagger\Client\Model\KycUserValidationLevelNaturalResponse kycGetNatural($user_id)
+> \MarketPay\Model\KycUserValidationLevelNaturalResponse kycGetNatural($user_id)
 
 View a Natural User
 
@@ -585,9 +585,9 @@ View a Natural User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -612,7 +612,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycUserValidationLevelNaturalResponse**](../Model/KycUserValidationLevelNaturalResponse.md)
+[**\MarketPay\Model\KycUserValidationLevelNaturalResponse**](../Model/KycUserValidationLevelNaturalResponse.md)
 
 ### Authorization
 
@@ -626,7 +626,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycGetValidation**
-> \Swagger\Client\Model\KycValidationUserStatusResponse kycGetValidation($user_id)
+> \MarketPay\Model\KycValidationUserStatusResponse kycGetValidation($user_id)
 
 
 
@@ -636,9 +636,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -663,7 +663,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycValidationUserStatusResponse**](../Model/KycValidationUserStatusResponse.md)
+[**\MarketPay\Model\KycValidationUserStatusResponse**](../Model/KycValidationUserStatusResponse.md)
 
 ### Authorization
 
@@ -677,7 +677,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycGetValidationLegal**
-> \Swagger\Client\Model\KycValidationUserLegalStatusResponse kycGetValidationLegal($user_id)
+> \MarketPay\Model\KycValidationUserLegalStatusResponse kycGetValidationLegal($user_id)
 
 
 
@@ -687,9 +687,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -714,7 +714,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycValidationUserLegalStatusResponse**](../Model/KycValidationUserLegalStatusResponse.md)
+[**\MarketPay\Model\KycValidationUserLegalStatusResponse**](../Model/KycValidationUserLegalStatusResponse.md)
 
 ### Authorization
 
@@ -728,7 +728,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPostDocument**
-> \Swagger\Client\Model\KycFileUploadResponse kycPostDocument($document_type, $file, $user_id, $file_content_type)
+> \MarketPay\Model\KycFileUploadResponse kycPostDocument($document_type, $file, $user_id, $file_content_type)
 
 Uploads a new document and uploads a file. If the document already exists it will be replaced.
 
@@ -738,9 +738,9 @@ Uploads a new document and uploads a file. If the document already exists it wil
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -771,7 +771,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
+[**\MarketPay\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
 
 ### Authorization
 
@@ -785,7 +785,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPostDocumentBoardMember**
-> \Swagger\Client\Model\KycFileUploadResponse kycPostDocumentBoardMember($board_member_id, $document_type, $file, $user_id, $file_content_type)
+> \MarketPay\Model\KycFileUploadResponse kycPostDocumentBoardMember($board_member_id, $document_type, $file, $user_id, $file_content_type)
 
 Uploads a new document. If the document already exists it will be replaced.
 
@@ -795,9 +795,9 @@ Uploads a new document. If the document already exists it will be replaced.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -830,7 +830,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
+[**\MarketPay\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
 
 ### Authorization
 
@@ -844,7 +844,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPostDocumentShareholder**
-> \Swagger\Client\Model\KycFileUploadResponse kycPostDocumentShareholder($document_type, $file, $shareholder_id, $user_id, $file_content_type)
+> \MarketPay\Model\KycFileUploadResponse kycPostDocumentShareholder($document_type, $file, $shareholder_id, $user_id, $file_content_type)
 
 Uploads a new document and uploads a file. If the document already exists it will be replaced.
 
@@ -854,9 +854,9 @@ Uploads a new document and uploads a file. If the document already exists it wil
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -889,7 +889,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
+[**\MarketPay\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
 
 ### Authorization
 
@@ -903,7 +903,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPostLegal**
-> \Swagger\Client\Model\KycUserValidationLevelLegalResponse kycPostLegal($user_id, $kyc_user_legal)
+> \MarketPay\Model\KycUserValidationLevelLegalResponse kycPostLegal($user_id, $kyc_user_legal)
 
 Update a Legal User Kyc Data
 
@@ -915,16 +915,16 @@ Note that the Birthday field is a timestamp, but be careful to ensure that the t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = 789; // int | The Id of a user
-$kyc_user_legal = new \Swagger\Client\Model\KycUserLegalPut(); // \Swagger\Client\Model\KycUserLegalPut | UserLegal Kyc detail params
+$kyc_user_legal = new \MarketPay\Model\KycUserLegalPut(); // \MarketPay\Model\KycUserLegalPut | UserLegal Kyc detail params
 
 try {
     $result = $apiInstance->kycPostLegal($user_id, $kyc_user_legal);
@@ -940,11 +940,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The Id of a user |
- **kyc_user_legal** | [**\Swagger\Client\Model\KycUserLegalPut**](../Model/KycUserLegalPut.md)| UserLegal Kyc detail params | [optional]
+ **kyc_user_legal** | [**\MarketPay\Model\KycUserLegalPut**](../Model/KycUserLegalPut.md)| UserLegal Kyc detail params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\KycUserValidationLevelLegalResponse**](../Model/KycUserValidationLevelLegalResponse.md)
+[**\MarketPay\Model\KycUserValidationLevelLegalResponse**](../Model/KycUserValidationLevelLegalResponse.md)
 
 ### Authorization
 
@@ -952,13 +952,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, text/json, application/_*+json
+ - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPostLegalBoardMember**
-> \Swagger\Client\Model\KycBoardMemberResponse kycPostLegalBoardMember($user_id, $board_member)
+> \MarketPay\Model\KycBoardMemberResponse kycPostLegalBoardMember($user_id, $board_member)
 
 
 
@@ -968,16 +968,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = 789; // int | 
-$board_member = new \Swagger\Client\Model\KycUserValidationBoardMemberPost(); // \Swagger\Client\Model\KycUserValidationBoardMemberPost | 
+$board_member = new \MarketPay\Model\KycUserValidationBoardMemberPost(); // \MarketPay\Model\KycUserValidationBoardMemberPost | 
 
 try {
     $result = $apiInstance->kycPostLegalBoardMember($user_id, $board_member);
@@ -993,11 +993,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**|  |
- **board_member** | [**\Swagger\Client\Model\KycUserValidationBoardMemberPost**](../Model/KycUserValidationBoardMemberPost.md)|  | [optional]
+ **board_member** | [**\MarketPay\Model\KycUserValidationBoardMemberPost**](../Model/KycUserValidationBoardMemberPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\KycBoardMemberResponse**](../Model/KycBoardMemberResponse.md)
+[**\MarketPay\Model\KycBoardMemberResponse**](../Model/KycBoardMemberResponse.md)
 
 ### Authorization
 
@@ -1005,13 +1005,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, text/json, application/_*+json
+ - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPostLegalShareHolder**
-> \Swagger\Client\Model\KycShareHolderResponse kycPostLegalShareHolder($user_id, $share_holder_natural)
+> \MarketPay\Model\KycShareHolderResponse kycPostLegalShareHolder($user_id, $share_holder_natural)
 
 
 
@@ -1021,16 +1021,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = 789; // int | 
-$share_holder_natural = new \Swagger\Client\Model\KycUserValidationShareHolderNaturalPost(); // \Swagger\Client\Model\KycUserValidationShareHolderNaturalPost | 
+$share_holder_natural = new \MarketPay\Model\KycUserValidationShareHolderNaturalPost(); // \MarketPay\Model\KycUserValidationShareHolderNaturalPost | 
 
 try {
     $result = $apiInstance->kycPostLegalShareHolder($user_id, $share_holder_natural);
@@ -1046,11 +1046,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**|  |
- **share_holder_natural** | [**\Swagger\Client\Model\KycUserValidationShareHolderNaturalPost**](../Model/KycUserValidationShareHolderNaturalPost.md)|  | [optional]
+ **share_holder_natural** | [**\MarketPay\Model\KycUserValidationShareHolderNaturalPost**](../Model/KycUserValidationShareHolderNaturalPost.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\KycShareHolderResponse**](../Model/KycShareHolderResponse.md)
+[**\MarketPay\Model\KycShareHolderResponse**](../Model/KycShareHolderResponse.md)
 
 ### Authorization
 
@@ -1058,13 +1058,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, text/json, application/_*+json
+ - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPostNatural**
-> \Swagger\Client\Model\KycUserValidationLevelNaturalResponse kycPostNatural($user_id, $kyc_user_natural)
+> \MarketPay\Model\KycUserValidationLevelNaturalResponse kycPostNatural($user_id, $kyc_user_natural)
 
 Update a Natural User Kyc Data
 
@@ -1076,16 +1076,16 @@ Note that the Birthday field is a timestamp, but be careful to ensure that the t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = 789; // int | The Id of a user
-$kyc_user_natural = new \Swagger\Client\Model\KycUserNaturalPut(); // \Swagger\Client\Model\KycUserNaturalPut | UserNatural Kyc detail params
+$kyc_user_natural = new \MarketPay\Model\KycUserNaturalPut(); // \MarketPay\Model\KycUserNaturalPut | UserNatural Kyc detail params
 
 try {
     $result = $apiInstance->kycPostNatural($user_id, $kyc_user_natural);
@@ -1101,11 +1101,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The Id of a user |
- **kyc_user_natural** | [**\Swagger\Client\Model\KycUserNaturalPut**](../Model/KycUserNaturalPut.md)| UserNatural Kyc detail params | [optional]
+ **kyc_user_natural** | [**\MarketPay\Model\KycUserNaturalPut**](../Model/KycUserNaturalPut.md)| UserNatural Kyc detail params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\KycUserValidationLevelNaturalResponse**](../Model/KycUserValidationLevelNaturalResponse.md)
+[**\MarketPay\Model\KycUserValidationLevelNaturalResponse**](../Model/KycUserValidationLevelNaturalResponse.md)
 
 ### Authorization
 
@@ -1113,13 +1113,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, text/json, application/_*+json
+ - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutDocument**
-> \Swagger\Client\Model\KycFileUploadResponse kycPutDocument($document_type, $file, $user_id, $file_content_type)
+> \MarketPay\Model\KycFileUploadResponse kycPutDocument($document_type, $file, $user_id, $file_content_type)
 
 Adds files to a document.
 
@@ -1129,9 +1129,9 @@ Adds files to a document.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1162,7 +1162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
+[**\MarketPay\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
 
 ### Authorization
 
@@ -1176,7 +1176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutDocumentBoardMember**
-> \Swagger\Client\Model\KycFileUploadResponse kycPutDocumentBoardMember($board_member_id, $document_type, $file, $user_id, $file_content_type)
+> \MarketPay\Model\KycFileUploadResponse kycPutDocumentBoardMember($board_member_id, $document_type, $file, $user_id, $file_content_type)
 
 Uploads a new document. If the document already exists it will be replaced.
 
@@ -1186,9 +1186,9 @@ Uploads a new document. If the document already exists it will be replaced.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1221,7 +1221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
+[**\MarketPay\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
 
 ### Authorization
 
@@ -1235,7 +1235,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutDocumentShareholder**
-> \Swagger\Client\Model\KycFileUploadResponse kycPutDocumentShareholder($document_type, $file, $share_holder_id, $user_id, $file_content_type)
+> \MarketPay\Model\KycFileUploadResponse kycPutDocumentShareholder($document_type, $file, $share_holder_id, $user_id, $file_content_type)
 
 Adds files to a document.
 
@@ -1245,9 +1245,9 @@ Adds files to a document.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1280,7 +1280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
+[**\MarketPay\Model\KycFileUploadResponse**](../Model/KycFileUploadResponse.md)
 
 ### Authorization
 
@@ -1294,7 +1294,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutLegal**
-> \Swagger\Client\Model\KycUserValidationLevelLegalResponse kycPutLegal($user_id, $user_legal)
+> \MarketPay\Model\KycUserValidationLevelLegalResponse kycPutLegal($user_id, $user_legal)
 
 Update a Legal User
 
@@ -1306,16 +1306,16 @@ Note that the LegalRepresentativeBirthday field is a timestamp, but be careful t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = 789; // int | The Id of a user
-$user_legal = new \Swagger\Client\Model\KycUserLegalPut(); // \Swagger\Client\Model\KycUserLegalPut | UserLegal Object params
+$user_legal = new \MarketPay\Model\KycUserLegalPut(); // \MarketPay\Model\KycUserLegalPut | UserLegal Object params
 
 try {
     $result = $apiInstance->kycPutLegal($user_id, $user_legal);
@@ -1331,11 +1331,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The Id of a user |
- **user_legal** | [**\Swagger\Client\Model\KycUserLegalPut**](../Model/KycUserLegalPut.md)| UserLegal Object params | [optional]
+ **user_legal** | [**\MarketPay\Model\KycUserLegalPut**](../Model/KycUserLegalPut.md)| UserLegal Object params | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\KycUserValidationLevelLegalResponse**](../Model/KycUserValidationLevelLegalResponse.md)
+[**\MarketPay\Model\KycUserValidationLevelLegalResponse**](../Model/KycUserValidationLevelLegalResponse.md)
 
 ### Authorization
 
@@ -1343,13 +1343,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, text/json, application/_*+json
+ - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutLegalBoardMember**
-> \Swagger\Client\Model\KycBoardMemberResponse kycPutLegalBoardMember($board_member_id, $user_id, $board_member)
+> \MarketPay\Model\KycBoardMemberResponse kycPutLegalBoardMember($board_member_id, $user_id, $board_member)
 
 
 
@@ -1359,9 +1359,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1369,7 +1369,7 @@ $apiInstance = new Swagger\Client\Api\KycApi(
 );
 $board_member_id = 789; // int | 
 $user_id = "user_id_example"; // string | 
-$board_member = new \Swagger\Client\Model\KycUserValidationBoardMemberPut(); // \Swagger\Client\Model\KycUserValidationBoardMemberPut | 
+$board_member = new \MarketPay\Model\KycUserValidationBoardMemberPut(); // \MarketPay\Model\KycUserValidationBoardMemberPut | 
 
 try {
     $result = $apiInstance->kycPutLegalBoardMember($board_member_id, $user_id, $board_member);
@@ -1386,11 +1386,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **board_member_id** | **int**|  |
  **user_id** | **string**|  |
- **board_member** | [**\Swagger\Client\Model\KycUserValidationBoardMemberPut**](../Model/KycUserValidationBoardMemberPut.md)|  | [optional]
+ **board_member** | [**\MarketPay\Model\KycUserValidationBoardMemberPut**](../Model/KycUserValidationBoardMemberPut.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\KycBoardMemberResponse**](../Model/KycBoardMemberResponse.md)
+[**\MarketPay\Model\KycBoardMemberResponse**](../Model/KycBoardMemberResponse.md)
 
 ### Authorization
 
@@ -1398,13 +1398,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, text/json, application/_*+json
+ - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutLegalShareHolder**
-> \Swagger\Client\Model\KycUserValidationShareHolderListItemResponseNatural kycPutLegalShareHolder($user_id, $share_holder_id, $share_holder_natural)
+> \MarketPay\Model\KycUserValidationShareHolderListItemResponseNatural kycPutLegalShareHolder($user_id, $share_holder_id, $share_holder_natural)
 
 
 
@@ -1414,9 +1414,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1424,7 +1424,7 @@ $apiInstance = new Swagger\Client\Api\KycApi(
 );
 $user_id = 789; // int | 
 $share_holder_id = 789; // int | 
-$share_holder_natural = new \Swagger\Client\Model\KycUserValidationShareHolderNaturalPut(); // \Swagger\Client\Model\KycUserValidationShareHolderNaturalPut | 
+$share_holder_natural = new \MarketPay\Model\KycUserValidationShareHolderNaturalPut(); // \MarketPay\Model\KycUserValidationShareHolderNaturalPut | 
 
 try {
     $result = $apiInstance->kycPutLegalShareHolder($user_id, $share_holder_id, $share_holder_natural);
@@ -1441,11 +1441,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**|  |
  **share_holder_id** | **int**|  |
- **share_holder_natural** | [**\Swagger\Client\Model\KycUserValidationShareHolderNaturalPut**](../Model/KycUserValidationShareHolderNaturalPut.md)|  | [optional]
+ **share_holder_natural** | [**\MarketPay\Model\KycUserValidationShareHolderNaturalPut**](../Model/KycUserValidationShareHolderNaturalPut.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\KycUserValidationShareHolderListItemResponseNatural**](../Model/KycUserValidationShareHolderListItemResponseNatural.md)
+[**\MarketPay\Model\KycUserValidationShareHolderListItemResponseNatural**](../Model/KycUserValidationShareHolderListItemResponseNatural.md)
 
 ### Authorization
 
@@ -1453,13 +1453,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, text/json, application/_*+json
+ - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutRequest**
-> \Swagger\Client\Model\KycValidationRequestResponse kycPutRequest($user_id, $validation_request)
+> \MarketPay\Model\KycValidationRequestResponse kycPutRequest($user_id, $validation_request)
 
 
 
@@ -1469,16 +1469,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = 789; // int | 
-$validation_request = new \Swagger\Client\Model\KycIdentificationRequest(); // \Swagger\Client\Model\KycIdentificationRequest | 
+$validation_request = new \MarketPay\Model\KycIdentificationRequest(); // \MarketPay\Model\KycIdentificationRequest | 
 
 try {
     $result = $apiInstance->kycPutRequest($user_id, $validation_request);
@@ -1494,11 +1494,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**|  |
- **validation_request** | [**\Swagger\Client\Model\KycIdentificationRequest**](../Model/KycIdentificationRequest.md)|  | [optional]
+ **validation_request** | [**\MarketPay\Model\KycIdentificationRequest**](../Model/KycIdentificationRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\KycValidationRequestResponse**](../Model/KycValidationRequestResponse.md)
+[**\MarketPay\Model\KycValidationRequestResponse**](../Model/KycValidationRequestResponse.md)
 
 ### Authorization
 
@@ -1506,13 +1506,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, text/json, application/_*+json
+ - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutRequestLegal**
-> \Swagger\Client\Model\KycValidationRequestResponse kycPutRequestLegal($user_id, $validation_request)
+> \MarketPay\Model\KycValidationRequestResponse kycPutRequestLegal($user_id, $validation_request)
 
 
 
@@ -1522,16 +1522,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\KycApi(
+$apiInstance = new MarketPay\Api\KycApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = 789; // int | 
-$validation_request = new \Swagger\Client\Model\KycIdentificationRequest(); // \Swagger\Client\Model\KycIdentificationRequest | 
+$validation_request = new \MarketPay\Model\KycIdentificationRequest(); // \MarketPay\Model\KycIdentificationRequest | 
 
 try {
     $result = $apiInstance->kycPutRequestLegal($user_id, $validation_request);
@@ -1547,11 +1547,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**|  |
- **validation_request** | [**\Swagger\Client\Model\KycIdentificationRequest**](../Model/KycIdentificationRequest.md)|  | [optional]
+ **validation_request** | [**\MarketPay\Model\KycIdentificationRequest**](../Model/KycIdentificationRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\KycValidationRequestResponse**](../Model/KycValidationRequestResponse.md)
+[**\MarketPay\Model\KycValidationRequestResponse**](../Model/KycValidationRequestResponse.md)
 
 ### Authorization
 
@@ -1559,7 +1559,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, text/json, application/_*+json
+ - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

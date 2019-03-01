@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**shareholders** | [**\Swagger\Client\Model\KycShareHolderContainerDto[]**](KycShareHolderContainerDto.md) |  | [optional] 
-**board_members** | [**\Swagger\Client\Model\KycBoardMemberContainerDto[]**](KycBoardMemberContainerDto.md) |  | [optional] 
-**validations** | [**\Swagger\Client\Model\KycValidationPerLevelStatus[]**](KycValidationPerLevelStatus.md) |  | [optional] 
-**user_data** | [**\Swagger\Client\Model\KycLegalUserDataDto**](KycLegalUserDataDto.md) |  | [optional] 
+**shareholders** | [**\MarketPay\Model\KycShareHolderContainerDto[]**](KycShareHolderContainerDto.md) |  | [optional] 
+**board_members** | [**\MarketPay\Model\KycBoardMemberContainerDto[]**](KycBoardMemberContainerDto.md) |  | [optional] 
+**validations** | [**\MarketPay\Model\KycValidationPerLevelStatus[]**](KycValidationPerLevelStatus.md) |  | [optional] 
+**user_data** | [**\MarketPay\Model\KycLegalUserDataDto**](KycLegalUserDataDto.md) |  | [optional] 
 **kyc_level_override** | **string** |  | [optional] 
 **kyc_level_override_reason** | **string** |  | [optional] 
 

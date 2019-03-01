@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**debited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | 
-**fees** | [**\Swagger\Client\Model\Money**](Money.md) |  | 
+**debited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | 
+**fees** | [**\MarketPay\Model\Money**](Money.md) |  | 
 **card_id** | **string** |  | [optional] 
 **save_card** | **bool** |  | [optional] 
 **statement_descriptor** | **string** |  | 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **success_url** | **string** |  | [optional] 
 **cancel_url** | **string** |  | [optional] 
 **language** | **string** |  | [optional] 
-**customer** | [**\Swagger\Client\Model\CustomerDetail**](CustomerDetail.md) |  | 
+**customer** | [**\MarketPay\Model\CustomerDetail**](CustomerDetail.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

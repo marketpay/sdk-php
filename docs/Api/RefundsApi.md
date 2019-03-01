@@ -1,4 +1,4 @@
-# Swagger\Client\RefundsApi
+# MarketPay\RefundsApi
 
 All URIs are relative to *https://localhost*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **refundsRefundGet**
-> \Swagger\Client\Model\WebPayRefundResponse refundsRefundGet($refund_id)
+> \MarketPay\Model\WebPayRefundResponse refundsRefundGet($refund_id)
 
 
 
@@ -18,9 +18,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RefundsApi(
+$apiInstance = new MarketPay\Api\RefundsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\WebPayRefundResponse**](../Model/WebPayRefundResponse.md)
+[**\MarketPay\Model\WebPayRefundResponse**](../Model/WebPayRefundResponse.md)
 
 ### Authorization
 

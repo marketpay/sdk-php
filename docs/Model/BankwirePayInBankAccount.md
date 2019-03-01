@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **string** |  | [optional] 
-**owner_address** | [**\Swagger\Client\Model\Address**](Address.md) |  | [optional] 
+**owner_address** | [**\MarketPay\Model\Address**](Address.md) |  | [optional] 
 **owner_name** | **string** |  | [optional] 
 **iban** | **string** |  | [optional] 
 **bic** | **string** |  | [optional] 

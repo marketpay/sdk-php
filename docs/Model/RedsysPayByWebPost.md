@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **statement_descriptor** | **string** |  | [optional] 
 **success_url** | **string** |  | 
 **cancel_url** | **string** |  | 
-**debited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | 
-**fees** | [**\Swagger\Client\Model\Money**](Money.md) |  | 
+**debited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | 
+**fees** | [**\MarketPay\Model\Money**](Money.md) |  | 
 **language** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **url** | **string** |  | [optional] 
 **image_url** | **string** |  | [optional] 
 **quantity** | **int** |  | [optional] 
-**price** | **int** |  | [optional] 
+**price** | **int** |  | 
 **description** | **string** |  | [optional] 
 **tax_rate** | **int** |  | [optional] 
 

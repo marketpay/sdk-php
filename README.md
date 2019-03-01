@@ -20,7 +20,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com//.git"
+      "url": "https://github.com/marketpay/sdk-php.git"
     }
   ],
   "require": {
@@ -57,9 +57,9 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CardsApi(
+$apiInstance = new MarketPay\Api\CardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -136,6 +136,8 @@ Class | Method | HTTP request | Description
 *PayInsBankwireApi* | [**payInsBankwireBankwireGetPayment**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwiregetpayment) | **GET** /v2.1/PayInsBankwire/payments/{PayInId} | 
 *PayInsBankwireApi* | [**payInsBankwireBankwirePaymentByDirect**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepaymentbydirect) | **POST** /v2.1/PayInsBankwire/payments/direct | 
 *PayInsBankwireApi* | [**payInsBankwireBankwirePostRefund**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepostrefund) | **POST** /v2.1/PayInsBankwire/payments/{PayInId}/refunds | 
+*PayInsPluginApi* | [**payInsPluginPluginClientGetPayIn**](docs/Api/PayInsPluginApi.md#payinspluginpluginclientgetpayin) | **GET** /v2.1/PayInsPlugin/payments/{PayInId} | 
+*PayInsPluginApi* | [**payInsPluginPluginClientPayInPost**](docs/Api/PayInsPluginApi.md#payinspluginpluginclientpayinpost) | **POST** /v2.1/PayInsPlugin/payments | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysGetPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpayment) | **GET** /v2.1/PayInsRedsys/payments/{PayInId} | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysGetPreauthorization**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpreauthorization) | **GET** /v2.1/PayInsRedsys/preauthorizations/{PreauthorizationId} | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPaymentByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpaymentbyweb) | **POST** /v2.1/PayInsRedsys/payments/web | 
@@ -159,10 +161,9 @@ Class | Method | HTTP request | Description
 *PluginTransferClientApi* | [**pluginTransferClientPluginClientConfirmPayIn**](docs/Api/PluginTransferClientApi.md#plugintransferclientpluginclientconfirmpayin) | **POST** /v2.1/PayInsClient/payments/{IntentId}/confirm | 
 *PluginTransferClientApi* | [**pluginTransferClientPluginClientGetPayment**](docs/Api/PluginTransferClientApi.md#plugintransferclientpluginclientgetpayment) | **GET** /v2.1/PayInsClient/payments/{PayInId} | 
 *PluginTransferClientApi* | [**pluginTransferClientPluginClientPayInCreatePost**](docs/Api/PluginTransferClientApi.md#plugintransferclientpluginclientpayincreatepost) | **POST** /v2.1/PayInsClient/payments | 
+*PluginTransferPayOutClientApi* | [**pluginTransferPayOutClientPluginPayOutPost**](docs/Api/PluginTransferPayOutClientApi.md#plugintransferpayoutclientpluginpayoutpost) | **POST** /v2.1/PayOutsPlugin | 
+*PluginTransferPayOutClientApi* | [**pluginTransferPayOutClientPlugingGetPayOut**](docs/Api/PluginTransferPayOutClientApi.md#plugintransferpayoutclientpluginggetpayout) | **GET** /v2.1/PayOutsPlugin/{PayOutId} | 
 *RefundsApi* | [**refundsRefundGet**](docs/Api/RefundsApi.md#refundsrefundget) | **GET** /v2.1/Refunds/{RefundId} | 
-*ShipmentSeurApi* | [**shipmentSeurSeurCancelShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcancelshipment) | **POST** /v2.1/ShipmentSeur/shipments/{ShipmentId}/cancellation | 
-*ShipmentSeurApi* | [**shipmentSeurSeurCreateShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurcreateshipment) | **POST** /v2.1/ShipmentSeur/shipments | 
-*ShipmentSeurApi* | [**shipmentSeurSeurGetShipment**](docs/Api/ShipmentSeurApi.md#shipmentseurseurgetshipment) | **GET** /v2.1/ShipmentSeur/shipments/{ShipmentId} | 
 *TransactionsApi* | [**transactionsGetList**](docs/Api/TransactionsApi.md#transactionsgetlist) | **GET** /v2.1/Transactions | View a Transaction
 *TransfersApi* | [**transfersGet**](docs/Api/TransfersApi.md#transfersget) | **GET** /v2.1/Transfers/{TransferId} | 
 *TransfersApi* | [**transfersGetList**](docs/Api/TransfersApi.md#transfersgetlist) | **GET** /v2.1/Transfers | 
@@ -281,9 +282,10 @@ Class | Method | HTTP request | Description
  - [PaymentWebPayData](docs/Model/PaymentWebPayData.md)
  - [PluginPayInPost](docs/Model/PluginPayInPost.md)
  - [PluginPayInsResponse](docs/Model/PluginPayInsResponse.md)
+ - [PluginPayOutPost](docs/Model/PluginPayOutPost.md)
+ - [PluginPayOutResponse](docs/Model/PluginPayOutResponse.md)
  - [PreauthorizationAddonPaymentsData](docs/Model/PreauthorizationAddonPaymentsData.md)
  - [PreauthorizationRedsysData](docs/Model/PreauthorizationRedsysData.md)
- - [Product](docs/Model/Product.md)
  - [PropertyValidationCountry](docs/Model/PropertyValidationCountry.md)
  - [PropertyValidationDateNullable](docs/Model/PropertyValidationDateNullable.md)
  - [PropertyValidationDecimal](docs/Model/PropertyValidationDecimal.md)
@@ -313,16 +315,11 @@ Class | Method | HTTP request | Description
  - [ResponseListUserResponse](docs/Model/ResponseListUserResponse.md)
  - [ResponseListWalletClientInstrumentResponse](docs/Model/ResponseListWalletClientInstrumentResponse.md)
  - [ResponseListWalletResponse](docs/Model/ResponseListWalletResponse.md)
- - [SeurShipmentCancellationResponse](docs/Model/SeurShipmentCancellationResponse.md)
- - [SeurShipmentPost](docs/Model/SeurShipmentPost.md)
- - [SeurShipmentResponse](docs/Model/SeurShipmentResponse.md)
- - [ShipmentActor](docs/Model/ShipmentActor.md)
  - [StringSegment](docs/Model/StringSegment.md)
  - [TAddressValidationResult](docs/Model/TAddressValidationResult.md)
  - [TKycFileDetails](docs/Model/TKycFileDetails.md)
  - [TTelephoneValidationResult](docs/Model/TTelephoneValidationResult.md)
  - [Telephone](docs/Model/Telephone.md)
- - [TelephoneSeur](docs/Model/TelephoneSeur.md)
  - [TokenUniversalPayData](docs/Model/TokenUniversalPayData.md)
  - [TransactionResponse](docs/Model/TransactionResponse.md)
  - [TransferMethodsResponse](docs/Model/TransferMethodsResponse.md)
@@ -365,7 +362,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: https://identity-integration.marketpay.io:443/connect/authorize
+- **Authorization URL**: https://identity-sandbox.marketpay.io:443/connect/authorize
 - **Scopes**: 
  - **dashboard**: dashboard scope
 

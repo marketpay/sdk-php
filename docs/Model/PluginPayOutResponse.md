@@ -1,15 +1,10 @@
-# SeurShipmentResponse
+# PluginPayOutResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**locator_number** | **string** |  | [optional] 
-**quotation** | **int** |  | [optional] 
-**status** | **string** |  | [optional] 
-**status_pick_up** | **string** |  | [optional] 
-**status_pick_up_code** | **string** |  | [optional] 
-**status_delivery** | **string** |  | [optional] 
-**status_delivery_code** | **string** |  | [optional] 
+**debited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
+**debited_wallet_id** | **string** |  | [optional] 
 **id** | **string** | The item&#39;s ID | [optional] 
 **creation_date** | **int** | When the item was created | [optional] 
 **tag** | **string** | Custom data that you can add to this item | [optional] 

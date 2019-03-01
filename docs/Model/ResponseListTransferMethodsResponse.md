@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**values** | [**\Swagger\Client\Model\TransferMethodsResponse[]**](TransferMethodsResponse.md) |  | [optional] 
+**values** | [**\MarketPay\Model\TransferMethodsResponse[]**](TransferMethodsResponse.md) |  | [optional] 
 **total** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

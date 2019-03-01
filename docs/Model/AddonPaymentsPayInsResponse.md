@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**debited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
-**credited_funds** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
-**fees** | [**\Swagger\Client\Model\Money**](Money.md) |  | [optional] 
+**debited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
+**credited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
+**fees** | [**\MarketPay\Model\Money**](Money.md) |  | [optional] 
 **credited_wallet_id** | **string** |  | [optional] 
 **nature** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **author_id** | **string** |  | [optional] 
 **credited_user_id** | **string** |  | [optional] 
 **language** | **string** |  | [optional] 
-**provider** | [**\Swagger\Client\Model\PaymentAddonPaymentsData**](PaymentAddonPaymentsData.md) |  | [optional] 
+**provider** | [**\MarketPay\Model\PaymentAddonPaymentsData**](PaymentAddonPaymentsData.md) |  | [optional] 
 **id** | **string** | The item&#39;s ID | [optional] 
 **creation_date** | **int** | When the item was created | [optional] 
 **tag** | **string** | Custom data that you can add to this item | [optional] 
