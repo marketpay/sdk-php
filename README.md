@@ -193,6 +193,7 @@ Class | Method | HTTP request | Description
 *WalletsApi* | [**walletsGetTransactionList**](docs/Api/WalletsApi.md#walletsgettransactionlist) | **GET** /v2.1/Wallets/{WalletId}/transactions | 
 *WalletsApi* | [**walletsPost**](docs/Api/WalletsApi.md#walletspost) | **POST** /v2.1/Wallets | 
 *WalletsApi* | [**walletsPut**](docs/Api/WalletsApi.md#walletsput) | **PUT** /v2.1/Wallets/{WalletId} | 
+*WalletsApi* | [**walletsQueryBalancesByIds**](docs/Api/WalletsApi.md#walletsquerybalancesbyids) | **POST** /v2.1/Wallets/QueryBalancesByIds | 
 
 
 ## Documentation For Models
@@ -340,9 +341,11 @@ Class | Method | HTTP request | Description
  - [UserNaturalPut](docs/Model/UserNaturalPut.md)
  - [UserNaturalResponse](docs/Model/UserNaturalResponse.md)
  - [UserResponse](docs/Model/UserResponse.md)
+ - [WalletBalance](docs/Model/WalletBalance.md)
  - [WalletClientInstrumentResponse](docs/Model/WalletClientInstrumentResponse.md)
  - [WalletPost](docs/Model/WalletPost.md)
  - [WalletPut](docs/Model/WalletPut.md)
+ - [WalletQueryBalancesByIdsPost](docs/Model/WalletQueryBalancesByIdsPost.md)
  - [WalletResponse](docs/Model/WalletResponse.md)
  - [WebPayPayByWebPost](docs/Model/WebPayPayByWebPost.md)
  - [WebPayPayByWebResponse](docs/Model/WebPayPayByWebResponse.md)

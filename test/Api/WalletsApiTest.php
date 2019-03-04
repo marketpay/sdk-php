@@ -120,4 +120,14 @@ class WalletsApiTest extends \PHPUnit_Framework_TestCase
     public function testWalletsPut()
     {
     }
+
+    /**
+     * Test case for walletsQueryBalancesByIds
+     *
+     * .
+     *
+     */
+    public function testWalletsQueryBalancesByIds()
+    {
+    }
 }
