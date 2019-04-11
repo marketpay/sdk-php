@@ -1,6 +1,6 @@
 <?php
 /**
- * PayOutBankwirePost
+ * PayOutBankWirePost
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \MarketPay\ObjectSerializer;
 
 /**
- * PayOutBankwirePost Class Doc Comment
+ * PayOutBankWirePost Class Doc Comment
  *
  * @category Class
  * @package  MarketPay
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayOutBankwirePost implements ModelInterface, ArrayAccess
+class PayOutBankWirePost implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PayOutBankwirePost implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PayOutBankwirePost';
+    protected static $swaggerModelName = 'PayOutBankWirePost';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

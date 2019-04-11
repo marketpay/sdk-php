@@ -1,6 +1,6 @@
 <?php
 /**
- * PayOutBankwireResponseTest
+ * PayOutBankWireResponseTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace MarketPay;
 
 /**
- * PayOutBankwireResponseTest Class Doc Comment
+ * PayOutBankWireResponseTest Class Doc Comment
  *
  * @category    Class
- * @description PayOutBankwireResponse
+ * @description PayOutBankWireResponse
  * @package     MarketPay
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PayOutBankwireResponseTest extends \PHPUnit_Framework_TestCase
+class PayOutBankWireResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class PayOutBankwireResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PayOutBankwireResponse"
+     * Test "PayOutBankWireResponse"
      */
-    public function testPayOutBankwireResponse()
+    public function testPayOutBankWireResponse()
     {
     }
 

@@ -92,9 +92,9 @@ class PayOutsBankwireApi
      *
      * @param  int $pay_out_id pay_out_id (required)
      *
+     * @return \MarketPay\Model\PayOutBankWireResponse
+     *@throws \InvalidArgumentException
      * @throws \MarketPay\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \MarketPay\Model\PayOutBankwireResponse
      */
     public function payOutsBankwireGet($pay_out_id)
     {
@@ -109,11 +109,11 @@ class PayOutsBankwireApi
      *
      * @throws \MarketPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \MarketPay\Model\PayOutBankwireResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MarketPay\Model\PayOutBankWireResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payOutsBankwireGetWithHttpInfo($pay_out_id)
     {
-        $returnType = '\MarketPay\Model\PayOutBankwireResponse';
+        $returnType = '\MarketPay\Model\PayOutBankWireResponse';
         $request = $this->payOutsBankwireGetRequest($pay_out_id);
 
         try {
@@ -165,7 +165,7 @@ class PayOutsBankwireApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MarketPay\Model\PayOutBankwireResponse',
+                        '\MarketPay\Model\PayOutBankWireResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class PayOutsBankwireApi
      */
     public function payOutsBankwireGetAsyncWithHttpInfo($pay_out_id)
     {
-        $returnType = '\MarketPay\Model\PayOutBankwireResponse';
+        $returnType = '\MarketPay\Model\PayOutBankWireResponse';
         $request = $this->payOutsBankwireGetRequest($pay_out_id);
 
         return $this->client
@@ -360,11 +360,11 @@ class PayOutsBankwireApi
     /**
      * Operation payOutsBankwirePost
      *
-     * @param  \MarketPay\Model\PayOutBankwirePost $bankwire_pay_out bankwire_pay_out (optional)
+     * @param  \MarketPay\Model\PayOutBankWirePost $bankwire_pay_out bankwire_pay_out (optional)
      *
+     * @return \MarketPay\Model\PayOutBankWireResponse
+     *@throws \InvalidArgumentException
      * @throws \MarketPay\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \MarketPay\Model\PayOutBankwireResponse
      */
     public function payOutsBankwirePost($bankwire_pay_out = null)
     {
@@ -375,15 +375,15 @@ class PayOutsBankwireApi
     /**
      * Operation payOutsBankwirePostWithHttpInfo
      *
-     * @param  \MarketPay\Model\PayOutBankwirePost $bankwire_pay_out (optional)
+     * @param  \MarketPay\Model\PayOutBankWirePost $bankwire_pay_out (optional)
      *
+     * @return array of \MarketPay\Model\PayOutBankWireResponse, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
      * @throws \MarketPay\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \MarketPay\Model\PayOutBankwireResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function payOutsBankwirePostWithHttpInfo($bankwire_pay_out = null)
     {
-        $returnType = '\MarketPay\Model\PayOutBankwireResponse';
+        $returnType = '\MarketPay\Model\PayOutBankWireResponse';
         $request = $this->payOutsBankwirePostRequest($bankwire_pay_out);
 
         try {
@@ -435,7 +435,7 @@ class PayOutsBankwireApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MarketPay\Model\PayOutBankwireResponse',
+                        '\MarketPay\Model\PayOutBankWireResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -458,10 +458,10 @@ class PayOutsBankwireApi
      *
      * 
      *
-     * @param  \MarketPay\Model\PayOutBankwirePost $bankwire_pay_out (optional)
+     * @param  \MarketPay\Model\PayOutBankWirePost $bankwire_pay_out (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function payOutsBankwirePostAsync($bankwire_pay_out = null)
     {
@@ -478,14 +478,14 @@ class PayOutsBankwireApi
      *
      * 
      *
-     * @param  \MarketPay\Model\PayOutBankwirePost $bankwire_pay_out (optional)
+     * @param  \MarketPay\Model\PayOutBankWirePost $bankwire_pay_out (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function payOutsBankwirePostAsyncWithHttpInfo($bankwire_pay_out = null)
     {
-        $returnType = '\MarketPay\Model\PayOutBankwireResponse';
+        $returnType = '\MarketPay\Model\PayOutBankWireResponse';
         $request = $this->payOutsBankwirePostRequest($bankwire_pay_out);
 
         return $this->client
@@ -528,10 +528,10 @@ class PayOutsBankwireApi
     /**
      * Create request for operation 'payOutsBankwirePost'
      *
-     * @param  \MarketPay\Model\PayOutBankwirePost $bankwire_pay_out (optional)
+     * @param  \MarketPay\Model\PayOutBankWirePost $bankwire_pay_out (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function payOutsBankwirePostRequest($bankwire_pay_out = null)
     {

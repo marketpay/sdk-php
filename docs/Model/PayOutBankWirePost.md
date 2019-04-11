@@ -1,4 +1,4 @@
-# PayOutBankwirePost
+# PayOutBankWirePost
 
 ## Properties
 Name | Type | Description | Notes
