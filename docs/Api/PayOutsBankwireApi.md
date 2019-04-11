@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **payOutsBankwireGet**
-> \MarketPay\Model\PayOutBankwireResponse payOutsBankwireGet($pay_out_id)
+> \MarketPay\Model\PayOutBankWireResponse payOutsBankwireGet($pay_out_id)
 
 
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\PayOutBankwireResponse**](../Model/PayOutBankwireResponse.md)
+[**\MarketPay\Model\PayOutBankWireResponse**](../Model/PayOutBankWireResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payOutsBankwirePost**
-> \MarketPay\Model\PayOutBankwireResponse payOutsBankwirePost($bankwire_pay_out)
+> \MarketPay\Model\PayOutBankWireResponse payOutsBankwirePost($bankwire_pay_out)
 
 
 
@@ -78,7 +78,7 @@ $apiInstance = new MarketPay\Api\PayOutsBankwireApi(
     new GuzzleHttp\Client(),
     $config
 );
-$bankwire_pay_out = new \MarketPay\Model\PayOutBankwirePost(); // \MarketPay\Model\PayOutBankwirePost | 
+$bankwire_pay_out = new \MarketPay\Model\PayOutBankWirePost(); // \MarketPay\Model\PayOutBankWirePost | 
 
 try {
     $result = $apiInstance->payOutsBankwirePost($bankwire_pay_out);
@@ -93,11 +93,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bankwire_pay_out** | [**\MarketPay\Model\PayOutBankwirePost**](../Model/PayOutBankwirePost.md)|  | [optional]
+ **bankwire_pay_out** | [**\MarketPay\Model\PayOutBankWirePost**](../Model/PayOutBankWirePost.md)|  | [optional]
 
 ### Return type
 
-[**\MarketPay\Model\PayOutBankwireResponse**](../Model/PayOutBankwireResponse.md)
+[**\MarketPay\Model\PayOutBankWireResponse**](../Model/PayOutBankWireResponse.md)
 
 ### Authorization
 
