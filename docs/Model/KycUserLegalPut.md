@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **contact_last_name** | **string** |  | [optional] 
 **fiscal_id** | **string** |  | [optional] 
 **country** | **string** |  | [optional] 
-**fiscal_address** | [**\MarketPay\Model\Address**](Address.md) | he address of the company’s headquarters | [optional] 
+**fiscal_address** | [**\MarketPay\Model\Address**](Address.md) |  | [optional] 
 **legal_person_type** | **string** | The type of legal user | [optional] 
 **email** | **string** |  | [optional] 
 **tag** | **string** | Custom data that you can add to this item | [optional] 

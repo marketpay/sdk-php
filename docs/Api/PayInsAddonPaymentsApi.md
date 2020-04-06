@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -112,12 +112,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostPaymentByWeb**
-> \MarketPay\Model\AddonPaymentsPayByWebResponse payInsAddonPaymentsAddonPaymentsPostPaymentByWeb($x_webhook, $addon_payments_pay_in)
+> \MarketPay\Model\AddonPaymentsPayByWebResponse payInsAddonPaymentsAddonPaymentsPostPaymentByWeb($x_webhook, $body)
 
 
 
@@ -136,10 +136,10 @@ $apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
     $config
 );
 $x_webhook = "x_webhook_example"; // string | 
-$addon_payments_pay_in = new \MarketPay\Model\AddonPaymentsPayByWebPost(); // \MarketPay\Model\AddonPaymentsPayByWebPost | 
+$body = new \MarketPay\Model\AddonPaymentsPayByWebPost(); // \MarketPay\Model\AddonPaymentsPayByWebPost | 
 
 try {
-    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPaymentByWeb($x_webhook, $addon_payments_pay_in);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPaymentByWeb($x_webhook, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostPaymentByWeb: ', $e->getMessage(), PHP_EOL;
@@ -152,7 +152,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_webhook** | **string**|  | [optional]
- **addon_payments_pay_in** | [**\MarketPay\Model\AddonPaymentsPayByWebPost**](../Model/AddonPaymentsPayByWebPost.md)|  | [optional]
+ **body** | [**\MarketPay\Model\AddonPaymentsPayByWebPost**](../Model/AddonPaymentsPayByWebPost.md)|  | [optional]
 
 ### Return type
 
@@ -164,13 +164,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostPaymentDirect**
-> \MarketPay\Model\AddonPaymentsPayDirectResponse payInsAddonPaymentsAddonPaymentsPostPaymentDirect($addon_payments_pay_in)
+> \MarketPay\Model\AddonPaymentsPayDirectResponse payInsAddonPaymentsAddonPaymentsPostPaymentDirect($body)
 
 
 
@@ -188,10 +188,10 @@ $apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$addon_payments_pay_in = new \MarketPay\Model\AddonPaymentsPayDirectPost(); // \MarketPay\Model\AddonPaymentsPayDirectPost | 
+$body = new \MarketPay\Model\AddonPaymentsPayDirectPost(); // \MarketPay\Model\AddonPaymentsPayDirectPost | 
 
 try {
-    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPaymentDirect($addon_payments_pay_in);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPaymentDirect($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostPaymentDirect: ', $e->getMessage(), PHP_EOL;
@@ -203,7 +203,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addon_payments_pay_in** | [**\MarketPay\Model\AddonPaymentsPayDirectPost**](../Model/AddonPaymentsPayDirectPost.md)|  | [optional]
+ **body** | [**\MarketPay\Model\AddonPaymentsPayDirectPost**](../Model/AddonPaymentsPayDirectPost.md)|  | [optional]
 
 ### Return type
 
@@ -215,13 +215,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb**
-> \MarketPay\Model\AddonPaymentsPreauthorizeByWebResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb($addon_payments_preauthorization)
+> \MarketPay\Model\AddonPaymentsPreauthorizeByWebResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb($body)
 
 
 
@@ -239,10 +239,10 @@ $apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$addon_payments_preauthorization = new \MarketPay\Model\AddonPaymentsPreauthorizeByWebPost(); // \MarketPay\Model\AddonPaymentsPreauthorizeByWebPost | 
+$body = new \MarketPay\Model\AddonPaymentsPreauthorizeByWebPost(); // \MarketPay\Model\AddonPaymentsPreauthorizeByWebPost | 
 
 try {
-    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb($addon_payments_preauthorization);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addon_payments_preauthorization** | [**\MarketPay\Model\AddonPaymentsPreauthorizeByWebPost**](../Model/AddonPaymentsPreauthorizeByWebPost.md)|  | [optional]
+ **body** | [**\MarketPay\Model\AddonPaymentsPreauthorizeByWebPost**](../Model/AddonPaymentsPreauthorizeByWebPost.md)|  | [optional]
 
 ### Return type
 
@@ -266,13 +266,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation**
-> \MarketPay\Model\AddonPaymentsPreauthorizationCancellationResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation($preauthorization_id, $addon_payments_preauthorization_cancellation)
+> \MarketPay\Model\AddonPaymentsPreauthorizationCancellationResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation($preauthorization_id, $body)
 
 
 
@@ -291,10 +291,10 @@ $apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
     $config
 );
 $preauthorization_id = 789; // int | 
-$addon_payments_preauthorization_cancellation = new \MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost(); // \MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost | 
+$body = new \MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost(); // \MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost | 
 
 try {
-    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation($preauthorization_id, $addon_payments_preauthorization_cancellation);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation($preauthorization_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation: ', $e->getMessage(), PHP_EOL;
@@ -307,7 +307,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **preauthorization_id** | **int**|  |
- **addon_payments_preauthorization_cancellation** | [**\MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost**](../Model/AddonPaymentsPreauthorizationCancellationPost.md)|  | [optional]
+ **body** | [**\MarketPay\Model\AddonPaymentsPreauthorizationCancellationPost**](../Model/AddonPaymentsPreauthorizationCancellationPost.md)|  | [optional]
 
 ### Return type
 
@@ -319,13 +319,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation**
-> \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation($preauthorization_id, $addon_payments_preauthorization_confirmation)
+> \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationResponse payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation($preauthorization_id, $body)
 
 
 
@@ -344,10 +344,10 @@ $apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
     $config
 );
 $preauthorization_id = 789; // int | 
-$addon_payments_preauthorization_confirmation = new \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost(); // \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost | 
+$body = new \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost(); // \MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost | 
 
 try {
-    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation($preauthorization_id, $addon_payments_preauthorization_confirmation);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation($preauthorization_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation: ', $e->getMessage(), PHP_EOL;
@@ -360,7 +360,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **preauthorization_id** | **int**|  |
- **addon_payments_preauthorization_confirmation** | [**\MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost**](../Model/AddonPaymentsPreauthorizationConfirmationPost.md)|  | [optional]
+ **body** | [**\MarketPay\Model\AddonPaymentsPreauthorizationConfirmationPost**](../Model/AddonPaymentsPreauthorizationConfirmationPost.md)|  | [optional]
 
 ### Return type
 
@@ -372,13 +372,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAddonPaymentsAddonPaymentsPostRefund**
-> \MarketPay\Model\AddonPaymentsRefundResponse payInsAddonPaymentsAddonPaymentsPostRefund($pay_in_id, $addon_payments_refund)
+> \MarketPay\Model\AddonPaymentsRefundResponse payInsAddonPaymentsAddonPaymentsPostRefund($pay_in_id, $body)
 
 
 
@@ -397,10 +397,10 @@ $apiInstance = new MarketPay\Api\PayInsAddonPaymentsApi(
     $config
 );
 $pay_in_id = 789; // int | 
-$addon_payments_refund = new \MarketPay\Model\AddonPaymentsRefundPost(); // \MarketPay\Model\AddonPaymentsRefundPost | 
+$body = new \MarketPay\Model\AddonPaymentsRefundPost(); // \MarketPay\Model\AddonPaymentsRefundPost | 
 
 try {
-    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostRefund($pay_in_id, $addon_payments_refund);
+    $result = $apiInstance->payInsAddonPaymentsAddonPaymentsPostRefund($pay_in_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAddonPaymentsApi->payInsAddonPaymentsAddonPaymentsPostRefund: ', $e->getMessage(), PHP_EOL;
@@ -413,7 +413,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **int**|  |
- **addon_payments_refund** | [**\MarketPay\Model\AddonPaymentsRefundPost**](../Model/AddonPaymentsRefundPost.md)|  | [optional]
+ **body** | [**\MarketPay\Model\AddonPaymentsRefundPost**](../Model/AddonPaymentsRefundPost.md)|  | [optional]
 
 ### Return type
 
@@ -425,8 +425,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

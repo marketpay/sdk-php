@@ -4,17 +4,15 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cardsGet**](CardsApi.md#cardsGet) | **GET** /v2.1/Cards/{CardId} | View a Card
+[**cardsGet**](CardsApi.md#cardsGet) | **GET** /v2.1/Cards/{CardId} | 
 [**cardsGetList**](CardsApi.md#cardsGetList) | **GET** /v2.1/Cards | 
-[**cardsPut**](CardsApi.md#cardsPut) | **PUT** /v2.1/Cards/{CardId} | Deactivate a Card
+[**cardsPut**](CardsApi.md#cardsPut) | **PUT** /v2.1/Cards/{CardId} | 
 
 
 # **cardsGet**
 > \MarketPay\Model\CardResponse cardsGet($card_id)
 
-View a Card
 
-In order to save cards, the next methods are currently available:              - Redsys Payment: Set the value of the SaveCard to true.              - Redsys Preauthorization: Set the value of the SaveCard to true.              In order to use previously saved cards, the next methods are currently available:              - Redsys Payment: Set the value of CardId. The card must belong to the user that owns the wallet where the payment will be credited.              - Redsys Preauthorization: Set the value of CardId. The card must belong to the user that owns the wallet where the payment will be credited once the preauthorization is confirmed.
 
 ### Example
 ```php
@@ -30,7 +28,7 @@ $apiInstance = new MarketPay\Api\CardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$card_id = 789; // int | The Id of a card
+$card_id = 789; // int | 
 
 try {
     $result = $apiInstance->cardsGet($card_id);
@@ -45,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **card_id** | **int**| The Id of a card |
+ **card_id** | **int**|  |
 
 ### Return type
 
@@ -58,12 +56,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cardsGetList**
-> \MarketPay\Model\ResponseListCardResponse cardsGetList($page, $per_page)
+> \MarketPay\Model\CardResponseResponseList cardsGetList($page, $per_page)
 
 
 
@@ -102,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\ResponseListCardResponse**](../Model/ResponseListCardResponse.md)
+[**\MarketPay\Model\CardResponseResponseList**](../Model/CardResponseResponseList.md)
 
 ### Authorization
 
@@ -111,16 +109,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cardsPut**
-> \MarketPay\Model\CardResponse cardsPut($card_id, $card)
+> \MarketPay\Model\CardResponse cardsPut($card_id, $body)
 
-Deactivate a Card
 
-Note that once deactivated, a card can't be reactivated afterwards
 
 ### Example
 ```php
@@ -136,11 +132,11 @@ $apiInstance = new MarketPay\Api\CardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$card_id = 789; // int | The Id of a card
-$card = new \MarketPay\Model\CardPut(); // \MarketPay\Model\CardPut | Card Object params
+$card_id = 789; // int | 
+$body = new \MarketPay\Model\CardPut(); // \MarketPay\Model\CardPut | 
 
 try {
-    $result = $apiInstance->cardsPut($card_id, $card);
+    $result = $apiInstance->cardsPut($card_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CardsApi->cardsPut: ', $e->getMessage(), PHP_EOL;
@@ -152,8 +148,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **card_id** | **int**| The Id of a card |
- **card** | [**\MarketPay\Model\CardPut**](../Model/CardPut.md)| Card Object params | [optional]
+ **card_id** | **int**|  |
+ **body** | [**\MarketPay\Model\CardPut**](../Model/CardPut.md)|  | [optional]
 
 ### Return type
 
@@ -165,8 +161,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

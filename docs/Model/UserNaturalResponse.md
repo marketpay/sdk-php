@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**\MarketPay\Model\Address**](Address.md) | The address | [optional] 
+**address** | [**\MarketPay\Model\Address**](Address.md) |  | [optional] 
 **birthday** | **int** | The date of birth of the user - be careful to set the right timezone (should be UTC) to avoid 00h becoming 23h (and hence interpreted as the day before) | [optional] 
 **nationality** | **string** | The user’s nationality. ISO 3166-1 alpha-2 format is expected | [optional] 
 **country_of_residence** | **string** | The user’s country of residence. ISO 3166-1 alpha-2 format is expected | [optional] 
 **occupation** | **string** | User’s occupation, ie. Work | [optional] 
-**income_range** | **int** | Could be only one of these values: 1 - for incomes &amp;lt;18K€),2 - for incomes between 18 and 30K€, 3 - for incomes between 30 and 50K€, 4 - for incomes between 50 and 80K€, 5 - for incomes between 80 and 120K€, 6 - for incomes &amp;gt;120K€ | [optional] 
+**income_range** | **int** | Could be only one of these values: 1 - for incomes &lt;18K€),2 - for incomes between 18 and 30K€, 3 - for incomes between 30 and 50K€, 4 - for incomes between 50 and 80K€, 5 - for incomes between 80 and 120K€, 6 - for incomes &gt;120K€ | [optional] 
 **proof_of_identity** | **string** | Proof of identity. | [optional] 
 **proof_of_address** | **string** | Proof of address. | [optional] 
 **person_type** | **string** | Type of user | [optional] 

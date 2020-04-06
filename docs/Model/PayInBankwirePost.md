@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tag** | **string** |  | [optional] 
-**credited_wallet_id** | **string** |  | 
+**tag** | **string** | Custom data that you can add to this item | [optional] 
+**credited_wallet_id** | **string** | The ID of the wallet where money will be credited | 
 **debited_funds** | [**\MarketPay\Model\Money**](Money.md) |  | 
 **fees** | [**\MarketPay\Model\Money**](Money.md) |  | 
 

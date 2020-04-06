@@ -59,12 +59,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsGetList**
-> \MarketPay\Model\ResponseListWalletResponse walletsGetList($page, $per_page)
+> \MarketPay\Model\WalletResponseResponseList walletsGetList($page, $per_page)
 
 
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\ResponseListWalletResponse**](../Model/ResponseListWalletResponse.md)
+[**\MarketPay\Model\WalletResponseResponseList**](../Model/WalletResponseResponseList.md)
 
 ### Authorization
 
@@ -112,12 +112,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsGetTransactionList**
-> \MarketPay\Model\TransactionResponse[] walletsGetTransactionList($wallet_id, $page, $per_page)
+> \MarketPay\Model\TransactionResponse[] walletsGetTransactionList($wallet_id, $page, $per_page, $before_date, $after_date, $sort)
 
 
 
@@ -138,9 +138,12 @@ $apiInstance = new MarketPay\Api\WalletsApi(
 $wallet_id = 789; // int | 
 $page = 56; // int | 
 $per_page = 56; // int | 
+$before_date = 789; // int | 
+$after_date = 789; // int | 
+$sort = "sort_example"; // string | 
 
 try {
-    $result = $apiInstance->walletsGetTransactionList($wallet_id, $page, $per_page);
+    $result = $apiInstance->walletsGetTransactionList($wallet_id, $page, $per_page, $before_date, $after_date, $sort);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletsApi->walletsGetTransactionList: ', $e->getMessage(), PHP_EOL;
@@ -155,6 +158,9 @@ Name | Type | Description  | Notes
  **wallet_id** | **int**|  |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
+ **before_date** | **int**|  | [optional]
+ **after_date** | **int**|  | [optional]
+ **sort** | **string**|  | [optional]
 
 ### Return type
 
@@ -167,12 +173,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsPost**
-> \MarketPay\Model\WalletResponse walletsPost($wallet)
+> \MarketPay\Model\WalletResponse walletsPost($body)
 
 
 
@@ -190,10 +196,10 @@ $apiInstance = new MarketPay\Api\WalletsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$wallet = new \MarketPay\Model\WalletPost(); // \MarketPay\Model\WalletPost | 
+$body = new \MarketPay\Model\WalletPost(); // \MarketPay\Model\WalletPost | 
 
 try {
-    $result = $apiInstance->walletsPost($wallet);
+    $result = $apiInstance->walletsPost($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletsApi->walletsPost: ', $e->getMessage(), PHP_EOL;
@@ -205,7 +211,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wallet** | [**\MarketPay\Model\WalletPost**](../Model/WalletPost.md)|  | [optional]
+ **body** | [**\MarketPay\Model\WalletPost**](../Model/WalletPost.md)|  | [optional]
 
 ### Return type
 
@@ -217,13 +223,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsPut**
-> \MarketPay\Model\WalletResponse walletsPut($wallet_id, $wallet)
+> \MarketPay\Model\WalletResponse walletsPut($wallet_id, $body)
 
 
 
@@ -242,10 +248,10 @@ $apiInstance = new MarketPay\Api\WalletsApi(
     $config
 );
 $wallet_id = 789; // int | 
-$wallet = new \MarketPay\Model\WalletPut(); // \MarketPay\Model\WalletPut | 
+$body = new \MarketPay\Model\WalletPut(); // \MarketPay\Model\WalletPut | 
 
 try {
-    $result = $apiInstance->walletsPut($wallet_id, $wallet);
+    $result = $apiInstance->walletsPut($wallet_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletsApi->walletsPut: ', $e->getMessage(), PHP_EOL;
@@ -258,7 +264,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **wallet_id** | **int**|  |
- **wallet** | [**\MarketPay\Model\WalletPut**](../Model/WalletPut.md)|  | [optional]
+ **body** | [**\MarketPay\Model\WalletPut**](../Model/WalletPut.md)|  | [optional]
 
 ### Return type
 
@@ -270,13 +276,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **walletsQueryBalancesByIds**
-> \MarketPay\Model\WalletBalance[] walletsQueryBalancesByIds($query_post)
+> \MarketPay\Model\WalletBalance[] walletsQueryBalancesByIds($body)
 
 
 
@@ -294,10 +300,10 @@ $apiInstance = new MarketPay\Api\WalletsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$query_post = new \MarketPay\Model\WalletQueryBalancesByIdsPost(); // \MarketPay\Model\WalletQueryBalancesByIdsPost | 
+$body = new \MarketPay\Model\WalletQueryBalancesByIdsPost(); // \MarketPay\Model\WalletQueryBalancesByIdsPost | 
 
 try {
-    $result = $apiInstance->walletsQueryBalancesByIds($query_post);
+    $result = $apiInstance->walletsQueryBalancesByIds($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletsApi->walletsQueryBalancesByIds: ', $e->getMessage(), PHP_EOL;
@@ -309,7 +315,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query_post** | [**\MarketPay\Model\WalletQueryBalancesByIdsPost**](../Model/WalletQueryBalancesByIdsPost.md)|  | [optional]
+ **body** | [**\MarketPay\Model\WalletQueryBalancesByIdsPost**](../Model/WalletQueryBalancesByIdsPost.md)|  | [optional]
 
 ### Return type
 
@@ -321,8 +327,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

@@ -56,12 +56,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAplazameAplazamePostPaymentByWeb**
-> \MarketPay\Model\AplazamePayByWebResponse payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in)
+> \MarketPay\Model\AplazamePayByWebResponse payInsAplazameAplazamePostPaymentByWeb($body)
 
 
 
@@ -79,10 +79,10 @@ $apiInstance = new MarketPay\Api\PayInsAplazameApi(
     new GuzzleHttp\Client(),
     $config
 );
-$aplazame_pay_in = new \MarketPay\Model\AplazamePayByWebPost(); // \MarketPay\Model\AplazamePayByWebPost | 
+$body = new \MarketPay\Model\AplazamePayByWebPost(); // \MarketPay\Model\AplazamePayByWebPost | 
 
 try {
-    $result = $apiInstance->payInsAplazameAplazamePostPaymentByWeb($aplazame_pay_in);
+    $result = $apiInstance->payInsAplazameAplazamePostPaymentByWeb($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAplazameApi->payInsAplazameAplazamePostPaymentByWeb: ', $e->getMessage(), PHP_EOL;
@@ -94,7 +94,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **aplazame_pay_in** | [**\MarketPay\Model\AplazamePayByWebPost**](../Model/AplazamePayByWebPost.md)|  | [optional]
+ **body** | [**\MarketPay\Model\AplazamePayByWebPost**](../Model/AplazamePayByWebPost.md)|  | [optional]
 
 ### Return type
 
@@ -106,13 +106,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsAplazameRefund**
-> \MarketPay\Model\AplazameRefundResponse payInsAplazameRefund($pay_in_id, $aplazame_refund)
+> \MarketPay\Model\AplazameRefundResponse payInsAplazameRefund($pay_in_id, $body)
 
 
 
@@ -131,10 +131,10 @@ $apiInstance = new MarketPay\Api\PayInsAplazameApi(
     $config
 );
 $pay_in_id = "pay_in_id_example"; // string | 
-$aplazame_refund = new \MarketPay\Model\AplazameRefundPaymentPost(); // \MarketPay\Model\AplazameRefundPaymentPost | 
+$body = new \MarketPay\Model\AplazameRefundPaymentPost(); // \MarketPay\Model\AplazameRefundPaymentPost | 
 
 try {
-    $result = $apiInstance->payInsAplazameRefund($pay_in_id, $aplazame_refund);
+    $result = $apiInstance->payInsAplazameRefund($pay_in_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsAplazameApi->payInsAplazameRefund: ', $e->getMessage(), PHP_EOL;
@@ -147,7 +147,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **string**|  |
- **aplazame_refund** | [**\MarketPay\Model\AplazameRefundPaymentPost**](../Model/AplazameRefundPaymentPost.md)|  | [optional]
+ **body** | [**\MarketPay\Model\AplazameRefundPaymentPost**](../Model/AplazameRefundPaymentPost.md)|  | [optional]
 
 ### Return type
 
@@ -159,8 +159,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

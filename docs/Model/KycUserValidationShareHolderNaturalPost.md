@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **nationality** | **string** | The user’s nationality. ISO 3166-1 alpha-2 format is expected | [optional] 
 **country_of_residence** | **string** | The user’s country of residence. ISO 3166-1 alpha-2 format is expected | [optional] 
 **telephone** | [**\MarketPay\Model\Telephone**](Telephone.md) |  | [optional] 
-**address** | [**\MarketPay\Model\Address**](Address.md) | The address | [optional] 
+**address** | [**\MarketPay\Model\Address**](Address.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

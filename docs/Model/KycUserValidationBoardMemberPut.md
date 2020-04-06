@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **id_card** | **string** |  | [optional] 
 **occupation** | **string** |  | [optional] 
 **id_card_document** | [**\MarketPay\Model\KycDocumentDetails**](KycDocumentDetails.md) |  | [optional] 
-**address** | [**\MarketPay\Model\Address**](Address.md) | The address | [optional] 
+**address** | [**\MarketPay\Model\Address**](Address.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

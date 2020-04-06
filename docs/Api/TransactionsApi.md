@@ -4,15 +4,13 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**transactionsGetList**](TransactionsApi.md#transactionsGetList) | **GET** /v2.1/Transactions | View a Transaction
+[**transactionsGetList**](TransactionsApi.md#transactionsGetList) | **GET** /v2.1/Transactions | 
 
 
 # **transactionsGetList**
-> \MarketPay\Model\ResponseListTransactionResponse transactionsGetList($page, $per_page, $before_date, $after_date, $sort)
+> \MarketPay\Model\TransactionResponseResponseList transactionsGetList($page, $per_page, $before_date, $after_date, $sort)
 
-View a Transaction
 
-A Transaction is any movement of money
 
 ### Example
 ```php
@@ -55,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\ResponseListTransactionResponse**](../Model/ResponseListTransactionResponse.md)
+[**\MarketPay\Model\TransactionResponseResponseList**](../Model/TransactionResponseResponseList.md)
 
 ### Authorization
 
@@ -64,7 +62,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;odata.metadata=minimal;odata.streaming=true, application/json;odata.metadata=minimal;odata.streaming=false, application/json;odata.metadata=minimal, application/json;odata.metadata=full;odata.streaming=true, application/json;odata.metadata=full;odata.streaming=false, application/json;odata.metadata=full, application/json;odata.metadata=none;odata.streaming=true, application/json;odata.metadata=none;odata.streaming=false, application/json;odata.metadata=none, application/json;odata.streaming=true, application/json;odata.streaming=false, application/json, application/xml, application/prs.odatatestxx-odata, text/plain, text/json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

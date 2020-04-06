@@ -65,7 +65,7 @@ $apiInstance = new MarketPay\Api\CardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$card_id = 789; // int | The Id of a card
+$card_id = 789; // int | 
 
 try {
     $result = $apiInstance->cardsGet($card_id);
@@ -83,10 +83,10 @@ All URIs are relative to *https://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CardsApi* | [**cardsGet**](docs/Api/CardsApi.md#cardsget) | **GET** /v2.1/Cards/{CardId} | View a Card
+*CardsApi* | [**cardsGet**](docs/Api/CardsApi.md#cardsget) | **GET** /v2.1/Cards/{CardId} | 
 *CardsApi* | [**cardsGetList**](docs/Api/CardsApi.md#cardsgetlist) | **GET** /v2.1/Cards | 
-*CardsApi* | [**cardsPut**](docs/Api/CardsApi.md#cardsput) | **PUT** /v2.1/Cards/{CardId} | Deactivate a Card
-*EventsApi* | [**eventsGet**](docs/Api/EventsApi.md#eventsget) | **GET** /v2.1/Events | Values List
+*CardsApi* | [**cardsPut**](docs/Api/CardsApi.md#cardsput) | **PUT** /v2.1/Cards/{CardId} | 
+*EventsApi* | [**eventsGet**](docs/Api/EventsApi.md#eventsget) | **GET** /v2.1/Events | 
 *HooksApi* | [**hooksGet**](docs/Api/HooksApi.md#hooksget) | **GET** /v2.1/Hooks | 
 *HooksApi* | [**hooksGet_0**](docs/Api/HooksApi.md#hooksget_0) | **GET** /v2.1/Hooks/{hookId} | 
 *HooksApi* | [**hooksPost**](docs/Api/HooksApi.md#hookspost) | **POST** /v2.1/Hooks | 
@@ -94,27 +94,27 @@ Class | Method | HTTP request | Description
 *KycApi* | [**kycDeleteLegalBoardMember**](docs/Api/KycApi.md#kycdeletelegalboardmember) | **DELETE** /v2.1/Kyc/users/legal/{UserId}/boardmembers/{BoardMemberId} | 
 *KycApi* | [**kycDeleteLegalShareHolderNatural**](docs/Api/KycApi.md#kycdeletelegalshareholdernatural) | **DELETE** /v2.1/Kyc/users/legal/{UserId}/shareholders/natural/{ShareHolderId} | 
 *KycApi* | [**kycGetFile**](docs/Api/KycApi.md#kycgetfile) | **GET** /v2.1/Kyc/document/{DocumentId} | 
-*KycApi* | [**kycGetLegal**](docs/Api/KycApi.md#kycgetlegal) | **GET** /v2.1/Kyc/users/legal/{UserId} | View a Legal User
+*KycApi* | [**kycGetLegal**](docs/Api/KycApi.md#kycgetlegal) | **GET** /v2.1/Kyc/users/legal/{UserId} | 
 *KycApi* | [**kycGetLegalBoardMember**](docs/Api/KycApi.md#kycgetlegalboardmember) | **GET** /v2.1/Kyc/users/legal/{UserId}/boardmembers/{BoardMemberId} | 
 *KycApi* | [**kycGetLegalBoardMembers**](docs/Api/KycApi.md#kycgetlegalboardmembers) | **GET** /v2.1/Kyc/users/legal/{UserId}/boardmembers | 
-*KycApi* | [**kycGetLegalList**](docs/Api/KycApi.md#kycgetlegallist) | **GET** /v2.1/Kyc/users/legal | List all Legal User
+*KycApi* | [**kycGetLegalList**](docs/Api/KycApi.md#kycgetlegallist) | **GET** /v2.1/Kyc/users/legal | 
 *KycApi* | [**kycGetLegalShareHolderNatural**](docs/Api/KycApi.md#kycgetlegalshareholdernatural) | **GET** /v2.1/Kyc/users/legal/{UserId}/shareholders/natural/{ShareHolderId} | 
 *KycApi* | [**kycGetLegalShareHolders**](docs/Api/KycApi.md#kycgetlegalshareholders) | **GET** /v2.1/Kyc/users/legal/{UserId}/shareholders/natural | 
-*KycApi* | [**kycGetNaturaList**](docs/Api/KycApi.md#kycgetnaturalist) | **GET** /v2.1/Kyc/users/natural | List all Natural User
-*KycApi* | [**kycGetNatural**](docs/Api/KycApi.md#kycgetnatural) | **GET** /v2.1/Kyc/users/natural/{UserId} | View a Natural User
+*KycApi* | [**kycGetNaturaList**](docs/Api/KycApi.md#kycgetnaturalist) | **GET** /v2.1/Kyc/users/natural | 
+*KycApi* | [**kycGetNatural**](docs/Api/KycApi.md#kycgetnatural) | **GET** /v2.1/Kyc/users/natural/{UserId} | 
 *KycApi* | [**kycGetValidation**](docs/Api/KycApi.md#kycgetvalidation) | **GET** /v2.1/Kyc/users/natural/{UserId}/validation | 
 *KycApi* | [**kycGetValidationLegal**](docs/Api/KycApi.md#kycgetvalidationlegal) | **GET** /v2.1/Kyc/users/legal/{UserId}/validation | 
-*KycApi* | [**kycPostDocument**](docs/Api/KycApi.md#kycpostdocument) | **POST** /v2.1/Kyc/users/{UserId}/documents/new/{DocumentType} | Uploads a new document and uploads a file. If the document already exists it will be replaced.
-*KycApi* | [**kycPostDocumentBoardMember**](docs/Api/KycApi.md#kycpostdocumentboardmember) | **POST** /v2.1/Kyc/users/legal/{UserId}/boardmember/{BoardMemberId}/documents/new/{DocumentType} | Uploads a new document. If the document already exists it will be replaced.
-*KycApi* | [**kycPostDocumentShareholder**](docs/Api/KycApi.md#kycpostdocumentshareholder) | **POST** /v2.1/Kyc/users/legal/{UserId}/shareholder/{ShareholderId}/documents/new/{DocumentType} | Uploads a new document and uploads a file. If the document already exists it will be replaced.
-*KycApi* | [**kycPostLegal**](docs/Api/KycApi.md#kycpostlegal) | **POST** /v2.1/Kyc/users/legal/{UserId} | Update a Legal User Kyc Data
+*KycApi* | [**kycPostDocument**](docs/Api/KycApi.md#kycpostdocument) | **POST** /v2.1/Kyc/users/{UserId}/documents/new/{DocumentType} | 
+*KycApi* | [**kycPostDocumentBoardMember**](docs/Api/KycApi.md#kycpostdocumentboardmember) | **POST** /v2.1/Kyc/users/legal/{UserId}/boardmember/{BoardMemberId}/documents/new/{DocumentType} | 
+*KycApi* | [**kycPostDocumentShareholder**](docs/Api/KycApi.md#kycpostdocumentshareholder) | **POST** /v2.1/Kyc/users/legal/{UserId}/shareholder/{ShareholderId}/documents/new/{DocumentType} | 
+*KycApi* | [**kycPostLegal**](docs/Api/KycApi.md#kycpostlegal) | **POST** /v2.1/Kyc/users/legal/{UserId} | 
 *KycApi* | [**kycPostLegalBoardMember**](docs/Api/KycApi.md#kycpostlegalboardmember) | **POST** /v2.1/Kyc/users/legal/{UserId}/boardmembers | 
 *KycApi* | [**kycPostLegalShareHolder**](docs/Api/KycApi.md#kycpostlegalshareholder) | **POST** /v2.1/Kyc/users/legal/{UserId}/shareholders/natural | 
-*KycApi* | [**kycPostNatural**](docs/Api/KycApi.md#kycpostnatural) | **POST** /v2.1/Kyc/users/natural/{UserId} | Update a Natural User Kyc Data
-*KycApi* | [**kycPutDocument**](docs/Api/KycApi.md#kycputdocument) | **PUT** /v2.1/Kyc/users/{UserId}/documents/add/{DocumentType} | Adds files to a document.
-*KycApi* | [**kycPutDocumentBoardMember**](docs/Api/KycApi.md#kycputdocumentboardmember) | **PUT** /v2.1/Kyc/users/legal/{UserId}/boardmember/{BoardMemberId}/documents/add/{DocumentType} | Uploads a new document. If the document already exists it will be replaced.
-*KycApi* | [**kycPutDocumentShareholder**](docs/Api/KycApi.md#kycputdocumentshareholder) | **PUT** /v2.1/Kyc/users/legal/{UserId}/shareholder/{ShareholderId}/documents/add/{DocumentType} | Adds files to a document.
-*KycApi* | [**kycPutLegal**](docs/Api/KycApi.md#kycputlegal) | **PUT** /v2.1/Kyc/users/legal/{UserId} | Update a Legal User
+*KycApi* | [**kycPostNatural**](docs/Api/KycApi.md#kycpostnatural) | **POST** /v2.1/Kyc/users/natural/{UserId} | 
+*KycApi* | [**kycPutDocument**](docs/Api/KycApi.md#kycputdocument) | **PUT** /v2.1/Kyc/users/{UserId}/documents/add/{DocumentType} | 
+*KycApi* | [**kycPutDocumentBoardMember**](docs/Api/KycApi.md#kycputdocumentboardmember) | **PUT** /v2.1/Kyc/users/legal/{UserId}/boardmember/{BoardMemberId}/documents/add/{DocumentType} | 
+*KycApi* | [**kycPutDocumentShareholder**](docs/Api/KycApi.md#kycputdocumentshareholder) | **PUT** /v2.1/Kyc/users/legal/{UserId}/shareholder/{ShareholderId}/documents/add/{DocumentType} | 
+*KycApi* | [**kycPutLegal**](docs/Api/KycApi.md#kycputlegal) | **PUT** /v2.1/Kyc/users/legal/{UserId} | 
 *KycApi* | [**kycPutLegalBoardMember**](docs/Api/KycApi.md#kycputlegalboardmember) | **PUT** /v2.1/Kyc/users/legal/{UserId}/boardmembers/{BoardMemberId} | 
 *KycApi* | [**kycPutLegalShareHolder**](docs/Api/KycApi.md#kycputlegalshareholder) | **PUT** /v2.1/Kyc/users/legal/{UserId}/shareholders/natural/{ShareHolderId} | 
 *KycApi* | [**kycPutRequest**](docs/Api/KycApi.md#kycputrequest) | **PUT** /v2.1/Kyc/users/natural/{UserId}/requestValidation | 
@@ -136,6 +136,9 @@ Class | Method | HTTP request | Description
 *PayInsBankwireApi* | [**payInsBankwireBankwireGetPayment**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwiregetpayment) | **GET** /v2.1/PayInsBankwire/payments/{PayInId} | 
 *PayInsBankwireApi* | [**payInsBankwireBankwirePaymentByDirect**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepaymentbydirect) | **POST** /v2.1/PayInsBankwire/payments/direct | 
 *PayInsBankwireApi* | [**payInsBankwireBankwirePostRefund**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepostrefund) | **POST** /v2.1/PayInsBankwire/payments/{PayInId}/refunds | 
+*PayInsClientApi* | [**payInsClientPluginClientConfirmPayIn**](docs/Api/PayInsClientApi.md#payinsclientpluginclientconfirmpayin) | **POST** /v2.1/PayInsClient/payments/{IntentId}/confirm | 
+*PayInsClientApi* | [**payInsClientPluginClientGetPayment**](docs/Api/PayInsClientApi.md#payinsclientpluginclientgetpayment) | **GET** /v2.1/PayInsClient/payments/{PayInId} | 
+*PayInsClientApi* | [**payInsClientPluginClientPayInCreatePost**](docs/Api/PayInsClientApi.md#payinsclientpluginclientpayincreatepost) | **POST** /v2.1/PayInsClient/payments | 
 *PayInsPluginApi* | [**payInsPluginPluginClientGetPayIn**](docs/Api/PayInsPluginApi.md#payinspluginpluginclientgetpayin) | **GET** /v2.1/PayInsPlugin/payments/{PayInId} | 
 *PayInsPluginApi* | [**payInsPluginPluginClientPayInPost**](docs/Api/PayInsPluginApi.md#payinspluginpluginclientpayinpost) | **POST** /v2.1/PayInsPlugin/payments | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysGetPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpayment) | **GET** /v2.1/PayInsRedsys/payments/{PayInId} | 
@@ -145,11 +148,6 @@ Class | Method | HTTP request | Description
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationCancellation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationcancellation) | **POST** /v2.1/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationConfirmation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationconfirmation) | **POST** /v2.1/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostRefund**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostrefund) | **POST** /v2.1/PayInsRedsys/payments/{PayInId}/refunds | 
-*PayInsUniversalPayApi* | [**payInsUniversalPayGetUniversalPayTokenization**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpaygetuniversalpaytokenization) | **GET** /v2.1/PayInsUniversalPay/token/{TokenId} | 
-*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayGetPayment**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaygetpayment) | **GET** /v2.1/PayInsUniversalPay/payments/{PayInId} | 
-*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostPaymentByWeb**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostpaymentbyweb) | **POST** /v2.1/PayInsUniversalPay/payments/web | 
-*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPayPostRefund**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaypostrefund) | **POST** /v2.1/PayInsUniversalPay/payments/{PayInId}/refunds | 
-*PayInsUniversalPayApi* | [**payInsUniversalPayUniversalPaySaveCard**](docs/Api/PayInsUniversalPayApi.md#payinsuniversalpayuniversalpaysavecard) | **POST** /v2.1/PayInsUniversalPay/token/web | 
 *PayInsWebPayApi* | [**payInsWebPayDeleteWebPayToken**](docs/Api/PayInsWebPayApi.md#payinswebpaydeletewebpaytoken) | **DELETE** /v2.1/PayInsWebPay/token/{TokenId} | 
 *PayInsWebPayApi* | [**payInsWebPayGetWebPayTokenization**](docs/Api/PayInsWebPayApi.md#payinswebpaygetwebpaytokenization) | **GET** /v2.1/PayInsWebPay/token/{TokenId} | 
 *PayInsWebPayApi* | [**payInsWebPayWebPayGetPayment**](docs/Api/PayInsWebPayApi.md#payinswebpaywebpaygetpayment) | **GET** /v2.1/PayInsWebPay/payments/{PayInId} | 
@@ -158,36 +156,33 @@ Class | Method | HTTP request | Description
 *PayInsWebPayApi* | [**payInsWebPayWebPaySaveCard**](docs/Api/PayInsWebPayApi.md#payinswebpaywebpaysavecard) | **POST** /v2.1/PayInsWebPay/token/web | 
 *PayOutsBankwireApi* | [**payOutsBankwireGet**](docs/Api/PayOutsBankwireApi.md#payoutsbankwireget) | **GET** /v2.1/PayOutsBankwire/payments/{PayOutId} | 
 *PayOutsBankwireApi* | [**payOutsBankwirePost**](docs/Api/PayOutsBankwireApi.md#payoutsbankwirepost) | **POST** /v2.1/PayOutsBankwire/payments/direct | 
-*PluginTransferClientApi* | [**pluginTransferClientPluginClientConfirmPayIn**](docs/Api/PluginTransferClientApi.md#plugintransferclientpluginclientconfirmpayin) | **POST** /v2.1/PayInsClient/payments/{IntentId}/confirm | 
-*PluginTransferClientApi* | [**pluginTransferClientPluginClientGetPayment**](docs/Api/PluginTransferClientApi.md#plugintransferclientpluginclientgetpayment) | **GET** /v2.1/PayInsClient/payments/{PayInId} | 
-*PluginTransferClientApi* | [**pluginTransferClientPluginClientPayInCreatePost**](docs/Api/PluginTransferClientApi.md#plugintransferclientpluginclientpayincreatepost) | **POST** /v2.1/PayInsClient/payments | 
-*PluginTransferPayOutClientApi* | [**pluginTransferPayOutClientPluginPayOutPost**](docs/Api/PluginTransferPayOutClientApi.md#plugintransferpayoutclientpluginpayoutpost) | **POST** /v2.1/PayOutsPlugin | 
-*PluginTransferPayOutClientApi* | [**pluginTransferPayOutClientPlugingGetPayOut**](docs/Api/PluginTransferPayOutClientApi.md#plugintransferpayoutclientpluginggetpayout) | **GET** /v2.1/PayOutsPlugin/{PayOutId} | 
+*PayOutsPluginApi* | [**payOutsPluginPluginPayOutPost**](docs/Api/PayOutsPluginApi.md#payoutspluginpluginpayoutpost) | **POST** /v2.1/PayOutsPlugin | 
+*PayOutsPluginApi* | [**payOutsPluginPlugingGetPayOut**](docs/Api/PayOutsPluginApi.md#payoutspluginpluginggetpayout) | **GET** /v2.1/PayOutsPlugin/{PayOutId} | 
 *RefundsApi* | [**refundsRefundGet**](docs/Api/RefundsApi.md#refundsrefundget) | **GET** /v2.1/Refunds/{RefundId} | 
-*TransactionsApi* | [**transactionsGetList**](docs/Api/TransactionsApi.md#transactionsgetlist) | **GET** /v2.1/Transactions | View a Transaction
+*TransactionsApi* | [**transactionsGetList**](docs/Api/TransactionsApi.md#transactionsgetlist) | **GET** /v2.1/Transactions | 
 *TransfersApi* | [**transfersGet**](docs/Api/TransfersApi.md#transfersget) | **GET** /v2.1/Transfers/{TransferId} | 
 *TransfersApi* | [**transfersGetList**](docs/Api/TransfersApi.md#transfersgetlist) | **GET** /v2.1/Transfers | 
 *TransfersApi* | [**transfersPost**](docs/Api/TransfersApi.md#transferspost) | **POST** /v2.1/Transfers | 
-*UsersApi* | [**usersGet**](docs/Api/UsersApi.md#usersget) | **GET** /v2.1/Users/{UserId} | View a User
-*UsersApi* | [**usersGetBankAccount**](docs/Api/UsersApi.md#usersgetbankaccount) | **GET** /v2.1/Users/{UserId}/bankaccounts/{BankAccountId} | View a Bank Account
-*UsersApi* | [**usersGetBankAccountList**](docs/Api/UsersApi.md#usersgetbankaccountlist) | **GET** /v2.1/Users/{UserId}/bankaccounts | List Bank Accounts for a User
-*UsersApi* | [**usersGetCardList**](docs/Api/UsersApi.md#usersgetcardlist) | **GET** /v2.1/Users/{UserId}/cards | List Cards for a User
-*UsersApi* | [**usersGetLegal**](docs/Api/UsersApi.md#usersgetlegal) | **GET** /v2.1/Users/legal/{UserId} | View a Legal User
-*UsersApi* | [**usersGetList**](docs/Api/UsersApi.md#usersgetlist) | **GET** /v2.1/Users | List all Users
-*UsersApi* | [**usersGetListLegal**](docs/Api/UsersApi.md#usersgetlistlegal) | **GET** /v2.1/Users/legal | List all Legal Users
-*UsersApi* | [**usersGetListNatural**](docs/Api/UsersApi.md#usersgetlistnatural) | **GET** /v2.1/Users/natural | List all Natural Users
-*UsersApi* | [**usersGetNatural**](docs/Api/UsersApi.md#usersgetnatural) | **GET** /v2.1/Users/natural/{UserId} | View a Natural User
-*UsersApi* | [**usersGetTransactionList**](docs/Api/UsersApi.md#usersgettransactionlist) | **GET** /v2.1/Users/{UserId}/transactions | List Transactions for a User
-*UsersApi* | [**usersGetWalletList**](docs/Api/UsersApi.md#usersgetwalletlist) | **GET** /v2.1/Users/{UserId}/wallets | List Wallets for a User
-*UsersApi* | [**usersPostBankAccountCa**](docs/Api/UsersApi.md#userspostbankaccountca) | **POST** /v2.1/Users/{UserId}/bankaccounts/CA | Create a CA BankAccount
-*UsersApi* | [**usersPostBankAccountGb**](docs/Api/UsersApi.md#userspostbankaccountgb) | **POST** /v2.1/Users/{UserId}/bankaccounts/GB | Create a GB BankAccount
-*UsersApi* | [**usersPostBankAccountIban**](docs/Api/UsersApi.md#userspostbankaccountiban) | **POST** /v2.1/Users/{UserId}/bankaccounts/IBAN | Create an IBAN BankAccount
-*UsersApi* | [**usersPostBankAccountOther**](docs/Api/UsersApi.md#userspostbankaccountother) | **POST** /v2.1/Users/{UserId}/bankaccounts/OTHER | Create an OTHER BankAccount
-*UsersApi* | [**usersPostBankAccountUs**](docs/Api/UsersApi.md#userspostbankaccountus) | **POST** /v2.1/Users/{UserId}/bankaccounts/US | Create an US BankAccount
-*UsersApi* | [**usersPostLegal**](docs/Api/UsersApi.md#userspostlegal) | **POST** /v2.1/Users/legal | Create a Legal User
-*UsersApi* | [**usersPostNatural**](docs/Api/UsersApi.md#userspostnatural) | **POST** /v2.1/Users/natural | Create a Natural User
-*UsersApi* | [**usersPutLegal**](docs/Api/UsersApi.md#usersputlegal) | **PUT** /v2.1/Users/legal/{UserId} | Update a Legal User
-*UsersApi* | [**usersPutNatural**](docs/Api/UsersApi.md#usersputnatural) | **PUT** /v2.1/Users/natural/{UserId} | Update a Natural User
+*UsersApi* | [**usersGet**](docs/Api/UsersApi.md#usersget) | **GET** /v2.1/Users/{UserId} | 
+*UsersApi* | [**usersGetBankAccount**](docs/Api/UsersApi.md#usersgetbankaccount) | **GET** /v2.1/Users/{UserId}/bankaccounts/{BankAccountId} | 
+*UsersApi* | [**usersGetBankAccountList**](docs/Api/UsersApi.md#usersgetbankaccountlist) | **GET** /v2.1/Users/{UserId}/bankaccounts | 
+*UsersApi* | [**usersGetCardList**](docs/Api/UsersApi.md#usersgetcardlist) | **GET** /v2.1/Users/{UserId}/cards | 
+*UsersApi* | [**usersGetLegal**](docs/Api/UsersApi.md#usersgetlegal) | **GET** /v2.1/Users/legal/{UserId} | 
+*UsersApi* | [**usersGetList**](docs/Api/UsersApi.md#usersgetlist) | **GET** /v2.1/Users | 
+*UsersApi* | [**usersGetListLegal**](docs/Api/UsersApi.md#usersgetlistlegal) | **GET** /v2.1/Users/legal | 
+*UsersApi* | [**usersGetListNatural**](docs/Api/UsersApi.md#usersgetlistnatural) | **GET** /v2.1/Users/natural | 
+*UsersApi* | [**usersGetNatural**](docs/Api/UsersApi.md#usersgetnatural) | **GET** /v2.1/Users/natural/{UserId} | 
+*UsersApi* | [**usersGetTransactionList**](docs/Api/UsersApi.md#usersgettransactionlist) | **GET** /v2.1/Users/{UserId}/transactions | 
+*UsersApi* | [**usersGetWalletList**](docs/Api/UsersApi.md#usersgetwalletlist) | **GET** /v2.1/Users/{UserId}/wallets | 
+*UsersApi* | [**usersPostBankAccountCa**](docs/Api/UsersApi.md#userspostbankaccountca) | **POST** /v2.1/Users/{UserId}/bankaccounts/CA | 
+*UsersApi* | [**usersPostBankAccountGb**](docs/Api/UsersApi.md#userspostbankaccountgb) | **POST** /v2.1/Users/{UserId}/bankaccounts/GB | 
+*UsersApi* | [**usersPostBankAccountIban**](docs/Api/UsersApi.md#userspostbankaccountiban) | **POST** /v2.1/Users/{UserId}/bankaccounts/IBAN | 
+*UsersApi* | [**usersPostBankAccountOther**](docs/Api/UsersApi.md#userspostbankaccountother) | **POST** /v2.1/Users/{UserId}/bankaccounts/OTHER | 
+*UsersApi* | [**usersPostBankAccountUs**](docs/Api/UsersApi.md#userspostbankaccountus) | **POST** /v2.1/Users/{UserId}/bankaccounts/US | 
+*UsersApi* | [**usersPostLegal**](docs/Api/UsersApi.md#userspostlegal) | **POST** /v2.1/Users/legal | 
+*UsersApi* | [**usersPostNatural**](docs/Api/UsersApi.md#userspostnatural) | **POST** /v2.1/Users/natural | 
+*UsersApi* | [**usersPutLegal**](docs/Api/UsersApi.md#usersputlegal) | **PUT** /v2.1/Users/legal/{UserId} | 
+*UsersApi* | [**usersPutNatural**](docs/Api/UsersApi.md#usersputnatural) | **PUT** /v2.1/Users/natural/{UserId} | 
 *WalletsApi* | [**walletsGet**](docs/Api/WalletsApi.md#walletsget) | **GET** /v2.1/Wallets/{WalletId} | 
 *WalletsApi* | [**walletsGetList**](docs/Api/WalletsApi.md#walletsgetlist) | **GET** /v2.1/Wallets | 
 *WalletsApi* | [**walletsGetTransactionList**](docs/Api/WalletsApi.md#walletsgettransactionlist) | **GET** /v2.1/Wallets/{WalletId}/transactions | 
@@ -233,14 +228,11 @@ Class | Method | HTTP request | Description
  - [BankwirePayInBankAccount](docs/Model/BankwirePayInBankAccount.md)
  - [CardPut](docs/Model/CardPut.md)
  - [CardResponse](docs/Model/CardResponse.md)
+ - [CardResponseResponseList](docs/Model/CardResponseResponseList.md)
  - [CustomApiErrorResponse](docs/Model/CustomApiErrorResponse.md)
  - [Customer](docs/Model/Customer.md)
- - [CustomerDetail](docs/Model/CustomerDetail.md)
  - [DocumentFileStatus](docs/Model/DocumentFileStatus.md)
- - [EntityTagHeaderValue](docs/Model/EntityTagHeaderValue.md)
  - [EventResponse](docs/Model/EventResponse.md)
- - [ExampleUserNaturalPost](docs/Model/ExampleUserNaturalPost.md)
- - [FileResult](docs/Model/FileResult.md)
  - [FormField](docs/Model/FormField.md)
  - [HookPost](docs/Model/HookPost.md)
  - [HookPut](docs/Model/HookPut.md)
@@ -261,8 +253,10 @@ Class | Method | HTTP request | Description
  - [KycUserValidationBoardMemberPut](docs/Model/KycUserValidationBoardMemberPut.md)
  - [KycUserValidationLevelLegalBoardMembersListResponse](docs/Model/KycUserValidationLevelLegalBoardMembersListResponse.md)
  - [KycUserValidationLevelLegalResponse](docs/Model/KycUserValidationLevelLegalResponse.md)
+ - [KycUserValidationLevelLegalResponseResponseList](docs/Model/KycUserValidationLevelLegalResponseResponseList.md)
  - [KycUserValidationLevelLegalShareHoldersListResponse](docs/Model/KycUserValidationLevelLegalShareHoldersListResponse.md)
  - [KycUserValidationLevelNaturalResponse](docs/Model/KycUserValidationLevelNaturalResponse.md)
+ - [KycUserValidationLevelNaturalResponseResponseList](docs/Model/KycUserValidationLevelNaturalResponseResponseList.md)
  - [KycUserValidationShareHolderListItemResponseNatural](docs/Model/KycUserValidationShareHolderListItemResponseNatural.md)
  - [KycUserValidationShareHolderNaturalPost](docs/Model/KycUserValidationShareHolderNaturalPost.md)
  - [KycUserValidationShareHolderNaturalPut](docs/Model/KycUserValidationShareHolderNaturalPut.md)
@@ -279,9 +273,9 @@ Class | Method | HTTP request | Description
  - [PayOutBankwireResponse](docs/Model/PayOutBankwireResponse.md)
  - [PaymentAddonPaymentsData](docs/Model/PaymentAddonPaymentsData.md)
  - [PaymentRedsysData](docs/Model/PaymentRedsysData.md)
- - [PaymentUniversalPayData](docs/Model/PaymentUniversalPayData.md)
  - [PaymentWebPayData](docs/Model/PaymentWebPayData.md)
  - [PluginPayInPost](docs/Model/PluginPayInPost.md)
+ - [PluginPayInPostConfirm](docs/Model/PluginPayInPostConfirm.md)
  - [PluginPayInsResponse](docs/Model/PluginPayInsResponse.md)
  - [PluginPayOutPost](docs/Model/PluginPayOutPost.md)
  - [PluginPayOutResponse](docs/Model/PluginPayOutResponse.md)
@@ -306,47 +300,34 @@ Class | Method | HTTP request | Description
  - [RefundAddonPaymentsData](docs/Model/RefundAddonPaymentsData.md)
  - [RefundReason](docs/Model/RefundReason.md)
  - [RefundRedsysData](docs/Model/RefundRedsysData.md)
- - [ResponseListCardResponse](docs/Model/ResponseListCardResponse.md)
- - [ResponseListKycUserValidationLevelLegalResponse](docs/Model/ResponseListKycUserValidationLevelLegalResponse.md)
- - [ResponseListKycUserValidationLevelNaturalResponse](docs/Model/ResponseListKycUserValidationLevelNaturalResponse.md)
- - [ResponseListTransactionResponse](docs/Model/ResponseListTransactionResponse.md)
- - [ResponseListTransferMethodsResponse](docs/Model/ResponseListTransferMethodsResponse.md)
- - [ResponseListTransferResponse](docs/Model/ResponseListTransferResponse.md)
- - [ResponseListUserLegalResponse](docs/Model/ResponseListUserLegalResponse.md)
- - [ResponseListUserResponse](docs/Model/ResponseListUserResponse.md)
- - [ResponseListWalletClientInstrumentResponse](docs/Model/ResponseListWalletClientInstrumentResponse.md)
- - [ResponseListWalletResponse](docs/Model/ResponseListWalletResponse.md)
- - [StringSegment](docs/Model/StringSegment.md)
  - [TAddressValidationResult](docs/Model/TAddressValidationResult.md)
  - [TKycFileDetails](docs/Model/TKycFileDetails.md)
  - [TTelephoneValidationResult](docs/Model/TTelephoneValidationResult.md)
  - [Telephone](docs/Model/Telephone.md)
- - [TokenUniversalPayData](docs/Model/TokenUniversalPayData.md)
  - [TransactionResponse](docs/Model/TransactionResponse.md)
+ - [TransactionResponseResponseList](docs/Model/TransactionResponseResponseList.md)
  - [TransferMethodsResponse](docs/Model/TransferMethodsResponse.md)
+ - [TransferMethodsResponseResponseList](docs/Model/TransferMethodsResponseResponseList.md)
  - [TransferPost](docs/Model/TransferPost.md)
  - [TransferResponse](docs/Model/TransferResponse.md)
- - [UniversalPayPayByWebPost](docs/Model/UniversalPayPayByWebPost.md)
- - [UniversalPayPayByWebResponse](docs/Model/UniversalPayPayByWebResponse.md)
- - [UniversalPayPayInsResponse](docs/Model/UniversalPayPayInsResponse.md)
- - [UniversalPayRefundPost](docs/Model/UniversalPayRefundPost.md)
- - [UniversalPayRefundResponse](docs/Model/UniversalPayRefundResponse.md)
- - [UniversalPayTokenRequestPost](docs/Model/UniversalPayTokenRequestPost.md)
- - [UniversalPayTokenizationResponse](docs/Model/UniversalPayTokenizationResponse.md)
- - [UniversalPayTokenizeByWebResponse](docs/Model/UniversalPayTokenizeByWebResponse.md)
+ - [TransferResponseResponseList](docs/Model/TransferResponseResponseList.md)
  - [UserLegalPost](docs/Model/UserLegalPost.md)
  - [UserLegalPut](docs/Model/UserLegalPut.md)
  - [UserLegalResponse](docs/Model/UserLegalResponse.md)
+ - [UserLegalResponseResponseList](docs/Model/UserLegalResponseResponseList.md)
  - [UserNaturalPost](docs/Model/UserNaturalPost.md)
  - [UserNaturalPut](docs/Model/UserNaturalPut.md)
  - [UserNaturalResponse](docs/Model/UserNaturalResponse.md)
  - [UserResponse](docs/Model/UserResponse.md)
+ - [UserResponseResponseList](docs/Model/UserResponseResponseList.md)
  - [WalletBalance](docs/Model/WalletBalance.md)
  - [WalletClientInstrumentResponse](docs/Model/WalletClientInstrumentResponse.md)
+ - [WalletClientInstrumentResponseResponseList](docs/Model/WalletClientInstrumentResponseResponseList.md)
  - [WalletPost](docs/Model/WalletPost.md)
  - [WalletPut](docs/Model/WalletPut.md)
  - [WalletQueryBalancesByIdsPost](docs/Model/WalletQueryBalancesByIdsPost.md)
  - [WalletResponse](docs/Model/WalletResponse.md)
+ - [WalletResponseResponseList](docs/Model/WalletResponseResponseList.md)
  - [WebPayPayByWebPost](docs/Model/WebPayPayByWebPost.md)
  - [WebPayPayByWebResponse](docs/Model/WebPayPayByWebResponse.md)
  - [WebPayPayInsResponse](docs/Model/WebPayPayInsResponse.md)
@@ -365,7 +346,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: https://identity-sandbox.marketpay.io:443/connect/authorize
+- **Authorization URL**: https://identity.marketpay.io/connect/authorize
 - **Scopes**: 
  - **dashboard**: dashboard scope
 
