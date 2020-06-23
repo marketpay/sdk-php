@@ -720,7 +720,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPostDocument**
-> \MarketPay\Model\KycFileUploadResponse kycPostDocument($user_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name)
+> \MarketPay\Model\KycFileUploadResponse kycPostDocument($user_id, $document_type, $file, $file_content_type)
 
 
 
@@ -740,16 +740,11 @@ $apiInstance = new MarketPay\Api\KycApi(
 );
 $user_id = 789; // int | 
 $document_type = "document_type_example"; // string | 
+$file = "/path/to/file.txt"; // \SplFileObject | 
 $file_content_type = "file_content_type_example"; // string | 
-$content_type = "content_type_example"; // string | 
-$content_disposition = "content_disposition_example"; // string | 
-$headers = "headers_example"; // string | 
-$length = 789; // int | 
-$name = "name_example"; // string | 
-$file_name = "file_name_example"; // string | 
 
 try {
-    $result = $apiInstance->kycPostDocument($user_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name);
+    $result = $apiInstance->kycPostDocument($user_id, $document_type, $file, $file_content_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KycApi->kycPostDocument: ', $e->getMessage(), PHP_EOL;
@@ -763,13 +758,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**|  |
  **document_type** | **string**|  |
+ **file** | **\SplFileObject**|  |
  **file_content_type** | **string**|  | [optional]
- **content_type** | **string**|  | [optional]
- **content_disposition** | **string**|  | [optional]
- **headers** | **string**|  | [optional]
- **length** | **int**|  | [optional]
- **name** | **string**|  | [optional]
- **file_name** | **string**|  | [optional]
 
 ### Return type
 
@@ -787,7 +777,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPostDocumentBoardMember**
-> \MarketPay\Model\KycFileUploadResponse kycPostDocumentBoardMember($user_id, $board_member_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name)
+> \MarketPay\Model\KycFileUploadResponse kycPostDocumentBoardMember($user_id, $board_member_id, $document_type, $file, $file_content_type)
 
 
 
@@ -808,16 +798,11 @@ $apiInstance = new MarketPay\Api\KycApi(
 $user_id = 789; // int | 
 $board_member_id = 789; // int | 
 $document_type = "document_type_example"; // string | 
+$file = "/path/to/file.txt"; // \SplFileObject | 
 $file_content_type = "file_content_type_example"; // string | 
-$content_type = "content_type_example"; // string | 
-$content_disposition = "content_disposition_example"; // string | 
-$headers = "headers_example"; // string | 
-$length = 789; // int | 
-$name = "name_example"; // string | 
-$file_name = "file_name_example"; // string | 
 
 try {
-    $result = $apiInstance->kycPostDocumentBoardMember($user_id, $board_member_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name);
+    $result = $apiInstance->kycPostDocumentBoardMember($user_id, $board_member_id, $document_type, $file, $file_content_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KycApi->kycPostDocumentBoardMember: ', $e->getMessage(), PHP_EOL;
@@ -832,13 +817,8 @@ Name | Type | Description  | Notes
  **user_id** | **int**|  |
  **board_member_id** | **int**|  |
  **document_type** | **string**|  |
+ **file** | **\SplFileObject**|  |
  **file_content_type** | **string**|  | [optional]
- **content_type** | **string**|  | [optional]
- **content_disposition** | **string**|  | [optional]
- **headers** | **string**|  | [optional]
- **length** | **int**|  | [optional]
- **name** | **string**|  | [optional]
- **file_name** | **string**|  | [optional]
 
 ### Return type
 
@@ -856,7 +836,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPostDocumentShareholder**
-> \MarketPay\Model\KycFileUploadResponse kycPostDocumentShareholder($user_id, $shareholder_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name)
+> \MarketPay\Model\KycFileUploadResponse kycPostDocumentShareholder($user_id, $shareholder_id, $document_type, $file, $file_content_type)
 
 
 
@@ -877,16 +857,11 @@ $apiInstance = new MarketPay\Api\KycApi(
 $user_id = 789; // int | 
 $shareholder_id = 789; // int | 
 $document_type = "document_type_example"; // string | 
+$file = "/path/to/file.txt"; // \SplFileObject | 
 $file_content_type = "file_content_type_example"; // string | 
-$content_type = "content_type_example"; // string | 
-$content_disposition = "content_disposition_example"; // string | 
-$headers = "headers_example"; // string | 
-$length = 789; // int | 
-$name = "name_example"; // string | 
-$file_name = "file_name_example"; // string | 
 
 try {
-    $result = $apiInstance->kycPostDocumentShareholder($user_id, $shareholder_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name);
+    $result = $apiInstance->kycPostDocumentShareholder($user_id, $shareholder_id, $document_type, $file, $file_content_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KycApi->kycPostDocumentShareholder: ', $e->getMessage(), PHP_EOL;
@@ -901,13 +876,8 @@ Name | Type | Description  | Notes
  **user_id** | **int**|  |
  **shareholder_id** | **int**|  |
  **document_type** | **string**|  |
+ **file** | **\SplFileObject**|  |
  **file_content_type** | **string**|  | [optional]
- **content_type** | **string**|  | [optional]
- **content_disposition** | **string**|  | [optional]
- **headers** | **string**|  | [optional]
- **length** | **int**|  | [optional]
- **name** | **string**|  | [optional]
- **file_name** | **string**|  | [optional]
 
 ### Return type
 
@@ -1137,7 +1107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutDocument**
-> \MarketPay\Model\KycFileUploadResponse kycPutDocument($user_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name)
+> \MarketPay\Model\KycFileUploadResponse kycPutDocument($user_id, $document_type, $file, $file_content_type)
 
 
 
@@ -1157,16 +1127,11 @@ $apiInstance = new MarketPay\Api\KycApi(
 );
 $user_id = 789; // int | 
 $document_type = "document_type_example"; // string | 
+$file = "/path/to/file.txt"; // \SplFileObject | 
 $file_content_type = "file_content_type_example"; // string | 
-$content_type = "content_type_example"; // string | 
-$content_disposition = "content_disposition_example"; // string | 
-$headers = "headers_example"; // string | 
-$length = 789; // int | 
-$name = "name_example"; // string | 
-$file_name = "file_name_example"; // string | 
 
 try {
-    $result = $apiInstance->kycPutDocument($user_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name);
+    $result = $apiInstance->kycPutDocument($user_id, $document_type, $file, $file_content_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KycApi->kycPutDocument: ', $e->getMessage(), PHP_EOL;
@@ -1180,13 +1145,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**|  |
  **document_type** | **string**|  |
+ **file** | **\SplFileObject**|  |
  **file_content_type** | **string**|  | [optional]
- **content_type** | **string**|  | [optional]
- **content_disposition** | **string**|  | [optional]
- **headers** | **string**|  | [optional]
- **length** | **int**|  | [optional]
- **name** | **string**|  | [optional]
- **file_name** | **string**|  | [optional]
 
 ### Return type
 
@@ -1204,7 +1164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutDocumentBoardMember**
-> \MarketPay\Model\KycFileUploadResponse kycPutDocumentBoardMember($user_id, $board_member_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name)
+> \MarketPay\Model\KycFileUploadResponse kycPutDocumentBoardMember($user_id, $board_member_id, $document_type, $file, $file_content_type)
 
 
 
@@ -1225,16 +1185,11 @@ $apiInstance = new MarketPay\Api\KycApi(
 $user_id = 789; // int | 
 $board_member_id = 789; // int | 
 $document_type = "document_type_example"; // string | 
+$file = "/path/to/file.txt"; // \SplFileObject | 
 $file_content_type = "file_content_type_example"; // string | 
-$content_type = "content_type_example"; // string | 
-$content_disposition = "content_disposition_example"; // string | 
-$headers = "headers_example"; // string | 
-$length = 789; // int | 
-$name = "name_example"; // string | 
-$file_name = "file_name_example"; // string | 
 
 try {
-    $result = $apiInstance->kycPutDocumentBoardMember($user_id, $board_member_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name);
+    $result = $apiInstance->kycPutDocumentBoardMember($user_id, $board_member_id, $document_type, $file, $file_content_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KycApi->kycPutDocumentBoardMember: ', $e->getMessage(), PHP_EOL;
@@ -1249,13 +1204,8 @@ Name | Type | Description  | Notes
  **user_id** | **int**|  |
  **board_member_id** | **int**|  |
  **document_type** | **string**|  |
+ **file** | **\SplFileObject**|  |
  **file_content_type** | **string**|  | [optional]
- **content_type** | **string**|  | [optional]
- **content_disposition** | **string**|  | [optional]
- **headers** | **string**|  | [optional]
- **length** | **int**|  | [optional]
- **name** | **string**|  | [optional]
- **file_name** | **string**|  | [optional]
 
 ### Return type
 
@@ -1273,7 +1223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kycPutDocumentShareholder**
-> \MarketPay\Model\KycFileUploadResponse kycPutDocumentShareholder($user_id, $share_holder_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name)
+> \MarketPay\Model\KycFileUploadResponse kycPutDocumentShareholder($user_id, $share_holder_id, $document_type, $file, $file_content_type)
 
 
 
@@ -1294,16 +1244,11 @@ $apiInstance = new MarketPay\Api\KycApi(
 $user_id = 789; // int | 
 $share_holder_id = 789; // int | 
 $document_type = "document_type_example"; // string | 
+$file = "/path/to/file.txt"; // \SplFileObject | 
 $file_content_type = "file_content_type_example"; // string | 
-$content_type = "content_type_example"; // string | 
-$content_disposition = "content_disposition_example"; // string | 
-$headers = "headers_example"; // string | 
-$length = 789; // int | 
-$name = "name_example"; // string | 
-$file_name = "file_name_example"; // string | 
 
 try {
-    $result = $apiInstance->kycPutDocumentShareholder($user_id, $share_holder_id, $document_type, $file_content_type, $content_type, $content_disposition, $headers, $length, $name, $file_name);
+    $result = $apiInstance->kycPutDocumentShareholder($user_id, $share_holder_id, $document_type, $file, $file_content_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KycApi->kycPutDocumentShareholder: ', $e->getMessage(), PHP_EOL;
@@ -1318,13 +1263,8 @@ Name | Type | Description  | Notes
  **user_id** | **int**|  |
  **share_holder_id** | **int**|  |
  **document_type** | **string**|  |
+ **file** | **\SplFileObject**|  |
  **file_content_type** | **string**|  | [optional]
- **content_type** | **string**|  | [optional]
- **content_disposition** | **string**|  | [optional]
- **headers** | **string**|  | [optional]
- **length** | **int**|  | [optional]
- **name** | **string**|  | [optional]
- **file_name** | **string**|  | [optional]
 
 ### Return type
 

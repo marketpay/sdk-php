@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**payInsRedsysRedsysGetPayment**](PayInsRedsysApi.md#payInsRedsysRedsysGetPayment) | **GET** /v2.1/PayInsRedsys/payments/{PayInId} | 
 [**payInsRedsysRedsysGetPreauthorization**](PayInsRedsysApi.md#payInsRedsysRedsysGetPreauthorization) | **GET** /v2.1/PayInsRedsys/preauthorizations/{PreauthorizationId} | 
+[**payInsRedsysRedsysGetRefund**](PayInsRedsysApi.md#payInsRedsysRedsysGetRefund) | **GET** /v2.1/PayInsRedsys/refunds/{RefundId} | 
 [**payInsRedsysRedsysPostPaymentByWeb**](PayInsRedsysApi.md#payInsRedsysRedsysPostPaymentByWeb) | **POST** /v2.1/PayInsRedsys/payments/web | 
 [**payInsRedsysRedsysPostPreauthorizationByWeb**](PayInsRedsysApi.md#payInsRedsysRedsysPostPreauthorizationByWeb) | **POST** /v2.1/PayInsRedsys/preauthorizations/web | 
 [**payInsRedsysRedsysPostPreauthorizationCancellation**](PayInsRedsysApi.md#payInsRedsysRedsysPostPreauthorizationCancellation) | **POST** /v2.1/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | 
@@ -103,6 +104,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\MarketPay\Model\RedsysPreauthorizeResponse**](../Model/RedsysPreauthorizeResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **payInsRedsysRedsysGetRefund**
+> \MarketPay\Model\RedsysRefundResponse payInsRedsysRedsysGetRefund($refund_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = MarketPay\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new MarketPay\Api\PayInsRedsysApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$refund_id = 789; // int | 
+
+try {
+    $result = $apiInstance->payInsRedsysRedsysGetRefund($refund_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PayInsRedsysApi->payInsRedsysRedsysGetRefund: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **refund_id** | **int**|  |
+
+### Return type
+
+[**\MarketPay\Model\RedsysRefundResponse**](../Model/RedsysRefundResponse.md)
 
 ### Authorization
 
@@ -326,7 +378,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsRedsysRedsysPostRefund**
-> \MarketPay\Model\RedsysRefundResponse payInsRedsysRedsysPostRefund($pay_in_id, $body)
+> \MarketPay\Model\RedsysRefundResponse payInsRedsysRedsysPostRefund($pay_in_id, $x_webhook, $body)
 
 
 
@@ -345,10 +397,11 @@ $apiInstance = new MarketPay\Api\PayInsRedsysApi(
     $config
 );
 $pay_in_id = 789; // int | 
+$x_webhook = "x_webhook_example"; // string | 
 $body = new \MarketPay\Model\RedsysRefundPost(); // \MarketPay\Model\RedsysRefundPost | 
 
 try {
-    $result = $apiInstance->payInsRedsysRedsysPostRefund($pay_in_id, $body);
+    $result = $apiInstance->payInsRedsysRedsysPostRefund($pay_in_id, $x_webhook, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayInsRedsysApi->payInsRedsysRedsysPostRefund: ', $e->getMessage(), PHP_EOL;
@@ -361,6 +414,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pay_in_id** | **int**|  |
+ **x_webhook** | **string**|  | [optional]
  **body** | [**\MarketPay\Model\RedsysRefundPost**](../Model/RedsysRefundPost.md)|  | [optional]
 
 ### Return type

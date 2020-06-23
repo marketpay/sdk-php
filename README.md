@@ -136,13 +136,18 @@ Class | Method | HTTP request | Description
 *PayInsBankwireApi* | [**payInsBankwireBankwireGetPayment**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwiregetpayment) | **GET** /v2.1/PayInsBankwire/payments/{PayInId} | 
 *PayInsBankwireApi* | [**payInsBankwireBankwirePaymentByDirect**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepaymentbydirect) | **POST** /v2.1/PayInsBankwire/payments/direct | 
 *PayInsBankwireApi* | [**payInsBankwireBankwirePostRefund**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepostrefund) | **POST** /v2.1/PayInsBankwire/payments/{PayInId}/refunds | 
-*PayInsClientApi* | [**payInsClientPluginClientConfirmPayIn**](docs/Api/PayInsClientApi.md#payinsclientpluginclientconfirmpayin) | **POST** /v2.1/PayInsClient/payments/{IntentId}/confirm | 
+*PayInsClientApi* | [**payInsClientPluginClientCancelRefund**](docs/Api/PayInsClientApi.md#payinsclientpluginclientcancelrefund) | **POST** /v2.1/PayInsClient/refunds/{RefundId}/cancel | 
+*PayInsClientApi* | [**payInsClientPluginClientConfirmPayIn**](docs/Api/PayInsClientApi.md#payinsclientpluginclientconfirmpayin) | **POST** /v2.1/PayInsClient/payments/{PayInId}/confirm | 
+*PayInsClientApi* | [**payInsClientPluginClientConfirmRefund**](docs/Api/PayInsClientApi.md#payinsclientpluginclientconfirmrefund) | **POST** /v2.1/PayInsClient/refunds/{RefundId}/confirm | 
 *PayInsClientApi* | [**payInsClientPluginClientGetPayment**](docs/Api/PayInsClientApi.md#payinsclientpluginclientgetpayment) | **GET** /v2.1/PayInsClient/payments/{PayInId} | 
+*PayInsClientApi* | [**payInsClientPluginClientGetRefund**](docs/Api/PayInsClientApi.md#payinsclientpluginclientgetrefund) | **GET** /v2.1/PayInsClient/refunds/{RefundId} | 
 *PayInsClientApi* | [**payInsClientPluginClientPayInCreatePost**](docs/Api/PayInsClientApi.md#payinsclientpluginclientpayincreatepost) | **POST** /v2.1/PayInsClient/payments | 
+*PayInsClientApi* | [**payInsClientPluginClientPostRefund**](docs/Api/PayInsClientApi.md#payinsclientpluginclientpostrefund) | **POST** /v2.1/PayInsClient/payments/{PayInId}/refunds | 
 *PayInsPluginApi* | [**payInsPluginPluginClientGetPayIn**](docs/Api/PayInsPluginApi.md#payinspluginpluginclientgetpayin) | **GET** /v2.1/PayInsPlugin/payments/{PayInId} | 
 *PayInsPluginApi* | [**payInsPluginPluginClientPayInPost**](docs/Api/PayInsPluginApi.md#payinspluginpluginclientpayinpost) | **POST** /v2.1/PayInsPlugin/payments | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysGetPayment**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpayment) | **GET** /v2.1/PayInsRedsys/payments/{PayInId} | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysGetPreauthorization**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetpreauthorization) | **GET** /v2.1/PayInsRedsys/preauthorizations/{PreauthorizationId} | 
+*PayInsRedsysApi* | [**payInsRedsysRedsysGetRefund**](docs/Api/PayInsRedsysApi.md#payinsredsysredsysgetrefund) | **GET** /v2.1/PayInsRedsys/refunds/{RefundId} | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPaymentByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpaymentbyweb) | **POST** /v2.1/PayInsRedsys/payments/web | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationByWeb**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationbyweb) | **POST** /v2.1/PayInsRedsys/preauthorizations/web | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationCancellation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationcancellation) | **POST** /v2.1/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | 
@@ -276,9 +281,13 @@ Class | Method | HTTP request | Description
  - [PaymentWebPayData](docs/Model/PaymentWebPayData.md)
  - [PluginPayInPost](docs/Model/PluginPayInPost.md)
  - [PluginPayInPostConfirm](docs/Model/PluginPayInPostConfirm.md)
- - [PluginPayInsResponse](docs/Model/PluginPayInsResponse.md)
+ - [PluginPayInResponse](docs/Model/PluginPayInResponse.md)
  - [PluginPayOutPost](docs/Model/PluginPayOutPost.md)
  - [PluginPayOutResponse](docs/Model/PluginPayOutResponse.md)
+ - [PluginRefundPost](docs/Model/PluginRefundPost.md)
+ - [PluginRefundPostCancel](docs/Model/PluginRefundPostCancel.md)
+ - [PluginRefundPostConfirm](docs/Model/PluginRefundPostConfirm.md)
+ - [PluginRefundResponse](docs/Model/PluginRefundResponse.md)
  - [PreauthorizationAddonPaymentsData](docs/Model/PreauthorizationAddonPaymentsData.md)
  - [PreauthorizationRedsysData](docs/Model/PreauthorizationRedsysData.md)
  - [PropertyValidationCountry](docs/Model/PropertyValidationCountry.md)

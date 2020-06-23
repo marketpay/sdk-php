@@ -1,4 +1,4 @@
-# PluginPayInsResponse
+# PluginPayInResponse
 
 ## Properties
 Name | Type | Description | Notes

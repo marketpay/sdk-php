@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **payInsPluginPluginClientGetPayIn**
-> \MarketPay\Model\PluginPayInsResponse payInsPluginPluginClientGetPayIn($pay_in_id)
+> \MarketPay\Model\PluginPayInResponse payInsPluginPluginClientGetPayIn($pay_in_id)
 
 
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\PluginPayInsResponse**](../Model/PluginPayInsResponse.md)
+[**\MarketPay\Model\PluginPayInResponse**](../Model/PluginPayInResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payInsPluginPluginClientPayInPost**
-> \MarketPay\Model\PluginPayInsResponse payInsPluginPluginClientPayInPost($body)
+> \MarketPay\Model\PluginPayInResponse payInsPluginPluginClientPayInPost($body)
 
 
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\PluginPayInsResponse**](../Model/PluginPayInsResponse.md)
+[**\MarketPay\Model\PluginPayInResponse**](../Model/PluginPayInResponse.md)
 
 ### Authorization
 
