@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **debited_wallet_id** | **string** | The ID of the wallet that was debited | [optional] 
 **author_id** | **string** | A user&#39;s ID | [optional] 
 **statement_descriptor** | **string** | A custom description to appear on the user&#39;s bank statement. It can be up to 10 characters long, and can only include alphanumeric characters or spaces | [optional] 
+**bank_account_id** | **string** |  | [optional] 
 **nature** | **string** | The nature of the transaction | [optional] 
 **status** | **string** | The status of the transaction | [optional] 
 **execution_date** | **int** | When the transaction happened | [optional] 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **refundsRefundGet**
-> \MarketPay\Model\WebPayRefundResponse refundsRefundGet($refund_id)
+> \MarketPay\Model\RedsysRefundResponse refundsRefundGet($refund_id)
 
 
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MarketPay\Model\WebPayRefundResponse**](../Model/WebPayRefundResponse.md)
+[**\MarketPay\Model\RedsysRefundResponse**](../Model/RedsysRefundResponse.md)
 
 ### Authorization
 
