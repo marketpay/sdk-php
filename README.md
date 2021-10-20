@@ -20,7 +20,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/marketpay/sdk-php.git"
+      "url": "https://github.com//.git"
     }
   ],
   "require": {
@@ -119,20 +119,11 @@ Class | Method | HTTP request | Description
 *KycApi* | [**kycPutLegalShareHolder**](docs/Api/KycApi.md#kycputlegalshareholder) | **PUT** /v2.1/Kyc/users/legal/{UserId}/shareholders/natural/{ShareHolderId} | 
 *KycApi* | [**kycPutRequest**](docs/Api/KycApi.md#kycputrequest) | **PUT** /v2.1/Kyc/users/natural/{UserId}/requestValidation | 
 *KycApi* | [**kycPutRequestLegal**](docs/Api/KycApi.md#kycputrequestlegal) | **PUT** /v2.1/Kyc/users/legal/{UserId}/requestValidation | 
-*MeApi* | [**meGet**](docs/Api/MeApi.md#meget) | **GET** /v2.1/Me/Fees/{Currency} | 
+*MeApi* | [**meFeaturesList**](docs/Api/MeApi.md#mefeatureslist) | **GET** /v2.1/Me/Features | 
+*MeApi* | [**meGet**](docs/Api/MeApi.md#meget) | **GET** /v2.1/Me | 
 *MeApi* | [**meGetList**](docs/Api/MeApi.md#megetlist) | **GET** /v2.1/Me/Fees | 
 *MeApi* | [**meGetPayIns**](docs/Api/MeApi.md#megetpayins) | **GET** /v2.1/Me/TransferMethods/available/payins | 
-*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsGetPayment**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentsgetpayment) | **GET** /v2.1/PayInsAddonPayments/payments/{PayInId} | 
-*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsGetPreauthorization**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentsgetpreauthorization) | **GET** /v2.1/PayInsAddonPayments/preauthorizations/{PreauthorizationId} | 
-*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostPaymentByWeb**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostpaymentbyweb) | **POST** /v2.1/PayInsAddonPayments/payments/web | 
-*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostPaymentDirect**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostpaymentdirect) | **POST** /v2.1/PayInsAddonPayments/payments/direct | 
-*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostPreauthorizationByWeb**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostpreauthorizationbyweb) | **POST** /v2.1/PayInsAddonPayments/preauthorizations/web | 
-*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostPreauthorizationCancellation**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostpreauthorizationcancellation) | **POST** /v2.1/PayInsAddonPayments/preauthorizations/{PreauthorizationId}/cancellation | 
-*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostPreauthorizationConfirmation**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostpreauthorizationconfirmation) | **POST** /v2.1/PayInsAddonPayments/preauthorizations/{PreauthorizationId}/confirmation | 
-*PayInsAddonPaymentsApi* | [**payInsAddonPaymentsAddonPaymentsPostRefund**](docs/Api/PayInsAddonPaymentsApi.md#payinsaddonpaymentsaddonpaymentspostrefund) | **POST** /v2.1/PayInsAddonPayments/payments/{PayInId}/refunds | 
-*PayInsAplazameApi* | [**payInsAplazameAplazameGetPayment**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamegetpayment) | **GET** /v2.1/PayInsAplazame/payments/{PayInId} | 
-*PayInsAplazameApi* | [**payInsAplazameAplazamePostPaymentByWeb**](docs/Api/PayInsAplazameApi.md#payinsaplazameaplazamepostpaymentbyweb) | **POST** /v2.1/PayInsAplazame/payments/web | 
-*PayInsAplazameApi* | [**payInsAplazameRefund**](docs/Api/PayInsAplazameApi.md#payinsaplazamerefund) | **POST** /v2.1/PayInsAplazame/payments/{PayInId}/refunds | 
+*MeApi* | [**meGet_0**](docs/Api/MeApi.md#meget_0) | **GET** /v2.1/Me/Fees/{Currency} | 
 *PayInsBankwireApi* | [**payInsBankwireBankwireGetPayment**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwiregetpayment) | **GET** /v2.1/PayInsBankwire/payments/{PayInId} | 
 *PayInsBankwireApi* | [**payInsBankwireBankwirePaymentByDirect**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepaymentbydirect) | **POST** /v2.1/PayInsBankwire/payments/direct | 
 *PayInsBankwireApi* | [**payInsBankwireBankwirePostRefund**](docs/Api/PayInsBankwireApi.md#payinsbankwirebankwirepostrefund) | **POST** /v2.1/PayInsBankwire/payments/{PayInId}/refunds | 
@@ -153,13 +144,10 @@ Class | Method | HTTP request | Description
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationCancellation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationcancellation) | **POST** /v2.1/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostPreauthorizationConfirmation**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostpreauthorizationconfirmation) | **POST** /v2.1/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | 
 *PayInsRedsysApi* | [**payInsRedsysRedsysPostRefund**](docs/Api/PayInsRedsysApi.md#payinsredsysredsyspostrefund) | **POST** /v2.1/PayInsRedsys/payments/{PayInId}/refunds | 
-*PayInsWebPayApi* | [**payInsWebPayDeleteWebPayToken**](docs/Api/PayInsWebPayApi.md#payinswebpaydeletewebpaytoken) | **DELETE** /v2.1/PayInsWebPay/token/{TokenId} | 
-*PayInsWebPayApi* | [**payInsWebPayGetWebPayTokenization**](docs/Api/PayInsWebPayApi.md#payinswebpaygetwebpaytokenization) | **GET** /v2.1/PayInsWebPay/token/{TokenId} | 
-*PayInsWebPayApi* | [**payInsWebPayWebPayGetPayment**](docs/Api/PayInsWebPayApi.md#payinswebpaywebpaygetpayment) | **GET** /v2.1/PayInsWebPay/payments/{PayInId} | 
-*PayInsWebPayApi* | [**payInsWebPayWebPayPostPaymentByWeb**](docs/Api/PayInsWebPayApi.md#payinswebpaywebpaypostpaymentbyweb) | **POST** /v2.1/PayInsWebPay/payments/web | 
-*PayInsWebPayApi* | [**payInsWebPayWebPayPostRefund**](docs/Api/PayInsWebPayApi.md#payinswebpaywebpaypostrefund) | **POST** /v2.1/PayInsWebPay/payments/{PayInId}/refunds | 
-*PayInsWebPayApi* | [**payInsWebPayWebPaySaveCard**](docs/Api/PayInsWebPayApi.md#payinswebpaywebpaysavecard) | **POST** /v2.1/PayInsWebPay/token/web | 
 *PayOutsBankwireApi* | [**payOutsBankwireGet**](docs/Api/PayOutsBankwireApi.md#payoutsbankwireget) | **GET** /v2.1/PayOutsBankwire/payments/{PayOutId} | 
+*PayOutsBankwireApi* | [**payOutsBankwireGetList**](docs/Api/PayOutsBankwireApi.md#payoutsbankwiregetlist) | **GET** /v2.1/PayOutsBankwire/payments | 
+*PayOutsBankwireApi* | [**payOutsBankwirePayOutBankwireCancellation**](docs/Api/PayOutsBankwireApi.md#payoutsbankwirepayoutbankwirecancellation) | **POST** /v2.1/PayOutsBankwire/payments/{PayOutId}/cancellation | 
+*PayOutsBankwireApi* | [**payOutsBankwirePayOutBankwireConfirmation**](docs/Api/PayOutsBankwireApi.md#payoutsbankwirepayoutbankwireconfirmation) | **POST** /v2.1/PayOutsBankwire/payments/{PayOutId}/confirmation | 
 *PayOutsBankwireApi* | [**payOutsBankwirePost**](docs/Api/PayOutsBankwireApi.md#payoutsbankwirepost) | **POST** /v2.1/PayOutsBankwire/payments/direct | 
 *PayOutsPluginApi* | [**payOutsPluginPluginPayOutPost**](docs/Api/PayOutsPluginApi.md#payoutspluginpluginpayoutpost) | **POST** /v2.1/PayOutsPlugin | 
 *PayOutsPluginApi* | [**payOutsPluginPlugingGetPayOut**](docs/Api/PayOutsPluginApi.md#payoutspluginpluginggetpayout) | **GET** /v2.1/PayOutsPlugin/{PayOutId} | 
@@ -189,6 +177,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**usersPutLegal**](docs/Api/UsersApi.md#usersputlegal) | **PUT** /v2.1/Users/legal/{UserId} | 
 *UsersApi* | [**usersPutNatural**](docs/Api/UsersApi.md#usersputnatural) | **PUT** /v2.1/Users/natural/{UserId} | 
 *WalletsApi* | [**walletsGet**](docs/Api/WalletsApi.md#walletsget) | **GET** /v2.1/Wallets/{WalletId} | 
+*WalletsApi* | [**walletsGetBalance**](docs/Api/WalletsApi.md#walletsgetbalance) | **GET** /v2.1/Wallets/{WalletId}/Balance | 
 *WalletsApi* | [**walletsGetList**](docs/Api/WalletsApi.md#walletsgetlist) | **GET** /v2.1/Wallets | 
 *WalletsApi* | [**walletsGetTransactionList**](docs/Api/WalletsApi.md#walletsgettransactionlist) | **GET** /v2.1/Wallets/{WalletId}/transactions | 
 *WalletsApi* | [**walletsPost**](docs/Api/WalletsApi.md#walletspost) | **POST** /v2.1/Wallets | 
@@ -198,27 +187,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [AddonPaymentsPayByWebPost](docs/Model/AddonPaymentsPayByWebPost.md)
- - [AddonPaymentsPayByWebResponse](docs/Model/AddonPaymentsPayByWebResponse.md)
- - [AddonPaymentsPayDirectPost](docs/Model/AddonPaymentsPayDirectPost.md)
- - [AddonPaymentsPayDirectResponse](docs/Model/AddonPaymentsPayDirectResponse.md)
- - [AddonPaymentsPayInsResponse](docs/Model/AddonPaymentsPayInsResponse.md)
- - [AddonPaymentsPreauthorizationCancellationPost](docs/Model/AddonPaymentsPreauthorizationCancellationPost.md)
- - [AddonPaymentsPreauthorizationCancellationResponse](docs/Model/AddonPaymentsPreauthorizationCancellationResponse.md)
- - [AddonPaymentsPreauthorizationConfirmationPost](docs/Model/AddonPaymentsPreauthorizationConfirmationPost.md)
- - [AddonPaymentsPreauthorizationConfirmationResponse](docs/Model/AddonPaymentsPreauthorizationConfirmationResponse.md)
- - [AddonPaymentsPreauthorizeByWebPost](docs/Model/AddonPaymentsPreauthorizeByWebPost.md)
- - [AddonPaymentsPreauthorizeByWebResponse](docs/Model/AddonPaymentsPreauthorizeByWebResponse.md)
- - [AddonPaymentsPreauthorizeResponse](docs/Model/AddonPaymentsPreauthorizeResponse.md)
- - [AddonPaymentsRefundPost](docs/Model/AddonPaymentsRefundPost.md)
- - [AddonPaymentsRefundResponse](docs/Model/AddonPaymentsRefundResponse.md)
  - [Address](docs/Model/Address.md)
- - [AplazameOrderItem](docs/Model/AplazameOrderItem.md)
- - [AplazamePayByWebPost](docs/Model/AplazamePayByWebPost.md)
- - [AplazamePayByWebResponse](docs/Model/AplazamePayByWebResponse.md)
- - [AplazamePayInsResponse](docs/Model/AplazamePayInsResponse.md)
- - [AplazameRefundPaymentPost](docs/Model/AplazameRefundPaymentPost.md)
- - [AplazameRefundResponse](docs/Model/AplazameRefundResponse.md)
  - [BankAccountCaPost](docs/Model/BankAccountCaPost.md)
  - [BankAccountCaResponse](docs/Model/BankAccountCaResponse.md)
  - [BankAccountGbPost](docs/Model/BankAccountGbPost.md)
@@ -228,17 +197,18 @@ Class | Method | HTTP request | Description
  - [BankAccountOtherPost](docs/Model/BankAccountOtherPost.md)
  - [BankAccountOtherResponse](docs/Model/BankAccountOtherResponse.md)
  - [BankAccountResponse](docs/Model/BankAccountResponse.md)
+ - [BankAccountResponseAsChild](docs/Model/BankAccountResponseAsChild.md)
  - [BankAccountUsPost](docs/Model/BankAccountUsPost.md)
  - [BankAccountUsResponse](docs/Model/BankAccountUsResponse.md)
  - [BankwirePayInBankAccount](docs/Model/BankwirePayInBankAccount.md)
  - [CardPut](docs/Model/CardPut.md)
  - [CardResponse](docs/Model/CardResponse.md)
  - [CardResponseResponseList](docs/Model/CardResponseResponseList.md)
+ - [ClientData](docs/Model/ClientData.md)
  - [CustomApiErrorResponse](docs/Model/CustomApiErrorResponse.md)
- - [Customer](docs/Model/Customer.md)
  - [DocumentFileStatus](docs/Model/DocumentFileStatus.md)
  - [EventResponse](docs/Model/EventResponse.md)
- - [FormField](docs/Model/FormField.md)
+ - [FeatureResponse](docs/Model/FeatureResponse.md)
  - [HookPost](docs/Model/HookPost.md)
  - [HookPut](docs/Model/HookPut.md)
  - [HookResponse](docs/Model/HookResponse.md)
@@ -269,16 +239,22 @@ Class | Method | HTTP request | Description
  - [KycValidationRequestResponse](docs/Model/KycValidationRequestResponse.md)
  - [KycValidationUserLegalStatusResponse](docs/Model/KycValidationUserLegalStatusResponse.md)
  - [KycValidationUserStatusResponse](docs/Model/KycValidationUserStatusResponse.md)
+ - [MeResponse](docs/Model/MeResponse.md)
  - [Money](docs/Model/Money.md)
  - [PayInBankwirePost](docs/Model/PayInBankwirePost.md)
  - [PayInBankwireRefundPost](docs/Model/PayInBankwireRefundPost.md)
  - [PayInBankwireRefundResponse](docs/Model/PayInBankwireRefundResponse.md)
  - [PayInBankwireResponse](docs/Model/PayInBankwireResponse.md)
+ - [PayOutBankwireCancellationPost](docs/Model/PayOutBankwireCancellationPost.md)
+ - [PayOutBankwireCancellationResponse](docs/Model/PayOutBankwireCancellationResponse.md)
+ - [PayOutBankwireConfirmationPost](docs/Model/PayOutBankwireConfirmationPost.md)
+ - [PayOutBankwireConfirmationResponse](docs/Model/PayOutBankwireConfirmationResponse.md)
+ - [PayOutBankwireCoreResponse](docs/Model/PayOutBankwireCoreResponse.md)
+ - [PayOutBankwireCoreResponseResponseList](docs/Model/PayOutBankwireCoreResponseResponseList.md)
  - [PayOutBankwirePost](docs/Model/PayOutBankwirePost.md)
  - [PayOutBankwireResponse](docs/Model/PayOutBankwireResponse.md)
- - [PaymentAddonPaymentsData](docs/Model/PaymentAddonPaymentsData.md)
+ - [PayOutBankwireUserResponse](docs/Model/PayOutBankwireUserResponse.md)
  - [PaymentRedsysData](docs/Model/PaymentRedsysData.md)
- - [PaymentWebPayData](docs/Model/PaymentWebPayData.md)
  - [PluginPayInPost](docs/Model/PluginPayInPost.md)
  - [PluginPayInPostConfirm](docs/Model/PluginPayInPostConfirm.md)
  - [PluginPayInResponse](docs/Model/PluginPayInResponse.md)
@@ -288,7 +264,6 @@ Class | Method | HTTP request | Description
  - [PluginRefundPostCancel](docs/Model/PluginRefundPostCancel.md)
  - [PluginRefundPostConfirm](docs/Model/PluginRefundPostConfirm.md)
  - [PluginRefundResponse](docs/Model/PluginRefundResponse.md)
- - [PreauthorizationAddonPaymentsData](docs/Model/PreauthorizationAddonPaymentsData.md)
  - [PreauthorizationRedsysData](docs/Model/PreauthorizationRedsysData.md)
  - [PropertyValidationCountry](docs/Model/PropertyValidationCountry.md)
  - [PropertyValidationDateNullable](docs/Model/PropertyValidationDateNullable.md)
@@ -306,13 +281,13 @@ Class | Method | HTTP request | Description
  - [RedsysPreauthorizeResponse](docs/Model/RedsysPreauthorizeResponse.md)
  - [RedsysRefundPost](docs/Model/RedsysRefundPost.md)
  - [RedsysRefundResponse](docs/Model/RedsysRefundResponse.md)
- - [RefundAddonPaymentsData](docs/Model/RefundAddonPaymentsData.md)
  - [RefundReason](docs/Model/RefundReason.md)
  - [RefundRedsysData](docs/Model/RefundRedsysData.md)
  - [TAddressValidationResult](docs/Model/TAddressValidationResult.md)
  - [TKycFileDetails](docs/Model/TKycFileDetails.md)
  - [TTelephoneValidationResult](docs/Model/TTelephoneValidationResult.md)
  - [Telephone](docs/Model/Telephone.md)
+ - [TpgBankwirePayOutConfigResponse](docs/Model/TpgBankwirePayOutConfigResponse.md)
  - [TransactionResponse](docs/Model/TransactionResponse.md)
  - [TransactionResponseResponseList](docs/Model/TransactionResponseResponseList.md)
  - [TransferMethodsResponse](docs/Model/TransferMethodsResponse.md)
@@ -330,6 +305,7 @@ Class | Method | HTTP request | Description
  - [UserResponse](docs/Model/UserResponse.md)
  - [UserResponseResponseList](docs/Model/UserResponseResponseList.md)
  - [WalletBalance](docs/Model/WalletBalance.md)
+ - [WalletBalanceResponseList](docs/Model/WalletBalanceResponseList.md)
  - [WalletClientInstrumentResponse](docs/Model/WalletClientInstrumentResponse.md)
  - [WalletClientInstrumentResponseResponseList](docs/Model/WalletClientInstrumentResponseResponseList.md)
  - [WalletPost](docs/Model/WalletPost.md)
@@ -337,15 +313,6 @@ Class | Method | HTTP request | Description
  - [WalletQueryBalancesByIdsPost](docs/Model/WalletQueryBalancesByIdsPost.md)
  - [WalletResponse](docs/Model/WalletResponse.md)
  - [WalletResponseResponseList](docs/Model/WalletResponseResponseList.md)
- - [WebPayPayByWebPost](docs/Model/WebPayPayByWebPost.md)
- - [WebPayPayByWebResponse](docs/Model/WebPayPayByWebResponse.md)
- - [WebPayPayInsResponse](docs/Model/WebPayPayInsResponse.md)
- - [WebPayRefundPost](docs/Model/WebPayRefundPost.md)
- - [WebPayRefundResponse](docs/Model/WebPayRefundResponse.md)
- - [WebPayTokenDeleteResponse](docs/Model/WebPayTokenDeleteResponse.md)
- - [WebPayTokenRequestPost](docs/Model/WebPayTokenRequestPost.md)
- - [WebPayTokenizationResponse](docs/Model/WebPayTokenizationResponse.md)
- - [WebPayTokenizeByWebResponse](docs/Model/WebPayTokenizeByWebResponse.md)
 
 
 ## Documentation For Authorization
@@ -355,7 +322,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: https://identity.marketpay.io/connect/authorize
+- **Authorization URL**: https://identity-integration.marketpay.io/connect/authorize
 - **Scopes**: 
  - **dashboard**: dashboard scope
 
