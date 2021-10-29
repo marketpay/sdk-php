@@ -2077,7 +2077,7 @@ class WalletsApi
     /**
      * Create http client option
      *
-     * @throws \RuntimeException on
+     * @throws \RuntimeException on file opening failure
      * @return array of http client options
      */
     protected function createHttpClientOption()
