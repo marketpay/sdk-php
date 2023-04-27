@@ -322,7 +322,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: https://identity-integration.marketpay.io/connect/authorize
+- **Authorization URL**: https://identity.marketpay.io/connect/authorize
 - **Scopes**: 
  - **dashboard**: dashboard scope
 
