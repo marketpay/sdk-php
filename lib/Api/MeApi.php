@@ -1360,7 +1360,7 @@ class MeApi
         // path params
         if ($currency !== null) {
             $resourcePath = str_replace(
-                '{' . 'currency' . '}',
+                '{' . 'Currency' . '}',
                 ObjectSerializer::toPathValue($currency),
                 $resourcePath
             );

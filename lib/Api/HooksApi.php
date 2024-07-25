@@ -548,7 +548,7 @@ class HooksApi
             );
         }
 
-        $resourcePath = '/v2.1/Hooks/{hookId}';
+        $resourcePath = '/v2.1/Hooks/{HookId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -559,7 +559,7 @@ class HooksApi
         // path params
         if ($hook_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'hookId' . '}',
+                '{' . 'HookId' . '}',
                 ObjectSerializer::toPathValue($hook_id),
                 $resourcePath
             );
@@ -1096,7 +1096,7 @@ class HooksApi
             );
         }
 
-        $resourcePath = '/v2.1/Hooks/{hookId}';
+        $resourcePath = '/v2.1/Hooks/{HookId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1107,7 +1107,7 @@ class HooksApi
         // path params
         if ($hook_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'hookId' . '}',
+                '{' . 'HookId' . '}',
                 ObjectSerializer::toPathValue($hook_id),
                 $resourcePath
             );
